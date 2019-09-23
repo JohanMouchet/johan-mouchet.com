@@ -1,0 +1,27 @@
+/**
+ * Typography
+ */
+
+/* stylelint-disable color-no-hex */
+
+$s-font-size-base: 0.875; // em = 14 px
+$s-font-size-mobile: $s-font-size-base / 1.05; // Comment if unwanted
+$s-line-height-base: 1.5;
+$s-modular-scale-ratio: 1.2;
+
+$s-font-family-primary: "Droid Sans", "Helvetica Neue", helvetica, arial,
+  sans-serif;
+$s-font-family-secondary: "Droid Serif", georgia, "Times New Roman", times,
+  serif;
+
+$s-color-text: #444;
+$s-color-text-dimmed: lighten($s-color-text, 45%);
+
+/** Links **/
+$s-color-link: $s-color-secondary;
+$s-color-link-hover: $s-color-secondary-lighter;
+$s-color-link-active: $s-color-secondary-darker;
+
+/* Selection */
+$s-color-selection-text: $s-color-white;
+$s-color-selection-bg: $s-color-secondary;

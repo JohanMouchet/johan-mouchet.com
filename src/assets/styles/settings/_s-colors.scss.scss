@@ -1,0 +1,37 @@
+/**
+ * Colors
+ */
+
+/* stylelint-disable color-no-hex */
+
+/* Scheme */
+/** Primary **/
+$s-color-primary: #003050;
+$s-color-primary-lighter: lighten($s-color-primary, 7%);
+$s-color-primary-darker: darken($s-color-primary, 7%);
+
+/** Secondary **/
+$s-color-secondary: #da4a4a;
+$s-color-secondary-lighter: lighten($s-color-secondary, 7%);
+$s-color-secondary-darker: darken($s-color-secondary, 7%);
+
+/** Shades of gray **/
+$s-color-white: #fff;
+$s-color-gray: #e5e5e5;
+$s-color-gray-lighter: lighten($s-color-gray, 7%);
+$s-color-gray-darker: darken($s-color-gray, 7%);
+$s-color-black: #111;
+
+/** States **/
+$s-color-success: #659f13;
+$s-color-info: #1f8dd6;
+$s-color-warning: #faa732;
+$s-color-danger: #da314b;
+
+/* Other */
+/** 3rd party brand colors - find more at brandcolors.net **/
+$s-color-twitter: #55acee;
+$s-color-facebook: #3b5998;
+$s-color-googleplus: #dd4b39;
+$s-color-linkedin: #0077b5;
+$s-color-pinterest: #bd081c;
