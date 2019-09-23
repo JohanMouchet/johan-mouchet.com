@@ -1,1 +1,1 @@
-<aside class="p-mast-aside l-aside"></aside>
+<aside className="p-mast-aside l-aside"></aside>;
