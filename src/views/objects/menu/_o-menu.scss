@@ -1,0 +1,74 @@
+/**
+ * Menu (Mobile first)
+ */
+
+/* Menu */
+.o-menu {
+	$root: &;
+
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+
+	/** Menu item **/
+	&__item {
+		position: relative;
+		flex: 0 1 auto;
+		line-height: t-vertical-rhythm(2);
+
+		&:not(:last-child) {
+			border-bottom: 1px solid $s-color-gray;
+		}
+	}
+
+	&__link {
+		display: block;
+		white-space: nowrap;
+	}
+
+	/*** Item has children ***/
+	&__item--has-children > &__link::after {
+		// Material icons
+		@include material-icon('keyboard_arrow_down', '1.7em');
+
+		color: $s-color-secondary;
+		margin-left: .2em;
+	}
+
+	/*** Submenu ***/
+	&__submenu {
+		margin: 0;
+		padding-left: 1rem;
+		border-top: 1px solid $s-color-primary;
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+
+		#{$root}__item {
+			flex: 0 1 auto;
+			line-height: t-vertical-rhythm(1.75);
+		}
+
+		#{$root}__link {
+			font-size: .9em;
+		}
+	}
+
+	/* Above mobile */
+	@media (min-width: t-breakpoint(md)) {
+		flex-direction: row;
+
+		& > &__item {
+			&:not(:last-child) {
+				margin-right: 2rem;
+				border-bottom: 0;
+			}
+
+			> #{$root}__submenu {
+				padding-left: 0;
+			}
+		}
+	}
+}

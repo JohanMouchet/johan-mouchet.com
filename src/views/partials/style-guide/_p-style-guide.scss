@@ -1,0 +1,126 @@
+/**
+* Style guide
+*/
+
+/* stylelint-disable selector-no-id */
+/* Color palette */
+.sg-swatch {
+	$root: &;
+
+	margin-bottom: $grid-gutter;
+
+	/** Color **/
+	&-o-card__banner {
+		min-height: t-vertical-rhythm(2);
+		transition: min-height .3s;
+
+		@media (min-width: t-breakpoint(sm)) {
+			min-height: t-vertical-rhythm(4);
+		}
+	}
+
+	/** Code **/
+	&__color-code {
+		text-transform: lowercase;
+		font-weight: 700;
+		margin-bottom: t-vertical-rhythm(.5);
+	}
+
+	/** Name **/
+	&__color-name {
+		display: block;
+		padding: 0;
+		background: none;
+		border: 0;
+	}
+
+	@mixin swatch($color) {
+		#{$root}-o-card__banner {
+			background-color: $color;
+		}
+
+		#{$root}__color-code::before {
+			content: '#{$color}';
+		}
+	}
+
+	&--primary-lighter {
+		@include swatch($s-color-primary-lighter);
+	}
+
+	&--primary {
+		@include swatch($s-color-primary);
+	}
+
+	&--primary-darker {
+		@include swatch($s-color-primary-darker);
+	}
+
+	&--secondary-lighter {
+		@include swatch($s-color-secondary-lighter);
+	}
+
+	&--secondary {
+		@include swatch($s-color-secondary);
+	}
+
+	&--secondary-darker {
+		@include swatch($s-color-secondary-darker);
+	}
+
+	&--gray-lighter {
+		@include swatch($s-color-gray-lighter);
+	}
+
+	&--gray {
+		@include swatch($s-color-gray);
+	}
+
+	&--gray-darker {
+		@include swatch($s-color-gray-darker);
+	}
+}
+
+/* Typography */
+.sg-typeface {
+	$root: &;
+
+	/** Glyph **/
+	&__glyph {
+		display: inline-block;
+		width: 100%;
+		font-size: t-modular-scale(8);
+		text-align: center;
+	}
+
+	/** Name **/
+	&__name {
+		text-transform: capitalize;
+	}
+
+	@mixin typography($font-family) {
+		#{$root}__glyph {
+			font-family: $font-family;
+		}
+
+		#{$root}__name::before {
+			content: '#{$font-family}';
+		}
+	}
+
+	&--font-primary {
+		@include typography(#{$s-font-family-primary});
+	}
+
+	&--font-secondary {
+		@include typography(#{$s-font-family-secondary});
+	}
+
+	&--font-tertiary {
+		@include typography(#{$s-font-family-tertiary});
+	}
+
+	&--font-quaternary {
+		@include typography(#{$s-font-family-quaternary});
+	}
+}

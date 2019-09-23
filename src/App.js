@@ -1,5 +1,5 @@
 import React from "react";
-import { Badge } from "./components/atoms";
+import { Badge } from "./views/objects";
 
 function App() {
   return <Badge>Badge</Badge>;

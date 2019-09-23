@@ -1,0 +1,47 @@
+/**
+ * Settings getters
+ */
+
+/**
+ * Breakpoint
+ *
+ * @param {string} breakpoint-name
+ *
+ * @example @media (min-width: t-breakpoint(breakpoint-name));
+ */
+@function t-breakpoint($breakpoint-name) {
+	@return map-get($s-breakpoints, $breakpoint-name);
+}
+
+/**
+ * Layer
+ *
+ * @param {string} layer-name
+ *
+ * @example z-index: t-layer(layer-name);
+ */
+@function t-layer($layer-name) {
+	@return map-get($s-layers, $layer-name);
+}
+
+/**
+ * Path
+ *
+ * @param {string} path-name
+ *
+ * @example background-image: url('#{t-path(path-name)}/image.jpg');
+ */
+@function t-path($path-name) {
+	@return map-get($s-paths, $path-name);
+}
+
+/**
+ * User Interface
+ *
+ * @param {string} property-name
+ *
+ * @example border-radius: t-ui(property-name);
+ */
+@function t-ui($property) {
+	@return map-get($s-ui, $property);
+}

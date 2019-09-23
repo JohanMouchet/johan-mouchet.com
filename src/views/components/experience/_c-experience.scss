@@ -1,0 +1,18 @@
+/**
+ * Experience
+ */
+
+.c-experience {
+	&__heading {
+		margin-bottom: 0;
+	}
+
+	&__company {
+		font-weight: 700;
+	}
+
+	&__subheading {
+		margin-top: 0;
+		color: $s-color-text-dimmed;
+	}
+}

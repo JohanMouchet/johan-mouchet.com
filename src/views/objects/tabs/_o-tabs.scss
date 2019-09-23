@@ -1,0 +1,80 @@
+/**
+ * Tabs
+ */
+
+.o-tabs {
+	$root: &;
+
+	margin: t-vertical-rhythm(1) 0;
+
+	/* Thumbs */
+	&__thumbs {
+		display: flex;
+		padding-left: 0;
+		border-bottom: 1px solid $s-color-gray;
+		list-style: none;
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+
+	&__thumb {
+		flex: 0 1 auto;
+		white-space: nowrap;
+		position: relative;
+
+		/** Active **/
+		&.is--active #{$root}__button {
+			color: $s-color-link;
+			font-weight: 700;
+
+			&:hover,
+			&:focus {
+				cursor: default;
+			}
+
+			&::after {
+				opacity: 1;
+				transform: scaleX(1);
+			}
+		}
+	}
+
+	/* Button */
+	&__button {
+		background-color: transparent;
+		border: 0;
+		outline: 0;
+		all: unset;
+
+		@include t-link($s-color-text-dimmed, 'none', $hover-decoration: 'none');
+
+		display: block;
+		padding: t-vertical-rhythm(.5) 1.5em;
+		cursor: pointer;
+		transition: font-weight .2s ease-out;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 2px;
+			width: 100%;
+			background-color: currentColor;
+			opacity: 0;
+			transform: scaleX(0);
+			transform-origin: 50% 0;
+			transition: opacity .2s ease-out, transform .2s ease-out;
+		}
+	}
+
+	/* Panels */
+	&__panels {
+		padding-left: 0;
+		list-style: none;
+	}
+
+	&__panel {
+		display: none;
+	}
+}

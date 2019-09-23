@@ -6,20 +6,20 @@
 
 /* Scheme */
 /** Primary **/
-$s-color-primary: #003050;
+$s-color-primary: #203747;
 $s-color-primary-lighter: lighten($s-color-primary, 7%);
 $s-color-primary-darker: darken($s-color-primary, 7%);
 
 /** Secondary **/
-$s-color-secondary: #da4a4a;
+$s-color-secondary: #d1c09e;
 $s-color-secondary-lighter: lighten($s-color-secondary, 7%);
 $s-color-secondary-darker: darken($s-color-secondary, 7%);
 
 /** Shades of gray **/
 $s-color-white: #fff;
-$s-color-gray: #e5e5e5;
-$s-color-gray-lighter: lighten($s-color-gray, 7%);
-$s-color-gray-darker: darken($s-color-gray, 7%);
+$s-color-gray: #ebebeb;
+$s-color-gray-lighter: lighten($s-color-gray, 5%);
+$s-color-gray-darker: darken($s-color-gray, 5%);
 $s-color-black: #111;
 
 /** States **/

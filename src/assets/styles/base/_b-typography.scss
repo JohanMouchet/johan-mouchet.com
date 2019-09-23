@@ -1,0 +1,161 @@
+/**
+ * Typography
+ */
+
+/* stylelint-disable selector-no-type */
+html {
+	// Responsive font-size
+	@if $s-font-size-mobile {
+		font-size: $s-font-size-mobile * 1em;
+
+		@media (min-width: t-breakpoint(sm)) {
+			font-size: $s-font-size-base * 1em;
+		}
+	} @else {
+		font-size: $s-font-size-base * 1em;
+	}
+
+	line-height: $s-line-height-base;
+	font-family: $s-font-family-primary;
+	color: $s-color-text;
+	font-feature-settings: 'liga', 'clig';
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 { /* stylelint-disable-line selector-list-comma-newline-after */
+	line-height: $s-line-height-base / 1.2;
+	font-family: $s-font-family-secondary;
+	color: $s-color-heading;
+	font-weight: 300;
+	margin-top: 0;
+
+	/** Underline **/
+	.heading-underline {
+		display: block;
+		height: .1em;
+		width: 2.5em;
+		margin-top: .5em;
+		background-color: $s-color-secondary;
+		transform-origin: left;
+		animation: heading-underline-animation .3s ease-out both;
+
+		&--c {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&--r {
+			margin-left: auto;
+		}
+
+		/*** Animation ***/
+		@keyframes heading-underline-animation {
+			from {
+				transform: scaleX(0) skew(-45deg);
+			}
+
+			to {
+				transform: scaleX(1) skew(-45deg);
+			}
+		}
+	}
+}
+
+// These types are also available as utilities: .u-heading--*
+@mixin t-heading--xl {
+	@include t-heading(6, 2, 2);
+}
+
+@mixin t-heading--lg {
+	@include t-heading(5, 2, 2);
+}
+
+@mixin t-heading--1 {
+	@include t-heading(4, 2, 2) {
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: .05em;
+	}
+}
+
+h1 {
+	@include t-heading--1;
+}
+
+@mixin t-heading--2 {
+	@include t-heading(3, 2, 2) {
+		font-weight: 700;
+	}
+}
+
+h2 {
+	@include t-heading--2;
+}
+
+@mixin t-heading--3 {
+	@include t-heading(2, 2, 1) {
+		font-style: italic;
+	}
+}
+
+h3 {
+	@include t-heading--3;
+}
+
+@mixin t-heading--4 {
+	@include t-heading(1, 1, 1);
+}
+
+h4 {
+	@include t-heading--4;
+}
+
+@mixin t-heading--5 {
+	@include t-heading(0, 1, 1);
+}
+
+h5 {
+	@include t-heading--5;
+}
+
+@mixin t-heading--6 {
+	@include t-heading(-1, 1, 1);
+}
+
+h6 {
+	@include t-heading--6;
+}
+
+@mixin t-heading--sm {
+	@include t-heading(-2, 1, 1);
+}
+
+@mixin t-heading--xs {
+	@include t-heading(-3, 1, 1);
+}
+
+[href] {
+	@include t-link;
+}
+
+a:focus {
+	outline: none;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: t-vertical-rhythm(1);
+
+	* + & {
+		margin-top: t-vertical-rhythm(1);
+	}
+}
+
+abbr[title] { /* stylelint-disable-line selector-no-qualifying-type */
+	text-decoration: none;
+	border-bottom: 1px dotted;
+
+	&:hover {
+		cursor: help;
+	}
+}

@@ -1,0 +1,21 @@
+/**
+ * Heading
+ *
+ * Set heading size and vertical spacing
+ *
+ * @param {int} modular-scale-factor               - Heading size on the modular scale
+ * @param {int} [top-vertical-rhythm-factor: 1]    - Heading top margin in vertical rhythm unit
+ * @param {int} [bottom-vertical-rhythm-factor: 1] - Heading bottom margin in vertical rhythm unit
+ *
+ * @example @include t-heading(1, 1, 1);
+ */
+@mixin t-heading($modular-scale-factor, $top-vertical-rhythm-factor: 1, $bottom-vertical-rhythm-factor: 1) {
+	font-size: t-modular-scale($modular-scale-factor);
+	margin-bottom: t-vertical-rhythm($bottom-vertical-rhythm-factor, 'em', t-modular-scale($modular-scale-factor));
+
+	* + & {
+		margin-top: t-vertical-rhythm($top-vertical-rhythm-factor, 'em', t-modular-scale($modular-scale-factor));
+	}
+
+	@content;
+}

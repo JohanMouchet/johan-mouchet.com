@@ -1,0 +1,34 @@
+/**
+ * Colors
+ */
+
+.u-color {
+	&--primary {
+		color: $s-color-primary;
+	}
+
+	&--secondary {
+		color: $s-color-secondary;
+	}
+
+	&--dimmed {
+		color: $s-color-text-dimmed;
+	}
+
+	/** States colors **/
+	&--success {
+		color: $s-color-success;
+	}
+
+	&--info {
+		color: $s-color-info;
+	}
+
+	&--warning {
+		color: $s-color-warning;
+	}
+
+	&--danger {
+		color: $s-color-danger;
+	}
+}

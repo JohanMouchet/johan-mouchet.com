@@ -1,0 +1,53 @@
+/**
+ * Visibility
+ */
+
+// Hide from both screenreaders and browsers
+.u-is--hidden {
+	display: none;
+}
+
+.u-is--shown {
+	display: block;
+	display: initial;
+}
+
+// Hide only visually, but have it available for screenreaders
+.u-is--visuallyHidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+
+	// Allow the element to be focusable when navigated to via the keyboard
+	&.u-is--focusable:active,
+	&.u-is--focusable:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+}
+
+// Hide visually and from screenreaders, but maintain layout
+.u-is--invisible {
+	visibility: hidden;
+}
+
+/* Print */
+@media print {
+	.u-is--hidden-\@print {
+		display: none;
+	}
+
+	.u-is--shown-\@print {
+		display: block;
+		display: initial;
+	}
+}

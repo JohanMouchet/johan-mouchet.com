@@ -1,0 +1,16 @@
+/**
+ * Social media
+ */
+
+.c-social-media {
+	margin-top: t-vertical-rhythm(.5);
+	white-space: nowrap;
+
+	svg {
+		height: t-modular-scale(2);
+		width: t-modular-scale(2);
+		vertical-align: text-bottom;
+		margin-right: .75em;
+		fill: $s-color-primary;
+	}
+}

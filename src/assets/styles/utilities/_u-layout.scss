@@ -1,0 +1,89 @@
+/**
+ * Float
+ */
+
+.u-float {
+	&--left {
+		float: left;
+	}
+
+	&--right {
+		float: right;
+	}
+}
+
+.u-clear {
+	clear: both;
+	float: none;
+}
+
+/* Clearfix */
+.u-clearfix {
+	&::before,
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+/* Align */
+.u-align {
+	&--left {
+		text-align: left;
+	}
+
+	&--center {
+		text-align: center;
+	}
+
+	&--right {
+		text-align: right;
+	}
+}
+
+/**
+ * Vertical Rhythm Spacers (private)
+ *
+ * Generate set of vertical-rhythm spacer classes.
+ *
+ * @param {string} bp-short - breakpoint suffix
+ */
+@mixin vertical-rhythm-spacers($bp-short) {
+	.u-vr {
+		/* 0 */
+		&--top-0-\@#{$bp-short} {
+			margin-top: 0;
+		}
+
+		&--bottom-0-\@#{$bp-short} {
+			margin-bottom: 0;
+		}
+
+		/* 1 */
+		&--top-1-\@#{$bp-short} {
+			margin-top: t-vertical-rhythm(1);
+		}
+
+		&--bottom-1-\@#{$bp-short} {
+			margin-bottom: t-vertical-rhythm(1);
+		}
+
+		/* 2 */
+		&--top-2-\@#{$bp-short} {
+			margin-top: t-vertical-rhythm(2);
+		}
+
+		&--bottom-2-\@#{$bp-short} {
+			margin-bottom: t-vertical-rhythm(2);
+		}
+	}
+}
+
+@include vertical-rhythm-spacers('xs');
+
+@each $bp-short, $bp-size in $s-breakpoints {
+	@media (min-width: $bp-size) {
+		@include vertical-rhythm-spacers($bp-short);
+	}
+}

@@ -1,0 +1,25 @@
+/* Poptrox */
+.poptrox-popup .closer {
+	z-index: 1;
+}
+
+.poptrox-popup .nav-previous {
+	left: -85px !important;
+	width: 150px !important;
+}
+
+.poptrox-popup .nav-next {
+	right: -85px !important;
+	width: 150px !important;
+}
+
+.poptrox-popup .nav-previous div,
+.poptrox-popup .nav-next div {
+	opacity: 0 !important;
+	font-family: monospace;
+}
+
+.poptrox-popup .nav-previous:hover div,
+.poptrox-popup .nav-next:hover div {
+	opacity: 1 !important;
+}

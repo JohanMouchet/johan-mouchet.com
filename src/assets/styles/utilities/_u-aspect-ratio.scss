@@ -1,0 +1,27 @@
+/**
+ * Aspect ratio
+ *
+ * @markup: <div class="u-aspect-ratio u-aspect-ratio--16:9"><p>Content</p></div>
+ */
+
+.u-aspect-ratio {
+	position: relative;
+	height: 0;
+	width: 100%;
+
+	> * {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&--16\:9 {
+		padding-top: percentage(9/16);
+	}
+
+	&--4\:3 {
+		padding-top: percentage(3/4);
+	}
+}

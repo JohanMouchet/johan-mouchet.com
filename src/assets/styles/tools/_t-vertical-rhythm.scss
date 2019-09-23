@@ -1,0 +1,29 @@
+/**
+ * Vertical Rhythm
+ *
+ * Used to keep consistent vertical spaces between elements.
+ *
+ * @param {number} factor                    - The number of line returned
+ * @param {string} [output-unit = 'em']      - The unit of the line returned: em | rem
+ * @param {string} [input-font-size = '1em'] - The font-size of the current element. Used when the unit is in em
+ *
+ * @example margin-bottom: t-vertical-rhythm(1);
+ * @example margin-bottom: t-vertical-rhythm(1, 'em', 1.5em);
+ * @example margin-bottom: t-vertical-rhythm(1, 'rem');
+ */
+@function t-vertical-rhythm($factor, $output-unit: 'em', $input-font-size: 1em) {
+	@if $output-unit == 'em' {
+		// Strip input font size unit
+		$font-size : $input-font-size / ($input-font-size * 0 + 1);
+
+		@return $factor * (1 / $font-size * $s-line-height-base) * 1em;
+	}
+
+	@else if $output-unit == 'rem' {
+		@return $factor * $s-line-height-base * 1rem;
+	}
+
+	@else {
+		@error 't-vertical-rhythm() only accepts `em` (default) or `rem` units.';
+	}
+}

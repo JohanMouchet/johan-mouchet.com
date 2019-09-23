@@ -1,0 +1,61 @@
+/**
+ * Personal Works
+ */
+
+.c-personal-work {
+	$root: &;
+
+	&__overlay {
+		display: block;
+		position: relative;
+		max-width: 200px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-image: linear-gradient(rgba($s-color-primary-lighter, .7), rgba($s-color-primary-darker, .9));
+			transform-origin: 100% 50%;
+			transition: transform .2s ease-out;
+		}
+
+		&:hover {
+			&::after {
+				transform: scaleX(0);
+			}
+
+			#{$root}__thumbnail {
+				filter: grayscale(0);
+			}
+
+			#{$root}__source {
+				opacity: 0;
+			}
+		}
+	}
+
+	&__thumbnail {
+		display: block;
+		border: 1px solid $s-color-gray-lighter;
+		filter: grayscale(1);
+		transition: filter .2s ease-out;
+	}
+
+	&__source {
+		line-height: 0;
+		position: absolute;
+		bottom: 1em;
+		right: 1em;
+		z-index: t-layer(personal-work);
+		transition: opacity .2s ease-out;
+
+		svg {
+			height: t-modular-scale(1);
+			width: t-modular-scale(1);
+			fill: $s-color-white;
+		}
+	}
+}

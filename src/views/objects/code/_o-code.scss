@@ -1,0 +1,44 @@
+/**
+ * Code
+ */
+
+/* stylelint-disable selector-no-type, selector-max-type */
+pre {
+	max-height: 50vh;
+	line-height: 1.2rem;
+	margin-top: t-vertical-rhythm(1);
+	margin-bottom: t-vertical-rhythm(1);
+	padding: t-vertical-rhythm(1);
+	overflow: auto;
+	tab-size: 2;
+
+	code {
+		padding: 0;
+	}
+
+	&.o-pre--vScroll { /* stylelint-disable-line selector-no-qualifying-type */
+		max-height: t-vertical-rhythm(10);
+	}
+}
+
+pre,
+code {
+	background-color: $s-color-gray-lighter;
+	color: lighten($s-color-text, 5%);
+}
+
+/* Inline code */
+code,
+kbd {
+	padding: .2em .5em;
+	font-size: t-modular-scale(-1, 'rem');
+	font-weight: 400;
+	text-transform: none;
+	font-style: normal;
+	letter-spacing: normal;
+}
+
+kbd {
+	background: $s-color-black;
+	color: $s-color-white;
+}

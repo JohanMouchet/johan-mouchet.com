@@ -1,0 +1,45 @@
+/**
+ * Modular scale
+ *
+ * Used to size types based on a base font-size and a chosen ratio.
+ *
+ * @param {number} factor               - The modular scale step
+ * @param {string} [output-unit = 'em'] - The unit of the font-size returned: em | rem
+ *
+ * @example font-style: t-modular-scale(1);
+ * @example font-style: t-modular-scale(1, 'rem');
+ */
+@function t-modular-scale($factor, $output-unit: 'em') {
+	@if $output-unit == 'em' {
+		$output-unit : 1em;
+	}
+
+	@else if $output-unit == 'rem' {
+		$output-unit : 1rem;
+	}
+
+	@else {
+		@error 't-modular-scale() only accepts `em` (default) or `rem` units.';
+	}
+
+	@return t-power($s-modular-scale-ratio, $factor) * $output-unit;
+}
+
+/* Power */
+@function t-power($number, $exponent) {
+	$value: 1;
+
+	@if $exponent > 0 {
+		@for $i from 1 through $exponent {
+			$value: $value * $number;
+		}
+	}
+
+	@else if $exponent < 0 {
+		@for $i from 1 through -$exponent {
+			$value: $value / $number;
+		}
+	}
+
+	@return $value;
+}

@@ -1,0 +1,27 @@
+/**
+ * Link
+ *
+ * Set link styling
+ *
+ * @param {color}  [color = $s-color-link]               - Link color
+ * @param {string} [decoration = 'none']                 - Link text-decoration
+ * @param {color}  [hover-color = $s-color-link-hover]   - Link hover color
+ * @param {string} [hover-decoration = 'underline']      - Link hover text-decoration
+ * @param {color}  [active-color = $s-color-link-active] - Link active color
+ *
+ * @example @include t-link;
+ */
+@mixin t-link($color: $s-color-link, $decoration: 'none', $hover-color: $s-color-link-hover, $hover-decoration: 'underline', $active-color: $s-color-link-active) {
+	color: $color;
+	text-decoration: #{$decoration};
+
+	&:hover,
+	&:focus {
+		color: $hover-color;
+		text-decoration: #{$hover-decoration};
+	}
+
+	&:active {
+		color: $active-color;
+	}
+}

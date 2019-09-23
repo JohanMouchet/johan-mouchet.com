@@ -1,0 +1,103 @@
+/**
+ * Blockquote
+ */
+
+/* stylelint-disable selector-no-type */
+.o-blockquote {
+	margin: t-vertical-rhythm(2, 'em', t-modular-scale(1));
+	padding-left: 1em;
+	font-size: t-modular-scale(1);
+	color: $s-color-secondary;
+	position: relative;
+
+	&::before {
+		display: inline-block;
+		content: '';
+		height: 100%;
+		width: 2px;
+		background: $s-color-gray;
+		position: absolute;
+		left: 0;
+
+		@include t-wekkit-hdpi-small-dimension('width');
+	}
+
+	&__quotes {
+		margin: 0;
+		text-align: inherit;
+		quotes: '\201c' '\201d';
+
+		&::before,
+		&::after {
+			font-family: $s-font-family-secondary;
+			font-weight: 700;
+			font-size: t-modular-scale(2);
+			line-height: 1;
+		}
+
+		&::before {
+			content: open-quote;
+			margin-right: .2em;
+		}
+
+		&::after {
+			content: close-quote;
+			margin-left: .2em;
+		}
+
+		[href]:hover {
+			text-decoration: none;
+		}
+	}
+
+	/** Pulled **/
+	&--pulled {
+		float: left;
+
+		@media (min-width: t-breakpoint(md)) {
+			width: 30%;
+		}
+	}
+
+	/** Cite **/
+	&__cite {
+		display: block;
+		margin-top: t-vertical-rhythm(.5);
+		font-size: t-modular-scale(-2);
+		color: $s-color-text-dimmed;
+
+		[href] {
+			@include t-link($s-color-text-dimmed);
+		}
+
+		&::before {
+			color: inherit;
+			content: '\2014';
+			margin-right: .5rem;
+		}
+	}
+
+	/** Animation **/
+	&.animated {
+		&::before {
+			transform-origin: 50% 0;
+			animation: blockquote-animation .5s ease-out both;
+		}
+
+		> * {
+			animation: blockquote-quote-animation .25s .25s ease-out both;
+		}
+	}
+
+	@keyframes blockquote-animation {
+		from {
+			transform: scaleY(0);
+		}
+	}
+
+	@keyframes blockquote-quote-animation {
+		from {
+			opacity: 0;
+		}
+	}
+}

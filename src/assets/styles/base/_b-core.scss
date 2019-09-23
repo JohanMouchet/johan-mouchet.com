@@ -1,0 +1,80 @@
+/**
+ * Core
+ */
+
+/* stylelint-disable selector-no-type */
+html {
+	box-sizing: border-box;
+	background: $s-color-primary;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: t-vertical-rhythm(.2);
+	background: $s-color-white;
+	box-shadow: 0 0 5px rgba($s-color-black, .5);
+
+	@media (min-width: t-breakpoint(md)) {
+		margin: t-vertical-rhythm(1);
+	}
+}
+
+img,
+svg {
+	max-width: 100%;
+	height: auto;
+}
+
+object,
+embed,
+video,
+iframe {
+	max-width: 100%;
+}
+
+hr {
+	max-width: 100%;
+	margin: t-vertical-rhythm(2) 0;
+	border: 0;
+	border-bottom: 1px solid $s-color-gray;
+	animation: hr-animation .3s ease-out both;
+
+	/*** Animation ***/
+	@keyframes hr-animation {
+		from {
+			transform: scaleX(0);
+		}
+
+		to {
+			transform: scaleX(1);
+		}
+	}
+}
+
+/**
+ * Faster taps on mobile devices
+ * cf: https://adactio.com/journal/10019 for more info
+ */
+a,
+button,
+input,
+select,
+textarea,
+label,
+summary {
+	touch-action: manipulation;
+}
+
+/**
+ * Reset normalize opiniated style
+ */
+button {
+	line-height: $s-line-height-base;
+	font-family: inherit;
+	font-size: t-modular-scale(0);
+}
