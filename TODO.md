@@ -1,13 +1,14 @@
 # TODO
 
-- import all views: SCSS + twig
+# Done
 
-* rename views:
+- import all views: SCSS + twig
+- rename views:
   - capitalize folder
   - capitalize template
   - remove prefix
   - change file extension
-* add index
+- add index
 
 # Fix
 
