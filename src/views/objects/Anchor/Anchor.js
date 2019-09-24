@@ -36,8 +36,8 @@ const ___ = (props: Props) => {
 	return (
 
 
-	<{ props.tag } id="{ props.id }" className="___Class" {[...props.metadata.attributes]}>
-		<a href="{ context._SITE['rurl'] }#{ props.id }" className="{ 'u-anchor__link'|contextClass(contextClass) }">{ props.marker|default('#') }</a>
+	<{ props.tag } id={props.id} className="___Class" {[...props.metadata.attributes]}>
+		<a href={`${context._SITE['rurl']}#${props.id}`} className={'u-anchor__link'|contextClass(contextClass)}>{ props.marker|default('#') }</a>
 		{- props.text|raw -}
 	</{ props.tag }>
 	);

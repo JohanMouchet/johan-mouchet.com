@@ -36,13 +36,13 @@ const ___ = (props: Props) => {
   return (
 	<div className="___Class">
 		{% if props.label %}
-			<span className="{ 'o-progress-bar__label'|contextClass(contextClass) }">{ props.label|raw }</span>
+			<span className={'o-progress-bar__label'|contextClass(contextClass)}>{ props.label|raw }</span>
 		{% endif %}
 		{% if props.total %}
-			<span className="{ 'o-progress-bar__total'|contextClass(contextClass) }">{ props.total|raw }</span>
+			<span className={'o-progress-bar__total'|contextClass(contextClass)}>{ props.total|raw }</span>
 		{% endif %}
-		<div className="{ 'o-progress-bar__container'|contextClass(contextClass) }">
-			<div className="{ 'o-progress-bar__filling'|contextClass(contextClass) } wow" style="width: { props.filling }%" {% if props.tooltip %}data-progress-bar-tooltip="{ props.tooltip|raw }"{% endif %}></div>
+		<div className={'o-progress-bar__container'|contextClass(contextClass)}>
+			<div className={`${'o-progress-bar__filling'|contextClass(contextClass) } wow`} style="width: { props.filling }%" {% if props.tooltip %}data-progress-bar-tooltip={props.tooltip|raw}{% endif %}></div>
 		</div>
 	</div>
   );

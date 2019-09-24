@@ -41,11 +41,11 @@ const ___ = (props: Props) => {
 					<section className="c-reference">
 						<h3 className="c-reference__name">{ reference.name }</h3>
 						<div>
-							<span className="c-reference__relation">{ reference.relation }</span>, <span className="c-reference__company"><a href="{ reference.company.URL }" target="_blank" className="external-link">{ reference.company.name }</a></span> &mdash; <span className="c-reference__job-title">{ reference.jobTitle }</span>
+							<span className="c-reference__relation">{ reference.relation }</span>, <span className="c-reference__company"><a href={reference.company.URL} target="_blank" className="external-link">{ reference.company.name }</a></span> &mdash; <span className="c-reference__job-title">{ reference.jobTitle }</span>
 						</div>
 						<ul className="c-reference__contacts o-list--unstyled">
-							<li><a className="c-reference__email" href="mailto:{ reference.contacts.mail }">{ reference.contacts.mail }</a></li>
-							<li><a className="c-reference__linkedin" href="{ reference.contacts.linkedin }">LinkedIn</a></li>
+							<li><a className="c-reference__email" href="mailto:{ reference.contacts.mail}">{ reference.contacts.mail }</a></li>
+							<li><a className="c-reference__linkedin" href={reference.contacts.linkedin}>LinkedIn</a></li>
 						</ul>
 					</section>
 				</div>

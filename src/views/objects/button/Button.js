@@ -38,7 +38,7 @@ const ___ = (props: Props) => {
 	{% if props.type == 'button' %}
 		<button className="___Class" {[...props.metadata.attributes]}>{ props.text|raw }</button>
 	{% else %}
-		<a className="___Class" href="{ props.url }" {[...props.metadata.attributes]}>{ props.text|raw }</a>
+		<a className="___Class" href={props.url} {[...props.metadata.attributes]}>{ props.text|raw }</a>
 	{% endif %}
   );
 };
@@ -81,11 +81,11 @@ const social = (props: Props) => {
 	return (
 
 
-	<a className="___Class o-button--social" href="{ props.url }" target="_blank" rel="noopener" {[...props.metadata.attributes]}>
-		<span className="{ 'o-button__icon'|contextClass(contextClass) }">{ props.iconPath|raw }</span>
-		<span className="{ 'o-button__text'|contextClass(contextClass) }">{ props.text|raw }</span>
+	<a className="___Class o-button--social" href={props.url} target="_blank" rel="noopener" {[...props.metadata.attributes]}>
+		<span className={'o-button__icon'|contextClass(contextClass)}>{ props.iconPath|raw }</span>
+		<span className={'o-button__text'|contextClass(contextClass)}>{ props.text|raw }</span>
 		{% if props.counter %}
-			<span className="{ 'o-button__counter'|contextClass(contextClass) }">{ props.counter }</span>
+			<span className={'o-button__counter'|contextClass(contextClass)}>{ props.counter }</span>
 		{% endif %}
 	</a>
   );
@@ -127,8 +127,8 @@ const socialBadge = (props: Props) => {
 	return (
 
 
-	<a className="___Class o-button--social o-button--social-badge" href="{ props.url }" target="_blank" rel="noopener" {[...props.metadata.attributes]}>
-		<span className="{ 'o-button__icon'|contextClass(contextClass) }">{ props.iconPath|raw }</span>
+	<a className="___Class o-button--social o-button--social-badge" href={props.url} target="_blank" rel="noopener" {[...props.metadata.attributes]}>
+		<span className={'o-button__icon'|contextClass(contextClass)}>{ props.iconPath|raw }</span>
 	</a>
   );
 };

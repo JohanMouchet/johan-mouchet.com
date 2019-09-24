@@ -33,8 +33,8 @@ const ___ = (props: Props) => {
 	return (
 	<ol className="___Class">
 		{% for level in props.levels %}
-			<li className="{ 'o-breadcrumb__level'|contextClass(contextClass) } wow fadeInUp" {% if loop.index > 1 %}data-wow-delay="{ loop.index0 * 0.15 }s"{% endif %}>
-				<a className="{ 'o-breadcrumb__link'|contextClass(contextClass) }" {% if level.url and not loop.last %}href="{ level.url }"{% endif %}>{ level.title }</a>
+			<li className={`${'o-breadcrumb__level'|contextClass(contextClass) } wow fadeInUp`} {% if loop.index > 1 %}data-wow-delay={`${loop.index0 * 0.15 }s`}{% endif %}>
+				<a className={'o-breadcrumb__link'|contextClass(contextClass)} {% if level.url and not loop.last %}href={level.url}{% endif %}>{ level.title }</a>
 			</li>
 		{% endfor %}
 	</ol>
@@ -51,8 +51,8 @@ const ___ = (props: Props) => {
 					"position": { loop.index },
 					"item": {
 					"@type": "Thing",
-						"@id": "{ context._SITE['hosturl'] }{ context._SITE['baseurl'] }{ loop.last ? context._SITE['rurl'] : level.url  }",
-						"name": "{ level.title }"
+						"@id": {context._SITE['hosturl'] }{ context._SITE['baseurl'] }{ loop.last ? context._SITE['rurl'] : level.url },
+						"name": {level.title}
 					}
 				}
 				{- not loop.last ? ',' -}

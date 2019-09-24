@@ -36,9 +36,9 @@ const ___ = (props: Props) => {
 
 
 	<figure className="___Class">
-		<img className="{ 'o-figure__img'|contextClass(contextClass) }" src="{ props.src }" {% if props.alt %}alt="{ props.alt }"{% endif %} {% if props.title %}title="{ props.title }"{% endif %} {[...props.metadata.attributes]}>
+		<img className={'o-figure__img'|contextClass(contextClass)} src={props.src} {% if props.alt %}alt={props.alt}{% endif %} {% if props.title %}title={props.title}{% endif %} {[...props.metadata.attributes]}>
 		{% if props.caption %}
-			<figcaption className="{ 'o-figure__caption'|contextClass(contextClass) }">{ props.caption|raw }</figcaption>
+			<figcaption className={'o-figure__caption'|contextClass(contextClass)}>{ props.caption|raw }</figcaption>
 		{% endif %}
 	</figure>
   );

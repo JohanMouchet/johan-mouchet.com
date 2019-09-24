@@ -6,10 +6,10 @@ import * as React from "react";
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
 		/* Bundle */
-		<script src="{ _GLOBAL.paths.js }bundle.js?v={ _GLOBAL.version.js }"></script>
+		<script src={`${_GLOBAL.paths.js }bundle.js?v=${ _GLOBAL.version.js}`}></script>
 
 		/* Wow.js */
-		<script src="{ _GLOBAL.paths.js }vendors/wow.js"></script>
+		<script src={`${_GLOBAL.paths.js }vendors/wow.js`}></script>
 		<script>
 			new WOW().init();
 		</script>

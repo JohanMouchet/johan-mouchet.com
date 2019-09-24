@@ -37,7 +37,7 @@ const ___ = (props: Props) => {
 	{% for experience in props.experiences %}
 		<section className="c-experience">
 			<h3 className="c-experience__heading">
-				<a {% if experience.company.URL %}href="{ experience.company.URL }" target="_blank" className="c-experience__company external-link"{% endif %}>{ experience.company.name }</a>,
+				<a {% if experience.company.URL %}href={experience.company.URL} target="_blank" className="c-experience__company external-link"{% endif %}>{ experience.company.name }</a>,
 				{ experience.location } &mdash;
 				{ experience.jobTitle|raw }
 			</h3>

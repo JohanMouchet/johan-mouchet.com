@@ -33,14 +33,14 @@ const ___ = (props: Props) => {
 
   return (
 	<blockquote className="___Class wow">
-		<div className="{ 'o-blockquote__quotes'|contextClass(contextClass) }">
+		<div className={'o-blockquote__quotes'|contextClass(contextClass)}>
 			{ props.quote|raw }
 		</div>
 
 		{ props.outerQuote|raw }
 
 		{% if props.cite %}
-			<cite className="{ 'o-blockquote__cite'|contextClass(contextClass) }">
+			<cite className={'o-blockquote__cite'|contextClass(contextClass)}>
 					{ props.cite|raw }
 			</cite>
 		{% endif %}

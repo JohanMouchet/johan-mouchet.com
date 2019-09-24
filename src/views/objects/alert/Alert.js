@@ -42,10 +42,10 @@ const ___ = (props: Props) => {
 	{% endif %}
 
 	<div className="___Class o-alert--{ props.type|default('info') } { not props.hidden ? 'is--visible'} { props.closable ? 'js-alert'} wow">
-		<i className="{ 'o-alert__icon'|contextClass(contextClass) } material-icons">{ icon|default('info') }</i>
-		<div className="{ 'o-alert__content'|contextClass(contextClass) }">{ props.content|raw }</div>
+		<i className={`${'o-alert__icon'|contextClass(contextClass) } material-icons`}>{ icon|default('info') }</i>
+		<div className={'o-alert__content'|contextClass(contextClass)}>{ props.content|raw }</div>
 		{% if props.closable %}
-			<button className="{ 'o-alert__close'|contextClass(contextClass) } js-alert-close">&#x2716;</button>
+			<button className={`${'o-alert__close'|contextClass(contextClass) } js-alert-close`}>&#x2716;</button>
 		{% endif %}
 	</div>
   );

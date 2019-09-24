@@ -38,22 +38,22 @@ const ___ = (props: Props) => {
 		{% if props.banner or props.banner is same as(true) or props.bannerUrl %}
 			{% set tag = not props.header ? 'header' : 'div' %}
 
-			<{ tag } className="{ 'o-card__banner'|contextClass(contextClass) }" {% if props.bannerUrl %}style="background-image: url('{ props.bannerUrl }')"{% endif %}>
+			<{ tag } className={'o-card__banner'|contextClass(contextClass)} {% if props.bannerUrl %}style="background-image: url('{ props.bannerUrl }')"{% endif %}>
 				{ props.banner is same as(true) ? '' : props.banner|raw }
 			</{ tag }>
 		{% endif %}
 		{% if props.header %}
-			<header className="{ 'o-card__header'|contextClass(contextClass) }">
+			<header className={'o-card__header'|contextClass(contextClass)}>
 				{ props.header|raw }
 			</header>
 		{% endif %}
 		{% if props.body %}
-			<div className="{ 'o-card__body'|contextClass(contextClass) }">
+			<div className={'o-card__body'|contextClass(contextClass)}>
 				{ props.body|raw }
 			</div>
 		{% endif %}
 		{% if props.footer %}
-			<footer className="{ 'o-card__footer'|contextClass(contextClass) }">
+			<footer className={'o-card__footer'|contextClass(contextClass)}>
 				{ props.footer|raw }
 			</footer>
 		{% endif %}

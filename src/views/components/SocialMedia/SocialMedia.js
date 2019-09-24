@@ -30,7 +30,7 @@ const ___ = (props: Props) => {
 	<div className="grid">
 		{% for media in props.medias %}
 			<div className="c-social-media cell cell--6-@xs cell--4-@sm cell--12-@md">
-				<a className="c-social-media__link" href="{ media.URL }" title="Follow me on { media.name }" target="_blank">
+				<a className="c-social-media__link" href={media.URL} title="Follow me on { media.name }" target="_blank">
 					{ file_get_contents(media.iconPath)|raw }{ media.name }
 				</a>
 			</div>

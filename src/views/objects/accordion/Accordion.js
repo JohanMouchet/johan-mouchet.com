@@ -31,12 +31,12 @@ const ___ = (props: Props) => {
   return (
 	<ul className="___Class js-accordion">
 		{% for item in props.items %}
-			<li className="{ 'o-accordion__item'|contextClass(contextClass) } js-accordion-item { loop.first ? 'is--active' }">
-				<button className="{ 'o-accordion__thumb'|contextClass(contextClass) }">
-					<i className="{ 'o-accordion__thumb-icon'|contextClass(contextClass) } material-icons { loop.index > 1 ? 'wow fadeInLeft' }" {% if loop.index > 1 %}data-wow-delay="{ loop.index0 * 0.15 }s"{% endif %}>chevron_right</i>
+			<li className={`${'o-accordion__item'|contextClass(contextClass)} js-accordion-item ${loop.first && 'is--active'}`}>
+				<button className={'o-accordion__thumb'|contextClass(contextClass)}>
+					<i className={`${'o-accordion__thumb-icon'|contextClass(contextClass) } material-icons ${loop.index > 1 && 'wow fadeInLeft'} {% if loop.index > 1 %}data-wow-delay={loop.index0 * 0.15 }s"{% endif %}`}>chevron_right</i>
 					{ item.thumb }
 				</button>
-				<p className="{ 'o-accordion__panel'|contextClass(contextClass) } js-accordion-panel">
+				<p className={`${'o-accordion__panel'|contextClass(contextClass) } js-accordion-panel`}>
 					{ item.panel }
 				</p>
 			</li>

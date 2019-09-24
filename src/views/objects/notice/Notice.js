@@ -34,20 +34,20 @@ const ___ = (props: Props) => {
 		<div className="container container--lg">
 			<div className="grid grid--yCenter-@xs">
 				<div className="cell cell--@xs">
-					<div className="{ 'o-notice__primary'|contextClass(contextClass) }">
+					<div className={'o-notice__primary'|contextClass(contextClass)}>
 						{ props.primary|raw }
 					</div>
 				</div>
 				{% if props.secondary %}
 					<div className="cell cell--0-@xs">
-						<div className="{ 'o-notice__secondary'|contextClass(contextClass) }">
+						<div className={'o-notice__secondary'|contextClass(contextClass)}>
 							{ props.secondary|raw }
 						</div>
 					</div>
 				{% endif %}
 				{% if props.closeButton %}
 					<div className="cell cell--0-@xs">
-						<button className="{ 'o-notice__close'|contextClass(contextClass) } js-notice-close">&#x2716;</button>
+						<button className={`${'o-notice__close'|contextClass(contextClass) } js-notice-close`}>&#x2716;</button>
 					</div>
 				{% endif %}
 			</div>
