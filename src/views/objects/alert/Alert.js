@@ -22,16 +22,15 @@ const ___ = (props: Props) => {
   } = props;
 
   const ___Class = cx(
-    "___",
+	"o-alert",
+	props.metadata.contextClass,
+	props.metadata.additionalClasses,
     {
       prop1: "___--prop1"
     }
   );
 
   return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-
 	{% if props.type == 'info' %}
 		{% set icon = 'info' %}
 	{% elseif props.type == 'success' %}
@@ -42,7 +41,7 @@ const ___ = (props: Props) => {
 		{% set icon = 'error' %}
 	{% endif %}
 
-	<div className="{ contextClass } o-alert o-alert--{ props.type|default('info') } { not props.hidden ? 'is--visible'} { props.closable ? 'js-alert'} wow { additionalClasses|additionalClasses }">
+	<div className="___Class o-alert--{ props.type|default('info') } { not props.hidden ? 'is--visible'} { props.closable ? 'js-alert'} wow">
 		<i className="{ 'o-alert__icon'|contextClass(contextClass) } material-icons">{ icon|default('info') }</i>
 		<div className="{ 'o-alert__content'|contextClass(contextClass) }">{ props.content|raw }</div>
 		{% if props.closable %}

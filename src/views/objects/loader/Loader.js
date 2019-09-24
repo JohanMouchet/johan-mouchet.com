@@ -13,25 +13,19 @@ import "./___.scss";
  */
 
 const ___ = (props: Props) => {
-  const {
-    prop1,
-    prop2
-  } = props;
+  const { prop1, prop2 } = props;
 
   const ___Class = cx(
-    "___",
+    "o-loader",
+    props.metadata.contextClass,
+    props.metadata.modifierClasses,
+    props.metadata.additionalClasses,
     {
       prop1: "___--prop1"
     }
   );
 
-  return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set modifierClasses = props.metadata.modifierClasses %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-
-	<div className="{ contextClass } { 'o-loader'|modifierClasses(modifierClasses) } { additionalClasses|additionalClasses }"></div>
-  );
+  return <div className="___Class"></div>;
 };
 
 ___.defaultProps = {

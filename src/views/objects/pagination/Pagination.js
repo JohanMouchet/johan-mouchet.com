@@ -20,23 +20,22 @@ const ___ = (props: Props) => {
   } = props;
 
   const ___Class = cx(
-    "___",
+	"o-pagination",
+	props.metadata.contextClass,
+	props.metadata.additionalClasses,
     {
       prop1: "___--prop1"
     }
   );
 
   return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-
 	{% set current = props.current|abs %}
 	{% set range = props.range %}
 	{% set lowerRange = current - range %}
 	{% set upperRange = current + range + 1 %}
 	{% set links = props.links %}
 
-	<ol className="{ contextClass } o-pagination { additionalClasses|additionalClasses }">
+	<ol className="___Class">
 		/* First */
 		{% if current >= 3 %}
 			<li className="{ 'o-pagination__index'|contextClass(contextClass) } o-pagination__index--first">

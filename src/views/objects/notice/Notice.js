@@ -21,21 +21,20 @@ const ___ = (props: Props) => {
   } = props;
 
   const ___Class = cx(
-    "___",
+	"o-notice",
+	props.metadata.contextClass,
+	props.metadata.additionalClasses,
     {
       prop1: "___--prop1"
     }
   );
 
   return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-
-	<div className="{ contextClass } o-notice js-notice { additionalClasses|additionalClasses }">
+	<div className="___Class js-notice">
 		<div className="container container--lg">
 			<div className="grid grid--yCenter-@xs">
 				<div className="cell cell--@xs">
-					<div className="{ ''|contextClass(contextClass) }o-notice__primary">
+					<div className="{ 'o-notice__primary'|contextClass(contextClass) }">
 						{ props.primary|raw }
 					</div>
 				</div>

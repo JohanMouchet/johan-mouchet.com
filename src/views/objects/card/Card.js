@@ -24,18 +24,17 @@ const ___ = (props: Props) => {
   } = props;
 
   const ___Class = cx(
-    "___",
+	"o-card",
+	props.metadata.contextClass,
+	props.metadata.modifierClasses,
+	props.metadata.additionalClasses,
     {
       prop1: "___--prop1"
     }
   );
 
   return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set modifierClasses = props.metadata.modifierClasses %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-
-	<section className="{ contextClass } { 'o-card'|modifierClasses(modifierClasses) } { additionalClasses|additionalClasses }">
+	<section className="___Class">
 		{% if props.banner or props.banner is same as(true) or props.bannerUrl %}
 			{% set tag = not props.header ? 'header' : 'div' %}
 

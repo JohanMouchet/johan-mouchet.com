@@ -21,21 +21,20 @@ const label = (props: Props) => {
 	} = props;
   
 	const ___Class = cx(
-	  "___",
+	  "o-form__label",
+	  props.metadata.contextClass,
+	  props.metadata.modifierClasses,
+	  props.metadata.additionalClasses,
 	  {
 		prop1: "___--prop1"
 	  }
 	);
   
 	return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set modifierClasses = props.metadata.modifierClasses %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-
 	{%- set text = props.text is empty ? '&nbsp;' : props.text -%}
 	{%- set blockLabelClass = props.text is empty ? 'o-form__label--block' -%}
 
-	<label {% if props.for %}for="{ props.for }"{% endif %} className="{ contextClass } o-form__label { 'o-form__label'|modifierClasses(modifierClasses) } { blockLabelClass } { additionalClasses|additionalClasses }">
+	<label {% if props.for %}for="{ props.for }"{% endif %} className="___Class { blockLabelClass }">
 		{- text|raw -}
 	</label>
   );
@@ -67,19 +66,19 @@ const field = (props: Props) => {
 	} = props;
   
 	const ___Class = cx(
-	  "___",
+	  "o-form__field",
+	  props.metadata.contextClass,
+	  props.metadata.modifierClasses,
+	  props.metadata.additionalClasses,
 	  {
 		prop1: "___--prop1"
 	  }
 	);
   
 	return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set modifierClasses = props.metadata.modifierClasses %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-	{% set attributes = props.metadata.attributes %}
 
-	<input {% if props.id %}id="{ props.id }"{% endif %} type="{ props.type }" name="{ props.name }" {% if props.value %}value="{ props.value }"{% endif %} className="{ contextClass } o-form__field { 'o-form__field'|modifierClasses(modifierClasses) } o-form__field--{ props.type } { additionalClasses|additionalClasses }" { attributes|attributes|raw }>
+
+	<input {% if props.id %}id="{ props.id }"{% endif %} type="{ props.type }" name="{ props.name }" {% if props.value %}value="{ props.value }"{% endif %} className="___Class o-form__field--{ props.type }" {[...props.metadata.attributes]}>
   );
 };
 
@@ -109,19 +108,19 @@ const toggle = (props: Props) => {
 	} = props;
   
 	const ___Class = cx(
-	  "___",
+	  "o-form__toggle",
+	  props.metadata.contextClass,
+	  props.metadata.additionalClasses,
 	  {
 		prop1: "___--prop1"
 	  }
 	);
   
 	return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-	{% set attributes = props.metadata.attributes %}
 
-	<label className="{ contextClass } o-form__toggle o-form__toggle--{ props.type } { additionalClasses|additionalClasses }">
-		<input {% if props.id %}id="{ props.id }"{% endif %} type="{ props.type }" {% if props.name %}name="{ props.name }"{% endif %} {% if props.value %}value="{ props.value }"{% endif %} className="{ 'o-form__toggle-input'|contextClass(contextClass) }" { attributes|attributes|raw }>
+
+	<label className="___Class o-form__toggle--{ props.type }" {[...props.metadata.attributes]}>
+		<input {% if props.id %}id="{ props.id }"{% endif %} type="{ props.type }" {% if props.name %}name="{ props.name }"{% endif %} {% if props.value %}value="{ props.value }"{% endif %} className="{ 'o-form__toggle-input'|contextClass(contextClass) }" {[...props.metadata.attributes]}>
 		<span className="{ 'o-form__toggle-icon'|contextClass(contextClass) }"></span>
 		{%- if props.text -%}
 			<span className="{ 'o-form__toggle-text'|contextClass(contextClass) }">{ props.text|raw }</span>
@@ -155,19 +154,19 @@ const file = (props: Props) => {
 	} = props;
   
 	const ___Class = cx(
-	  "___",
+	  "o-form__file",
+	  props.metadata.contextClass,
+	  props.metadata.additionalClasses,
 	  {
 		prop1: "___--prop1"
 	  }
 	);
   
 	return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-	{% set attributes = props.metadata.attributes %}
 
-	<label className="{ contextClass } o-form__file o-button js-form-file { additionalClasses|additionalClasses }">
-		<input {% if props.id %}id="{ props.id }"{% endif %} type="file" name="{ props.name }" className="{ 'o-form__file-input'|contextClass(contextClass) } js-form-file-input" data-multiple-caption="{ props.multipleCaption ? props.multipleCaption : '{count} files selected' }"  { attributes|attributes|raw }>
+
+	<label className="___Class o-button js-form-file">
+		<input {% if props.id %}id="{ props.id }"{% endif %} type="file" name="{ props.name }" className="{ 'o-form__file-input'|contextClass(contextClass) } js-form-file-input" data-multiple-caption="{ props.multipleCaption ? props.multipleCaption : '{count} files selected' }"  {[...props.metadata.attributes]}>
 		<i className="material-icons">file_upload</i>
 		{% if props.text %}
 			<span className="{ 'o-form__file-text'|contextClass(contextClass) } js-form-file-text">{ props.text|raw }</span>
@@ -203,20 +202,21 @@ const select = (props: Props) => {
 	} = props;
   
 	const ___Class = cx(
-	  "___",
+	  "o-form__field",
+	  props.metadata.contextClass,
+	  props.metadata.modifierClasses,
+	  props.metadata.additionalClasses,
 	  {
 		prop1: "___--prop1"
 	  }
 	);
   
 	return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-	{% set attributes = props.metadata.attributes %}
 
-	<select {% if props.id %}id="{ props.id }"{% endif %} name="{ props.name }" className="{ contextClass } o-form__field o-form__field--select { additionalClasses|additionalClasses }" { attributes|attributes|raw }>
+
+	<select {% if props.id %}id="{ props.id }"{% endif %} name="{ props.name }" className="___Class o-form__field--select" {[...props.metadata.attributes]}>
 		{% for option in props.options %}
-			<option {% if props.value %}value="{ props.value }"{% endif %} { option.attributes|attributes|raw }>{ option.text }</option>
+			<option {% if props.value %}value="{ props.value }"{% endif %} {[...props.metadata.attributes]}>{ option.text }</option>
 		{% endfor %}
 	</select>
   );
@@ -246,18 +246,18 @@ const textarea = (props: Props) => {
 	} = props;
   
 	const ___Class = cx(
-	  "___",
+	  "o-form__field",
+	  props.metadata.contextClass,
+	  props.metadata.additionalClasses,
 	  {
 		prop1: "___--prop1"
 	  }
 	);
   
 	return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-	{% set attributes = props.metadata.attributes %}
 
-	<textarea {% if props.id %}id="{ props.id }"{% endif %} name="{ props.name }" className="{ contextClass } o-form__field o-form__field--textarea { additionalClasses|additionalClasses }" { attributes|attributes|raw }>
+
+	<textarea {% if props.id %}id="{ props.id }"{% endif %} name="{ props.name }" className="___Class o-form__field--textarea" {[...props.metadata.attributes]}>
 		{- props.text|raw -}
 	</textarea>
   );
@@ -286,18 +286,18 @@ const range = (props: Props) => {
 	} = props;
   
 	const ___Class = cx(
-	  "___",
+	  "o-form__range",
+	  props.metadata.contextClass,
+	  props.metadata.additionalClasses,
 	  {
 		prop1: "___--prop1"
 	  }
 	);
   
 	return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-	{% set attributes = props.metadata.attributes %}
 
-	<input {% if props.id %}id="{ props.id }"{% endif %} type="range" name="{ props.name }" className="{ contextClass } o-form__range { additionalClasses|additionalClasses }" { attributes|attributes|raw }>
+
+	<input {% if props.id %}id="{ props.id }"{% endif %} type="range" name="{ props.name }" className="___Class" {[...props.metadata.attributes]}>
   );
 };
 

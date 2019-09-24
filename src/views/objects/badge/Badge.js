@@ -13,24 +13,18 @@ import "./___.scss";
  */
 
 const ___ = (props: Props) => {
-  const {
-    prop1,
-    prop2
-  } = props;
+  const { prop1, prop2 } = props;
 
   const ___Class = cx(
-    "___",
+    "o-badge",
+    props.metadata.contextClass,
+    props.metadata.additionalClasses,
     {
       prop1: "___--prop1"
     }
   );
 
-  return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-
-	<span className="{ contextClass } o-badge { additionalClasses|additionalClasses }">{ props.content }</span>
-  );
+  return <span className="___Class">{props.content}</span>;
 };
 
 ___.defaultProps = {

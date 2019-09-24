@@ -22,18 +22,17 @@ const ___ = (props: Props) => {
   } = props;
 
   const ___Class = cx(
-    "___",
+	"o-blockquote",
+	props.metadata.contextClass,
+	props.metadata.modifierClasses,
+	props.metadata.additionalClasses,
     {
       prop1: "___--prop1"
     }
   );
 
   return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set modifierClasses = props.metadata.modifierClasses %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-
-	<blockquote className="{ contextClass } o-blockquote { 'o-blockquote'|modifierClasses(modifierClasses) } wow { additionalClasses|additionalClasses }">
+	<blockquote className="___Class wow">
 		<div className="{ 'o-blockquote__quotes'|contextClass(contextClass) }">
 			{ props.quote|raw }
 		</div>

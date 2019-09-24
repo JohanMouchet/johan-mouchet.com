@@ -1,7 +1,8 @@
 # TODO
 
-- Convert {% import
+- What to do with `contextClass(contextClass)`?
 - Convert JSDoc to Flow
+- Convert {% import
 
 # Done
 
@@ -14,7 +15,8 @@
 - Add index
 - Add imports
 - Convert macro to React comp
-- Replace options. by props.
+- Replace options. by props
+- Convert Classes to cx
 
 # Fix
 

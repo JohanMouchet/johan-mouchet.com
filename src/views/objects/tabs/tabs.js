@@ -20,17 +20,16 @@ const ___ = (props: Props) => {
   } = props;
 
   const ___Class = cx(
-    "___",
+	"o-tabs",
+	props.metadata.contextClass,
+	props.metadata.additionalClasses,
     {
       prop1: "___--prop1"
     }
   );
 
   return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-
-	<div className="{ contextClass } o-tabs js-tabs { additionalClasses|additionalClasses }">
+	<div className="___Class js-tabs">
 		<ul className="{ 'o-tabs__thumbs'|contextClass(contextClass) }">
 			{% for tab in props.tabs %}
 				<li className="{ 'o-tabs__thumb'|contextClass(contextClass) } js-tabs-thumb wow fadeInUp" {% if loop.index > 1 %}data-wow-delay="{ loop.index0 * 0.15 }s"{% endif %}>

@@ -20,17 +20,16 @@ const ___ = (props: Props) => {
   } = props;
 
   const ___Class = cx(
-    "___",
+	"o-accordion",
+	props.metadata.contextClass,
+	props.metadata.additionalClasses,
     {
       prop1: "___--prop1"
     }
   );
 
   return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-
-	<ul className="{ contextClass } o-accordion js-accordion { additionalClasses|additionalClasses }">
+	<ul className="___Class js-accordion">
 		{% for item in props.items %}
 			<li className="{ 'o-accordion__item'|contextClass(contextClass) } js-accordion-item { loop.first ? 'is--active' }">
 				<button className="{ 'o-accordion__thumb'|contextClass(contextClass) }">

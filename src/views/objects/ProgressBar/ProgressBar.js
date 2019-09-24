@@ -24,18 +24,17 @@ const ___ = (props: Props) => {
   } = props;
 
   const ___Class = cx(
-    "___",
+	"o-progress-bar",
+	props.metadata.contextClass,
+	props.metadata.modifierClasses,
+	props.metadata.additionalClasses,
     {
       prop1: "___--prop1"
     }
   );
 
   return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set modifierClasses = props.metadata.modifierClasses %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-
-	<div className="{ contextClass } { 'o-progress-bar'|modifierClasses(modifierClasses) } { additionalClasses|additionalClasses }">
+	<div className="___Class">
 		{% if props.label %}
 			<span className="{ 'o-progress-bar__label'|contextClass(contextClass) }">{ props.label|raw }</span>
 		{% endif %}

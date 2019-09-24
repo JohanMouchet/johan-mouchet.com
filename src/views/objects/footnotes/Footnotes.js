@@ -65,17 +65,16 @@ const notes = (props: Props) => {
 	} = props;
   
 	const ___Class = cx(
-	  "___",
+	  "o-footnotes",
+	  props.metadata.contextClass,
+	  props.metadata.additionalClasses,
 	  {
 		prop1: "___--prop1"
 	  }
 	);
   
 	return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-
-	<ol className="{ contextClass } o-footnotes { additionalClasses|additionalClasses }">
+	<ol className="___Class">
 		{% for note in props.notes %}
 			<li id="hash-footnote:{ props.prefix ? props.prefix ~ '-' }{ note.id }" className="{ 'o-footnotes__note'|contextClass(contextClass) }">
 				{ note.text|raw }

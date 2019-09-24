@@ -23,20 +23,20 @@ const ___ = (props: Props) => {
   } = props;
 
   const ___Class = cx(
-    "___",
+    "o-figure",
+    props.metadata.contextClass,
+	  props.metadata.modifierClasses,
+	  props.metadata.additionalClasses,
     {
       prop1: "___--prop1"
     }
   );
 
   return (
-	{% set contextClass = props.metadata.contextClass %}
-	{% set modifierClasses = props.metadata.modifierClasses %}
-	{% set additionalClasses = props.metadata.additionalClasses %}
-	{% set attributes = props.metadata.attributes %}
 
-	<figure className="{ contextClass } o-figure { 'o-figure'|modifierClasses(modifierClasses) } { additionalClasses|additionalClasses }">
-		<img className="{ 'o-figure__img'|contextClass(contextClass) }" src="{ props.src }" {% if props.alt %}alt="{ props.alt }"{% endif %} {% if props.title %}title="{ props.title }"{% endif %} { props.metadata.attributes|attributes|raw }>
+
+	<figure className="___Class">
+		<img className="{ 'o-figure__img'|contextClass(contextClass) }" src="{ props.src }" {% if props.alt %}alt="{ props.alt }"{% endif %} {% if props.title %}title="{ props.title }"{% endif %} {[...props.metadata.attributes]}>
 		{% if props.caption %}
 			<figcaption className="{ 'o-figure__caption'|contextClass(contextClass) }">{ props.caption|raw }</figcaption>
 		{% endif %}
