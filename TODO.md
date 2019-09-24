@@ -1,8 +1,9 @@
 # TODO
 
-- What to do with `contextClass(contextClass)`?
-- Convert JSDoc to Flow
 - Convert {% import
+- Convert JSDoc to Flow
+- remove props.
+- What to do with `contextClass(contextClass)`?
 
 # Done
 
