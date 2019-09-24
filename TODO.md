@@ -1,6 +1,5 @@
 # TODO
 
-- Replace twig not
 - What to do with `contextClass(contextClass)`?
 - Convert JSDoc to Flow
 - Convert {% import
@@ -19,6 +18,7 @@
 - Replace options. by props
 - Convert Classes to cx
 - Converted attributes
+- Replace twig not
 
 # Fix
 

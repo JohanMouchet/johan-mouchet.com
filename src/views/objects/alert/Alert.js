@@ -41,7 +41,7 @@ const ___ = (props: Props) => {
 		{% set icon = 'error' %}
 	{% endif %}
 
-	<div className={`${___Class} o-alert--${ props.type|default('info') } ${ not props.hidden && 'is--visible'} ${ props.closable && 'js-alert'} wow`}>
+	<div className={`${___Class} o-alert--${ props.type|default('info') } ${ !props.hidden && 'is--visible'} ${ props.closable && 'js-alert'} wow`}>
 		<i className={`${'o-alert__icon'|contextClass(contextClass) } material-icons`}>{ icon|default('info') }</i>
 		<div className={'o-alert__content'|contextClass(contextClass)}>{ props.content|raw }</div>
 		{% if props.closable %}

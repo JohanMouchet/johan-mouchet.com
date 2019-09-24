@@ -7,7 +7,7 @@ import "./___.scss";
 /**
  * Pagination
  *
- * @param {int}   [range]                      - Pagination number of links displayed on each side of the current, all links are displayed if not specified.
+ * @param {int}   [range]                      - Pagination number of links displayed on each side of the current, all links are displayed if !specified.
  * @param {int}   current                      - Pagination active index
  * @param {array} links                        - Pagination list of index link
  * @param {array} [metadata.additionalClasses] - Pagination additional classes

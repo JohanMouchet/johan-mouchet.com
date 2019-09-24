@@ -34,7 +34,7 @@ const ___ = (props: Props) => {
 
 	{% import _self as menu %}
 
-	<ul className={not isSubmenu ? 'o-menu' : 'o-menu__submenu'}>
+	<ul className={!isSubmenu ? 'o-menu' : 'o-menu__submenu'}>
 		{% for item in props.menu if item.text or item.button %}
 			<li className={`o-menu__item ${ item.menu && 'o-menu__item--has-children' } ${ item.metadata.additionalClasses|additionalClasses}`}>
 				{% if item.text %}

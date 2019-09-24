@@ -36,7 +36,7 @@ const ___ = (props: Props) => {
   return (
 	<section className={___Class}>
 		{% if props.banner or props.banner is same as(true) or props.bannerUrl %}
-			{% set tag = not props.header ? 'header' : 'div' %}
+			{% set tag = !props.header ? 'header' : 'div' %}
 
 			<{ tag } className={'o-card__banner'|contextClass(contextClass)} {% if props.bannerUrl %}style="background-image: url('{ props.bannerUrl }')"{% endif %}>
 				{ props.banner is same as(true) ? '' : props.banner|raw }
