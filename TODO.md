@@ -1,9 +1,13 @@
 # TODO
 
-- Convert {% import
+- Convert `{% import` / `{% include`
+- Replace `{% for`
+- Replace `{% if`
+- Replace `{% set`
 - Convert JSDoc to Flow
 - remove props.
 - What to do with `contextClass(contextClass)`?
+- Check potentially ignored prop in string `title="Follow me on { media.name }"`
 
 # Done
 
