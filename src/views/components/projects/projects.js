@@ -16,7 +16,20 @@ import "./___.scss";
  * @param {array}  [project[0].details]     - project details
  */
 
-{% macro default(options) %}
+const ___ = (props: Props) => {
+  const {
+    prop1,
+    prop2
+  } = props;
+
+  const ___Class = cx(
+    "___",
+    {
+      prop1: "___--prop1"
+    }
+  );
+
+  return (
 	<div className="c-projects">
 		<div className="grid">
 			{% set projectQuantity = options|length %}
@@ -76,4 +89,11 @@ import "./___.scss";
 			{% endfor %}
 		</div>
 	</div>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export default ___;

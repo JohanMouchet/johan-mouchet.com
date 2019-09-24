@@ -13,7 +13,22 @@ import "./___.scss";
  * @param {string} text     - Reference text
  */
 
-{% macro ref(context, options) %}
+// TODO: "context" was passed in the macro
+
+const ref = (props: Props) => {
+	const {
+	  prop1,
+	  prop2
+	} = props;
+  
+	const ___Class = cx(
+	  "___",
+	  {
+		prop1: "___--prop1"
+	  }
+	);
+  
+	return (
 	{%- spaceless %}
 		<sup>
 			<a id="hash-footnote-ref:{ options.prefix ? options.prefix ~ '-' }{ options.id }" className="o-footnote-ref" href="{ context._SITE['rurl'] }#footnote:{ options.prefix ? options.prefix ~ '-' }{ options.id }">
@@ -21,7 +36,14 @@ import "./___.scss";
 			</a>
 		</sup>
 	{% endspaceless -%}
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export { ___ };
 
 /**
  * Notes
@@ -33,7 +55,23 @@ import "./___.scss";
  * @param {string} [metadata.contextClass]      - Note context class
  * @param {array}  [metadata.additionalClasses] - Notes additional classes
  */
-{% macro notes(context, options) %}
+
+// TODO: "context" was passed in the macro
+
+const notes = (props: Props) => {
+	const {
+	  prop1,
+	  prop2
+	} = props;
+  
+	const ___Class = cx(
+	  "___",
+	  {
+		prop1: "___--prop1"
+	  }
+	);
+  
+	return (
 	{% set contextClass = options.metadata.contextClass %}
 	{% set additionalClasses = options.metadata.additionalClasses %}
 
@@ -45,4 +83,11 @@ import "./___.scss";
 			</li>
 		{% endfor %}
 	</ol>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export default ___;

@@ -12,10 +12,30 @@ import "./___.scss";
  * @param {array}  [metadata.additionalClasses] - Loader additional classes
  */
 
-{% macro default(options) %}
+const ___ = (props: Props) => {
+  const {
+    prop1,
+    prop2
+  } = props;
+
+  const ___Class = cx(
+    "___",
+    {
+      prop1: "___--prop1"
+    }
+  );
+
+  return (
 	{% set contextClass = options.metadata.contextClass %}
 	{% set modifierClasses = options.metadata.modifierClasses %}
 	{% set additionalClasses = options.metadata.additionalClasses %}
 
 	<div className="{ contextClass } { 'o-loader'|modifierClasses(modifierClasses) } { additionalClasses|additionalClasses }"></div>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export default ___;

@@ -16,7 +16,20 @@ import "./___.scss";
  * @param {object} [metadata.attributes]        - Figure attributes
  */
 
-{% macro default(options) %}
+const ___ = (props: Props) => {
+  const {
+    prop1,
+    prop2
+  } = props;
+
+  const ___Class = cx(
+    "___",
+    {
+      prop1: "___--prop1"
+    }
+  );
+
+  return (
 	{% set contextClass = options.metadata.contextClass %}
 	{% set modifierClasses = options.metadata.modifierClasses %}
 	{% set additionalClasses = options.metadata.additionalClasses %}
@@ -28,4 +41,11 @@ import "./___.scss";
 			<figcaption className="{ 'o-figure__caption'|contextClass(contextClass) }">{ options.caption|raw }</figcaption>
 		{% endif %}
 	</figure>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export default ___;

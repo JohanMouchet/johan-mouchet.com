@@ -1,21 +1,24 @@
 # TODO
 
+- Replace options. by props.
+- convert {% import
 - Convert JSDoc to Flow
-- Convert macro to React comp
 
 # Done
 
-- import all views: SCSS + twig
-- rename views:
-  - capitalize folder
-  - capitalize template
-  - remove prefix
-  - change file extension
-- add index
-- add imports
+- Import all views: SCSS + twig
+- Rename views:
+  - Capitalize folder
+  - Capitalize template
+  - Remove prefix
+  - Change file extension
+- Add index
+- Add imports
+- Convert macro to React comp
 
 # Fix
 
-- remove CSS headers
-- assets/img > assets/images
+- Address TODOs
+- Remove CSS headers
+- Assets/img > assets/images
 - SCSS import order: settings, tools, vendors, base, ui, components, partials, utilities

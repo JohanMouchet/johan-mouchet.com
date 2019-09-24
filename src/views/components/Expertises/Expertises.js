@@ -13,7 +13,20 @@ import "./___.scss";
  * @param {int}    expertises[0].tooltip - Expertise tooltip
  */
 
-{% macro default(options) %}
+const ___ = (props: Props) => {
+  const {
+    prop1,
+    prop2
+  } = props;
+
+  const ___Class = cx(
+    "___",
+    {
+      prop1: "___--prop1"
+    }
+  );
+
+  return (
 	{% import "objects/o-progress-bar.html" as progressBar %}
 
 	<ul className="c-expertises o-list--unstyled">
@@ -32,4 +45,11 @@ import "./___.scss";
 			</li>
 		{% endfor %}
 	</ul>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export default ___;

@@ -13,7 +13,20 @@ import "./___.scss";
  * @param {array}   works[0].expandedPath  - Work expanded image path
  */
 
-{% macro default(options) %}
+const ___ = (props: Props) => {
+  const {
+    prop1,
+    prop2
+  } = props;
+
+  const ___Class = cx(
+    "___",
+    {
+      prop1: "___--prop1"
+    }
+  );
+
+  return (
 	<div className="c-personal-works">
 		<div className="grid">
 			{% for work in options.works %}
@@ -32,4 +45,11 @@ import "./___.scss";
 			{% endfor %}
 		</div>
 	</div>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export default ___;

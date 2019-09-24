@@ -14,7 +14,20 @@ import "./___.scss";
  * @param {array}  [metadata.modifierClasses]   - Label modifiers classes
  */
 
-{% macro label(options) %}
+const label = (props: Props) => {
+	const {
+	  prop1,
+	  prop2
+	} = props;
+  
+	const ___Class = cx(
+	  "___",
+	  {
+		prop1: "___--prop1"
+	  }
+	);
+  
+	return (
 	{% set contextClass = options.metadata.contextClass %}
 	{% set modifierClasses = options.metadata.modifierClasses %}
 	{% set additionalClasses = options.metadata.additionalClasses %}
@@ -25,7 +38,14 @@ import "./___.scss";
 	<label {% if options.for %}for="{ options.for }"{% endif %} className="{ contextClass } o-form__label { 'o-form__label'|modifierClasses(modifierClasses) } { blockLabelClass } { additionalClasses|additionalClasses }">
 		{- text|raw -}
 	</label>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export { ___ };
 
 /**
  * Field
@@ -40,14 +60,34 @@ import "./___.scss";
  * @param {object} [metadata.attributes]        - Field attributes
  */
 
-{% macro field(options) %}
+const field = (props: Props) => {
+	const {
+	  prop1,
+	  prop2
+	} = props;
+  
+	const ___Class = cx(
+	  "___",
+	  {
+		prop1: "___--prop1"
+	  }
+	);
+  
+	return (
 	{% set contextClass = options.metadata.contextClass %}
 	{% set modifierClasses = options.metadata.modifierClasses %}
 	{% set additionalClasses = options.metadata.additionalClasses %}
 	{% set attributes = options.metadata.attributes %}
 
 	<input {% if options.id %}id="{ options.id }"{% endif %} type="{ options.type }" name="{ options.name }" {% if options.value %}value="{ options.value }"{% endif %} className="{ contextClass } o-form__field { 'o-form__field'|modifierClasses(modifierClasses) } o-form__field--{ options.type } { additionalClasses|additionalClasses }" { attributes|attributes|raw }>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export { ___ };
 
 /**
  * Toggle
@@ -62,7 +102,20 @@ import "./___.scss";
  * @param {object} [metadata.attributes]        - Toggles attributes
  */
 
-{% macro toggle(options) %}
+const toggle = (props: Props) => {
+	const {
+	  prop1,
+	  prop2
+	} = props;
+  
+	const ___Class = cx(
+	  "___",
+	  {
+		prop1: "___--prop1"
+	  }
+	);
+  
+	return (
 	{% set contextClass = options.metadata.contextClass %}
 	{% set additionalClasses = options.metadata.additionalClasses %}
 	{% set attributes = options.metadata.attributes %}
@@ -74,7 +127,14 @@ import "./___.scss";
 			<span className="{ 'o-form__toggle-text'|contextClass(contextClass) }">{ options.text|raw }</span>
 		{% endif -%}
 	</label>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export { ___ };
 
 /**
  * File
@@ -88,7 +148,20 @@ import "./___.scss";
  * @param {string} [metadata.multipleCaption]   - File caption used when multiple files selected (default: "{count} files selected")
  */
 
-{% macro file(options) %}
+const file = (props: Props) => {
+	const {
+	  prop1,
+	  prop2
+	} = props;
+  
+	const ___Class = cx(
+	  "___",
+	  {
+		prop1: "___--prop1"
+	  }
+	);
+  
+	return (
 	{% set contextClass = options.metadata.contextClass %}
 	{% set additionalClasses = options.metadata.additionalClasses %}
 	{% set attributes = options.metadata.attributes %}
@@ -100,7 +173,14 @@ import "./___.scss";
 			<span className="{ 'o-form__file-text'|contextClass(contextClass) } js-form-file-text">{ options.text|raw }</span>
 		{% endif %}
 	</label>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export { ___ };
 
 /**
  * Select
@@ -116,7 +196,20 @@ import "./___.scss";
  * @param {array}  options[0].attributes        - Select option attributes
  */
 
-{% macro select(options) %}
+const select = (props: Props) => {
+	const {
+	  prop1,
+	  prop2
+	} = props;
+  
+	const ___Class = cx(
+	  "___",
+	  {
+		prop1: "___--prop1"
+	  }
+	);
+  
+	return (
 	{% set contextClass = options.metadata.contextClass %}
 	{% set additionalClasses = options.metadata.additionalClasses %}
 	{% set attributes = options.metadata.attributes %}
@@ -126,7 +219,14 @@ import "./___.scss";
 			<option {% if options.value %}value="{ options.value }"{% endif %} { option.attributes|attributes|raw }>{ option.text }</option>
 		{% endfor %}
 	</select>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export { ___ };
 
 /**
  * Textarea
@@ -139,7 +239,20 @@ import "./___.scss";
  * @param {object} [metadata.attributes]        - Field attributes
  */
 
-{% macro textarea(options) %}
+const textarea = (props: Props) => {
+	const {
+	  prop1,
+	  prop2
+	} = props;
+  
+	const ___Class = cx(
+	  "___",
+	  {
+		prop1: "___--prop1"
+	  }
+	);
+  
+	return (
 	{% set contextClass = options.metadata.contextClass %}
 	{% set additionalClasses = options.metadata.additionalClasses %}
 	{% set attributes = options.metadata.attributes %}
@@ -147,7 +260,14 @@ import "./___.scss";
 	<textarea {% if options.id %}id="{ options.id }"{% endif %} name="{ options.name }" className="{ contextClass } o-form__field o-form__field--textarea { additionalClasses|additionalClasses }" { attributes|attributes|raw }>
 		{- options.text|raw -}
 	</textarea>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export { ___ };
 
 /**
  * Range
@@ -159,10 +279,30 @@ import "./___.scss";
  * @param {object} [metadata.attributes]        - Field attributes
  */
 
-{% macro range(options) %}
+const range = (props: Props) => {
+	const {
+	  prop1,
+	  prop2
+	} = props;
+  
+	const ___Class = cx(
+	  "___",
+	  {
+		prop1: "___--prop1"
+	  }
+	);
+  
+	return (
 	{% set contextClass = options.metadata.contextClass %}
 	{% set additionalClasses = options.metadata.additionalClasses %}
 	{% set attributes = options.metadata.attributes %}
 
 	<input {% if options.id %}id="{ options.id }"{% endif %} type="range" name="{ options.name }" className="{ contextClass } o-form__range { additionalClasses|additionalClasses }" { attributes|attributes|raw }>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export { ___ };

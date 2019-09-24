@@ -18,7 +18,20 @@ import "./___.scss";
  * @param {string} references[0].contacts[0].linkedin - Reference contacts linkedin
  */
 
-{% macro default(options) %}
+const ___ = (props: Props) => {
+  const {
+    prop1,
+    prop2
+  } = props;
+
+  const ___Class = cx(
+    "___",
+    {
+      prop1: "___--prop1"
+    }
+  );
+
+  return (
 	{% if options.requestOnly %}
 		<p><i>Available upon <a href="#p-contact">request</a>.</i></p>
 	{% else %}
@@ -39,4 +52,11 @@ import "./___.scss";
 			{% endfor %}
 		</div>
 	{% endif %}
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export default ___;

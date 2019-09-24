@@ -16,7 +16,20 @@ import "./___.scss";
  * @param {object} [metadata.attributes]        - Button attributes
  */
 
-{% macro default(options) %}
+const ___ = (props: Props) => {
+  const {
+    prop1,
+    prop2
+  } = props;
+
+  const ___Class = cx(
+    "___",
+    {
+      prop1: "___--prop1"
+    }
+  );
+
+  return (
 	{% set contextClass = options.metadata.contextClass %}
 	{% set modifierClasses = options.metadata.modifierClasses %}
 	{% set additionalClasses = options.metadata.additionalClasses %}
@@ -27,7 +40,14 @@ import "./___.scss";
 	{% else %}
 		<a className="{ contextClass } o-button { 'o-button'|modifierClasses(modifierClasses) } { additionalClasses|additionalClasses }" href="{ options.url }" { attributes|attributes|raw }>{ options.text|raw }</a>
 	{% endif %}
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export {___};
 
 /**
  * Social Button
@@ -42,7 +62,20 @@ import "./___.scss";
  * @param {object} [metadata.attributes]        - Button attributes
  */
 
-{% macro social(options) %}
+const social = (props: Props) => {
+	const {
+	  prop1,
+	  prop2
+	} = props;
+  
+	const ___Class = cx(
+	  "___",
+	  {
+		prop1: "___--prop1"
+	  }
+	);
+  
+	return (
 	{% set contextClass = options.metadata.contextClass %}
 	{% set modifierClasses = options.metadata.modifierClasses %}
 	{% set additionalClasses = options.metadata.additionalClasses %}
@@ -55,7 +88,14 @@ import "./___.scss";
 			<span className="{ 'o-button__counter'|contextClass(contextClass) }">{ options.counter }</span>
 		{% endif %}
 	</a>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export {___};
 
 /**
  * Social Button Badge
@@ -68,7 +108,20 @@ import "./___.scss";
  * @param {object} [metadata.attributes]        - Button attributes
  */
 
-{% macro socialBadge(options) %}
+const socialBadge = (props: Props) => {
+	const {
+	  prop1,
+	  prop2
+	} = props;
+  
+	const ___Class = cx(
+	  "___",
+	  {
+		prop1: "___--prop1"
+	  }
+	);
+  
+	return (
 	{% set contextClass = options.metadata.contextClass %}
 	{% set modifierClasses = options.metadata.modifierClasses %}
 	{% set additionalClasses = options.metadata.additionalClasses %}
@@ -77,4 +130,11 @@ import "./___.scss";
 	<a className="{ contextClass } o-button { 'o-button'|modifierClasses(modifierClasses) } o-button--social o-button--social-badge { additionalClasses|additionalClasses }" href="{ options.url }" target="_blank" rel="noopener" { attributes|attributes|raw }>
 		<span className="{ 'o-button__icon'|contextClass(contextClass) }">{ options.iconPath|raw }</span>
 	</a>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export {___};

@@ -13,7 +13,20 @@ import "./___.scss";
  * @param {array}  [metadata.additionalClasses] - Tabs additional classes
  */
 
-{% macro default(options) %}
+const ___ = (props: Props) => {
+  const {
+    prop1,
+    prop2
+  } = props;
+
+  const ___Class = cx(
+    "___",
+    {
+      prop1: "___--prop1"
+    }
+  );
+
+  return (
 	{% set contextClass = options.metadata.contextClass %}
 	{% set additionalClasses = options.metadata.additionalClasses %}
 
@@ -33,4 +46,11 @@ import "./___.scss";
 			{% endfor %}
 		</ul>
 	</div>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export default ___;

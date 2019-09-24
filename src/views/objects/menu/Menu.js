@@ -14,7 +14,22 @@ import "./___.scss";
  * @param {array}  [menu[0].metadata.additionalClasses] - Menu item additional classes
  */
 
-{% macro default(options, isSubmenu) %}
+// TODO: "isSubmenu" was passed in the macro
+
+const ___ = (props: Props) => {
+	const {
+	  prop1,
+	  prop2
+	} = props;
+  
+	const ___Class = cx(
+	  "___",
+	  {
+		prop1: "___--prop1"
+	  }
+	);
+  
+	return (
 	{% import "objects/o-button.html" as button %}
 
 	{% import _self as menu %}
@@ -36,4 +51,11 @@ import "./___.scss";
 			</li>
 		{% endfor %}
 	</ul>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export default ___;

@@ -18,7 +18,20 @@ import "./___.scss";
  * @param {array}  [projects]      - Experience projects
  */
 
-{% macro default(options) %}
+const ___ = (props: Props) => {
+  const {
+    prop1,
+    prop2
+  } = props;
+
+  const ___Class = cx(
+    "___",
+    {
+      prop1: "___--prop1"
+    }
+  );
+
+  return (
 	{% import "components/c-projects.html" as projects %}
 
 	{% for experience in options.experiences %}
@@ -76,4 +89,11 @@ import "./___.scss";
 			{% endif %}
 		</section>
 	{% endfor %}
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export default ___;

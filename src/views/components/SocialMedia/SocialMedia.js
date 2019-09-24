@@ -13,7 +13,20 @@ import "./___.scss";
  * @param {string} medias[0]iconPath - media iconPath
  */
 
-{% macro default(options) %}
+const ___ = (props: Props) => {
+  const {
+    prop1,
+    prop2
+  } = props;
+
+  const ___Class = cx(
+    "___",
+    {
+      prop1: "___--prop1"
+    }
+  );
+
+  return (
 	<div className="grid">
 		{% for media in options.medias %}
 			<div className="c-social-media cell cell--6-@xs cell--4-@sm cell--12-@md">
@@ -23,4 +36,11 @@ import "./___.scss";
 			</div>
 		{% endfor %}
 	</div>
-{% endmacro %}
+  );
+};
+
+___.defaultProps = {
+  prop1: 2
+};
+
+export default ___;
