@@ -45,7 +45,7 @@ const ___ = (props: Props) => {
 			<p className="c-experience__subheading">
 				<span className="c-experience__date">{ experience.startDate|date("Y") }
 
-				{% if experience.endDate == "Present" %}
+				{% if experience.endDate === "Present" %}
 					&ndash; Present</span>
 				{% else %}
 					{% if experience.startDate|date("Y") != experience.endDate|date("Y") %}
@@ -56,14 +56,14 @@ const ___ = (props: Props) => {
 						{% set difference = date(experience.endDate|date("d/m/Y")).diff(date(experience.startDate|date("d/m/Y"))) %}
 
 						{% set yearDuration = "" %}
-						{% if difference.y == 1 %}
+						{% if difference.y === 1 %}
 							{% set yearDuration = "1 year" %}
 						{% elseif difference.y > 1 %}
 							{% set yearDuration = difference.y ~ " years" %}
 						{% endif %}
 
 						{% set monthDuration = "" %}
-						{% if difference.m == 1 %}
+						{% if difference.m === 1 %}
 							{% set monthDuration = "1 month" %}
 						{% elseif difference.m > 1 %}
 							{% set monthDuration = difference.m ~ " months" %}

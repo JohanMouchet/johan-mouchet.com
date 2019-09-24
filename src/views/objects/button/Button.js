@@ -35,7 +35,7 @@ const ___ = (props: Props) => {
   return (
 
 
-	{% if props.type == 'button' %}
+	{% if props.type === 'button' %}
 		<button className={___Class} {[...props.metadata.attributes]}>{ props.text|raw }</button>
 	{% else %}
 		<a className={___Class} href={props.url} {[...props.metadata.attributes]}>{ props.text|raw }</a>

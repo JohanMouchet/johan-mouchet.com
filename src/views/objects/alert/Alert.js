@@ -31,13 +31,13 @@ const ___ = (props: Props) => {
   );
 
   return (
-	{% if props.type == 'info' %}
+	{% if props.type === 'info' %}
 		{% set icon = 'info' %}
-	{% elseif props.type == 'success' %}
+	{% elseif props.type === 'success' %}
 		{% set icon = 'check_circle' %}
-	{% elseif props.type == 'warning' %}
+	{% elseif props.type === 'warning' %}
 		{% set icon = 'warning' %}
-	{% elseif props.type == 'danger' %}
+	{% elseif props.type === 'danger' %}
 		{% set icon = 'error' %}
 	{% endif %}
 

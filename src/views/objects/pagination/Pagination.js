@@ -84,7 +84,7 @@ const ___ = (props: Props) => {
 					<li className={'o-pagination__index'|contextClass(contextClass)}>
 						{% if loop.last %}
 							<a className={'o-pagination__link'|contextClass(contextClass)} href={links|last}>{ links|length }</a>
-						{% elseif loop.revindex == 2 and currentIndex <= links|length - 2 %}
+						{% elseif loop.revindex === 2 and currentIndex <= links|length - 2 %}
 							<a className={'o-pagination__link'|contextClass(contextClass)}>...</a>
 						{% else %}
 							<a className={'o-pagination__link'|contextClass(contextClass)} href={links[currentIndex - 1]}>{ currentIndex }</a>
@@ -94,7 +94,7 @@ const ___ = (props: Props) => {
 			{% endfor %}
 		{% else %} /* No Range */
 			{% for link in links %}
-				<li className={`${'o-pagination__index'|contextClass(contextClass) } ${ loop.index == current && 'is--active'}`}><a className={'o-pagination__link'|contextClass(contextClass)} href={link}>{ loop.index }</a></li>
+				<li className={`${'o-pagination__index'|contextClass(contextClass) } ${ loop.index === current && 'is--active'}`}><a className={'o-pagination__link'|contextClass(contextClass)} href={link}>{ loop.index }</a></li>
 			{% endfor %}
 		{% endif %}
 

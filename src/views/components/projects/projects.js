@@ -38,7 +38,7 @@ const ___ = (props: Props) => {
 			{% for project in options %}
 				<div className="cell cell--12-@xs cell--6-@sm cell--{ cellSize }-@md">
 					<div className="c-project">
-						{% if projectQuantity == 1 %}
+						{% if projectQuantity === 1 %}
 						<div className="grid">
 							<div className="cell cell--12-@xs cell--4-@md">
 						{% endif %}
@@ -52,18 +52,18 @@ const ___ = (props: Props) => {
 										{% endif %}
 									</div>
 								</a>
-						{% if projectQuantity == 1 %}
+						{% if projectQuantity === 1 %}
 							</div>
 							<div className="cell cell--12-@xs cell--8-@md">
 						{% endif %}
 								{% if project.lede %}
-									<p className="c-project__lede { projectQuantity == 1 ? 'u-vr--top-0-@md'}">
+									<p className="c-project__lede { projectQuantity === 1 ? 'u-vr--top-0-@md'}">
 										{ project.lede|raw }
 									</p>
 								{% endif %}
 
 								{% if project.awards %}
-									<ul className="c-project__awards { projectQuantity == 1 ? 'u-vr--top-0-@md'}">
+									<ul className="c-project__awards { projectQuantity === 1 ? 'u-vr--top-0-@md'}">
 										{% for award in project.awards %}
 											<li className="c-project__award">
 												<a className="c-project__award-icon" href={award.URL}>{ file_get_contents(_GLOBAL.paths.img ~ "icons/award.svg")|raw }</a>
@@ -74,13 +74,13 @@ const ___ = (props: Props) => {
 								{% endif %}
 
 								{% if project.details %}
-									<ul className="c-project__details { projectQuantity == 1 ? 'u-vr--top-0-@md'}">
+									<ul className="c-project__details { projectQuantity === 1 ? 'u-vr--top-0-@md'}">
 										{% for detail in project.details %}
 											<li className="c-project__detail">{ detail|raw }</li>
 										{% endfor %}
 									</ul>
 								{% endif %}
-						{% if projectQuantity == 1 %}
+						{% if projectQuantity === 1 %}
 							</div>
 						</div>
 					{% endif %}
