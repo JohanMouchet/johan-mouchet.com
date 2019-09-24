@@ -29,7 +29,7 @@ const ___ = (props: Props) => {
   );
 
   return (
-	{% for qualification in options.qualifications %}
+	{% for qualification in props.qualifications %}
 		<section className="c-academic-qualification">
 			<h3 className="c-academic-qualification__heading">
 				<a className="c-academic-qualification__establishment" href="{ qualification.establishment.URL }">{ qualification.establishment.name }</a>, { qualification.location }

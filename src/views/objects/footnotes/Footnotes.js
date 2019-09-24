@@ -31,8 +31,8 @@ const ref = (props: Props) => {
 	return (
 	{%- spaceless %}
 		<sup>
-			<a id="hash-footnote-ref:{ options.prefix ? options.prefix ~ '-' }{ options.id }" className="o-footnote-ref" href="{ context._SITE['rurl'] }#footnote:{ options.prefix ? options.prefix ~ '-' }{ options.id }">
-				{- options.text -}
+			<a id="hash-footnote-ref:{ props.prefix ? props.prefix ~ '-' }{ props.id }" className="o-footnote-ref" href="{ context._SITE['rurl'] }#footnote:{ props.prefix ? props.prefix ~ '-' }{ props.id }">
+				{- props.text -}
 			</a>
 		</sup>
 	{% endspaceless -%}
@@ -72,14 +72,14 @@ const notes = (props: Props) => {
 	);
   
 	return (
-	{% set contextClass = options.metadata.contextClass %}
-	{% set additionalClasses = options.metadata.additionalClasses %}
+	{% set contextClass = props.metadata.contextClass %}
+	{% set additionalClasses = props.metadata.additionalClasses %}
 
 	<ol className="{ contextClass } o-footnotes { additionalClasses|additionalClasses }">
-		{% for note in options.notes %}
-			<li id="hash-footnote:{ options.prefix ? options.prefix ~ '-' }{ note.id }" className="{ 'o-footnotes__note'|contextClass(contextClass) }">
+		{% for note in props.notes %}
+			<li id="hash-footnote:{ props.prefix ? props.prefix ~ '-' }{ note.id }" className="{ 'o-footnotes__note'|contextClass(contextClass) }">
 				{ note.text|raw }
-				<a href="{ context._SITE['rurl'] }#footnote-ref:{ options.prefix ? options.prefix ~ '-' }{ note.id }" className="footnote-backref">&#x21a9;</a>
+				<a href="{ context._SITE['rurl'] }#footnote-ref:{ props.prefix ? props.prefix ~ '-' }{ note.id }" className="footnote-backref">&#x21a9;</a>
 			</li>
 		{% endfor %}
 	</ol>

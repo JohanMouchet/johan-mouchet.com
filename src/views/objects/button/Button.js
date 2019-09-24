@@ -30,15 +30,15 @@ const ___ = (props: Props) => {
   );
 
   return (
-	{% set contextClass = options.metadata.contextClass %}
-	{% set modifierClasses = options.metadata.modifierClasses %}
-	{% set additionalClasses = options.metadata.additionalClasses %}
-	{% set attributes = options.metadata.attributes %}
+	{% set contextClass = props.metadata.contextClass %}
+	{% set modifierClasses = props.metadata.modifierClasses %}
+	{% set additionalClasses = props.metadata.additionalClasses %}
+	{% set attributes = props.metadata.attributes %}
 
-	{% if options.type == 'button' %}
-		<button className="{ contextClass } o-button { 'o-button'|modifierClasses(modifierClasses) } { additionalClasses|additionalClasses }" { attributes|attributes|raw }>{ options.text|raw }</button>
+	{% if props.type == 'button' %}
+		<button className="{ contextClass } o-button { 'o-button'|modifierClasses(modifierClasses) } { additionalClasses|additionalClasses }" { attributes|attributes|raw }>{ props.text|raw }</button>
 	{% else %}
-		<a className="{ contextClass } o-button { 'o-button'|modifierClasses(modifierClasses) } { additionalClasses|additionalClasses }" href="{ options.url }" { attributes|attributes|raw }>{ options.text|raw }</a>
+		<a className="{ contextClass } o-button { 'o-button'|modifierClasses(modifierClasses) } { additionalClasses|additionalClasses }" href="{ props.url }" { attributes|attributes|raw }>{ props.text|raw }</a>
 	{% endif %}
   );
 };
@@ -76,16 +76,16 @@ const social = (props: Props) => {
 	);
   
 	return (
-	{% set contextClass = options.metadata.contextClass %}
-	{% set modifierClasses = options.metadata.modifierClasses %}
-	{% set additionalClasses = options.metadata.additionalClasses %}
-	{% set attributes = options.metadata.attributes %}
+	{% set contextClass = props.metadata.contextClass %}
+	{% set modifierClasses = props.metadata.modifierClasses %}
+	{% set additionalClasses = props.metadata.additionalClasses %}
+	{% set attributes = props.metadata.attributes %}
 
-	<a className="{ contextClass } o-button { 'o-button'|modifierClasses(modifierClasses) } o-button--social { additionalClasses|additionalClasses }" href="{ options.url }" target="_blank" rel="noopener" { attributes|attributes|raw }>
-		<span className="{ 'o-button__icon'|contextClass(contextClass) }">{ options.iconPath|raw }</span>
-		<span className="{ 'o-button__text'|contextClass(contextClass) }">{ options.text|raw }</span>
-		{% if options.counter %}
-			<span className="{ 'o-button__counter'|contextClass(contextClass) }">{ options.counter }</span>
+	<a className="{ contextClass } o-button { 'o-button'|modifierClasses(modifierClasses) } o-button--social { additionalClasses|additionalClasses }" href="{ props.url }" target="_blank" rel="noopener" { attributes|attributes|raw }>
+		<span className="{ 'o-button__icon'|contextClass(contextClass) }">{ props.iconPath|raw }</span>
+		<span className="{ 'o-button__text'|contextClass(contextClass) }">{ props.text|raw }</span>
+		{% if props.counter %}
+			<span className="{ 'o-button__counter'|contextClass(contextClass) }">{ props.counter }</span>
 		{% endif %}
 	</a>
   );
@@ -122,13 +122,13 @@ const socialBadge = (props: Props) => {
 	);
   
 	return (
-	{% set contextClass = options.metadata.contextClass %}
-	{% set modifierClasses = options.metadata.modifierClasses %}
-	{% set additionalClasses = options.metadata.additionalClasses %}
-	{% set attributes = options.metadata.attributes %}
+	{% set contextClass = props.metadata.contextClass %}
+	{% set modifierClasses = props.metadata.modifierClasses %}
+	{% set additionalClasses = props.metadata.additionalClasses %}
+	{% set attributes = props.metadata.attributes %}
 
-	<a className="{ contextClass } o-button { 'o-button'|modifierClasses(modifierClasses) } o-button--social o-button--social-badge { additionalClasses|additionalClasses }" href="{ options.url }" target="_blank" rel="noopener" { attributes|attributes|raw }>
-		<span className="{ 'o-button__icon'|contextClass(contextClass) }">{ options.iconPath|raw }</span>
+	<a className="{ contextClass } o-button { 'o-button'|modifierClasses(modifierClasses) } o-button--social o-button--social-badge { additionalClasses|additionalClasses }" href="{ props.url }" target="_blank" rel="noopener" { attributes|attributes|raw }>
+		<span className="{ 'o-button__icon'|contextClass(contextClass) }">{ props.iconPath|raw }</span>
 	</a>
   );
 };

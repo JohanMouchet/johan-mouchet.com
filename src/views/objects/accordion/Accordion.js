@@ -27,11 +27,11 @@ const ___ = (props: Props) => {
   );
 
   return (
-	{% set contextClass = options.metadata.contextClass %}
-	{% set additionalClasses = options.metadata.additionalClasses %}
+	{% set contextClass = props.metadata.contextClass %}
+	{% set additionalClasses = props.metadata.additionalClasses %}
 
 	<ul className="{ contextClass } o-accordion js-accordion { additionalClasses|additionalClasses }">
-		{% for item in options.items %}
+		{% for item in props.items %}
 			<li className="{ 'o-accordion__item'|contextClass(contextClass) } js-accordion-item { loop.first ? 'is--active' }">
 				<button className="{ 'o-accordion__thumb'|contextClass(contextClass) }">
 					<i className="{ 'o-accordion__thumb-icon'|contextClass(contextClass) } material-icons { loop.index > 1 ? 'wow fadeInLeft' }" {% if loop.index > 1 %}data-wow-delay="{ loop.index0 * 0.15 }s"{% endif %}>chevron_right</i>

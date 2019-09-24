@@ -32,11 +32,11 @@ const ___ = (props: Props) => {
   );
 
   return (
-	{% if options.requestOnly %}
+	{% if props.requestOnly %}
 		<p><i>Available upon <a href="#p-contact">request</a>.</i></p>
 	{% else %}
 		<div className="grid">
-			{% for reference in options.references %}
+			{% for reference in props.references %}
 				<div className="cell cell--12-@xs cell--6-@md cell--4-@lg">
 					<section className="c-reference">
 						<h3 className="c-reference__name">{ reference.name }</h3>

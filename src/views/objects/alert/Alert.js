@@ -29,23 +29,23 @@ const ___ = (props: Props) => {
   );
 
   return (
-	{% set contextClass = options.metadata.contextClass %}
-	{% set additionalClasses = options.metadata.additionalClasses %}
+	{% set contextClass = props.metadata.contextClass %}
+	{% set additionalClasses = props.metadata.additionalClasses %}
 
-	{% if options.type == 'info' %}
+	{% if props.type == 'info' %}
 		{% set icon = 'info' %}
-	{% elseif options.type == 'success' %}
+	{% elseif props.type == 'success' %}
 		{% set icon = 'check_circle' %}
-	{% elseif options.type == 'warning' %}
+	{% elseif props.type == 'warning' %}
 		{% set icon = 'warning' %}
-	{% elseif options.type == 'danger' %}
+	{% elseif props.type == 'danger' %}
 		{% set icon = 'error' %}
 	{% endif %}
 
-	<div className="{ contextClass } o-alert o-alert--{ options.type|default('info') } { not options.hidden ? 'is--visible'} { options.closable ? 'js-alert'} wow { additionalClasses|additionalClasses }">
+	<div className="{ contextClass } o-alert o-alert--{ props.type|default('info') } { not props.hidden ? 'is--visible'} { props.closable ? 'js-alert'} wow { additionalClasses|additionalClasses }">
 		<i className="{ 'o-alert__icon'|contextClass(contextClass) } material-icons">{ icon|default('info') }</i>
-		<div className="{ 'o-alert__content'|contextClass(contextClass) }">{ options.content|raw }</div>
-		{% if options.closable %}
+		<div className="{ 'o-alert__content'|contextClass(contextClass) }">{ props.content|raw }</div>
+		{% if props.closable %}
 			<button className="{ 'o-alert__close'|contextClass(contextClass) } js-alert-close">&#x2716;</button>
 		{% endif %}
 	</div>

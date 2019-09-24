@@ -26,10 +26,10 @@ const ___ = (props: Props) => {
   );
 
   return (
-	{% set contextClass = options.metadata.contextClass %}
-	{% set additionalClasses = options.metadata.additionalClasses %}
+	{% set contextClass = props.metadata.contextClass %}
+	{% set additionalClasses = props.metadata.additionalClasses %}
 
-	<span className="{ contextClass } o-badge { additionalClasses|additionalClasses }">{ options.content }</span>
+	<span className="{ contextClass } o-badge { additionalClasses|additionalClasses }">{ props.content }</span>
   );
 };
 

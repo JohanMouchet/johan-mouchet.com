@@ -30,7 +30,7 @@ const ___ = (props: Props) => {
 	{% import "objects/o-progress-bar.html" as progressBar %}
 
 	<ul className="c-expertises o-list--unstyled">
-		{% for expertise in options.expertises %}
+		{% for expertise in props.expertises %}
 			<li className="c-expertise">
 				{ progressBar.default({
 					label: expertise.label,

@@ -29,20 +29,20 @@ const ___ = (props: Props) => {
   );
 
   return (
-	{% set contextClass = options.metadata.contextClass %}
-	{% set modifierClasses = options.metadata.modifierClasses %}
-	{% set additionalClasses = options.metadata.additionalClasses %}
+	{% set contextClass = props.metadata.contextClass %}
+	{% set modifierClasses = props.metadata.modifierClasses %}
+	{% set additionalClasses = props.metadata.additionalClasses %}
 
 	<blockquote className="{ contextClass } o-blockquote { 'o-blockquote'|modifierClasses(modifierClasses) } wow { additionalClasses|additionalClasses }">
 		<div className="{ 'o-blockquote__quotes'|contextClass(contextClass) }">
-			{ options.quote|raw }
+			{ props.quote|raw }
 		</div>
 
-		{ options.outerQuote|raw }
+		{ props.outerQuote|raw }
 
-		{% if options.cite %}
+		{% if props.cite %}
 			<cite className="{ 'o-blockquote__cite'|contextClass(contextClass) }">
-					{ options.cite|raw }
+					{ props.cite|raw }
 			</cite>
 		{% endif %}
 	</blockquote>

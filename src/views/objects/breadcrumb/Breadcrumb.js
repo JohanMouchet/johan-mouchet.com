@@ -29,11 +29,11 @@ const ___ = (props: Props) => {
 	);
   
 	return (
-	{% set contextClass = options.metadata.contextClass %}
-	{% set additionalClasses = options.metadata.additionalClasses %}
+	{% set contextClass = props.metadata.contextClass %}
+	{% set additionalClasses = props.metadata.additionalClasses %}
 
 	<ol className="{ contextClass } o-breadcrumb { additionalClasses|additionalClasses }">
-		{% for level in options.levels %}
+		{% for level in props.levels %}
 			<li className="{ 'o-breadcrumb__level'|contextClass(contextClass) } wow fadeInUp" {% if loop.index > 1 %}data-wow-delay="{ loop.index0 * 0.15 }s"{% endif %}>
 				<a className="{ 'o-breadcrumb__link'|contextClass(contextClass) }" {% if level.url and not loop.last %}href="{ level.url }"{% endif %}>{ level.title }</a>
 			</li>
@@ -46,7 +46,7 @@ const ___ = (props: Props) => {
 			"@context": "http://schema.org",
 			"@type": "BreadcrumbList",
 			"itemListElement": [
-			{%- for level in options.levels -%}
+			{%- for level in props.levels -%}
 				{
 					"@type": "ListItem",
 					"position": { loop.index },

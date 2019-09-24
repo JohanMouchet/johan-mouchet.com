@@ -28,25 +28,25 @@ const ___ = (props: Props) => {
   );
 
   return (
-	{% set contextClass = options.metadata.contextClass %}
-	{% set additionalClasses = options.metadata.additionalClasses %}
+	{% set contextClass = props.metadata.contextClass %}
+	{% set additionalClasses = props.metadata.additionalClasses %}
 
 	<div className="{ contextClass } o-notice js-notice { additionalClasses|additionalClasses }">
 		<div className="container container--lg">
 			<div className="grid grid--yCenter-@xs">
 				<div className="cell cell--@xs">
 					<div className="{ ''|contextClass(contextClass) }o-notice__primary">
-						{ options.primary|raw }
+						{ props.primary|raw }
 					</div>
 				</div>
-				{% if options.secondary %}
+				{% if props.secondary %}
 					<div className="cell cell--0-@xs">
 						<div className="{ 'o-notice__secondary'|contextClass(contextClass) }">
-							{ options.secondary|raw }
+							{ props.secondary|raw }
 						</div>
 					</div>
 				{% endif %}
-				{% if options.closeButton %}
+				{% if props.closeButton %}
 					<div className="cell cell--0-@xs">
 						<button className="{ 'o-notice__close'|contextClass(contextClass) } js-notice-close">&#x2716;</button>
 					</div>

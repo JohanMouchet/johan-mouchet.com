@@ -31,19 +31,19 @@ const ___ = (props: Props) => {
   );
 
   return (
-	{% set contextClass = options.metadata.contextClass %}
-	{% set modifierClasses = options.metadata.modifierClasses %}
-	{% set additionalClasses = options.metadata.additionalClasses %}
+	{% set contextClass = props.metadata.contextClass %}
+	{% set modifierClasses = props.metadata.modifierClasses %}
+	{% set additionalClasses = props.metadata.additionalClasses %}
 
 	<div className="{ contextClass } { 'o-progress-bar'|modifierClasses(modifierClasses) } { additionalClasses|additionalClasses }">
-		{% if options.label %}
-			<span className="{ 'o-progress-bar__label'|contextClass(contextClass) }">{ options.label|raw }</span>
+		{% if props.label %}
+			<span className="{ 'o-progress-bar__label'|contextClass(contextClass) }">{ props.label|raw }</span>
 		{% endif %}
-		{% if options.total %}
-			<span className="{ 'o-progress-bar__total'|contextClass(contextClass) }">{ options.total|raw }</span>
+		{% if props.total %}
+			<span className="{ 'o-progress-bar__total'|contextClass(contextClass) }">{ props.total|raw }</span>
 		{% endif %}
 		<div className="{ 'o-progress-bar__container'|contextClass(contextClass) }">
-			<div className="{ 'o-progress-bar__filling'|contextClass(contextClass) } wow" style="width: { options.filling }%" {% if options.tooltip %}data-progress-bar-tooltip="{ options.tooltip|raw }"{% endif %}></div>
+			<div className="{ 'o-progress-bar__filling'|contextClass(contextClass) } wow" style="width: { props.filling }%" {% if props.tooltip %}data-progress-bar-tooltip="{ props.tooltip|raw }"{% endif %}></div>
 		</div>
 	</div>
   );

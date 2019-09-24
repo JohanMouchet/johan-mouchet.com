@@ -31,31 +31,31 @@ const ___ = (props: Props) => {
   );
 
   return (
-	{% set contextClass = options.metadata.contextClass %}
-	{% set modifierClasses = options.metadata.modifierClasses %}
-	{% set additionalClasses = options.metadata.additionalClasses %}
+	{% set contextClass = props.metadata.contextClass %}
+	{% set modifierClasses = props.metadata.modifierClasses %}
+	{% set additionalClasses = props.metadata.additionalClasses %}
 
 	<section className="{ contextClass } { 'o-card'|modifierClasses(modifierClasses) } { additionalClasses|additionalClasses }">
-		{% if options.banner or options.banner is same as(true) or options.bannerUrl %}
-			{% set tag = not options.header ? 'header' : 'div' %}
+		{% if props.banner or props.banner is same as(true) or props.bannerUrl %}
+			{% set tag = not props.header ? 'header' : 'div' %}
 
-			<{ tag } className="{ 'o-card__banner'|contextClass(contextClass) }" {% if options.bannerUrl %}style="background-image: url('{ options.bannerUrl }')"{% endif %}>
-				{ options.banner is same as(true) ? '' : options.banner|raw }
+			<{ tag } className="{ 'o-card__banner'|contextClass(contextClass) }" {% if props.bannerUrl %}style="background-image: url('{ props.bannerUrl }')"{% endif %}>
+				{ props.banner is same as(true) ? '' : props.banner|raw }
 			</{ tag }>
 		{% endif %}
-		{% if options.header %}
+		{% if props.header %}
 			<header className="{ 'o-card__header'|contextClass(contextClass) }">
-				{ options.header|raw }
+				{ props.header|raw }
 			</header>
 		{% endif %}
-		{% if options.body %}
+		{% if props.body %}
 			<div className="{ 'o-card__body'|contextClass(contextClass) }">
-				{ options.body|raw }
+				{ props.body|raw }
 			</div>
 		{% endif %}
-		{% if options.footer %}
+		{% if props.footer %}
 			<footer className="{ 'o-card__footer'|contextClass(contextClass) }">
-				{ options.footer|raw }
+				{ props.footer|raw }
 			</footer>
 		{% endif %}
 	</section>

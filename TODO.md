@@ -1,7 +1,6 @@
 # TODO
 
-- Replace options. by props.
-- convert {% import
+- Convert {% import
 - Convert JSDoc to Flow
 
 # Done
@@ -15,6 +14,7 @@
 - Add index
 - Add imports
 - Convert macro to React comp
+- Replace options. by props.
 
 # Fix
 

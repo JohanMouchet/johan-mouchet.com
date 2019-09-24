@@ -27,14 +27,14 @@ const ___ = (props: Props) => {
   );
 
   return (
-	{% set contextClass = options.metadata.contextClass %}
-	{% set additionalClasses = options.metadata.additionalClasses %}
+	{% set contextClass = props.metadata.contextClass %}
+	{% set additionalClasses = props.metadata.additionalClasses %}
 
-	{% set current = options.current|abs %}
-	{% set range = options.range %}
+	{% set current = props.current|abs %}
+	{% set range = props.range %}
 	{% set lowerRange = current - range %}
 	{% set upperRange = current + range + 1 %}
-	{% set links = options.links %}
+	{% set links = props.links %}
 
 	<ol className="{ contextClass } o-pagination { additionalClasses|additionalClasses }">
 		/* First */

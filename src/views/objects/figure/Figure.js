@@ -30,15 +30,15 @@ const ___ = (props: Props) => {
   );
 
   return (
-	{% set contextClass = options.metadata.contextClass %}
-	{% set modifierClasses = options.metadata.modifierClasses %}
-	{% set additionalClasses = options.metadata.additionalClasses %}
-	{% set attributes = options.metadata.attributes %}
+	{% set contextClass = props.metadata.contextClass %}
+	{% set modifierClasses = props.metadata.modifierClasses %}
+	{% set additionalClasses = props.metadata.additionalClasses %}
+	{% set attributes = props.metadata.attributes %}
 
 	<figure className="{ contextClass } o-figure { 'o-figure'|modifierClasses(modifierClasses) } { additionalClasses|additionalClasses }">
-		<img className="{ 'o-figure__img'|contextClass(contextClass) }" src="{ options.src }" {% if options.alt %}alt="{ options.alt }"{% endif %} {% if options.title %}title="{ options.title }"{% endif %} { options.metadata.attributes|attributes|raw }>
-		{% if options.caption %}
-			<figcaption className="{ 'o-figure__caption'|contextClass(contextClass) }">{ options.caption|raw }</figcaption>
+		<img className="{ 'o-figure__img'|contextClass(contextClass) }" src="{ props.src }" {% if props.alt %}alt="{ props.alt }"{% endif %} {% if props.title %}title="{ props.title }"{% endif %} { props.metadata.attributes|attributes|raw }>
+		{% if props.caption %}
+			<figcaption className="{ 'o-figure__caption'|contextClass(contextClass) }">{ props.caption|raw }</figcaption>
 		{% endif %}
 	</figure>
   );

@@ -27,19 +27,19 @@ const ___ = (props: Props) => {
   );
 
   return (
-	{% set contextClass = options.metadata.contextClass %}
-	{% set additionalClasses = options.metadata.additionalClasses %}
+	{% set contextClass = props.metadata.contextClass %}
+	{% set additionalClasses = props.metadata.additionalClasses %}
 
 	<div className="{ contextClass } o-tabs js-tabs { additionalClasses|additionalClasses }">
 		<ul className="{ 'o-tabs__thumbs'|contextClass(contextClass) }">
-			{% for tab in options.tabs %}
+			{% for tab in props.tabs %}
 				<li className="{ 'o-tabs__thumb'|contextClass(contextClass) } js-tabs-thumb wow fadeInUp" {% if loop.index > 1 %}data-wow-delay="{ loop.index0 * 0.15 }s"{% endif %}>
 					<button className="{ 'o-tabs__button'|contextClass(contextClass) }">{ tab.thumb }</button>
 				</li>
 			{% endfor %}
 		</ul>
 		<ul className="{ 'o-tabs__panels'|contextClass(contextClass) }">
-			{% for tab in options.tabs %}
+			{% for tab in props.tabs %}
 				<li className="{ 'o-tabs__panel'|contextClass(contextClass) } js-tabs-panel">
 					{ tab.panel }
 				</li>
