@@ -1,3 +1,7 @@
+// @flow
+
+import * as React from "react";
+
 <!doctype html>
 <html lang="en" className="no-js">
 	<head>

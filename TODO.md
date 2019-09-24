@@ -1,5 +1,8 @@
 # TODO
 
+- Convert JSDoc to Flow
+- Convert macro to React comp
+
 # Done
 
 - import all views: SCSS + twig
@@ -9,6 +12,7 @@
   - remove prefix
   - change file extension
 - add index
+- add imports
 
 # Fix
 

@@ -1,3 +1,7 @@
+// @flow
+
+import * as React from "react";
+
 {% include "partials/p-html-start.html" %}
 {% include "partials/p-mast-header.html" %}
 

@@ -1,3 +1,7 @@
+// @flow
+
+import * as React from "react";
+
 <footer className="p-mast-footer">
 	<div className="container">
 		<div className="grid grid--yCenter-@xs grid--noWrap-@xs">
