@@ -30,7 +30,7 @@ const ___ = (props: Props) => {
   );
 
   return (
-	<div className="___Class js-notice">
+	<div className={`${___Class} js-notice`}>
 		<div className="container container--lg">
 			<div className="grid grid--yCenter-@xs">
 				<div className="cell cell--@xs">

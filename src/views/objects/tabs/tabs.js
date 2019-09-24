@@ -29,7 +29,7 @@ const ___ = (props: Props) => {
   );
 
   return (
-	<div className="___Class js-tabs">
+	<div className={`${___Class} js-tabs`}>
 		<ul className={'o-tabs__thumbs'|contextClass(contextClass)}>
 			{% for tab in props.tabs %}
 				<li className={`${'o-tabs__thumb'|contextClass(contextClass) } js-tabs-thumb wow fadeInUp`} {% if loop.index > 1 %}data-wow-delay={`${loop.index0 * 0.15 }s`}{% endif %}>

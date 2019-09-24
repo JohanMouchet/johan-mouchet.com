@@ -74,7 +74,7 @@ const notes = (props: Props) => {
 	);
   
 	return (
-	<ol className="___Class">
+	<ol className={___Class}>
 		{% for note in props.notes %}
 			<li id={`hash-footnote:${props.prefix && (props.prefix + '-') }${ note.id}`} className={'o-footnotes__note'|contextClass(contextClass)}>
 				{ note.text|raw }

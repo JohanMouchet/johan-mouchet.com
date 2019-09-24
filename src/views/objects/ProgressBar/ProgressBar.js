@@ -34,7 +34,7 @@ const ___ = (props: Props) => {
   );
 
   return (
-	<div className="___Class">
+	<div className={___Class}>
 		{% if props.label %}
 			<span className={'o-progress-bar__label'|contextClass(contextClass)}>{ props.label|raw }</span>
 		{% endif %}

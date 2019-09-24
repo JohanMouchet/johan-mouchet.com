@@ -35,7 +35,7 @@ const ___ = (props: Props) => {
 	{% set upperRange = current + range + 1 %}
 	{% set links = props.links %}
 
-	<ol className="___Class">
+	<ol className={___Class}>
 		/* First */
 		{% if current >= 3 %}
 			<li className={`${'o-pagination__index'|contextClass(contextClass) } o-pagination__index--first`}>

@@ -24,7 +24,7 @@ const ___ = (props: Props) => {
     }
   );
 
-  return <span className="___Class">{props.content}</span>;
+  return <span className={___Class}>{props.content}</span>;
 };
 
 ___.defaultProps = {

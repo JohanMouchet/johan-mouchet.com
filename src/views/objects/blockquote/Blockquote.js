@@ -32,7 +32,7 @@ const ___ = (props: Props) => {
   );
 
   return (
-	<blockquote className="___Class wow">
+	<blockquote className={`${___Class} wow`}>
 		<div className={'o-blockquote__quotes'|contextClass(contextClass)}>
 			{ props.quote|raw }
 		</div>

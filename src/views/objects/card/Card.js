@@ -34,7 +34,7 @@ const ___ = (props: Props) => {
   );
 
   return (
-	<section className="___Class">
+	<section className={___Class}>
 		{% if props.banner or props.banner is same as(true) or props.bannerUrl %}
 			{% set tag = not props.header ? 'header' : 'div' %}
 

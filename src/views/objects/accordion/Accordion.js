@@ -29,7 +29,7 @@ const ___ = (props: Props) => {
   );
 
   return (
-	<ul className="___Class js-accordion">
+	<ul className={`${___Class} js-accordion`}>
 		{% for item in props.items %}
 			<li className={`${'o-accordion__item'|contextClass(contextClass)} js-accordion-item ${loop.first && 'is--active'}`}>
 				<button className={'o-accordion__thumb'|contextClass(contextClass)}>

@@ -165,7 +165,7 @@ const file = (props: Props) => {
 	return (
 
 
-	<label className="___Class o-button js-form-file">
+	<label className={`${___Class} o-button js-form-file`}>
 		<input {% if props.id %}id={props.id}{% endif %} type="file" name={props.name} className={`${'o-form__file-input'|contextClass(contextClass) } js-form-file-input"`} data-multiple-caption={props.multipleCaption ? props.multipleCaption : '{count} files selected'} {[...props.metadata.attributes]}>
 		<i className="material-icons">file_upload</i>
 		{% if props.text %}
@@ -214,7 +214,7 @@ const select = (props: Props) => {
 	return (
 
 
-	<select {% if props.id %}id={props.id}{% endif %} name={props.name} className="___Class o-form__field--select" {[...props.metadata.attributes]}>
+	<select {% if props.id %}id={props.id}{% endif %} name={props.name} className={`${___Class} o-form__field--select`} {[...props.metadata.attributes]}>
 		{% for option in props.options %}
 			<option {% if props.value %}value={props.value}{% endif %} {[...props.metadata.attributes]}>{ option.text }</option>
 		{% endfor %}
@@ -257,7 +257,7 @@ const textarea = (props: Props) => {
 	return (
 
 
-	<textarea {% if props.id %}id={props.id}{% endif %} name={props.name} className="___Class o-form__field--textarea" {[...props.metadata.attributes]}>
+	<textarea {% if props.id %}id={props.id}{% endif %} name={props.name} className={`${___Class} o-form__field--textarea`} {[...props.metadata.attributes]}>
 		{- props.text|raw -}
 	</textarea>
   );
@@ -297,7 +297,7 @@ const range = (props: Props) => {
 	return (
 
 
-	<input {% if props.id %}id={props.id}{% endif %} type="range" name={props.name} className="___Class" {[...props.metadata.attributes]}>
+	<input {% if props.id %}id={props.id}{% endif %} type="range" name={props.name} className={___Class} {[...props.metadata.attributes]}>
   );
 };
 
