@@ -1,6 +1,6 @@
 # TODO
 
-- Convert `{% import` / `{% include`
+- Convert `{% include`
 - Replace `{% for`
 - Replace `{% if`
 - Replace `{% set`
@@ -24,6 +24,7 @@
 - Convert Classes to cx
 - Converted attributes
 - Replace twig not
+- Convert `{% import`
 
 # Fix
 

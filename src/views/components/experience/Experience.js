@@ -3,6 +3,7 @@
 import * as React from "react";
 import cx from "classnames";
 import "./___.scss";
+import { Projects } from "../";
 
 /**
  * Experiences
@@ -32,8 +33,6 @@ const ___ = (props: Props) => {
   );
 
   return (
-	{% import "components/c-projects.html" as projects %}
-
 	{% for experience in props.experiences %}
 		<section className="c-experience">
 			<h3 className="c-experience__heading">

@@ -3,6 +3,7 @@
 import * as React from "react";
 import cx from "classnames";
 import "./___.scss";
+import { ProgressBar } from "../../objects/";
 
 /**
  * Expertises
@@ -27,12 +28,10 @@ const ___ = (props: Props) => {
   );
 
   return (
-	{% import "objects/o-progress-bar.html" as progressBar %}
-
 	<ul className="c-expertises o-list--unstyled">
 		{% for expertise in props.expertises %}
 			<li className="c-expertise">
-				{ progressBar.default({
+				{ ProgressBar.default({
 					label: expertise.label,
 					filling: expertise.filling,
 					tooltip: expertise.tooltip,

@@ -3,6 +3,9 @@
 import * as React from "react";
 import cx from "classnames";
 import "./___.scss";
+import { Button } from "../";
+
+// TODO: {% import _self as menu %}
 
 /**
  * Menu
@@ -30,10 +33,6 @@ const ___ = (props: Props) => {
 	);
   
 	return (
-	{% import "objects/o-button.html" as button %}
-
-	{% import _self as menu %}
-
 	<ul className={!isSubmenu ? 'o-menu' : 'o-menu__submenu'}>
 		{% for item in props.menu if item.text or item.button %}
 			<li className={`o-menu__item ${ item.menu && 'o-menu__item--has-children' } ${ item.metadata.additionalClasses|additionalClasses}`}>
@@ -42,7 +41,7 @@ const ___ = (props: Props) => {
 						{- item.text|raw -}
 					</a>
 				{% elseif item.button %}
-					{ button.default(item.button) }
+					{ Button.default(item.button) }
 				{% endif %}
 
 				{% if item.menu %}
