@@ -47,7 +47,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				</h2>
 				<div class="grid color-palette-row">
 					<div class="o-card-group cell cell--12-@xs cell--4-@sm">
-						{{ Card.default({
+						{Card.default({
 							banner: true,
 							body: '<div class="sg-swatch__color-code"></div>
 												<code class="sg-swatch__color-name u-select--all">$color-primary-lighter</code>',
@@ -63,7 +63,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 						}) }}
 					</div>
 					<div class="o-card-group cell cell--12-@xs cell--4-@sm">
-						{{ Card.default({
+						{Card.default({
 							banner: true,
 							body: '<div class="sg-swatch__color-code"></div>
 												<code class="sg-swatch__color-name u-select--all">$color-primary</code>',
@@ -79,7 +79,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 						}) }}
 					</div>
 					<div class="o-card-group cell cell--12-@xs cell--4-@sm">
-						{{ Card.default({
+						{Card.default({
 							banner: true,
 							body: '<div class="sg-swatch__color-code"></div>
 												<code class="sg-swatch__color-name u-select--all">$color-primary-darker</code>',
@@ -96,7 +96,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="o-card-group cell cell--12-@xs cell--4-@sm">
-						{{ Card.default({
+						{Card.default({
 							banner: true,
 							body: '<div class="sg-swatch__color-code"></div>
 												<code class="sg-swatch__color-name u-select--all">$color-secondary-lighter</code>',
@@ -112,7 +112,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 						}) }}
 					</div>
 					<div class="o-card-group cell cell--12-@xs cell--4-@sm">
-						{{ Card.default({
+						{Card.default({
 							banner: true,
 							body: '<div class="sg-swatch__color-code"></div>
 												<code class="sg-swatch__color-name u-select--all">$color-secondary</code>',
@@ -128,7 +128,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 						}) }}
 					</div>
 					<div class="o-card-group cell cell--12-@xs cell--4-@sm">
-						{{ Card.default({
+						{Card.default({
 							banner: true,
 							body: '<div class="sg-swatch__color-code"></div>
 												<code class="sg-swatch__color-name u-select--all">$color-secondary-darker</code>',
@@ -145,7 +145,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="o-card-group cell cell--12-@xs cell--4-@sm">
-						{{ Card.default({
+						{Card.default({
 							banner: true,
 							body: '<div class="sg-swatch__color-code"></div>
 												<code class="sg-swatch__color-name u-select--all">$color-gray-lighter</code>',
@@ -161,7 +161,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 						}) }}
 					</div>
 					<div class="o-card-group cell cell--12-@xs cell--4-@sm">
-						{{ Card.default({
+						{Card.default({
 							banner: true,
 							body: '<div class="sg-swatch__color-code"></div>
 												<code class="sg-swatch__color-name u-select--all">$color-gray</code>',
@@ -177,7 +177,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 						}) }}
 					</div>
 					<div class="o-card-group cell cell--12-@xs cell--4-@sm">
-						{{ Card.default({
+						{Card.default({
 							banner: true,
 							body: '<div class="sg-swatch__color-code"></div>
 												<code class="sg-swatch__color-name u-select--all">$color-gray-darker</code>',
@@ -203,7 +203,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				</h2>
 				<div class="grid">
 					<div class="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
-						{{ Card.default({
+						{Card.default({
 							header: '<span class="sg-typeface__glyph">Aa</span>',
 							body: '<h3>Primary typeface</h3>
 										 <p class="sg-typeface__name"></p>',
@@ -216,7 +216,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 						}) }}
 					</div>
 					<div class="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
-						{{ Card.default({
+						{Card.default({
 							header: '<span class="sg-typeface__glyph">Aa</span>',
 							body: '<h3>Secondary typeface</h3>
 										 <p class="sg-typeface__name"></p>',
@@ -229,7 +229,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 						}) }}
 					</div>
 					<div class="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
-						{{ Card.default({
+						{Card.default({
 							header: '<span class="sg-typeface__glyph">Aa</span>',
 							body: '<h3>Tertiary typeface</h3>
 										 <p class="sg-typeface__name"></p>',
@@ -242,7 +242,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 						}) }}
 					</div>
 					<div class="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
-						{{ Card.default({
+						{Card.default({
 							header: '<span class="sg-typeface__glyph">Aa</span>',
 							body: '<h3>Quaternary typeface</h3>
 										 <p class="sg-typeface__name"></p>',
@@ -368,7 +368,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<h2 class="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
 					<a href="style-guide#sg-blockquote" class="u-anchor__link">#</a>Blockquote
 				</h2>
-				{{ Blockquote.default({
+				{Blockquote.default({
 					quote: 'Design is not just what it looks like and feels like. Design is how it works.',
 					cite: '<a href="#">Steve Jobs</a>',
 				}) }}
@@ -376,7 +376,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<p><em>Optional:</em> <code>&gt; .o-blockquote__cite</code></p>
 
 				<h3>Pulled <code>&amp;.o-blockquote--pulled</code></h3>
-				{{ Blockquote.default({
+				{Blockquote.default({
 					quote: 'Design is not just what it looks like and feels like. Design is how it works.',
 					cite: '<a href="#">Steve Jobs</a>',
 					metadata: {
@@ -472,12 +472,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 						<div class="grid">
 							<div class="cell cell--12-@xs cell--6-@sm">
 								<div class="o-form__group">
-									{{ Form.label({
+									{Form.label({
 										for: "input-1",
 										text: "Text input"
 									}) }}
 
-									{{ Form.field({
+									{Form.field({
 										id: "input-1",
 										type: "text",
 										name: "input-1",
@@ -493,12 +493,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 
 							<div class="cell cell--12-@xs cell--6-@sm">
 								<div class="o-form__group">
-									{{ Form.label({
+									{Form.label({
 										for: "input-2",
 										text: "Text input disabled"
 									}) }}
 
-									{{ Form.field({
+									{Form.field({
 										id: "input-2",
 										type: "text",
 										name: "input-2",
@@ -514,12 +514,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 
 							<div class="cell cell--12-@xs cell--6-@sm">
 								<div class="o-form__group">
-									{{ Form.label({
+									{Form.label({
 										for: "select-1",
 										text: "Select"
 									}) }}
 
-									{{ Form.select({
+									{Form.select({
 										id: "select-1",
 										name: "select-1",
 										options: [
@@ -542,12 +542,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 
 							<div class="cell cell--12-@xs cell--6-@sm">
 								<div class="o-form__group">
-									{{ Form.label({
+									{Form.label({
 										for: "input-3",
 										text: "Search"
 									}) }}
 
-									{{ Form.field({
+									{Form.field({
 										id: "input-3",
 										type: "search",
 										name: "input-3",
@@ -562,7 +562,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 
 							<div class="cell cell--12-@xs">
 								<div class="o-form__group">
-									{{ Form.textarea({
+									{Form.textarea({
 										name: "textarea-1",
 										metadata: {
 											attributes: {
@@ -576,7 +576,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 
 							<div class="cell cell--12-@xs cell--6-@md">
 								<div class="o-form__group">
-									{{ Form.label({
+									{Form.label({
 										for: "radio-1",
 										text: "Radio",
 										metadata: {
@@ -586,7 +586,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 										}
 									}) }}
 
-									{{ Form.toggle({
+									{Form.toggle({
 										id: "radio-1",
 										type: "radio",
 										name: "radioChoice",
@@ -599,14 +599,14 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 										}
 									}) }}
 
-									{{ Form.toggle({
+									{Form.toggle({
 										type: "radio",
 										name: "radioChoice",
 										value: "option-2",
 										text: "Option 2"
 									}) }}
 
-									{{ Form.toggle({
+									{Form.toggle({
 										type: "radio",
 										name: "radioChoice",
 										value: "disabled",
@@ -620,7 +620,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 								</div>
 
 								<div class="o-form__group">
-									{{ Form.label({
+									{Form.label({
 										for: "checkbox-1",
 										text: "Checkbox",
 										metadata: {
@@ -630,7 +630,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 										}
 									}) }}
 
-									{{ Form.toggle({
+									{Form.toggle({
 										id: "checkbox-1",
 										type: "checkbox",
 										name: "checkboxChoice",
@@ -643,14 +643,14 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 										}
 									}) }}
 
-									{{ Form.toggle({
+									{Form.toggle({
 										type: "checkbox",
 										name: "checkboxChoice",
 										value: "option-2",
 										text: "Option 2"
 									}) }}
 
-									{{ Form.toggle({
+									{Form.toggle({
 										type: "checkbox",
 										name: "checkboxChoice",
 										value: "disabled",
@@ -666,11 +666,11 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 
 							<div class="cell cell--12-@xs cell--6-@md">
 								<div class="o-form__group">
-									{{ Form.label({
+									{Form.label({
 										for: "range-1",
 										text: "Range"
 									}) }}
-									{{ Form.range({
+									{Form.range({
 										id: "range-1",
 										type: "range",
 										name: "range-1",
@@ -678,7 +678,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 								</div>
 
 								<div class="o-form__group">
-									{{ Form.label({
+									{Form.label({
 										for: "file-1",
 										text: "File",
 										metadata: {
@@ -688,7 +688,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 										}
 									}) }}
 
-									{{ Form.file({
+									{Form.file({
 										id: "file-1",
 										name: "file-1",
 										text: "Choose a file",
@@ -713,12 +713,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 						<div class="grid">
 							<div class="cell cell--12-@xs cell--4-@sm">
 								<div class="o-form__group o-form__group--success">
-									{{ Form.label({
+									{Form.label({
 										for: "input-success",
 										text: "Success"
 									}) }}
 
-									{{ Form.field({
+									{Form.field({
 										id: "input-success",
 										type: "text",
 										name: "input-success",
@@ -729,7 +729,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 										}
 									}) }}
 
-									{{ Alert.default({
+									{Alert.default({
 										type: "success",
 										content: "<strong>Success</strong> message",
 										closable: true
@@ -738,12 +738,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 							</div>
 							<div class="cell cell--12-@xs cell--4-@sm">
 								<div class="o-form__group o-form__group--error">
-									{{ Form.label({
+									{Form.label({
 										for: "input-error",
 										text: "Error"
 									}) }}
 
-									{{ Form.field({
+									{Form.field({
 										id: "input-error",
 										type: "text",
 										name: "input-error",
@@ -754,7 +754,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 										}
 									}) }}
 
-									{{ Alert.default({
+									{Alert.default({
 										type: "danger",
 										content: "<strong>Error</strong> message",
 										closable: true
@@ -763,12 +763,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 							</div>
 							<div class="cell cell--12-@xs cell--4-@sm">
 								<div class="o-form__group o-form__group--warning">
-									{{ Form.label({
+									{Form.label({
 										for: "input-warning",
 										text: "Warning"
 									}) }}
 
-									{{ Form.field({
+									{Form.field({
 										id: "input-warning",
 										type: "text",
 										name: "input-warning",
@@ -779,7 +779,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 										}
 									}) }}
 
-									{{ Alert.default({
+									{Alert.default({
 										type: "warning",
 										content: "<strong>Warning</strong> message",
 										closable: true
@@ -799,7 +799,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				</h2>
 				<div class="grid">
 					<div class="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
-						{{ Button.default({
+						{Button.default({
 							type: "anchor",
 							text: "Button",
 							url: "#"
@@ -809,7 +809,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
-						{{ Button.default({
+						{Button.default({
 							type: "anchor",
 							text: "Button",
 							url: "#",
@@ -824,7 +824,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
-						{{ Button.default({
+						{Button.default({
 							type: "anchor",
 							text: "Button",
 							url: "#",
@@ -839,7 +839,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
-						{{ Button.default({
+						{Button.default({
 							type: "anchor",
 							text: "Button",
 							url: "#",
@@ -866,7 +866,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<h4>Share</h4>
 				<div class="grid">
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.social({
+						{button.social({
 							url: "https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/facebook.svg"),
 							text: "Share",
@@ -880,7 +880,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.social({
+						{button.social({
 							url: "https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/twitter.svg"),
 							text: "Tweet",
@@ -894,7 +894,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.social({
+						{button.social({
 							url: "https://plus.google.com/share?url={URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/googleplus.svg"),
 							text: "Share",
@@ -908,7 +908,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.social({
+						{button.social({
 							url: "http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/pinterest.svg"),
 							text: "Pin it",
@@ -922,7 +922,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.social({
+						{button.social({
 							url: "http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/linkedin.svg"),
 							text: "Share",
@@ -938,7 +938,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 
 				<div class="grid">
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.social({
+						{button.social({
 							url: "https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/facebook.svg"),
 							text: "Share",
@@ -955,7 +955,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.social({
+						{button.social({
 							url: "https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/twitter.svg"),
 							text: "Tweet",
@@ -972,7 +972,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.social({
+						{button.social({
 							url: "https://plus.google.com/share?url={URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/googleplus.svg"),
 							text: "Share",
@@ -989,7 +989,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.social({
+						{button.social({
 							url: "http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/pinterest.svg"),
 							text: "Pin it",
@@ -1006,7 +1006,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.social({
+						{button.social({
 							url: "http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/linkedin.svg"),
 							text: "Share",
@@ -1027,35 +1027,35 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<p><em>Modifier:</em> <code>&amp;.o-button--social-badge</code></p>
 				<div class="grid">
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.socialBadge({
+						{button.socialBadge({
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/facebook.svg")
 						}) }}
 					</div>
 
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.socialBadge({
+						{button.socialBadge({
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/twitter.svg")
 						}) }}
 					</div>
 
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.socialBadge({
+						{button.socialBadge({
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/googleplus.svg")
 						}) }}
 					</div>
 
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.socialBadge({
+						{button.socialBadge({
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/pinterest.svg")
 						}) }}
 					</div>
 
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.socialBadge({
+						{button.socialBadge({
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/linkedin.svg")
 						}) }}
@@ -1064,7 +1064,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 
 				<div class="grid">
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.socialBadge({
+						{button.socialBadge({
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/facebook.svg"),
 							metadata: {
@@ -1076,7 +1076,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.socialBadge({
+						{button.socialBadge({
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/twitter.svg"),
 							metadata: {
@@ -1088,7 +1088,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.socialBadge({
+						{button.socialBadge({
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/googleplus.svg"),
 							metadata: {
@@ -1100,7 +1100,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.socialBadge({
+						{button.socialBadge({
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/pinterest.svg"),
 							metadata: {
@@ -1112,7 +1112,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{{ button.socialBadge({
+						{button.socialBadge({
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/linkedin.svg"),
 							metadata: {
@@ -1473,7 +1473,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<p><em>Modifiers:</em> <code>&amp;.o-card--sm</code>, <code>&amp;.o-card--lg</code>, <code>&amp;.o-card--hover</code>, <code>&amp;.o-card--active</code>, <code>&amp;.o-card--forward</code>, <code>&amp;.o-card--primary</code>, <code>&amp;.o-card--secondary</code>, <code>&amp;.o-card--banner-gradient</code></p>
 				<div class="grid">
 					<div class="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
-						{{ Card.default({
+						{Card.default({
 							header: "<h3>Card <code>.o-card__header</code></h3>",
 							body: "
 								<p>
@@ -1488,7 +1488,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
-						{{ Card.default({
+						{Card.default({
 							header: "<h3>Primary card</h3>",
 							body: '
 								<span><sup class="u-heading--3">$</sup> <span class="u-heading--xl">3.99</span> <sub class="u-heading--sm">/month</sub></span>
@@ -1511,7 +1511,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
-						{{ Card.default({
+						{Card.default({
 							header: "<h3>Secondary card</h3>",
 							body: '
 								<span><sup class="u-heading--3">$</sup> <span class="u-heading--xl">1.99</span> <sub class="u-heading--sm">/month</sub></span>
@@ -1534,7 +1534,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
-						{{ Card.default({
+						{Card.default({
 							bannerUrl: 'https://images.unsplash.com/photo-1464519046765-f6d70b82a0df?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80',
 							header: "<h3>Card with banner</h3>",
 							body: '
@@ -1551,7 +1551,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					</div>
 
 					<div class="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
-						{{ Card.default({
+						{Card.default({
 							banner: "<h3>Card with title inside banner</h3>",
 							bannerUrl: 'https://images.unsplash.com/photo-1464518983192-0de439b5d517?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80',
 							body: '
@@ -1576,7 +1576,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<a href="style-guide#sg-figure" class="u-anchor__link">#</a>Figure
 				</h2>
 
-				{{ Figure.default({
+				{Figure.default({
 					src: "https://images.unsplash.com/photo-1464519046765-f6d70b82a0df?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80",
 					alt: "Figure alt",
 					title: "Figure title",
@@ -1592,7 +1592,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<h2 class="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
 					<a href="style-guide#sg-breadcrumb" class="u-anchor__link">#</a>Breadcrumb
 				</h2>
-				{{ Breadcrumb.default(_context, {
+				{Breadcrumb.default(_context, {
 					levels: [
 						{
 							title: "Level 1",
@@ -1616,7 +1616,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<h2 class="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
 					<a href="style-guide#sg-tabs" class="u-anchor__link">#</a>Tabs (JS)
 				</h2>
-				{{ Tabs.default({
+				{Tabs.default({
 					tabs: [
 						{
 							thumb: "Tab 1",
@@ -1640,7 +1640,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<h2 class="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
 					<a href="style-guide#sg-accordion" class="u-anchor__link">#</a>Accordion (JS)
 				</h2>
-				{{ Accordion.default({
+				{Accordion.default({
 					items: [
 						{
 							thumb: "Lorem ipsum",
@@ -1665,7 +1665,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<h2 class="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
 					<a href="style-guide#sg-pagination" class="u-anchor__link">#</a>Pagination
 				</h2>
-				{{ Pagination.default({
+				{Pagination.default({
 					range: 3,
 					current: 6,
 					links : [
@@ -1695,28 +1695,28 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<p><em>Optional:</em> <code>&gt; .material-icons</code></p>
 
 				<h3>Success <code>&amp;.o-alert--success</code></h3>
-				{{ Alert.default({
+				{Alert.default({
 					type: "success",
 					content: "Indicates a successful or positive action.",
 					closable: true
 				}) }}
 
 				<h3>Info <code>&amp;.o-alert--info</code></h3>
-				{{ Alert.default({
+				{Alert.default({
 					type: "info",
 					content: "Indicates a neutral informative change or action.",
 					closable: true
 				}) }}
 
 				<h3>Warning <code>&amp;.o-alert--warning</code></h3>
-				{{ Alert.default({
+				{Alert.default({
 					type: "warning",
 					content: "Indicates a warning that might need attention.",
 					closable: true
 				}) }}
 
 				<h3>Danger <code>&amp;.o-alert--danger</code></h3>
-				{{ Alert.default({
+				{Alert.default({
 					type: "danger",
 					content: "Indicates a dangerous or potentially negative action.",
 					closable: true
@@ -1751,7 +1751,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div class="cell cell--12-@xs cell--6-@sm">
 						<code>.o-progress-bar</code>
 
-						{{ ProgressBar.default({
+						{ProgressBar.default({
 							label: "Label",
 							total: "50 Go",
 							filling: "60"
@@ -1760,7 +1760,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div class="cell cell--12-@xs cell--6-@sm">
 						<code>&amp;[data-progress-bar-tooltip="<i>{TOOLTIP}</i>"]</code>
 
-						{{ ProgressBar.default({
+						{ProgressBar.default({
 							label: "Label",
 							total: "50 Go",
 							filling: "40",
@@ -1778,9 +1778,9 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				</h2>
 				<a href="#">
 					Activity
-					{{- Badge.default({
+					{- Badge.default({
 						content: 30
-					}) }}
+					}) }
 				</a>
 			</article>
 
@@ -1792,12 +1792,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				</h2>
 				<div class="grid">
 					<div class="cell cell--6-@xs">
-						{{ Loader.default() }}
+						{Loader.default() }}
 
 						<code>.o-loader</code>
 					</div>
 					<div class="cell cell--6-@xs">
-						{{ Loader.default({metadata: {modifierClasses: ["sm"]}}) }}
+						{Loader.default({metadata: {modifierClasses: ["sm"]}}) }}
 
 						<code>&amp;.o-loader--sm</code>
 					</div>
@@ -1810,9 +1810,9 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<h2 class="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
 					<a href="style-guide#sg-footnotes" class="u-anchor__link">#</a>Footnotes
 				</h2>
-				<p>Lorem ipsum{{ Footnotes.ref(_context, {id: "1", text: "[1]"}) }} dolor sit amet, consectetur adipisicing elit. Dignissimos{{ Footnotes.ref(_context, {id: "2", text: "[2]"}) }}, qui? Perferendis earum explicabo possimus odit porro odio velit illum nihil deleniti aliquam hic accusantium numquam sunt et, rem, ut ratione. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ex voluptates, eos doloribus ipsam numquam ad inventore consequuntur dolorum ipsum eveniet maxime fuga, quaerat animi sit iste. Dignissimos, sit eligendi.</p>
+				<p>Lorem ipsum{Footnotes.ref(_context, {id: "1", text: "[1]"}) }} dolor sit amet, consectetur adipisicing elit. Dignissimos{Footnotes.ref(_context, {id: "2", text: "[2]"}) }}, qui? Perferendis earum explicabo possimus odit porro odio velit illum nihil deleniti aliquam hic accusantium numquam sunt et, rem, ut ratione. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ex voluptates, eos doloribus ipsam numquam ad inventore consequuntur dolorum ipsum eveniet maxime fuga, quaerat animi sit iste. Dignissimos, sit eligendi.</p>
 
-				{{ Footnotes.notes(_context,{
+				{Footnotes.notes(_context,{
 					notes: [
 						{
 							id: "1",
@@ -1925,7 +1925,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 </div>
 
 {# Notice (JS) (remove ".u-is--hidden" to display) #}
-{{ Notice.default({
+{Notice.default({
 	primary: '<p class="u-vr--bottom-0-@xs">This website uses cookies to ensure you the best experience. <a href="#">More info</a></p>',
 	secondary: '<button class="o-button js-notice-close">Got it!</button>',
 	closeButton: true,

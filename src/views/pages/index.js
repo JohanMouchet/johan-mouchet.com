@@ -29,7 +29,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 					<div class="l-cell--gray cell cell--12-@xs cell--6-@sm cell--3-@md">
 						<div class="l-grid--full-height grid grid--xCenter-@xs grid--yCenter-@xs">
 							<div class="cell">
-								<img class="c-about__portrait" src="{{ _GLOBAL.paths.img }}views/johan-mouchet.jpg" srcset="{{ _GLOBAL.paths.img }}views/johan-mouchet.jpg, {{ _GLOBAL.paths.img }}views/johan-mouchet@x2.jpg 1.25x" alt="Johan Mouchet">
+								<img class="c-about__portrait" src={`${_GLOBAL.paths.img}views/johan-mouchet.jpg`} srcset={`${_GLOBAL.paths.img}views/johan-mouchet.jpg, ${_GLOBAL.paths.img}views/johan-mouchet@x2.jpg 1.25x`} alt="Johan Mouchet">
 							</div>
 						</div>
 					</div>
@@ -54,7 +54,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 						<div class="u-vr--top-2-@xs"></div>
 						<h2>Expertises</h2>
 
-						{{ Expertises.default({
+						{Expertises.default({
 							expertises: [
 								{
 									label: "Vue.js",
@@ -82,7 +82,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 									tooltip: "9/10"
 								}
 							]
-						}) }}
+						})}
 					</article>
 
 					<hr class="wow">
@@ -114,7 +114,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 					<article class="p-academic-qualifications">
 						<h2>Academic qualifications</h2>
 
-						{{ AcademicQualification.default({
+						{AcademicQualification.default({
 							qualifications: [
 								{
 									establishment: {
@@ -144,7 +144,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 									title: "Baccalauréat scientifique (High School Certificate)"
 								}
 							]
-						}) }}
+						})}
 					</article>
 
 					<hr class="wow">
@@ -159,7 +159,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 					<article class="p-social-medias">
 						<h2>Social media</h2>
 
-						{{ SocialMedia.default({
+						{SocialMedia.default({
 							medias: [
 								{
 									name: "LinkedIn",
@@ -212,7 +212,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 									iconPath: _GLOBAL.paths.img ~ "icons/simple-icons/spotify.svg"
 								}
 							]
-						}) }}
+						})}
 					</article>
 					<div class="u-vr--top-2-@xs"></div>
 				</div>
@@ -233,7 +233,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 							]
 						}] #}
 
-						{{ Experience.default({
+						{Experience.default({
 							experiences: [
 							{
 								company: {
@@ -488,7 +488,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 									]
 								},
 							]
-						}) }}
+						})}
 					</article>
 
 					<hr class="wow">
@@ -496,7 +496,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 					<article class="p-internships">
 						<h2>Internships</h2>
 
-						{{ Experience.default({
+						{Experience.default({
 							experiences: [
 								{
 									company: {
@@ -558,7 +558,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 									lede: 'Website development for a training centre: advanced online registration, databases, back office, <abbr title="Search Engine Optimization">SEO</abbr>, <abbr title="Search Engine Advertising">SEA</abbr>.'
 								}
 							]
-						}) }}
+						})}
 					</article>
 
 					<hr class="wow">
@@ -566,7 +566,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 					<article class="p-references">
 						<h2>References</h2>
 
-						{{ Reference.default({
+						{Reference.default({
 							requestOnly: true,
 							references: [
 								{
@@ -609,7 +609,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 									}
 								}
 							]
-						}) }}
+						})}
 
 						{# {
 							name: "Zander MARTINEAU",
@@ -636,7 +636,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 							Here are some of my personal works:
 						</p>
 
-						{{ PersonalWorks.default({
+						{PersonalWorks.default({
 							works: [
 								{
 									thumbnailPath: _GLOBAL.paths.img ~ "views/personal-works/seville.jpg",
@@ -669,7 +669,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 									sourceIconPath: _GLOBAL.paths.img ~ "icons/simple-icons/youtube.svg"
 								}
 							]
-						}) }}
+						})}
 					</article>
 
 					<hr class="wow">
