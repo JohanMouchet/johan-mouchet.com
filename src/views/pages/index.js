@@ -10,36 +10,36 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 {% extends "layouts/l-default.html" %}
 
 {% block pagecontent %}
-	<main class="l-main l-main--no-margin">
-		<section class="c-about">
-			<div class="container container--noGutter-lgGrid">
-				<div class="grid grid--lgGutter-@xs">
-					<div class="cell cell--12-@xs cell--6-@sm">
-						<h2 class="c-about__heading">About me</h2>
+	<main className="l-main l-main--no-margin">
+		<section className="c-about">
+			<div className="container container--noGutter-lgGrid">
+				<div className="grid grid--lgGutter-@xs">
+					<div className="cell cell--12-@xs cell--6-@sm">
+						<h2 className="c-about__heading">About me</h2>
 
-						<p class="c-about__paragraph">
+						<p className="c-about__paragraph">
 							Originally from Marseille, France, I moved to London in 2013 where I graduated from a master degree in IT. I worked as a <b>front-end developer</b> for different agencies where I was able to express my appreciation for design, enthusiasm for new technologies and desire to collaborate.
 						</p>
 					</div>
 
-					<div class="l-cell--gray-lighter cell cell--0-@xs cell--6-@sm"></div>
+					<div className="l-cell--gray-lighter cell cell--0-@xs cell--6-@sm"></div>
 				</div>
 
-				<div class="grid grid--lgGutter-@xs">
-					<div class="l-cell--gray cell cell--12-@xs cell--6-@sm cell--3-@md">
-						<div class="l-grid--full-height grid grid--xCenter-@xs grid--yCenter-@xs">
-							<div class="cell">
-								<img class="c-about__portrait" src={`${_GLOBAL.paths.img}views/johan-mouchet.jpg`} srcset={`${_GLOBAL.paths.img}views/johan-mouchet.jpg, ${_GLOBAL.paths.img}views/johan-mouchet@x2.jpg 1.25x`} alt="Johan Mouchet">
+				<div className="grid grid--lgGutter-@xs">
+					<div className="l-cell--gray cell cell--12-@xs cell--6-@sm cell--3-@md">
+						<div className="l-grid--full-height grid grid--xCenter-@xs grid--yCenter-@xs">
+							<div className="cell">
+								<img className="c-about__portrait" src={`${_GLOBAL.paths.img}views/johan-mouchet.jpg`} srcset={`${_GLOBAL.paths.img}views/johan-mouchet.jpg, ${_GLOBAL.paths.img}views/johan-mouchet@x2.jpg 1.25x`} alt="Johan Mouchet">
 							</div>
 						</div>
 					</div>
 
-					<div class="l-cell--gray-lighter cell cell--hidden-@xs cell--visible-@md cell--3-@md"></div>
+					<div className="l-cell--gray-lighter cell cell--hidden-@xs cell--visible-@md cell--3-@md"></div>
 
-					<div class="cell cell--12-@xs cell--6-@sm">
-						<h2 class="c-about__heading">Right now,</h2>
+					<div className="cell cell--12-@xs cell--6-@sm">
+						<h2 className="c-about__heading">Right now,</h2>
 
-						<p class="c-about__paragraph">
+						<p className="c-about__paragraph">
 							I recently relocated to <b>Melbourne</b> looking for a new opportunity to take my career to the next level. I'm committed and ready to work within a fast paced environment on innovative and impactful projects.
 						</p>
 					</div>
@@ -47,11 +47,11 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 			</div>
 		</section>
 
-		<div class="container container--noGutter-lgGrid">
-			<div class="grid grid--lgGutter-@xs">
-				<div class="l-cell--gray-lighter cell cell--12-@xs cell--3-@md">
-					<article class="p-expertises">
-						<div class="u-vr--top-2-@xs"></div>
+		<div className="container container--noGutter-lgGrid">
+			<div className="grid grid--lgGutter-@xs">
+				<div className="l-cell--gray-lighter cell cell--12-@xs cell--3-@md">
+					<article className="p-expertises">
+						<div className="u-vr--top-2-@xs"></div>
 						<h2>Expertises</h2>
 
 						{Expertises.default({
@@ -85,33 +85,33 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 						})}
 					</article>
 
-					<hr class="wow">
+					<hr className="wow">
 
-					<article class="p-skills">
+					<article className="p-skills">
 						<h2>Skills</h2>
 						<p>Sass, BEM, ITCSS, Bootstrap, Nunjucks / Twig / Handlebars, CMS, Microdata, ES2017, jQuery, APIs, Webpack, Yarn / npm, Gulp / Grunt, Git (Gitflow), Zeplin / InVision / Photoshop, Responsive design, Web performance, Cross-browser compatibility, Accessibility, Standards, Search Engine Marketing, Analytics, Atlassian suite, Agile, Open source</p>
 					</article>
 
-					<hr class="wow">
+					<hr className="wow">
 
-					<article class="p-profile">
+					<article className="p-profile">
 						<h2>Profile</h2>
 						<p>Positive, Enthusiast about new technologies, Motivated, Enjoy knowledge sharing</p>
 					</article>
 
-					<hr class="wow">
+					<hr className="wow">
 
-					<article class="p-language">
+					<article className="p-language">
 						<h2>Language</h2>
-						<ul class="o-list--unstyled">
+						<ul className="o-list--unstyled">
 							<li>English: Advanced</li>
 							<li>French: Native</li>
 						</ul>
 					</article>
 
-					<hr class="wow">
+					<hr className="wow">
 
-					<article class="p-academic-qualifications">
+					<article className="p-academic-qualifications">
 						<h2>Academic qualifications</h2>
 
 						{AcademicQualification.default({
@@ -147,16 +147,16 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 						})}
 					</article>
 
-					<hr class="wow">
+					<hr className="wow">
 
-					<article class="p-interests">
+					<article className="p-interests">
 						<h2>Interests</h2>
 						<p>Web &amp; Graphic design, Development, Photography, Video Editing, Drawing, Traveling, Cycling, Running, Fitness</p>
 					</article>
 
-					<hr class="wow">
+					<hr className="wow">
 
-					<article class="p-social-medias">
+					<article className="p-social-medias">
 						<h2>Social media</h2>
 
 						{SocialMedia.default({
@@ -214,12 +214,12 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 							]
 						})}
 					</article>
-					<div class="u-vr--top-2-@xs"></div>
+					<div className="u-vr--top-2-@xs"></div>
 				</div>
 
-				<div class="cell cell--12-@xs cell--9-@md">
-					<article class="p-career-experiences">
-						<div class="u-vr--top-2-@xs"></div>
+				<div className="cell cell--12-@xs cell--9-@md">
+					<article className="p-career-experiences">
+						<div className="u-vr--top-2-@xs"></div>
 						<h2>Career experiences</h2>
 
 						{# projects: [{
@@ -265,13 +265,13 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 											}
 										],
 										details: [
-											"<a href='https://www.contentful.com/' target='_blank' class='external-link'><em>Contentful</em></a>, headless CMS",
+											"<a href='https://www.contentful.com/' target='_blank' className='external-link'><em>Contentful</em></a>, headless CMS",
 											"<em>Handlebars</em> templating, component oriented",
-											"<a href='https://github.com/desandro/masonry' target='_blank' class='external-link'><em>Masonry</em></a> grid layout",
+											"<a href='https://github.com/desandro/masonry' target='_blank' className='external-link'><em>Masonry</em></a> grid layout",
 											"Community submission forms with client side validation",
 											"Social media sharing",
-											"<a href='https://github.com/ghosh/micromodal' target='_blank' class='external-link'><em>Micromodal</em></a> accessible modal dialogs",
-											"<em>Bootstrap 4</em>, <em>Sass</em>, <a href='http://getbem.com/' target='_blank' class='external-link'><em>BEM</em></a> naming scheme",
+											"<a href='https://github.com/ghosh/micromodal' target='_blank' className='external-link'><em>Micromodal</em></a> accessible modal dialogs",
+											"<em>Bootstrap 4</em>, <em>Sass</em>, <a href='http://getbem.com/' target='_blank' className='external-link'><em>BEM</em></a> naming scheme",
 											"Front-end tooling: <em>Yarn</em>, <em>Gulp</em>, <em>Webpack</em>, linting"
 										]
 									},
@@ -281,12 +281,12 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 										lede: "Web application dedicated to the sport rights holders industry. Allows to edit live or recorded streams to produce highlights shareable on social media.",
 										thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/klip-studio.jpg",
 										details: [
-											"React framework, <a href='https://react.semantic-ui.com/' target='_blank' class='external-link'><em>Semantic UI React</em></a> component library",
-											"<a href='https://github.com/google/shaka-player' target='_blank' class='external-link'><em>Shaka</em></a> web player, advanced video editing, cropping etc.",
+											"React framework, <a href='https://react.semantic-ui.com/' target='_blank' className='external-link'><em>Semantic UI React</em></a> component library",
+											"<a href='https://github.com/google/shaka-player' target='_blank' className='external-link'><em>Shaka</em></a> web player, advanced video editing, cropping etc.",
 											"Content tagging, filtering, sorting",
 											"Audience engagement tracking through social media APIs",
 											"Social media publishing",
-											"<a href='https://semantic-ui.com/' target='_blank' class='external-link'><em>Semantic UI</em></a>, <em>Less</em>, <a href='http://getbem.com/' target='_blank' class='external-link'><em>BEM</em></a> naming scheme",
+											"<a href='https://semantic-ui.com/' target='_blank' className='external-link'><em>Semantic UI</em></a>, <em>Less</em>, <a href='http://getbem.com/' target='_blank' className='external-link'><em>BEM</em></a> naming scheme",
 											"Front-end tooling: <em>Create React App</em>, <em>npm</em>, linting"
 										]
 									},
@@ -297,7 +297,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 										lede: "Websites creation related to education for Pearson’s launch in three new markets through Asia.",
 										thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/pearson.jpg",
 										details: [
-											"<a href='' target='_blank' class='external-link'><em>Experience Manager</em></a>, enterprise content management",
+											"<a href='' target='_blank' className='external-link'><em>Experience Manager</em></a>, enterprise content management",
 											"Content authoring, page and component building",
 											"Market customisation, translation",
 											"Registration forms"
@@ -325,11 +325,11 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 											details: [
 												"<a href='http://www.sdl.com/software-and-services/tridion-dx/tridion-sites.html'><em>SDL Web</em></a> (formerly Tridion), headless data driven CMS ",
 												"<em>Nunjucks</em> templating, component oriented, fed with datas stored in a <em>MongoDB</em> database",
-												"<a href='https://github.com/kenwheeler/slick/' target='_blank' class='external-link'><em>Slick</em></a> carousel integration, lazy loading",
+												"<a href='https://github.com/kenwheeler/slick/' target='_blank' className='external-link'><em>Slick</em></a> carousel integration, lazy loading",
 												"HTML5 Geolocation API, Google maps API",
 												"AAA accessibility standard",
-												"Sass + <a href='http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528' target='_blank' class='external-link'><em>ITCSS</em></a> architecture, <a href='http://getbem.com/' target='_blank' class='external-link'><em>BEM</em></a> naming scheme",
-												"Advanced CSS animations with <a href='http://imakewebthings.com/waypoints/' target='_blank' class='external-link'><em>Waypoints js</em></a>",
+												"Sass + <a href='http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528' target='_blank' className='external-link'><em>ITCSS</em></a> architecture, <a href='http://getbem.com/' target='_blank' className='external-link'><em>BEM</em></a> naming scheme",
+												"Advanced CSS animations with <a href='http://imakewebthings.com/waypoints/' target='_blank' className='external-link'><em>Waypoints js</em></a>",
 												"Progressive enhancement with JavaScript: <em>Backbone.js</em>, <em>jQuery</em>",
 												"Front-end tooling: <em>npm</em>, <em>Grunt</em>, <em>RequireJS</em>, linting",
 												"Environment: <em>Vagrant</em>, Continuous integration: <em>Heroku</em>",
@@ -343,8 +343,8 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 											thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/lexus-safety-system-plus.jpg",
 											details: [
 												"Stack identical to the one of <em>Lexus 'v11'</em>",
-												"Full Screen, single-page design, done with <a href='https://github.com/alvarotrigo/fullPage.js' target='_blank' class='external-link'><em>fullPage.js</em></a>",
-												"Integration of a <em>Three.js</em> API (realised by the talented <a href='http://danielbrowns.com/' target='_blank' class='external-link'>Daniel Brown</a>)",
+												"Full Screen, single-page design, done with <a href='https://github.com/alvarotrigo/fullPage.js' target='_blank' className='external-link'><em>fullPage.js</em></a>",
+												"Integration of a <em>Three.js</em> API (realised by the talented <a href='http://danielbrowns.com/' target='_blank' className='external-link'>Daniel Brown</a>)",
 												"Advanced multi layers CSS animations",
 												"Responsive design, device orientation aware",
 												"Performance optimised, QA tested",
@@ -357,11 +357,11 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 											lede: "Delivery within a short turnaround of a global eCommerce website for a manufacturer of consumer marine electronics.",
 											thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/lowrance.jpg",
 											details: [
-												"<a href='http://www.episerver.com/' target='_blank' class='external-link'><em>EPIServer</em></a> CMS for scalability",
+												"<a href='http://www.episerver.com/' target='_blank' className='external-link'><em>EPIServer</em></a> CMS for scalability",
 												"<em>Handlebars</em> / <em>Razor templating</em>, component oriented",
-												"Client side form verification done with <a href='https://github.com/jquery-validation/jquery-validation' target='_blank' class='external-link'><em>jquery-validation</em></a>",
+												"Client side form verification done with <a href='https://github.com/jquery-validation/jquery-validation' target='_blank' className='external-link'><em>jquery-validation</em></a>",
 												"AAA accessibility standard",
-												"Sass + <a href='http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528' target='_blank' class='external-link'><em>ITCSS</em></a> architecture, <a href='http://getbem.com/' target='_blank' class='external-link'><em>BEM</em></a> naming scheme",
+												"Sass + <a href='http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528' target='_blank' className='external-link'><em>ITCSS</em></a> architecture, <a href='http://getbem.com/' target='_blank' className='external-link'><em>BEM</em></a> naming scheme",
 												"Progressive enhancement with JavaScript (<em>jQuery</em>)",
 												"Front-end tooling: <em>npm</em>, <em>Gulp</em>, linting",
 											]
@@ -390,7 +390,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 												"<em>UX</em> Revampment: focused towards user conversion, web performance, accessibility",
 												"Wireframe, mockup and prototype done with <em>Photoshop</em>",
 												"<em>Twig</em> templating, component oriented, fed with datas stored in a <em>MySQL</em> database",
-												"Sass + <a href='http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528' target='_blank' class='external-link'><em>ITCSS</em></a> architecture, <a href='http://getbem.com/' target='_blank' class='external-link'><em>BEM</em></a> naming scheme",
+												"Sass + <a href='http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528' target='_blank' className='external-link'><em>ITCSS</em></a> architecture, <a href='http://getbem.com/' target='_blank' className='external-link'><em>BEM</em></a> naming scheme",
 												"Progressive enhancement with JavaScript (<em>jQuery</em>)",
 												"Front-end tooling: <em>Yarn</em>, <em>Grunt</em>, linting ",
 												"<em>SEO</em>: use of <em>Open Graph</em> protocol, <em>JSON-LD</em> microdata",
@@ -418,8 +418,8 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 											thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/business-banking-insight.jpg",
 											details: [
 												"<i>AngularJS 2</i> templating",
-												"Front-end framework: <a href='http://trykickoff.com/' target='_blank' class='external-link'>Kickoff</a> (npm, Grunt, Sass, jQuery)",
-												"<a href='https://www.amcharts.com/' target='_blank' class='external-link'>amCharts</a> library integration",
+												"Front-end framework: <a href='http://trykickoff.com/' target='_blank' className='external-link'>Kickoff</a> (npm, Grunt, Sass, jQuery)",
+												"<a href='https://www.amcharts.com/' target='_blank' className='external-link'>amCharts</a> library integration",
 												"Front-end dynamic filtering feature",
 												"Back-end collaboration for CMS integration"
 											]
@@ -431,8 +431,8 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 											lede: "Crowdsourced event listing microsite for the <em>Prince's Trust</em> 40th anniversary celebration.",
 											thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/princes-trust.jpg",
 											details: [
-												"Front-end framework: <a href='http://trykickoff.com/' target='_blank' class='external-link'>Kickoff</a>",
-												"<a href='https://hashtagd.net/' target='_blank' class='external-link'>Hashtagd</a> APIs integration",
+												"Front-end framework: <a href='http://trykickoff.com/' target='_blank' className='external-link'>Kickoff</a>",
+												"<a href='https://hashtagd.net/' target='_blank' className='external-link'>Hashtagd</a> APIs integration",
 												"<i>OAuth</i> integration for Twitter sharing",
 												"Lazy loaded events from database"
 											]
@@ -447,7 +447,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 												"iOS and Android default browser support",
 												"Device 3D movement detection",
 												"<i>React</i> templating",
-												"Front-end framework: <a href='http://trykickoff.com/' target='_blank' class='external-link'>Kickoff</a>",
+												"Front-end framework: <a href='http://trykickoff.com/' target='_blank' className='external-link'>Kickoff</a>",
 												"<i>OAuth</i> integration for Facebook and Twitter registration and sharing",
 												"HTML5 canvas and CSS3 animations"
 											]
@@ -491,9 +491,9 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 						})}
 					</article>
 
-					<hr class="wow">
+					<hr className="wow">
 
-					<article class="p-internships">
+					<article className="p-internships">
 						<h2>Internships</h2>
 
 						{Experience.default({
@@ -543,7 +543,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 									startDate: "01/07/2011",
 									endDate: "01/10/2011",
 									contractType: "Full-time intern",
-									lede: 'Various web designs for online selling ticket: including <a href="http://sigstrasbourg.fr/" target="_blank" class="external-link">SIG Basket</a> and <a href="http://biarritz-culture.com/" target="_blank" class="external-link">Biarritz culture</a>.'
+									lede: 'Various web designs for online selling ticket: including <a href="http://sigstrasbourg.fr/" target="_blank" className="external-link">SIG Basket</a> and <a href="http://biarritz-culture.com/" target="_blank" className="external-link">Biarritz culture</a>.'
 								},
 								{
 									company: {
@@ -561,9 +561,9 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 						})}
 					</article>
 
-					<hr class="wow">
+					<hr className="wow">
 
-					<article class="p-references">
+					<article className="p-references">
 						<h2>References</h2>
 
 						{Reference.default({
@@ -626,9 +626,9 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 						}, #}
 					</article>
 
-					<hr class="wow">
+					<hr className="wow">
 
-					<article class="p-personal-works">
+					<article className="p-personal-works">
 						<h2>Personal works</h2>
 
 						<p>
@@ -672,14 +672,14 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 						})}
 					</article>
 
-					<hr class="wow">
+					<hr className="wow">
 
-					<article class="p-contact" id="p-contact">
+					<article className="p-contact" id="p-contact">
 						<h2>Get in touch</h2>
 
 						<a href="mailto:mouchet.johan@gmail.com" target="_blank">mouchet.johan[at]gmail.com</a>
 					</article>
-					<div class="u-vr--top-2-@xs"></div>
+					<div className="u-vr--top-2-@xs"></div>
 				</div>
 			</div>
 		</div>
