@@ -2,4 +2,8 @@
 
 import * as React from "react";
 
-<aside className="p-mast-aside l-aside"></aside>;
+const ___ = () => {
+  return <aside className="p-mast-aside l-aside"></aside>;
+};
+
+export default ___;
