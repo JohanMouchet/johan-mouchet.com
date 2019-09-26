@@ -1,6 +1,5 @@
 # TODO
 
-- Convert `{% include`
 - Replace `{% for`
 - Replace `{% if`
 - Replace `{% set`
@@ -8,6 +7,7 @@
 - remove props.
 - What to do with `contextClass(contextClass)`?
 - Check potentially ignored prop in string `title="Follow me on { media.name }"`
+- Run Prettier
 
 # Done
 
@@ -26,6 +26,7 @@
 - Replace twig not
 - Convert `{% import`
 - Replace concatenation
+- Convert `{% include`
 
 # Fix
 

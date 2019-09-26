@@ -1,11 +1,16 @@
 // @flow
 
 import * as React from "react";
+import { HTML } from "../partials/HTML";
+import { MastHeader } from "../partials/MastHeader";
+import { MastFooter } from "../partials/MastFooter";
 
-{% include "partials/p-html-start.html" %}
-{% include "partials/p-mast-header.html" %}
-
-{% block pagecontent %}{% endblock %}
-
-{% include "partials/p-mast-footer.html" %}
-{% include "partials/p-html-end.html" %}
+const ___ = children => {
+  return (
+    <HTML>
+      <MastHeader />
+      {children}
+      <MastFooter />
+    </HTML>
+  );
+};
