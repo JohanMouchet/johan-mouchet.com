@@ -215,9 +215,9 @@ const select = (props: Props) => {
 
 
 	<select {% if props.id %}id={props.id}{% endif %} name={props.name} className={`${___Class} o-form__field--select`} {[...props.metadata.attributes]}>
-		{% for option in props.options %}
+		{props.options.map(option => (
 			<option {% if props.value %}value={props.value}{% endif %} {[...props.metadata.attributes]}>{ option.text }</option>
-		{% endfor %}
+		))}
 	</select>
   );
 };

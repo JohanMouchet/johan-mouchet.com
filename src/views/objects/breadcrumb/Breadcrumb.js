@@ -32,16 +32,17 @@ const ___ = (props: Props) => {
   
 	return (
 	<ol className={___Class}>
-		{% for level in props.levels %}
+		{props.levels.map(level => (
 			<li className={`${'o-breadcrumb__level'|contextClass(contextClass) } wow fadeInUp`} {% if loop.index > 1 %}data-wow-delay={`${loop.index0 * 0.15 }s`}{% endif %}>
 				<a className={'o-breadcrumb__link'|contextClass(contextClass)} {% if level.url and !loop.last %}href={level.url}{% endif %}>{ level.title }</a>
 			</li>
-		{% endfor %}
+		))}
 	</ol>
 
 	/* <pre> */
+	// TODO: fix %for
 	<script type="application/ld+json">
-		{
+		{`
 			"@context": "http://schema.org",
 			"@type": "BreadcrumbList",
 			"itemListElement": [
@@ -58,7 +59,7 @@ const ___ = (props: Props) => {
 				{- !loop.last ? ',' -}
 			{%- endfor -%}
 			]
-		}
+		`}
 	</script>
 	/* </pre> */
   );

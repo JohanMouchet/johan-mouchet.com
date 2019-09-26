@@ -29,7 +29,7 @@ const ___ = (props: Props) => {
   return (
 	<div className="c-personal-works">
 		<div className="grid">
-			{% for work in props.works %}
+			{props.works.map(work => (
 				<div className="cell cell--6-@xs cell--4-@sm cell--2-@md">
 					<section className="c-personal-work">
 						<a className="c-personal-work__overlay" href={work.URL} target="_blank">
@@ -42,7 +42,7 @@ const ___ = (props: Props) => {
 						</a>
 					</section>
 				</div>
-			{% endfor %}
+			))}
 		</div>
 	</div>
   );

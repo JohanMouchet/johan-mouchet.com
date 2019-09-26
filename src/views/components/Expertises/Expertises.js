@@ -15,35 +15,29 @@ import { ProgressBar } from "../../objects/";
  */
 
 const ___ = (props: Props) => {
-  const {
-    prop1,
-    prop2
-  } = props;
+  const { prop1, prop2 } = props;
 
-  const ___Class = cx(
-    "___",
-    {
-      prop1: "___--prop1"
-    }
-  );
+  const ___Class = cx("___", {
+    prop1: "___--prop1"
+  });
 
   return (
-	<ul className="c-expertises o-list--unstyled">
-		{% for expertise in props.expertises %}
-			<li className="c-expertise">
-				<ProgressBar props={{
-					label: expertise.label,
-					filling: expertise.filling,
-					tooltip: expertise.tooltip,
-					metadata: {
-						modifierClasses: [
-							"tooltip-hover"
-						]
-					}
-				}} />
-			</li>
-		{% endfor %}
-	</ul>
+    <ul className="c-expertises o-list--unstyled">
+      {props.expertises.map(expertise => (
+        <li className="c-expertise">
+          <ProgressBar
+            props={{
+              label: expertise.label,
+              filling: expertise.filling,
+              tooltip: expertise.tooltip,
+              metadata: {
+                modifierClasses: ["tooltip-hover"]
+              }
+            }}
+          />
+        </li>
+      ))}
+    </ul>
   );
 };
 

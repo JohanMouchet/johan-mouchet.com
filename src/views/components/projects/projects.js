@@ -32,10 +32,10 @@ const ___ = (props: Props) => {
   return (
 	<div className="c-projects">
 		<div className="grid">
-			{% set projectQuantity = options|length %}
+			{% set projectQuantity = props|length %}
 			{% set cellSize = projectQuantity < 5 ? 12 / projectQuantity : 3 %}
 
-			{% for project in options %}
+			{props.map(project => (
 				<div className="cell cell--12-@xs cell--6-@sm cell--{ cellSize }-@md">
 					<div className="c-project">
 						{% if projectQuantity === 1 %}
@@ -64,20 +64,20 @@ const ___ = (props: Props) => {
 
 								{% if project.awards %}
 									<ul className="c-project__awards { projectQuantity === 1 ? 'u-vr--top-0-@md'}">
-										{% for award in project.awards %}
+										{props.awards.map(award => (
 											<li className="c-project__award">
 												<a className="c-project__award-icon" href={award.URL}>{ file_get_contents(_GLOBAL.paths.img + "icons/award.svg")|raw }</a>
 												<span className="c-project__award-name"><em>{ award.name }{% if award.category %}</em>: { award.category }{% endif %}</span>
 											</li>
-										{% endfor %}
+										))}
 									</ul>
 								{% endif %}
 
 								{% if project.details %}
 									<ul className="c-project__details { projectQuantity === 1 ? 'u-vr--top-0-@md'}">
-										{% for detail in project.details %}
+										{project.details.map(detail => (
 											<li className="c-project__detail">{ detail|raw }</li>
-										{% endfor %}
+										))}
 									</ul>
 								{% endif %}
 						{% if projectQuantity === 1 %}
@@ -86,7 +86,7 @@ const ___ = (props: Props) => {
 					{% endif %}
 					</div>
 				</div>
-			{% endfor %}
+			))}
 		</div>
 	</div>
   );

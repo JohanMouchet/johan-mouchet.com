@@ -33,7 +33,8 @@ const ___ = (props: Props) => {
   );
 
   return (
-	{% for experience in props.experiences %}
+	
+	props.experiences.map(experience => (
 		<section className="c-experience">
 			<h3 className="c-experience__heading">
 				<a {% if experience.company.URL %}href={experience.company.URL} target="_blank" className="c-experience__company external-link"{% endif %}>{ experience.company.name }</a>,
@@ -85,7 +86,7 @@ const ___ = (props: Props) => {
 				<Projects props={experience.projects} />
 			{% endif %}
 		</section>
-	{% endfor %}
+	))
   );
 };
 

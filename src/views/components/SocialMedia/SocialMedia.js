@@ -14,28 +14,28 @@ import "./___.scss";
  */
 
 const ___ = (props: Props) => {
-  const {
-    prop1,
-    prop2
-  } = props;
+  const { prop1, prop2 } = props;
 
-  const ___Class = cx(
-    "___",
-    {
-      prop1: "___--prop1"
-    }
-  );
+  const ___Class = cx("___", {
+    prop1: "___--prop1"
+  });
 
   return (
-	<div className="grid">
-		{% for media in props.medias %}
-			<div className="c-social-media cell cell--6-@xs cell--4-@sm cell--12-@md">
-				<a className="c-social-media__link" href={media.URL} title="Follow me on { media.name }" target="_blank">
-					{ file_get_contents(media.iconPath)|raw }{ media.name }
-				</a>
-			</div>
-		{% endfor %}
-	</div>
+    <div className="grid">
+      {props.medias.map(media => (
+        <div className="c-social-media cell cell--6-@xs cell--4-@sm cell--12-@md">
+          <a
+            className="c-social-media__link"
+            href={media.URL}
+            title="Follow me on { media.name }"
+            target="_blank"
+          >
+            {file_get_contents(media.iconPath) | raw}
+            {media.name}
+          </a>
+        </div>
+      ))}
+    </div>
   );
 };
 

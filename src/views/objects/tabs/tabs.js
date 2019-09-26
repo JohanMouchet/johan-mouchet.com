@@ -31,18 +31,18 @@ const ___ = (props: Props) => {
   return (
 	<div className={`${___Class} js-tabs`}>
 		<ul className={'o-tabs__thumbs'|contextClass(contextClass)}>
-			{% for tab in props.tabs %}
+			{props.tab.map(tab => (
 				<li className={`${'o-tabs__thumb'|contextClass(contextClass) } js-tabs-thumb wow fadeInUp`} {% if loop.index > 1 %}data-wow-delay={`${loop.index0 * 0.15 }s`}{% endif %}>
 					<button className={'o-tabs__button'|contextClass(contextClass)}>{ tab.thumb }</button>
 				</li>
-			{% endfor %}
+			))}
 		</ul>
 		<ul className={'o-tabs__panels'|contextClass(contextClass)}>
-			{% for tab in props.tabs %}
+			{props.tab.map(tab => (
 				<li className={`${'o-tabs__panel'|contextClass(contextClass) } js-tabs-panel`}>
 					{ tab.panel }
 				</li>
-			{% endfor %}
+			))}
 		</ul>
 	</div>
   );

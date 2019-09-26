@@ -57,6 +57,7 @@ const ___ = (props: Props) => {
 		/* Range */
 		{% if range %}
 			/* Lower */
+			{/* TODO: fix %for */}
 			{% for link in lowerRange..current %}
 				{% set currentIndex = current - loop.revindex %}
 
@@ -77,6 +78,7 @@ const ___ = (props: Props) => {
 			</li>
 
 			/* Upper */
+			{/* TODO: fix %for */}
 			{% for link in current..upperRange %}
 				{% set currentIndex = current + loop.index %}
 
@@ -93,9 +95,9 @@ const ___ = (props: Props) => {
 				{% endif %}
 			{% endfor %}
 		{% else %} /* No Range */
-			{% for link in links %}
+			{links.map(link => (
 				<li className={`${'o-pagination__index'|contextClass(contextClass) } ${ loop.index === current && 'is--active'}`}><a className={'o-pagination__link'|contextClass(contextClass)} href={link}>{ loop.index }</a></li>
-			{% endfor %}
+			))}
 		{% endif %}
 
 		/* Next */

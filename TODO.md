@@ -1,6 +1,6 @@
 # TODO
 
-- Replace `{% for`
+- Replace loop.index
 - Replace `{% if`
 - Replace `{% set`
 - Convert JSDoc to Flow
@@ -28,6 +28,7 @@
 - Replace concatenation
 - Convert `{% include`
 - Convert macro options to React prop
+- Replace `{% for`
 
 # Fix
 

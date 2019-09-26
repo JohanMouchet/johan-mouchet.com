@@ -16,29 +16,29 @@ import "./___.scss";
  */
 
 const ___ = (props: Props) => {
-  const {
-    prop1,
-    prop2
-  } = props;
+  const { prop1, prop2 } = props;
 
-  const ___Class = cx(
-    "___",
-    {
-      prop1: "___--prop1"
-    }
-  );
+  const ___Class = cx("___", {
+    prop1: "___--prop1"
+  });
 
-  return (
-	{% for qualification in props.qualifications %}
-		<section className="c-academic-qualification">
-			<h3 className="c-academic-qualification__heading">
-				<a className="c-academic-qualification__establishment" href={qualification.establishment.URL}>{ qualification.establishment.name }</a>, { qualification.location }
-			</h3>
-			<span className="c-academic-qualification__graduation-year">{ qualification.graduationYear }</span>
-			<p className="c-academic-qualification__title">{ qualification.title }</p>
-		</section>
-	{% endfor %}
-  );
+  return props.qualifications.map(qualification => (
+    <section className="c-academic-qualification">
+      <h3 className="c-academic-qualification__heading">
+        <a
+          className="c-academic-qualification__establishment"
+          href={qualification.establishment.URL}
+        >
+          {qualification.establishment.name}
+        </a>
+        , {qualification.location}
+      </h3>
+      <span className="c-academic-qualification__graduation-year">
+        {qualification.graduationYear}
+      </span>
+      <p className="c-academic-qualification__title">{qualification.title}</p>
+    </section>
+  ));
 };
 
 ___.defaultProps = {
