@@ -58,14 +58,14 @@ const ___ = (props: Props) => {
 						{% if difference.y === 1 %}
 							{% set yearDuration = "1 year" %}
 						{% elseif difference.y > 1 %}
-							{% set yearDuration = difference.y ~ " years" %}
+							{% set yearDuration = difference.y + " years" %}
 						{% endif %}
 
 						{% set monthDuration = "" %}
 						{% if difference.m === 1 %}
 							{% set monthDuration = "1 month" %}
 						{% elseif difference.m > 1 %}
-							{% set monthDuration = difference.m ~ " months" %}
+							{% set monthDuration = difference.m + " months" %}
 						{% endif %}
 
 						({ yearDuration }{ yearDuration and monthDuration ? " " }{ monthDuration })

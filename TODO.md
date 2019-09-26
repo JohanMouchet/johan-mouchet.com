@@ -25,6 +25,7 @@
 - Converted attributes
 - Replace twig not
 - Convert `{% import`
+- Replace concatenation
 
 # Fix
 

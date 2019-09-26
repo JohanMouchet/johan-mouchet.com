@@ -13,8 +13,8 @@
 		<article className="l-article u-align--center">
 			<h1>Error 404<i className="heading-underline heading-underline--c wow"></i></h1>
 			<p>
-				Woops. Looks like this page doesn't exist.<br>
-				Please get back to the <a href="/">homepage</a>.<br>
+				Woops. Looks like this page doesn't exist.<br />
+				Please get back to the <a href="/">homepage</a>.<br />
 				<code>'[⁰﹏⁰]'</code>
 			</p>
 		</article>

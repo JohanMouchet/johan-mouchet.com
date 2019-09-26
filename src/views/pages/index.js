@@ -164,52 +164,52 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 								{
 									name: "LinkedIn",
 									URL: "https://www.linkedin.com/in/johanmouchet",
-									iconPath: _GLOBAL.paths.img ~ "icons/simple-icons/linkedin.svg"
+									iconPath: _GLOBAL.paths.img + "icons/simple-icons/linkedin.svg"
 								},
 								{
 									name: "Twitter",
 									URL: "https://twitter.com/JohanMouchet",
-									iconPath: _GLOBAL.paths.img ~ "icons/simple-icons/twitter.svg"
+									iconPath: _GLOBAL.paths.img + "icons/simple-icons/twitter.svg"
 								},
 								{
 									name: "CodePen",
 									URL: "http://codepen.io/johanmouchet/",
-									iconPath: _GLOBAL.paths.img ~ "icons/simple-icons/codepen.svg"
+									iconPath: _GLOBAL.paths.img + "icons/simple-icons/codepen.svg"
 								},
 								{
 									name: "Dribbble",
 									URL: "https://dribbble.com/JohanMouchet/likes",
-									iconPath: _GLOBAL.paths.img ~ "icons/simple-icons/dribbble.svg"
+									iconPath: _GLOBAL.paths.img + "icons/simple-icons/dribbble.svg"
 								},
 								{
 									name: "GitHub",
 									URL: "https://github.com/JohanMouchet",
-									iconPath: _GLOBAL.paths.img ~ "icons/simple-icons/github.svg"
+									iconPath: _GLOBAL.paths.img + "icons/simple-icons/github.svg"
 								},
 								{
 									name: "Unsplash",
 									URL: "https://unsplash.com/@johanmouchet/",
-									iconPath: _GLOBAL.paths.img ~ "icons/unsplash.svg"
+									iconPath: _GLOBAL.paths.img + "icons/unsplash.svg"
 								},
 								{
 									name: "500px",
 									URL: "https://500px.com/johanmouchet/",
-									iconPath: _GLOBAL.paths.img ~ "icons/simple-icons/500px.svg"
+									iconPath: _GLOBAL.paths.img + "icons/simple-icons/500px.svg"
 								},
 								{
 									name: "Instagram",
 									URL: "https://instagram.com/johanmouchet/",
-									iconPath: _GLOBAL.paths.img ~ "icons/simple-icons/instagram.svg"
+									iconPath: _GLOBAL.paths.img + "icons/simple-icons/instagram.svg"
 								},
 								{
 									name: "YouTube",
 									URL: "https://www.youtube.com/c/JohanMouchet",
-									iconPath: _GLOBAL.paths.img ~ "icons/simple-icons/youtube.svg"
+									iconPath: _GLOBAL.paths.img + "icons/simple-icons/youtube.svg"
 								},
 								{
 									name: "Spotify",
 									URL: "https://open.spotify.com/user/1126411547",
-									iconPath: _GLOBAL.paths.img ~ "icons/simple-icons/spotify.svg"
+									iconPath: _GLOBAL.paths.img + "icons/simple-icons/spotify.svg"
 								}
 							]
 						})}
@@ -227,7 +227,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 							tagline: "tagline",
 							URL: "URL",
 							lede: "lede",
-							thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/...",
+							thumbnailPath: _GLOBAL.paths.img + "views/career-experiences/...",
 							details: [
 								""
 							]
@@ -251,7 +251,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 										tagline: "CatVR: Safe Cat, Safe Wildlife",
 										URL: "http://www.safecat.org.au",
 										lede: "Joint <em>RSPCA</em> campaign website to help cat owners give their pet the safest and happiest life while ensuring they have no link to loss of wildlife.",
-										thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/zoos-victoria.jpg",
+										thumbnailPath: _GLOBAL.paths.img + "views/career-experiences/zoos-victoria.jpg",
 										awards: [
 											{
 												name: "MADC 2018 (Melbourne Advertising and Design Club)",
@@ -279,7 +279,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 										name: "Klip Studio",
 										URL: "https://www.klipdesk.co",
 										lede: "Web application dedicated to the sport rights holders industry. Allows to edit live or recorded streams to produce highlights shareable on social media.",
-										thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/klip-studio.jpg",
+										thumbnailPath: _GLOBAL.paths.img + "views/career-experiences/klip-studio.jpg",
 										details: [
 											"React framework, <a href='https://react.semantic-ui.com/' target='_blank' className='external-link'><em>Semantic UI React</em></a> component library",
 											"<a href='https://github.com/google/shaka-player' target='_blank' className='external-link'><em>Shaka</em></a> web player, advanced video editing, cropping etc.",
@@ -295,7 +295,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 										tagline: "Asia",
 										URL: "https://www.pearson.com/asia/",
 										lede: "Websites creation related to education for Pearson’s launch in three new markets through Asia.",
-										thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/pearson.jpg",
+										thumbnailPath: _GLOBAL.paths.img + "views/career-experiences/pearson.jpg",
 										details: [
 											"<a href='' target='_blank' className='external-link'><em>Experience Manager</em></a>, enterprise content management",
 											"Content authoring, page and component building",
@@ -321,7 +321,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 											tagline: "v11",
 											URL: "https://www.lexus.eu/en/",
 											lede: "Website redesign to embody the new brand direction focused on a premium and lifestyle experience. Deployed into 35 countries of the European market and translated into 27 languages.",
-											thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/lexus.jpg",
+											thumbnailPath: _GLOBAL.paths.img + "views/career-experiences/lexus.jpg",
 											details: [
 												"<a href='http://www.sdl.com/software-and-services/tridion-dx/tridion-sites.html'><em>SDL Web</em></a> (formerly Tridion), headless data driven CMS ",
 												"<em>Nunjucks</em> templating, component oriented, fed with datas stored in a <em>MongoDB</em> database",
@@ -340,7 +340,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 											tagline: "Safety System Plus",
 											URL: "https://www.lexus.eu/discover-lexus/technology/lexus-safety-system/",
 											lede: "Microsite creation to showcase <em>Lexus' Safety System Plus</em> technology.",
-											thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/lexus-safety-system-plus.jpg",
+											thumbnailPath: _GLOBAL.paths.img + "views/career-experiences/lexus-safety-system-plus.jpg",
 											details: [
 												"Stack identical to the one of <em>Lexus 'v11'</em>",
 												"Full Screen, single-page design, done with <a href='https://github.com/alvarotrigo/fullPage.js' target='_blank' className='external-link'><em>fullPage.js</em></a>",
@@ -355,7 +355,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 											tagline: "Lowrance",
 											URL: "https://www.lowrance.com/",
 											lede: "Delivery within a short turnaround of a global eCommerce website for a manufacturer of consumer marine electronics.",
-											thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/lowrance.jpg",
+											thumbnailPath: _GLOBAL.paths.img + "views/career-experiences/lowrance.jpg",
 											details: [
 												"<a href='http://www.episerver.com/' target='_blank' className='external-link'><em>EPIServer</em></a> CMS for scalability",
 												"<em>Handlebars</em> / <em>Razor templating</em>, component oriented",
@@ -383,7 +383,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 										{
 											name: "Survie Mer Formation",
 											URL: "https://www.surviemerformation.com/",
-											thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/survie-mer-formation.jpg",
+											thumbnailPath: _GLOBAL.paths.img + "views/career-experiences/survie-mer-formation.jpg",
 											details: [
 												"<em>Growth Hacking</em> strategy development (<em>AARRR</em> model) meant to increase online registrations",
 												"<em>UI</em> Refreshment: new brand identity, responsive design, cross-browser compatibility",
@@ -415,7 +415,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 											name: "Business Banking Insight",
 											URL: "http://www.businessbankinginsight.co.uk",
 											lede: "Analysis website of business banking providers, supported by the <em>HR Treasury</em>.",
-											thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/business-banking-insight.jpg",
+											thumbnailPath: _GLOBAL.paths.img + "views/career-experiences/business-banking-insight.jpg",
 											details: [
 												"<i>AngularJS 2</i> templating",
 												"Front-end framework: <a href='http://trykickoff.com/' target='_blank' className='external-link'>Kickoff</a> (npm, Grunt, Sass, jQuery)",
@@ -429,7 +429,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 											tagline: "#partofPT campaign",
 											URL: "https://partofpt.princes-trust.org.uk/part-of-pt/",
 											lede: "Crowdsourced event listing microsite for the <em>Prince's Trust</em> 40th anniversary celebration.",
-											thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/princes-trust.jpg",
+											thumbnailPath: _GLOBAL.paths.img + "views/career-experiences/princes-trust.jpg",
 											details: [
 												"Front-end framework: <a href='http://trykickoff.com/' target='_blank' className='external-link'>Kickoff</a>",
 												"<a href='https://hashtagd.net/' target='_blank' className='external-link'>Hashtagd</a> APIs integration",
@@ -442,7 +442,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 											tagline: "#Skipathon campaign (Over)",
 											URL: "https://www.youtube.com/watch?v=3PyZVDrO_aI",
 											lede: "Mobile web browser game based on rope skipping.",
-											thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/sport-relief-skipathon.jpg",
+											thumbnailPath: _GLOBAL.paths.img + "views/career-experiences/sport-relief-skipathon.jpg",
 											details: [
 												"iOS and Android default browser support",
 												"Device 3D movement detection",
@@ -463,27 +463,27 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 									jobTitle: "Web designer & developer",
 									startDate: "01/06/2014",
 									endDate: "01/10/2015",
-									lede: "Independent web marketing agency focused on Growth Hacking.<br><br>Here are few of the websites I've designed and built using WordPress:",
+									lede: "Independent web marketing agency focused on Growth Hacking.<br /><br />Here are few of the websites I've designed and built using WordPress:",
 									projects: [
 										{
 											name: "Weholite",
 											URL: "http://www.weholite.co.uk/",
-											thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/weholite.jpg"
+											thumbnailPath: _GLOBAL.paths.img + "views/career-experiences/weholite.jpg"
 										},
 										{
 											name: "Hiremech",
 											URL: "http://www.hiremech.co.uk/",
-											thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/hiremech.jpg"
+											thumbnailPath: _GLOBAL.paths.img + "views/career-experiences/hiremech.jpg"
 										},
 										{
 											name: "Global Materials Handling",
 											URL: "http://globalforktrucks.com/",
-											thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/global-materials-handling.jpg"
+											thumbnailPath: _GLOBAL.paths.img + "views/career-experiences/global-materials-handling.jpg"
 										},
 										{
 											name: "Proton Motor",
 											URL: "http://www.proton-motor.com/",
-											thumbnailPath: _GLOBAL.paths.img ~ "views/career-experiences/proton-motor.jpg"
+											thumbnailPath: _GLOBAL.paths.img + "views/career-experiences/proton-motor.jpg"
 										}
 									]
 								},
@@ -632,41 +632,41 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 						<h2>Personal works</h2>
 
 						<p>
-							When I'm not designing websites I like to take pictures, create infographic, doodle and make short films.<br>
+							When I'm not designing websites I like to take pictures, create infographic, doodle and make short films.<br />
 							Here are some of my personal works:
 						</p>
 
 						{PersonalWorks.default({
 							works: [
 								{
-									thumbnailPath: _GLOBAL.paths.img ~ "views/personal-works/seville.jpg",
+									thumbnailPath: _GLOBAL.paths.img + "views/personal-works/seville.jpg",
 									URL: "https://unsplash.com/photos/NwaCxOL0NTA",
-									sourceIconPath: _GLOBAL.paths.img ~ "icons/unsplash.svg"
+									sourceIconPath: _GLOBAL.paths.img + "icons/unsplash.svg"
 								},
 								{
-									thumbnailPath: _GLOBAL.paths.img ~ "views/personal-works/marseille.jpg",
+									thumbnailPath: _GLOBAL.paths.img + "views/personal-works/marseille.jpg",
 									URL: "https://unsplash.com/photos/qB1h8ruSKnI",
-									sourceIconPath: _GLOBAL.paths.img ~ "icons/unsplash.svg"
+									sourceIconPath: _GLOBAL.paths.img + "icons/unsplash.svg"
 								},
 								{
-									thumbnailPath: _GLOBAL.paths.img ~ "views/personal-works/death-valley.jpg",
+									thumbnailPath: _GLOBAL.paths.img + "views/personal-works/death-valley.jpg",
 									URL: "https://500px.com/photo/177991327/thirsty-coyote-death-valley-ca-by-johan-mouchet",
-									sourceIconPath: _GLOBAL.paths.img ~ "icons/simple-icons/500px.svg"
+									sourceIconPath: _GLOBAL.paths.img + "icons/simple-icons/500px.svg"
 								},
 								{
-									thumbnailPath: _GLOBAL.paths.img ~ "views/personal-works/london.jpg",
+									thumbnailPath: _GLOBAL.paths.img + "views/personal-works/london.jpg",
 									URL: "https://unsplash.com/photos/5qeFuSId3H0",
-									sourceIconPath: _GLOBAL.paths.img ~ "icons/unsplash.svg"
+									sourceIconPath: _GLOBAL.paths.img + "icons/unsplash.svg"
 								},
 								{
-									thumbnailPath: _GLOBAL.paths.img ~ "views/personal-works/copenhagen.jpg",
+									thumbnailPath: _GLOBAL.paths.img + "views/personal-works/copenhagen.jpg",
 									URL: "https://unsplash.com/photos/sTBdWFQKDHE",
-									sourceIconPath: _GLOBAL.paths.img ~ "icons/unsplash.svg"
+									sourceIconPath: _GLOBAL.paths.img + "icons/unsplash.svg"
 								},
 								{
-									thumbnailPath: _GLOBAL.paths.img ~ "views/personal-works/south-cost-of-england.jpg",
+									thumbnailPath: _GLOBAL.paths.img + "views/personal-works/south-cost-of-england.jpg",
 									URL: "https://youtu.be/NAsS1T_V8-k",
-									sourceIconPath: _GLOBAL.paths.img ~ "icons/simple-icons/youtube.svg"
+									sourceIconPath: _GLOBAL.paths.img + "icons/simple-icons/youtube.svg"
 								}
 							]
 						})}

@@ -66,7 +66,7 @@ const ___ = (props: Props) => {
 									<ul className="c-project__awards { projectQuantity === 1 ? 'u-vr--top-0-@md'}">
 										{% for award in project.awards %}
 											<li className="c-project__award">
-												<a className="c-project__award-icon" href={award.URL}>{ file_get_contents(_GLOBAL.paths.img ~ "icons/award.svg")|raw }</a>
+												<a className="c-project__award-icon" href={award.URL}>{ file_get_contents(_GLOBAL.paths.img + "icons/award.svg")|raw }</a>
 												<span className="c-project__award-name"><em>{ award.name }{% if award.category %}</em>: { award.category }{% endif %}</span>
 											</li>
 										{% endfor %}

@@ -258,7 +258,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<div className="grid grid--lgGutter-@xs">
 					<div className="cell cell--12-@xs cell--5-@md">
 						<h3>Headings</h3>
-						<h1 className="u-heading--xl">Heading xl <br><code>.u-heading--xl</code></h1>
+						<h1 className="u-heading--xl">Heading xl <br /><code>.u-heading--xl</code></h1>
 						<h1 className="u-heading--lg">Heading lg <code>.u-heading--lg</code></h1>
 						<h1>Heading 1 <code>.u-heading--1</code><i className="heading-underline wow"></i> <code>&gt; .heading-underline--c|r</code></h1>
 						<h2>Heading 2 <code>.u-heading--2</code></h2>
@@ -400,9 +400,9 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				</p>
 
 				<p>
-					<strong>Columns:</strong> 12<br>
-					<strong>Gutters width:</strong> <code>1rem</code><br>
-					<strong>Nestable:</strong> Yes<br>
+					<strong>Columns:</strong> 12<br />
+					<strong>Gutters width:</strong> <code>1rem</code><br />
+					<strong>Nestable:</strong> Yes<br />
 					<strong>Direction:</strong> Row
 				</p>
 
@@ -707,7 +707,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 						<legend className="o-form__legend">Form field states</legend>
 						<p>
 							<code>.o-form__group</code> <code>&amp;--success|error|warning</code>
-							<br><br>
+							<br /><br />
 							<em>Recomandation:</em> use <a href="style-guide#sg-alert">alerts</a> for state messages
 						</p>
 						<div className="grid">
@@ -868,7 +868,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.social({
 							url: "https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/facebook.svg"),
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/facebook.svg"),
 							text: "Share",
 							counter: 10,
 							metadata: {
@@ -882,7 +882,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.social({
 							url: "https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/twitter.svg"),
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/twitter.svg"),
 							text: "Tweet",
 							counter: 10,
 							metadata: {
@@ -896,7 +896,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.social({
 							url: "https://plus.google.com/share?url={URL}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/googleplus.svg"),
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/googleplus.svg"),
 							text: "Share",
 							counter: 10,
 							metadata: {
@@ -910,7 +910,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.social({
 							url: "http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/pinterest.svg"),
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/pinterest.svg"),
 							text: "Pin it",
 							counter: 10,
 							metadata: {
@@ -924,7 +924,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.social({
 							url: "http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/linkedin.svg"),
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/linkedin.svg"),
 							text: "Share",
 							counter: 10,
 							metadata: {
@@ -940,7 +940,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.social({
 							url: "https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/facebook.svg"),
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/facebook.svg"),
 							text: "Share",
 							counter: 10,
 							metadata: {
@@ -957,7 +957,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.social({
 							url: "https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/twitter.svg"),
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/twitter.svg"),
 							text: "Tweet",
 							counter: 10,
 							metadata: {
@@ -974,7 +974,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.social({
 							url: "https://plus.google.com/share?url={URL}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/googleplus.svg"),
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/googleplus.svg"),
 							text: "Share",
 							counter: 10,
 							metadata: {
@@ -991,7 +991,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.social({
 							url: "http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/pinterest.svg"),
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/pinterest.svg"),
 							text: "Pin it",
 							counter: 10,
 							metadata: {
@@ -1008,7 +1008,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.social({
 							url: "http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/linkedin.svg"),
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/linkedin.svg"),
 							text: "Share",
 							counter: 10,
 							metadata: {
@@ -1029,35 +1029,35 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.socialBadge({
 							url: "{URL}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/facebook.svg")
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/facebook.svg")
 						}) }}
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.socialBadge({
 							url: "{URL}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/twitter.svg")
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/twitter.svg")
 						}) }}
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.socialBadge({
 							url: "{URL}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/googleplus.svg")
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/googleplus.svg")
 						}) }}
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.socialBadge({
 							url: "{URL}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/pinterest.svg")
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/pinterest.svg")
 						}) }}
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.socialBadge({
 							url: "{URL}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/linkedin.svg")
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/linkedin.svg")
 						}) }}
 					</div>
 				</div>
@@ -1066,7 +1066,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.socialBadge({
 							url: "{URL}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/facebook.svg"),
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/facebook.svg"),
 							metadata: {
 								modifierClasses: [
 									"social-facebook"
@@ -1078,7 +1078,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.socialBadge({
 							url: "{URL}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/twitter.svg"),
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/twitter.svg"),
 							metadata: {
 								modifierClasses: [
 									"social-twitter"
@@ -1090,7 +1090,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.socialBadge({
 							url: "{URL}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/googleplus.svg"),
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/googleplus.svg"),
 							metadata: {
 								modifierClasses: [
 									"social-googleplus"
@@ -1102,7 +1102,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.socialBadge({
 							url: "{URL}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/pinterest.svg"),
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/pinterest.svg"),
 							metadata: {
 								modifierClasses: [
 									"social-pinterest"
@@ -1114,7 +1114,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
 						{button.socialBadge({
 							url: "{URL}",
-							iconPath: file_get_contents(_GLOBAL.paths.img ~ "icons/simple-icons/linkedin.svg"),
+							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/linkedin.svg"),
 							metadata: {
 								modifierClasses: [
 									"social-linkedin"
@@ -1326,7 +1326,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--12-@xs cell--6-@md">
 						<h3>Responsive <code>&amp;.o-table--responsive</code></h3>
 						<p>
-							<em>Optional:</em> <code>&amp;.o-table--responsive-shadow</code><br>
+							<em>Optional:</em> <code>&amp;.o-table--responsive-shadow</code><br />
 							(Not compatible with <code>.o-table--striped</code> and <code>.o-table--hover</code>)
 						</p>
 						<table className="o-table o-table--responsive o-table--responsive-shadow">
@@ -1370,7 +1370,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--12-@xs cell--6-@md">
 						<h3>Numerical column (JS)</h3>
 						<p>
-							<code>.js-table-numerical</code> <code>th.js-table-numerical-col</code><br>
+							<code>.js-table-numerical</code> <code>th.js-table-numerical-col</code><br />
 							Right align a column that contain numbers.
 						</p>
 						<table className="o-table js-table-numerical">
@@ -1477,7 +1477,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 							header: "<h3>Card <code>.o-card__header</code></h3>",
 							body: "
 								<p>
-									<code>.o-card__body</code> <br>
+									<code>.o-card__body</code> <br />
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, exercitationem dicta temporibus perspiciatis nesciunt accusamus cum, itaque at necessitatibus nostrum aut quo assumenda, culpa amet id. Suscipit provident, dolorem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 								</p>
 								<p>
@@ -1730,12 +1730,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<a href="style-guide#sg-tooltip" className="u-anchor__link">#</a>Tooltip
 				</h2>
 				<div className="grid">
-					<div className="cell cell--6-@xs cell--4-@sm cell--2-@md"><span data-tooltip="Top tooltip" tabindex="0">Top (default)</span> <br><code>[data-tooltip="<i>{TOOLTIP}</i>"]</code></div>
-					<div className="cell cell--6-@xs cell--4-@sm cell--2-@md"><span data-tooltip="Right tooltip" data-tooltip-right tabindex="0">Right</span> <br><code>&amp;[data-tooltip-right]</code></div>
-					<div className="cell cell--6-@xs cell--4-@sm cell--2-@md"><span data-tooltip="Bottom tooltip" data-tooltip-bottom tabindex="0">Bottom</span> <br><code>&amp;[data-tooltip-bottom]</code></div>
-					<div className="cell cell--6-@xs cell--4-@sm cell--2-@md"><span data-tooltip="Left tooltip" data-tooltip-left tabindex="0">Left</span> <br><code>&amp;[data-tooltip-left]</code></div>
-					<div className="cell cell--6-@xs cell--4-@sm cell--2-@md"><span data-tooltip="Indicator tooltip" data-tooltip-indicator tabindex="0">Indicator</span> <br><code>&amp;[data-tooltip-indicator]</code></div>
-					<div className="cell cell--6-@xs cell--4-@sm cell--2-@md"><span data-tooltip="Multiline tooltip, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod" data-tooltip-multiline tabindex="0">Multiline</span><br><code>&amp;[data-tooltip-multiline]</code></div>
+					<div className="cell cell--6-@xs cell--4-@sm cell--2-@md"><span data-tooltip="Top tooltip" tabindex="0">Top (default)</span> <br /><code>[data-tooltip="<i>{TOOLTIP}</i>"]</code></div>
+					<div className="cell cell--6-@xs cell--4-@sm cell--2-@md"><span data-tooltip="Right tooltip" data-tooltip-right tabindex="0">Right</span> <br /><code>&amp;[data-tooltip-right]</code></div>
+					<div className="cell cell--6-@xs cell--4-@sm cell--2-@md"><span data-tooltip="Bottom tooltip" data-tooltip-bottom tabindex="0">Bottom</span> <br /><code>&amp;[data-tooltip-bottom]</code></div>
+					<div className="cell cell--6-@xs cell--4-@sm cell--2-@md"><span data-tooltip="Left tooltip" data-tooltip-left tabindex="0">Left</span> <br /><code>&amp;[data-tooltip-left]</code></div>
+					<div className="cell cell--6-@xs cell--4-@sm cell--2-@md"><span data-tooltip="Indicator tooltip" data-tooltip-indicator tabindex="0">Indicator</span> <br /><code>&amp;[data-tooltip-indicator]</code></div>
+					<div className="cell cell--6-@xs cell--4-@sm cell--2-@md"><span data-tooltip="Multiline tooltip, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod" data-tooltip-multiline tabindex="0">Multiline</span><br /><code>&amp;[data-tooltip-multiline]</code></div>
 				</div>
 			</article>
 
@@ -1835,7 +1835,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<p>When working on large and long running projects with other developers, it is important to work in a unified way in order to keep the code maintainable and scalable.</p>
 
 				<h3 className="u-counter__index-2 u-counter__index--space" data-counter-separator=".">Architecture</h3>
-				<p>Folders and files use <code>lisp-case</code> naming scheme: lowercased and hyphen separated. <br>
+				<p>Folders and files use <code>lisp-case</code> naming scheme: lowercased and hyphen separated. <br />
 					Folders are plural and files should be singular, expect if the component it represent is plural.</p>
 
 				<div className="grid grid--lgGutter-@xs">
