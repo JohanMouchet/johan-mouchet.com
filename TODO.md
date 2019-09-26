@@ -27,6 +27,7 @@
 - Convert `{% import`
 - Replace concatenation
 - Convert `{% include`
+- Convert macro options to React prop
 
 # Fix
 

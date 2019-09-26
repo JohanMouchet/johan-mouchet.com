@@ -47,10 +47,9 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				</h2>
 				<div className="grid color-palette-row">
 					<div className="o-card-group cell cell--12-@xs cell--4-@sm">
-						{Card.default({
+						<Card props={{
 							banner: true,
-							body: '<div className="sg-swatch__color-code"></div>
-												<code className="sg-swatch__color-name u-select--all">$color-primary-lighter</code>',
+							body: '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-primary-lighter</code>',
 							metadata: {
 								contextClass: "sg-swatch",
 								additionalClasses: [
@@ -60,13 +59,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"sm "
 								]
 							}
-						}) }}
+						}} />
 					</div>
 					<div className="o-card-group cell cell--12-@xs cell--4-@sm">
-						{Card.default({
+						<Card props={{
 							banner: true,
-							body: '<div className="sg-swatch__color-code"></div>
-												<code className="sg-swatch__color-name u-select--all">$color-primary</code>',
+							body: '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-primary</code>',
 							metadata: {
 								contextClass: "sg-swatch",
 								additionalClasses: [
@@ -76,13 +74,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"sm "
 								]
 							}
-						}) }}
+						}} />
 					</div>
 					<div className="o-card-group cell cell--12-@xs cell--4-@sm">
-						{Card.default({
+						<Card props={{
 							banner: true,
-							body: '<div className="sg-swatch__color-code"></div>
-												<code className="sg-swatch__color-name u-select--all">$color-primary-darker</code>',
+							body: '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-primary-darker</code>',
 							metadata: {
 								contextClass: "sg-swatch",
 								additionalClasses: [
@@ -92,14 +89,13 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"sm "
 								]
 							}
-						}) }}
+						}} />
 					</div>
 
 					<div className="o-card-group cell cell--12-@xs cell--4-@sm">
-						{Card.default({
+						<Card props={{
 							banner: true,
-							body: '<div className="sg-swatch__color-code"></div>
-												<code className="sg-swatch__color-name u-select--all">$color-secondary-lighter</code>',
+							body: '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-secondary-lighter</code>',
 							metadata: {
 								contextClass: "sg-swatch",
 								additionalClasses: [
@@ -109,13 +105,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"sm "
 								]
 							}
-						}) }}
+						}} />
 					</div>
 					<div className="o-card-group cell cell--12-@xs cell--4-@sm">
-						{Card.default({
+						<Card props={{
 							banner: true,
-							body: '<div className="sg-swatch__color-code"></div>
-												<code className="sg-swatch__color-name u-select--all">$color-secondary</code>',
+							body: '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-secondary</code>',
 							metadata: {
 								contextClass: "sg-swatch",
 								additionalClasses: [
@@ -125,13 +120,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"sm "
 								]
 							}
-						}) }}
+						}} />
 					</div>
 					<div className="o-card-group cell cell--12-@xs cell--4-@sm">
-						{Card.default({
+						<Card props={{
 							banner: true,
-							body: '<div className="sg-swatch__color-code"></div>
-												<code className="sg-swatch__color-name u-select--all">$color-secondary-darker</code>',
+							body: '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-secondary-darker</code>',
 							metadata: {
 								contextClass: "sg-swatch",
 								additionalClasses: [
@@ -141,14 +135,13 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"sm "
 								]
 							}
-						}) }}
+						}} />
 					</div>
 
 					<div className="o-card-group cell cell--12-@xs cell--4-@sm">
-						{Card.default({
+						<Card props={{
 							banner: true,
-							body: '<div className="sg-swatch__color-code"></div>
-												<code className="sg-swatch__color-name u-select--all">$color-gray-lighter</code>',
+							body: '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-gray-lighter</code>',
 							metadata: {
 								contextClass: "sg-swatch",
 								additionalClasses: [
@@ -158,13 +151,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"sm "
 								]
 							}
-						}) }}
+						}} />
 					</div>
 					<div className="o-card-group cell cell--12-@xs cell--4-@sm">
-						{Card.default({
+						<Card props={{
 							banner: true,
-							body: '<div className="sg-swatch__color-code"></div>
-												<code className="sg-swatch__color-name u-select--all">$color-gray</code>',
+							body: '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-gray</code>',
 							metadata: {
 								contextClass: "sg-swatch",
 								additionalClasses: [
@@ -174,13 +166,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"sm "
 								]
 							}
-						}) }}
+						}} />
 					</div>
 					<div className="o-card-group cell cell--12-@xs cell--4-@sm">
-						{Card.default({
+						<Card props={{
 							banner: true,
-							body: '<div className="sg-swatch__color-code"></div>
-												<code className="sg-swatch__color-name u-select--all">$color-gray-darker</code>',
+							body: '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-gray-darker</code>',
 							metadata: {
 								contextClass: "sg-swatch",
 								additionalClasses: [
@@ -190,12 +181,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"sm "
 								]
 							}
-						}) }}
+						}} />
 					</div>
 				</div>
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-typography" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
@@ -203,56 +194,52 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				</h2>
 				<div className="grid">
 					<div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
-						{Card.default({
+						<Card props={{
 							header: '<span className="sg-typeface__glyph">Aa</span>',
-							body: '<h3>Primary typeface</h3>
-										 <p className="sg-typeface__name"></p>',
+							body: '<h3>Primary typeface</h3><p className="sg-typeface__name"></p>',
 							metadata: {
 								context: "sg-typeface",
 								additionalClasses: [
 									"sg-typeface--font-primary"
 								]
 							}
-						}) }}
+						}} />
 					</div>
 					<div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
-						{Card.default({
+						<Card props={{
 							header: '<span className="sg-typeface__glyph">Aa</span>',
-							body: '<h3>Secondary typeface</h3>
-										 <p className="sg-typeface__name"></p>',
+							body: '<h3>Secondary typeface</h3><p className="sg-typeface__name"></p>',
 							metadata: {
 								context: "sg-typeface",
 								additionalClasses: [
 									"sg-typeface--font-secondary"
 								]
 							}
-						}) }}
+						}} />
 					</div>
 					<div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
-						{Card.default({
+						<Card props={{
 							header: '<span className="sg-typeface__glyph">Aa</span>',
-							body: '<h3>Tertiary typeface</h3>
-										 <p className="sg-typeface__name"></p>',
+							body: '<h3>Tertiary typeface</h3><p className="sg-typeface__name"></p>',
 							metadata: {
 								context: "sg-typeface",
 								additionalClasses: [
 									"sg-typeface--font-tertiary"
 								]
 							}
-						}) }}
+						}} />
 					</div>
 					<div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
-						{Card.default({
+						<Card props={{
 							header: '<span className="sg-typeface__glyph">Aa</span>',
-							body: '<h3>Quaternary typeface</h3>
-										 <p className="sg-typeface__name"></p>',
+							body: '<h3>Quaternary typeface</h3><p className="sg-typeface__name"></p>',
 							metadata: {
 								context: "sg-typeface",
 								additionalClasses: [
 									"sg-typeface--font-quaternary"
 								]
 							}
-						}) }}
+						}} />
 					</div>
 				</div>
 				<div className="grid grid--lgGutter-@xs">
@@ -326,7 +313,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 								</tr>
 								<tr>
 									<td><code>&lt;hr&gt;</code></td>
-									<td><hr className="wow" style="margin-top: 0; margin-bottom: 0;"></td>
+									<td><hr className="wow" style="margin-top: 0; margin-bottom: 0;" /></td>
 								</tr>
 								<tr>
 									<td><code className="u-select--all">.u-color--primary</code></td>
@@ -362,21 +349,21 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				</div>
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-blockquote" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
 					<a href="style-guide#sg-blockquote" className="u-anchor__link">#</a>Blockquote
 				</h2>
-				{Blockquote.default({
+				<Blockquote props={{
 					quote: 'Design is not just what it looks like and feels like. Design is how it works.',
 					cite: '<a href="#">Steve Jobs</a>',
-				}) }}
+				}} />
 
 				<p><em>Optional:</em> <code>&gt; .o-blockquote__cite</code></p>
 
 				<h3>Pulled <code>&amp;.o-blockquote--pulled</code></h3>
-				{Blockquote.default({
+				<Blockquote props={{
 					quote: 'Design is not just what it looks like and feels like. Design is how it works.',
 					cite: '<a href="#">Steve Jobs</a>',
 					metadata: {
@@ -384,12 +371,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 							"pulled"
 						]
 					}
-				}) }}
+				}} />
 
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, cupiditate, rerum. Porro fuga laudantium tempore! Illum modi natus, reiciendis? Saepe quos id sunt. Iste officiis facilis, velit facere culpa iusto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic autem laborum, iusto quis sapiente! Corporis quia sit doloremque harum modi distinctio perspiciatis molestiae a quo soluta quidem, fugiat ad tempora. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum delectus vero, cupiditate iusto voluptates commodi excepturi, dolores ipsa perspiciatis quo officia numquam eveniet praesentium, ad expedita. Rem voluptatem ipsam temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-grid" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
@@ -456,14 +443,14 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<em>Responsive:</em> *<code>@xs|@sm|@md|@lg|@xl</code>
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-form" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
 					<a href="style-guide#sg-form" className="u-anchor__link">#</a>Form
 				</h2>
 				<p><em>Suggestion:</em> use the <a href="#grid">grid</a> and optionally fieldsets for layout.</p>
-				<p><em>Recomandation:</em> use input types (<code>[type="email"]</code>, <code>[type="tel"]</code> etc.) for client-side form validation.</p>
+				<p><em>Recommendation:</em> use input types (<code>[type="email"]</code>, <code>[type="tel"]</code> etc.) for client-side form validation.</p>
 
 
 				<form className="o-form" method="post" action="">
@@ -472,12 +459,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 						<div className="grid">
 							<div className="cell cell--12-@xs cell--6-@sm">
 								<div className="o-form__group">
-									{Form.label({
+									<FormLabel props={{
 										for: "input-1",
 										text: "Text input"
-									}) }}
+									}} />
 
-									{Form.field({
+									<FormField props={{
 										id: "input-1",
 										type: "text",
 										name: "input-1",
@@ -487,18 +474,18 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 												required: ""
 											}
 										}
-									}) }}
+									}} />
 								</div>
 							</div>
 
 							<div className="cell cell--12-@xs cell--6-@sm">
 								<div className="o-form__group">
-									{Form.label({
+									<FormLabel props={{
 										for: "input-2",
 										text: "Text input disabled"
-									}) }}
+									}} />
 
-									{Form.field({
+									<FormField props={{
 										id: "input-2",
 										type: "text",
 										name: "input-2",
@@ -508,18 +495,18 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 												disabled: ""
 											}
 										}
-									}) }}
+									}} />
 								</div>
 							</div>
 
 							<div className="cell cell--12-@xs cell--6-@sm">
 								<div className="o-form__group">
-									{Form.label({
+									<FormLabel props={{
 										for: "select-1",
 										text: "Select"
-									}) }}
+									}} />
 
-									{Form.select({
+									<FormSelect props={{
 										id: "select-1",
 										name: "select-1",
 										options: [
@@ -536,18 +523,18 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 												value: "option-3"
 											},
 										]
-									}) }}
+									}} />
 								</div>
 							</div>
 
 							<div className="cell cell--12-@xs cell--6-@sm">
 								<div className="o-form__group">
-									{Form.label({
+									<FormLabel props={{
 										for: "input-3",
 										text: "Search"
-									}) }}
+									}} />
 
-									{Form.field({
+									<FormField props={{
 										id: "input-3",
 										type: "search",
 										name: "input-3",
@@ -556,13 +543,13 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 												placeholder: "Keyword"
 											}
 										}
-									}) }}
+									}} />
 								</div>
 							</div>
 
 							<div className="cell cell--12-@xs">
 								<div className="o-form__group">
-									{Form.textarea({
+									<FormTextarea props={{
 										name: "textarea-1",
 										metadata: {
 											attributes: {
@@ -570,13 +557,13 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 												placeholder: "Textarea"
 											}
 										}
-									}) }}
+									}} />
 								</div>
 							</div>
 
 							<div className="cell cell--12-@xs cell--6-@md">
 								<div className="o-form__group">
-									{Form.label({
+									<FormLabel props={{
 										for: "radio-1",
 										text: "Radio",
 										metadata: {
@@ -584,9 +571,9 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 												"block"
 											]
 										}
-									}) }}
+									}} />
 
-									{Form.toggle({
+									<FormToggle props={{
 										id: "radio-1",
 										type: "radio",
 										name: "radioChoice",
@@ -597,16 +584,16 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 												checked: ""
 											}
 										}
-									}) }}
+									}} />
 
-									{Form.toggle({
+									<FormToggle props={{
 										type: "radio",
 										name: "radioChoice",
 										value: "option-2",
 										text: "Option 2"
-									}) }}
+									}} />
 
-									{Form.toggle({
+									<FormToggle props={{
 										type: "radio",
 										name: "radioChoice",
 										value: "disabled",
@@ -616,11 +603,11 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 												disabled: ""
 											}
 										}
-									}) }}
+									}} />
 								</div>
 
 								<div className="o-form__group">
-									{Form.label({
+									<FormLabel props={{
 										for: "checkbox-1",
 										text: "Checkbox",
 										metadata: {
@@ -628,9 +615,9 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 												"block"
 											]
 										}
-									}) }}
+									}} />
 
-									{Form.toggle({
+									<FormToggle props={{
 										id: "checkbox-1",
 										type: "checkbox",
 										name: "checkboxChoice",
@@ -641,16 +628,16 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 												checked: ""
 											}
 										}
-									}) }}
+									}} />
 
-									{Form.toggle({
+									<FormToggle props={{
 										type: "checkbox",
 										name: "checkboxChoice",
 										value: "option-2",
 										text: "Option 2"
-									}) }}
+									}} />
 
-									{Form.toggle({
+									<FormToggle props={{
 										type: "checkbox",
 										name: "checkboxChoice",
 										value: "disabled",
@@ -660,25 +647,25 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 												disabled: ""
 											}
 										}
-									}) }}
+									}} />
 								</div>
 							</div>
 
 							<div className="cell cell--12-@xs cell--6-@md">
 								<div className="o-form__group">
-									{Form.label({
+									<FormLabel props={{
 										for: "range-1",
 										text: "Range"
-									}) }}
-									{Form.range({
+									}} />
+									<FormRange props={{
 										id: "range-1",
 										type: "range",
 										name: "range-1",
-									}) }}
+									}} />
 								</div>
 
 								<div className="o-form__group">
-									{Form.label({
+									<FormLabel props={{
 										for: "file-1",
 										text: "File",
 										metadata: {
@@ -686,9 +673,9 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 												"block"
 											]
 										}
-									}) }}
+									}} />
 
-									{Form.file({
+									<FormFile props={{
 										id: "file-1",
 										name: "file-1",
 										text: "Choose a file",
@@ -697,7 +684,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 												multiple: ""
 											}
 										}
-									}) }}
+									}} />
 								</div>
 							</div>
 						</div>
@@ -708,17 +695,17 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 						<p>
 							<code>.o-form__group</code> <code>&amp;--success|error|warning</code>
 							<br /><br />
-							<em>Recomandation:</em> use <a href="style-guide#sg-alert">alerts</a> for state messages
+							<em>Recommendation:</em> use <a href="style-guide#sg-alert">alerts</a> for state messages
 						</p>
 						<div className="grid">
 							<div className="cell cell--12-@xs cell--4-@sm">
 								<div className="o-form__group o-form__group--success">
-									{Form.label({
+									<FormLabel props={{
 										for: "input-success",
 										text: "Success"
-									}) }}
+									}} />
 
-									{Form.field({
+									<FormField props={{
 										id: "input-success",
 										type: "text",
 										name: "input-success",
@@ -727,23 +714,23 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 												placeholder: "Text",
 											}
 										}
-									}) }}
+									}} />
 
-									{Alert.default({
+									<Alert props={{
 										type: "success",
 										content: "<strong>Success</strong> message",
 										closable: true
-									}) }}
+									}} />
 								</div>
 							</div>
 							<div className="cell cell--12-@xs cell--4-@sm">
 								<div className="o-form__group o-form__group--error">
-									{Form.label({
+									<FormLabel props={{
 										for: "input-error",
 										text: "Error"
-									}) }}
+									}} />
 
-									{Form.field({
+									<FormField props={{
 										id: "input-error",
 										type: "text",
 										name: "input-error",
@@ -752,23 +739,23 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 												placeholder: "Text",
 											}
 										}
-									}) }}
+									}} />
 
-									{Alert.default({
+									<Alert props={{
 										type: "danger",
 										content: "<strong>Error</strong> message",
 										closable: true
-									}) }}
+									}} />
 								</div>
 							</div>
 							<div className="cell cell--12-@xs cell--4-@sm">
 								<div className="o-form__group o-form__group--warning">
-									{Form.label({
+									<FormLabel props={{
 										for: "input-warning",
 										text: "Warning"
-									}) }}
+									}} />
 
-									{Form.field({
+									<FormField props={{
 										id: "input-warning",
 										type: "text",
 										name: "input-warning",
@@ -777,13 +764,13 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 												placeholder: "Text",
 											}
 										}
-									}) }}
+									}} />
 
-									{Alert.default({
+									<Alert props={{
 										type: "warning",
 										content: "<strong>Warning</strong> message",
 										closable: true
-									}) }}
+									}} />
 								</div>
 							</div>
 						</div>
@@ -791,7 +778,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				</form>
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-button" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
@@ -799,17 +786,17 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				</h2>
 				<div className="grid">
 					<div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
-						{Button.default({
+						<Button props={{
 							type: "anchor",
 							text: "Button",
 							url: "#"
-						}) }}
+						}} />
 
 						<code>.o-button</code>
 					</div>
 
 					<div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
-						{Button.default({
+						<Button props={{
 							type: "anchor",
 							text: "Button",
 							url: "#",
@@ -818,13 +805,13 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"primary"
 								]
 							}
-						}) }}
+						}} />
 
 						<code>&amp;.o-button--primary</code>
 					</div>
 
 					<div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
-						{Button.default({
+						<Button props={{
 							type: "anchor",
 							text: "Button",
 							url: "#",
@@ -833,13 +820,13 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"secondary"
 								]
 							}
-						}) }}
+						}} />
 
 						<code>&amp;.o-button--secondary</code>
 					</div>
 
 					<div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
-						{Button.default({
+						<Button props={{
 							type: "anchor",
 							text: "Button",
 							url: "#",
@@ -848,7 +835,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									disabled: ""
 								}
 							}
-						}) }}
+						}} />
 
 						<code>&amp;[disabled]</code>
 					</div>
@@ -866,7 +853,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<h4>Share</h4>
 				<div className="grid">
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.social({
+						<ButtonSocial props={{
 							url: "https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/facebook.svg"),
 							text: "Share",
@@ -876,11 +863,11 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									title: "Share on Facebook"
 								}
 							}
-						}) }}
+						}} />
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.social({
+						<ButtonSocial props={{
 							url: "https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/twitter.svg"),
 							text: "Tweet",
@@ -890,11 +877,11 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									title: "Tweet this"
 								}
 							}
-						}) }}
+						}} />
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.social({
+						<ButtonSocial props={{
 							url: "https://plus.google.com/share?url={URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/googleplus.svg"),
 							text: "Share",
@@ -904,11 +891,11 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									title: "Share on Google+"
 								}
 							}
-						}) }}
+						}} />
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.social({
+						<ButtonSocial props={{
 							url: "http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/pinterest.svg"),
 							text: "Pin it",
@@ -918,11 +905,11 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									title: "Pin it"
 								}
 							}
-						}) }}
+						}} />
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.social({
+						<ButtonSocial props={{
 							url: "http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/linkedin.svg"),
 							text: "Share",
@@ -932,13 +919,13 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									title: "Share on LinkedIn"
 								}
 							}
-						}) }}
+						}} />
 					</div>
 				</div>
 
 				<div className="grid">
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.social({
+						<ButtonSocial props={{
 							url: "https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/facebook.svg"),
 							text: "Share",
@@ -951,11 +938,11 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"social-facebook"
 								]
 							}
-						}) }}
+						}} />
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.social({
+						<ButtonSocial props={{
 							url: "https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/twitter.svg"),
 							text: "Tweet",
@@ -968,11 +955,11 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"social-twitter"
 								]
 							}
-						}) }}
+						}} />
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.social({
+						<ButtonSocial props={{
 							url: "https://plus.google.com/share?url={URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/googleplus.svg"),
 							text: "Share",
@@ -985,11 +972,11 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"social-googleplus"
 								]
 							}
-						}) }}
+						}} />
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.social({
+						<ButtonSocial props={{
 							url: "http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/pinterest.svg"),
 							text: "Pin it",
@@ -1002,11 +989,11 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"social-pinterest"
 								]
 							}
-						}) }}
+						}} />
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.social({
+						<ButtonSocial props={{
 							url: "http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/linkedin.svg"),
 							text: "Share",
@@ -1019,7 +1006,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"social-linkedin"
 								]
 							}
-						}) }}
+						}} />
 					</div>
 				</div>
 
@@ -1027,44 +1014,44 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<p><em>Modifier:</em> <code>&amp;.o-button--social-badge</code></p>
 				<div className="grid">
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.socialBadge({
+						<ButtonSocialBadge props={{
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/facebook.svg")
-						}) }}
+						}} />
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.socialBadge({
+						<ButtonSocialBadge props={{
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/twitter.svg")
-						}) }}
+						}} />
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.socialBadge({
+						<ButtonSocialBadge props={{
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/googleplus.svg")
-						}) }}
+						}} />
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.socialBadge({
+						<ButtonSocialBadge props={{
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/pinterest.svg")
-						}) }}
+						}} />
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.socialBadge({
+						<ButtonSocialBadge props={{
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/linkedin.svg")
-						}) }}
+						}} />
 					</div>
 				</div>
 
 				<div className="grid">
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.socialBadge({
+						<ButtonSocialBadge props={{
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/facebook.svg"),
 							metadata: {
@@ -1072,11 +1059,11 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"social-facebook"
 								]
 							}
-						}) }}
+						}} />
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.socialBadge({
+						<ButtonSocialBadge props={{
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/twitter.svg"),
 							metadata: {
@@ -1084,11 +1071,11 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"social-twitter"
 								]
 							}
-						}) }}
+						}} />
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.socialBadge({
+						<ButtonSocialBadge props={{
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/googleplus.svg"),
 							metadata: {
@@ -1096,11 +1083,11 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"social-googleplus"
 								]
 							}
-						}) }}
+						}} />
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.socialBadge({
+						<ButtonSocialBadge props={{
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/pinterest.svg"),
 							metadata: {
@@ -1108,11 +1095,11 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"social-pinterest"
 								]
 							}
-						}) }}
+						}} />
 					</div>
 
 					<div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-						{button.socialBadge({
+						<ButtonSocialBadge props={{
 							url: "{URL}",
 							iconPath: file_get_contents(_GLOBAL.paths.img + "icons/simple-icons/linkedin.svg"),
 							metadata: {
@@ -1120,12 +1107,12 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"social-linkedin"
 								]
 							}
-						}) }}
+						}} />
 					</div>
 				</div>
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-list" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
@@ -1181,7 +1168,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				</div>
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-table" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
@@ -1463,7 +1450,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				</div>
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-card" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
@@ -1473,31 +1460,31 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<p><em>Modifiers:</em> <code>&amp;.o-card--sm</code>, <code>&amp;.o-card--lg</code>, <code>&amp;.o-card--hover</code>, <code>&amp;.o-card--active</code>, <code>&amp;.o-card--forward</code>, <code>&amp;.o-card--primary</code>, <code>&amp;.o-card--secondary</code>, <code>&amp;.o-card--banner-gradient</code></p>
 				<div className="grid">
 					<div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
-						{Card.default({
+						<Card props={{
 							header: "<h3>Card <code>.o-card__header</code></h3>",
-							body: "
+							body: `
 								<p>
 									<code>.o-card__body</code> <br />
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, exercitationem dicta temporibus perspiciatis nesciunt accusamus cum, itaque at necessitatibus nostrum aut quo assumenda, culpa amet id. Suscipit provident, dolorem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 								</p>
 								<p>
 									Rem omnis distinctio nihil, neque sequi fugiat facilis, ducimus doloribus, officia iste laudantium quas veniam. Nulla facilis amet, expedita est aut aliquid.
-								</p>",
+								</p>`,
 							footer: '<a href="#">Read more</a> <code>.o-card__footer</code>'
-						}) }}
+						}} />
 					</div>
 
 					<div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
-						{Card.default({
+						<Card props={{
 							header: "<h3>Primary card</h3>",
-							body: '
+							body: `
 								<span><sup className="u-heading--3">$</sup> <span className="u-heading--xl">3.99</span> <sub className="u-heading--sm">/month</sub></span>
-								<hr className="o-card__hr wow">
+								<hr className="o-card__hr wow" />
 								<ul className="o-list--unstyled o-list--lg">
 									<li>Unlimited storage</li>
 									<li>Advanced Statistics</li>
 									<li>24/7 Support</li>
-								</ul>',
+								</ul>`,
 							footer: '<a href="#" className="o-button">Upgrade</a>',
 							metadata: {
 								additionalClasses: [
@@ -1507,20 +1494,20 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"primary "
 								]
 							}
-						}) }}
+						}} />
 					</div>
 
 					<div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
-						{Card.default({
+						<Card props={{
 							header: "<h3>Secondary card</h3>",
-							body: '
+							body: `
 								<span><sup className="u-heading--3">$</sup> <span className="u-heading--xl">1.99</span> <sub className="u-heading--sm">/month</sub></span>
-								<hr className="o-card__hr wow">
+								<hr className="o-card__hr wow" />
 								<ul className="o-list--unstyled o-list--lg">
 									<li>25Go storage</li>
 									<li>Basic statistics</li>
 									<li>No support</li>
-								</ul>',
+								</ul>`,
 							footer: '<a href="#" className="o-button">Upgrade</a>',
 							metadata: {
 								additionalClasses: [
@@ -1530,69 +1517,63 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 									"secondary "
 								]
 							}
-						}) }}
+						}} />
 					</div>
 
 					<div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
-						{Card.default({
+						<Card props={{
 							bannerUrl: 'https://images.unsplash.com/photo-1464519046765-f6d70b82a0df?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80',
 							header: "<h3>Card with banner</h3>",
-							body: '
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, exercitationem dicta temporibus perspiciatis nesciunt accusamus cum, itaque at necessitatibus nostrum aut quo assumenda, culpa amet id. Suscipit provident, dolorem recusandae.
-								</p>',
+							body: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, exercitationem dicta temporibus perspiciatis nesciunt accusamus cum, itaque at necessitatibus nostrum aut quo assumenda, culpa amet id. Suscipit provident, dolorem recusandae.</p>',
 							footer: '<a href="#">Read more</a>',
 							metadata: {
 								modifierClasses: [
 									"banner-gradient "
 								]
 							}
-						}) }}
+						}} />
 					</div>
 
 					<div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
-						{Card.default({
+						<Card props={{
 							banner: "<h3>Card with title inside banner</h3>",
 							bannerUrl: 'https://images.unsplash.com/photo-1464518983192-0de439b5d517?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80',
-							body: '
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, exercitationem dicta temporibus perspiciatis nesciunt accusamus cum, itaque at necessitatibus nostrum aut quo assumenda, culpa amet id. Suscipit provident, dolorem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem omnis distinctio nihil, neque sequi fugiat facilis, ducimus doloribus, officia iste laudantium quas veniam. Nulla facilis amet, expedita est aut aliquid.
-								</p>',
+							body: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, exercitationem dicta temporibus perspiciatis nesciunt accusamus cum, itaque at necessitatibus nostrum aut quo assumenda, culpa amet id. Suscipit provident, dolorem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem omnis distinctio nihil, neque sequi fugiat facilis, ducimus doloribus, officia iste laudantium quas veniam. Nulla facilis amet, expedita est aut aliquid.</p>',
 							footer: '<a href="#">Read more</a>',
 							metadata: {
 								modifierClasses: [
 									"banner-gradient "
 								]
 							}
-						}) }}
+						}} />
 					</div>
 				</div>
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-figure" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
 					<a href="style-guide#sg-figure" className="u-anchor__link">#</a>Figure
 				</h2>
 
-				{Figure.default({
+				<Figure props={{
 					src: "https://images.unsplash.com/photo-1464519046765-f6d70b82a0df?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80",
 					alt: "Figure alt",
 					title: "Figure title",
 					caption: 'Fig1. See on <a href="https://unsplash.com/photos/sTBdWFQKDHE">Unsplash</a>'
-				}) }}
+				}} />
 
 				<p><em>Modifier:</em> <code>&amp;.o-figure--centered</code></p>
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-breadcrumb" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
 					<a href="style-guide#sg-breadcrumb" className="u-anchor__link">#</a>Breadcrumb
 				</h2>
-				{Breadcrumb.default(_context, {
+				<Breadcrumb props={_context, {
 					levels: [
 						{
 							title: "Level 1",
@@ -1607,16 +1588,16 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 							url: "#"
 						}
 					]
-				}) }}
+				}} />
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-tabs" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
 					<a href="style-guide#sg-tabs" className="u-anchor__link">#</a>Tabs (JS)
 				</h2>
-				{Tabs.default({
+				<Tabs props={{
 					tabs: [
 						{
 							thumb: "Tab 1",
@@ -1631,16 +1612,16 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 							panel: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 						}
 					]
-				}) }}
+				}} />
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-accordion" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
 					<a href="style-guide#sg-accordion" className="u-anchor__link">#</a>Accordion (JS)
 				</h2>
-				{Accordion.default({
+				<Accordion props={{
 					items: [
 						{
 							thumb: "Lorem ipsum",
@@ -1655,17 +1636,17 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 							panel: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, temporibus, fugiat. Harum deserunt blanditiis iusto ea odio et id, quos, laudantium veniam mollitia animi obcaecati quas rerum, assumenda pariatur voluptatem?"
 						}
 					]
-				}) }}
+				}} />
 				<p><em>Modifier:</em> <code>&amp;.is--active</code></p>
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-pagination" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
 					<a href="style-guide#sg-pagination" className="u-anchor__link">#</a>Pagination
 				</h2>
-				{Pagination.default({
+				<Pagination props={{
 					range: 3,
 					current: 6,
 					links : [
@@ -1682,10 +1663,10 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 						"#11",
 						"#12"
 					]
-				}) }}
+				}} />
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-alert" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
@@ -1695,35 +1676,35 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				<p><em>Optional:</em> <code>&gt; .material-icons</code></p>
 
 				<h3>Success <code>&amp;.o-alert--success</code></h3>
-				{Alert.default({
+				<Alert props={{
 					type: "success",
 					content: "Indicates a successful or positive action.",
 					closable: true
-				}) }}
+				}} />
 
 				<h3>Info <code>&amp;.o-alert--info</code></h3>
-				{Alert.default({
+				<Alert props={{
 					type: "info",
 					content: "Indicates a neutral informative change or action.",
 					closable: true
-				}) }}
+				}} />
 
 				<h3>Warning <code>&amp;.o-alert--warning</code></h3>
-				{Alert.default({
+				<Alert props={{
 					type: "warning",
 					content: "Indicates a warning that might need attention.",
 					closable: true
-				}) }}
+				}} />
 
 				<h3>Danger <code>&amp;.o-alert--danger</code></h3>
-				{Alert.default({
+				<Alert props={{
 					type: "danger",
 					content: "Indicates a dangerous or potentially negative action.",
 					closable: true
-				}) }}
+				}} />
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-tooltip" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
@@ -1739,7 +1720,7 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				</div>
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-progress-bar" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
@@ -1751,26 +1732,26 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 					<div className="cell cell--12-@xs cell--6-@sm">
 						<code>.o-progress-bar</code>
 
-						{ProgressBar.default({
+						<ProgressBar props={{
 							label: "Label",
 							total: "50 Go",
 							filling: "60"
-						}) }}
+						}} />
 					</div>
 					<div className="cell cell--12-@xs cell--6-@sm">
 						<code>&amp;[data-progress-bar-tooltip="<i>{TOOLTIP}</i>"]</code>
 
-						{ProgressBar.default({
+						<ProgressBar props={{
 							label: "Label",
 							total: "50 Go",
 							filling: "40",
 							tooltip: "20 Go"
-						}) }}
+						}} />
 					</div>
 				</div>
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-badge" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
@@ -1778,13 +1759,11 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				</h2>
 				<a href="#">
 					Activity
-					{- Badge.default({
-						content: 30
-					}) }
+					<Badge>30</Badge>
 				</a>
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-loader" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
@@ -1792,27 +1771,27 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 				</h2>
 				<div className="grid">
 					<div className="cell cell--6-@xs">
-						{Loader.default() }}
+						<Loader />
 
 						<code>.o-loader</code>
 					</div>
 					<div className="cell cell--6-@xs">
-						{Loader.default({metadata: {modifierClasses: ["sm"]}}) }}
+						<Loader props={{metadata: {modifierClasses: ["sm"]}}} />
 
 						<code>&amp;.o-loader--sm</code>
 					</div>
 				</div>
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-footnotes" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
 					<a href="style-guide#sg-footnotes" className="u-anchor__link">#</a>Footnotes
 				</h2>
-				<p>Lorem ipsum{Footnotes.ref(_context, {id: "1", text: "[1]"}) }} dolor sit amet, consectetur adipisicing elit. Dignissimos{Footnotes.ref(_context, {id: "2", text: "[2]"}) }}, qui? Perferendis earum explicabo possimus odit porro odio velit illum nihil deleniti aliquam hic accusantium numquam sunt et, rem, ut ratione. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ex voluptates, eos doloribus ipsam numquam ad inventore consequuntur dolorum ipsum eveniet maxime fuga, quaerat animi sit iste. Dignissimos, sit eligendi.</p>
+				<p>Lorem ipsum<FootnotesRef props={_context, {id: "1", text: "[1]"}} /> dolor sit amet, consectetur adipisicing elit. Dignissimos<FootnotesRef props={_context, {id: "2", text: "[2]"}} />, qui? Perferendis earum explicabo possimus odit porro odio velit illum nihil deleniti aliquam hic accusantium numquam sunt et, rem, ut ratione. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ex voluptates, eos doloribus ipsam numquam ad inventore consequuntur dolorum ipsum eveniet maxime fuga, quaerat animi sit iste. Dignissimos, sit eligendi.</p>
 
-				{Footnotes.notes(_context,{
+				<FootnotesNotes props={_context, {
 					notes: [
 						{
 							id: "1",
@@ -1823,10 +1802,10 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 							text: "Lorem ipsum dolor sit amet."
 						}
 					]
-				}) }}
+				}} />
 			</article>
 
-			<hr className="l-article-separator">
+			<hr className="l-article-separator" />
 
 			<article id="sg-guidelines" className="l-article">
 				<h2 className="u-counter__index-1 u-counter__index--space u-anchor" data-counter-separator=".">
@@ -1924,8 +1903,8 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 	</div>
 </div>
 
-{# Notice (JS) (remove ".u-is--hidden" to display) #}
-{Notice.default({
+{`<!-- Notice (JS) (remove ".u-is--hidden" to display) -->`}
+<Notice props={{
 	primary: '<p className="u-vr--bottom-0-@xs">This website uses cookies to ensure you the best experience. <a href="#">More info</a></p>',
 	secondary: '<button className="o-button js-notice-close">Got it!</button>',
 	closeButton: true,
@@ -1934,6 +1913,6 @@ import { Blockquote, Form, Button, Card, Figure, Breadcrumb, Tabs, Accordion, Pa
 			"u-is--hidden"
 		]
 	}
-}) }}
+}} />
 
 {% endblock %}

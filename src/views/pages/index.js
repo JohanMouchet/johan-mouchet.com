@@ -54,7 +54,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 						<div className="u-vr--top-2-@xs"></div>
 						<h2>Expertises</h2>
 
-						{Expertises.default({
+						<Expertises props={{
 							expertises: [
 								{
 									label: "Vue.js",
@@ -82,24 +82,24 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 									tooltip: "9/10"
 								}
 							]
-						})}
+						}} />
 					</article>
 
-					<hr className="wow">
+					<hr className="wow" />
 
 					<article className="p-skills">
 						<h2>Skills</h2>
 						<p>Sass, BEM, ITCSS, Bootstrap, Nunjucks / Twig / Handlebars, CMS, Microdata, ES2017, jQuery, APIs, Webpack, Yarn / npm, Gulp / Grunt, Git (Gitflow), Zeplin / InVision / Photoshop, Responsive design, Web performance, Cross-browser compatibility, Accessibility, Standards, Search Engine Marketing, Analytics, Atlassian suite, Agile, Open source</p>
 					</article>
 
-					<hr className="wow">
+					<hr className="wow" />
 
 					<article className="p-profile">
 						<h2>Profile</h2>
 						<p>Positive, Enthusiast about new technologies, Motivated, Enjoy knowledge sharing</p>
 					</article>
 
-					<hr className="wow">
+					<hr className="wow" />
 
 					<article className="p-language">
 						<h2>Language</h2>
@@ -109,12 +109,12 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 						</ul>
 					</article>
 
-					<hr className="wow">
+					<hr className="wow" />
 
 					<article className="p-academic-qualifications">
 						<h2>Academic qualifications</h2>
 
-						{AcademicQualification.default({
+						<AcademicQualification props={{
 							qualifications: [
 								{
 									establishment: {
@@ -144,22 +144,22 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 									title: "Baccalauréat scientifique (High School Certificate)"
 								}
 							]
-						})}
+						}} />
 					</article>
 
-					<hr className="wow">
+					<hr className="wow" />
 
 					<article className="p-interests">
 						<h2>Interests</h2>
 						<p>Web &amp; Graphic design, Development, Photography, Video Editing, Drawing, Traveling, Cycling, Running, Fitness</p>
 					</article>
 
-					<hr className="wow">
+					<hr className="wow" />
 
 					<article className="p-social-medias">
 						<h2>Social media</h2>
 
-						{SocialMedia.default({
+						<SocialMedia props={{
 							medias: [
 								{
 									name: "LinkedIn",
@@ -212,7 +212,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 									iconPath: _GLOBAL.paths.img + "icons/simple-icons/spotify.svg"
 								}
 							]
-						})}
+						}} />
 					</article>
 					<div className="u-vr--top-2-@xs"></div>
 				</div>
@@ -233,7 +233,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 							]
 						}] #}
 
-						{Experience.default({
+						<Experience props={{
 							experiences: [
 							{
 								company: {
@@ -488,15 +488,15 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 									]
 								},
 							]
-						})}
+						}} />
 					</article>
 
-					<hr className="wow">
+					<hr className="wow" />
 
 					<article className="p-internships">
 						<h2>Internships</h2>
 
-						{Experience.default({
+						<Experience props={{
 							experiences: [
 								{
 									company: {
@@ -558,15 +558,15 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 									lede: 'Website development for a training centre: advanced online registration, databases, back office, <abbr title="Search Engine Optimization">SEO</abbr>, <abbr title="Search Engine Advertising">SEA</abbr>.'
 								}
 							]
-						})}
+						}} />
 					</article>
 
-					<hr className="wow">
+					<hr className="wow" />
 
 					<article className="p-references">
 						<h2>References</h2>
 
-						{Reference.default({
+						<Reference props={{
 							requestOnly: true,
 							references: [
 								{
@@ -609,7 +609,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 									}
 								}
 							]
-						})}
+						}} />
 
 						{# {
 							name: "Zander MARTINEAU",
@@ -626,7 +626,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 						}, #}
 					</article>
 
-					<hr className="wow">
+					<hr className="wow" />
 
 					<article className="p-personal-works">
 						<h2>Personal works</h2>
@@ -636,7 +636,7 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 							Here are some of my personal works:
 						</p>
 
-						{PersonalWorks.default({
+						<PersonalWorks props={{
 							works: [
 								{
 									thumbnailPath: _GLOBAL.paths.img + "views/personal-works/seville.jpg",
@@ -669,10 +669,10 @@ import { Expertises, AcademicQualification, SocialMedia, Experience, Reference, 
 									sourceIconPath: _GLOBAL.paths.img + "icons/simple-icons/youtube.svg"
 								}
 							]
-						})}
+						}} />
 					</article>
 
-					<hr className="wow">
+					<hr className="wow" />
 
 					<article className="p-contact" id="p-contact">
 						<h2>Get in touch</h2>

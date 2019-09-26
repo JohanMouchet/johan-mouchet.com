@@ -41,11 +41,11 @@ const ___ = (props: Props) => {
 						{- item.text|raw -}
 					</a>
 				{% elseif item.button %}
-					{ Button.default(item.button) }
+					<Button props={item.button} />
 				{% endif %}
 
 				{% if item.menu %}
-					{ menu.default(item, true) }
+					<Menu props={item, true }/>
 				{% endif %}
 			</li>
 		{% endfor %}

@@ -31,7 +31,7 @@ const ___ = (props: Props) => {
 	<ul className="c-expertises o-list--unstyled">
 		{% for expertise in props.expertises %}
 			<li className="c-expertise">
-				{ ProgressBar.default({
+				<ProgressBar props={{
 					label: expertise.label,
 					filling: expertise.filling,
 					tooltip: expertise.tooltip,
@@ -40,7 +40,7 @@ const ___ = (props: Props) => {
 							"tooltip-hover"
 						]
 					}
-				}) }
+				}} />
 			</li>
 		{% endfor %}
 	</ul>

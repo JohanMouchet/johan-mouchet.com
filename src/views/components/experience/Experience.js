@@ -82,9 +82,7 @@ const ___ = (props: Props) => {
 			</p>
 
 			{% if experience.projects %}
-				{ projects.default(
-					experience.projects
-				) }
+				<Projects props={experience.projects} />
 			{% endif %}
 		</section>
 	{% endfor %}
