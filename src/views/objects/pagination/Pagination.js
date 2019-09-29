@@ -36,87 +36,87 @@ const ___ = (props: Props) => {
 	{% set links = props.links %}
 
 	<ol className={___Class}>
-		/* First */
-		{% if current >= 3 %}
+		{/* First */}
+		{current >= 3 &&
 			<li className={`${'o-pagination__index'|contextClass(contextClass) } o-pagination__index--first`}>
 				<a className={'o-pagination__link'|contextClass(contextClass)} href={links|first}>
 					<i className={`${'o-pagination__icon'|contextClass(contextClass) } material-icons wow fadeInRight`} data-wow-delay=".15s">first_page</i>
 				</a>
 			</li>
-		{% endif %}
+		}
 
-		/* Prev */
-		{% if current >= 2 %}
+		{/* Prev */}
+		{current >= 2 &&
 			<li className={`${'o-pagination__index'|contextClass(contextClass) } o-pagination__index--prev`}>
 				<a className={'o-pagination__link'|contextClass(contextClass)} href={links[current - 2]}>
 					<i className={`${'o-pagination__icon'|contextClass(contextClass) } material-icons wow fadeInRight`}>chevron_left</i>
 				</a>
 			</li>
-		{% endif %}
+		}
 
-		/* Range */
-		{% if range %}
-			/* Lower */
+		{/* Range */}
+		{range ?
+			{/* Lower */}
 			{/* TODO: fix %for */}
 			{% for link in lowerRange..current %}
 				{% set currentIndex = current - loop.revindex %}
 
-				{% if currentIndex >= 1 %}
+				currentIndex >= 1 &&
 					<li className={'o-pagination__index'|contextClass(contextClass)}>
-						{% if loop.first and currentIndex >= 1 %}
+						{loop.first && currentIndex >= 1 ?
 							<a className={'o-pagination__link'|contextClass(contextClass)}>...</a>
-						{% else %}
+						:
 							<a className={'o-pagination__link'|contextClass(contextClass)} href={links[currentIndex - 1]}>{ currentIndex }</a>
-						{% endif %}
+						}
 					</li>
-				{% endif %}
+				}
 			{% endfor %}
 
-			/* Current */
+			{/* Current */}
 			<li className={`${'o-pagination__index'|contextClass(contextClass) } is--active`}>
 				<a className={'o-pagination__link'|contextClass(contextClass)} href={links[current - 1]}>{ current }</a>
 			</li>
 
-			/* Upper */
+			{/* Upper */}
 			{/* TODO: fix %for */}
 			{% for link in current..upperRange %}
 				{% set currentIndex = current + loop.index %}
 
-				{% if currentIndex <= links|length %}
+				{(currentIndex <= links|length) &&
 					<li className={'o-pagination__index'|contextClass(contextClass)}>
-						{% if loop.last %}
+						{loop.last &&
 							<a className={'o-pagination__link'|contextClass(contextClass)} href={links|last}>{ links|length }</a>
-						{% elseif loop.revindex === 2 and currentIndex <= links|length - 2 %}
+						{% elseif loop.revindex === 2 && currentIndex <= links|length - 2 %}
 							<a className={'o-pagination__link'|contextClass(contextClass)}>...</a>
-						{% else %}
+						:
 							<a className={'o-pagination__link'|contextClass(contextClass)} href={links[currentIndex - 1]}>{ currentIndex }</a>
-						{% endif %}
+						}
 					</li>
-				{% endif %}
+				}
 			{% endfor %}
-		{% else %} /* No Range */
+		: {/* No Range */}
 			{links.map(link => (
 				<li className={`${'o-pagination__index'|contextClass(contextClass) } ${ loop.index === current && 'is--active'}`}><a className={'o-pagination__link'|contextClass(contextClass)} href={link}>{ loop.index }</a></li>
 			))}
-		{% endif %}
+		}
 
-		/* Next */
-		{% if current <= links|length - 2 %}
+		{/* Next */}
+		{(current <= links|length - 2) &&
 			<li className={`${'o-pagination__index'|contextClass(contextClass) } o-pagination__index--next`}>
 				<a className={'o-pagination__link'|contextClass(contextClass)} href={links[current]}>
 					<i className={`${'o-pagination__icon'|contextClass(contextClass) } material-icons wow fadeInLeft`}>chevron_right</i>
 				</a>
 			</li>
-		{% endif %}
+		}
 
-		/* Last */
-		{% if current <= links|length - 3 %}
+		{/* Last */}
+		{(current <= links|length - 3) &&
 			<li className={`${'o-pagination__index'|contextClass(contextClass) } o-pagination__index--last`}>
 				<a className={'o-pagination__link'|contextClass(contextClass)} href={links|last}>
 					<i className={`${'o-pagination__icon'|contextClass(contextClass) } material-icons wow fadeInLeft`} data-wow-delay=".15s">last_page</i>
 				</a>
 			</li>
-		{% endif %}
+		}
 	</ol>
   );
 };

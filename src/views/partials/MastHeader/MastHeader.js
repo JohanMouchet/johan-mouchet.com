@@ -29,9 +29,9 @@ const ___ = () => {
 			<h2 className="p-mast-header__tagline">Never stop exploring,<br className="p-mast-header__tagline-breaker"> never stop creating</h2>
 		</div>
 
-		/* <div className="p-mast-header__language">
+		{/* <div className="p-mast-header__language">
 			<a className="p-mast-header__language-link" href="en/" hreflang="en">En</a> | <a className="p-mast-header__language-link" href="fr/" hreflang="fr">Fr</a>
-		</div> */
+		</div> */}
 	</header>
 	);
 };

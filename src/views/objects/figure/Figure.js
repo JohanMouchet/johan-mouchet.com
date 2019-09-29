@@ -17,30 +17,35 @@ import "./___.scss";
  */
 
 const ___ = (props: Props) => {
-  const {
-    prop1,
-    prop2
-  } = props;
+  const { prop1, prop2 } = props;
 
   const ___Class = cx(
     "o-figure",
     props.metadata.contextClass,
-	  props.metadata.modifierClasses,
-	  props.metadata.additionalClasses,
+    props.metadata.modifierClasses,
+    props.metadata.additionalClasses,
     {
       prop1: "___--prop1"
     }
   );
 
   return (
-
-
-	<figure className={___Class}>
-		<img className={'o-figure__img'|contextClass(contextClass)} src={props.src} {% if props.alt %}alt={props.alt}{% endif %} {% if props.title %}title={props.title}{% endif %} {[...props.metadata.attributes]}>
-		{% if props.caption %}
-			<figcaption className={'o-figure__caption'|contextClass(contextClass)}>{ props.caption|raw }</figcaption>
-		{% endif %}
-	</figure>
+    <figure className={___Class}>
+      <img
+        className={"o-figure__img" | contextClass(contextClass)}
+        src={props.src}
+        alt={props.alt}
+        title={props.title}
+        {...props.metadata.attributes}
+      />
+      {props.caption && (
+        <figcaption
+          className={"o-figure__caption" | contextClass(contextClass)}
+        >
+          {props.caption | raw}
+        </figcaption>
+      )}
+    </figure>
   );
 };
 

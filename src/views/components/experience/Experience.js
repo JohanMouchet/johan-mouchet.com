@@ -20,74 +20,80 @@ import { Projects } from "../";
  */
 
 const ___ = (props: Props) => {
-  const {
-    prop1,
-    prop2
-  } = props;
+  const { prop1, prop2 } = props;
 
-  const ___Class = cx(
-    "___",
-    {
-      prop1: "___--prop1"
-    }
-  );
+  const ___Class = cx("___", {
+    prop1: "___--prop1"
+  });
 
-  return (
-	
-	props.experiences.map(experience => (
-		<section className="c-experience">
-			<h3 className="c-experience__heading">
-				<a {% if experience.company.URL %}href={experience.company.URL} target="_blank" className="c-experience__company external-link"{% endif %}>{ experience.company.name }</a>,
-				{ experience.location } &mdash;
-				{ experience.jobTitle|raw }
-			</h3>
+  // TODO: Check logic, abstract to Utils?
+  const getDuration = (startDate, endDate) => {
+    const start = new Date(startDate);
+    const end = new Date(endDate);
 
-			<p className="c-experience__subheading">
-				<span className="c-experience__date">{ experience.startDate|date("Y") }
+    const startYear = start.getFullYear();
+    const endYear = end.getFullYear();
 
-				{% if experience.endDate === "Present" %}
-					&ndash; Present</span>
-				{% else %}
-					{% if experience.startDate|date("Y") != experience.endDate|date("Y") %}
-						&ndash; { experience.endDate|date("Y") }</span>
-					{% endif %}
+    const startMonth = start.getMonth();
+    const endMonth = end.getMonth();
 
-					<span className="c-experience__duration">
-						{% set difference = date(experience.endDate|date("d/m/Y")).diff(date(experience.startDate|date("d/m/Y"))) %}
+    const yearDuration = endYear - startYear;
+    const monthDuration = endMonth - startMonth;
 
-						{% set yearDuration = "" %}
-						{% if difference.y === 1 %}
-							{% set yearDuration = "1 year" %}
-						{% elseif difference.y > 1 %}
-							{% set yearDuration = difference.y + " years" %}
-						{% endif %}
+    const yearDurationText =
+      yearDuration >= 1 && yearDuration === 1
+        ? `${yearDuration} year`
+        : `${yearDuration} years`;
+    const monthDurationText =
+      monthDuration >= 1 && monthDuration === 1
+        ? `${yearDuration} month`
+        : `${yearDuration} months`;
 
-						{% set monthDuration = "" %}
-						{% if difference.m === 1 %}
-							{% set monthDuration = "1 month" %}
-						{% elseif difference.m > 1 %}
-							{% set monthDuration = difference.m + " months" %}
-						{% endif %}
+    return (
+      yearDurationText +
+      (yearDurationText ? ` ${monthDurationText}` : monthDurationText)
+    );
+  };
 
-						({ yearDuration }{ yearDuration and monthDuration ? " " }{ monthDuration })
-					</span>
-				{% endif %}
+  return props.experiences.map(experience => (
+    <section className="c-experience">
+      <h3 className="c-experience__heading">
+        <a
+          href={experience.company.URL}
+          target={experience.company.URL && "_blank"}
+          className={
+            experience.company.URL && "c-experience__company external-link"
+          }
+        >
+          {experience.company.name}
+        </a>
+        ,{experience.location} &mdash;
+        {experience.jobTitle | raw}
+      </h3>
 
-				{% if experience.contractType %}
-					/ <span className="c-experience__type">{ experience.contractType }</span>
-				{% endif %}
-			</p>
+      <p className="c-experience__subheading">
+        <span className="c-experience__date">
+          {experience.startDate.getFullYear()}
+          {experience.endDate.getFullYear() >
+            experience.startDate.getFullYear() &&
+            ` &ndash;` + experience.endDate.getFullYear()}
+        </span>
+        <span className="c-experience__duration">
+          ({getDuration(experience.startDate, experience.endDate)})
+        </span>
+        )
+        {experience.contractType && (
+          <span className="c-experience__type">
+            / {experience.contractType}
+          </span>
+        )}
+      </p>
 
-			<p className="c-experience__lede">
-				{ experience.lede|raw }
-			</p>
+      <p className="c-experience__lede">{experience.lede | raw}</p>
 
-			{% if experience.projects %}
-				<Projects props={experience.projects} />
-			{% endif %}
-		</section>
-	))
-  );
+      {experience.projects && <Projects props={experience.projects} />}
+    </section>
+  ));
 };
 
 ___.defaultProps = {

@@ -6,6 +6,7 @@
 - remove props.
 - What to do with `contextClass(contextClass)`?
 - Check potentially ignored prop in string `title="Follow me on { media.name }"`
+- Handle `|raw`
 - Fix Tabs, Accordion, Alert, Table Numerical column
 - Run Prettier
 

@@ -16,35 +16,32 @@ import "./___.scss";
  */
 
 const ___ = (props: Props) => {
-  const {
-    prop1,
-    prop2
-  } = props;
+  const { prop1, prop2 } = props;
 
   const ___Class = cx(
-	"o-blockquote",
-	props.metadata.contextClass,
-	props.metadata.modifierClasses,
-	props.metadata.additionalClasses,
+    "o-blockquote",
+    props.metadata.contextClass,
+    props.metadata.modifierClasses,
+    props.metadata.additionalClasses,
     {
       prop1: "___--prop1"
     }
   );
 
   return (
-	<blockquote className={`${___Class} wow`}>
-		<div className={'o-blockquote__quotes'|contextClass(contextClass)}>
-			{ props.quote|raw }
-		</div>
+    <blockquote className={`${___Class} wow`}>
+      <div className={"o-blockquote__quotes" | contextClass(contextClass)}>
+        {props.quote | raw}
+      </div>
 
-		{ props.outerQuote|raw }
+      {props.outerQuote | raw}
 
-		{% if props.cite %}
-			<cite className={'o-blockquote__cite'|contextClass(contextClass)}>
-					{ props.cite|raw }
-			</cite>
-		{% endif %}
-	</blockquote>
+      {props.cite && (
+        <cite className={"o-blockquote__cite" | contextClass(contextClass)}>
+          {props.cite | raw}
+        </cite>
+      )}
+    </blockquote>
   );
 };
 

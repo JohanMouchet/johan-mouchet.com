@@ -78,7 +78,7 @@ const field = (props: Props) => {
 	return (
 
 
-	<input {% if props.id %}id={props.id}{% endif %} type={props.type} name={props.name} {% if props.value %}value={props.value}{% endif %} className={`${___Class} o-form__field--${ props.type}`} {[...props.metadata.attributes]}>
+	<input {% if props.id %}id={props.id}{% endif %} type={props.type} name={props.name} {% if props.value %}value={props.value}{% endif %} className={`${___Class} o-form__field--${ props.type}`} {...props.metadata.attributes}>
   );
 };
 
@@ -119,8 +119,8 @@ const toggle = (props: Props) => {
 	return (
 
 
-	<label className={`${___Class} o-form__toggle--${props.type}`} {[...props.metadata.attributes]}>
-		<input {% if props.id %}id={props.id}{% endif %} type={props.type} {% if props.name %}name={props.name}{% endif %} {% if props.value %}value={props.value}{% endif %} className={'o-form__toggle-input'|contextClass(contextClass)} {[...props.metadata.attributes]}>
+	<label className={`${___Class} o-form__toggle--${props.type}`} {...props.metadata.attributes}>
+		<input {% if props.id %}id={props.id}{% endif %} type={props.type} {% if props.name %}name={props.name}{% endif %} {% if props.value %}value={props.value}{% endif %} className={'o-form__toggle-input'|contextClass(contextClass)} {...props.metadata.attributes}>
 		<span className={'o-form__toggle-icon'|contextClass(contextClass)}></span>
 		{%- if props.text -%}
 			<span className={'o-form__toggle-text'|contextClass(contextClass)}>{ props.text|raw }</span>
@@ -166,7 +166,7 @@ const file = (props: Props) => {
 
 
 	<label className={`${___Class} o-button js-form-file`}>
-		<input {% if props.id %}id={props.id}{% endif %} type="file" name={props.name} className={`${'o-form__file-input'|contextClass(contextClass) } js-form-file-input"`} data-multiple-caption={props.multipleCaption ? props.multipleCaption : '{count} files selected'} {[...props.metadata.attributes]}>
+		<input {% if props.id %}id={props.id}{% endif %} type="file" name={props.name} className={`${'o-form__file-input'|contextClass(contextClass) } js-form-file-input"`} data-multiple-caption={props.multipleCaption ? props.multipleCaption : '{count} files selected'} {...props.metadata.attributes}>
 		<i className="material-icons">file_upload</i>
 		{% if props.text %}
 			<span className={`${'o-form__file-text'|contextClass(contextClass) } js-form-file-text`}>{ props.text|raw }</span>
@@ -214,9 +214,9 @@ const select = (props: Props) => {
 	return (
 
 
-	<select {% if props.id %}id={props.id}{% endif %} name={props.name} className={`${___Class} o-form__field--select`} {[...props.metadata.attributes]}>
+	<select {% if props.id %}id={props.id}{% endif %} name={props.name} className={`${___Class} o-form__field--select`} {...props.metadata.attributes}>
 		{props.options.map(option => (
-			<option {% if props.value %}value={props.value}{% endif %} {[...props.metadata.attributes]}>{ option.text }</option>
+			<option {% if props.value %}value={props.value}{% endif %} {...props.metadata.attributes}>{ option.text }</option>
 		))}
 	</select>
   );
@@ -257,7 +257,7 @@ const textarea = (props: Props) => {
 	return (
 
 
-	<textarea {% if props.id %}id={props.id}{% endif %} name={props.name} className={`${___Class} o-form__field--textarea`} {[...props.metadata.attributes]}>
+	<textarea {% if props.id %}id={props.id}{% endif %} name={props.name} className={`${___Class} o-form__field--textarea`} {...props.metadata.attributes}>
 		{- props.text|raw -}
 	</textarea>
   );
@@ -297,7 +297,7 @@ const range = (props: Props) => {
 	return (
 
 
-	<input {% if props.id %}id={props.id}{% endif %} type="range" name={props.name} className={___Class} {[...props.metadata.attributes]}>
+	<input {% if props.id %}id={props.id}{% endif %} type="range" name={props.name} className={___Class} {...props.metadata.attributes}>
   );
 };
 

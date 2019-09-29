@@ -19,39 +19,69 @@ import "./___.scss";
  */
 
 const ___ = (props: Props) => {
-  const {
-    prop1,
-    prop2
-  } = props;
+  const { prop1, prop2 } = props;
 
-  const ___Class = cx(
-    "___",
-    {
-      prop1: "___--prop1"
-    }
-  );
+  const ___Class = cx("___", {
+    prop1: "___--prop1"
+  });
 
   return (
-	{% if props.requestOnly %}
-		<p><i>Available upon <a href="#p-contact">request</a>.</i></p>
-	{% else %}
-		<div className="grid">
-			{props.references.map(reference => (
-				<div className="cell cell--12-@xs cell--6-@md cell--4-@lg">
-					<section className="c-reference">
-						<h3 className="c-reference__name">{ reference.name }</h3>
-						<div>
-							<span className="c-reference__relation">{ reference.relation }</span>, <span className="c-reference__company"><a href={reference.company.URL} target="_blank" className="external-link">{ reference.company.name }</a></span> &mdash; <span className="c-reference__job-title">{ reference.jobTitle }</span>
-						</div>
-						<ul className="c-reference__contacts o-list--unstyled">
-							<li><a className="c-reference__email" href="mailto:{ reference.contacts.mail}">{ reference.contacts.mail }</a></li>
-							<li><a className="c-reference__linkedin" href={reference.contacts.linkedin}>LinkedIn</a></li>
-						</ul>
-					</section>
-				</div>
-			))}
-		</div>
-	{% endif %}
+    <div className="grid">
+      {props.requestOnly ? (
+        <div className="cell cell--12-@xs">
+          <p>
+            <i>
+              Available upon <a href="#p-contact">request</a>.
+            </i>
+          </p>
+        </div>
+      ) : (
+        props.references.map(reference => (
+          <div className="cell cell--12-@xs cell--6-@md cell--4-@lg">
+            <section className="c-reference">
+              <h3 className="c-reference__name">{reference.name}</h3>
+              <div>
+                <span className="c-reference__relation">
+                  {reference.relation}
+                </span>
+                ,{" "}
+                <span className="c-reference__company">
+                  <a
+                    href={reference.company.URL}
+                    target="_blank"
+                    className="external-link"
+                  >
+                    {reference.company.name}
+                  </a>
+                </span>{" "}
+                &mdash;{" "}
+                <span className="c-reference__job-title">
+                  {reference.jobTitle}
+                </span>
+              </div>
+              <ul className="c-reference__contacts o-list--unstyled">
+                <li>
+                  <a
+                    className="c-reference__email"
+                    href="mailto:{ reference.contacts.mail}"
+                  >
+                    {reference.contacts.mail}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="c-reference__linkedin"
+                    href={reference.contacts.linkedin}
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        ))
+      )}
+    </div>
   );
 };
 

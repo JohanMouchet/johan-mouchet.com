@@ -14,37 +14,39 @@ import "./___.scss";
  */
 
 const ___ = (props: Props) => {
-  const {
-    prop1,
-    prop2
-  } = props;
+  const { prop1, prop2 } = props;
 
-  const ___Class = cx(
-    "___",
-    {
-      prop1: "___--prop1"
-    }
-  );
+  const ___Class = cx("___", {
+    prop1: "___--prop1"
+  });
 
   return (
-	<div className="c-personal-works">
-		<div className="grid">
-			{props.works.map(work => (
-				<div className="cell cell--6-@xs cell--4-@sm cell--2-@md">
-					<section className="c-personal-work">
-						<a className="c-personal-work__overlay" href={work.URL} target="_blank">
-							<img className="c-personal-work__thumbnail" src={work.thumbnailPath} alt="Personal work"/>
-							{% if work.sourceIconPath %}
-								<span className="c-personal-work__source">
-									{ file_get_contents(work.sourceIconPath)|raw }
-								</span>
-							{% endif %}
-						</a>
-					</section>
-				</div>
-			))}
-		</div>
-	</div>
+    <div className="c-personal-works">
+      <div className="grid">
+        {props.works.map(work => (
+          <div className="cell cell--6-@xs cell--4-@sm cell--2-@md">
+            <section className="c-personal-work">
+              <a
+                className="c-personal-work__overlay"
+                href={work.URL}
+                target="_blank"
+              >
+                <img
+                  className="c-personal-work__thumbnail"
+                  src={work.thumbnailPath}
+                  alt="Personal work"
+                />
+                {work.sourceIconPath && (
+                  <span className="c-personal-work__source">
+                    {file_get_contents(work.sourceIconPath) | raw}
+                  </span>
+                )}
+              </a>
+            </section>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 

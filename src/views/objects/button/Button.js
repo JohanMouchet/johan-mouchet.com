@@ -17,29 +17,26 @@ import "./___.scss";
  */
 
 const ___ = (props: Props) => {
-  const {
-    prop1,
-    prop2
-  } = props;
+  const { prop1, prop2 } = props;
 
   const ___Class = cx(
-	"o-button",
-	props.metadata.contextClass,
-	props.metadata.modifierClasses,
-	props.metadata.additionalClasses,
+    "o-button",
+    props.metadata.contextClass,
+    props.metadata.modifierClasses,
+    props.metadata.additionalClasses,
     {
       prop1: "___--prop1"
     }
   );
 
-  return (
-
-
-	{% if props.type === 'button' %}
-		<button className={___Class} {[...props.metadata.attributes]}>{ props.text|raw }</button>
-	{% else %}
-		<a className={___Class} href={props.url} {[...props.metadata.attributes]}>{ props.text|raw }</a>
-	{% endif %}
+  return props.type === "button" ? (
+    <button className={___Class} {...props.metadata.attributes}>
+      {props.text | raw}
+    </button>
+  ) : (
+    <a className={___Class} href={props.url} {...props.metadata.attributes}>
+      {props.text | raw}
+    </a>
   );
 };
 
@@ -47,7 +44,7 @@ ___.defaultProps = {
   prop1: 2
 };
 
-export {___};
+export { ___ };
 
 /**
  * Social Button
@@ -63,31 +60,38 @@ export {___};
  */
 
 const social = (props: Props) => {
-	const {
-	  prop1,
-	  prop2
-	} = props;
-  
-	const ___Class = cx(
-	  "o-button",
-	  props.metadata.contextClass,
-	  props.metadata.modifierClasses,
-	  props.metadata.additionalClasses,
-	  {
-		prop1: "___--prop1"
-	  }
-	);
-  
-	return (
+  const { prop1, prop2 } = props;
 
+  const ___Class = cx(
+    "o-button",
+    props.metadata.contextClass,
+    props.metadata.modifierClasses,
+    props.metadata.additionalClasses,
+    {
+      prop1: "___--prop1"
+    }
+  );
 
-	<a className={`${___Class} o-button--social`} href={props.url} target="_blank" rel="noopener" {[...props.metadata.attributes]}>
-		<span className={'o-button__icon'|contextClass(contextClass)}>{ props.iconPath|raw }</span>
-		<span className={'o-button__text'|contextClass(contextClass)}>{ props.text|raw }</span>
-		{% if props.counter %}
-			<span className={'o-button__counter'|contextClass(contextClass)}>{ props.counter }</span>
-		{% endif %}
-	</a>
+  return (
+    <a
+      className={`${___Class} o-button--social`}
+      href={props.url}
+      target="_blank"
+      rel="noopener"
+      {...props.metadata.attributes}
+    >
+      <span className={"o-button__icon" | contextClass(contextClass)}>
+        {props.iconPath | raw}
+      </span>
+      <span className={"o-button__text" | contextClass(contextClass)}>
+        {props.text | raw}
+      </span>
+      {props.counter && (
+        <span className={"o-button__counter" | contextClass(contextClass)}>
+          {props.counter}
+        </span>
+      )}
+    </a>
   );
 };
 
@@ -95,7 +99,7 @@ ___.defaultProps = {
   prop1: 2
 };
 
-export {___};
+export { ____2 };
 
 /**
  * Social Button Badge
@@ -109,27 +113,30 @@ export {___};
  */
 
 const socialBadge = (props: Props) => {
-	const {
-	  prop1,
-	  prop2
-	} = props;
-  
-	const ___Class = cx(
-	  "o-button",
-	  props.metadata.contextClass,
-	  props.metadata.modifierClasses,
-	  props.metadata.additionalClasses,
-	  {
-		prop1: "___--prop1"
-	  }
-	);
-  
-	return (
+  const { prop1, prop2 } = props;
 
+  const ___Class = cx(
+    "o-button",
+    props.metadata.contextClass,
+    props.metadata.modifierClasses,
+    props.metadata.additionalClasses,
+    {
+      prop1: "___--prop1"
+    }
+  );
 
-	<a className={`${___Class} o-button--social o-button--social-badge`} href={props.url} target="_blank" rel="noopener" {[...props.metadata.attributes]}>
-		<span className={'o-button__icon'|contextClass(contextClass)}>{ props.iconPath|raw }</span>
-	</a>
+  return (
+    <a
+      className={`${___Class} o-button--social o-button--social-badge`}
+      href={props.url}
+      target="_blank"
+      rel="noopener"
+      {...props.metadata.attributes}
+    >
+      <span className={"o-button__icon" | contextClass(contextClass)}>
+        {props.iconPath | raw}
+      </span>
+    </a>
   );
 };
 
@@ -137,4 +144,4 @@ ___.defaultProps = {
   prop1: 2
 };
 
-export {___};
+export { ____3 };
