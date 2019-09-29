@@ -30,34 +30,37 @@ const ___ = (props: Props) => {
 	  }
 	);
   
+	const lastLevel = levels.length + 1;
+	
 	return (
 	<ol className={___Class}>
-		{props.levels.map(level => (
-			<li className={`${'o-breadcrumb__level'|contextClass(contextClass) } wow fadeInUp`} {% if loop.index > 1 %}data-wow-delay={`${loop.index0 * 0.15 }s`}{% endif %}>
-				<a className={'o-breadcrumb__link'|contextClass(contextClass)} {% if level.url and !loop.last %}href={level.url}{% endif %}>{ level.title }</a>
+		{props.levels.map((level, index) => (
+			<li className={`${'o-breadcrumb__level'|contextClass(contextClass) } wow fadeInUp`} data-wow-delay={index > 0 && (index * 0.15)`s`}>
+				<a className={'o-breadcrumb__link'|contextClass(contextClass)} href={level.url && !lastLevel}>{ level.title }</a>
 			</li>
 		))}
 	</ol>
 
-	/* <pre> */
-	// TODO: fix %for
+// TODO: fix %for
+/* <pre> */
 	<script type="application/ld+json">
 		{`
 			"@context": "http://schema.org",
 			"@type": "BreadcrumbList",
 			"itemListElement": [
-			{%- for level in props.levels -%}
-				{
-					"@type": "ListItem",
-					"position": { loop.index },
-					"item": {
-					"@type": "Thing",
-						"@id": {context._SITE['hosturl'] }{ context._SITE['baseurl'] }{ loop.last ? context._SITE['rurl'] : level.url },
-						"name": {level.title}
+				${props.levels.map((level, index) => (
+					{
+						"@type": "ListItem",
+						"position": index,
+						"item": {
+						"@type": "Thing",
+							"@id": `${context._SITE['hosturl']}${context._SITE['baseurl']}${level === lastLevel ? context._SITE['rurl'] : level.url }`,
+							"name": level.title
+						}
 					}
+					(index !== lastLevel) && ','
+					))
 				}
-				{- !loop.last ? ',' -}
-			{%- endfor -%}
 			]
 		`}
 	</script>

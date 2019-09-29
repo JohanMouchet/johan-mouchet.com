@@ -1,12 +1,12 @@
 # TODO
 
-- Replace loop.index
 - Replace `{% if`
 - Replace `{% set`
 - Convert JSDoc to Flow
 - remove props.
 - What to do with `contextClass(contextClass)`?
 - Check potentially ignored prop in string `title="Follow me on { media.name }"`
+- Fix Tabs, Accordion, Alert, Table Numerical column
 - Run Prettier
 
 # Done
@@ -29,6 +29,7 @@
 - Convert `{% include`
 - Convert macro options to React prop
 - Replace `{% for`
+- Replace loop.index
 
 # Fix
 
