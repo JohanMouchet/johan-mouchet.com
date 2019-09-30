@@ -26,7 +26,7 @@ const label = (props: Props) => {
 	  props.metadata.modifierClasses,
 	  props.metadata.additionalClasses,
 	  {
-		prop1: "___--prop1"
+		"___--prop1": prop1
 	  }
 	);
   
@@ -71,7 +71,7 @@ const field = (props: Props) => {
 	  props.metadata.modifierClasses,
 	  props.metadata.additionalClasses,
 	  {
-		prop1: "___--prop1"
+		"___--prop1": prop1
 	  }
 	);
   
@@ -112,7 +112,7 @@ const toggle = (props: Props) => {
 	  props.metadata.contextClass,
 	  props.metadata.additionalClasses,
 	  {
-		prop1: "___--prop1"
+		"___--prop1": prop1
 	  }
 	);
   
@@ -158,7 +158,7 @@ const file = (props: Props) => {
 	  props.metadata.contextClass,
 	  props.metadata.additionalClasses,
 	  {
-		prop1: "___--prop1"
+		"___--prop1": prop1
 	  }
 	);
   
@@ -207,7 +207,7 @@ const select = (props: Props) => {
 	  props.metadata.modifierClasses,
 	  props.metadata.additionalClasses,
 	  {
-		prop1: "___--prop1"
+		"___--prop1": prop1
 	  }
 	);
   
@@ -250,7 +250,7 @@ const textarea = (props: Props) => {
 	  props.metadata.contextClass,
 	  props.metadata.additionalClasses,
 	  {
-		prop1: "___--prop1"
+		"___--prop1": prop1
 	  }
 	);
   
@@ -290,7 +290,7 @@ const range = (props: Props) => {
 	  props.metadata.contextClass,
 	  props.metadata.additionalClasses,
 	  {
-		prop1: "___--prop1"
+		"___--prop1": prop1
 	  }
 	);
   

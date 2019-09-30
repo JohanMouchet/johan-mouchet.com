@@ -28,7 +28,7 @@ const ___ = (props: Props) => {
 	const ___Class = cx(
 	  "___",
 	  {
-		prop1: "___--prop1"
+		"___--prop1": prop1
 	  }
 	);
   

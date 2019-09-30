@@ -20,7 +20,7 @@ const ___ = (props: Props) => {
     props.metadata.contextClass,
     props.metadata.additionalClasses,
     {
-      prop1: "___--prop1"
+      "___--prop1": prop1
     }
   );
 

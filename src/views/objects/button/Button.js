@@ -25,7 +25,7 @@ const ___ = (props: Props) => {
     props.metadata.modifierClasses,
     props.metadata.additionalClasses,
     {
-      prop1: "___--prop1"
+      "___--prop1": prop1
     }
   );
 
@@ -68,7 +68,7 @@ const social = (props: Props) => {
     props.metadata.modifierClasses,
     props.metadata.additionalClasses,
     {
-      prop1: "___--prop1"
+      "___--prop1": prop1
     }
   );
 
@@ -121,7 +121,7 @@ const socialBadge = (props: Props) => {
     props.metadata.modifierClasses,
     props.metadata.additionalClasses,
     {
-      prop1: "___--prop1"
+      "___--prop1": prop1
     }
   );
 

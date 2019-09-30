@@ -24,7 +24,7 @@ const ref = (props: Props) => {
 	const ___Class = cx(
 	  "___",
 	  {
-		prop1: "___--prop1"
+		"___--prop1": prop1
 	  }
 	);
   
@@ -69,7 +69,7 @@ const notes = (props: Props) => {
 	  props.metadata.contextClass,
 	  props.metadata.additionalClasses,
 	  {
-		prop1: "___--prop1"
+		"___--prop1": prop1
 	  }
 	);
   

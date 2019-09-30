@@ -19,7 +19,7 @@ const ___ = (props: Props) => {
   const { prop1, prop2 } = props;
 
   const ___Class = cx("___", {
-    prop1: "___--prop1"
+    "___--prop1": prop1
   });
 
   return props.qualifications.map(qualification => (

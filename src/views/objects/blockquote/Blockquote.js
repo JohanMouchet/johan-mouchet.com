@@ -24,7 +24,7 @@ const ___ = (props: Props) => {
     props.metadata.modifierClasses,
     props.metadata.additionalClasses,
     {
-      prop1: "___--prop1"
+      "___--prop1": prop1
     }
   );
 
