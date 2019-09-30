@@ -14,110 +14,194 @@ import "./___.scss";
  */
 
 const ___ = (props: Props) => {
-  const {
-    prop1,
-    prop2
-  } = props;
+  const { prop1, prop2 } = props;
 
   const ___Class = cx(
-	"o-pagination",
-	props.metadata.contextClass,
-	props.metadata.additionalClasses,
+    "o-pagination",
+    props.metadata.contextClass,
+    props.metadata.additionalClasses,
     {
       prop1: "___--prop1"
     }
   );
 
+  const current = props.current | abs;
+  const range = props.range;
+  const lowerRange = current - range;
+  const upperRange = current + range + 1;
+  const links = props.links;
+
+  const renderLowerRange = (lowerRange, current) => {
+    let index;
+
+    for (index = lowerRange; index < current; index++) {
+      {
+        /* TODO: fix %for */
+      }
+      // {% for link in current..upperRange %}
+      // {% set currentIndex = current + loop.index %}
+
+      // {(currentIndex <= links|length) &&
+      // 	<li className={'o-pagination__index'|contextClass(contextClass)}>
+      // 		{loop.last &&
+      // 			<a className={'o-pagination__link'|contextClass(contextClass)} href={links|last}>{ links|length }</a>
+      // 		{% elseif loop.revindex === 2 && currentIndex <= links|length - 2 %}
+      // 			<a className={'o-pagination__link'|contextClass(contextClass)}>...</a>
+      // 		:
+      // 			<a className={'o-pagination__link'|contextClass(contextClass)} href={links[currentIndex - 1]}>{ currentIndex }</a>
+      // 		}
+      // 	</li>
+      // }
+      // {% endfor %}
+    }
+  };
+
+  const renderUpperRange = (upperRange, current) => {
+    let index;
+
+    for (index = current; index <= upperRange; index++) {
+      index >= 1 && (
+        <li className={"o-pagination__index" | contextClass(contextClass)}>
+          {loop.first && index >= 1 ? (
+            <a className={"o-pagination__link" | contextClass(contextClass)}>
+              ...
+            </a>
+          ) : (
+            <a
+              className={"o-pagination__link" | contextClass(contextClass)}
+              href={links[index - 1]}
+            >
+              {index}
+            </a>
+          )}
+        </li>
+      );
+    }
+  };
+
   return (
-	{% set current = props.current|abs %}
-	{% set range = props.range %}
-	{% set lowerRange = current - range %}
-	{% set upperRange = current + range + 1 %}
-	{% set links = props.links %}
+    <ol className={___Class}>
+      {/* First */}
+      {current >= 3 && (
+        <li
+          className={`${"o-pagination__index" |
+            contextClass(contextClass)} o-pagination__index--first`}
+        >
+          <a
+            className={"o-pagination__link" | contextClass(contextClass)}
+            href={links | first}
+          >
+            <i
+              className={`${"o-pagination__icon" |
+                contextClass(contextClass)} material-icons wow fadeInRight`}
+              data-wow-delay=".15s"
+            >
+              first_page
+            </i>
+          </a>
+        </li>
+      )}
 
-	<ol className={___Class}>
-		{/* First */}
-		{current >= 3 &&
-			<li className={`${'o-pagination__index'|contextClass(contextClass) } o-pagination__index--first`}>
-				<a className={'o-pagination__link'|contextClass(contextClass)} href={links|first}>
-					<i className={`${'o-pagination__icon'|contextClass(contextClass) } material-icons wow fadeInRight`} data-wow-delay=".15s">first_page</i>
-				</a>
-			</li>
-		}
+      {/* Prev */}
+      {current >= 2 && (
+        <li
+          className={`${"o-pagination__index" |
+            contextClass(contextClass)} o-pagination__index--prev`}
+        >
+          <a
+            className={"o-pagination__link" | contextClass(contextClass)}
+            href={links[current - 2]}
+          >
+            <i
+              className={`${"o-pagination__icon" |
+                contextClass(contextClass)} material-icons wow fadeInRight`}
+            >
+              chevron_left
+            </i>
+          </a>
+        </li>
+      )}
 
-		{/* Prev */}
-		{current >= 2 &&
-			<li className={`${'o-pagination__index'|contextClass(contextClass) } o-pagination__index--prev`}>
-				<a className={'o-pagination__link'|contextClass(contextClass)} href={links[current - 2]}>
-					<i className={`${'o-pagination__icon'|contextClass(contextClass) } material-icons wow fadeInRight`}>chevron_left</i>
-				</a>
-			</li>
-		}
+      {/* Range */}
+      {range ? (
+        <Fragment>
+          {/* Lower */}
+          {renderLowerRange(lowerRange, current)}
 
-		{/* Range */}
-		{range ?
-			{/* Lower */}
-			{/* TODO: fix %for */}
-			{% for link in lowerRange..current %}
-				{% set currentIndex = current - loop.revindex %}
+          {/* Current */}
+          <li
+            className={`${"o-pagination__index" |
+              contextClass(contextClass)} is--active`}
+          >
+            <a
+              className={"o-pagination__link" | contextClass(contextClass)}
+              href={links[current - 1]}
+            >
+              {current}
+            </a>
+          </li>
 
-				currentIndex >= 1 &&
-					<li className={'o-pagination__index'|contextClass(contextClass)}>
-						{loop.first && currentIndex >= 1 ?
-							<a className={'o-pagination__link'|contextClass(contextClass)}>...</a>
-						:
-							<a className={'o-pagination__link'|contextClass(contextClass)} href={links[currentIndex - 1]}>{ currentIndex }</a>
-						}
-					</li>
-				}
-			{% endfor %}
+          {/* Upper */}
+          {renderUpperRange(upperRange, current)}
+        </Fragment>
+      ) : (
+        /* No Range */
+        links.map((link, index) => (
+          <li
+            className={`${"o-pagination__index" |
+              contextClass(contextClass)} ${index === current && "is--active"}`}
+          >
+            <a
+              className={"o-pagination__link" | contextClass(contextClass)}
+              href={link}
+            >
+              {index}
+            </a>
+          </li>
+        ))
+      )}
 
-			{/* Current */}
-			<li className={`${'o-pagination__index'|contextClass(contextClass) } is--active`}>
-				<a className={'o-pagination__link'|contextClass(contextClass)} href={links[current - 1]}>{ current }</a>
-			</li>
+      {/* Next */}
+      {(current <= links) | (length - 2) && (
+        <li
+          className={`${"o-pagination__index" |
+            contextClass(contextClass)} o-pagination__index--next`}
+        >
+          <a
+            className={"o-pagination__link" | contextClass(contextClass)}
+            href={links[current]}
+          >
+            <i
+              className={`${"o-pagination__icon" |
+                contextClass(contextClass)} material-icons wow fadeInLeft`}
+            >
+              chevron_right
+            </i>
+          </a>
+        </li>
+      )}
 
-			{/* Upper */}
-			{/* TODO: fix %for */}
-			{% for link in current..upperRange %}
-				{% set currentIndex = current + loop.index %}
-
-				{(currentIndex <= links|length) &&
-					<li className={'o-pagination__index'|contextClass(contextClass)}>
-						{loop.last &&
-							<a className={'o-pagination__link'|contextClass(contextClass)} href={links|last}>{ links|length }</a>
-						{% elseif loop.revindex === 2 && currentIndex <= links|length - 2 %}
-							<a className={'o-pagination__link'|contextClass(contextClass)}>...</a>
-						:
-							<a className={'o-pagination__link'|contextClass(contextClass)} href={links[currentIndex - 1]}>{ currentIndex }</a>
-						}
-					</li>
-				}
-			{% endfor %}
-		: {/* No Range */}
-			{links.map(link => (
-				<li className={`${'o-pagination__index'|contextClass(contextClass) } ${ loop.index === current && 'is--active'}`}><a className={'o-pagination__link'|contextClass(contextClass)} href={link}>{ loop.index }</a></li>
-			))}
-		}
-
-		{/* Next */}
-		{(current <= links|length - 2) &&
-			<li className={`${'o-pagination__index'|contextClass(contextClass) } o-pagination__index--next`}>
-				<a className={'o-pagination__link'|contextClass(contextClass)} href={links[current]}>
-					<i className={`${'o-pagination__icon'|contextClass(contextClass) } material-icons wow fadeInLeft`}>chevron_right</i>
-				</a>
-			</li>
-		}
-
-		{/* Last */}
-		{(current <= links|length - 3) &&
-			<li className={`${'o-pagination__index'|contextClass(contextClass) } o-pagination__index--last`}>
-				<a className={'o-pagination__link'|contextClass(contextClass)} href={links|last}>
-					<i className={`${'o-pagination__icon'|contextClass(contextClass) } material-icons wow fadeInLeft`} data-wow-delay=".15s">last_page</i>
-				</a>
-			</li>
-		}
-	</ol>
+      {/* Last */}
+      {(current <= links) | (length - 3) && (
+        <li
+          className={`${"o-pagination__index" |
+            contextClass(contextClass)} o-pagination__index--last`}
+        >
+          <a
+            className={"o-pagination__link" | contextClass(contextClass)}
+            href={links | last}
+          >
+            <i
+              className={`${"o-pagination__icon" |
+                contextClass(contextClass)} material-icons wow fadeInLeft`}
+              data-wow-delay=".15s"
+            >
+              last_page
+            </i>
+          </a>
+        </li>
+      )}
+    </ol>
   );
 };
 
