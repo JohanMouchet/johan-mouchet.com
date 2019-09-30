@@ -2,211 +2,115 @@
 
 import * as React from "react";
 import cx from "classnames";
-import "./___.scss";
+import "./pagination.scss";
 
-/**
- * Pagination
- *
- * @param {int}   [range]                      - Pagination number of links displayed on each side of the current, all links are displayed if !specified.
- * @param {int}   current                      - Pagination active index
- * @param {array} links                        - Pagination list of index link
- * @param {array} [metadata.additionalClasses] - Pagination additional classes
- */
+type LinkProps = {
+  current: Boolean,
+  first: Boolean,
+  prev: Boolean,
+  next: Boolean,
+  last: Boolean,
+  link: string
+};
 
-const ___ = (props: Props) => {
-  const { prop1, prop2 } = props;
+const Link = (props: LinkProps, children: Node) => {
+  const { current, first, prev, next, last, link } = props;
 
-  const ___Class = cx(
-    "o-pagination",
-    props.metadata.contextClass,
-    props.metadata.additionalClasses,
-    {
-      prop1: "___--prop1"
-    }
-  );
-
-  const current = props.current | abs;
-  const range = props.range;
-  const lowerRange = current - range;
-  const upperRange = current + range + 1;
-  const links = props.links;
-
-  const renderLowerRange = (lowerRange, current) => {
-    let index;
-
-    for (index = lowerRange; index < current; index++) {
-      {
-        /* TODO: fix %for */
-      }
-      // {% for link in current..upperRange %}
-      // {% set currentIndex = current + loop.index %}
-
-      // {(currentIndex <= links|length) &&
-      // 	<li className={'o-pagination__index'|contextClass(contextClass)}>
-      // 		{loop.last &&
-      // 			<a className={'o-pagination__link'|contextClass(contextClass)} href={links|last}>{ links|length }</a>
-      // 		{% elseif loop.revindex === 2 && currentIndex <= links|length - 2 %}
-      // 			<a className={'o-pagination__link'|contextClass(contextClass)}>...</a>
-      // 		:
-      // 			<a className={'o-pagination__link'|contextClass(contextClass)} href={links[currentIndex - 1]}>{ currentIndex }</a>
-      // 		}
-      // 	</li>
-      // }
-      // {% endfor %}
-    }
-  };
-
-  const renderUpperRange = (upperRange, current) => {
-    let index;
-
-    for (index = current; index <= upperRange; index++) {
-      index >= 1 && (
-        <li className={"o-pagination__index" | contextClass(contextClass)}>
-          {loop.first && index >= 1 ? (
-            <a className={"o-pagination__link" | contextClass(contextClass)}>
-              ...
-            </a>
-          ) : (
-            <a
-              className={"o-pagination__link" | contextClass(contextClass)}
-              href={links[index - 1]}
-            >
-              {index}
-            </a>
-          )}
-        </li>
-      );
-    }
-  };
+  const linkClass = cx("o-pagination__index", {
+    "is--active": current,
+    "o-pagination__index--first": first,
+    "o-pagination__index--prev": prev,
+    "o-pagination__index--next": next,
+    "o-pagination__index--last": last
+  });
 
   return (
-    <ol className={___Class}>
-      {/* First */}
-      {current >= 3 && (
-        <li
-          className={`${"o-pagination__index" |
-            contextClass(contextClass)} o-pagination__index--first`}
-        >
-          <a
-            className={"o-pagination__link" | contextClass(contextClass)}
-            href={links | first}
-          >
-            <i
-              className={`${"o-pagination__icon" |
-                contextClass(contextClass)} material-icons wow fadeInRight`}
-              data-wow-delay=".15s"
-            >
-              first_page
-            </i>
-          </a>
-        </li>
-      )}
+    <li className={linkClass}>
+      <a className="o-pagination__link" href={link}>
+        {children}
+      </a>
+    </li>
+  );
+};
 
-      {/* Prev */}
-      {current >= 2 && (
-        <li
-          className={`${"o-pagination__index" |
-            contextClass(contextClass)} o-pagination__index--prev`}
-        >
-          <a
-            className={"o-pagination__link" | contextClass(contextClass)}
-            href={links[current - 2]}
-          >
-            <i
-              className={`${"o-pagination__icon" |
-                contextClass(contextClass)} material-icons wow fadeInRight`}
-            >
-              chevron_left
-            </i>
-          </a>
-        </li>
-      )}
+type IconProps = {
+  first: Boolean,
+  prev: Boolean,
+  next: Boolean,
+  last: Boolean
+};
 
-      {/* Range */}
-      {range ? (
-        <Fragment>
-          {/* Lower */}
-          {renderLowerRange(lowerRange, current)}
+const Icon = (props: IconProps) => {
+  const { first, prev, next, last } = props;
 
-          {/* Current */}
-          <li
-            className={`${"o-pagination__index" |
-              contextClass(contextClass)} is--active`}
-          >
-            <a
-              className={"o-pagination__link" | contextClass(contextClass)}
-              href={links[current - 1]}
-            >
-              {current}
-            </a>
-          </li>
+  const iconClass = cx("o-pagination__icon", "material-icons", "wow", {
+    fadeInLeft: first || prev,
+    fadeInRight: next || last
+  });
 
-          {/* Upper */}
-          {renderUpperRange(upperRange, current)}
-        </Fragment>
-      ) : (
-        /* No Range */
-        links.map((link, index) => (
-          <li
-            className={`${"o-pagination__index" |
-              contextClass(contextClass)} ${index === current && "is--active"}`}
-          >
-            <a
-              className={"o-pagination__link" | contextClass(contextClass)}
-              href={link}
-            >
-              {index}
-            </a>
-          </li>
-        ))
-      )}
+  return (
+    <i className={iconClass} data-wow-delay={(first || last) && ".15s"}>
+      {first && "first_page"}
+      {prev && "chevron_left"}
+      {next && "chevron_right"}
+      {last && "last_page"}
+    </i>
+  );
+};
 
-      {/* Next */}
-      {(current <= links) | (length - 2) && (
-        <li
-          className={`${"o-pagination__index" |
-            contextClass(contextClass)} o-pagination__index--next`}
-        >
-          <a
-            className={"o-pagination__link" | contextClass(contextClass)}
-            href={links[current]}
-          >
-            <i
-              className={`${"o-pagination__icon" |
-                contextClass(contextClass)} material-icons wow fadeInLeft`}
-            >
-              chevron_right
-            </i>
-          </a>
-        </li>
-      )}
+type Props = {
+  range: number,
+  current: number,
+  links: Array
+};
 
-      {/* Last */}
-      {(current <= links) | (length - 3) && (
-        <li
-          className={`${"o-pagination__index" |
-            contextClass(contextClass)} o-pagination__index--last`}
-        >
-          <a
-            className={"o-pagination__link" | contextClass(contextClass)}
-            href={links | last}
-          >
-            <i
-              className={`${"o-pagination__icon" |
-                contextClass(contextClass)} material-icons wow fadeInLeft`}
-              data-wow-delay=".15s"
-            >
-              last_page
-            </i>
-          </a>
-        </li>
-      )}
+const Pagination = (props: Props) => {
+  const { range, current, links } = props;
+
+  const PaginationClass = cx(
+    "o-pagination",
+    props.metadata.contextClass,
+    props.metadata.additionalClasses
+  );
+
+  // TODO: contextClass()
+
+  // [1(current), 2, 3, upper, ..., 12, >, >>]
+  // [<, 1(lower), 2, 3, 4(current), 5, 6, 7(upper),..., 12, >, >>]
+  // [<<, <, ..., 2(lower), 3, 4, 5(current), 6, 7, 8(upper), ..., 12, >, >>]
+  //					 [<<, <, ..., 6(lower), 7, 8, 9(current), 10, 11, 12(upper), >]
+  // 															[<<, <, ..., 9(lower), 10, 11, 12(current)]
+
+  const current = props.current;
+  const range = props.range;
+  const lower = current - range;
+  const upper = current + range;
+  const linksLength = links.length;
+
+  return (
+    <ol className={PaginationClass}>
+      {/* first: lower > 1 */}
+      {/* prev: current > 1 */}
+
+      {links.map((link, index) => {
+        // TODO: start at 1
+        //
+        // ...: lower > 2
+        // lowerRange: index < current
+        // current
+        // upperRange: index > current
+        // ...: upper < linksLength
+        // last:
+        //
+        <Link href={link} first>
+          <Icon first />
+        </Link>;
+      })}
+
+      {/* next: current < linksLength */}
+      {/* last: upper < linksLength */}
     </ol>
   );
 };
 
-___.defaultProps = {
-  prop1: 2
-};
-
-export default ___;
+export default Pagination;
