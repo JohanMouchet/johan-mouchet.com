@@ -1,12 +1,9 @@
 // @flow
 
 import * as React from "react";
-import cx from "./node_modules/classnames";
-import "./___.scss";
+import "./academic-qualification.scss";
 
 /**
- * Academic Qualifications
- *
  * @param {array}  qualifications 		                 - List of qualifications
  * @param {string} qualifications[0].establishment.name - Qualification establishment name
  * @param {string} qualifications[0].establishment.URL  - Qualification establishment URL
@@ -15,12 +12,8 @@ import "./___.scss";
  * @param {string} qualifications[0].title              - Qualification title
  */
 
-const ___ = (props: Props) => {
+const AcademicQualification = (props: Props) => {
   const { prop1, prop2 } = props;
-
-  const ___Class = cx("___", {
-    "___--prop1": prop1
-  });
 
   return props.qualifications.map(qualification => (
     <section className="c-academic-qualification">
@@ -41,8 +34,8 @@ const ___ = (props: Props) => {
   ));
 };
 
-___.defaultProps = {
+AcademicQualification.defaultProps = {
   prop1: 2
 };
 
-export default ___;
+export default AcademicQualification;
