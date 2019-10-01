@@ -1,6 +1,5 @@
-/**
- * Alert
- */
+@import '../../../assets/styles/settings/_settings';
+@import '../../../assets/styles/tools/_tools';
 
 .o-alert {
 	display: none;
@@ -14,7 +13,9 @@
 	&__icon {
 		flex: 0 1 auto;
 		margin-right: 1em;
-		font-size: t-modular-scale(2) !important; /* stylelint-disable-line declaration-no-important */
+		font-size: t-modular-scale(
+			2
+		) !important; /* stylelint-disable-line declaration-no-important */
 		line-height: 1.25 !important; /* stylelint-disable-line declaration-no-important */
 	}
 

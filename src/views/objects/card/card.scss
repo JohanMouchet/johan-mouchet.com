@@ -1,6 +1,5 @@
-/**
- * Card
- */
+@import '../../../assets/styles/settings/_settings';
+@import '../../../assets/styles/tools/_tools';
 
 .o-card {
 	$root: &;
@@ -159,7 +158,11 @@
 	&--banner-gradient & {
 		&__banner::after {
 			content: '';
-			background-image: linear-gradient(to top, rgba($s-color-black, .3) 0%, transparent 50%);
+			background-image: linear-gradient(
+				to top,
+				rgba($s-color-black, .3) 0%,
+				transparent 50%
+			);
 			height: 100%;
 			width: 100%;
 			position: absolute;

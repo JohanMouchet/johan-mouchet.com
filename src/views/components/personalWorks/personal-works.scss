@@ -1,6 +1,5 @@
-/**
- * Personal Works
- */
+@import '../../../assets/styles/settings/_settings';
+@import '../../../assets/styles/tools/_tools';
 
 .c-personal-work {
 	$root: &;
@@ -17,7 +16,10 @@
 			left: 0;
 			height: 100%;
 			width: 100%;
-			background-image: linear-gradient(rgba($s-color-primary-lighter, .7), rgba($s-color-primary-darker, .9));
+			background-image: linear-gradient(
+				rgba($s-color-primary-lighter, .7),
+				rgba($s-color-primary-darker, .9)
+			);
 			transform-origin: 100% 50%;
 			transition: transform .2s ease-out;
 		}

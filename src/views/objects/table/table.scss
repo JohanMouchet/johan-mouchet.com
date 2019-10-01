@@ -1,6 +1,5 @@
-/**
- * Table
- */
+@import '../../../assets/styles/settings/_settings';
+@import '../../../assets/styles/tools/_tools';
 
 /* stylelint-disable selector-no-type, selector-max-type */
 table {
@@ -225,23 +224,42 @@ table {
 			 * (Not compatible with .o-table--striped and .o-table--hover)
 			 */
 			&#{$root}--responsive-shadow:not(#{$root}--striped):not(#{$root}--hover) {
-				background:
-					radial-gradient(left, ellipse, rgba($s-color-black, .2), transparent 75%) center left,
-					radial-gradient(right, ellipse, rgba($s-color-black, .2), transparent 75%) center right;
+				background: radial-gradient(
+					left,
+					ellipse,
+					rgba($s-color-black, .2),
+					transparent 75%
+				)
+					center left,
+					radial-gradient(
+					right,
+					ellipse,
+					rgba($s-color-black, .2),
+					transparent 75%
+				)
+					center right;
 				background-size: .5rem 100%, .5rem 100%;
 				background-attachment: scroll, scroll;
 				background-repeat: no-repeat;
 
 				th:first-child,
 				td:first-child {
-					background: linear-gradient(to right, rgba($s-color-white, 1) 50%, transparent);
+					background: linear-gradient(
+						to right,
+						rgba($s-color-white, 1) 50%,
+						transparent
+					);
 					background-repeat: no-repeat;
 					background-size: 1rem 100%;
 				}
 
 				th:last-child,
 				td:last-child {
-					background: linear-gradient(to left, rgba($s-color-white, 1) 50%, transparent);
+					background: linear-gradient(
+						to left,
+						rgba($s-color-white, 1) 50%,
+						transparent
+					);
 					background-repeat: no-repeat;
 					background-size: 1rem 100%;
 					background-position-x: 100%;

@@ -1,6 +1,5 @@
-/**
- * Header
- */
+@import '../../../assets/styles/settings/_settings';
+@import '../../../assets/styles/tools/_tools';
 
 .p-mast-header {
 	$root: &;
@@ -8,7 +7,8 @@
 
 	min-height: 400px;
 	width: 100%;
-	background: url('#{t-path(theme)}/header.jpg') left center no-repeat $s-color-primary;
+	background: url('#{t-path(theme)}/header.jpg') left center no-repeat
+		$s-color-primary;
 	background-size: cover;
 	text-shadow: 1px 1px 1px rgba($s-color-black, .3);
 	overflow: hidden;
@@ -21,7 +21,10 @@
 		left: 0;
 		height: 100%;
 		width: 100%;
-		background-image: linear-gradient(transparent, rgba($s-color-primary-darker, .9) 90%);
+		background-image: linear-gradient(
+			transparent,
+			rgba($s-color-primary-darker, .9) 90%
+		);
 	}
 
 	& > * {

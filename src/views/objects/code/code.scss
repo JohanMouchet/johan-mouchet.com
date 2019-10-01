@@ -1,6 +1,5 @@
-/**
- * Code
- */
+@import '../../../assets/styles/settings/_settings';
+@import '../../../assets/styles/tools/_tools';
 
 /* stylelint-disable selector-no-type, selector-max-type */
 pre {
@@ -16,7 +15,8 @@ pre {
 		padding: 0;
 	}
 
-	&.o-pre--vScroll { /* stylelint-disable-line selector-no-qualifying-type */
+	&.o-pre--vScroll {
+		/* stylelint-disable-line selector-no-qualifying-type */
 		max-height: t-vertical-rhythm(10);
 	}
 }

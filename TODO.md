@@ -31,6 +31,7 @@
 - Convert macro options to React prop
 - Replace `{% for`
 - Replace loop.index
+- Added dependencies to scss
 
 # Fix
 

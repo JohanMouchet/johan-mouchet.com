@@ -1,6 +1,5 @@
-/**
- * Blockquote
- */
+@import '../../../assets/styles/settings/_settings';
+@import '../../../assets/styles/tools/_tools';
 
 /* stylelint-disable selector-no-type */
 .o-blockquote {
@@ -25,7 +24,7 @@
 	&__quotes {
 		margin: 0;
 		text-align: inherit;
-		quotes: '\201c' '\201d';
+		quotes: '\201c''\201d';
 
 		&::before,
 		&::after {

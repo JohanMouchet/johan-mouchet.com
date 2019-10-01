@@ -1,6 +1,5 @@
-/**
- * Button
- */
+@import '../../../assets/styles/settings/_settings';
+@import '../../../assets/styles/tools/_tools';
 
 .o-button {
 	$root: &;
@@ -17,8 +16,20 @@
 	 */
 	@mixin btn-padding($btn-scale-factor: 1) {
 		@if $height > $s-line-height-base {
-			padding: ($height - $s-line-height-base) / 2 * $btn-scale-factor $h-padding * $btn-scale-factor; // Fallback
-			padding: calc(#{($height - $s-line-height-base) / 2 * $btn-scale-factor} - #{$border-width}) $h-padding * $btn-scale-factor;
+			padding: ($height - $s-line-height-base) /
+				2 *
+				$btn-scale-factor
+				$h-padding *
+				$btn-scale-factor; // Fallback
+
+			padding: calc(
+				#{($height - $s-line-height-base) /
+				2 *
+				$btn-scale-factor} -
+				#{$border-width}
+			)
+				$h-padding *
+				$btn-scale-factor;
 		} @else {
 			padding: 0 $h-padding;
 		}
@@ -38,7 +49,8 @@
 	text-align: center;
 	text-decoration: none;
 	cursor: pointer;
-	transition: color .2s, background .2s, border-color .2s, transform .1s ease-out;
+	transition: color .2s, background .2s, border-color .2s,
+		transform .1s ease-out;
 
 	@include t-wekkit-hdpi-small-dimension;
 

@@ -1,10 +1,10 @@
-/**
- * Footer
- */
+@import '../../../assets/styles/settings/_settings';
+@import '../../../assets/styles/tools/_tools';
 
 .p-mast-footer {
 	padding: t-vertical-rhythm(1.2) 0;
-	background: url('#{t-path(theme)}/footer.jpg') right center no-repeat $s-color-primary;
+	background: url('#{t-path(theme)}/footer.jpg') right center no-repeat
+		$s-color-primary;
 	background-size: cover;
 	letter-spacing: .1em;
 	font-family: $s-font-family-quaternary;
@@ -19,7 +19,10 @@
 		left: 0;
 		height: 100%;
 		width: 100%;
-		background-image: linear-gradient(rgba($s-color-primary-darker, .9), transparent);
+		background-image: linear-gradient(
+			rgba($s-color-primary-darker, .9),
+			transparent
+		);
 	}
 
 	& > * {

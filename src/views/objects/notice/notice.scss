@@ -1,6 +1,5 @@
-/**
- * Notice
- */
+@import '../../../assets/styles/settings/_settings';
+@import '../../../assets/styles/tools/_tools';
 
 .o-notice {
 	position: fixed;
@@ -15,7 +14,8 @@
 	visibility: hidden;
 	opacity: 0;
 	transform: translateY(100%);
-	transition: visibility .5s ease-out, opacity .5s ease-out, transform .5s ease-out;
+	transition: visibility .5s ease-out, opacity .5s ease-out,
+		transform .5s ease-out;
 
 	/** Active **/
 	&.is--active {
