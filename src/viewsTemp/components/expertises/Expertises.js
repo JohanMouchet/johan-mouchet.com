@@ -1,9 +1,9 @@
 // @flow
 
 import * as React from "react";
-import cx from "classnames";
+import cx from "./node_modules/classnames";
 import "./___.scss";
-import { ProgressBar } from "../../objects/";
+import { ProgressBar } from "../objects";
 
 /**
  * Expertises
