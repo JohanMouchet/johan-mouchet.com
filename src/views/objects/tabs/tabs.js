@@ -2,49 +2,46 @@
 
 import * as React from "react";
 import cx from "classnames";
-import "./___.scss";
+import "./tabs.scss";
 
 /**
- * Tabs
- *
  * @param {string} tabs.thumb                   - Tab thumb title
  * @param {string} tabs.panel                   - Tab panel content
  * @param {string} [metadata.contextClass]      - Tabs context class
  * @param {array}  [metadata.additionalClasses] - Tabs additional classes
  */
 
-const ___ = (props: Props) => {
+const Tabs = (props: Props) => {
   const { prop1, prop2 } = props;
 
-  const ___Class = cx(
+  const TabsClass = cx(
     "o-tabs",
     props.metadata.contextClass,
     props.metadata.additionalClasses,
+    "js-tabs",
     {
-      "___--prop1": prop1
+      "Tabs--prop1": prop1
     }
   );
 
   return (
-    <div className={`${___Class} js-tabs`}>
-      <ul className={"o-tabs__thumbs" | contextClass(contextClass)}>
+    <div className={TabsClass}>
+      <ul className="o-tabs__thumbs">
         {props.tabs.map((tab, index) => (
           <li
-            className={`${"o-tabs__thumb" |
-              contextClass(contextClass)} js-tabs-thumb wow fadeInUp`}
+            className="o-tabs__thumb js-tabs-thumb wow fadeInUp"
             data-wow-delay={index > 0 && (index * 0.15)`s`}
           >
-            <button className={"o-tabs__button" | contextClass(contextClass)}>
+            <button className="o-tabs__button">
               {tab.thumb}
             </button>
           </li>
         ))}
       </ul>
-      <ul className={"o-tabs__panels" | contextClass(contextClass)}>
+      <ul className="o-tabs__panels">
         {props.tabs.map(tab => (
           <li
-            className={`${"o-tabs__panel" |
-              contextClass(contextClass)} js-tabs-panel`}
+            className="o-tabs__panel js-tabs-panel"
           >
             {tab.panel}
           </li>
@@ -54,8 +51,8 @@ const ___ = (props: Props) => {
   );
 };
 
-___.defaultProps = {
+Tabs.defaultProps = {
   prop1: 2
 };
 
-export default ___;
+export default Tabs;

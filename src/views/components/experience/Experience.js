@@ -1,13 +1,10 @@
 // @flow
 
 import * as React from "react";
-import cx from "classnames";
-import "./___.scss";
+import "./experience.scss";
 import { Projects } from "../";
 
 /**
- * Experiences
- *
  * @param {array}  experiences     - List of experiences
  * @param {string} company[0].URL  - Experience company URL
  * @param {string} company[0].name - Experience company name
@@ -19,12 +16,8 @@ import { Projects } from "../";
  * @param {array}  [projects]      - Experience projects
  */
 
-const ___ = (props: Props) => {
+const Experience = (props: Props) => {
   const { prop1, prop2 } = props;
-
-  const ___Class = cx("___", {
-    "___--prop1": prop1
-  });
 
   // TODO: Check logic, abstract to Utils?
   const getDuration = (startDate, endDate) => {
@@ -96,8 +89,8 @@ const ___ = (props: Props) => {
   ));
 };
 
-___.defaultProps = {
+Experience.defaultProps = {
   prop1: 2
 };
 
-export default ___;
+export default Experience;

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-const ___ = children => {
+const HTML = children => {
   return (
     <Fragment>
       <!doctype html>
@@ -93,4 +93,4 @@ const ___ = children => {
   );
 };
 
-export default ___;
+export default HTML;

@@ -1,8 +1,7 @@
 // @flow
 
 import * as React from "react";
-import cx from "./node_modules/classnames";
-import "./___.scss";
+import "./social-media.scss";
 
 /**
  * Social Media
@@ -13,12 +12,8 @@ import "./___.scss";
  * @param {string} medias[0]iconPath - media iconPath
  */
 
-const ___ = (props: Props) => {
+const SocialMedia = (props: Props) => {
   const { prop1, prop2 } = props;
-
-  const ___Class = cx("___", {
-    "___--prop1": prop1
-  });
 
   return (
     <div className="grid">
@@ -39,8 +34,8 @@ const ___ = (props: Props) => {
   );
 };
 
-___.defaultProps = {
+SocialMedia.defaultProps = {
   prop1: 2
 };
 
-export default ___;
+export default SocialMedia;

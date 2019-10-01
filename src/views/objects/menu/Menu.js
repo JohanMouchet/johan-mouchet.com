@@ -2,14 +2,12 @@
 
 import * as React from "react";
 import cx from "classnames";
-import "./___.scss";
+import "./menu.scss";
 import { Button } from "../";
 
 // TODO: {% import _self as menu %}
 
 /**
- * Menu
- *
  * @param {array}  menu                                 - List of menu item
  * @param {string} [menu[0].text]                       - Menu item type link
  * @param {string} [menu[0].button]                     - Menu item type button (using o-button)
@@ -19,21 +17,19 @@ import { Button } from "../";
 
 // TODO: "isSubmenu" was passed in the macro
 
-const ___ = (props: Props) => {
+const Menu = (props: Props) => {
 	const {
 	  prop1,
 	  prop2
 	} = props;
   
-	const ___Class = cx(
-	  "___",
-	  {
-		"___--prop1": prop1
-	  }
-	);
+	const MenuClass = cx({
+	  'o-menu': !isSubmenu,
+	  'o-menu__submenu': isSubmenu,
+	});
   
 	return (
-	<ul className={!isSubmenu ? 'o-menu' : 'o-menu__submenu'}>
+	<ul className={MenuClass}>
 		{/* TODO: fix %for (.filter()?) */}
 		{% for item in props.menu if item.text || item.button %}
 			<li className={`o-menu__item ${ item.menu && 'o-menu__item--has-children' } ${ item.metadata.additionalClasses|additionalClasses}`}>
@@ -54,8 +50,8 @@ const ___ = (props: Props) => {
   );
 };
 
-___.defaultProps = {
+Menu.defaultProps = {
   prop1: 2
 };
 
-export default ___;
+export default Menu;

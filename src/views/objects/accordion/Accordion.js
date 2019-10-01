@@ -2,54 +2,46 @@
 
 import * as React from "react";
 import cx from "classnames";
-import "./___.scss";
+import "./accordion.scss";
 
 /**
- * Accordion
- *
  * @param {string} items.thumb                  - Accordion thumb title
  * @param {string} items.panel                  - Accordion panel content
  * @param {string} [metadata.contextClass]      - Accordion context class
  * @param {array}  [metadata.additionalClasses] - Accordion additional classes
  */
 
-const ___ = (props: Props) => {
+const Accordion = (props: Props) => {
   const { prop1, prop2 } = props;
 
-  const ___Class = cx(
+  const AccordionClass = cx(
     "o-accordion",
     props.metadata.contextClass,
     props.metadata.additionalClasses,
+    "js-accordion",
     {
-      "___--prop1": prop1
+      "Accordion--prop1": prop1
     }
   );
 
   // TODO: Choose active index, no fadeIn if active
 
   return (
-    <ul className={`${___Class} js-accordion`}>
+    <ul className={AccordionClass}>
       {props.items.map((item, index) => (
         <li
-          className={`${"o-accordion__item" |
-            contextClass(contextClass)} js-accordion-item ${index === 0 &&
-            "is--active"}`}
+          className={`o-accordion__item js-accordion-item ${index === 0 && "is--active"}`}
         >
-          <button className={"o-accordion__thumb" | contextClass(contextClass)}>
+          <button className="o-accordion__thumb">
             <i
-              className={`${"o-accordion__thumb-icon" |
-                contextClass(contextClass)} material-icons ${index > 0 &&
-                "wow fadeInLeft"}`}
+              className={`o-accordion__thumb-icon material-icons ${index > 0 && "wow fadeInLeft"}`}
               data-wow-delay={index > 0 && (index * 0.15)`s`}
             >
               chevron_right
             </i>
             {item.thumb}
           </button>
-          <p
-            className={`${"o-accordion__panel" |
-              contextClass(contextClass)} js-accordion-panel`}
-          >
+          <p className="o-accordion__panel js-accordion-panel">
             {item.panel}
           </p>
         </li>
@@ -58,8 +50,8 @@ const ___ = (props: Props) => {
   );
 };
 
-___.defaultProps = {
+Accordion.defaultProps = {
   prop1: 2
 };
 
-export default ___;
+export default Accordion;

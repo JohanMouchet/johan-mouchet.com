@@ -2,11 +2,9 @@
 
 import * as React from "react";
 import cx from "classnames";
-import "./___.scss";
+import "./button.scss";
 
 /**
- * Button
- *
  * @param {string} [type = 'anchor']            - Button type: anchor|button
  * @param {string} text                         - Button text
  * @param {string} [url]                        - Button URL if type = 'anchor'
@@ -16,39 +14,37 @@ import "./___.scss";
  * @param {object} [metadata.attributes]        - Button attributes
  */
 
-const ___ = (props: Props) => {
+const Button = (props: Props) => {
   const { prop1, prop2 } = props;
 
-  const ___Class = cx(
+  const ButtonClass = cx(
     "o-button",
     props.metadata.contextClass,
     props.metadata.modifierClasses,
     props.metadata.additionalClasses,
     {
-      "___--prop1": prop1
+      "Button--prop1": prop1
     }
   );
 
   return props.type === "button" ? (
-    <button className={___Class} {...props.metadata.attributes}>
+    <button className={ButtonClass} {...props.metadata.attributes}>
       {props.text | raw}
     </button>
   ) : (
-    <a className={___Class} href={props.url} {...props.metadata.attributes}>
+    <a className={ButtonClass} href={props.url} {...props.metadata.attributes}>
       {props.text | raw}
     </a>
   );
 };
 
-___.defaultProps = {
+Button.defaultProps = {
   prop1: 2
 };
 
-export { ___ };
+export { Button };
 
 /**
- * Social Button
- *
  * @param {string} url                          - Button URL
  * @param {string} iconPath                     - Button icon path
  * @param {string} text                         - Button text
@@ -59,35 +55,36 @@ export { ___ };
  * @param {object} [metadata.attributes]        - Button attributes
  */
 
-const social = (props: Props) => {
+const SocialButton = (props: Props) => {
   const { prop1, prop2 } = props;
 
-  const ___Class = cx(
+  const SocialButtonClass = cx(
     "o-button",
     props.metadata.contextClass,
     props.metadata.modifierClasses,
     props.metadata.additionalClasses,
+    "o-button--social",
     {
-      "___--prop1": prop1
+      "SocialButton--prop1": prop1
     }
   );
 
   return (
     <a
-      className={`${___Class} o-button--social`}
+      className={SocialButtonClass}
       href={props.url}
       target="_blank"
       rel="noopener"
       {...props.metadata.attributes}
     >
-      <span className={"o-button__icon" | contextClass(contextClass)}>
+      <span className="o-button__icon">
         {props.iconPath | raw}
       </span>
-      <span className={"o-button__text" | contextClass(contextClass)}>
+      <span className="o-button__text">
         {props.text | raw}
       </span>
       {props.counter && (
-        <span className={"o-button__counter" | contextClass(contextClass)}>
+        <span className="o-button__counter">
           {props.counter}
         </span>
       )}
@@ -95,15 +92,13 @@ const social = (props: Props) => {
   );
 };
 
-___.defaultProps = {
+SocialButton.defaultProps = {
   prop1: 2
 };
 
-export { ____2 };
+export { SocialButton };
 
 /**
- * Social Button Badge
- *
  * @param {string} url                          - Button URL
  * @param {string} iconPath                     - Button icon path
  * @param {string} [metadata.contextClass]      - Button context class
@@ -112,36 +107,38 @@ export { ____2 };
  * @param {object} [metadata.attributes]        - Button attributes
  */
 
-const socialBadge = (props: Props) => {
+const SocialButtonBadge = (props: Props) => {
   const { prop1, prop2 } = props;
 
-  const ___Class = cx(
+  const SocialButtonBadgeClass = cx(
     "o-button",
     props.metadata.contextClass,
     props.metadata.modifierClasses,
     props.metadata.additionalClasses,
+    "o-button--social",
+    "o-button--social-badge",
     {
-      "___--prop1": prop1
+      "SocialButtonBadge--prop1": prop1
     }
   );
 
   return (
     <a
-      className={`${___Class} o-button--social o-button--social-badge`}
+      className={SocialButtonBadgeClass}
       href={props.url}
       target="_blank"
       rel="noopener"
       {...props.metadata.attributes}
     >
-      <span className={"o-button__icon" | contextClass(contextClass)}>
+      <span className="o-button__icon">
         {props.iconPath | raw}
       </span>
     </a>
   );
 };
 
-___.defaultProps = {
+SocialButtonBadge.defaultProps = {
   prop1: 2
 };
 
-export { ____3 };
+export { SocialButtonBadge };

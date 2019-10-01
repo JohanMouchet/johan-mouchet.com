@@ -1,12 +1,9 @@
 // @flow
 
 import * as React from "react";
-import cx from "classnames";
-import "./___.scss";
+import "./reference.scss";
 
 /**
- * References
- *
  * @param {boolean} requestOnly                       - True if references only available upon request
  * @param {array}  references                         - List of reference
  * @param {string} references[0].name                 - Reference name
@@ -18,12 +15,8 @@ import "./___.scss";
  * @param {string} references[0].contacts[0].linkedin - Reference contacts linkedin
  */
 
-const ___ = (props: Props) => {
+const Reference = (props: Props) => {
   const { prop1, prop2 } = props;
-
-  const ___Class = cx("___", {
-    "___--prop1": prop1
-  });
 
   return (
     <div className="grid">
@@ -85,8 +78,8 @@ const ___ = (props: Props) => {
   );
 };
 
-___.defaultProps = {
+Reference.defaultProps = {
   prop1: 2
 };
 
-export default ___;
+export default Reference;

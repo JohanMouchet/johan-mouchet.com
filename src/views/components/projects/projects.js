@@ -1,12 +1,9 @@
 // @flow
 
 import * as React from "react";
-import cx from "classnames";
-import "./___.scss";
+import "./projects.scss";
 
 /**
- * Projects
- *
  * @param {array}  projects                 - List of project
  * @param {string} project[0].name          - project name
  * @param {string} [project[0].tagline]     - project tagline
@@ -16,18 +13,11 @@ import "./___.scss";
  * @param {array}  [project[0].details]     - project details
  */
 
-const ___ = (props: Props) => {
+const Projects = (props: Props) => {
   const {
     prop1,
     prop2
   } = props;
-
-  const ___Class = cx(
-    "___",
-    {
-      "___--prop1": prop1
-    }
-  );
 
   return (
 	<div className="c-projects">
@@ -92,8 +82,8 @@ const ___ = (props: Props) => {
   );
 };
 
-___.defaultProps = {
+Projects.defaultProps = {
   prop1: 2
 };
 
-export default ___;
+export default Projects;

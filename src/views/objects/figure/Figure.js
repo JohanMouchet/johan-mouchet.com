@@ -2,11 +2,9 @@
 
 import * as React from "react";
 import cx from "classnames";
-import "./___.scss";
+import "./figure.scss";
 
 /**
- * Figure
- *
  * @param {string} src                          - Figure image source
  * @param {string} [alt]                        - Figure image alt
  * @param {string} [title]                      - Figure image title
@@ -16,23 +14,23 @@ import "./___.scss";
  * @param {object} [metadata.attributes]        - Figure attributes
  */
 
-const ___ = (props: Props) => {
+const Figure = (props: Props) => {
   const { prop1, prop2 } = props;
 
-  const ___Class = cx(
+  const FigureClass = cx(
     "o-figure",
     props.metadata.contextClass,
     props.metadata.modifierClasses,
     props.metadata.additionalClasses,
     {
-      "___--prop1": prop1
+      "Figure--prop1": prop1
     }
   );
 
   return (
-    <figure className={___Class}>
+    <figure className={FigureClass}>
       <img
-        className={"o-figure__img" | contextClass(contextClass)}
+        className="o-figure__img"
         src={props.src}
         alt={props.alt}
         title={props.title}
@@ -40,7 +38,7 @@ const ___ = (props: Props) => {
       />
       {props.caption && (
         <figcaption
-          className={"o-figure__caption" | contextClass(contextClass)}
+          className="o-figure__caption"
         >
           {props.caption | raw}
         </figcaption>
@@ -49,8 +47,8 @@ const ___ = (props: Props) => {
   );
 };
 
-___.defaultProps = {
+Figure.defaultProps = {
   prop1: 2
 };
 
-export default ___;
+export default Figure;

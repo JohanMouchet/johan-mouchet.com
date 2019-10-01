@@ -2,11 +2,9 @@
 
 import * as React from "react";
 import cx from "classnames";
-import "./___.scss";
+import "./footnotes.scss";
 
 /**
- * Reference
- *
  * @param {array}  context  - Used to get _SITE['rurl'] for smooth-scroll
  * @param {string} id       - Reference id, need to match note id
  * @param {string} [prefix] - Reference prefix, in case of multiple footnotes on the page
@@ -15,18 +13,11 @@ import "./___.scss";
 
 // TODO: "context" was passed in the macro
 
-const ref = (props: Props) => {
+const Reference = (props: Props) => {
 	const {
 	  prop1,
 	  prop2
 	} = props;
-  
-	const ___Class = cx(
-	  "___",
-	  {
-		"___--prop1": prop1
-	  }
-	);
   
 	return (
 	{%- spaceless %}
@@ -39,15 +30,13 @@ const ref = (props: Props) => {
   );
 };
 
-___.defaultProps = {
+Reference.defaultProps = {
   prop1: 2
 };
 
-export { ___ };
+export { Reference };
 
 /**
- * Notes
- *
  * @param {array}  context                      - Used to get _SITE['rurl'] for smooth-scroll
  * @param {string} id                           - Note id, need to match reference id
  * @param {string} [prefix]                     - Note prefix, in case of multiple footnotes on the page
@@ -58,25 +47,25 @@ export { ___ };
 
 // TODO: "context" was passed in the macro
 
-const notes = (props: Props) => {
+const Notes = (props: Props) => {
 	const {
 	  prop1,
 	  prop2
 	} = props;
   
-	const ___Class = cx(
+	const NotesClass = cx(
 	  "o-footnotes",
 	  props.metadata.contextClass,
 	  props.metadata.additionalClasses,
 	  {
-		"___--prop1": prop1
+		"Notes--prop1": prop1
 	  }
 	);
   
 	return (
-	<ol className={___Class}>
+	<ol className={NotesClass}>
 		{props.notes.map(note => (
-			<li id={`hash-footnote:${props.prefix && (props.prefix + '-') }${ note.id}`} className={'o-footnotes__note'|contextClass(contextClass)}>
+			<li id={`hash-footnote:${props.prefix && (props.prefix + '-') }${ note.id}`} className='o-footnotes__note'>
 				{ note.text|raw }
 				<a href={`${context._SITE['rurl'] }#footnote-ref:${props.prefix && (props.prefix + '-') }{ note.id}`} className="footnote-backref">&#x21a9;</a>
 			</li>
@@ -85,8 +74,8 @@ const notes = (props: Props) => {
   );
 };
 
-___.defaultProps = {
+Notes.defaultProps = {
   prop1: 2
 };
 
-export default ___;
+export default Notes;

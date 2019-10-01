@@ -2,11 +2,9 @@
 
 import * as React from "react";
 import cx from "classnames";
-import "./___.scss";
+import "./alert.scss";
 
 /**
- * Alert
- *
  * @param {string}  [type = info]                - Alert type
  * @param {string}  content                      - Alert content
  * @param {boolean} [hidden = false]             - Alert visibility
@@ -15,15 +13,15 @@ import "./___.scss";
  * @param {array}   [metadata.additionalClasses] - Alert additional classes
  */
 
-const ___ = (props: Props) => {
+const Alert = (props: Props) => {
   const { prop1, prop2 } = props;
 
-  const ___Class = cx(
+  const AlertClass = cx(
     "o-alert",
     props.metadata.contextClass,
     props.metadata.additionalClasses,
     {
-      "___--prop1": prop1
+      "Alert--prop1": prop1
     }
   );
 
@@ -48,22 +46,20 @@ const ___ = (props: Props) => {
 
   return (
     <div
-      className={`${___Class} o-alert--${props.type} ${!props.hidden &&
+      className={`${AlertClass} o-alert--${props.type} ${!props.hidden &&
         "is--visible"} ${props.closable && "js-alert"} wow`}
     >
       <i
-        className={`${"o-alert__icon" |
-          contextClass(contextClass)} material-icons`}
+        className="o-alert__icon material-icons"
       >
         {getIcon(props.type)}
       </i>
-      <div className={"o-alert__content" | contextClass(contextClass)}>
+      <div className="o-alert__content">
         {props.content | raw}
       </div>
       {props.closable && (
         <button
-          className={`${"o-alert__close" |
-            contextClass(contextClass)} js-alert-close`}
+          className="o-alert__close js-alert-close"
         >
           &#x2716;
         </button>
@@ -72,8 +68,8 @@ const ___ = (props: Props) => {
   );
 };
 
-___.defaultProps = {
+Alert.defaultProps = {
   type: "info"
 };
 
-export default ___;
+export default Alert;

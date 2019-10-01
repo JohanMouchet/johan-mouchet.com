@@ -1,9 +1,9 @@
 // @flow
 
 import * as React from "react";
-import "./___.scss";
+import "./mast-footer.scss";
 
-const ___ = () => {
+const MastFooter = () => {
   return (
     <footer className="p-mast-footer">
       <div className="container">
@@ -33,4 +33,4 @@ const ___ = () => {
   );
 };
 
-export default ___;
+export default MastFooter;

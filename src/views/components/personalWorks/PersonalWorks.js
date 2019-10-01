@@ -1,24 +1,17 @@
 // @flow
 
 import * as React from "react";
-import cx from "./node_modules/classnames";
-import "./___.scss";
+import "./personal-works.scss";
 
 /**
- * Personal Works
- *
  * @param {array}   works                  - List of works
  * @param {boolean} works[0].video         - True if work type is video
  * @param {array}   works[0].thumbnailPath - Work thumbnail image path
  * @param {array}   works[0].expandedPath  - Work expanded image path
  */
 
-const ___ = (props: Props) => {
+const PersonalWorks = (props: Props) => {
   const { prop1, prop2 } = props;
-
-  const ___Class = cx("___", {
-    "___--prop1": prop1
-  });
 
   return (
     <div className="c-personal-works">
@@ -50,8 +43,8 @@ const ___ = (props: Props) => {
   );
 };
 
-___.defaultProps = {
+PersonalWorks.defaultProps = {
   prop1: 2
 };
 
-export default ___;
+export default PersonalWorks;

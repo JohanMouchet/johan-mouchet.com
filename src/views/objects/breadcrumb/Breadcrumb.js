@@ -2,11 +2,9 @@
 
 import * as React from "react";
 import cx from "classnames";
-import "./___.scss";
+import "./breadcrumb.scss";
 
 /**
- * Breadcrumb
- *
  * @param {string} levels.title                 - Breadcrumb level title
  * @param {string} levels.url                   - Breadcrumb title relative url
  * @param {string} [metadata.contextClass]      - Breadcrumb context class
@@ -15,15 +13,15 @@ import "./___.scss";
 
 // TODO: "context" was passed in the macro
 
-const ___ = (props: Props) => {
+const Breadcrumb = (props: Props) => {
   const { prop1, prop2 } = props;
 
-  const ___Class = cx(
+  const BreadcrumbClass = cx(
     "o-breadcrumb",
     props.metadata.contextClass,
     props.metadata.additionalClasses,
     {
-      "___--prop1": prop1
+      "Breadcrumb--prop1": prop1
     }
   );
 
@@ -31,15 +29,14 @@ const ___ = (props: Props) => {
 
   return (
     <Fragment>
-      <ol className={___Class}>
+      <ol className={BreadcrumbClass}>
         {props.levels.map((level, index) => (
           <li
-            className={`${"o-breadcrumb__level" |
-              contextClass(contextClass)} wow fadeInUp`}
+            className="o-breadcrumb__level wow fadeInUp"
             data-wow-delay={index > 0 && (index * 0.15)`s`}
           >
             <a
-              className={"o-breadcrumb__link" | contextClass(contextClass)}
+              className="o-breadcrumb__link"
               href={level.url && !lastLevel}
             >
               {level.title}
@@ -76,8 +73,8 @@ const ___ = (props: Props) => {
   );
 };
 
-___.defaultProps = {
+Breadcrumb.defaultProps = {
   prop1: 2
 };
 
-export default ___;
+export default Breadcrumb;

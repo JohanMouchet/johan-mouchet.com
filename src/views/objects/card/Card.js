@@ -2,11 +2,9 @@
 
 import * as React from "react";
 import cx from "classnames";
-import "./___.scss";
+import "./card.scss";
 
 /**
- * Card
- *
  * @param {string} [banner]                     - Card banner
  * @param {string} [bannerUrl]                  - Card banner URL
  * @param {string} [header]                     - Card header
@@ -17,43 +15,43 @@ import "./___.scss";
  * @param {array}  [metadata.additionalClasses] - Card additional classes
  */
 
-const ___ = (props: Props) => {
+const Card = (props: Props) => {
   const {
     prop1,
     prop2
   } = props;
 
-  const ___Class = cx(
+  const CardClass = cx(
 	"o-card",
 	props.metadata.contextClass,
 	props.metadata.modifierClasses,
 	props.metadata.additionalClasses,
     {
-      "___--prop1": prop1
+      "Card--prop1": prop1
     }
   );
 
   return (
-	<section className={___Class}>
+	<section className={CardClass}>
 		{% if props.banner || props.bannerUrl %}
 			{% set tag = !props.header ? 'header' : 'div' %}
 
-			<{ tag } className={'o-card__banner'|contextClass(contextClass)}  style={props.bannerUrl && ${`backgroundImage: url('${ props.bannerUrl }')`}}>
+			<{ tag } className='o-card__banner' style={props.bannerUrl && ${`backgroundImage: url('${ props.bannerUrl }')`}}>
 				{ props.banner === true ? '' : props.banner|raw }
 			</{ tag }>
 		{% endif %}
 		{props.header &&
-			<header className={'o-card__header'|contextClass(contextClass)}>
+			<header className='o-card__header'>
 				{ props.header|raw }
 			</header>
 		}
 		{props.body &&
-			<div className={'o-card__body'|contextClass(contextClass)}>
+			<div className='o-card__body'>
 				{ props.body|raw }
 			</div>
 		}
 		{props.footer &&
-			<footer className={'o-card__footer'|contextClass(contextClass)}>
+			<footer className='o-card__footer'>
 				{ props.footer|raw }
 			</footer>
 		}
@@ -61,8 +59,8 @@ const ___ = (props: Props) => {
   );
 };
 
-___.defaultProps = {
+Card.defaultProps = {
   prop1: 2
 };
 
-export default ___;
+export default Card;

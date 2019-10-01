@@ -2,11 +2,9 @@
 
 import * as React from "react";
 import cx from "classnames";
-import "./___.scss";
+import "./notice.scss";
 
 /**
- * Notice
- *
  * @param {string}  primary                      - Notice primary content
  * @param {string}  [secondary]                  - Notice secondary content
  * @param {boolean} closeButton                  - Notice close button
@@ -14,31 +12,32 @@ import "./___.scss";
  * @param {array}   [metadata.additionalClasses] - Notice additional classes
  */
 
-const ___ = (props: Props) => {
+const Notice = (props: Props) => {
   const { prop1, prop2 } = props;
 
-  const ___Class = cx(
+  const NoticeClass = cx(
     "o-notice",
     props.metadata.contextClass,
     props.metadata.additionalClasses,
+    "js-notice",
     {
-      "___--prop1": prop1
+      "Notice--prop1": prop1
     }
   );
 
   return (
-    <div className={`${___Class} js-notice`}>
+    <div className={NoticeClass}>
       <div className="container container--lg">
         <div className="grid grid--yCenter-@xs">
           <div className="cell cell--@xs">
-            <div className={"o-notice__primary" | contextClass(contextClass)}>
+            <div className="o-notice__primary">
               {props.primary | raw}
             </div>
           </div>
           {props.secondary && (
             <div className="cell cell--0-@xs">
               <div
-                className={"o-notice__secondary" | contextClass(contextClass)}
+                className="o-notice__secondary"
               >
                 {props.secondary | raw}
               </div>
@@ -47,8 +46,7 @@ const ___ = (props: Props) => {
           {props.closeButton && (
             <div className="cell cell--0-@xs">
               <button
-                className={`${"o-notice__close" |
-                  contextClass(contextClass)} js-notice-close`}
+                className="o-notice__close js-notice-close"
               >
                 &#x2716;
               </button>
@@ -60,8 +58,8 @@ const ___ = (props: Props) => {
   );
 };
 
-___.defaultProps = {
+Notice.defaultProps = {
   prop1: 2
 };
 
-export default ___;
+export default Notice;

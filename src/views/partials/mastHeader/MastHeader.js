@@ -1,9 +1,9 @@
 // @flow
 
 import * as React from "react";
-import "./___.scss";
+import "./mast-header.scss";
 
-const ___ = () => {
+const MastHeader = () => {
   return (
 	<header className="p-mast-header">
 		<div className="p-mast-header__inner">
@@ -37,4 +37,4 @@ const ___ = () => {
 	);
 };
 
-export default ___;
+export default MastHeader;

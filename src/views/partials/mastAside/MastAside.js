@@ -2,8 +2,8 @@
 
 import * as React from "react";
 
-const ___ = children => {
+const MastAside = children => {
   return <aside className="p-mast-aside l-aside">{children}</aside>;
 };
 
-export default ___;
+export default MastAside;
