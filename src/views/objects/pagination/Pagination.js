@@ -75,17 +75,13 @@ const Pagination = (props: Props) => {
 
   // TODO: contextClass()
 
-  // [1(current), 2, 3, upper, ..., 12, >, >>]
-  // [<, 1(lower), 2, 3, 4(current), 5, 6, 7(upper),..., 12, >, >>]
-  // [<<, <, ..., 2(lower), 3, 4, 5(current), 6, 7, 8(upper), ..., 12, >, >>]
-  //					 [<<, <, ..., 6(lower), 7, 8, 9(current), 10, 11, 12(upper), >]
-  // 															[<<, <, ..., 9(lower), 10, 11, 12(current)]
-
-  const current = props.current;
-  const range = props.range;
   const lower = current - range;
   const upper = current + range;
   const linksLength = links.length;
+
+  //     [<, 1, 2(current), 3, 4, 5(upper), ..., 12, >, >>]
+  // [<<, <, ..., 2(lower), 3, 4, 5(current), 6, 7, 8(upper), ..., 12, >, >>]
+  //           [<<, <, ..., 6(lower), 7, 8, 9(current), 10, 11, 12(upper), >]
 
   return (
     <ol className={PaginationClass}>
@@ -99,12 +95,12 @@ const Pagination = (props: Props) => {
         // lowerRange: index < current
         // current
         // upperRange: index > current
-        // ...: upper < linksLength
-        // last:
+        // ...: upper < linksLength - 2
+        // last: upper < linksLength - 1
         //
-        <Link href={link} first>
-          <Icon first />
-        </Link>;
+        // <Link href={link} first>
+        //   <Icon first />
+        // </Link>
       })}
 
       {/* next: current < linksLength */}
