@@ -4,11 +4,11 @@ import * as React from "react";
 import cx from "classnames";
 import "./badge.scss";
 
-/**
- * @param {string} content                      - Badge content
- * @param {string} [metadata.contextClass]      - Badge context class
- * @param {array}  [metadata.additionalClasses] - Badge additional classes
- */
+type Props = {
+  content: string,
+  [metadata.contextClass]: string,
+  [metadata.additionalClasses]: array
+};
 
 const Badge = (props: Props) => {
   const { prop1, prop2 } = props;

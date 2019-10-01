@@ -3,14 +3,12 @@
 import * as React from "react";
 import "./social-media.scss";
 
-/**
- * Social Media
- *
- * @param {array}  medias 		       - List of medias
- * @param {string} medias[0]name     - media name
- * @param {string} medias[0]URL      - media URL
- * @param {string} medias[0]iconPath - media iconPath
- */
+type Props = {
+  medias: array,
+  medias[0]name: string,
+  medias[0]URL: string,
+  medias[0]iconPath: string,
+};
 
 const SocialMedia = (props: Props) => {
   const { prop1, prop2 } = props;

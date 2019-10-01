@@ -4,13 +4,13 @@ import * as React from "react";
 import cx from "classnames";
 import "./notice.scss";
 
-/**
- * @param {string}  primary                      - Notice primary content
- * @param {string}  [secondary]                  - Notice secondary content
- * @param {boolean} closeButton                  - Notice close button
- * @param {string}  [metadata.contextClass]       - Notice context class
- * @param {array}   [metadata.additionalClasses] - Notice additional classes
- */
+type Props = {
+  primary: string,
+  [secondary]: string,
+  closeButton: boolean,
+  [metadata.contextClass]: string,
+  [metadata.additionalClasses]: array,
+};
 
 const Notice = (props: Props) => {
   const { prop1, prop2 } = props;

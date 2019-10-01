@@ -4,15 +4,15 @@ import * as React from "react";
 import cx from "./node_modules/classnames";
 import "./___.scss";
 
-/**
- * @param {array}  context                      - Used to get _SITE['rurl'] for smooth-scroll
- * @param {string} tag                          - Element tag (ex: h2)
- * @param {string} id                           - Element id for anchor reference
- * @param {string} text                         - Element text
- * @param {string} [marker : "#"]               - Anchor marker
- * @param {string} [metadata.contextClass]      - Anchor context class
- * @param {object} [metadata.attributes]        - Element attributes
- */
+type Props = {
+  context: array,
+  tag: string,
+  id: string,
+  text: string,
+  [marker: string,
+  [metadata.contextClass]: string,
+  [metadata.attributes]: object,
+};
 
 // TODO: "context" was passed in the macro
 

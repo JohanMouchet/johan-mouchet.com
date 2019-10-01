@@ -4,14 +4,14 @@ import * as React from "react";
 import cx from "classnames";
 import "./blockquote.scss";
 
-/**
- * @param {string} quote                        - Blockquote quote
- * @param {string} [outerQuote]                 - Blockquote outer quote
- * @param {string} [cite]                       - Blockquote cite
- * @param {string} [metadata.contextClass]      - Blockquote context class
- * @param {array}  [metadata.modifierClasses]   - Blockquote modifiers classes
- * @param {array}  [metadata.additionalClasses] - Blockquote additional classes
- */
+type Props = {
+  quote: string,
+  [outerQuote]: string,
+  [cite]: string,
+  [metadata.contextClass]: string,
+  [metadata.modifierClasses]: array,
+  [metadata.additionalClasses]: array,
+};
 
 const Blockquote = (props: Props) => {
   const { prop1, prop2 } = props;

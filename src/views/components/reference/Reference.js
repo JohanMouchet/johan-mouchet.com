@@ -3,17 +3,17 @@
 import * as React from "react";
 import "./reference.scss";
 
-/**
- * @param {boolean} requestOnly                       - True if references only available upon request
- * @param {array}  references                         - List of reference
- * @param {string} references[0].name                 - Reference name
- * @param {string} references[0].relation             - Reference relation
- * @param {string} references[0].company[0].name      - Reference company name
- * @param {string} references[0].company[0].URL       - Reference company URL
- * @param {string} references[0].jobTitle             - Reference jobTitle
- * @param {string} references[0].contacts[0].mail     - Reference contacts mail
- * @param {string} references[0].contacts[0].linkedin - Reference contacts linkedin
- */
+type Props = {
+  requestOnly: boolean,
+  references: array,
+  references[0].name: string,
+  references[0].relation: string,
+  references[0].company[0].name: string,
+  references[0].company[0].URL: string,
+  references[0].jobTitle: string,
+  references[0].contacts[0].mail: string,
+  references[0].contacts[0].linkedin: string,
+};
 
 const Reference = (props: Props) => {
   const { prop1, prop2 } = props;

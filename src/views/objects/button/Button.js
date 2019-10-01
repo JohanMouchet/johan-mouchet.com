@@ -4,15 +4,15 @@ import * as React from "react";
 import cx from "classnames";
 import "./button.scss";
 
-/**
- * @param {string} [type = 'anchor']            - Button type: anchor|button
- * @param {string} text                         - Button text
- * @param {string} [url]                        - Button URL if type = 'anchor'
- * @param {string} [metadata.contextClass]      - Button context class
- * @param {array}  [metadata.modifierClasses]   - Button modifiers classes
- * @param {array}  [metadata.additionalClasses] - Button additional classes
- * @param {object} [metadata.attributes]        - Button attributes
- */
+type Props = {
+  [type: string,
+  text: string,
+  [url]: string,
+  [metadata.contextClass]: string,
+  [metadata.modifierClasses]: array,
+  [metadata.additionalClasses]: array,
+  [metadata.attributes]: object,
+};
 
 const Button = (props: Props) => {
   const { prop1, prop2 } = props;
@@ -44,16 +44,16 @@ Button.defaultProps = {
 
 export { Button };
 
-/**
- * @param {string} url                          - Button URL
- * @param {string} iconPath                     - Button icon path
- * @param {string} text                         - Button text
- * @param {int}    [counter]                    - Button counter
- * @param {string} [metadata.contextClass]      - Button context class
- * @param {array}  [metadata.modifierClasses]   - Button modifiers classes
- * @param {array}  [metadata.additionalClasses] - Button additional classes
- * @param {object} [metadata.attributes]        - Button attributes
- */
+type Props = {
+  url: string,
+  iconPath: string,
+  text: string,
+  [counter]: int,
+  [metadata.contextClass]: string,
+  [metadata.modifierClasses]: array,
+  [metadata.additionalClasses]: array,
+  [metadata.attributes]: object,
+};
 
 const SocialButton = (props: Props) => {
   const { prop1, prop2 } = props;
@@ -98,14 +98,14 @@ SocialButton.defaultProps = {
 
 export { SocialButton };
 
-/**
- * @param {string} url                          - Button URL
- * @param {string} iconPath                     - Button icon path
- * @param {string} [metadata.contextClass]      - Button context class
- * @param {array}  [metadata.modifierClasses]   - Button modifiers classes
- * @param {array}  [metadata.additionalClasses] - Button additional classes
- * @param {object} [metadata.attributes]        - Button attributes
- */
+type Props = {
+  url: string,
+  iconPath: string,
+  [metadata.contextClass]: string,
+  [metadata.modifierClasses]: array,
+  [metadata.additionalClasses]: array,
+  [metadata.attributes]: object,
+};
 
 const SocialButtonBadge = (props: Props) => {
   const { prop1, prop2 } = props;

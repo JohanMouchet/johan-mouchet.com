@@ -3,12 +3,12 @@
 import * as React from "react";
 import "./personal-works.scss";
 
-/**
- * @param {array}   works                  - List of works
- * @param {boolean} works[0].video         - True if work type is video
- * @param {array}   works[0].thumbnailPath - Work thumbnail image path
- * @param {array}   works[0].expandedPath  - Work expanded image path
- */
+type Props = {
+  works: array,
+  works[0].video: boolean,
+  works[0].thumbnailPath: array,
+  works[0].expandedPath: array,
+};
 
 const PersonalWorks = (props: Props) => {
   const { prop1, prop2 } = props;

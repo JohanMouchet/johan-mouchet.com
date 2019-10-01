@@ -4,12 +4,12 @@ import * as React from "react";
 import cx from "classnames";
 import "./accordion.scss";
 
-/**
- * @param {string} items.thumb                  - Accordion thumb title
- * @param {string} items.panel                  - Accordion panel content
- * @param {string} [metadata.contextClass]      - Accordion context class
- * @param {array}  [metadata.additionalClasses] - Accordion additional classes
- */
+type Props = {
+  items.thumb: string,
+  items.panel: string,
+  [metadata.contextClass]: string,
+  [metadata.additionalClasses]: array,
+};
 
 const Accordion = (props: Props) => {
   const { prop1, prop2 } = props;

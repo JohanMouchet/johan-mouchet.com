@@ -4,17 +4,17 @@ import * as React from "react";
 import "./experience.scss";
 import { Projects } from "../";
 
-/**
- * @param {array}  experiences     - List of experiences
- * @param {string} company[0].URL  - Experience company URL
- * @param {string} company[0].name - Experience company name
- * @param {string} location        - Experience location
- * @param {string} jobTitle        - Experience job title
- * @param {string} startDate       - Experience start date, dd/mm/yyyy format
- * @param {string} endDate         - Experience end date, dd/mm/yyyy format or "Present"
- * @param {string} lede            - Experience lede
- * @param {array}  [projects]      - Experience projects
- */
+type Props = {
+  experiences: array,
+  company[0].URL: string,
+  company[0].name: string,
+  location: string,
+  jobTitle: string,
+  startDate: string,
+  endDate: string,
+  lede: string,
+  [projects]: array,
+};
 
 const Experience = (props: Props) => {
   const { prop1, prop2 } = props;

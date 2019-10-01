@@ -7,13 +7,13 @@ import { Button } from "../";
 
 // TODO: {% import _self as menu %}
 
-/**
- * @param {array}  menu                                 - List of menu item
- * @param {string} [menu[0].text]                       - Menu item type link
- * @param {string} [menu[0].button]                     - Menu item type button (using o-button)
- * @param {string} [menu[0].url]                        - Menu item link URL
- * @param {array}  [menu[0].metadata.additionalClasses] - Menu item additional classes
- */
+type Props = {
+  menu: array,
+  [menu[0].text]: string,
+  [menu[0].button]: string,
+  [menu[0].url]: string,
+  [menu[0].metadata.additionalClasses]: array,
+};
 
 // TODO: "isSubmenu" was passed in the macro
 

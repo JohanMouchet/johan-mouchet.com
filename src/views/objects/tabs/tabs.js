@@ -4,12 +4,12 @@ import * as React from "react";
 import cx from "classnames";
 import "./tabs.scss";
 
-/**
- * @param {string} tabs.thumb                   - Tab thumb title
- * @param {string} tabs.panel                   - Tab panel content
- * @param {string} [metadata.contextClass]      - Tabs context class
- * @param {array}  [metadata.additionalClasses] - Tabs additional classes
- */
+type Props = {
+  tabs.thumb: string,
+  tabs.panel: string,
+  [metadata.contextClass]: string,
+  [metadata.additionalClasses]: array,
+};
 
 const Tabs = (props: Props) => {
   const { prop1, prop2 } = props;

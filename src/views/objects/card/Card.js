@@ -4,16 +4,16 @@ import * as React from "react";
 import cx from "classnames";
 import "./card.scss";
 
-/**
- * @param {string} [banner]                     - Card banner
- * @param {string} [bannerUrl]                  - Card banner URL
- * @param {string} [header]                     - Card header
- * @param {string} [body]                       - Card body
- * @param {string} [footer]                     - Card footer
- * @param {string} [metadata.contextClass]      - Card context class
- * @param {array}  [metadata.modifierClasses]   - Card modifiers classes
- * @param {array}  [metadata.additionalClasses] - Card additional classes
- */
+type Props = {
+  [banner]: string,
+  [bannerUrl]: string,
+  [header]: string,
+  [body]: string,
+  [footer]: string,
+  [metadata.contextClass]: string,
+  [metadata.modifierClasses]: array,
+  [metadata.additionalClasses]: array,
+};
 
 const Card = (props: Props) => {
   const {

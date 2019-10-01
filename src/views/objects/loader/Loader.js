@@ -4,11 +4,11 @@ import * as React from "react";
 import cx from "classnames";
 import "./loader.scss";
 
-/**
- * @param {string} [metadata.contextClass]      - Loader context class
- * @param {array}  [metadata.modifierClasses]   - Loader modifiers classes
- * @param {array}  [metadata.additionalClasses] - Loader additional classes
- */
+type Props = {
+  [metadata.contextClass]: string,
+  [metadata.modifierClasses]: array,
+  [metadata.additionalClasses]: array,
+};
 
 const Loader = (props: Props) => {
   const { prop1, prop2 } = props;

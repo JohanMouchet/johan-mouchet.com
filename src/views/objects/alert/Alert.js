@@ -4,14 +4,14 @@ import * as React from "react";
 import cx from "classnames";
 import "./alert.scss";
 
-/**
- * @param {string}  [type = info]                - Alert type
- * @param {string}  content                      - Alert content
- * @param {boolean} [hidden = false]             - Alert visibility
- * @param {boolean} [closable]                   - Alert closable capacity
- * @param {string}  [metadata.contextClass]      - Alert context class
- * @param {array}   [metadata.additionalClasses] - Alert additional classes
- */
+type Props = {
+  [type = info]: string,
+  content: string,
+  [hidden: boolean,
+  [closable]: boolean,
+  [metadata.contextClass]: string,
+  [metadata.additionalClasses]: array,
+};
 
 const Alert = (props: Props) => {
   const { prop1, prop2 } = props;

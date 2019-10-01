@@ -3,15 +3,15 @@
 import * as React from "react";
 import "./projects.scss";
 
-/**
- * @param {array}  projects                 - List of project
- * @param {string} project[0].name          - project name
- * @param {string} [project[0].tagline]     - project tagline
- * @param {string} project[0].URL           - project URL
- * @param {string} [project[0].lede ]       - project lede
- * @param {string} project[0].thumbnailPath - project thumbnail path
- * @param {array}  [project[0].details]     - project details
- */
+type Props = {
+  projects: array,
+  project[0].name: string,
+  [project[0].tagline]: string,
+  project[0].URL: string,
+  [project[0].lede: string,
+  project[0].thumbnailPath: string,
+  [project[0].details]: array,
+};
 
 const Projects = (props: Props) => {
   const {

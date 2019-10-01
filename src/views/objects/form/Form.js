@@ -4,13 +4,13 @@ import * as React from "react";
 import cx from "classnames";
 import "./form.scss";
 
-/**
- * @param {string} [for]                        - Label for
- * @param {string} [text]                       - Label text
- * @param {string} [metadata.contextClass]      - Label context class
- * @param {array}  [metadata.additionalClasses] - Label additional classes
- * @param {array}  [metadata.modifierClasses]   - Label modifiers classes
- */
+type Props = {
+  [for]: string,
+  [text]: string,
+  [metadata.contextClass]: string,
+  [metadata.additionalClasses]: array,
+  [metadata.modifierClasses]: array,
+};
 
 const Label = (props: Props) => {
 	const {
@@ -44,16 +44,16 @@ Label.defaultProps = {
 
 export { Label };
 
-/**
- * @param {string} [id]                         - Field id
- * @param {string} type                         - Field type
- * @param {string} name                         - Field name
- * @param {string} [value]                      - Field value
- * @param {string} [metadata.contextClass]      - Field context class
- * @param {array}  [metadata.additionalClasses] - Field additional classes
- * @param {array}  [metadata.modifierClasses]   - Field modifiers classes
- * @param {object} [metadata.attributes]        - Field attributes
- */
+type Props = {
+  [id]: string,
+  type: string,
+  name: string,
+  [value]: string,
+  [metadata.contextClass]: string,
+  [metadata.additionalClasses]: array,
+  [metadata.modifierClasses]: array,
+  [metadata.attributes]: object,
+};
 
 const Field = (props: Props) => {
 	const {
@@ -84,16 +84,16 @@ Field.defaultProps = {
 
 export { Field };
 
-/**
- * @param {string} [id]                         - Toggle id
- * @param {string} type                         - Toggle type (checkbox|radio)
- * @param {string} [name]                       - Toggle name
- * @param {string} [value]                      - Toggle value
- * @param {string} [text]                       - Toggle text
- * @param {string} [metadata.contextClass]      - Toggle context class
- * @param {array}  [metadata.additionalClasses] - Toggle additional classes
- * @param {object} [metadata.attributes]        - Toggles attributes
- */
+type Props = {
+  [id]: string,
+  type: string,
+  [name]: string,
+  [value]: string,
+  [text]: string,
+  [metadata.contextClass]: string,
+  [metadata.additionalClasses]: array,
+  [metadata.attributes]: object,
+};
 
 const Toggle = (props: Props) => {
 	const {
@@ -129,15 +129,15 @@ Toggle.defaultProps = {
 
 export { Toggle };
 
-/**
- * @param {string} [id]                         - File id
- * @param {string} name                         - File name
- * @param {string} [text]                       - File text
- * @param {string} [metadata.contextClass]      - File context class
- * @param {array}  [metadata.additionalClasses] - File additional classes
- * @param {object} [metadata.attributes]        - File attributes
- * @param {string} [metadata.multipleCaption]   - File caption used when multiple files selected (default: "{count} files selected")
- */
+type Props = {
+  [id]: string,
+  name: string,
+  [text]: string,
+  [metadata.contextClass]: string,
+  [metadata.additionalClasses]: array,
+  [metadata.attributes]: object,
+  [metadata.multipleCaption]: string,
+};
 
 const File = (props: Props) => {
 	const {
@@ -173,17 +173,17 @@ File.defaultProps = {
 
 export { File };
 
-/**
- * @param {string} [id]                         - Select id
- * @param {string} name                         - Select name
- * @param {string} [metadata.contextClass]      - Select context class
- * @param {array}  [metadata.additionalClasses] - Select additional classes
- * @param {object} [metadata.attributes]        - Select attributes
- * @param {array}  options                      - Select list of option
- * @param {string} options[0].text              - Select option text
- * @param {string} options[0].value             - Select option value
- * @param {array}  options[0].attributes        - Select option attributes
- */
+type Props = {
+  [id]: string,
+  name: string,
+  [metadata.contextClass]: string,
+  [metadata.additionalClasses]: array,
+  [metadata.attributes]: object,
+  options: array,
+  options[0].text: string,
+  options[0].value: string,
+  options[0].attributes: array,
+};
 
 const Select = (props: Props) => {
 	const {
@@ -218,14 +218,14 @@ Select.defaultProps = {
 
 export { Select };
 
-/**
- * @param {string} [id]                         - Field id
- * @param {string} name                         - Field name
- * @param {string} [text]                       - Field text
- * @param {string} [metadata.contextClass]      - Field context class
- * @param {array}  [metadata.additionalClasses] - Field additional classes
- * @param {object} [metadata.attributes]        - Field attributes
- */
+type Props = {
+  [id]: string,
+  name: string,
+  [text]: string,
+  [metadata.contextClass]: string,
+  [metadata.additionalClasses]: array,
+  [metadata.attributes]: object,
+};
 
 const Textarea = (props: Props) => {
 	const {
@@ -257,13 +257,13 @@ Textarea.defaultProps = {
 
 export { Textarea };
 
-/**
- * @param {string} [id]                         - Field id
- * @param {string} name                         - Field name
- * @param {string} [metadata.contextClass]      - Field context class
- * @param {array}  [metadata.additionalClasses] - Field additional classes
- * @param {object} [metadata.attributes]        - Field attributes
- */
+type Props = {
+  [id]: string,
+  name: string,
+  [metadata.contextClass]: string,
+  [metadata.additionalClasses]: array,
+  [metadata.attributes]: object,
+};
 
 const Range = (props: Props) => {
 	const {

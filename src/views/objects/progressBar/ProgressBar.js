@@ -4,16 +4,16 @@ import * as React from "react";
 import cx from "./node_modules/classnames";
 import "./progress-bar.scss";
 
-/**
- * @param {string} [label]                      - ProgressBar label
- * @param {string} [total]                      - ProgressBar total
- * @param {int}    filling                      - ProgressBar filling percent
- * @param {string} [tooltip]                    - ProgressBar tooltip
- * @param {string} [metadata.contextClass]      - ProgressBar context class
- * @param {array}  [metadata.additionalClasses] - ProgressBar additional classes
- * @param {array}  [metadata.modifierClasses]   - ProgressBar modifiers classes
- * @param {object} [metadata.attributes]        - ProgressBar attributes
- */
+type Props = {
+  [label]: string,
+  [total]: string,
+  filling: int,
+  [tooltip]: string,
+  [metadata.contextClass]: string,
+  [metadata.additionalClasses]: array,
+  [metadata.modifierClasses]: array,
+  [metadata.attributes]: object,
+};
 
 const ProgressBar = (props: Props) => {
   const { prop1, prop2 } = props;

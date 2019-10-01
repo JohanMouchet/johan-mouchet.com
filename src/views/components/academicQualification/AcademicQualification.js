@@ -3,14 +3,14 @@
 import * as React from "react";
 import "./academic-qualification.scss";
 
-/**
- * @param {array}  qualifications 		                 - List of qualifications
- * @param {string} qualifications[0].establishment.name - Qualification establishment name
- * @param {string} qualifications[0].establishment.URL  - Qualification establishment URL
- * @param {string} qualifications[0].location           - Qualification location
- * @param {int}    qualifications[0].graduationYear     - Qualification graduationYear
- * @param {string} qualifications[0].title              - Qualification title
- */
+type Props = {
+  qualifications: array,
+  qualifications[0].establishment.name: string,
+  qualifications[0].establishment.URL: string,
+  qualifications[0].location: string,
+  qualifications[0].graduationYear: int,
+  qualifications[0].title: string,
+};
 
 const AcademicQualification = (props: Props) => {
   const { prop1, prop2 } = props;

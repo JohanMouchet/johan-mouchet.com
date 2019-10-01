@@ -4,12 +4,12 @@ import * as React from "react";
 import cx from "classnames";
 import "./footnotes.scss";
 
-/**
- * @param {array}  context  - Used to get _SITE['rurl'] for smooth-scroll
- * @param {string} id       - Reference id, need to match note id
- * @param {string} [prefix] - Reference prefix, in case of multiple footnotes on the page
- * @param {string} text     - Reference text
- */
+type Props = {
+  context: array
+  id: string,
+  [prefix]: string,
+  text: string,
+};
 
 // TODO: "context" was passed in the macro
 
@@ -36,14 +36,14 @@ Reference.defaultProps = {
 
 export { Reference };
 
-/**
- * @param {array}  context                      - Used to get _SITE['rurl'] for smooth-scroll
- * @param {string} id                           - Note id, need to match reference id
- * @param {string} [prefix]                     - Note prefix, in case of multiple footnotes on the page
- * @param {string} text                         - Note text
- * @param {string} [metadata.contextClass]      - Note context class
- * @param {array}  [metadata.additionalClasses] - Notes additional classes
- */
+type Props = {
+  context: array,
+  id: string,
+  [prefix]: string,
+  text: string,
+  [metadata.contextClass]: string,
+  [metadata.additionalClasses]: array,
+};
 
 // TODO: "context" was passed in the macro
 

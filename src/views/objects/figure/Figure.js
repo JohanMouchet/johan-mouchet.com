@@ -4,15 +4,15 @@ import * as React from "react";
 import cx from "classnames";
 import "./figure.scss";
 
-/**
- * @param {string} src                          - Figure image source
- * @param {string} [alt]                        - Figure image alt
- * @param {string} [title]                      - Figure image title
- * @param {string} [metadata.contextClass]      - Figure context class
- * @param {array}  [metadata.modifierClasses]   - Figure modifiers classes
- * @param {array}  [metadata.additionalClasses] - Figure additional classes
- * @param {object} [metadata.attributes]        - Figure attributes
- */
+type Props = {
+  src: string,
+  [alt]: string,
+  [title]: string,
+  [metadata.contextClass]: string,
+  [metadata.modifierClasses]: array,
+  [metadata.additionalClasses]: array,
+  [metadata.attributes]: object,
+};
 
 const Figure = (props: Props) => {
   const { prop1, prop2 } = props;

@@ -4,12 +4,12 @@ import * as React from "react";
 import cx from "classnames";
 import "./breadcrumb.scss";
 
-/**
- * @param {string} levels.title                 - Breadcrumb level title
- * @param {string} levels.url                   - Breadcrumb title relative url
- * @param {string} [metadata.contextClass]      - Breadcrumb context class
- * @param {array}  [metadata.additionalClasses] - Breadcrumb additional classes
- */
+type Props = {
+  levels.title: string,
+  levels.url: string,
+  [metadata.contextClass]: string,
+  [metadata.additionalClasses]: array,
+};
 
 // TODO: "context" was passed in the macro
 
