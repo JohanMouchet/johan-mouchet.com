@@ -39,6 +39,7 @@ const ProgressBar = (props: Props) => {
         <span className="o-progress-bar__total">{props.total | raw}</span>
       )}
       <div className="o-progress-bar__container">
+        {/* TODO: cap 0 >= filling <= 100 */}
         <div
           className="o-progress-bar__filling wow"
           style={`width: ${props.filling}%`}

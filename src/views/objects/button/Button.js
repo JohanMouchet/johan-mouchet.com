@@ -6,7 +6,6 @@ import "./button.scss";
 
 type ButtonProps = {
   type: string,
-  text: string,
   url: ?string,
   metadata: {
     contextClass: ?string,
@@ -16,7 +15,7 @@ type ButtonProps = {
   }
 };
 
-const Button = (props: ButtonProps) => {
+const Button = (props: ButtonProps, children) => {
   const { prop1, prop2 } = props;
 
   const ButtonClass = cx(
@@ -31,11 +30,11 @@ const Button = (props: ButtonProps) => {
 
   return props.type === "button" ? (
     <button className={ButtonClass} {...props.metadata.attributes}>
-      {props.text | raw}
+      {children}
     </button>
   ) : (
     <a className={ButtonClass} href={props.url} {...props.metadata.attributes}>
-      {props.text | raw}
+      {children}
     </a>
   );
 };
@@ -49,7 +48,6 @@ export { Button };
 type SocialButtonProps = {
   url: string,
   iconPath: string,
-  text: string,
   counter: ?int,
   metadata: {
     contextClass: ?string,
@@ -59,7 +57,7 @@ type SocialButtonProps = {
   }
 };
 
-const SocialButton = (props: SocialButtonProps) => {
+const SocialButton = (props: SocialButtonProps, children) => {
   const { prop1, prop2 } = props;
 
   const SocialButtonClass = cx(
@@ -81,8 +79,8 @@ const SocialButton = (props: SocialButtonProps) => {
       rel="noopener"
       {...props.metadata.attributes}
     >
-      <span className="o-button__icon">{props.iconPath | raw}</span>
-      <span className="o-button__text">{props.text | raw}</span>
+      <span className="o-button__icon">{props.iconPath}</span>
+      <span className="o-button__text">{children}</span>
       {props.counter && (
         <span className="o-button__counter">{props.counter}</span>
       )}
@@ -130,7 +128,7 @@ const ButtonSocialBadge = (props: SocialButtonBadgeProps) => {
       rel="noopener"
       {...props.metadata.attributes}
     >
-      <span className="o-button__icon">{props.iconPath | raw}</span>
+      <span className="o-button__icon">{props.iconPath}</span>
     </a>
   );
 };

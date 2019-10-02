@@ -41,9 +41,10 @@ const Card = (props: Props) => {
             props.bannerUrl && `backgroundImage: url('${props.bannerUrl}')`
           }
         >
-          {props.banner === true ? "" : props.banner | raw}
+          {props.banner === true ? "" : props.banner}
         </Tag>
       )}
+      {/* TODO: <Card><Header>Sub comp</Header></Card> */}
       {props.header && (
         <header className="o-card__header">{props.header | raw}</header>
       )}

@@ -3,6 +3,8 @@
 - Split GLOBAL.paths and GLOBAL.version
 - Export / import svgs
 - Import `_base.scss` to layout
+- Destructure props
+- Add cx modifierClasses
 - Replace `{% if`
 - Fix Flow [0]
 - remove props.name

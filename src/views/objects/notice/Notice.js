@@ -5,7 +5,6 @@ import cx from "classnames";
 import "./notice.scss";
 
 type Props = {
-  primary: string,
   secondary: ?string,
   closeButton: boolean,
   metadata: {
@@ -14,7 +13,7 @@ type Props = {
   }
 };
 
-const Notice = (props: Props) => {
+const Notice = (props: Props, children) => {
   const { prop1, prop2 } = props;
 
   const NoticeClass = cx(
@@ -32,7 +31,7 @@ const Notice = (props: Props) => {
       <div className="container container--lg">
         <div className="grid grid--yCenter-@xs">
           <div className="cell cell--@xs">
-            <div className="o-notice__primary">{props.primary | raw}</div>
+            <div className="o-notice__primary">{children}</div>
           </div>
           {props.secondary && (
             <div className="cell cell--0-@xs">

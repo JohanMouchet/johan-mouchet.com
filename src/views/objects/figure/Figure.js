@@ -16,7 +16,7 @@ type Props = {
   }
 };
 
-const Figure = (props: Props) => {
+const Figure = (props: Props, children) => {
   const { prop1, prop2 } = props;
 
   const FigureClass = cx(
@@ -38,10 +38,8 @@ const Figure = (props: Props) => {
         title={props.title}
         {...props.metadata.attributes}
       />
-      {props.caption && (
-        <figcaption className="o-figure__caption">
-          {props.caption | raw}
-        </figcaption>
+      {children && (
+        <figcaption className="o-figure__caption">{children}</figcaption>
       )}
     </figure>
   );
