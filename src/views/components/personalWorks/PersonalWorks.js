@@ -4,10 +4,9 @@ import * as React from "react";
 import "./personal-works.scss";
 
 type Props = {
-  works: Array<mixed>,
-  works[0].video: boolean,
-  works[0].thumbnailPath: Array<mixed>,
-  works[0].expandedPath: Array<mixed>,
+  works: [
+    { video: boolean, thumbnailPath: string, sourceIconPath: Array<mixed> }
+  ]
 };
 
 const PersonalWorks = (props: Props) => {
@@ -31,7 +30,7 @@ const PersonalWorks = (props: Props) => {
                 />
                 {work.sourceIconPath && (
                   <span className="c-personal-work__source">
-                    {file_get_contents(work.sourceIconPath) | raw}
+                    {work.sourceIconPath}
                   </span>
                 )}
               </a>

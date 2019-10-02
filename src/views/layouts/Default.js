@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { HTML, MastHeader, MastFooter } from "../partials";
+import "../../assets/styles/_styles.scss";
 
 type Props = {
   title: string,

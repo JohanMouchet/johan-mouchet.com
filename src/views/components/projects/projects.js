@@ -54,7 +54,7 @@ const Projects = (props: Props) => {
 									<ul className="c-project__awards { projectQuantity === 1 ? 'u-vr--top-0-@md'}">
 										{props.awards.map(award => (
 											<li className="c-project__award">
-												<a className="c-project__award-icon" href={award.URL}>{ file_get_contents(GLOBAL.paths.img + "icons/award.svg")|raw }</a>
+												<a className="c-project__award-icon" href={award.URL}>{ GLOBAL.paths.img + "icons/award.svg" }</a>
 												<span className="c-project__award-name"><em>{ award.name }</em>{award.category && (":", award.category)}</span>
 											</li>
 										))}

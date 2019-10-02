@@ -4,12 +4,17 @@ import * as React from "react";
 import "./academic-qualification.scss";
 
 type Props = {
-  qualifications: Array<mixed>,
-  qualifications[0].establishment.name: string,
-  qualifications[0].establishment.URL: string,
-  qualifications[0].location: string,
-  qualifications[0].graduationYear: int,
-  qualifications[0].title: string,
+  qualifications: [
+    {
+      establishment: {
+        name: string,
+        URL: string
+      },
+      location: string,
+      graduationYear: int,
+      title: string
+    }
+  ]
 };
 
 const AcademicQualification = (props: Props) => {

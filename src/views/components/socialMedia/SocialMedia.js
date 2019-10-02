@@ -4,10 +4,13 @@ import * as React from "react";
 import "./social-media.scss";
 
 type Props = {
-  medias: Array<mixed>,
-  medias[0]name: string,
-  medias[0]URL: string,
-  medias[0]iconPath: string,
+  medias: [
+    {
+      name: string,
+      URL: string,
+      iconPath: string
+    }
+  ]
 };
 
 const SocialMedia = (props: Props) => {
@@ -23,7 +26,7 @@ const SocialMedia = (props: Props) => {
             title="Follow me on { media.name }"
             target="_blank"
           >
-            {file_get_contents(media.iconPath) | raw}
+            {media.iconPath}
             {media.name}
           </a>
         </div>

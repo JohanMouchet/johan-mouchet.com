@@ -4,10 +4,13 @@ import * as React from "react";
 import { ProgressBar } from "../objects";
 
 type Props = {
-  expertises: Array<mixed>,
-  expertises[0].label: string,
-  expertises[0].filling: int,
-  expertises[0].tooltip: int,
+  expertises: [
+    {
+      label: string,
+      filling: int,
+      tooltip: int
+    }
+  ]
 };
 
 const Expertises = (props: Props) => {
