@@ -4,8 +4,8 @@ import * as React from "react";
 import cx from "classnames";
 import "./footnotes.scss";
 
-type Props = {
-  context: array
+type ReferenceProps = {
+  context: array,
   id: string,
   [prefix]: string,
   text: string,
@@ -13,7 +13,7 @@ type Props = {
 
 // TODO: "context" was passed in the macro
 
-const Reference = (props: Props) => {
+const Reference = (props: ReferenceProps) => {
 	const {
 	  prop1,
 	  prop2
@@ -36,7 +36,7 @@ Reference.defaultProps = {
 
 export { Reference };
 
-type Props = {
+type NotesProps = {
   context: array,
   id: string,
   [prefix]: string,
@@ -47,7 +47,7 @@ type Props = {
 
 // TODO: "context" was passed in the macro
 
-const Notes = (props: Props) => {
+const Notes = (props: NotesProps) => {
 	const {
 	  prop1,
 	  prop2

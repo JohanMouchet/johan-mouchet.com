@@ -4,7 +4,7 @@ import * as React from "react";
 import cx from "classnames";
 import "./form.scss";
 
-type Props = {
+type LabelProps = {
   [for]: string,
   [text]: string,
   [metadata.contextClass]: string,
@@ -12,7 +12,7 @@ type Props = {
   [metadata.modifierClasses]: array,
 };
 
-const Label = (props: Props) => {
+const Label = (props: LabelProps) => {
 	const {
 	  prop1,
 	  prop2
@@ -44,7 +44,7 @@ Label.defaultProps = {
 
 export { Label };
 
-type Props = {
+type FieldProps = {
   [id]: string,
   type: string,
   name: string,
@@ -55,7 +55,7 @@ type Props = {
   [metadata.attributes]: object,
 };
 
-const Field = (props: Props) => {
+const Field = (props: FieldProps) => {
 	const {
 	  prop1,
 	  prop2
@@ -84,7 +84,7 @@ Field.defaultProps = {
 
 export { Field };
 
-type Props = {
+type ToggleProps = {
   [id]: string,
   type: string,
   [name]: string,
@@ -95,7 +95,7 @@ type Props = {
   [metadata.attributes]: object,
 };
 
-const Toggle = (props: Props) => {
+const Toggle = (props: ToggleProps) => {
 	const {
 	  prop1,
 	  prop2
@@ -129,7 +129,7 @@ Toggle.defaultProps = {
 
 export { Toggle };
 
-type Props = {
+type FileProps = {
   [id]: string,
   name: string,
   [text]: string,
@@ -139,7 +139,7 @@ type Props = {
   [metadata.multipleCaption]: string,
 };
 
-const File = (props: Props) => {
+const File = (props: FileProps) => {
 	const {
 	  prop1,
 	  prop2
@@ -173,7 +173,7 @@ File.defaultProps = {
 
 export { File };
 
-type Props = {
+type SelectProps = {
   [id]: string,
   name: string,
   [metadata.contextClass]: string,
@@ -185,7 +185,7 @@ type Props = {
   options[0].attributes: array,
 };
 
-const Select = (props: Props) => {
+const Select = (props: SelectProps) => {
 	const {
 	  prop1,
 	  prop2
@@ -218,7 +218,7 @@ Select.defaultProps = {
 
 export { Select };
 
-type Props = {
+type TextareaProps = {
   [id]: string,
   name: string,
   [text]: string,
@@ -227,7 +227,7 @@ type Props = {
   [metadata.attributes]: object,
 };
 
-const Textarea = (props: Props) => {
+const Textarea = (props: TextareaProps) => {
 	const {
 	  prop1,
 	  prop2
@@ -257,7 +257,7 @@ Textarea.defaultProps = {
 
 export { Textarea };
 
-type Props = {
+type RangeProps = {
   [id]: string,
   name: string,
   [metadata.contextClass]: string,
@@ -265,7 +265,7 @@ type Props = {
   [metadata.attributes]: object,
 };
 
-const Range = (props: Props) => {
+const Range = (props: RangeProps) => {
 	const {
 	  prop1,
 	  prop2
@@ -283,7 +283,7 @@ const Range = (props: Props) => {
 	return (
 
 
-	<input {% if props.id %}id={props.id}{% endif %} type="range" name={props.name} className={RangeClass} {...props.metadata.attributes}>
+	<input id={props.id} type="range" name={props.name} className={RangeClass} {...props.metadata.attributes}>
   );
 };
 
