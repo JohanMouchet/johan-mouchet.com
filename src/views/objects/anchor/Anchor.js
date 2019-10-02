@@ -30,14 +30,14 @@ const ___ = (props: Props) => {
 		"___--prop1": prop1
 	  }
 	);
+
+	const Tag = props.tag;
   
 	return (
-
-
-	<{ props.tag } id={props.id} className={___Class} {...props.metadata.attributes}>
-		<a href={`${context._SITE['rurl']}#${props.id}`} className='u-anchor__link'>{ props.marker|default('#') }</a>
-		{- props.text|raw -}
-	</{ props.tag }>
+		<Tag id={props.id} className={___Class} {...props.metadata.attributes}>
+			<a href={`${context._SITE['rurl']}#${props.id}`} className='u-anchor__link'>{ props.marker|default('#') }</a>
+			{props.text|raw}
+		</Tag>
 	);
 };
 

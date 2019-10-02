@@ -23,7 +23,7 @@ const Reference = (props: ReferenceProps) => {
 	{%- spaceless %}
 		<sup>
 			<a id={`hash-footnote-ref:${ props.prefix && (props.prefix + '-') }${props.id}`} className="o-footnote-ref" href={`${context._SITE['rurl'] }#footnote:${props.prefix && (props.prefix + '-')}${ props.id}`}>
-				{- props.text -}
+				{props.text}
 			</a>
 		</sup>
 	{% endspaceless -%}

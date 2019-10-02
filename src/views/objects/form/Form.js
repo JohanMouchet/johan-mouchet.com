@@ -28,12 +28,13 @@ const Label = (props: LabelProps) => {
 	  }
 	);
   
-	return (
-	{%- set text = props.text is empty ? '&nbsp;' : props.text -%}
-	{%- set blockLabelClass = props.text is empty ? 'o-form__label--block' -%}
+	const text = props.text === '' ? '&nbsp;' : props.text;
+	const blockLabelClass = props.text === '' && 'o-form__label--block';
 
-	<label {% if props.for %}for={props.for}{% endif %} className={`${LabelClass}${blockLabelClass}`}>
-		{- text|raw -}
+	return (
+
+	<label for={props.for} className={`${LabelClass}${blockLabelClass}`}>
+		{text|raw}
 	</label>
   );
 };
@@ -74,7 +75,7 @@ const Field = (props: FieldProps) => {
 	return (
 
 
-	<input {% if props.id %}id={props.id}{% endif %} type={props.type} name={props.name} {% if props.value %}value={props.value}{% endif %} className={`${FieldClass} o-form__field--${ props.type}`} {...props.metadata.attributes}>
+	<input id={props.id} type={props.type} name={props.name} value={props.value} className={`${FieldClass} o-form__field--${ props.type}`} {...props.metadata.attributes} />
   );
 };
 
@@ -114,7 +115,7 @@ const Toggle = (props: ToggleProps) => {
 
 
 	<label className={`${ToggleClass} o-form__toggle--${props.type}`} {...props.metadata.attributes}>
-		<input {% if props.id %}id={props.id}{% endif %} type={props.type} {% if props.name %}name={props.name}{% endif %} {% if props.value %}value={props.value}{% endif %} className='o-form__toggle-input' {...props.metadata.attributes}>
+		<input id={props.id} type={props.type} name={props.name} value={props.value} className='o-form__toggle-input' {...props.metadata.attributes} />
 		<span className='o-form__toggle-icon'></span>
 		{%- if props.text -%}
 			<span className='o-form__toggle-text'>{ props.text|raw }</span>
@@ -155,15 +156,11 @@ const File = (props: FileProps) => {
 	);
   
 	return (
-
-
-	<label className={`${FileClass} o-button js-form-file`}>
-		<input {% if props.id %}id={props.id}{% endif %} type="file" name={props.name} className="o-form__file-input js-form-file-input" data-multiple-caption={props.multipleCaption ? props.multipleCaption : '{count} files selected'} {...props.metadata.attributes}>
-		<i className="material-icons">file_upload</i>
-		{% if props.text %}
-			<span className="o-form__file-text js-form-file-text">{ props.text|raw }</span>
-		{% endif %}
-	</label>
+		<label className={`${FileClass} o-button js-form-file`}>
+			<input id={props.id} type="file" name={props.name} className="o-form__file-input js-form-file-input" data-multiple-caption={props.multipleCaption ? props.multipleCaption : '{count} files selected'} {...props.metadata.attributes} />
+			<i className="material-icons">file_upload</i>
+			{props.text && <span className="o-form__file-text js-form-file-text">{ props.text|raw }</span>}
+		</label>
   );
 };
 
@@ -204,9 +201,9 @@ const Select = (props: SelectProps) => {
 	return (
 
 
-	<select {% if props.id %}id={props.id}{% endif %} name={props.name} className={`${SelectClass} o-form__field--select`} {...props.metadata.attributes}>
+	<select id={props.id} name={props.name} className={`${SelectClass} o-form__field--select`} {...props.metadata.attributes}>
 		{props.options.map(option => (
-			<option {% if props.value %}value={props.value}{% endif %} {...props.metadata.attributes}>{ option.text }</option>
+			<option value={props.value} {...props.metadata.attributes}>{ option.text }</option>
 		))}
 	</select>
   );
@@ -245,8 +242,8 @@ const Textarea = (props: TextareaProps) => {
 	return (
 
 
-	<textarea {% if props.id %}id={props.id}{% endif %} name={props.name} className={`${TextareaClass} o-form__field--textarea`} {...props.metadata.attributes}>
-		{- props.text|raw -}
+	<textarea id={props.id} name={props.name} className={`${TextareaClass} o-form__field--textarea`} {...props.metadata.attributes}>
+		{props.text|raw}
 	</textarea>
   );
 };
@@ -283,7 +280,7 @@ const Range = (props: RangeProps) => {
 	return (
 
 
-	<input id={props.id} type="range" name={props.name} className={RangeClass} {...props.metadata.attributes}>
+	<input id={props.id} type="range" name={props.name} className={RangeClass} {...props.metadata.attributes} />
   );
 };
 

@@ -37,39 +37,35 @@ const Projects = (props: Props) => {
 									<div href={project.URL} target="_blank"  className="c-project__overlay">
 										<h4 className="c-project__title">{ project.name }</h4>
 										<span className="c-project__line"></span>
-										{% if project.tagline %}
-											<span className="c-project__tagline">{ project.tagline }</span>
-										{% endif %}
+										{project.tagline && <span className="c-project__tagline">{ project.tagline }</span>}
 									</div>
 								</a>
 						{% if projectQuantity === 1 %}
 							</div>
 							<div className="cell cell--12-@xs cell--8-@md">
 						{% endif %}
-								{% if project.lede %}
-									<p className="c-project__lede { projectQuantity === 1 ? 'u-vr--top-0-@md'}">
+								{project.lede && <p className="c-project__lede { projectQuantity === 1 ? 'u-vr--top-0-@md'}">
 										{ project.lede|raw }
 									</p>
-								{% endif %}
+								}
 
-								{% if project.awards %}
+								{project.awards && (
 									<ul className="c-project__awards { projectQuantity === 1 ? 'u-vr--top-0-@md'}">
 										{props.awards.map(award => (
 											<li className="c-project__award">
 												<a className="c-project__award-icon" href={award.URL}>{ file_get_contents(_GLOBAL.paths.img + "icons/award.svg")|raw }</a>
-												<span className="c-project__award-name"><em>{ award.name }{% if award.category %}</em>: { award.category }{% endif %}</span>
+												<span className="c-project__award-name"><em>{ award.name }</em>{award.category && (":", award.category)}</span>
 											</li>
 										))}
-									</ul>
-								{% endif %}
+									</ul>)}
 
-								{% if project.details %}
+								{project.details && (
 									<ul className="c-project__details { projectQuantity === 1 ? 'u-vr--top-0-@md'}">
 										{project.details.map(detail => (
 											<li className="c-project__detail">{ detail|raw }</li>
 										))}
-									</ul>
-								{% endif %}
+									</ul>)
+								}
 						{% if projectQuantity === 1 %}
 							</div>
 						</div>
