@@ -28,7 +28,7 @@ const Breadcrumb = (props: Props) => {
   const lastLevel = levels.length + 1;
 
   return (
-    <Fragment>
+    <>
       <ol className={BreadcrumbClass}>
         {props.levels.map((level, index) => (
           <li
@@ -69,7 +69,7 @@ const Breadcrumb = (props: Props) => {
 		`}
       </script>
       {/* </pre> */}
-    </Fragment>
+    </>
   );
 };
 

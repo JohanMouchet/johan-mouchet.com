@@ -13,7 +13,7 @@ type ReferenceProps = {
 
 // TODO: "context" was passed in the macro
 
-const Reference = (props: ReferenceProps) => {
+const FootnotesReference = (props: ReferenceProps) => {
 	const {
 	  prop1,
 	  prop2
@@ -30,11 +30,11 @@ const Reference = (props: ReferenceProps) => {
   );
 };
 
-Reference.defaultProps = {
+FootnotesReference.defaultProps = {
   prop1: 2
 };
 
-export { Reference };
+export { FootnotesReference };
 
 type NotesProps = {
   context: Array<mixed>,
@@ -47,7 +47,7 @@ type NotesProps = {
 
 // TODO: "context" was passed in the macro
 
-const Notes = (props: NotesProps) => {
+const FootnotesNotes = (props: NotesProps) => {
 	const {
 	  prop1,
 	  prop2
@@ -74,8 +74,8 @@ const Notes = (props: NotesProps) => {
   );
 };
 
-Notes.defaultProps = {
+FootnotesNotes.defaultProps = {
   prop1: 2
 };
 
-export default Notes;
+export { FootnotesNotes };

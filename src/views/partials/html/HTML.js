@@ -4,7 +4,7 @@ import * as React from "react";
 
 const HTML = children => {
   return (
-    <Fragment>
+    <>
       <!doctype html>
       <html lang="en" className="no-js">
         <head>
@@ -89,7 +89,7 @@ const HTML = children => {
         </body>
         {`<!-- (∅‿∅) Hi -->`}
       </html>
-    </Fragment>
+    </>
   );
 };
 

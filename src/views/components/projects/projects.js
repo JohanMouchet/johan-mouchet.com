@@ -19,14 +19,14 @@ const Projects = (props: Props) => {
     prop2
   } = props;
 
+  const projectQuantity = props.length;
+  const cellSize = projectQuantity < 5 ? 12 / projectQuantity : 3;
+
   return (
 	<div className="c-projects">
 		<div className="grid">
-			{% set projectQuantity = props|length %}
-			{% set cellSize = projectQuantity < 5 ? 12 / projectQuantity : 3 %}
-
 			{props.map(project => (
-				<div className="cell cell--12-@xs cell--6-@sm cell--{ cellSize }-@md">
+				<div className={`cell cell--12-@xs cell--6-@sm cell--${cellSize}-@md`}>
 					<div className="c-project">
 						{% if projectQuantity === 1 %}
 						<div className="grid">

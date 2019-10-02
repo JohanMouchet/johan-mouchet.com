@@ -101,7 +101,7 @@ type SocialButtonBadgeProps = {
   metadata.attributes: ?object
 };
 
-const SocialButtonBadge = (props: SocialButtonBadgeProps) => {
+const ButtonSocialBadge = (props: SocialButtonBadgeProps) => {
   const { prop1, prop2 } = props;
 
   const SocialButtonBadgeClass = cx(
@@ -129,8 +129,8 @@ const SocialButtonBadge = (props: SocialButtonBadgeProps) => {
   );
 };
 
-SocialButtonBadge.defaultProps = {
+ButtonSocialBadge.defaultProps = {
   prop1: 2
 };
 
-export { SocialButtonBadge };
+export { ButtonSocialBadge };
