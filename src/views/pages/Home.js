@@ -9,6 +9,16 @@ import {
   Reference,
   PersonalWorks
 } from "../components";
+import { ReactComponent as Icon500px } from "../../../assets/images/icons/simple-icons/500px.svg";
+import { ReactComponent as IconCodepen } from "../../../assets/images/icons/simple-icons/codepen.svg";
+import { ReactComponent as IconDribbble } from "../../../assets/images/icons/simple-icons/dribbble.svg";
+import { ReactComponent as IconGithub } from "../../../assets/images/icons/simple-icons/github.svg";
+import { ReactComponent as IconInstagram } from "../../../assets/images/icons/simple-icons/instagram.svg";
+import { ReactComponent as IconLinkedIn } from "../../../assets/images/icons/simple-icons/linkedin.svg";
+import { ReactComponent as IconSpotify } from "../../../assets/images/icons/simple-icons/spotify.svg";
+import { ReactComponent as IconTwitter } from "../../../assets/images/icons/simple-icons/twitter.svg";
+import { ReactComponent as IconUnsplash } from "../../../assets/images/icons/simple-icons/unsplash.svg";
+import { ReactComponent as IconYoutube } from "../../../assets/images/icons/simple-icons/youtube.svg";
 
 const Home = () => {
   return (
@@ -202,61 +212,52 @@ const Home = () => {
                       {
                         name: "LinkedIn",
                         URL: "https://www.linkedin.com/in/johanmouchet",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/linkedin.svg"
+                        icon: IconLinkedIn
                       },
                       {
                         name: "Twitter",
                         URL: "https://twitter.com/JohanMouchet",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/twitter.svg"
+                        icon: IconTwitter
                       },
                       {
                         name: "CodePen",
                         URL: "http://codepen.io/johanmouchet/",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/codepen.svg"
+                        icon: IconCodepen
                       },
                       {
                         name: "Dribbble",
                         URL: "https://dribbble.com/JohanMouchet/likes",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/dribbble.svg"
+                        icon: IconDribbble
                       },
                       {
                         name: "GitHub",
                         URL: "https://github.com/JohanMouchet",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/github.svg"
+                        icon: IconGithub
                       },
                       {
                         name: "Unsplash",
                         URL: "https://unsplash.com/@johanmouchet/",
-                        iconPath: PATHS.img + "icons/unsplash.svg"
+                        icon: IconUnsplash
                       },
                       {
                         name: "500px",
                         URL: "https://500px.com/johanmouchet/",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/500px.svg"
+                        icon: Icon500px
                       },
                       {
                         name: "Instagram",
                         URL: "https://instagram.com/johanmouchet/",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/instagram.svg"
+                        icon: IconInstagram
                       },
                       {
                         name: "YouTube",
                         URL: "https://www.youtube.com/c/JohanMouchet",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/youtube.svg"
+                        icon: IconYoutube
                       },
                       {
                         name: "Spotify",
                         URL: "https://open.spotify.com/user/1126411547",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/spotify.svg"
+                        icon: IconSpotify
                       }
                     ]
                   }}
@@ -386,8 +387,7 @@ const Home = () => {
                             lede:
                               "Website redesign to embody the new brand direction focused on a premium and lifestyle experience. Deployed into 35 countries of the European market and translated into 27 languages.",
                             thumbnailPath:
-                              PATHS.img +
-                              "views/career-experiences/lexus.jpg",
+                              PATHS.img + "views/career-experiences/lexus.jpg",
                             details: [
                               "<a href='http://www.sdl.com/software-and-services/tridion-dx/tridion-sites.html'><em>SDL Web</em></a> (formerly Tridion), headless data driven CMS ",
                               "<em>Nunjucks</em> templating, component oriented, fed with datas stored in a <em>MongoDB</em> database",
@@ -754,44 +754,39 @@ const Home = () => {
                         thumbnailPath:
                           PATHS.img + "views/personal-works/seville.jpg",
                         URL: "https://unsplash.com/photos/NwaCxOL0NTA",
-                        sourceIconPath: PATHS.img + "icons/unsplash.svg"
+                        sourceIcon: IconUnsplash
                       },
                       {
                         thumbnailPath:
-                          PATHS.img +
-                          "views/personal-works/marseille.jpg",
+                          PATHS.img + "views/personal-works/marseille.jpg",
                         URL: "https://unsplash.com/photos/qB1h8ruSKnI",
-                        sourceIconPath: PATHS.img + "icons/unsplash.svg"
+                        sourceIcon: IconUnsplash
                       },
                       {
                         thumbnailPath:
-                          PATHS.img +
-                          "views/personal-works/death-valley.jpg",
+                          PATHS.img + "views/personal-works/death-valley.jpg",
                         URL:
                           "https://500px.com/photo/177991327/thirsty-coyote-death-valley-ca-by-johan-mouchet",
-                        sourceIconPath:
-                          PATHS.img + "icons/simple-icons/500px.svg"
+                        sourceIcon: Icon500px
                       },
                       {
                         thumbnailPath:
                           PATHS.img + "views/personal-works/london.jpg",
                         URL: "https://unsplash.com/photos/5qeFuSId3H0",
-                        sourceIconPath: PATHS.img + "icons/unsplash.svg"
+                        sourceIcon: IconUnsplash
                       },
                       {
                         thumbnailPath:
-                          PATHS.img +
-                          "views/personal-works/copenhagen.jpg",
+                          PATHS.img + "views/personal-works/copenhagen.jpg",
                         URL: "https://unsplash.com/photos/sTBdWFQKDHE",
-                        sourceIconPath: PATHS.img + "icons/unsplash.svg"
+                        sourceIcon: IconUnsplash
                       },
                       {
                         thumbnailPath:
                           PATHS.img +
                           "views/personal-works/south-cost-of-england.jpg",
                         URL: "https://youtu.be/NAsS1T_V8-k",
-                        sourceIconPath:
-                          PATHS.img + "icons/simple-icons/youtube.svg"
+                        sourceIcon: IconYoutube
                       }
                     ]
                   }}

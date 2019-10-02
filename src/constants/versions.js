@@ -1,5 +1,3 @@
-export const PATHS = {
-  css: "/src/assets/dist/css/",
-  img: "/src/assets/dist/img/",
-  js: "/src/assets/dist/js/"
+export const VERSIONS = {
+  site: "4.0.0"
 };

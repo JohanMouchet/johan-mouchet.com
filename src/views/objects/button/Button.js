@@ -45,9 +45,9 @@ Button.defaultProps = {
 
 export { Button };
 
-type SocialButtonProps = {
+type ButtonSocialProps = {
   url: string,
-  iconPath: string,
+  icon: string,
   counter: ?int,
   metadata: {
     contextClass: ?string,
@@ -57,29 +57,29 @@ type SocialButtonProps = {
   }
 };
 
-const SocialButton = (props: SocialButtonProps, children) => {
+const ButtonSocial = (props: ButtonSocialProps, children) => {
   const { prop1, prop2 } = props;
 
-  const SocialButtonClass = cx(
+  const ButtonSocialClass = cx(
     "o-button",
     props.metadata.contextClass,
     props.metadata.modifierClasses,
     props.metadata.additionalClasses,
     "o-button--social",
     {
-      "SocialButton--prop1": prop1
+      "ButtonSocial--prop1": prop1
     }
   );
 
   return (
     <a
-      className={SocialButtonClass}
+      className={ButtonSocialClass}
       href={props.url}
       target="_blank"
       rel="noopener"
       {...props.metadata.attributes}
     >
-      <span className="o-button__icon">{props.iconPath}</span>
+      <span className="o-button__icon">{props.icon}</span>
       <span className="o-button__text">{children}</span>
       {props.counter && (
         <span className="o-button__counter">{props.counter}</span>
@@ -88,15 +88,15 @@ const SocialButton = (props: SocialButtonProps, children) => {
   );
 };
 
-SocialButton.defaultProps = {
+ButtonSocial.defaultProps = {
   prop1: 2
 };
 
-export { SocialButton };
+export { ButtonSocial };
 
-type SocialButtonBadgeProps = {
+type ButtonSocialBadgeProps = {
   url: string,
-  iconPath: string,
+  icon: string,
   metadata: {
     contextClass: ?string,
     additionalClasses: ?Array<string>,
@@ -105,10 +105,10 @@ type SocialButtonBadgeProps = {
   }
 };
 
-const ButtonSocialBadge = (props: SocialButtonBadgeProps) => {
+const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
   const { prop1, prop2 } = props;
 
-  const SocialButtonBadgeClass = cx(
+  const ButtonSocialBadgeClass = cx(
     "o-button",
     props.metadata.contextClass,
     props.metadata.modifierClasses,
@@ -116,19 +116,19 @@ const ButtonSocialBadge = (props: SocialButtonBadgeProps) => {
     "o-button--social",
     "o-button--social-badge",
     {
-      "SocialButtonBadge--prop1": prop1
+      "ButtonSocialBadge--prop1": prop1
     }
   );
 
   return (
     <a
-      className={SocialButtonBadgeClass}
+      className={ButtonSocialBadgeClass}
       href={props.url}
       target="_blank"
       rel="noopener"
       {...props.metadata.attributes}
     >
-      <span className="o-button__icon">{props.iconPath}</span>
+      <span className="o-button__icon">{props.icon}</span>
     </a>
   );
 };

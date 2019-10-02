@@ -1,3 +1,5 @@
-export const VERSION = {
-  site: "4.0.0"
+export const PATHS = {
+  css: "/src/assets/dist/css/",
+  img: "/src/assets/dist/img/",
+  js: "/src/assets/dist/js/"
 };

@@ -1,6 +1,5 @@
 # TODO
 
-- Export / import svgs
 - Import `_base.scss` to layout
 - Destructure props
 - Add cx modifierClasses

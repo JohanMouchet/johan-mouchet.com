@@ -26,7 +26,12 @@ import {
   FootnotesNotes,
   Loader,
   Notice
-} from "../components";
+} from "../objects";
+import { ReactComponent as IconFacebook } from "../../../assets/images/icons/simple-icons/facebook.svg";
+import { ReactComponent as IconGooglePlus } from "../../../assets/images/icons/simple-icons/googleplus.svg";
+import { ReactComponent as IconLinkedIn } from "../../../assets/images/icons/simple-icons/linkedin.svg";
+import { ReactComponent as IconPinterest } from "../../../assets/images/icons/simple-icons/pinterest.svg";
+import { ReactComponent as IconTwitter } from "../../../assets/images/icons/simple-icons/twitter.svg";
 
 const StyleGuide = () => {
   return (
@@ -1246,8 +1251,7 @@ const StyleGuide = () => {
                       props={{
                         url:
                           "https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/facebook.svg",
+                        icon: IconFacebook,
                         text: "Share",
                         counter: 10,
                         metadata: {
@@ -1264,8 +1268,7 @@ const StyleGuide = () => {
                       props={{
                         url:
                           "https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/twitter.svg",
+                        icon: IconTwitter,
                         text: "Tweet",
                         counter: 10,
                         metadata: {
@@ -1281,9 +1284,7 @@ const StyleGuide = () => {
                     <ButtonSocial
                       props={{
                         url: "https://plus.google.com/share?url={URL}",
-                        iconPath:
-                          PATHS.img +
-                          "icons/simple-icons/googleplus.svg",
+                        icon: IconGooglePlus,
                         text: "Share",
                         counter: 10,
                         metadata: {
@@ -1300,8 +1301,7 @@ const StyleGuide = () => {
                       props={{
                         url:
                           "http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/pinterest.svg",
+                        icon: IconPinterest,
                         text: "Pin it",
                         counter: 10,
                         metadata: {
@@ -1318,8 +1318,7 @@ const StyleGuide = () => {
                       props={{
                         url:
                           "http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/linkedin.svg",
+                        icon: IconLinkedIn,
                         text: "Share",
                         counter: 10,
                         metadata: {
@@ -1338,8 +1337,7 @@ const StyleGuide = () => {
                       props={{
                         url:
                           "https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/facebook.svg",
+                        icon: IconFacebook,
                         text: "Share",
                         counter: 10,
                         metadata: {
@@ -1357,8 +1355,7 @@ const StyleGuide = () => {
                       props={{
                         url:
                           "https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/twitter.svg",
+                        icon: IconTwitter,
                         text: "Tweet",
                         counter: 10,
                         metadata: {
@@ -1375,9 +1372,7 @@ const StyleGuide = () => {
                     <ButtonSocial
                       props={{
                         url: "https://plus.google.com/share?url={URL}",
-                        iconPath:
-                          PATHS.img +
-                          "icons/simple-icons/googleplus.svg",
+                        icon: IconGooglePlus,
                         text: "Share",
                         counter: 10,
                         metadata: {
@@ -1395,8 +1390,7 @@ const StyleGuide = () => {
                       props={{
                         url:
                           "http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/pinterest.svg",
+                        icon: IconPinterest,
                         text: "Pin it",
                         counter: 10,
                         metadata: {
@@ -1414,8 +1408,7 @@ const StyleGuide = () => {
                       props={{
                         url:
                           "http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/linkedin.svg",
+                        icon: IconLinkedIn,
                         text: "Share",
                         counter: 10,
                         metadata: {
@@ -1438,8 +1431,7 @@ const StyleGuide = () => {
                     <ButtonSocialBadge
                       props={{
                         url: "{URL}",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/facebook.svg"
+                        icon: IconFacebook
                       }}
                     />
                   </div>
@@ -1448,8 +1440,7 @@ const StyleGuide = () => {
                     <ButtonSocialBadge
                       props={{
                         url: "{URL}",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/twitter.svg"
+                        icon: IconTwitter
                       }}
                     />
                   </div>
@@ -1458,8 +1449,7 @@ const StyleGuide = () => {
                     <ButtonSocialBadge
                       props={{
                         url: "{URL}",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/googleplus.svg"
+                        icon: IconGooglePlus
                       }}
                     />
                   </div>
@@ -1468,8 +1458,7 @@ const StyleGuide = () => {
                     <ButtonSocialBadge
                       props={{
                         url: "{URL}",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/pinterest.svg"
+                        icon: IconPinterest
                       }}
                     />
                   </div>
@@ -1478,8 +1467,7 @@ const StyleGuide = () => {
                     <ButtonSocialBadge
                       props={{
                         url: "{URL}",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/linkedin.svg"
+                        icon: IconLinkedIn
                       }}
                     />
                   </div>
@@ -1490,8 +1478,7 @@ const StyleGuide = () => {
                     <ButtonSocialBadge
                       props={{
                         url: "{URL}",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/facebook.svg",
+                        icon: IconFacebook,
                         metadata: {
                           modifierClasses: ["social-facebook"]
                         }
@@ -1503,8 +1490,7 @@ const StyleGuide = () => {
                     <ButtonSocialBadge
                       props={{
                         url: "{URL}",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/twitter.svg",
+                        icon: IconTwitter,
                         metadata: {
                           modifierClasses: ["social-twitter"]
                         }
@@ -1516,9 +1502,7 @@ const StyleGuide = () => {
                     <ButtonSocialBadge
                       props={{
                         url: "{URL}",
-                        iconPath:
-                          PATHS.img +
-                          "icons/simple-icons/googleplus.svg",
+                        icon: IconGooglePlus,
                         metadata: {
                           modifierClasses: ["social-googleplus"]
                         }
@@ -1530,8 +1514,7 @@ const StyleGuide = () => {
                     <ButtonSocialBadge
                       props={{
                         url: "{URL}",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/pinterest.svg",
+                        icon: IconPinterest,
                         metadata: {
                           modifierClasses: ["social-pinterest"]
                         }
@@ -1543,8 +1526,7 @@ const StyleGuide = () => {
                     <ButtonSocialBadge
                       props={{
                         url: "{URL}",
-                        iconPath:
-                          PATHS.img + "icons/simple-icons/linkedin.svg",
+                        icon: IconLinkedIn,
                         metadata: {
                           modifierClasses: ["social-linkedin"]
                         }

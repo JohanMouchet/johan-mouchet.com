@@ -3,7 +3,7 @@
 import * as React from "react";
 import { VERSIONS } from "../../../constants/versions";
 import "./mast-footer.scss";
-import { ArrowDown } from "../../../assets/images/icons/arrow-down.svg";
+import { ReactComponent as IconArrowDown } from "../../../assets/images/icons/arrow-down.svg";
 
 const MastFooter = () => {
   const year = new Date().getFullYear();
@@ -25,7 +25,7 @@ const MastFooter = () => {
           </div>
           <div className="cell cell--0-@xs">
             <a className="p-mast-footer__page-top" href="#" title="Go top">
-              {ArrowDown}
+              <IconArrowDown />
             </a>
           </div>
         </div>

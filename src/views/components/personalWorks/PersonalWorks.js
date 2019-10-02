@@ -4,9 +4,7 @@ import * as React from "react";
 import "./personal-works.scss";
 
 type Props = {
-  works: [
-    { video: boolean, thumbnailPath: string, sourceIconPath: Array<mixed> }
-  ]
+  works: [{ video: boolean, thumbnailPath: string, sourceIcon: Array<mixed> }]
 };
 
 const PersonalWorks = (props: Props) => {
@@ -28,9 +26,9 @@ const PersonalWorks = (props: Props) => {
                   src={work.thumbnailPath}
                   alt="Personal work"
                 />
-                {work.sourceIconPath && (
+                {work.sourceIcon && (
                   <span className="c-personal-work__source">
-                    {work.sourceIconPath}
+                    {work.sourceIcon}
                   </span>
                 )}
               </a>

@@ -8,7 +8,7 @@ type Props = {
     {
       name: string,
       URL: string,
-      iconPath: string
+      icon: string
     }
   ]
 };
@@ -26,7 +26,7 @@ const SocialMedia = (props: Props) => {
             title="Follow me on { media.name }"
             target="_blank"
           >
-            {media.iconPath}
+            {media.icon}
             {media.name}
           </a>
         </div>
