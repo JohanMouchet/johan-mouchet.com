@@ -5,9 +5,9 @@ import cx from "classnames";
 import "./footnotes.scss";
 
 type ReferenceProps = {
-  context: array,
+  context: Array<mixed>,
   id: string,
-  [prefix]: string,
+  prefix: ?string,
   text: string,
 };
 
@@ -37,12 +37,12 @@ Reference.defaultProps = {
 export { Reference };
 
 type NotesProps = {
-  context: array,
+  context: Array<mixed>,
   id: string,
-  [prefix]: string,
+  prefix: ?string,
   text: string,
-  [metadata.contextClass]: string,
-  [metadata.additionalClasses]: array,
+  metadata.contextClass: ?string,
+  metadata.additionalClasses: ?array,
 };
 
 // TODO: "context" was passed in the macro

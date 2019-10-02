@@ -4,7 +4,7 @@ import * as React from "react";
 import "./social-media.scss";
 
 type Props = {
-  medias: array,
+  medias: Array<mixed>,
   medias[0]name: string,
   medias[0]URL: string,
   medias[0]iconPath: string,

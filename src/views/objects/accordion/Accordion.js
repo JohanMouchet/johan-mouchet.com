@@ -7,8 +7,8 @@ import "./accordion.scss";
 type Props = {
   items.thumb: string,
   items.panel: string,
-  [metadata.contextClass]: string,
-  [metadata.additionalClasses]: array,
+  metadata.contextClass: ?string,
+  metadata.additionalClasses: ?array,
 };
 
 const Accordion = (props: Props) => {

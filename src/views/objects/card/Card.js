@@ -5,14 +5,14 @@ import cx from "classnames";
 import "./card.scss";
 
 type Props = {
-  [banner]: string,
-  [bannerUrl]: string,
-  [header]: string,
-  [body]: string,
-  [footer]: string,
-  [metadata.contextClass]: string,
-  [metadata.modifierClasses]: array,
-  [metadata.additionalClasses]: array
+  banner: ?string,
+  bannerUrl: ?string,
+  header: ?string,
+  body: ?string,
+  footer: ?string,
+  metadata.contextClass: ?string,
+  metadata.modifierClasses: ?array,
+  metadata.additionalClasses: ?array
 };
 
 const Card = (props: Props) => {

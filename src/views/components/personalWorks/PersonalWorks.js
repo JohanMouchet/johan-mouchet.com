@@ -4,10 +4,10 @@ import * as React from "react";
 import "./personal-works.scss";
 
 type Props = {
-  works: array,
+  works: Array<mixed>,
   works[0].video: boolean,
-  works[0].thumbnailPath: array,
-  works[0].expandedPath: array,
+  works[0].thumbnailPath: Array<mixed>,
+  works[0].expandedPath: Array<mixed>,
 };
 
 const PersonalWorks = (props: Props) => {

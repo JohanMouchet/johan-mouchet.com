@@ -8,11 +8,11 @@ import { Button } from "../";
 // TODO: {% import _self as menu %}
 
 type Props = {
-  menu: array,
-  [menu[0].text]: string,
-  [menu[0].button]: string,
-  [menu[0].url]: string,
-  [menu[0].metadata.additionalClasses]: array,
+  menu: Array<mixed>,
+  menu[0].text: ?string,
+  menu[0].button: ?string,
+  menu[0].url: ?string,
+  menu[0].metadata.additionalClasses: ?array,
 };
 
 // TODO: "isSubmenu" was passed in the macro

@@ -5,7 +5,7 @@ import "./experience.scss";
 import { Projects } from "../";
 
 type Props = {
-  experiences: array,
+  experiences: Array<mixed>,
   company[0].URL: string,
   company[0].name: string,
   location: string,
@@ -13,7 +13,7 @@ type Props = {
   startDate: string,
   endDate: string,
   lede: string,
-  [projects]: array,
+  projects: ?array,
 };
 
 const Experience = (props: Props) => {

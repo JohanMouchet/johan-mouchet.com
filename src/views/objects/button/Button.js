@@ -7,11 +7,11 @@ import "./button.scss";
 type ButtonProps = {
   type: string,
   text: string,
-  [url]: string,
-  [metadata.contextClass]: string,
-  [metadata.modifierClasses]: array,
-  [metadata.additionalClasses]: array,
-  [metadata.attributes]: object
+  url: ?string,
+  metadata.contextClass: ?string,
+  metadata.modifierClasses: ?array,
+  metadata.additionalClasses: ?array,
+  metadata.attributes: ?object
 };
 
 const Button = (props: ButtonProps) => {
@@ -48,11 +48,11 @@ type SocialButtonProps = {
   url: string,
   iconPath: string,
   text: string,
-  [counter]: int,
-  [metadata.contextClass]: string,
-  [metadata.modifierClasses]: array,
-  [metadata.additionalClasses]: array,
-  [metadata.attributes]: object
+  counter: ?int,
+  metadata.contextClass: ?string,
+  metadata.modifierClasses: ?array,
+  metadata.additionalClasses: ?array,
+  metadata.attributes: ?object
 };
 
 const SocialButton = (props: SocialButtonProps) => {
@@ -95,10 +95,10 @@ export { SocialButton };
 type SocialButtonBadgeProps = {
   url: string,
   iconPath: string,
-  [metadata.contextClass]: string,
-  [metadata.modifierClasses]: array,
-  [metadata.additionalClasses]: array,
-  [metadata.attributes]: object
+  metadata.contextClass: ?string,
+  metadata.modifierClasses: ?array,
+  metadata.additionalClasses: ?array,
+  metadata.attributes: ?object
 };
 
 const SocialButtonBadge = (props: SocialButtonBadgeProps) => {

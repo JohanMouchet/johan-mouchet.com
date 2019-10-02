@@ -6,10 +6,10 @@ import "./notice.scss";
 
 type Props = {
   primary: string,
-  [secondary]: string,
+  secondary: ?string,
   closeButton: boolean,
-  [metadata.contextClass]: string,
-  [metadata.additionalClasses]: array,
+  metadata.contextClass: ?string,
+  metadata.additionalClasses: ?array,
 };
 
 const Notice = (props: Props) => {

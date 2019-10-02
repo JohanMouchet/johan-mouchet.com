@@ -5,11 +5,11 @@ import cx from "classnames";
 import "./form.scss";
 
 type LabelProps = {
-  [for]: string,
-  [text]: string,
-  [metadata.contextClass]: string,
-  [metadata.additionalClasses]: array,
-  [metadata.modifierClasses]: array,
+  for: ?string,
+  text: ?string,
+  metadata.contextClass: ?string,
+  metadata.additionalClasses: ?array,
+  metadata.modifierClasses: ?array,
 };
 
 const Label = (props: LabelProps) => {
@@ -46,14 +46,14 @@ Label.defaultProps = {
 export { Label };
 
 type FieldProps = {
-  [id]: string,
+  id: ?string,
   type: string,
   name: string,
-  [value]: string,
-  [metadata.contextClass]: string,
-  [metadata.additionalClasses]: array,
-  [metadata.modifierClasses]: array,
-  [metadata.attributes]: object,
+  value: ?string,
+  metadata.contextClass: ?string,
+  metadata.additionalClasses: ?array,
+  metadata.modifierClasses: ?array,
+  metadata.attributes: ?object,
 };
 
 const Field = (props: FieldProps) => {
@@ -86,14 +86,14 @@ Field.defaultProps = {
 export { Field };
 
 type ToggleProps = {
-  [id]: string,
+  id: ?string,
   type: string,
-  [name]: string,
-  [value]: string,
-  [text]: string,
-  [metadata.contextClass]: string,
-  [metadata.additionalClasses]: array,
-  [metadata.attributes]: object,
+  name: ?string,
+  value: ?string,
+  text: ?string,
+  metadata.contextClass: ?string,
+  metadata.additionalClasses: ?array,
+  metadata.attributes: ?object,
 };
 
 const Toggle = (props: ToggleProps) => {
@@ -131,13 +131,13 @@ Toggle.defaultProps = {
 export { Toggle };
 
 type FileProps = {
-  [id]: string,
+  id: ?string,
   name: string,
-  [text]: string,
-  [metadata.contextClass]: string,
-  [metadata.additionalClasses]: array,
-  [metadata.attributes]: object,
-  [metadata.multipleCaption]: string,
+  text: ?string,
+  metadata.contextClass: ?string,
+  metadata.additionalClasses: ?array,
+  metadata.attributes: ?object,
+  metadata.multipleCaption: ?string,
 };
 
 const File = (props: FileProps) => {
@@ -171,15 +171,15 @@ File.defaultProps = {
 export { File };
 
 type SelectProps = {
-  [id]: string,
+  id: ?string,
   name: string,
-  [metadata.contextClass]: string,
-  [metadata.additionalClasses]: array,
-  [metadata.attributes]: object,
-  options: array,
+  metadata.contextClass: ?string,
+  metadata.additionalClasses: ?array,
+  metadata.attributes: ?object,
+  options: Array<mixed>,
   options[0].text: string,
   options[0].value: string,
-  options[0].attributes: array,
+  options[0].attributes: Array<mixed>,
 };
 
 const Select = (props: SelectProps) => {
@@ -216,12 +216,12 @@ Select.defaultProps = {
 export { Select };
 
 type TextareaProps = {
-  [id]: string,
+  id: ?string,
   name: string,
-  [text]: string,
-  [metadata.contextClass]: string,
-  [metadata.additionalClasses]: array,
-  [metadata.attributes]: object,
+  text: ?string,
+  metadata.contextClass: ?string,
+  metadata.additionalClasses: ?array,
+  metadata.attributes: ?object,
 };
 
 const Textarea = (props: TextareaProps) => {
@@ -255,11 +255,11 @@ Textarea.defaultProps = {
 export { Textarea };
 
 type RangeProps = {
-  [id]: string,
+  id: ?string,
   name: string,
-  [metadata.contextClass]: string,
-  [metadata.additionalClasses]: array,
-  [metadata.attributes]: object,
+  metadata.contextClass: ?string,
+  metadata.additionalClasses: ?array,
+  metadata.attributes: ?object,
 };
 
 const Range = (props: RangeProps) => {

@@ -61,7 +61,7 @@ const Icon = (props: IconProps) => {
 type Props = {
   range: number,
   current: number,
-  links: Array
+  links: Array<mixed>
 };
 
 const Pagination = (props: Props) => {

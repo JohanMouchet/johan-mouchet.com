@@ -6,12 +6,12 @@ import "./figure.scss";
 
 type Props = {
   src: string,
-  [alt]: string,
-  [title]: string,
-  [metadata.contextClass]: string,
-  [metadata.modifierClasses]: array,
-  [metadata.additionalClasses]: array,
-  [metadata.attributes]: object,
+  alt: ?string,
+  title: ?string,
+  metadata.contextClass: ?string,
+  metadata.modifierClasses: ?array,
+  metadata.additionalClasses: ?array,
+  metadata.attributes: ?object,
 };
 
 const Figure = (props: Props) => {

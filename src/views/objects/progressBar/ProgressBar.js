@@ -5,14 +5,14 @@ import cx from "./node_modules/classnames";
 import "./progress-bar.scss";
 
 type Props = {
-  [label]: string,
-  [total]: string,
+  label: ?string,
+  total: ?string,
   filling: int,
-  [tooltip]: string,
-  [metadata.contextClass]: string,
-  [metadata.additionalClasses]: array,
-  [metadata.modifierClasses]: array,
-  [metadata.attributes]: object,
+  tooltip: ?string,
+  metadata.contextClass: ?string,
+  metadata.additionalClasses: ?array,
+  metadata.modifierClasses: ?array,
+  metadata.attributes: ?object,
 };
 
 const ProgressBar = (props: Props) => {

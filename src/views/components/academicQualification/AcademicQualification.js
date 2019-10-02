@@ -4,7 +4,7 @@ import * as React from "react";
 import "./academic-qualification.scss";
 
 type Props = {
-  qualifications: array,
+  qualifications: Array<mixed>,
   qualifications[0].establishment.name: string,
   qualifications[0].establishment.URL: string,
   qualifications[0].location: string,

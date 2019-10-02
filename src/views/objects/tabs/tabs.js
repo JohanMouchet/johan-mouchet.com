@@ -7,8 +7,8 @@ import "./tabs.scss";
 type Props = {
   tabs.thumb: string,
   tabs.panel: string,
-  [metadata.contextClass]: string,
-  [metadata.additionalClasses]: array,
+  metadata.contextClass: ?string,
+  metadata.additionalClasses: ?array,
 };
 
 const Tabs = (props: Props) => {

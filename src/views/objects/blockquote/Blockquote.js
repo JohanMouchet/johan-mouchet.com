@@ -6,11 +6,11 @@ import "./blockquote.scss";
 
 type Props = {
   quote: string,
-  [outerQuote]: string,
-  [cite]: string,
-  [metadata.contextClass]: string,
-  [metadata.modifierClasses]: array,
-  [metadata.additionalClasses]: array,
+  outerQuote: ?string,
+  cite: ?string,
+  metadata.contextClass: ?string,
+  metadata.modifierClasses: ?array,
+  metadata.additionalClasses: ?array,
 };
 
 const Blockquote = (props: Props) => {

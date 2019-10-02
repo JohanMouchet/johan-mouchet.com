@@ -5,13 +5,13 @@ import cx from "./node_modules/classnames";
 import "./___.scss";
 
 type Props = {
-  context: array,
+  context: Array<mixed>,
   tag: string,
   id: string,
   text: string,
-  [marker: string,
-  [metadata.contextClass]: string,
-  [metadata.attributes]: object,
+  marker: string,
+  metadata.contextClass: ?string,
+  metadata.attributes: ?object,
 };
 
 // TODO: "context" was passed in the macro

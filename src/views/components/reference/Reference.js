@@ -5,7 +5,7 @@ import "./reference.scss";
 
 type Props = {
   requestOnly: boolean,
-  references: array,
+  references: Array<mixed>,
   references[0].name: string,
   references[0].relation: string,
   references[0].company[0].name: string,

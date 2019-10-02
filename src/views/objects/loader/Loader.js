@@ -5,9 +5,9 @@ import cx from "classnames";
 import "./loader.scss";
 
 type Props = {
-  [metadata.contextClass]: string,
-  [metadata.modifierClasses]: array,
-  [metadata.additionalClasses]: array,
+  metadata.contextClass: ?string,
+  metadata.modifierClasses: ?array,
+  metadata.additionalClasses: ?array,
 };
 
 const Loader = (props: Props) => {

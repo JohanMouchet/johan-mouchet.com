@@ -4,13 +4,13 @@ import * as React from "react";
 import "./projects.scss";
 
 type Props = {
-  projects: array,
+  projects: Array<mixed>,
   project[0].name: string,
-  [project[0].tagline]: string,
+  project[0].tagline: ?string,
   project[0].URL: string,
-  [project[0].lede: string,
+  project[0].lede: string,
   project[0].thumbnailPath: string,
-  [project[0].details]: array,
+  project[0].details: ?array,
 };
 
 const Projects = (props: Props) => {
