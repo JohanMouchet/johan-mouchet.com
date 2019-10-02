@@ -1,6 +1,6 @@
 # TODO
 
-- Import `_base.scss` to layout
+- Replace `SITE`, remove `context`
 - Destructure props
 - Add cx modifierClasses
 - Replace `{% if`
@@ -8,7 +8,9 @@
 - remove props.name
 - What to do with `contextClass(contextClass)`?
 - Check potentially ignored prop in string `title="Follow me on { media.name }"`
+- Is `Array<mixed>` mixed necessary?
 - Handle `|raw`
+- Replace prop by `children`
 - Fix Tabs, Accordion, Alert, Table Numerical column
 - Run Prettier
 - Add Storybook

@@ -45,13 +45,13 @@ const Projects = (props: Props) => {
 							</div>
 							<div className="cell cell--12-@xs cell--8-@md">
 						{% endif %}
-								{project.lede && <p className="c-project__lede { projectQuantity === 1 ? 'u-vr--top-0-@md'}">
+								{project.lede && <p className={`c-project__lede ${ projectQuantity === 1 && 'u-vr--top-0-@md'}`}>
 										{ project.lede|raw }
 									</p>
 								}
 
 								{project.awards && (
-									<ul className="c-project__awards { projectQuantity === 1 ? 'u-vr--top-0-@md'}">
+									<ul className={`c-project__awards ${ projectQuantity === 1 && 'u-vr--top-0-@md'}`}>
 										{props.awards.map(award => (
 											<li className="c-project__award">
 												<a className="c-project__award-icon" href={award.URL}><IconAward /></a>
@@ -61,7 +61,7 @@ const Projects = (props: Props) => {
 									</ul>)}
 
 								{project.details && (
-									<ul className="c-project__details { projectQuantity === 1 ? 'u-vr--top-0-@md'}">
+									<ul className={`c-project__details ${ projectQuantity === 1 && 'u-vr--top-0-@md'}`}>
 										{project.details.map(detail => (
 											<li className="c-project__detail">{ detail|raw }</li>
 										))}

@@ -8,7 +8,6 @@ type Props = {
   context: Array<mixed>,
   tag: string,
   id: string,
-  text: string,
   marker: string,
   metadata: {
     contextClass: ?string,
@@ -18,7 +17,7 @@ type Props = {
 
 // TODO: "context" was passed in the macro
 
-const ___ = (props: Props) => {
+const ___ = (props: Props, children) => {
 	const {
 	  prop1,
 	  prop2
@@ -38,7 +37,7 @@ const ___ = (props: Props) => {
 	return (
 		<Tag id={props.id} className={___Class} {...props.metadata.attributes}>
 			<a href={`${context._SITE['rurl']}#${props.id}`} className='u-anchor__link'>{ props.marker|default('#') }</a>
-			{props.text|raw}
+			{children}
 		</Tag>
 	);
 };

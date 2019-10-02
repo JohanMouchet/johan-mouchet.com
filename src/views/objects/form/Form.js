@@ -6,38 +6,33 @@ import "./form.scss";
 
 type LabelProps = {
   for: ?string,
-  text: ?string,
   metadata: {
     contextClass: ?string,
     additionalClasses: ?Array<string>,
-    modifierClasses: ?Array<string>,
+    modifierClasses: ?Array<string>
   }
 };
 
-const Label = (props: LabelProps) => {
-	const {
-	  prop1,
-	  prop2
-	} = props;
-  
-	const LabelClass = cx(
-	  "o-form__label",
-	  props.metadata.contextClass,
-	  props.metadata.modifierClasses,
-	  props.metadata.additionalClasses,
-	  {
-		"Label--prop1": prop1
-	  }
-	);
-  
-	const text = props.text === '' ? '&nbsp;' : props.text;
-	const blockLabelClass = props.text === '' && 'o-form__label--block';
+const Label = (props: LabelProps, children) => {
+  const { prop1, prop2 } = props;
 
-	return (
+  const LabelClass = cx(
+    "o-form__label",
+    props.metadata.contextClass,
+    props.metadata.modifierClasses,
+    props.metadata.additionalClasses,
+    {
+      "Label--prop1": prop1
+    }
+  );
 
-	<label for={props.for} className={`${LabelClass}${blockLabelClass}`}>
-		{text|raw}
-	</label>
+  return (
+    <label
+      for={props.for}
+      className={`${LabelClass} ${!children && "o-form__label--block"}`}
+    >
+      {children || "&nbsp;"}
+    </label>
   );
 };
 
@@ -56,30 +51,32 @@ type FieldProps = {
     contextClass: ?string,
     additionalClasses: ?Array<string>,
     modifierClasses: ?Array<string>,
-    attributes: ?{[key: string]: any},
+    attributes: ?{ [key: string]: any }
   }
 };
 
 const Field = (props: FieldProps) => {
-	const {
-	  prop1,
-	  prop2
-	} = props;
-  
-	const FieldClass = cx(
-	  "o-form__field",
-	  props.metadata.contextClass,
-	  props.metadata.modifierClasses,
-	  props.metadata.additionalClasses,
-	  {
-		"Field--prop1": prop1
-	  }
-	);
-  
-	return (
+  const { prop1, prop2 } = props;
 
+  const FieldClass = cx(
+    "o-form__field",
+    props.metadata.contextClass,
+    props.metadata.modifierClasses,
+    props.metadata.additionalClasses,
+    {
+      "Field--prop1": prop1
+    }
+  );
 
-	<input id={props.id} type={props.type} name={props.name} value={props.value} className={`${FieldClass} o-form__field--${ props.type}`} {...props.metadata.attributes} />
+  return (
+    <input
+      id={props.id}
+      type={props.type}
+      name={props.name}
+      value={props.value}
+      className={`${FieldClass} o-form__field--${props.type}`}
+      {...props.metadata.attributes}
+    />
   );
 };
 
@@ -94,39 +91,41 @@ type ToggleProps = {
   type: string,
   name: ?string,
   value: ?string,
-  text: ?string,
   metadata: {
     contextClass: ?string,
     additionalClasses: ?Array<string>,
-    attributes: ?{[key: string]: any},
+    attributes: ?{ [key: string]: any }
   }
 };
 
-const Toggle = (props: ToggleProps) => {
-	const {
-	  prop1,
-	  prop2
-	} = props;
-  
-	const ToggleClass = cx(
-	  "o-form__toggle",
-	  props.metadata.contextClass,
-	  props.metadata.additionalClasses,
-	  {
-		"Toggle--prop1": prop1
-	  }
-	);
-  
-	return (
+const Toggle = (props: ToggleProps, children) => {
+  const { prop1, prop2 } = props;
 
+  const ToggleClass = cx(
+    "o-form__toggle",
+    props.metadata.contextClass,
+    props.metadata.additionalClasses,
+    {
+      "Toggle--prop1": prop1
+    }
+  );
 
-	<label className={`${ToggleClass} o-form__toggle--${props.type}`} {...props.metadata.attributes}>
-		<input id={props.id} type={props.type} name={props.name} value={props.value} className='o-form__toggle-input' {...props.metadata.attributes} />
-		<span className='o-form__toggle-icon'></span>
-		{%- if props.text -%}
-			<span className='o-form__toggle-text'>{ props.text|raw }</span>
-		{% endif -%}
-	</label>
+  return (
+    <label
+      className={`${ToggleClass} o-form__toggle--${props.type}`}
+      {...props.metadata.attributes}
+    >
+      <input
+        id={props.id}
+        type={props.type}
+        name={props.name}
+        value={props.value}
+        className="o-form__toggle-input"
+        {...props.metadata.attributes}
+      />
+      <span className="o-form__toggle-icon"></span>
+      {children && <span className="o-form__toggle-text">{children}</span>}
+    </label>
   );
 };
 
@@ -139,36 +138,45 @@ export { Toggle };
 type FileProps = {
   id: ?string,
   name: string,
-  text: ?string,
   multipleCaption: ?string,
   metadata: {
     contextClass: ?string,
     additionalClasses: ?Array<string>,
-    attributes: ?{[key: string]: any},
+    attributes: ?{ [key: string]: any }
   }
 };
 
-const File = (props: FileProps) => {
-	const {
-	  prop1,
-	  prop2
-	} = props;
-  
-	const FileClass = cx(
-	  "o-form__file",
-	  props.metadata.contextClass,
-	  props.metadata.additionalClasses,
-	  {
-		"File--prop1": prop1
-	  }
-	);
-  
-	return (
-		<label className={`${FileClass} o-button js-form-file`}>
-			<input id={props.id} type="file" name={props.name} className="o-form__file-input js-form-file-input" data-multiple-caption={props.multipleCaption ? props.multipleCaption : '{count} files selected'} {...props.metadata.attributes} />
-			<i className="material-icons">file_upload</i>
-			{props.text && <span className="o-form__file-text js-form-file-text">{ props.text|raw }</span>}
-		</label>
+const File = (props: FileProps, children) => {
+  const { prop1, prop2 } = props;
+
+  const FileClass = cx(
+    "o-form__file",
+    props.metadata.contextClass,
+    props.metadata.additionalClasses,
+    {
+      "File--prop1": prop1
+    }
+  );
+
+  return (
+    <label className={`${FileClass} o-button js-form-file`}>
+      <input
+        id={props.id}
+        type="file"
+        name={props.name}
+        className="o-form__file-input js-form-file-input"
+        data-multiple-caption={
+          props.multipleCaption
+            ? props.multipleCaption
+            : "{count} files selected"
+        }
+        {...props.metadata.attributes}
+      />
+      <i className="material-icons">file_upload</i>
+      {children && (
+        <span className="o-form__file-text js-form-file-text">{children}</span>
+      )}
+    </label>
   );
 };
 
@@ -184,38 +192,41 @@ type SelectProps = {
   metadata: {
     contextClass: ?string,
     additionalClasses: ?Array<string>,
-    attributes: ?{[key: string]: any},
+    attributes: ?{ [key: string]: any }
   },
-  options: Array<mixed>,
-  options[0].text: string,
-  options[0].value: string,
-  options[0].attributes: Array<mixed>,
+  options: {
+    text: string,
+    value: string,
+    attributes: Array<string>
+  }
 };
 
 const Select = (props: SelectProps) => {
-	const {
-	  prop1,
-	  prop2
-	} = props;
-  
-	const SelectClass = cx(
-	  "o-form__field",
-	  props.metadata.contextClass,
-	  props.metadata.modifierClasses,
-	  props.metadata.additionalClasses,
-	  {
-		"Select--prop1": prop1
-	  }
-	);
-  
-	return (
+  const { prop1, prop2 } = props;
 
+  const SelectClass = cx(
+    "o-form__field",
+    props.metadata.contextClass,
+    props.metadata.modifierClasses,
+    props.metadata.additionalClasses,
+    {
+      "Select--prop1": prop1
+    }
+  );
 
-	<select id={props.id} name={props.name} className={`${SelectClass} o-form__field--select`} {...props.metadata.attributes}>
-		{props.options.map(option => (
-			<option value={props.value} {...props.metadata.attributes}>{ option.text }</option>
-		))}
-	</select>
+  return (
+    <select
+      id={props.id}
+      name={props.name}
+      className={`${SelectClass} o-form__field--select`}
+      {...props.metadata.attributes}
+    >
+      {props.options.map(option => (
+        <option value={props.value} {...props.metadata.attributes}>
+          {option.text}
+        </option>
+      ))}
+    </select>
   );
 };
 
@@ -228,35 +239,34 @@ export { Select };
 type TextareaProps = {
   id: ?string,
   name: string,
-  text: ?string,
   metadata: {
     contextClass: ?string,
     additionalClasses: ?Array<string>,
-    attributes: ?{[key: string]: any},
+    attributes: ?{ [key: string]: any }
   }
 };
 
-const Textarea = (props: TextareaProps) => {
-	const {
-	  prop1,
-	  prop2
-	} = props;
-  
-	const TextareaClass = cx(
-	  "o-form__field",
-	  props.metadata.contextClass,
-	  props.metadata.additionalClasses,
-	  {
-		"Textarea--prop1": prop1
-	  }
-	);
-  
-	return (
+const Textarea = (props: TextareaProps, children) => {
+  const { prop1, prop2 } = props;
 
+  const TextareaClass = cx(
+    "o-form__field",
+    props.metadata.contextClass,
+    props.metadata.additionalClasses,
+    {
+      "Textarea--prop1": prop1
+    }
+  );
 
-	<textarea id={props.id} name={props.name} className={`${TextareaClass} o-form__field--textarea`} {...props.metadata.attributes}>
-		{props.text|raw}
-	</textarea>
+  return (
+    <textarea
+      id={props.id}
+      name={props.name}
+      className={`${TextareaClass} o-form__field--textarea`}
+      {...props.metadata.attributes}
+    >
+      {children}
+    </textarea>
   );
 };
 
@@ -272,29 +282,30 @@ type RangeProps = {
   metadata: {
     contextClass: ?string,
     additionalClasses: ?Array<string>,
-    attributes: ?{[key: string]: any},
+    attributes: ?{ [key: string]: any }
   }
 };
 
 const Range = (props: RangeProps) => {
-	const {
-	  prop1,
-	  prop2
-	} = props;
-  
-	const RangeClass = cx(
-	  "o-form__range",
-	  props.metadata.contextClass,
-	  props.metadata.additionalClasses,
-	  {
-		"Range--prop1": prop1
-	  }
-	);
-  
-	return (
+  const { prop1, prop2 } = props;
 
+  const RangeClass = cx(
+    "o-form__range",
+    props.metadata.contextClass,
+    props.metadata.additionalClasses,
+    {
+      "Range--prop1": prop1
+    }
+  );
 
-	<input id={props.id} type="range" name={props.name} className={RangeClass} {...props.metadata.attributes} />
+  return (
+    <input
+      id={props.id}
+      type="range"
+      name={props.name}
+      className={RangeClass}
+      {...props.metadata.attributes}
+    />
   );
 };
 
