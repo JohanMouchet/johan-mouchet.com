@@ -1,6 +1,7 @@
 // @flow
 
 import * as React from "react";
+import { GLOBAL } from "../../../constants/global";
 
 const HTML = children => {
   return (
@@ -18,7 +19,7 @@ const HTML = children => {
           <meta property="og:description" content={_PAGE.description} />
           <meta
             property="og:image"
-            content={`${_GLOBAL.paths.img}theme/og-image.jpg`}
+            content={`${GLOBAL.paths.img}theme/og-image.jpg`}
           />
           {/* <meta property="og:url" content={`___${ _SITE['hosturl']} + ${_SITE['baseurl']} + ${_SITE['rurl']}}`} /> */}
 
@@ -44,14 +45,14 @@ const HTML = children => {
           <link
             rel="stylesheet"
             type="text/css"
-            href={`${_GLOBAL.paths.css}style.css?v=${_GLOBAL.version.css}`}
+            href={`${GLOBAL.paths.css}style.css?v=${GLOBAL.version.css}`}
           />
 
           {/* Favicon */}
           <link
             rel="shortcut icon"
             type="image/x-icon"
-            href={`${_GLOBAL.paths.img}theme/favicon.gif`}
+            href={`${GLOBAL.paths.img}theme/favicon.gif`}
           />
         </head>
         <body>
@@ -62,11 +63,11 @@ const HTML = children => {
 
           {/* Bundle */}
           <script
-            src={`${_GLOBAL.paths.js}bundle.js?v=${_GLOBAL.version.js}`}
+            src={`${GLOBAL.paths.js}bundle.js?v=${GLOBAL.version.js}`}
           />
 
           {/* Wow.js */}
-          <script src={`${_GLOBAL.paths.js}vendors/wow.js`} />
+          <script src={`${GLOBAL.paths.js}vendors/wow.js`} />
           <script>{new WOW().init()}</script>
 
           {/* Standalone */}

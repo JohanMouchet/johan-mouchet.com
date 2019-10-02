@@ -1,4 +1,5 @@
 import * as React from "react";
+import { GLOBAL } from "../../../constants/global";
 import {
   Blockquote,
   Label,
@@ -1224,7 +1225,7 @@ const StyleGuide = (props: Props) => {
                       url:
                         "https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/facebook.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/facebook.svg"
                       ),
                       text: "Share",
                       counter: 10,
@@ -1243,7 +1244,7 @@ const StyleGuide = (props: Props) => {
                       url:
                         "https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/twitter.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/twitter.svg"
                       ),
                       text: "Tweet",
                       counter: 10,
@@ -1261,7 +1262,7 @@ const StyleGuide = (props: Props) => {
                     props={{
                       url: "https://plus.google.com/share?url={URL}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/googleplus.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/googleplus.svg"
                       ),
                       text: "Share",
                       counter: 10,
@@ -1280,7 +1281,7 @@ const StyleGuide = (props: Props) => {
                       url:
                         "http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/pinterest.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/pinterest.svg"
                       ),
                       text: "Pin it",
                       counter: 10,
@@ -1299,7 +1300,7 @@ const StyleGuide = (props: Props) => {
                       url:
                         "http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/linkedin.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/linkedin.svg"
                       ),
                       text: "Share",
                       counter: 10,
@@ -1320,7 +1321,7 @@ const StyleGuide = (props: Props) => {
                       url:
                         "https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/facebook.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/facebook.svg"
                       ),
                       text: "Share",
                       counter: 10,
@@ -1340,7 +1341,7 @@ const StyleGuide = (props: Props) => {
                       url:
                         "https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/twitter.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/twitter.svg"
                       ),
                       text: "Tweet",
                       counter: 10,
@@ -1359,7 +1360,7 @@ const StyleGuide = (props: Props) => {
                     props={{
                       url: "https://plus.google.com/share?url={URL}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/googleplus.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/googleplus.svg"
                       ),
                       text: "Share",
                       counter: 10,
@@ -1379,7 +1380,7 @@ const StyleGuide = (props: Props) => {
                       url:
                         "http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/pinterest.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/pinterest.svg"
                       ),
                       text: "Pin it",
                       counter: 10,
@@ -1399,7 +1400,7 @@ const StyleGuide = (props: Props) => {
                       url:
                         "http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/linkedin.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/linkedin.svg"
                       ),
                       text: "Share",
                       counter: 10,
@@ -1424,7 +1425,7 @@ const StyleGuide = (props: Props) => {
                     props={{
                       url: "{URL}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/facebook.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/facebook.svg"
                       )
                     }}
                   />
@@ -1435,7 +1436,7 @@ const StyleGuide = (props: Props) => {
                     props={{
                       url: "{URL}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/twitter.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/twitter.svg"
                       )
                     }}
                   />
@@ -1446,7 +1447,7 @@ const StyleGuide = (props: Props) => {
                     props={{
                       url: "{URL}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/googleplus.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/googleplus.svg"
                       )
                     }}
                   />
@@ -1457,7 +1458,7 @@ const StyleGuide = (props: Props) => {
                     props={{
                       url: "{URL}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/pinterest.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/pinterest.svg"
                       )
                     }}
                   />
@@ -1468,7 +1469,7 @@ const StyleGuide = (props: Props) => {
                     props={{
                       url: "{URL}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/linkedin.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/linkedin.svg"
                       )
                     }}
                   />
@@ -1481,7 +1482,7 @@ const StyleGuide = (props: Props) => {
                     props={{
                       url: "{URL}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/facebook.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/facebook.svg"
                       ),
                       metadata: {
                         modifierClasses: ["social-facebook"]
@@ -1495,7 +1496,7 @@ const StyleGuide = (props: Props) => {
                     props={{
                       url: "{URL}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/twitter.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/twitter.svg"
                       ),
                       metadata: {
                         modifierClasses: ["social-twitter"]
@@ -1509,7 +1510,7 @@ const StyleGuide = (props: Props) => {
                     props={{
                       url: "{URL}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/googleplus.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/googleplus.svg"
                       ),
                       metadata: {
                         modifierClasses: ["social-googleplus"]
@@ -1523,7 +1524,7 @@ const StyleGuide = (props: Props) => {
                     props={{
                       url: "{URL}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/pinterest.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/pinterest.svg"
                       ),
                       metadata: {
                         modifierClasses: ["social-pinterest"]
@@ -1537,7 +1538,7 @@ const StyleGuide = (props: Props) => {
                     props={{
                       url: "{URL}",
                       iconPath: file_get_contents(
-                        _GLOBAL.paths.img + "icons/simple-icons/linkedin.svg"
+                        GLOBAL.paths.img + "icons/simple-icons/linkedin.svg"
                       ),
                       metadata: {
                         modifierClasses: ["social-linkedin"]

@@ -1,6 +1,7 @@
 // @flow
 
 import * as React from "react";
+import { GLOBAL } from "../../../constants/global";
 import "./mast-footer.scss";
 
 const MastFooter = () => {
@@ -10,7 +11,7 @@ const MastFooter = () => {
         <div className="grid grid--yCenter-@xs grid--noWrap-@xs">
           <div className="cell cell--0-@xs">
             <span className="p-mast-footer__version">
-              {_GLOBAL.version.site}
+              {GLOBAL.version.site}
             </span>
           </div>
           <div className="cell cell--@xs">
@@ -23,7 +24,7 @@ const MastFooter = () => {
           </div>
           <div className="cell cell--0-@xs">
             <a className="p-mast-footer__page-top" href="#" title="Go top">
-              {file_get_contents(_GLOBAL.paths.img + "icons/arrow-down.svg") |
+              {file_get_contents(GLOBAL.paths.img + "icons/arrow-down.svg") |
                 raw}
             </a>
           </div>
