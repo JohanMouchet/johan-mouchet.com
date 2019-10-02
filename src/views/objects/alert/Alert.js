@@ -10,7 +10,7 @@ type Props = {
   hidden: boolean,
   closable: ?boolean,
   metadata.contextClass: ?string,
-  metadata.additionalClasses: ?array,
+  metadata.additionalClasses: ?Array<mixed>,
 };
 
 const Alert = (props: Props) => {

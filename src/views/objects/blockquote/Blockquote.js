@@ -9,8 +9,8 @@ type Props = {
   outerQuote: ?string,
   cite: ?string,
   metadata.contextClass: ?string,
-  metadata.modifierClasses: ?array,
-  metadata.additionalClasses: ?array,
+  metadata.modifierClasses: ?Array<mixed>,
+  metadata.additionalClasses: ?Array<mixed>,
 };
 
 const Blockquote = (props: Props) => {

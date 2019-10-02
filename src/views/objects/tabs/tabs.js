@@ -8,7 +8,7 @@ type Props = {
   tabs.thumb: string,
   tabs.panel: string,
   metadata.contextClass: ?string,
-  metadata.additionalClasses: ?array,
+  metadata.additionalClasses: ?Array<mixed>,
 };
 
 const Tabs = (props: Props) => {

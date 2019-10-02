@@ -13,7 +13,7 @@ type Props = {
   startDate: string,
   endDate: string,
   lede: string,
-  projects: ?array,
+  projects: ?Array<mixed>,
 };
 
 const Experience = (props: Props) => {

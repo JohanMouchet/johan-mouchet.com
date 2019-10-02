@@ -8,8 +8,8 @@ type LabelProps = {
   for: ?string,
   text: ?string,
   metadata.contextClass: ?string,
-  metadata.additionalClasses: ?array,
-  metadata.modifierClasses: ?array,
+  metadata.additionalClasses: ?Array<mixed>,
+  metadata.modifierClasses: ?Array<mixed>,
 };
 
 const Label = (props: LabelProps) => {
@@ -51,8 +51,8 @@ type FieldProps = {
   name: string,
   value: ?string,
   metadata.contextClass: ?string,
-  metadata.additionalClasses: ?array,
-  metadata.modifierClasses: ?array,
+  metadata.additionalClasses: ?Array<mixed>,
+  metadata.modifierClasses: ?Array<mixed>,
   metadata.attributes: ?object,
 };
 
@@ -92,7 +92,7 @@ type ToggleProps = {
   value: ?string,
   text: ?string,
   metadata.contextClass: ?string,
-  metadata.additionalClasses: ?array,
+  metadata.additionalClasses: ?Array<mixed>,
   metadata.attributes: ?object,
 };
 
@@ -135,7 +135,7 @@ type FileProps = {
   name: string,
   text: ?string,
   metadata.contextClass: ?string,
-  metadata.additionalClasses: ?array,
+  metadata.additionalClasses: ?Array<mixed>,
   metadata.attributes: ?object,
   metadata.multipleCaption: ?string,
 };
@@ -174,7 +174,7 @@ type SelectProps = {
   id: ?string,
   name: string,
   metadata.contextClass: ?string,
-  metadata.additionalClasses: ?array,
+  metadata.additionalClasses: ?Array<mixed>,
   metadata.attributes: ?object,
   options: Array<mixed>,
   options[0].text: string,
@@ -220,7 +220,7 @@ type TextareaProps = {
   name: string,
   text: ?string,
   metadata.contextClass: ?string,
-  metadata.additionalClasses: ?array,
+  metadata.additionalClasses: ?Array<mixed>,
   metadata.attributes: ?object,
 };
 
@@ -258,7 +258,7 @@ type RangeProps = {
   id: ?string,
   name: string,
   metadata.contextClass: ?string,
-  metadata.additionalClasses: ?array,
+  metadata.additionalClasses: ?Array<mixed>,
   metadata.attributes: ?object,
 };
 

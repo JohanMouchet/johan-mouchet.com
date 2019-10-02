@@ -9,8 +9,8 @@ type ButtonProps = {
   text: string,
   url: ?string,
   metadata.contextClass: ?string,
-  metadata.modifierClasses: ?array,
-  metadata.additionalClasses: ?array,
+  metadata.modifierClasses: ?Array<mixed>,
+  metadata.additionalClasses: ?Array<mixed>,
   metadata.attributes: ?object
 };
 
@@ -50,8 +50,8 @@ type SocialButtonProps = {
   text: string,
   counter: ?int,
   metadata.contextClass: ?string,
-  metadata.modifierClasses: ?array,
-  metadata.additionalClasses: ?array,
+  metadata.modifierClasses: ?Array<mixed>,
+  metadata.additionalClasses: ?Array<mixed>,
   metadata.attributes: ?object
 };
 
@@ -96,8 +96,8 @@ type SocialButtonBadgeProps = {
   url: string,
   iconPath: string,
   metadata.contextClass: ?string,
-  metadata.modifierClasses: ?array,
-  metadata.additionalClasses: ?array,
+  metadata.modifierClasses: ?Array<mixed>,
+  metadata.additionalClasses: ?Array<mixed>,
   metadata.attributes: ?object
 };
 

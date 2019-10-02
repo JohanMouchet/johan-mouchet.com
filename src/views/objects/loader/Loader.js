@@ -6,8 +6,8 @@ import "./loader.scss";
 
 type Props = {
   metadata.contextClass: ?string,
-  metadata.modifierClasses: ?array,
-  metadata.additionalClasses: ?array,
+  metadata.modifierClasses: ?Array<mixed>,
+  metadata.additionalClasses: ?Array<mixed>,
 };
 
 const Loader = (props: Props) => {

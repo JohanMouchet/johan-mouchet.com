@@ -8,7 +8,7 @@ type Props = {
   levels.title: string,
   levels.url: string,
   metadata.contextClass: ?string,
-  metadata.additionalClasses: ?array,
+  metadata.additionalClasses: ?Array<mixed>,
 };
 
 // TODO: "context" was passed in the macro

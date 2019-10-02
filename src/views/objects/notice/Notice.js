@@ -9,7 +9,7 @@ type Props = {
   secondary: ?string,
   closeButton: boolean,
   metadata.contextClass: ?string,
-  metadata.additionalClasses: ?array,
+  metadata.additionalClasses: ?Array<mixed>,
 };
 
 const Notice = (props: Props) => {

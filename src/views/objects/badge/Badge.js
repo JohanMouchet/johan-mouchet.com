@@ -7,7 +7,7 @@ import "./badge.scss";
 type Props = {
   content: string,
   metadata.contextClass: ?string,
-  metadata.additionalClasses: ?array
+  metadata.additionalClasses: ?Array<mixed>
 };
 
 const Badge = (props: Props) => {

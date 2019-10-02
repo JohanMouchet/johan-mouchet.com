@@ -10,7 +10,7 @@ type Props = {
   project[0].URL: string,
   project[0].lede: string,
   project[0].thumbnailPath: string,
-  project[0].details: ?array,
+  project[0].details: ?Array<mixed>,
 };
 
 const Projects = (props: Props) => {

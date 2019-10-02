@@ -42,7 +42,7 @@ type NotesProps = {
   prefix: ?string,
   text: string,
   metadata.contextClass: ?string,
-  metadata.additionalClasses: ?array,
+  metadata.additionalClasses: ?Array<mixed>,
 };
 
 // TODO: "context" was passed in the macro

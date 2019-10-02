@@ -12,7 +12,7 @@ type Props = {
   menu[0].text: ?string,
   menu[0].button: ?string,
   menu[0].url: ?string,
-  menu[0].metadata.additionalClasses: ?array,
+  menu[0].metadata.additionalClasses: ?Array<mixed>,
 };
 
 // TODO: "isSubmenu" was passed in the macro

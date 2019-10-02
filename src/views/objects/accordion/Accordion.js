@@ -8,7 +8,7 @@ type Props = {
   items.thumb: string,
   items.panel: string,
   metadata.contextClass: ?string,
-  metadata.additionalClasses: ?array,
+  metadata.additionalClasses: ?Array<mixed>,
 };
 
 const Accordion = (props: Props) => {

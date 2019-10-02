@@ -10,8 +10,8 @@ type Props = {
   filling: int,
   tooltip: ?string,
   metadata.contextClass: ?string,
-  metadata.additionalClasses: ?array,
-  metadata.modifierClasses: ?array,
+  metadata.additionalClasses: ?Array<mixed>,
+  metadata.modifierClasses: ?Array<mixed>,
   metadata.attributes: ?object,
 };
 
