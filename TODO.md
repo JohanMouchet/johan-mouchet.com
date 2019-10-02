@@ -1,16 +1,17 @@
 # TODO
 
 - Replace `SITE`, remove `context`
-- Destructure props
-- Add cx modifierClasses
-- Replace `{% if`
+- Handle `|raw`
 - Fix Flow [0]
-- remove props.name
-- What to do with `contextClass(contextClass)`?
+- Replace `{% if`
+- Replace `{% for`
 - Check potentially ignored prop in string `title="Follow me on { media.name }"`
 - Is `Array<mixed>` mixed necessary?
-- Handle `|raw`
-- Replace prop by `children`
+- Destructure `props`
+- Remove `props.name`
+- Add `cx modifierClasses`
+- What to do with `contextClass(contextClass)`?
+- Replace old `prop.text|label` by `children`
 - Fix Tabs, Accordion, Alert, Table Numerical column
 - Run Prettier
 - Add Storybook
@@ -18,6 +19,5 @@
 
 # Fix
 
-- Keep sass prefix `b-`?
+- Keep sass prefix `t-`?
 - Address `// TODO`
-- SCSS import order: settings, tools, vendors, base, utilities
