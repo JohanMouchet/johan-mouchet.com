@@ -7,9 +7,11 @@ import "./form.scss";
 type LabelProps = {
   for: ?string,
   text: ?string,
-  metadata.contextClass: ?string,
-  metadata.additionalClasses: ?Array<mixed>,
-  metadata.modifierClasses: ?Array<mixed>,
+  metadata: {
+    contextClass: ?string,
+    additionalClasses: ?Array<string>,
+    modifierClasses: ?Array<string>,
+  }
 };
 
 const Label = (props: LabelProps) => {
@@ -50,10 +52,12 @@ type FieldProps = {
   type: string,
   name: string,
   value: ?string,
-  metadata.contextClass: ?string,
-  metadata.additionalClasses: ?Array<mixed>,
-  metadata.modifierClasses: ?Array<mixed>,
-  metadata.attributes: ?object,
+  metadata: {
+    contextClass: ?string,
+    additionalClasses: ?Array<string>,
+    modifierClasses: ?Array<string>,
+    attributes: ?{[key: string]: any},
+  }
 };
 
 const Field = (props: FieldProps) => {
@@ -91,9 +95,11 @@ type ToggleProps = {
   name: ?string,
   value: ?string,
   text: ?string,
-  metadata.contextClass: ?string,
-  metadata.additionalClasses: ?Array<mixed>,
-  metadata.attributes: ?object,
+  metadata: {
+    contextClass: ?string,
+    additionalClasses: ?Array<string>,
+    attributes: ?{[key: string]: any},
+  }
 };
 
 const Toggle = (props: ToggleProps) => {
@@ -134,10 +140,12 @@ type FileProps = {
   id: ?string,
   name: string,
   text: ?string,
-  metadata.contextClass: ?string,
-  metadata.additionalClasses: ?Array<mixed>,
-  metadata.attributes: ?object,
-  metadata.multipleCaption: ?string,
+  multipleCaption: ?string,
+  metadata: {
+    contextClass: ?string,
+    additionalClasses: ?Array<string>,
+    attributes: ?{[key: string]: any},
+  }
 };
 
 const File = (props: FileProps) => {
@@ -173,9 +181,11 @@ export { File };
 type SelectProps = {
   id: ?string,
   name: string,
-  metadata.contextClass: ?string,
-  metadata.additionalClasses: ?Array<mixed>,
-  metadata.attributes: ?object,
+  metadata: {
+    contextClass: ?string,
+    additionalClasses: ?Array<string>,
+    attributes: ?{[key: string]: any},
+  },
   options: Array<mixed>,
   options[0].text: string,
   options[0].value: string,
@@ -219,9 +229,11 @@ type TextareaProps = {
   id: ?string,
   name: string,
   text: ?string,
-  metadata.contextClass: ?string,
-  metadata.additionalClasses: ?Array<mixed>,
-  metadata.attributes: ?object,
+  metadata: {
+    contextClass: ?string,
+    additionalClasses: ?Array<string>,
+    attributes: ?{[key: string]: any},
+  }
 };
 
 const Textarea = (props: TextareaProps) => {
@@ -257,9 +269,11 @@ export { Textarea };
 type RangeProps = {
   id: ?string,
   name: string,
-  metadata.contextClass: ?string,
-  metadata.additionalClasses: ?Array<mixed>,
-  metadata.attributes: ?object,
+  metadata: {
+    contextClass: ?string,
+    additionalClasses: ?Array<string>,
+    attributes: ?{[key: string]: any},
+  }
 };
 
 const Range = (props: RangeProps) => {

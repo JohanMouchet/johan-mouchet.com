@@ -41,8 +41,10 @@ type NotesProps = {
   id: string,
   prefix: ?string,
   text: string,
-  metadata.contextClass: ?string,
-  metadata.additionalClasses: ?Array<mixed>,
+  metadata: {
+    contextClass: ?string,
+    additionalClasses: ?Array<string>,
+  }
 };
 
 // TODO: "context" was passed in the macro

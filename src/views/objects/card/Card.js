@@ -10,9 +10,11 @@ type Props = {
   header: ?string,
   body: ?string,
   footer: ?string,
-  metadata.contextClass: ?string,
-  metadata.modifierClasses: ?Array<mixed>,
-  metadata.additionalClasses: ?Array<mixed>
+  metadata: {
+    contextClass: ?string,
+    additionalClasses: ?Array<string>,
+    modifierClasses: ?Array<string>
+  }
 };
 
 const Card = (props: Props) => {

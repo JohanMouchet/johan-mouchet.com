@@ -7,8 +7,10 @@ import "./breadcrumb.scss";
 type Props = {
   levels.title: string,
   levels.url: string,
-  metadata.contextClass: ?string,
-  metadata.additionalClasses: ?Array<mixed>,
+  metadata: {
+    contextClass: ?string,
+    additionalClasses: ?Array<string>,
+  }
 };
 
 // TODO: "context" was passed in the macro

@@ -8,9 +8,11 @@ type Props = {
   quote: string,
   outerQuote: ?string,
   cite: ?string,
-  metadata.contextClass: ?string,
-  metadata.modifierClasses: ?Array<mixed>,
-  metadata.additionalClasses: ?Array<mixed>,
+  metadata: {
+    contextClass: ?string,
+    modifierClasses: ?Array<string>,
+    additionalClasses: ?Array<string>
+  }
 };
 
 const Blockquote = (props: Props) => {
@@ -29,16 +31,12 @@ const Blockquote = (props: Props) => {
 
   return (
     <blockquote className={BlockquoteClass}>
-      <div className="o-blockquote__quotes">
-        {props.quote | raw}
-      </div>
+      <div className="o-blockquote__quotes">{props.quote | raw}</div>
 
       {props.outerQuote | raw}
 
       {props.cite && (
-        <cite className="o-blockquote__cite">
-          {props.cite | raw}
-        </cite>
+        <cite className="o-blockquote__cite">{props.cite | raw}</cite>
       )}
     </blockquote>
   );

@@ -5,29 +5,22 @@ import cx from "classnames";
 import "./loader.scss";
 
 type Props = {
-  metadata.contextClass: ?string,
-  metadata.modifierClasses: ?Array<mixed>,
-  metadata.additionalClasses: ?Array<mixed>,
+  metadata: {
+    contextClass: ?string,
+    additionalClasses: ?Array<string>,
+    modifierClasses: ?Array<string>
+  }
 };
 
 const Loader = (props: Props) => {
-  const { prop1, prop2 } = props;
-
   const LoaderClass = cx(
     "o-loader",
     props.metadata.contextClass,
     props.metadata.modifierClasses,
-    props.metadata.additionalClasses,
-    {
-      "Loader--prop1": prop1
-    }
+    props.metadata.additionalClasses
   );
 
   return <div className={LoaderClass}></div>;
-};
-
-Loader.defaultProps = {
-  prop1: 2
 };
 
 export default Loader;

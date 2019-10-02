@@ -9,10 +9,12 @@ type Props = {
   total: ?string,
   filling: int,
   tooltip: ?string,
-  metadata.contextClass: ?string,
-  metadata.additionalClasses: ?Array<mixed>,
-  metadata.modifierClasses: ?Array<mixed>,
-  metadata.attributes: ?object,
+  metadata: {
+    contextClass: ?string,
+    additionalClasses: ?Array<string>,
+    modifierClasses: ?Array<string>,
+    attributes: ?{ [key: string]: any }
+  }
 };
 
 const ProgressBar = (props: Props) => {
@@ -31,19 +33,15 @@ const ProgressBar = (props: Props) => {
   return (
     <div className={ProgressBarClass}>
       {props.label && (
-        <span className="o-progress-bar__label">
-          {props.label | raw}
-        </span>
+        <span className="o-progress-bar__label">{props.label | raw}</span>
       )}
       {props.total && (
-        <span className="o-progress-bar__total">
-          {props.total | raw}
-        </span>
+        <span className="o-progress-bar__total">{props.total | raw}</span>
       )}
       <div className="o-progress-bar__container">
         <div
           className="o-progress-bar__filling wow"
-          style="width: { props.filling }%"
+          style={`width: ${props.filling}%`}
           data-progress-bar-tooltip={props.tooltip | raw}
         ></div>
       </div>

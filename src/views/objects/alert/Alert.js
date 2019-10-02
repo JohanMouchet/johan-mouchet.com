@@ -9,8 +9,10 @@ type Props = {
   content: string,
   hidden: boolean,
   closable: ?boolean,
-  metadata.contextClass: ?string,
-  metadata.additionalClasses: ?Array<mixed>,
+  metadata: {
+    contextClass: ?string,
+    additionalClasses: ?Array<string>
+  }
 };
 
 const Alert = (props: Props) => {
@@ -49,20 +51,10 @@ const Alert = (props: Props) => {
       className={`${AlertClass} o-alert--${props.type} ${!props.hidden &&
         "is--visible"} ${props.closable && "js-alert"} wow`}
     >
-      <i
-        className="o-alert__icon material-icons"
-      >
-        {getIcon(props.type)}
-      </i>
-      <div className="o-alert__content">
-        {props.content | raw}
-      </div>
+      <i className="o-alert__icon material-icons">{getIcon(props.type)}</i>
+      <div className="o-alert__content">{props.content | raw}</div>
       {props.closable && (
-        <button
-          className="o-alert__close js-alert-close"
-        >
-          &#x2716;
-        </button>
+        <button className="o-alert__close js-alert-close">&#x2716;</button>
       )}
     </div>
   );

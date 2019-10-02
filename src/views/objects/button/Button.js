@@ -8,10 +8,12 @@ type ButtonProps = {
   type: string,
   text: string,
   url: ?string,
-  metadata.contextClass: ?string,
-  metadata.modifierClasses: ?Array<mixed>,
-  metadata.additionalClasses: ?Array<mixed>,
-  metadata.attributes: ?object
+  metadata: {
+    contextClass: ?string,
+    additionalClasses: ?Array<string>,
+    modifierClasses: ?Array<string>,
+    attributes: ?{ [key: string]: any }
+  }
 };
 
 const Button = (props: ButtonProps) => {
@@ -49,10 +51,12 @@ type SocialButtonProps = {
   iconPath: string,
   text: string,
   counter: ?int,
-  metadata.contextClass: ?string,
-  metadata.modifierClasses: ?Array<mixed>,
-  metadata.additionalClasses: ?Array<mixed>,
-  metadata.attributes: ?object
+  metadata: {
+    contextClass: ?string,
+    additionalClasses: ?Array<string>,
+    modifierClasses: ?Array<string>,
+    attributes: ?{ [key: string]: any }
+  }
 };
 
 const SocialButton = (props: SocialButtonProps) => {
@@ -95,10 +99,12 @@ export { SocialButton };
 type SocialButtonBadgeProps = {
   url: string,
   iconPath: string,
-  metadata.contextClass: ?string,
-  metadata.modifierClasses: ?Array<mixed>,
-  metadata.additionalClasses: ?Array<mixed>,
-  metadata.attributes: ?object
+  metadata: {
+    contextClass: ?string,
+    additionalClasses: ?Array<string>,
+    modifierClasses: ?Array<string>,
+    attributes: ?{ [key: string]: any }
+  }
 };
 
 const ButtonSocialBadge = (props: SocialButtonBadgeProps) => {

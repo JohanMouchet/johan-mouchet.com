@@ -10,8 +10,10 @@ type Props = {
   id: string,
   text: string,
   marker: string,
-  metadata.contextClass: ?string,
-  metadata.attributes: ?object,
+  metadata: {
+    contextClass: ?string,
+    attributes: ?{[key: string]: any},
+  }
 };
 
 // TODO: "context" was passed in the macro

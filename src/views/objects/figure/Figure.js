@@ -8,10 +8,12 @@ type Props = {
   src: string,
   alt: ?string,
   title: ?string,
-  metadata.contextClass: ?string,
-  metadata.modifierClasses: ?Array<mixed>,
-  metadata.additionalClasses: ?Array<mixed>,
-  metadata.attributes: ?object,
+  metadata: {
+    contextClass: ?string,
+    additionalClasses: ?Array<string>,
+    modifierClasses: ?Array<string>,
+    attributes: ?{ [key: string]: any }
+  }
 };
 
 const Figure = (props: Props) => {
@@ -37,9 +39,7 @@ const Figure = (props: Props) => {
         {...props.metadata.attributes}
       />
       {props.caption && (
-        <figcaption
-          className="o-figure__caption"
-        >
+        <figcaption className="o-figure__caption">
           {props.caption | raw}
         </figcaption>
       )}
