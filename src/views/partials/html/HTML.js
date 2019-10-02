@@ -3,20 +3,27 @@
 import * as React from "react";
 import { GLOBAL } from "../../../constants/global";
 
-const HTML = children => {
+type Props = {
+  title: string,
+  description: string,
+  id: string
+};
+
+const HTML = (props: Props, children) => {
+  const { title, description, id } = props;
+
   return (
     <>
-      <!doctype html>
       <html lang="en" className="no-js">
         <head>
-          <title>{_PAGE.title}</title>
+          <title>{title}</title>
           <meta charset="UTF-8" />
 
-          <meta name="description" content={_PAGE.description} />
+          <meta name="description" content={description} />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content={_PAGE.title} />
+          <meta property="og:title" content={title} />
           <meta property="og:site_name" content="Johan Mouchet" />
-          <meta property="og:description" content={_PAGE.description} />
+          <meta property="og:description" content={description} />
           <meta
             property="og:image"
             content={`${GLOBAL.paths.img}theme/og-image.jpg`}
@@ -55,23 +62,13 @@ const HTML = children => {
             href={`${GLOBAL.paths.img}theme/favicon.gif`}
           />
         </head>
-        <body>
+        <body id={`page-${id}`}>
           {children}
 
-          {/* Jquery */}
-          <script src="https://code.jquery.com/jquery-3.1.1.min.js" />
-
-          {/* Bundle */}
-          <script
-            src={`${GLOBAL.paths.js}bundle.js?v=${GLOBAL.version.js}`}
-          />
-
+          {/* TODO: Import WOW.js */}
           {/* Wow.js */}
-          <script src={`${GLOBAL.paths.js}vendors/wow.js`} />
-          <script>{new WOW().init()}</script>
-
-          {/* Standalone */}
-          {script | raw}
+          {/* <script src={`${GLOBAL.paths.js}vendors/wow.js`} />
+          <script>{new WOW().init()}</script> */}
 
           {/* Google Analytics */}
           <script

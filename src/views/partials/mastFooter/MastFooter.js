@@ -3,8 +3,11 @@
 import * as React from "react";
 import { GLOBAL } from "../../../constants/global";
 import "./mast-footer.scss";
+import { ArrowDown } from "../../../assets/images/icons/arrow-down.svg";
 
 const MastFooter = () => {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="p-mast-footer">
       <div className="container">
@@ -16,7 +19,7 @@ const MastFooter = () => {
           </div>
           <div className="cell cell--@xs">
             <p className="p-mast-footer__copyright">
-              {"now" | date("Y")} &copy; Johan MOUCHET{" "}
+              {year} &copy; Johan MOUCHET{" "}
               <span className="p-mast-footer__copyright-separator">|</span>
               <br /> Made in{" "}
               <span className="p-mast-footer__cocorico">France</span>
@@ -24,8 +27,7 @@ const MastFooter = () => {
           </div>
           <div className="cell cell--0-@xs">
             <a className="p-mast-footer__page-top" href="#" title="Go top">
-              {file_get_contents(GLOBAL.paths.img + "icons/arrow-down.svg") |
-                raw}
+              {ArrowDown}
             </a>
           </div>
         </div>

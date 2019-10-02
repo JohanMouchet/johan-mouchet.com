@@ -1,4 +1,4 @@
-const GLOBAL = {
+export const GLOBAL = {
   paths: {
     css: "assets/dist/css/",
     img: "assets/dist/img/",
@@ -10,5 +10,3 @@ const GLOBAL = {
     js: "1.0.0"
   }
 };
-
-export default GLOBAL;
