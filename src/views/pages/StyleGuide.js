@@ -1,5 +1,5 @@
 import * as React from "react";
-import { GLOBAL } from "../../../constants/global";
+import { PATHS } from "../../../constants/paths";
 import { Default } from "../layouts";
 import {
   Blockquote,
@@ -1247,7 +1247,7 @@ const StyleGuide = () => {
                         url:
                           "https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}",
                         iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/facebook.svg",
+                          PATHS.img + "icons/simple-icons/facebook.svg",
                         text: "Share",
                         counter: 10,
                         metadata: {
@@ -1265,7 +1265,7 @@ const StyleGuide = () => {
                         url:
                           "https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}",
                         iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/twitter.svg",
+                          PATHS.img + "icons/simple-icons/twitter.svg",
                         text: "Tweet",
                         counter: 10,
                         metadata: {
@@ -1282,7 +1282,7 @@ const StyleGuide = () => {
                       props={{
                         url: "https://plus.google.com/share?url={URL}",
                         iconPath:
-                          GLOBAL.paths.img +
+                          PATHS.img +
                           "icons/simple-icons/googleplus.svg",
                         text: "Share",
                         counter: 10,
@@ -1301,7 +1301,7 @@ const StyleGuide = () => {
                         url:
                           "http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}",
                         iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/pinterest.svg",
+                          PATHS.img + "icons/simple-icons/pinterest.svg",
                         text: "Pin it",
                         counter: 10,
                         metadata: {
@@ -1319,7 +1319,7 @@ const StyleGuide = () => {
                         url:
                           "http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}",
                         iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/linkedin.svg",
+                          PATHS.img + "icons/simple-icons/linkedin.svg",
                         text: "Share",
                         counter: 10,
                         metadata: {
@@ -1339,7 +1339,7 @@ const StyleGuide = () => {
                         url:
                           "https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}",
                         iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/facebook.svg",
+                          PATHS.img + "icons/simple-icons/facebook.svg",
                         text: "Share",
                         counter: 10,
                         metadata: {
@@ -1358,7 +1358,7 @@ const StyleGuide = () => {
                         url:
                           "https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}",
                         iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/twitter.svg",
+                          PATHS.img + "icons/simple-icons/twitter.svg",
                         text: "Tweet",
                         counter: 10,
                         metadata: {
@@ -1376,7 +1376,7 @@ const StyleGuide = () => {
                       props={{
                         url: "https://plus.google.com/share?url={URL}",
                         iconPath:
-                          GLOBAL.paths.img +
+                          PATHS.img +
                           "icons/simple-icons/googleplus.svg",
                         text: "Share",
                         counter: 10,
@@ -1396,7 +1396,7 @@ const StyleGuide = () => {
                         url:
                           "http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}",
                         iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/pinterest.svg",
+                          PATHS.img + "icons/simple-icons/pinterest.svg",
                         text: "Pin it",
                         counter: 10,
                         metadata: {
@@ -1415,7 +1415,7 @@ const StyleGuide = () => {
                         url:
                           "http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}",
                         iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/linkedin.svg",
+                          PATHS.img + "icons/simple-icons/linkedin.svg",
                         text: "Share",
                         counter: 10,
                         metadata: {
@@ -1439,7 +1439,7 @@ const StyleGuide = () => {
                       props={{
                         url: "{URL}",
                         iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/facebook.svg"
+                          PATHS.img + "icons/simple-icons/facebook.svg"
                       }}
                     />
                   </div>
@@ -1449,7 +1449,7 @@ const StyleGuide = () => {
                       props={{
                         url: "{URL}",
                         iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/twitter.svg"
+                          PATHS.img + "icons/simple-icons/twitter.svg"
                       }}
                     />
                   </div>
@@ -1459,7 +1459,7 @@ const StyleGuide = () => {
                       props={{
                         url: "{URL}",
                         iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/googleplus.svg"
+                          PATHS.img + "icons/simple-icons/googleplus.svg"
                       }}
                     />
                   </div>
@@ -1469,7 +1469,7 @@ const StyleGuide = () => {
                       props={{
                         url: "{URL}",
                         iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/pinterest.svg"
+                          PATHS.img + "icons/simple-icons/pinterest.svg"
                       }}
                     />
                   </div>
@@ -1479,7 +1479,7 @@ const StyleGuide = () => {
                       props={{
                         url: "{URL}",
                         iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/linkedin.svg"
+                          PATHS.img + "icons/simple-icons/linkedin.svg"
                       }}
                     />
                   </div>
@@ -1491,7 +1491,7 @@ const StyleGuide = () => {
                       props={{
                         url: "{URL}",
                         iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/facebook.svg",
+                          PATHS.img + "icons/simple-icons/facebook.svg",
                         metadata: {
                           modifierClasses: ["social-facebook"]
                         }
@@ -1504,7 +1504,7 @@ const StyleGuide = () => {
                       props={{
                         url: "{URL}",
                         iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/twitter.svg",
+                          PATHS.img + "icons/simple-icons/twitter.svg",
                         metadata: {
                           modifierClasses: ["social-twitter"]
                         }
@@ -1517,7 +1517,7 @@ const StyleGuide = () => {
                       props={{
                         url: "{URL}",
                         iconPath:
-                          GLOBAL.paths.img +
+                          PATHS.img +
                           "icons/simple-icons/googleplus.svg",
                         metadata: {
                           modifierClasses: ["social-googleplus"]
@@ -1531,7 +1531,7 @@ const StyleGuide = () => {
                       props={{
                         url: "{URL}",
                         iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/pinterest.svg",
+                          PATHS.img + "icons/simple-icons/pinterest.svg",
                         metadata: {
                           modifierClasses: ["social-pinterest"]
                         }
@@ -1544,7 +1544,7 @@ const StyleGuide = () => {
                       props={{
                         url: "{URL}",
                         iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/linkedin.svg",
+                          PATHS.img + "icons/simple-icons/linkedin.svg",
                         metadata: {
                           modifierClasses: ["social-linkedin"]
                         }

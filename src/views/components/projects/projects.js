@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react";
-import { GLOBAL } from "../../../constants/global";
+import { PATHS } from "../../../constants/paths";
 import "./projects.scss";
 
 type Props = {
@@ -54,7 +54,7 @@ const Projects = (props: Props) => {
 									<ul className="c-project__awards { projectQuantity === 1 ? 'u-vr--top-0-@md'}">
 										{props.awards.map(award => (
 											<li className="c-project__award">
-												<a className="c-project__award-icon" href={award.URL}>{ GLOBAL.paths.img + "icons/award.svg" }</a>
+												<a className="c-project__award-icon" href={award.URL}>{ PATHS.img + "icons/award.svg" }</a>
 												<span className="c-project__award-name"><em>{ award.name }</em>{award.category && (":", award.category)}</span>
 											</li>
 										))}

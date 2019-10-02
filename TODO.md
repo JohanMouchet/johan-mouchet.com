@@ -1,6 +1,5 @@
 # TODO
 
-- Split GLOBAL.paths and GLOBAL.version
 - Export / import svgs
 - Import `_base.scss` to layout
 - Destructure props
