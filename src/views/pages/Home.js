@@ -1,5 +1,5 @@
 import * as React from "react";
-import { GLOBAL } from "../../../constants/global";
+import { PATHS } from "../../../constants/paths";
 import { Default } from "../layouts";
 import {
   Expertises,
@@ -9,6 +9,16 @@ import {
   Reference,
   PersonalWorks
 } from "../components";
+import { ReactComponent as Icon500px } from "../../../assets/images/icons/simple-icons/500px.svg";
+import { ReactComponent as IconCodepen } from "../../../assets/images/icons/simple-icons/codepen.svg";
+import { ReactComponent as IconDribbble } from "../../../assets/images/icons/simple-icons/dribbble.svg";
+import { ReactComponent as IconGithub } from "../../../assets/images/icons/simple-icons/github.svg";
+import { ReactComponent as IconInstagram } from "../../../assets/images/icons/simple-icons/instagram.svg";
+import { ReactComponent as IconLinkedIn } from "../../../assets/images/icons/simple-icons/linkedin.svg";
+import { ReactComponent as IconSpotify } from "../../../assets/images/icons/simple-icons/spotify.svg";
+import { ReactComponent as IconTwitter } from "../../../assets/images/icons/simple-icons/twitter.svg";
+import { ReactComponent as IconUnsplash } from "../../../assets/images/icons/simple-icons/unsplash.svg";
+import { ReactComponent as IconYoutube } from "../../../assets/images/icons/simple-icons/youtube.svg";
 
 const Home = () => {
   return (
@@ -45,8 +55,8 @@ const Home = () => {
                   <div className="cell">
                     <img
                       className="c-about__portrait"
-                      src={`${GLOBAL.paths.img}views/johan-mouchet.jpg`}
-                      srcset={`${GLOBAL.paths.img}views/johan-mouchet.jpg, ${GLOBAL.paths.img}views/johan-mouchet@x2.jpg 1.25x`}
+                      src={`${PATHS.img}views/johan-mouchet.jpg`}
+                      srcset={`${PATHS.img}views/johan-mouchet.jpg, ${PATHS.img}views/johan-mouchet@x2.jpg 1.25x`}
                       alt="Johan Mouchet"
                     />
                   </div>
@@ -205,61 +215,52 @@ const Home = () => {
                       {
                         name: "LinkedIn",
                         URL: "https://www.linkedin.com/in/johanmouchet",
-                        iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/linkedin.svg"
+                        icon: IconLinkedIn
                       },
                       {
                         name: "Twitter",
                         URL: "https://twitter.com/JohanMouchet",
-                        iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/twitter.svg"
+                        icon: IconTwitter
                       },
                       {
                         name: "CodePen",
                         URL: "http://codepen.io/johanmouchet/",
-                        iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/codepen.svg"
+                        icon: IconCodepen
                       },
                       {
                         name: "Dribbble",
                         URL: "https://dribbble.com/JohanMouchet/likes",
-                        iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/dribbble.svg"
+                        icon: IconDribbble
                       },
                       {
                         name: "GitHub",
                         URL: "https://github.com/JohanMouchet",
-                        iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/github.svg"
+                        icon: IconGithub
                       },
                       {
                         name: "Unsplash",
                         URL: "https://unsplash.com/@johanmouchet/",
-                        iconPath: GLOBAL.paths.img + "icons/unsplash.svg"
+                        icon: IconUnsplash
                       },
                       {
                         name: "500px",
                         URL: "https://500px.com/johanmouchet/",
-                        iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/500px.svg"
+                        icon: Icon500px
                       },
                       {
                         name: "Instagram",
                         URL: "https://instagram.com/johanmouchet/",
-                        iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/instagram.svg"
+                        icon: IconInstagram
                       },
                       {
                         name: "YouTube",
                         URL: "https://www.youtube.com/c/JohanMouchet",
-                        iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/youtube.svg"
+                        icon: IconYoutube
                       },
                       {
                         name: "Spotify",
                         URL: "https://open.spotify.com/user/1126411547",
-                        iconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/spotify.svg"
+                        icon: IconSpotify
                       }
                     ]
                   }}
@@ -278,7 +279,7 @@ const Home = () => {
                 tagline: "tagline",
                 URL: "URL",
                 lede: "lede",
-                thumbnailPath: GLOBAL.paths.img + "views/career-experiences/...",
+                thumbnailPath: PATHS.img + "views/career-experiences/...",
                 details: [
                   ""
                 ]
@@ -306,7 +307,7 @@ const Home = () => {
                             lede:
                               "Joint <em>RSPCA</em> campaign website to help cat owners give their pet the safest and happiest life while ensuring they have no link to loss of wildlife.",
                             thumbnailPath:
-                              GLOBAL.paths.img +
+                              PATHS.img +
                               "views/career-experiences/zoos-victoria.jpg",
                             awards: [
                               {
@@ -340,7 +341,7 @@ const Home = () => {
                             lede:
                               "Web application dedicated to the sport rights holders industry. Allows to edit live or recorded streams to produce highlights shareable on social media.",
                             thumbnailPath:
-                              GLOBAL.paths.img +
+                              PATHS.img +
                               "views/career-experiences/klip-studio.jpg",
                             details: [
                               "React framework, <a href='https://react.semantic-ui.com/' target='_blank' className='external-link'><em>Semantic UI React</em></a> component library",
@@ -359,7 +360,7 @@ const Home = () => {
                             lede:
                               "Websites creation related to education for Pearson’s launch in three new markets through Asia.",
                             thumbnailPath:
-                              GLOBAL.paths.img +
+                              PATHS.img +
                               "views/career-experiences/pearson.jpg",
                             details: [
                               "<a href='' target='_blank' className='external-link'><em>Experience Manager</em></a>, enterprise content management",
@@ -389,8 +390,7 @@ const Home = () => {
                             lede:
                               "Website redesign to embody the new brand direction focused on a premium and lifestyle experience. Deployed into 35 countries of the European market and translated into 27 languages.",
                             thumbnailPath:
-                              GLOBAL.paths.img +
-                              "views/career-experiences/lexus.jpg",
+                              PATHS.img + "views/career-experiences/lexus.jpg",
                             details: [
                               "<a href='http://www.sdl.com/software-and-services/tridion-dx/tridion-sites.html'><em>SDL Web</em></a> (formerly Tridion), headless data driven CMS ",
                               "<em>Nunjucks</em> templating, component oriented, fed with datas stored in a <em>MongoDB</em> database",
@@ -412,7 +412,7 @@ const Home = () => {
                             lede:
                               "Microsite creation to showcase <em>Lexus' Safety System Plus</em> technology.",
                             thumbnailPath:
-                              GLOBAL.paths.img +
+                              PATHS.img +
                               "views/career-experiences/lexus-safety-system-plus.jpg",
                             details: [
                               "Stack identical to the one of <em>Lexus 'v11'</em>",
@@ -430,7 +430,7 @@ const Home = () => {
                             lede:
                               "Delivery within a short turnaround of a global eCommerce website for a manufacturer of consumer marine electronics.",
                             thumbnailPath:
-                              GLOBAL.paths.img +
+                              PATHS.img +
                               "views/career-experiences/lowrance.jpg",
                             details: [
                               "<a href='http://www.episerver.com/' target='_blank' className='external-link'><em>EPIServer</em></a> CMS for scalability",
@@ -462,7 +462,7 @@ const Home = () => {
                             name: "Survie Mer Formation",
                             URL: "https://www.surviemerformation.com/",
                             thumbnailPath:
-                              GLOBAL.paths.img +
+                              PATHS.img +
                               "views/career-experiences/survie-mer-formation.jpg",
                             details: [
                               "<em>Growth Hacking</em> strategy development (<em>AARRR</em> model) meant to increase online registrations",
@@ -498,7 +498,7 @@ const Home = () => {
                             lede:
                               "Analysis website of business banking providers, supported by the <em>HR Treasury</em>.",
                             thumbnailPath:
-                              GLOBAL.paths.img +
+                              PATHS.img +
                               "views/career-experiences/business-banking-insight.jpg",
                             details: [
                               "<i>AngularJS 2</i> templating",
@@ -516,7 +516,7 @@ const Home = () => {
                             lede:
                               "Crowdsourced event listing microsite for the <em>Prince's Trust</em> 40th anniversary celebration.",
                             thumbnailPath:
-                              GLOBAL.paths.img +
+                              PATHS.img +
                               "views/career-experiences/princes-trust.jpg",
                             details: [
                               "Front-end framework: <a href='http://trykickoff.com/' target='_blank' className='external-link'>Kickoff</a>",
@@ -532,7 +532,7 @@ const Home = () => {
                             lede:
                               "Mobile web browser game based on rope skipping.",
                             thumbnailPath:
-                              GLOBAL.paths.img +
+                              PATHS.img +
                               "views/career-experiences/sport-relief-skipathon.jpg",
                             details: [
                               "iOS and Android default browser support",
@@ -561,28 +561,28 @@ const Home = () => {
                             name: "Weholite",
                             URL: "http://www.weholite.co.uk/",
                             thumbnailPath:
-                              GLOBAL.paths.img +
+                              PATHS.img +
                               "views/career-experiences/weholite.jpg"
                           },
                           {
                             name: "Hiremech",
                             URL: "http://www.hiremech.co.uk/",
                             thumbnailPath:
-                              GLOBAL.paths.img +
+                              PATHS.img +
                               "views/career-experiences/hiremech.jpg"
                           },
                           {
                             name: "Global Materials Handling",
                             URL: "http://globalforktrucks.com/",
                             thumbnailPath:
-                              GLOBAL.paths.img +
+                              PATHS.img +
                               "views/career-experiences/global-materials-handling.jpg"
                           },
                           {
                             name: "Proton Motor",
                             URL: "http://www.proton-motor.com/",
                             thumbnailPath:
-                              GLOBAL.paths.img +
+                              PATHS.img +
                               "views/career-experiences/proton-motor.jpg"
                           }
                         ]
@@ -755,46 +755,41 @@ const Home = () => {
                     works: [
                       {
                         thumbnailPath:
-                          GLOBAL.paths.img + "views/personal-works/seville.jpg",
+                          PATHS.img + "views/personal-works/seville.jpg",
                         URL: "https://unsplash.com/photos/NwaCxOL0NTA",
-                        sourceIconPath: GLOBAL.paths.img + "icons/unsplash.svg"
+                        sourceIcon: IconUnsplash
                       },
                       {
                         thumbnailPath:
-                          GLOBAL.paths.img +
-                          "views/personal-works/marseille.jpg",
+                          PATHS.img + "views/personal-works/marseille.jpg",
                         URL: "https://unsplash.com/photos/qB1h8ruSKnI",
-                        sourceIconPath: GLOBAL.paths.img + "icons/unsplash.svg"
+                        sourceIcon: IconUnsplash
                       },
                       {
                         thumbnailPath:
-                          GLOBAL.paths.img +
-                          "views/personal-works/death-valley.jpg",
+                          PATHS.img + "views/personal-works/death-valley.jpg",
                         URL:
                           "https://500px.com/photo/177991327/thirsty-coyote-death-valley-ca-by-johan-mouchet",
-                        sourceIconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/500px.svg"
+                        sourceIcon: Icon500px
                       },
                       {
                         thumbnailPath:
-                          GLOBAL.paths.img + "views/personal-works/london.jpg",
+                          PATHS.img + "views/personal-works/london.jpg",
                         URL: "https://unsplash.com/photos/5qeFuSId3H0",
-                        sourceIconPath: GLOBAL.paths.img + "icons/unsplash.svg"
+                        sourceIcon: IconUnsplash
                       },
                       {
                         thumbnailPath:
-                          GLOBAL.paths.img +
-                          "views/personal-works/copenhagen.jpg",
+                          PATHS.img + "views/personal-works/copenhagen.jpg",
                         URL: "https://unsplash.com/photos/sTBdWFQKDHE",
-                        sourceIconPath: GLOBAL.paths.img + "icons/unsplash.svg"
+                        sourceIcon: IconUnsplash
                       },
                       {
                         thumbnailPath:
-                          GLOBAL.paths.img +
+                          PATHS.img +
                           "views/personal-works/south-cost-of-england.jpg",
                         URL: "https://youtu.be/NAsS1T_V8-k",
-                        sourceIconPath:
-                          GLOBAL.paths.img + "icons/simple-icons/youtube.svg"
+                        sourceIcon: IconYoutube
                       }
                     ]
                   }}

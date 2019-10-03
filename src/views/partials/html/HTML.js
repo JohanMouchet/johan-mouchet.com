@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react";
-import { GLOBAL } from "../../../constants/global";
+import { PATHS } from "../../../constants/paths";
 
 type Props = {
   metadata: {
@@ -28,7 +28,7 @@ const HTML = (props: Props, children) => {
           <meta property="og:description" content={metadata.description} />
           <meta
             property="og:image"
-            content={`${GLOBAL.paths.img}theme/og-image.jpg`}
+            content={`${PATHS.img}theme/og-image.jpg`}
           />
           {/* <meta property="og:url" content={`___${ _SITE['hosturl']} + ${_SITE['baseurl']} + ${_SITE['rurl']}}`} /> */}
 
@@ -54,14 +54,14 @@ const HTML = (props: Props, children) => {
           <link
             rel="stylesheet"
             type="text/css"
-            href={`${GLOBAL.paths.css}style.css?v=${GLOBAL.version.css}`}
+            href={`${PATHS.css}style.css?v=${GLOBAL.version.css}`}
           />
 
           {/* Favicon */}
           <link
             rel="shortcut icon"
             type="image/x-icon"
-            href={`${GLOBAL.paths.img}theme/favicon.gif`}
+            href={`${PATHS.img}theme/favicon.gif`}
           />
         </head>
         <body id={`page-${metadata.id}`}>
@@ -69,7 +69,7 @@ const HTML = (props: Props, children) => {
 
           {/* TODO: Import WOW.js */}
           {/* Wow.js */}
-          {/* <script src={`${GLOBAL.paths.js}vendors/wow.js`} />
+          {/* <script src={`${PATHS.js}vendors/wow.js`} />
           <script>{new WOW().init()}</script> */}
 
           {/* Google Analytics */}
