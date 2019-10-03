@@ -31,9 +31,12 @@ import {
 const StyleGuide = () => {
   return (
     <Default
-      id="styleguide"
-      title="Johan Mouchet - Styleguide"
-      description="Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications."
+      metadata={{
+        id: "styleguide",
+        title: "Johan Mouchet - Styleguide",
+        description:
+          "Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications."
+      }}
     >
       <>
         <div className="container container--xl" id="styleGuide">

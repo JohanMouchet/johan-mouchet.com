@@ -13,9 +13,12 @@ import {
 const Home = () => {
   return (
     <Default
-      id="home"
-      title="Johan Mouchet"
-      description="Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications."
+      metadata={{
+        id: "home",
+        title: "Johan Mouchet",
+        description:
+          "Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications."
+      }}
     >
       <main className="l-main l-main--no-margin">
         <section className="c-about">

@@ -4,26 +4,28 @@ import * as React from "react";
 import { GLOBAL } from "../../../constants/global";
 
 type Props = {
-  title: string,
-  description: string,
-  id: string
+  metadata: {
+    title: string,
+    description: string,
+    id: string
+  }
 };
 
 const HTML = (props: Props, children) => {
-  const { title, description, id } = props;
+  const { metadata } = props;
 
   return (
     <>
       <html lang="en" className="no-js">
         <head>
-          <title>{title}</title>
+          <title>{metadata.title}</title>
           <meta charset="UTF-8" />
 
-          <meta name="description" content={description} />
+          <meta name="description" content={metadata.description} />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content={title} />
+          <meta property="og:title" content={metadata.title} />
           <meta property="og:site_name" content="Johan Mouchet" />
-          <meta property="og:description" content={description} />
+          <meta property="og:description" content={metadata.description} />
           <meta
             property="og:image"
             content={`${GLOBAL.paths.img}theme/og-image.jpg`}
@@ -62,7 +64,7 @@ const HTML = (props: Props, children) => {
             href={`${GLOBAL.paths.img}theme/favicon.gif`}
           />
         </head>
-        <body id={`page-${id}`}>
+        <body id={`page-${metadata.id}`}>
           {children}
 
           {/* TODO: Import WOW.js */}

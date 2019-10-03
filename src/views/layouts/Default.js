@@ -4,17 +4,11 @@ import * as React from "react";
 import { HTML, MastHeader, MastFooter } from "../partials";
 import "../../assets/styles/_styles.scss";
 
-type Props = {
-  title: string,
-  description: string,
-  id: string
-};
-
 const Default = (props, children) => {
-  const { title, description, id } = props;
+  const { metadata } = props;
 
   return (
-    <HTML title={title} description={description} id={id}>
+    <HTML metadata={metadata}>
       <MastHeader />
       {children}
       <MastFooter />
