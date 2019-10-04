@@ -19,12 +19,14 @@ const Anchor = (props: Props, children) => {
   const Tag = tag;
 
   return (
-    <Tag id={id} className="u-anchor" {...metadata.attributes}>
-      <a href={url + "#" + id} className="u-anchor__link">
-        {marker}
-      </a>
-      {children}
-    </Tag>
+    id && (
+      <Tag id={id} className="u-anchor" {...metadata.attributes}>
+        <a href={url + "#" + id} className="u-anchor__link">
+          {marker}
+        </a>
+        {children}
+      </Tag>
+    )
   );
 };
 
