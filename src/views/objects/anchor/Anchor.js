@@ -1,49 +1,36 @@
 // @flow
 
 import * as React from "react";
-import cx from "./node_modules/classnames";
-import "./___.scss";
 
 type Props = {
-  context: Array<mixed>,
   tag: string,
+  url: string,
   id: string,
   marker: string,
   metadata: {
     contextClass: ?string,
-    attributes: ?{[key: string]: any},
+    attributes: ?{ [key: string]: any }
   }
 };
 
-// TODO: "context" was passed in the macro
+const Anchor = (props: Props, children) => {
+  const { tag, url, id, marker, metadata } = props;
 
-const ___ = (props: Props, children) => {
-	const {
-	  prop1,
-	  prop2
-	} = props;
-  
-	const ___Class = cx(
-	  "u-anchor",
-	  props.metadata.contextClass,
-	  props.metadata.additionalClasses,
-	  {
-		"___--prop1": prop1
-	  }
-	);
+  const Tag = tag;
 
-	const Tag = props.tag;
-  
-	return (
-		<Tag id={props.id} className={___Class} {...props.metadata.attributes}>
-			<a href={`${context._SITE['rurl']}#${props.id}`} className='u-anchor__link'>{ props.marker|default('#') }</a>
-			{children}
-		</Tag>
-	);
+  return (
+    <Tag id={id} className="u-anchor" {...metadata.attributes}>
+      <a href={url + "#" + id} className="u-anchor__link">
+        {marker}
+      </a>
+      {children}
+    </Tag>
+  );
 };
 
-___.defaultProps = {
-  prop1: 2
+Anchor.defaultProps = {
+  tag: "span",
+  marker: "#"
 };
 
-export default ___;
+export default Anchor;
