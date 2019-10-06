@@ -1,6 +1,5 @@
 # TODO
 
-- Replace `SITE`, remove `context`
 - Handle `|raw`
 - Fix Flow [0]
 - Replace `{% if`

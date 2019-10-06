@@ -5,64 +5,58 @@ import cx from "classnames";
 import "./breadcrumb.scss";
 
 type Props = {
-  levels.title: string,
-  levels.url: string,
+  levels: [
+    {
+      title: string,
+      url: string
+    }
+  ],
   metadata: {
     contextClass: ?string,
-    additionalClasses: ?Array<string>,
+    additionalClasses: ?Array<string>
   }
 };
 
-// TODO: "context" was passed in the macro
-
 const Breadcrumb = (props: Props) => {
-  const { prop1, prop2 } = props;
+  const { levels, metadata } = props;
 
   const BreadcrumbClass = cx(
     "o-breadcrumb",
-    props.metadata.contextClass,
-    props.metadata.additionalClasses,
-    {
-      "Breadcrumb--prop1": prop1
-    }
+    metadata.contextClass,
+    metadata.additionalClasses
   );
 
-  const lastLevel = levels.length + 1;
-
+  const lastLevel = levels.length - 1;
+  // 0,1,2
   return (
     <>
       <ol className={BreadcrumbClass}>
-        {props.levels.map((level, index) => (
+        {levels.map((level, index) => (
           <li
             className="o-breadcrumb__level wow fadeInUp"
             data-wow-delay={index > 0 && (index * 0.15)`s`}
           >
-            <a
-              className="o-breadcrumb__link"
-              href={level.url && !lastLevel}
-            >
+            <a className="o-breadcrumb__link" href={level.url && !lastLevel}>
               {level.title}
             </a>
           </li>
         ))}
       </ol>
-      // TODO: fix %for
+      // TODO: check if work?
       {/* <pre> */}
       <script type="application/ld+json">
         {`
 			"@context": "http://schema.org",
 			"@type": "BreadcrumbList",
 			"itemListElement": [
-				${props.levels.map(
+				${levels.map(
           (level, index) =>
             ({
               "@type": "ListItem",
               position: index,
               item: {
                 "@type": "Thing",
-                "@id": `${context._SITE["hosturl"]}${context._SITE["baseurl"]}${
-                  level === lastLevel ? context._SITE["rurl"] : level.url
-                }`,
+                "@id": level.url,
                 name: level.title
               }
             }(index !== lastLevel) && ",")
@@ -73,10 +67,6 @@ const Breadcrumb = (props: Props) => {
       {/* </pre> */}
     </>
   );
-};
-
-Breadcrumb.defaultProps = {
-  prop1: 2
 };
 
 export default Breadcrumb;

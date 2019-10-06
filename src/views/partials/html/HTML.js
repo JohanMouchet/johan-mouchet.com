@@ -30,11 +30,9 @@ const HTML = (props: Props, children) => {
             property="og:image"
             content={`${PATHS.img}theme/og-image.jpg`}
           />
-          {/* <meta property="og:url" content={`___${ _SITE['hosturl']} + ${_SITE['baseurl']} + ${_SITE['rurl']}}`} /> */}
+          {/* <meta property="og:url" content="" /> */}
 
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-          {/* <base href="http://localhost:81/johan-mouchet/client" /> */}
 
           {/* JS detection */}
           <script>
@@ -54,7 +52,7 @@ const HTML = (props: Props, children) => {
           <link
             rel="stylesheet"
             type="text/css"
-            href={`${PATHS.css}style.css?v=${GLOBAL.version.css}`}
+            href={`${PATHS.css}style.css`}
           />
 
           {/* Favicon */}

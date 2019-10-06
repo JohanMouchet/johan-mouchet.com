@@ -2101,25 +2101,22 @@ const StyleGuide = () => {
                   Breadcrumb
                 </h2>
                 <Breadcrumb
-                  props={
-                    (_context,
-                    {
-                      levels: [
-                        {
-                          title: "Level 1",
-                          url: "#"
-                        },
-                        {
-                          title: "Level 2",
-                          url: "#"
-                        },
-                        {
-                          title: "Level 3",
-                          url: "#"
-                        }
-                      ]
-                    })
-                  }
+                  props={{
+                    levels: [
+                      {
+                        title: "Level 1",
+                        url: "#"
+                      },
+                      {
+                        title: "Level 2",
+                        url: "#"
+                      },
+                      {
+                        title: "Level 3",
+                        url: "#"
+                      }
+                    ]
+                  }}
                 />
               </article>
 
@@ -2491,11 +2488,11 @@ const StyleGuide = () => {
                 <p>
                   Lorem ipsum
                   <FootnotesReference
-                    props={(_context, { id: "1", text: "[1]" })}
+                    props={{ id: "1", text: "[1]", url: "" }}
                   />{" "}
                   dolor sit amet, consectetur adipisicing elit. Dignissimos
                   <FootnotesReference
-                    props={(_context, { id: "2", text: "[2]" })}
+                    props={{ id: "2", text: "[2]", url: "" }}
                   />
                   , qui? Perferendis earum explicabo possimus odit porro odio
                   velit illum nihil deleniti aliquam hic accusantium numquam
@@ -2507,21 +2504,20 @@ const StyleGuide = () => {
                 </p>
 
                 <FootnotesNotes
-                  props={
-                    (_context,
-                    {
-                      notes: [
-                        {
-                          id: "1",
-                          text: "Lorem ipsum dolor sit amet."
-                        },
-                        {
-                          id: "2",
-                          text: "Lorem ipsum dolor sit amet."
-                        }
-                      ]
-                    })
-                  }
+                  props={{
+                    notes: [
+                      {
+                        id: "1",
+                        text: "Lorem ipsum dolor sit amet.",
+                        url: ""
+                      },
+                      {
+                        id: "2",
+                        text: "Lorem ipsum dolor sit amet.",
+                        url: ""
+                      }
+                    ]
+                  }}
                 />
               </article>
 

@@ -5,75 +5,69 @@ import cx from "classnames";
 import "./footnotes.scss";
 
 type ReferenceProps = {
-  context: Array<mixed>,
   id: string,
   prefix: ?string,
-  text: string
+  text: string,
+  url: ?string
 };
 
-// TODO: "context" was passed in the macro
-
 const FootnotesReference = (props: ReferenceProps) => {
-  const { prop1, prop2 } = props;
+  const { id, prefix, text, url } = props;
 
   return (
     <sup>
       <a
-        id={`hash-footnote-ref:${props.prefix && props.prefix + "-"}${
-          props.id
-        }`}
+        id={`footnote-ref:${prefix && prefix + "-"}${id}`}
         className="o-footnote-ref"
-        href={`${context._SITE["rurl"]}#footnote:${props.prefix &&
-          props.prefix + "-"}${props.id}`}
+        href={`${url}#footnote:${prefix && prefix + "-"}${id}`}
       >
-        {props.text}
+        {text}
       </a>
     </sup>
   );
 };
 
 FootnotesReference.defaultProps = {
-  prop1: 2
+  url: ""
 };
 
 export { FootnotesReference };
 
 type NotesProps = {
-  context: Array<mixed>,
-  id: string,
-  prefix: ?string,
-  text: string,
+  notes: [
+    {
+      id: string,
+      prefix: ?string,
+      text: string,
+      url: ?string
+    }
+  ],
   metadata: {
     contextClass: ?string,
     additionalClasses: ?Array<string>
   }
 };
 
-// TODO: "context" was passed in the macro
-
 const FootnotesNotes = (props: NotesProps) => {
-  const { prop1, prop2 } = props;
+  const { notes, metadata } = props;
 
   const NotesClass = cx(
     "o-footnotes",
-    props.metadata.contextClass,
-    props.metadata.additionalClasses,
-    {
-      "Notes--prop1": prop1
-    }
+    metadata.contextClass,
+    metadata.additionalClasses
   );
 
   return (
     <ol className={NotesClass}>
-      {props.notes.map(note => (
+      {notes.map(note => (
         <li
-          id={`hash-footnote:${props.prefix && props.prefix + "-"}${note.id}`}
+          id={`footnote:${note.prefix && note.prefix + "-"}${note.id}`}
           className="o-footnotes__note"
         >
-          {note.text | raw}
+          {note.text}
           <a
-            href={`${context._SITE["rurl"]}#footnote-ref:${props.prefix &&
-              props.prefix + "-"}{ note.id}`}
+            href={`${note.url}#footnote-ref:${note.prefix &&
+              note.prefix + "-"}${note.id}`}
             className="footnote-backref"
           >
             &#x21a9;
@@ -85,7 +79,7 @@ const FootnotesNotes = (props: NotesProps) => {
 };
 
 FootnotesNotes.defaultProps = {
-  prop1: 2
+  url: ""
 };
 
 export { FootnotesNotes };
