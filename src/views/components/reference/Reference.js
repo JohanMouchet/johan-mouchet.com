@@ -5,14 +5,25 @@ import "./reference.scss";
 
 type Props = {
   requestOnly: boolean,
-  references: Array<mixed>,
-  references[0].name: string,
-  references[0].relation: string,
-  references[0].company[0].name: string,
-  references[0].company[0].URL: string,
-  references[0].jobTitle: string,
-  references[0].contacts[0].mail: string,
-  references[0].contacts[0].linkedin: string,
+  references: [
+    {
+      name: string,
+      relation: string,
+      company: [
+        {
+          name: string,
+          URL: string
+        }
+      ],
+      jobTitle: string,
+      contacts: [
+        {
+          mail: string,
+          linkedin: string
+        }
+      ]
+    }
+  ]
 };
 
 const Reference = (props: Props) => {

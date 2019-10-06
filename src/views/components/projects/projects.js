@@ -5,13 +5,14 @@ import "./projects.scss";
 import { ReactComponent as IconAward } from "../../../assets/images/icons/award.svg";
 
 type Props = {
-  projects: Array<mixed>,
-  project[0].name: string,
-  project[0].tagline: ?string,
-  project[0].URL: string,
-  project[0].lede: string,
-  project[0].thumbnailPath: string,
-  project[0].details: ?Array<mixed>,
+  projects: [{
+ 		name: string,
+ 		tagline: ?string,
+ 		URL: string,
+ 		lede: string,
+ 		thumbnailPath: string,
+		details: ?Array<mixed>
+	}]
 };
 
 const Projects = (props: Props) => {

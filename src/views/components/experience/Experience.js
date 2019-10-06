@@ -5,15 +5,22 @@ import "./experience.scss";
 import { Projects } from "../";
 
 type Props = {
-  experiences: Array<mixed>,
-  company[0].URL: string,
-  company[0].name: string,
-  location: string,
-  jobTitle: string,
-  startDate: string,
-  endDate: string,
-  lede: string,
-  projects: ?Array<mixed>,
+  experiences: [
+    {
+      company: [
+        {
+          URL: string,
+          name: string
+        }
+      ],
+      location: string,
+      jobTitle: string,
+      startDate: string,
+      endDate: string,
+      lede: string,
+      projects: Projects
+    }
+  ]
 };
 
 const Experience = (props: Props) => {

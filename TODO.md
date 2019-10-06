@@ -1,7 +1,6 @@
 # TODO
 
 - Handle `|raw`
-- Fix Flow [0]
 - Replace `{% if`
 - Replace `{% for`
 - Check potentially ignored prop in string `title="Follow me on { media.name }"`
