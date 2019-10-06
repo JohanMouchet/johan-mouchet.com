@@ -325,13 +325,13 @@ const Home = () => {
                               }
                             ],
                             details: [
-                              "<a href='https://www.contentful.com/' target='_blank' className='external-link'><em>Contentful</em></a>, headless CMS",
+                              "<a href='https://www.contentful.com/' target='_blank' rel='noopener noreferrer' className='external-link'><em>Contentful</em></a>, headless CMS",
                               "<em>Handlebars</em> templating, component oriented",
-                              "<a href='https://github.com/desandro/masonry' target='_blank' className='external-link'><em>Masonry</em></a> grid layout",
+                              "<a href='https://github.com/desandro/masonry' target='_blank' rel='noopener noreferrer' className='external-link'><em>Masonry</em></a> grid layout",
                               "Community submission forms with client side validation",
                               "Social media sharing",
-                              "<a href='https://github.com/ghosh/micromodal' target='_blank' className='external-link'><em>Micromodal</em></a> accessible modal dialogs",
-                              "<em>Bootstrap 4</em>, <em>Sass</em>, <a href='http://getbem.com/' target='_blank' className='external-link'><em>BEM</em></a> naming scheme",
+                              "<a href='https://github.com/ghosh/micromodal' target='_blank' rel='noopener noreferrer' className='external-link'><em>Micromodal</em></a> accessible modal dialogs",
+                              "<em>Bootstrap 4</em>, <em>Sass</em>, <a href='http://getbem.com/' target='_blank' rel='noopener noreferrer' className='external-link'><em>BEM</em></a> naming scheme",
                               "Front-end tooling: <em>Yarn</em>, <em>Gulp</em>, <em>Webpack</em>, linting"
                             ]
                           },
@@ -344,12 +344,12 @@ const Home = () => {
                               PATHS.img +
                               "views/career-experiences/klip-studio.jpg",
                             details: [
-                              "React framework, <a href='https://react.semantic-ui.com/' target='_blank' className='external-link'><em>Semantic UI React</em></a> component library",
-                              "<a href='https://github.com/google/shaka-player' target='_blank' className='external-link'><em>Shaka</em></a> web player, advanced video editing, cropping etc.",
+                              "React framework, <a href='https://react.semantic-ui.com/' target='_blank' rel='noopener noreferrer' className='external-link'><em>Semantic UI React</em></a> component library",
+                              "<a href='https://github.com/google/shaka-player' target='_blank' rel='noopener noreferrer' className='external-link'><em>Shaka</em></a> web player, advanced video editing, cropping etc.",
                               "Content tagging, filtering, sorting",
                               "Audience engagement tracking through social media APIs",
                               "Social media publishing",
-                              "<a href='https://semantic-ui.com/' target='_blank' className='external-link'><em>Semantic UI</em></a>, <em>Less</em>, <a href='http://getbem.com/' target='_blank' className='external-link'><em>BEM</em></a> naming scheme",
+                              "<a href='https://semantic-ui.com/' target='_blank' rel='noopener noreferrer' className='external-link'><em>Semantic UI</em></a>, <em>Less</em>, <a href='http://getbem.com/' target='_blank' rel='noopener noreferrer' className='external-link'><em>BEM</em></a> naming scheme",
                               "Front-end tooling: <em>Create React App</em>, <em>npm</em>, linting"
                             ]
                           },
@@ -363,7 +363,7 @@ const Home = () => {
                               PATHS.img +
                               "views/career-experiences/pearson.jpg",
                             details: [
-                              "<a href='' target='_blank' className='external-link'><em>Experience Manager</em></a>, enterprise content management",
+                              "<a href='' target='_blank' rel='noopener noreferrer' className='external-link'><em>Experience Manager</em></a>, enterprise content management",
                               "Content authoring, page and component building",
                               "Market customisation, translation",
                               "Registration forms"
@@ -394,11 +394,11 @@ const Home = () => {
                             details: [
                               "<a href='http://www.sdl.com/software-and-services/tridion-dx/tridion-sites.html'><em>SDL Web</em></a> (formerly Tridion), headless data driven CMS ",
                               "<em>Nunjucks</em> templating, component oriented, fed with datas stored in a <em>MongoDB</em> database",
-                              "<a href='https://github.com/kenwheeler/slick/' target='_blank' className='external-link'><em>Slick</em></a> carousel integration, lazy loading",
+                              "<a href='https://github.com/kenwheeler/slick/' target='_blank' rel='noopener noreferrer' className='external-link'><em>Slick</em></a> carousel integration, lazy loading",
                               "HTML5 Geolocation API, Google maps API",
                               "AAA accessibility standard",
-                              "Sass + <a href='http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528' target='_blank' className='external-link'><em>ITCSS</em></a> architecture, <a href='http://getbem.com/' target='_blank' className='external-link'><em>BEM</em></a> naming scheme",
-                              "Advanced CSS animations with <a href='http://imakewebthings.com/waypoints/' target='_blank' className='external-link'><em>Waypoints js</em></a>",
+                              "Sass + <a href='http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528' target='_blank' rel='noopener noreferrer' className='external-link'><em>ITCSS</em></a> architecture, <a href='http://getbem.com/' target='_blank' rel='noopener noreferrer' className='external-link'><em>BEM</em></a> naming scheme",
+                              "Advanced CSS animations with <a href='http://imakewebthings.com/waypoints/' target='_blank' rel='noopener noreferrer' className='external-link'><em>Waypoints js</em></a>",
                               "Progressive enhancement with JavaScript: <em>Backbone.js</em>, <em>jQuery</em>",
                               "Front-end tooling: <em>npm</em>, <em>Grunt</em>, <em>RequireJS</em>, linting",
                               "Environment: <em>Vagrant</em>, Continuous integration: <em>Heroku</em>"
@@ -416,8 +416,8 @@ const Home = () => {
                               "views/career-experiences/lexus-safety-system-plus.jpg",
                             details: [
                               "Stack identical to the one of <em>Lexus 'v11'</em>",
-                              "Full Screen, single-page design, done with <a href='https://github.com/alvarotrigo/fullPage.js' target='_blank' className='external-link'><em>fullPage.js</em></a>",
-                              "Integration of a <em>Three.js</em> API (realised by the talented <a href='http://danielbrowns.com/' target='_blank' className='external-link'>Daniel Brown</a>)",
+                              "Full Screen, single-page design, done with <a href='https://github.com/alvarotrigo/fullPage.js' target='_blank' rel='noopener noreferrer' className='external-link'><em>fullPage.js</em></a>",
+                              "Integration of a <em>Three.js</em> API (realised by the talented <a href='http://danielbrowns.com/' target='_blank' rel='noopener noreferrer' className='external-link'>Daniel Brown</a>)",
                               "Advanced multi layers CSS animations",
                               "Responsive design, device orientation aware",
                               "Performance optimised, QA tested"
@@ -433,11 +433,11 @@ const Home = () => {
                               PATHS.img +
                               "views/career-experiences/lowrance.jpg",
                             details: [
-                              "<a href='http://www.episerver.com/' target='_blank' className='external-link'><em>EPIServer</em></a> CMS for scalability",
+                              "<a href='http://www.episerver.com/' target='_blank' rel='noopener noreferrer' className='external-link'><em>EPIServer</em></a> CMS for scalability",
                               "<em>Handlebars</em> / <em>Razor templating</em>, component oriented",
-                              "Client side form verification done with <a href='https://github.com/jquery-validation/jquery-validation' target='_blank' className='external-link'><em>jquery-validation</em></a>",
+                              "Client side form verification done with <a href='https://github.com/jquery-validation/jquery-validation' target='_blank' rel='noopener noreferrer' className='external-link'><em>jquery-validation</em></a>",
                               "AAA accessibility standard",
-                              "Sass + <a href='http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528' target='_blank' className='external-link'><em>ITCSS</em></a> architecture, <a href='http://getbem.com/' target='_blank' className='external-link'><em>BEM</em></a> naming scheme",
+                              "Sass + <a href='http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528' target='_blank' rel='noopener noreferrer' className='external-link'><em>ITCSS</em></a> architecture, <a href='http://getbem.com/' target='_blank' rel='noopener noreferrer' className='external-link'><em>BEM</em></a> naming scheme",
                               "Progressive enhancement with JavaScript (<em>jQuery</em>)",
                               "Front-end tooling: <em>npm</em>, <em>Gulp</em>, linting"
                             ]
@@ -470,7 +470,7 @@ const Home = () => {
                               "<em>UX</em> Revampment: focused towards user conversion, web performance, accessibility",
                               "Wireframe, mockup and prototype done with <em>Photoshop</em>",
                               "<em>Twig</em> templating, component oriented, fed with datas stored in a <em>MySQL</em> database",
-                              "Sass + <a href='http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528' target='_blank' className='external-link'><em>ITCSS</em></a> architecture, <a href='http://getbem.com/' target='_blank' className='external-link'><em>BEM</em></a> naming scheme",
+                              "Sass + <a href='http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528' target='_blank' rel='noopener noreferrer' className='external-link'><em>ITCSS</em></a> architecture, <a href='http://getbem.com/' target='_blank' rel='noopener noreferrer' className='external-link'><em>BEM</em></a> naming scheme",
                               "Progressive enhancement with JavaScript (<em>jQuery</em>)",
                               "Front-end tooling: <em>Yarn</em>, <em>Grunt</em>, linting ",
                               "<em>SEO</em>: use of <em>Open Graph</em> protocol, <em>JSON-LD</em> microdata",
@@ -502,8 +502,8 @@ const Home = () => {
                               "views/career-experiences/business-banking-insight.jpg",
                             details: [
                               "<i>AngularJS 2</i> templating",
-                              "Front-end framework: <a href='http://trykickoff.com/' target='_blank' className='external-link'>Kickoff</a> (npm, Grunt, Sass, jQuery)",
-                              "<a href='https://www.amcharts.com/' target='_blank' className='external-link'>amCharts</a> library integration",
+                              "Front-end framework: <a href='http://trykickoff.com/' target='_blank' rel='noopener noreferrer' className='external-link'>Kickoff</a> (npm, Grunt, Sass, jQuery)",
+                              "<a href='https://www.amcharts.com/' target='_blank' rel='noopener noreferrer' className='external-link'>amCharts</a> library integration",
                               "Front-end dynamic filtering feature",
                               "Back-end collaboration for CMS integration"
                             ]
@@ -519,8 +519,8 @@ const Home = () => {
                               PATHS.img +
                               "views/career-experiences/princes-trust.jpg",
                             details: [
-                              "Front-end framework: <a href='http://trykickoff.com/' target='_blank' className='external-link'>Kickoff</a>",
-                              "<a href='https://hashtagd.net/' target='_blank' className='external-link'>Hashtagd</a> APIs integration",
+                              "Front-end framework: <a href='http://trykickoff.com/' target='_blank' rel='noopener noreferrer' className='external-link'>Kickoff</a>",
+                              "<a href='https://hashtagd.net/' target='_blank' rel='noopener noreferrer' className='external-link'>Hashtagd</a> APIs integration",
                               "<i>OAuth</i> integration for Twitter sharing",
                               "Lazy loaded events from database"
                             ]
@@ -538,7 +538,7 @@ const Home = () => {
                               "iOS and Android default browser support",
                               "Device 3D movement detection",
                               "<i>React</i> templating",
-                              "Front-end framework: <a href='http://trykickoff.com/' target='_blank' className='external-link'>Kickoff</a>",
+                              "Front-end framework: <a href='http://trykickoff.com/' target='_blank' rel='noopener noreferrer' className='external-link'>Kickoff</a>",
                               "<i>OAuth</i> integration for Facebook and Twitter registration and sharing",
                               "HTML5 canvas and CSS3 animations"
                             ]

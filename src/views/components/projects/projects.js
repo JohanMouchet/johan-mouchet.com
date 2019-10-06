@@ -34,9 +34,9 @@ const Projects = (props: Props) => {
 						<div className="grid">
 							<div className="cell cell--12-@xs cell--4-@md">
 						{% endif %}
-								<a href={project.URL} target="_blank"  className="c-project__link">
+								<a href={project.URL} target="_blank" rel="noopener noreferrer" className="c-project__link">
 									<img className="c-project__thumbnail" src={project.thumbnailPath} alt={project.name}>
-									<div href={project.URL} target="_blank"  className="c-project__overlay">
+									<div href={project.URL} target="_blank" rel="noopener noreferrer" className="c-project__overlay">
 										<h4 className="c-project__title">{ project.name }</h4>
 										<span className="c-project__line"></span>
 										{project.tagline && <span className="c-project__tagline">{ project.tagline }</span>}

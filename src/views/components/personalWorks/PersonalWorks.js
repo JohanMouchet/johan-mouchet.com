@@ -20,6 +20,7 @@ const PersonalWorks = (props: Props) => {
                 className="c-personal-work__overlay"
                 href={work.URL}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   className="c-personal-work__thumbnail"

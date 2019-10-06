@@ -53,6 +53,7 @@ const Reference = (props: Props) => {
                   <a
                     href={reference.company.URL}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="external-link"
                   >
                     {reference.company.name}

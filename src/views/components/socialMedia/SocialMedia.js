@@ -25,6 +25,7 @@ const SocialMedia = (props: Props) => {
             href={media.URL}
             title={`Follow me on ${media.name}`}
             target="_blank"
+            rel="noopener noreferrer"
           >
             {media.icon}
             {media.name}

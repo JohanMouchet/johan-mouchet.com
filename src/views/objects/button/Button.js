@@ -76,7 +76,7 @@ const ButtonSocial = (props: ButtonSocialProps, children) => {
       className={ButtonSocialClass}
       href={props.url}
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
       {...props.metadata.attributes}
     >
       <span className="o-button__icon">{props.icon}</span>
@@ -125,7 +125,7 @@ const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
       className={ButtonSocialBadgeClass}
       href={props.url}
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
       {...props.metadata.attributes}
     >
       <span className="o-button__icon">{props.icon}</span>

@@ -61,6 +61,7 @@ const Experience = (props: Props) => {
         <a
           href={experience.company.URL}
           target={experience.company.URL && "_blank"}
+          rel={experience.company.URL && "noopener noreferrer"}
           className={
             experience.company.URL && "c-experience__company external-link"
           }
