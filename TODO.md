@@ -3,7 +3,6 @@
 - Handle `|raw`
 - Replace `{% if`
 - Replace `{% for`
-- Is `Array<mixed>` mixed necessary?
 - Destructure `props`
 - Remove `props.name`
 - Add `cx modifierClasses`
