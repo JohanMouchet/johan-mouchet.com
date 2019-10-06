@@ -14,10 +14,10 @@ type Props = {
         }
       ],
       location: string,
-      jobTitle: string,
+      jobTitle: Node,
       startDate: string,
       endDate: string,
-      lede: string,
+      lede: Node,
       projects: Projects
     }
   ]
@@ -69,7 +69,7 @@ const Experience = (props: Props) => {
           {experience.company.name}
         </a>
         ,{experience.location} &mdash;
-        {experience.jobTitle | raw}
+        {experience.jobTitle}
       </h3>
 
       <p className="c-experience__subheading">
@@ -90,7 +90,7 @@ const Experience = (props: Props) => {
         )}
       </p>
 
-      <p className="c-experience__lede">{experience.lede | raw}</p>
+      <p className="c-experience__lede">{experience.lede}</p>
 
       {experience.projects && <Projects props={experience.projects} />}
     </section>

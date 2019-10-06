@@ -5,7 +5,7 @@ import cx from "classnames";
 import "./notice.scss";
 
 type Props = {
-  secondary?: string,
+  secondary?: Node,
   closeButton: boolean,
   metadata: {
     contextClass?: string,
@@ -35,7 +35,7 @@ const Notice = (props: Props, children) => {
           </div>
           {props.secondary && (
             <div className="cell cell--0-@xs">
-              <div className="o-notice__secondary">{props.secondary | raw}</div>
+              <div className="o-notice__secondary">{props.secondary}</div>
             </div>
           )}
           {props.closeButton && (

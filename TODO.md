@@ -1,6 +1,5 @@
 # TODO
 
-- Handle `|raw`
 - Replace `{% if`
 - Replace `{% for`
 - Destructure `props`

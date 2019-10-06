@@ -9,7 +9,7 @@ import { Button } from "../";
 
 type Props = {
   menu: {
-		text?: string,
+		text?: Node,
 		button?: string,
 		url?: string
 	},
@@ -37,8 +37,8 @@ const Menu = (props: Props) => {
 		{% for item in props.menu if item.text || item.button %}
 			<li className={`o-menu__item ${ item.menu && 'o-menu__item--has-children' } ${ item.metadata.additionalClasses|additionalClasses}`}>
 				{item.text &&
-					(<a className={`o-menu__link ${ item.menu && 'o-menu__submenu-heading'}`} href={item.url|raw} tabindex={!item.url && "0"}>
-						{item.text|raw}
+					(<a className={`o-menu__link ${ item.menu && 'o-menu__submenu-heading'}`} href={item.url} tabindex={!item.url && "0"}>
+						{item.text}
 					</a>)}
 				{item.button && <Button props={item.button} />}
 				

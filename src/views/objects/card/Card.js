@@ -7,9 +7,9 @@ import "./card.scss";
 type Props = {
   banner?: string,
   bannerUrl?: string,
-  header?: string,
-  body?: string,
-  footer?: string,
+  header?: Node,
+  body?: Node,
+  footer?: Node,
   metadata: {
     contextClass?: string,
     additionalClasses?: Array<string>,
@@ -46,11 +46,11 @@ const Card = (props: Props) => {
       )}
       {/* TODO: <Card><Header>Sub comp</Header></Card> */}
       {props.header && (
-        <header className="o-card__header">{props.header | raw}</header>
+        <header className="o-card__header">{props.header}</header>
       )}
-      {props.body && <div className="o-card__body">{props.body | raw}</div>}
+      {props.body && <div className="o-card__body">{props.body}</div>}
       {props.footer && (
-        <footer className="o-card__footer">{props.footer | raw}</footer>
+        <footer className="o-card__footer">{props.footer}</footer>
       )}
     </section>
   );

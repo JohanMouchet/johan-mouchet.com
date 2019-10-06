@@ -11,7 +11,7 @@ type Props = {
  		URL: string,
  		lede: string,
  		thumbnailPath: string,
-		details?: Array<mixed>
+		details?: Array<Node>
 	}]
 };
 
@@ -47,7 +47,7 @@ const Projects = (props: Props) => {
 							<div className="cell cell--12-@xs cell--8-@md">
 						{% endif %}
 								{project.lede && <p className={`c-project__lede ${ projectQuantity === 1 && 'u-vr--top-0-@md'}`}>
-										{ project.lede|raw }
+										{ project.lede }
 									</p>
 								}
 
@@ -64,7 +64,7 @@ const Projects = (props: Props) => {
 								{project.details && (
 									<ul className={`c-project__details ${ projectQuantity === 1 && 'u-vr--top-0-@md'}`}>
 										{project.details.map(detail => (
-											<li className="c-project__detail">{ detail|raw }</li>
+											<li className="c-project__detail">{ detail }</li>
 										))}
 									</ul>)
 								}
