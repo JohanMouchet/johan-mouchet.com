@@ -5,11 +5,11 @@ import cx from "classnames";
 import "./pagination.scss";
 
 type LinkProps = {
-  current: Boolean,
-  first: Boolean,
-  prev: Boolean,
-  next: Boolean,
-  last: Boolean,
+  current: boolean,
+  first: boolean,
+  prev: boolean,
+  next: boolean,
+  last: boolean,
   link: string
 };
 
@@ -34,10 +34,10 @@ const Link = (props: LinkProps, children: Node) => {
 };
 
 type IconProps = {
-  first: Boolean,
-  prev: Boolean,
-  next: Boolean,
-  last: Boolean
+  first: boolean,
+  prev: boolean,
+  next: boolean,
+  last: boolean
 };
 
 const Icon = (props: IconProps) => {

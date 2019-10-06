@@ -5,45 +5,34 @@ import cx from "classnames";
 import "./blockquote.scss";
 
 type Props = {
-  quote: string,
-  outerQuote?: string,
-  cite?: string,
+  quote: Node,
+  cite?: Node,
+  pulled?: boolean,
   metadata: {
     contextClass?: string,
-    modifierClasses?: Array<string>,
     additionalClasses?: Array<string>
   }
 };
 
 const Blockquote = (props: Props) => {
-  const { prop1, prop2 } = props;
+  const { quote, cite, pulled, metadata } = props;
 
   const BlockquoteClass = cx(
     "o-blockquote",
-    props.metadata.contextClass,
-    props.metadata.modifierClasses,
-    props.metadata.additionalClasses,
+    metadata.contextClass,
+    metadata.additionalClasses,
     "wow",
     {
-      "Blockquote--prop1": prop1
+      "o-blockquote--pulled": pulled
     }
   );
 
   return (
     <blockquote className={BlockquoteClass}>
-      <div className="o-blockquote__quotes">{props.quote | raw}</div>
-
-      {props.outerQuote | raw}
-
-      {props.cite && (
-        <cite className="o-blockquote__cite">{props.cite | raw}</cite>
-      )}
+      <div className="o-blockquote__quotes">{quote}</div>
+      {cite && <cite className="o-blockquote__cite">{cite}</cite>}
     </blockquote>
   );
-};
-
-Blockquote.defaultProps = {
-  prop1: 2
 };
 
 export default Blockquote;

@@ -7,8 +7,8 @@ type Props = {
   expertises: [
     {
       label: string,
-      filling: int,
-      tooltip: int
+      filling: number,
+      tooltip: number
     }
   ]
 };

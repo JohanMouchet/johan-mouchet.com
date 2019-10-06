@@ -11,7 +11,7 @@ type Props = {
         URL: string
       },
       location: string,
-      graduationYear: int,
+      graduationYear: number,
       title: string
     }
   ]

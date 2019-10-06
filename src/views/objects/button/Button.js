@@ -48,7 +48,7 @@ export { Button };
 type ButtonSocialProps = {
   url: string,
   icon: string,
-  counter?: int,
+  counter?: number,
   metadata: {
     contextClass?: string,
     additionalClasses?: Array<string>,
