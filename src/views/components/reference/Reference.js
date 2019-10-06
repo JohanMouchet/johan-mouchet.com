@@ -67,7 +67,7 @@ const Reference = (props: Props) => {
                 <li>
                   <a
                     className="c-reference__email"
-                    href="mailto:{ reference.contacts.mail}"
+                    href={`mailto:${reference.contacts.mail}`}
                   >
                     {reference.contacts.mail}
                   </a>

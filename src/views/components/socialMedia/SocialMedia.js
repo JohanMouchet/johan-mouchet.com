@@ -23,7 +23,7 @@ const SocialMedia = (props: Props) => {
           <a
             className="c-social-media__link"
             href={media.URL}
-            title="Follow me on { media.name }"
+            title={`Follow me on ${media.name}`}
             target="_blank"
           >
             {media.icon}

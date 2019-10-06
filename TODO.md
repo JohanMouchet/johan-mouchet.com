@@ -3,7 +3,6 @@
 - Handle `|raw`
 - Replace `{% if`
 - Replace `{% for`
-- Check potentially ignored prop in string `title="Follow me on { media.name }"`
 - Is `Array<mixed>` mixed necessary?
 - Destructure `props`
 - Remove `props.name`
