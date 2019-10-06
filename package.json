@@ -6,16 +6,16 @@
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
-    "analyze": "source-map-explorer \"build/static/js/*.js\"",
-    "lint:js": "eslint \"src/**/*.{js,jsx,json}\"",
-    "prettier": "prettier --write \"src/**/*.{js,jsx,json,css,scss,md}\""
+    "analyze": "source-map-explorer build/static/js/*.js",
+    "lint:js": "eslint src/**/*.{js,jsx,json}",
+    "format": "eslint --fix src/**/*.{js,jsx} && prettier --write src/**/*.{json,css,scss,md}"
   },
   "eslintConfig": {
     "extends": [
@@ -41,7 +41,12 @@
     }
   },
   "lint-staged": {
-    "_DISABLED_/src/**/*.{js,jsx}": [
+    "_DISABLED_src/**/*.test.js": [
+      "jest --bail --coverage --findRelatedTests",
+      "eslint --fix",
+      "git add"
+    ],
+    "_DISABLED_src/**/*.{js,jsx}": [
       "eslint --fix",
       "git add"
     ],
