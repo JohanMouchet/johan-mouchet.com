@@ -6,9 +6,9 @@ import "./footnotes.scss";
 
 type ReferenceProps = {
   id: string,
-  prefix: ?string,
+  prefix?: string,
   text: string,
-  url: ?string
+  url?: string
 };
 
 const FootnotesReference = (props: ReferenceProps) => {
@@ -37,14 +37,14 @@ type NotesProps = {
   notes: [
     {
       id: string,
-      prefix: ?string,
+      prefix?: string,
       text: string,
-      url: ?string
+      url?: string
     }
   ],
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>
+    contextClass?: string,
+    additionalClasses?: Array<string>
   }
 };
 

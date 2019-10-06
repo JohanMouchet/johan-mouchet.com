@@ -5,15 +5,15 @@ import cx from "classnames";
 import "./card.scss";
 
 type Props = {
-  banner: ?string,
-  bannerUrl: ?string,
-  header: ?string,
-  body: ?string,
-  footer: ?string,
+  banner?: string,
+  bannerUrl?: string,
+  header?: string,
+  body?: string,
+  footer?: string,
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>,
-    modifierClasses: ?Array<string>
+    contextClass?: string,
+    additionalClasses?: Array<string>,
+    modifierClasses?: Array<string>
   }
 };
 

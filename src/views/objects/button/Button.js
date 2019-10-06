@@ -6,12 +6,12 @@ import "./button.scss";
 
 type ButtonProps = {
   type: string,
-  url: ?string,
+  url?: string,
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>,
-    modifierClasses: ?Array<string>,
-    attributes: ?{ [key: string]: any }
+    contextClass?: string,
+    additionalClasses?: Array<string>,
+    modifierClasses?: Array<string>,
+    attributes?: { [key: string]: any }
   }
 };
 
@@ -48,12 +48,12 @@ export { Button };
 type ButtonSocialProps = {
   url: string,
   icon: string,
-  counter: ?int,
+  counter?: int,
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>,
-    modifierClasses: ?Array<string>,
-    attributes: ?{ [key: string]: any }
+    contextClass?: string,
+    additionalClasses?: Array<string>,
+    modifierClasses?: Array<string>,
+    attributes?: { [key: string]: any }
   }
 };
 
@@ -98,10 +98,10 @@ type ButtonSocialBadgeProps = {
   url: string,
   icon: string,
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>,
-    modifierClasses: ?Array<string>,
-    attributes: ?{ [key: string]: any }
+    contextClass?: string,
+    additionalClasses?: Array<string>,
+    modifierClasses?: Array<string>,
+    attributes?: { [key: string]: any }
   }
 };
 

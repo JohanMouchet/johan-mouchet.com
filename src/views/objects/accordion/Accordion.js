@@ -8,8 +8,8 @@ type Props = {
   items.thumb: string,
   items.panel: string,
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>,
+    contextClass?: string,
+    additionalClasses?: Array<string>,
   }
 };
 

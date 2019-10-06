@@ -6,12 +6,12 @@ import "./blockquote.scss";
 
 type Props = {
   quote: string,
-  outerQuote: ?string,
-  cite: ?string,
+  outerQuote?: string,
+  cite?: string,
   metadata: {
-    contextClass: ?string,
-    modifierClasses: ?Array<string>,
-    additionalClasses: ?Array<string>
+    contextClass?: string,
+    modifierClasses?: Array<string>,
+    additionalClasses?: Array<string>
   }
 };
 

@@ -5,11 +5,11 @@ import cx from "classnames";
 import "./notice.scss";
 
 type Props = {
-  secondary: ?string,
+  secondary?: string,
   closeButton: boolean,
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>
+    contextClass?: string,
+    additionalClasses?: Array<string>
   }
 };
 

@@ -5,15 +5,15 @@ import cx from "./node_modules/classnames";
 import "./progress-bar.scss";
 
 type Props = {
-  label: ?string,
-  total: ?string,
+  label?: string,
+  total?: string,
   filling: int,
-  tooltip: ?string,
+  tooltip?: string,
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>,
-    modifierClasses: ?Array<string>,
-    attributes: ?{ [key: string]: any }
+    contextClass?: string,
+    additionalClasses?: Array<string>,
+    modifierClasses?: Array<string>,
+    attributes?: { [key: string]: any }
   }
 };
 

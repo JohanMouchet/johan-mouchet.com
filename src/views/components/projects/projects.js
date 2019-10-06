@@ -7,11 +7,11 @@ import { ReactComponent as IconAward } from "../../../assets/images/icons/award.
 type Props = {
   projects: [{
  		name: string,
- 		tagline: ?string,
+ 		tagline?: string,
  		URL: string,
  		lede: string,
  		thumbnailPath: string,
-		details: ?Array<mixed>
+		details?: Array<mixed>
 	}]
 };
 

@@ -5,11 +5,11 @@ import cx from "classnames";
 import "./form.scss";
 
 type LabelProps = {
-  for: ?string,
+  for?: string,
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>,
-    modifierClasses: ?Array<string>
+    contextClass?: string,
+    additionalClasses?: Array<string>,
+    modifierClasses?: Array<string>
   }
 };
 
@@ -43,15 +43,15 @@ Label.defaultProps = {
 export { Label };
 
 type FieldProps = {
-  id: ?string,
+  id?: string,
   type: string,
   name: string,
-  value: ?string,
+  value?: string,
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>,
-    modifierClasses: ?Array<string>,
-    attributes: ?{ [key: string]: any }
+    contextClass?: string,
+    additionalClasses?: Array<string>,
+    modifierClasses?: Array<string>,
+    attributes?: { [key: string]: any }
   }
 };
 
@@ -87,14 +87,14 @@ Field.defaultProps = {
 export { Field };
 
 type ToggleProps = {
-  id: ?string,
+  id?: string,
   type: string,
-  name: ?string,
-  value: ?string,
+  name?: string,
+  value?: string,
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>,
-    attributes: ?{ [key: string]: any }
+    contextClass?: string,
+    additionalClasses?: Array<string>,
+    attributes?: { [key: string]: any }
   }
 };
 
@@ -136,13 +136,13 @@ Toggle.defaultProps = {
 export { Toggle };
 
 type FileProps = {
-  id: ?string,
+  id?: string,
   name: string,
-  multipleCaption: ?string,
+  multipleCaption?: string,
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>,
-    attributes: ?{ [key: string]: any }
+    contextClass?: string,
+    additionalClasses?: Array<string>,
+    attributes?: { [key: string]: any }
   }
 };
 
@@ -187,12 +187,12 @@ File.defaultProps = {
 export { File };
 
 type SelectProps = {
-  id: ?string,
+  id?: string,
   name: string,
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>,
-    attributes: ?{ [key: string]: any }
+    contextClass?: string,
+    additionalClasses?: Array<string>,
+    attributes?: { [key: string]: any }
   },
   options: {
     text: string,
@@ -237,12 +237,12 @@ Select.defaultProps = {
 export { Select };
 
 type TextareaProps = {
-  id: ?string,
+  id?: string,
   name: string,
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>,
-    attributes: ?{ [key: string]: any }
+    contextClass?: string,
+    additionalClasses?: Array<string>,
+    attributes?: { [key: string]: any }
   }
 };
 
@@ -277,12 +277,12 @@ Textarea.defaultProps = {
 export { Textarea };
 
 type RangeProps = {
-  id: ?string,
+  id?: string,
   name: string,
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>,
-    attributes: ?{ [key: string]: any }
+    contextClass?: string,
+    additionalClasses?: Array<string>,
+    attributes?: { [key: string]: any }
   }
 };
 

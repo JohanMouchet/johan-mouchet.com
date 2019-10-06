@@ -6,13 +6,13 @@ import "./figure.scss";
 
 type Props = {
   src: string,
-  alt: ?string,
-  title: ?string,
+  alt?: string,
+  title?: string,
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>,
-    modifierClasses: ?Array<string>,
-    attributes: ?{ [key: string]: any }
+    contextClass?: string,
+    additionalClasses?: Array<string>,
+    modifierClasses?: Array<string>,
+    attributes?: { [key: string]: any }
   }
 };
 

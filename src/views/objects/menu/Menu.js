@@ -9,12 +9,12 @@ import { Button } from "../";
 
 type Props = {
   menu: {
-		text: ?string,
-		button: ?string,
-		url: ?string
+		text?: string,
+		button?: string,
+		url?: string
 	},
   metadata: {
-    additionalClasses: ?Array<string>,
+    additionalClasses?: Array<string>,
   }
 };
 

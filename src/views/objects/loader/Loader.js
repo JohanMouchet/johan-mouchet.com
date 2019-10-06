@@ -6,9 +6,9 @@ import "./loader.scss";
 
 type Props = {
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>,
-    modifierClasses: ?Array<string>
+    contextClass?: string,
+    additionalClasses?: Array<string>,
+    modifierClasses?: Array<string>
   }
 };
 

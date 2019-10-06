@@ -5,12 +5,12 @@ import cx from "classnames";
 import "./alert.scss";
 
 type Props = {
-  type: ?string,
+  type?: string,
   hidden: boolean,
-  closable: ?boolean,
+  closable?: boolean,
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>
+    contextClass?: string,
+    additionalClasses?: Array<string>
   }
 };
 

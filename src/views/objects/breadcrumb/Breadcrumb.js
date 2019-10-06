@@ -12,8 +12,8 @@ type Props = {
     }
   ],
   metadata: {
-    contextClass: ?string,
-    additionalClasses: ?Array<string>
+    contextClass?: string,
+    additionalClasses?: Array<string>
   }
 };
 

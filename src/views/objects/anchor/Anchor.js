@@ -8,8 +8,8 @@ type Props = {
   id: string,
   marker: string,
   metadata: {
-    contextClass: ?string,
-    attributes: ?{ [key: string]: any }
+    contextClass?: string,
+    attributes?: { [key: string]: any }
   }
 };
 
