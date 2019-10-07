@@ -15,7 +15,7 @@
 - Fix Tabs, Accordion, Alert, Table Numerical column
 - Run ESlint --fix
 - Add Stylelint and run Stylelint --fix
-- Add Storybook
+- Add Storybook: https://www.learnstorybook.com/intro-to-storybook/react/en/get-started/
 - Add Jest tests
 
 # Fix
