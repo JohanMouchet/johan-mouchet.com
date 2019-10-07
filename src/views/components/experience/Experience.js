@@ -18,7 +18,7 @@ type Props = {
       startDate: string,
       endDate: string,
       lede: Node,
-      projects: Projects
+      projects: typeof Projects
     }
   ]
 };

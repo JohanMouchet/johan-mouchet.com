@@ -8,11 +8,7 @@ import { Button } from "../";
 // TODO: {% import _self as menu %}
 
 type Props = {
-  menu: {
-		text?: Node,
-		button?: string,
-		url?: string
-	},
+  menu: typeof Button,
   metadata: {
     additionalClasses?: Array<string>,
   }

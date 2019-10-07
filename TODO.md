@@ -9,6 +9,7 @@
 - Replace `{% if`
 - Replace `{% for`
 - Add `modifierClasses` to `cx`
+- Spread `attributes`
 - Combine `additionalClasses` and `contextClass`?
 - Replace old `prop.text/label` by `children`
 - Destructure `props`, remove `props.name`, change `<Comp prop={{}} />`

@@ -9,23 +9,22 @@ type Props = {
   total?: Node,
   filling: number,
   tooltip?: Node,
-  isHovered: boolean,
+  tooltipOnHover: boolean,
   metadata: {
     contextClass?: string,
-    additionalClasses?: Array<string>,
-    attributes?: { [key: string]: any }
+    additionalClasses?: Array<string>
   }
 };
 
 const ProgressBar = (props: Props) => {
-  const { label, total, filling, tooltip, isHovered, metadata } = props;
+  const { label, total, filling, tooltip, tooltipOnHover, metadata } = props;
 
   const ProgressBarClass = cx(
     "o-progress-bar",
     metadata.contextClass,
     metadata.additionalClasses,
     {
-      "o-progress-bar--tooltip-hover": isHovered
+      "o-progress-bar--tooltip-hover": tooltipOnHover
     }
   );
 
@@ -48,4 +47,4 @@ ProgressBar.defaultProps = {
   filling: 0
 };
 
-export default ProgressBar;
+export { ProgressBar, Props };
