@@ -5,6 +5,7 @@
     export type Project = {}
     import type { Project } from './types'
   ```
+- Import/Export page metadata with HoC: https://dev.to/lenmorld/prop-drilling-react-context-and-higher-order-component-hoc-40m9
 - Replace `{% if`
 - Replace `{% for`
 - Add `modifierClasses` to `cx`
