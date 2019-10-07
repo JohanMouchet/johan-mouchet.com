@@ -24,7 +24,11 @@ const MastFooter = () => {
             </p>
           </div>
           <div className="cell cell--0-@xs">
-            <a className="p-mast-footer__page-top" href="#" title="Go top">
+            <a
+              className="p-mast-footer__page-top"
+              href="#page-top"
+              title="Go top"
+            >
               <IconArrowDown />
             </a>
           </div>

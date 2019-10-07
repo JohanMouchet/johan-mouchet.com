@@ -27,7 +27,6 @@ const Breadcrumb = (props: Props) => {
   );
 
   const lastLevel = levels.length - 1;
-  // 0,1,2
   return (
     <>
       <ol className={BreadcrumbClass}>
@@ -42,7 +41,7 @@ const Breadcrumb = (props: Props) => {
           </li>
         ))}
       </ol>
-      // TODO: check if work?
+      {/* TODO: check if work? */}
       {/* <pre> */}
       <script type="application/ld+json">
         {`

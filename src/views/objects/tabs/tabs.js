@@ -5,11 +5,15 @@ import cx from "classnames";
 import "./tabs.scss";
 
 type Props = {
-  tabs.thumb: string,
-  tabs.panel: string,
+  tabs: [
+    {
+      thumb: string,
+      panel: string
+    }
+  ],
   metadata: {
     contextClass?: string,
-    additionalClasses?: Array<string>,
+    additionalClasses?: Array<string>
   }
 };
 
@@ -34,27 +38,17 @@ const Tabs = (props: Props) => {
             className="o-tabs__thumb js-tabs-thumb wow fadeInUp"
             data-wow-delay={index > 0 && (index * 0.15)`s`}
           >
-            <button className="o-tabs__button">
-              {tab.thumb}
-            </button>
+            <button className="o-tabs__button">{tab.thumb}</button>
           </li>
         ))}
       </ul>
       <ul className="o-tabs__panels">
         {props.tabs.map(tab => (
-          <li
-            className="o-tabs__panel js-tabs-panel"
-          >
-            {tab.panel}
-          </li>
+          <li className="o-tabs__panel js-tabs-panel">{tab.panel}</li>
         ))}
       </ul>
     </div>
   );
-};
-
-Tabs.defaultProps = {
-  prop1: 2
 };
 
 export default Tabs;

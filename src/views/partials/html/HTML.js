@@ -16,7 +16,7 @@ const HTML = (props: Props, children) => {
 
   return (
     <>
-      <html lang="en" className="no-js">
+      <html lang="en" className="no-js" id="page-top">
         <head>
           <title>{metadata.title}</title>
           <meta charset="UTF-8" />

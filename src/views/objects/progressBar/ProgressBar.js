@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react";
-import cx from "./node_modules/classnames";
+import cx from "classnames";
 import "./progress-bar.scss";
 
 type Props = {
@@ -47,4 +47,4 @@ ProgressBar.defaultProps = {
   filling: 0
 };
 
-export { ProgressBar, Props };
+export default ProgressBar;

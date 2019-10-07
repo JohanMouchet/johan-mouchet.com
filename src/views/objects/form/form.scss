@@ -1,355 +1,357 @@
-@import '../../../assets/styles/settings/_settings';
-@import '../../../assets/styles/tools/_tools';
+@import "../../../assets/styles/settings/_settings";
+@import "../../../assets/styles/tools/_tools";
 
 .o-form {
-	$root: &;
+  $root: &;
 
-	/* Fieldset */
-	&__fieldset {
-		border: 1px solid $s-color-gray;
-		margin: t-vertical-rhythm(2) 0;
-		padding: t-vertical-rhythm(1.5);
-	}
+  /* Fieldset */
+  &__fieldset {
+    border: 1px solid $s-color-gray;
+    margin: t-vertical-rhythm(2) 0;
+    padding: t-vertical-rhythm(1.5);
+  }
 
-	/* Legend */
-	&__legend {
-		margin-left: -.5em;
-		padding: 0 .5em;
-		color: $s-color-primary;
-		text-transform: uppercase;
-		font-weight: 700;
-		font-size: t-modular-scale(0);
-	}
+  /* Legend */
+  &__legend {
+    margin-left: -0.5em;
+    padding: 0 0.5em;
+    color: $s-color-primary;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: t-modular-scale(0);
+  }
 
-	/* Form group */
-	&__group {
-		margin-bottom: t-vertical-rhythm(1);
+  /* Form group */
+  &__group {
+    margin-bottom: t-vertical-rhythm(1);
 
-		/** States **/
-		/*** Success ***/
-		&--success #{$root}__label {
-			color: $s-color-success;
-		}
+    /** States **/
+    /*** Success ***/
+    &--success #{$root}__label {
+      color: $s-color-success;
+    }
 
-		/*** Error ***/
-		&--error #{$root}__label {
-			color: $s-color-danger;
-		}
+    /*** Error ***/
+    &--error #{$root}__label {
+      color: $s-color-danger;
+    }
 
-		/*** Warning ***/
-		&--warning #{$root}__label {
-			color: $s-color-warning;
-		}
+    /*** Warning ***/
+    &--warning #{$root}__label {
+      color: $s-color-warning;
+    }
 
-		/** Alert **/
-		&--success,
-		&--error,
-		&--warning {
-			.o-alert {
-				margin: t-vertical-rhythm(.5) 0 0;
-			}
-		}
-	}
+    /** Alert **/
+    &--success,
+    &--error,
+    &--warning {
+      .o-alert {
+        margin: t-vertical-rhythm(0.5) 0 0;
+      }
+    }
+  }
 
-	/* Label */
-	&__label {
-		display: inline-block;
-		margin-top: t-vertical-rhythm(.25);
-		margin-bottom: t-vertical-rhythm(.25);
-		font-weight: 700;
-		transition: color .3s;
+  /* Label */
+  &__label {
+    display: inline-block;
+    margin-top: t-vertical-rhythm(0.25);
+    margin-bottom: t-vertical-rhythm(0.25);
+    font-weight: 700;
+    transition: color 0.3s;
 
-		/** Block **/
-		&--block {
-			display: block;
-		}
-	}
+    /** Block **/
+    &--block {
+      display: block;
+    }
+  }
 
-	/* Field */
-	&__field {
-		appearance: none;
-		height: t-vertical-rhythm(1.75);
-		line-height: $s-line-height-base;
-		width: 100%;
-		vertical-align: middle;
-		padding: 0 t-vertical-rhythm(.5);
-		border: 2px solid $s-color-gray;
-		background-color: transparent;
-		font-family: inherit;
-		font-size: t-modular-scale(0);
-		color: $s-color-text;
-		text-overflow: ellipsis;
-		transition: color .2s, background .2s, border .2s;
+  /* Field */
+  &__field {
+    appearance: none;
+    height: t-vertical-rhythm(1.75);
+    line-height: $s-line-height-base;
+    width: 100%;
+    vertical-align: middle;
+    padding: 0 t-vertical-rhythm(0.5);
+    border: 2px solid $s-color-gray;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: t-modular-scale(0);
+    color: $s-color-text;
+    text-overflow: ellipsis;
+    transition: color 0.2s, background 0.2s, border 0.2s;
 
-		@include t-wekkit-hdpi-small-dimension;
+    @include t-wekkit-hdpi-small-dimension;
 
-		&--no-corner-left {
-			border-top-left-radius: 0;
-			border-bottom-left-radius: 0;
-		}
+    &--no-corner-left {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
 
-		&--no-corner-right {
-			border-top-right-radius: 0;
-			border-bottom-right-radius: 0;
-		}
+    &--no-corner-right {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
 
-		/** Textarea **/
-		&--textarea {
-			height: auto;
-			padding-top: t-vertical-rhythm(.5);
-			padding-bottom: t-vertical-rhythm(.5);
-			resize: vertical;
-		}
+    /** Textarea **/
+    &--textarea {
+      height: auto;
+      padding-top: t-vertical-rhythm(0.5);
+      padding-bottom: t-vertical-rhythm(0.5);
+      resize: vertical;
+    }
 
-		/** Color **/
-		&--color {
-			padding: 0 .2em !important; /* stylelint-disable-line declaration-no-important */
-		}
+    /** Color **/
+    &--color {
+      padding: 0 0.2em !important; /* stylelint-disable-line declaration-no-important */
+    }
 
-		/** Icons **/
-		&--search,
-		&--select {
-			padding-right: 2em !important; /* stylelint-disable-line declaration-no-important */
-			background-repeat: no-repeat;
-			background-position: right .25em center;
-			background-size: 1.5em;
-		}
+    /** Icons **/
+    &--search,
+    &--select {
+      padding-right: 2em !important; /* stylelint-disable-line declaration-no-important */
+      background-repeat: no-repeat;
+      background-position: right 0.25em center;
+      background-size: 1.5em;
+    }
 
-		/*** Search ***/
-		&--search {
-			background-image: url('#{t-path(icons)}/search.svg');
-		}
+    /*** Search ***/
+    &--search {
+      background-image: url("#{t-path(icons)}/search.svg");
+    }
 
-		/*** Select ***/
-		&--select {
-			background-image: url('#{t-path(icons)}/arrow-down.svg');
+    /*** Select ***/
+    &--select {
+      background-image: url("#{t-path(icons)}/arrow-down.svg");
 
-			&:not(:disabled) {
-				cursor: pointer;
-			}
+      &:not(:disabled) {
+        cursor: pointer;
+      }
 
-			&::-ms-expand {
-				display: none;
-			}
-		}
-	}
+      &::-ms-expand {
+        display: none;
+      }
+    }
+  }
 
-	@at-root {
-		/* Wekkit input autofill color */
-		@include t-wekkit-input-autofill-color;
+  @at-root {
+    /* Wekkit input autofill color */
+    @include t-wekkit-input-autofill-color;
 
-		/*
+    /*
 		 * Picker
 		 *
 		 * Overwrite inputs that use picker / spin
 		 * (Experimental, won’t work in all browsers)
 		 */
-		::-webkit-calendar-picker-indicator {
-			padding: 11px 3px;
-		}
+    ::-webkit-calendar-picker-indicator {
+      padding: 11px 3px;
+    }
 
-		::-webkit-inner-spin-button {
-			padding: 6px 2px;
-		}
+    ::-webkit-inner-spin-button {
+      padding: 6px 2px;
+    }
 
-		/* Placeholder */
-		::placeholder {
-			color: $s-color-gray-darker;
-		}
+    /* Placeholder */
+    ::placeholder {
+      color: $s-color-gray-darker;
+    }
 
-		/* Required */
-		:required {
-			box-shadow: none;
-		}
-	}
+    /* Required */
+    :required {
+      box-shadow: none;
+    }
+  }
 
-	/* File */
-	&__file {
-		&-input {
-			@extend .u-is--visuallyHidden;
-		}
-	}
+  /* File */
+  &__file {
+    &-input {
+      // TODO: find a way to import single utility
+      // @extend .u-is--visuallyHidden;
+    }
+  }
 
-	/*
+  /*
 	 * Toggle (Checkbox, Radio)
 	 */
-	&__toggle {
-		$root-toggle: &;
+  &__toggle {
+    $root-toggle: &;
 
-		display: inline-block;
-		margin-top: t-vertical-rhythm(.25);
-		margin-bottom: t-vertical-rhythm(.25);
+    display: inline-block;
+    margin-top: t-vertical-rhythm(0.25);
+    margin-bottom: t-vertical-rhythm(0.25);
 
-		&:not(:last-child) {
-			margin-right: 2em;
-		}
+    &:not(:last-child) {
+      margin-right: 2em;
+    }
 
-		&-input {
-			@extend .u-is--visuallyHidden;
+    &-input {
+      // TODO: find a way to import single utility
+      // @extend .u-is--visuallyHidden;
 
-			&:not(:disabled) ~ #{$root-toggle}-icon,
-			&:not(:disabled) ~ #{$root-toggle}-text {
-				cursor: pointer;
-			}
+      &:not(:disabled) ~ #{$root-toggle}-icon,
+      &:not(:disabled) ~ #{$root-toggle}-text {
+        cursor: pointer;
+      }
 
-			/** Checked **/
-			&:checked {
-				~ #{$root-toggle}-icon::before {
-					background-color: $s-color-link;
-				}
-			}
-		}
+      /** Checked **/
+      &:checked {
+        ~ #{$root-toggle}-icon::before {
+          background-color: $s-color-link;
+        }
+      }
+    }
 
-		&-icon {
-			display: inline-block;
-			width: t-vertical-rhythm(.8, 'rem');
-			height: t-vertical-rhythm(.8, 'rem');
-			background: none;
-			border: 2px solid $s-color-gray;
-			vertical-align: text-top;
-			position: relative;
-			transition: background-color .2s, border .2s;
+    &-icon {
+      display: inline-block;
+      width: t-vertical-rhythm(0.8, "rem");
+      height: t-vertical-rhythm(0.8, "rem");
+      background: none;
+      border: 2px solid $s-color-gray;
+      vertical-align: text-top;
+      position: relative;
+      transition: background-color 0.2s, border 0.2s;
 
-			@include t-wekkit-hdpi-small-dimension;
+      @include t-wekkit-hdpi-small-dimension;
 
-			/** Radio **/
-			#{$root-toggle}--radio & {
-				border-radius: 50%;
+      /** Radio **/
+      #{$root-toggle}--radio & {
+        border-radius: 50%;
 
-				&::before {
-					border-radius: inherit;
-				}
-			}
+        &::before {
+          border-radius: inherit;
+        }
+      }
 
-			&::before {
-				content: '';
-				position: absolute;
-				top: 2px;
-				right: 2px;
-				bottom: 2px;
-				left: 2px;
-				transition: background-color .2s;
-			}
-		}
+      &::before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        left: 2px;
+        transition: background-color 0.2s;
+      }
+    }
 
-		&-text {
-			margin-left: .75em;
-		}
-	}
+    &-text {
+      margin-left: 0.75em;
+    }
+  }
 
-	/* Range (Experimental, won’t work in all browsers) */
-	&__range {
-		appearance: none;
-		width: 100%;
-		height: 2px;
-		background-color: $s-color-gray;
-		outline: none;
-		margin-top: t-vertical-rhythm(.5, 'rem');
-		margin-bottom: t-vertical-rhythm(.5, 'rem');
-		padding: 0;
-		transition: background .2s ease-out;
+  /* Range (Experimental, won’t work in all browsers) */
+  &__range {
+    appearance: none;
+    width: 100%;
+    height: 2px;
+    background-color: $s-color-gray;
+    outline: none;
+    margin-top: t-vertical-rhythm(0.5, "rem");
+    margin-bottom: t-vertical-rhythm(0.5, "rem");
+    padding: 0;
+    transition: background 0.2s ease-out;
 
-		@include t-wekkit-hdpi-small-dimension('height', 2);
+    @include t-wekkit-hdpi-small-dimension("height", 2);
 
-		&:not(:disabled) {
-			cursor: pointer;
-		}
+    &:not(:disabled) {
+      cursor: pointer;
+    }
 
-		// Firefox overrides
-		&::-moz-range-track {
-			background-color: $s-color-gray;
-			border: 0;
-		}
+    // Firefox overrides
+    &::-moz-range-track {
+      background-color: $s-color-gray;
+      border: 0;
+    }
 
-		&::-moz-focus-inner,
-		&::-moz-focus-outer {
-			border: 0;
-		}
+    &::-moz-focus-inner,
+    &::-moz-focus-outer {
+      border: 0;
+    }
 
-		&::-ms-track {
-			height: auto;
-			border-radius: t-vertical-rhythm(.4, 'rem');
-		}
-		/* stylelint-enable */
-	}
+    &::-ms-track {
+      height: auto;
+      border-radius: t-vertical-rhythm(0.4, "rem");
+    }
+    /* stylelint-enable */
+  }
 
-	/** Thumb **/
-	@mixin range-thumb($vendor-prefix) {
-		&__range {
-			&#{$vendor-prefix} {
-				appearance: none;
-				width: t-vertical-rhythm(.8, 'rem');
-				height: t-vertical-rhythm(.8, 'rem');
-				border-radius: 50%;
-				border: 2px solid $s-color-secondary;
-				background: $s-color-white;
-			}
-		}
-	}
+  /** Thumb **/
+  @mixin range-thumb($vendor-prefix) {
+    &__range {
+      &#{$vendor-prefix} {
+        appearance: none;
+        width: t-vertical-rhythm(0.8, "rem");
+        height: t-vertical-rhythm(0.8, "rem");
+        border-radius: 50%;
+        border: 2px solid $s-color-secondary;
+        background: $s-color-white;
+      }
+    }
+  }
 
-	@include range-thumb('::-webkit-slider-thumb');
-	@include range-thumb('::-moz-range-thumb');
+  @include range-thumb("::-webkit-slider-thumb");
+  @include range-thumb("::-moz-range-thumb");
 
-	/* States */
-	/** Hover **/
-	&__field:hover,
-	&__toggle:hover &__toggle-icon {
-		border-color: $s-color-gray-lighter;
-	}
+  /* States */
+  /** Hover **/
+  &__field:hover,
+  &__toggle:hover &__toggle-icon {
+    border-color: $s-color-gray-lighter;
+  }
 
-	&__range:hover {
-		background-color: $s-color-gray-lighter;
+  &__range:hover {
+    background-color: $s-color-gray-lighter;
 
-		&::-moz-range-track {
-			background-color: $s-color-gray-lighter;
-		}
-	}
+    &::-moz-range-track {
+      background-color: $s-color-gray-lighter;
+    }
+  }
 
-	/** Focus **/
-	&__field:focus {
-		outline: none;
-	}
+  /** Focus **/
+  &__field:focus {
+    outline: none;
+  }
 
-	&__field:focus,
-	&__toggle-input:focus ~ &__toggle-icon {
-		border-color: $s-color-text;
-	}
+  &__field:focus,
+  &__toggle-input:focus ~ &__toggle-icon {
+    border-color: $s-color-text;
+  }
 
-	&__range:focus {
-		background-color: $s-color-text;
+  &__range:focus {
+    background-color: $s-color-text;
 
-		&::-moz-range-track {
-			background-color: $s-color-text;
-		}
-	}
+    &::-moz-range-track {
+      background-color: $s-color-text;
+    }
+  }
 
-	/** Disabled **/
-	&__field:disabled,
-	&__toggle-input:disabled ~ &__toggle-icon {
-		color: $s-color-gray-darker;
-		background-color: $s-color-gray-lighter;
-		border-color: $s-color-gray;
-	}
+  /** Disabled **/
+  &__field:disabled,
+  &__toggle-input:disabled ~ &__toggle-icon {
+    color: $s-color-gray-darker;
+    background-color: $s-color-gray-lighter;
+    border-color: $s-color-gray;
+  }
 
-	&__toggle-input:disabled ~ &__toggle-text {
-		color: $s-color-gray-darker;
-	}
+  &__toggle-input:disabled ~ &__toggle-text {
+    color: $s-color-gray-darker;
+  }
 
-	&__range:disabled {
-		background-color: $s-color-gray;
+  &__range:disabled {
+    background-color: $s-color-gray;
 
-		&::-moz-range-track {
-			background-color: $s-color-gray;
-		}
+    &::-moz-range-track {
+      background-color: $s-color-gray;
+    }
 
-		&::-webkit-slider-thumb {
-			background-color: $s-color-gray-lighter;
-			border-color: $s-color-gray;
-		}
+    &::-webkit-slider-thumb {
+      background-color: $s-color-gray-lighter;
+      border-color: $s-color-gray;
+    }
 
-		&::-moz-range-thumb {
-			background-color: $s-color-gray-lighter;
-			border-color: $s-color-gray;
-		}
-	}
+    &::-moz-range-thumb {
+      background-color: $s-color-gray-lighter;
+      border-color: $s-color-gray;
+    }
+  }
 }

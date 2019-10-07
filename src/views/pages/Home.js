@@ -1,5 +1,5 @@
 import * as React from "react";
-import { PATHS } from "../../../constants/paths";
+import { PATHS } from "../../constants/paths";
 import { Default } from "../layouts";
 import {
   Expertises,
@@ -9,16 +9,16 @@ import {
   Reference,
   PersonalWorks
 } from "../components";
-import { ReactComponent as Icon500px } from "../../../assets/images/icons/simple-icons/500px.svg";
-import { ReactComponent as IconCodepen } from "../../../assets/images/icons/simple-icons/codepen.svg";
-import { ReactComponent as IconDribbble } from "../../../assets/images/icons/simple-icons/dribbble.svg";
-import { ReactComponent as IconGithub } from "../../../assets/images/icons/simple-icons/github.svg";
-import { ReactComponent as IconInstagram } from "../../../assets/images/icons/simple-icons/instagram.svg";
-import { ReactComponent as IconLinkedIn } from "../../../assets/images/icons/simple-icons/linkedin.svg";
-import { ReactComponent as IconSpotify } from "../../../assets/images/icons/simple-icons/spotify.svg";
-import { ReactComponent as IconTwitter } from "../../../assets/images/icons/simple-icons/twitter.svg";
-import { ReactComponent as IconUnsplash } from "../../../assets/images/icons/simple-icons/unsplash.svg";
-import { ReactComponent as IconYoutube } from "../../../assets/images/icons/simple-icons/youtube.svg";
+import { ReactComponent as Icon500px } from "../../assets/images/icons/simple-icons/500px.svg";
+import { ReactComponent as IconCodepen } from "../../assets/images/icons/simple-icons/codepen.svg";
+import { ReactComponent as IconDribbble } from "../../assets/images/icons/simple-icons/dribbble.svg";
+import { ReactComponent as IconGithub } from "../../assets/images/icons/simple-icons/github.svg";
+import { ReactComponent as IconInstagram } from "../../assets/images/icons/simple-icons/instagram.svg";
+import { ReactComponent as IconLinkedIn } from "../../assets/images/icons/simple-icons/linkedin.svg";
+import { ReactComponent as IconSpotify } from "../../assets/images/icons/simple-icons/spotify.svg";
+import { ReactComponent as IconTwitter } from "../../assets/images/icons/simple-icons/twitter.svg";
+import { ReactComponent as IconUnsplash } from "../../assets/images/icons/simple-icons/unsplash.svg";
+import { ReactComponent as IconYoutube } from "../../assets/images/icons/simple-icons/youtube.svg";
 
 const Home = () => {
   return (
@@ -801,7 +801,11 @@ const Home = () => {
               <article className="p-contact" id="p-contact">
                 <h2>Get in touch</h2>
 
-                <a href="mailto:mouchet.johan@gmail.com" target="_blank">
+                <a
+                  href="mailto:mouchet.johan@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   mouchet.johan[at]gmail.com
                 </a>
               </article>
