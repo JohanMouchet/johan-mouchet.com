@@ -1,1 +1,1 @@
-export { default } from "./Code.js";
+export { default } from "./code.scss";
