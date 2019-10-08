@@ -1,5 +1,7 @@
 # TODO
 
+- Stylelint: Turns off all rules that are unnecessary or might conflict with prettier:
+  https://github.com/prettier/stylelint-config-prettier
 - Replace `{% if`
 - Replace `{% for`
 - Add `modifierClasses` to `cx`
