@@ -1,5 +1,6 @@
 # TODO
 
+- Import images as JS modules https://create-react-app.dev/docs/adding-images-fonts-and-files
 - Stylelint: Turns off all rules that are unnecessary or might conflict with prettier:
   https://github.com/prettier/stylelint-config-prettier
 - Replace `{% if`
