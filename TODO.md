@@ -1,8 +1,7 @@
 # TODO
 
+- Stylelint, add suggested additions: https://github.com/stylelint/stylelint-config-standard#suggested-additions
 - Import images as JS modules https://create-react-app.dev/docs/adding-images-fonts-and-files
-- Stylelint: Turns off all rules that are unnecessary or might conflict with prettier:
-  https://github.com/prettier/stylelint-config-prettier
 - Replace `{% if`
 - Replace `{% for`
 - Add `modifierClasses` to `cx`
