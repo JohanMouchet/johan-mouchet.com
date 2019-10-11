@@ -17,7 +17,9 @@
     "analyze": "source-map-explorer build/static/js/*.js",
     "lint:js": "eslint src/**/*.{js,jsx,json}",
     "lint:css": "stylelint src/**/*.{css,scss}",
-    "format": "eslint --fix src/**/*.{js,jsx,json} && stylelint --fix src/**/*.{css,scss} && prettier --write src/**/*.{md}"
+    "format": "eslint --fix src/**/*.{js,jsx,json} && stylelint --fix src/**/*.{css,scss} && prettier --write src/**/*.{md}",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
@@ -62,6 +64,11 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.2.3",
+    "@storybook/addon-knobs": "^5.2.3",
+    "@storybook/addon-links": "^5.2.3",
+    "@storybook/addons": "^5.2.3",
+    "@storybook/react": "^5.2.3",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",
     "husky": "^3.0.7",
