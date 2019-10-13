@@ -1,4 +1,4 @@
-/*
+/**
  * Map deep get
  *
  * @param {map}     map  - Map
@@ -7,9 +7,9 @@
  * @example map-deep-get($map-name, "key level 1", "key level 2");
  */
 @function map-deep-get($map, $keys...) {
-	@each $key in $keys {
-		$map: map-get($map, $key);
-	}
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
 
-	@return $map;
+  @return $map;
 }

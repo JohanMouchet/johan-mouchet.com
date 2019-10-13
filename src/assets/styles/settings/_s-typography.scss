@@ -4,14 +4,14 @@
 
 /* stylelint-disable color-no-hex */
 
-$s-font-size-base: .875; // em = 14 px
+$s-font-size-base: 0.875; // em = 14 px
 $s-font-size-mobile: $s-font-size-base / 1.05; // Comment if unwanted
 $s-line-height-base: 1.6;
 $s-modular-scale-ratio: 1.2;
 
 $s-font-family-primary: helvetica, arial, serif;
-$s-font-family-secondary: 'Times New Roman', times, serif;
-$s-font-family-tertiary: 'Abril Fatface', $s-font-family-secondary;
+$s-font-family-secondary: "Times New Roman", times, serif;
+$s-font-family-tertiary: "Abril Fatface", $s-font-family-secondary;
 $s-font-family-quaternary: monospace;
 
 $s-color-heading: #222;

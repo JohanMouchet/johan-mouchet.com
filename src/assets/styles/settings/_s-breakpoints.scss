@@ -3,9 +3,13 @@
  */
 
 $s-breakpoints: (
-	// (xs : Extra small devices (phones): 0 and up)
-	sm: 425px + 1, // Small devices (tablets): 425px and up
-	md: 768px + 1, // Medium devices (desktops): 768px and up
-	lg: 1024px + 1, // Large devices (large desktops): 1024px and up
-	xl: 1280px + 1, // Extra large devices (extra large desktops): 1280px and up
+  // (xs : Extra small devices (phones): 0 and up)
+    sm: 425px + 1,
+  // Small devices (tablets): 425px and up
+    md: 768px + 1,
+  // Medium devices (desktops): 768px and up
+    lg: 1024px + 1,
+  // Large devices (large desktops): 1024px and up
+    xl: 1280px + 1,
+  // Extra large devices (extra large desktops): 1280px and up
 );

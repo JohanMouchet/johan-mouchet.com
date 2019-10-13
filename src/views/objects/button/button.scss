@@ -1,248 +1,248 @@
-@import '../../../assets/styles/settings/_settings';
-@import '../../../assets/styles/tools/_tools';
+@import "../../../assets/styles/settings/_settings";
+@import "../../../assets/styles/tools/_tools";
 
 .o-button {
-	$root: &;
-	$height: t-vertical-rhythm(1.75) !default;
-	$border-width: 2px !default;
-	$h-padding: $height / 1.75;
+  $root: &;
+  $height: t-vertical-rhythm(1.75) !default;
+  $border-width: 2px !default;
+  $h-padding: $height / 1.75;
 
-	/**
+  /**
 	 * Btn Padding (private)
 	 *
 	 * Set button vertical padding to match given button height in order to match inputs height.
 	 *
 	 * @param {number} [btn-scale-factor = 1] - Increase / decrease factor
 	 */
-	@mixin btn-padding($btn-scale-factor: 1) {
-		@if $height > $s-line-height-base {
-			padding: ($height - $s-line-height-base) /
-				2 *
-				$btn-scale-factor
-				$h-padding *
-				$btn-scale-factor; // Fallback
+  @mixin btn-padding($btn-scale-factor: 1) {
+    @if $height > $s-line-height-base {
+      padding: ($height - $s-line-height-base) /
+        2 *
+        $btn-scale-factor
+        $h-padding *
+        $btn-scale-factor; // Fallback
 
-			padding: calc(
-				#{($height - $s-line-height-base) /
-				2 *
-				$btn-scale-factor} -
-				#{$border-width}
-			)
-				$h-padding *
-				$btn-scale-factor;
-		} @else {
-			padding: 0 $h-padding;
-		}
-	}
+      padding: calc(
+          #{($height - $s-line-height-base) /
+            2 *
+            $btn-scale-factor} -
+            #{$border-width}
+        )
+        $h-padding *
+        $btn-scale-factor;
+    } @else {
+      padding: 0 $h-padding;
+    }
+  }
 
-	@include btn-padding();
+  @include btn-padding();
 
-	display: inline-block;
-	line-height: $s-line-height-base;
-	vertical-align: middle;
-	border: $border-width solid $s-color-link;
-	border-radius: 0;
-	background: none;
-	color: $s-color-link;
-	font-family: inherit;
-	font-size: t-modular-scale(0);
-	text-align: center;
-	text-decoration: none;
-	cursor: pointer;
-	transition: color .2s, background .2s, border-color .2s,
-		transform .1s ease-out;
+  display: inline-block;
+  line-height: $s-line-height-base;
+  vertical-align: middle;
+  border: $border-width solid $s-color-link;
+  border-radius: 0;
+  background: none;
+  color: $s-color-link;
+  font-family: inherit;
+  font-size: t-modular-scale(0);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s, border-color 0.2s,
+    transform 0.1s ease-out;
 
-	@include t-wekkit-hdpi-small-dimension;
+  @include t-wekkit-hdpi-small-dimension;
 
-	&:hover,
-	&:focus {
-		color: $s-color-white;
-		background-color: $s-color-link;
-		border-color: $s-color-link;
-		text-decoration: none;
-	}
+  &:hover,
+  &:focus {
+    color: $s-color-white;
+    background-color: $s-color-link;
+    border-color: $s-color-link;
+    text-decoration: none;
+  }
 
-	&:active {
-		color: $s-color-white;
-		background-color: $s-color-link-active;
-		border-color: $s-color-link-active;
-		transform: translateY(2px);
-	}
+  &:active {
+    color: $s-color-white;
+    background-color: $s-color-link-active;
+    border-color: $s-color-link-active;
+    transform: translateY(2px);
+  }
 
-	&:focus {
-		outline: none;
-	}
+  &:focus {
+    outline: none;
+  }
 
-	/** Primary **/
-	&--primary {
-		color: $s-color-white;
-		background-color: $s-color-link;
-		border-color: $s-color-link;
+  /** Primary **/
+  &--primary {
+    color: $s-color-white;
+    background-color: $s-color-link;
+    border-color: $s-color-link;
 
-		&:hover,
-		&:focus {
-			color: $s-color-link;
-			background-color: transparent;
-			border-color: $s-color-link;
-		}
+    &:hover,
+    &:focus {
+      color: $s-color-link;
+      background-color: transparent;
+      border-color: $s-color-link;
+    }
 
-		&:active {
-			color: $s-color-link-active;
-			background-color: transparent;
-			border-color: $s-color-link-active;
-		}
-	}
+    &:active {
+      color: $s-color-link-active;
+      background-color: transparent;
+      border-color: $s-color-link-active;
+    }
+  }
 
-	/** Secondary **/
-	&--secondary {
-		color: $s-color-text-dimmed;
-		border-color: $s-color-text-dimmed;
+  /** Secondary **/
+  &--secondary {
+    color: $s-color-text-dimmed;
+    border-color: $s-color-text-dimmed;
 
-		&:hover,
-		&:focus {
-			color: $s-color-white;
-			background-color: $s-color-text-dimmed;
-			border-color: $s-color-text-dimmed;
-		}
+    &:hover,
+    &:focus {
+      color: $s-color-white;
+      background-color: $s-color-text-dimmed;
+      border-color: $s-color-text-dimmed;
+    }
 
-		&:active {
-			color: $s-color-white;
-			background-color: darken($s-color-text-dimmed, 10%);
-			border-color: darken($s-color-text-dimmed, 10%);
-		}
-	}
+    &:active {
+      color: $s-color-white;
+      background-color: darken($s-color-text-dimmed, 10%);
+      border-color: darken($s-color-text-dimmed, 10%);
+    }
+  }
 
-	/** Disabled **/
-	&[disabled] {
-		cursor: default;
-		pointer-events: none;
-		user-select: none;
-		color: $s-color-gray-darker;
-		background-color: $s-color-gray-lighter;
-		border-color: currentColor;
+  /** Disabled **/
+  &[disabled] {
+    cursor: default;
+    pointer-events: none;
+    user-select: none;
+    color: $s-color-gray-darker;
+    background-color: $s-color-gray-lighter;
+    border-color: currentColor;
 
-		&:active {
-			transform: none;
-		}
-	}
+    &:active {
+      transform: none;
+    }
+  }
 
-	/** Small **/
-	&--sm {
-		@include btn-padding(.5);
-	}
+  /** Small **/
+  &--sm {
+    @include btn-padding(0.5);
+  }
 
-	/** Large **/
-	&--lg {
-		@include btn-padding(1.5);
-	}
+  /** Large **/
+  &--lg {
+    @include btn-padding(1.5);
+  }
 
-	/** Full width **/
-	&--block {
-		width: 100%;
-	}
+  /** Full width **/
+  &--block {
+    width: 100%;
+  }
 
-	@media (max-width: t-breakpoint(sm)) {
-		&--block-\@sm {
-			width: 100%;
-		}
-	}
+  @media (max-width: t-breakpoint(sm)) {
+    &--block-\@sm {
+      width: 100%;
+    }
+  }
 
-	@media (max-width: t-breakpoint(md)) {
-		&--block-\@md {
-			width: 100%;
-		}
-	}
+  @media (max-width: t-breakpoint(md)) {
+    &--block-\@md {
+      width: 100%;
+    }
+  }
 
-	/* Hover spacer */
-	> #{$root}__spacer {
-		display: inline-block;
-		width: .5em;
-		transition: width .2s ease-out;
-	}
+  /* Hover spacer */
+  > #{$root}__spacer {
+    display: inline-block;
+    width: 0.5em;
+    transition: width 0.2s ease-out;
+  }
 
-	&:hover > #{$root}__spacer {
-		width: 1em;
-	}
+  &:hover > #{$root}__spacer {
+    width: 1em;
+  }
 
-	/** Social **/
-	&--social {
-		*:not(:first-child) {
-			margin-left: .5em;
-		}
-	}
+  /** Social **/
+  &--social {
+    *:not(:first-child) {
+      margin-left: 0.5em;
+    }
+  }
 
-	/*** Icon ***/
-	&__icon {
-		svg {
-			height: 1.2em;
-			width: 1.2em;
-			vertical-align: text-top;
-		}
+  /*** Icon ***/
+  &__icon {
+    svg {
+      height: 1.2em;
+      width: 1.2em;
+      vertical-align: text-top;
+    }
 
-		path {
-			fill: currentColor;
-		}
-	}
+    path {
+      fill: currentColor;
+    }
+  }
 
-	/*** Text ***/
-	// &__text {}
+  /*** Text ***/
+  // &__text {}
 
-	/*** Counter ***/
-	&__counter {
-		font-weight: 700;
+  /*** Counter ***/
+  &__counter {
+    font-weight: 700;
 
-		&:empty {
-			display: none;
-		}
-	}
+    &:empty {
+      display: none;
+    }
+  }
 
-	/** Badge **/
-	&--social-badge {
-		line-height: 1;
-		padding: t-vertical-rhythm(.4);
-	}
+  /** Badge **/
+  &--social-badge {
+    line-height: 1;
+    padding: t-vertical-rhythm(0.4);
+  }
 
-	/** Branded color **/
-	@mixin btn-social-color($s-color-brand) {
-		color: $s-color-brand;
-		border-color: $s-color-brand;
+  /** Branded color **/
+  @mixin btn-social-color($s-color-brand) {
+    color: $s-color-brand;
+    border-color: $s-color-brand;
 
-		&:hover,
-		&:focus {
-			color: $s-color-white;
-			background: $s-color-brand;
-			border-color: $s-color-brand;
-		}
+    &:hover,
+    &:focus {
+      color: $s-color-white;
+      background: $s-color-brand;
+      border-color: $s-color-brand;
+    }
 
-		&:active {
-			color: $s-color-white;
-			background: darken($s-color-brand, 10%);
-			border-color: darken($s-color-brand, 10%);
-		}
-	}
+    &:active {
+      color: $s-color-white;
+      background: darken($s-color-brand, 10%);
+      border-color: darken($s-color-brand, 10%);
+    }
+  }
 
-	// Twitter
-	&--social-twitter {
-		@include btn-social-color($s-color-twitter);
-	}
+  // Twitter
+  &--social-twitter {
+    @include btn-social-color($s-color-twitter);
+  }
 
-	// Facebook
-	&--social-facebook {
-		@include btn-social-color($s-color-facebook);
-	}
+  // Facebook
+  &--social-facebook {
+    @include btn-social-color($s-color-facebook);
+  }
 
-	// Google+
-	&--social-googleplus {
-		@include btn-social-color($s-color-googleplus);
-	}
+  // Google+
+  &--social-googleplus {
+    @include btn-social-color($s-color-googleplus);
+  }
 
-	// LinkedIn
-	&--social-linkedin {
-		@include btn-social-color($s-color-linkedin);
-	}
+  // LinkedIn
+  &--social-linkedin {
+    @include btn-social-color($s-color-linkedin);
+  }
 
-	// Pinterest
-	&--social-pinterest {
-		@include btn-social-color($s-color-pinterest);
-	}
+  // Pinterest
+  &--social-pinterest {
+    @include btn-social-color($s-color-pinterest);
+  }
 }

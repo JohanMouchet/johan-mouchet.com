@@ -1,45 +1,45 @@
-@import '../../../assets/styles/settings/_settings';
-@import '../../../assets/styles/tools/_tools';
+@import "../../../assets/styles/settings/_settings";
+@import "../../../assets/styles/tools/_tools";
 
 .o-breadcrumb {
-	$root: &;
+  $root: &;
 
-	display: flex;
-	margin-top: 0;
-	margin-bottom: t-vertical-rhythm(2);
-	padding: 0;
-	border-bottom: 1px solid $s-color-gray;
-	list-style: none;
-	overflow-x: auto;
-	overflow-y: hidden;
-	position: relative;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: t-vertical-rhythm(2);
+  padding: 0;
+  border-bottom: 1px solid $s-color-gray;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
 
-	* + & {
-		margin-top: t-vertical-rhythm(1);
-	}
+  * + & {
+    margin-top: t-vertical-rhythm(1);
+  }
 
-	/* Level */
-	&__level {
-		margin: 0;
-		flex: 0 1 auto;
-		white-space: nowrap;
+  /* Level */
+  &__level {
+    margin: 0;
+    flex: 0 1 auto;
+    white-space: nowrap;
 
-		&:not(:last-child)::after {
-			content: '/';
-			color: $s-color-text-dimmed;
-		}
+    &:not(:last-child)::after {
+      content: "/";
+      color: $s-color-text-dimmed;
+    }
 
-		/* Last level */
-		&:last-child #{$root}__link {
-			color: $s-color-link;
-			font-weight: 700;
-		}
-	}
+    /* Last level */
+    &:last-child #{$root}__link {
+      color: $s-color-link;
+      font-weight: 700;
+    }
+  }
 
-	&__link {
-		@include t-link($s-color-text-dimmed, 'none', $hover-decoration: 'none');
+  &__link {
+    @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
 
-		display: inline-block;
-		padding: t-vertical-rhythm(.5) 1em;
-	}
+    display: inline-block;
+    padding: t-vertical-rhythm(0.5) 1em;
+  }
 }

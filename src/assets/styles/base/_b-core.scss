@@ -2,58 +2,57 @@
  * Core
  */
 
-/* stylelint-disable selector-no-type */
 html {
-	box-sizing: border-box;
-	background: $s-color-primary;
+  box-sizing: border-box;
+  background: $s-color-primary;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-	margin: t-vertical-rhythm(.2);
-	background: $s-color-white;
-	box-shadow: 0 0 5px rgba($s-color-black, .5);
+  margin: t-vertical-rhythm(0.2);
+  background: $s-color-white;
+  box-shadow: 0 0 5px rgba($s-color-black, 0.5);
 
-	@media (min-width: t-breakpoint(md)) {
-		margin: t-vertical-rhythm(1);
-	}
+  @media (min-width: t-breakpoint(md)) {
+    margin: t-vertical-rhythm(1);
+  }
 }
 
 img,
 svg {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 object,
 embed,
 video,
 iframe {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 hr {
-	max-width: 100%;
-	margin: t-vertical-rhythm(2) 0;
-	border: 0;
-	border-bottom: 1px solid $s-color-gray;
-	animation: hr-animation .3s ease-out both;
+  max-width: 100%;
+  margin: t-vertical-rhythm(2) 0;
+  border: 0;
+  border-bottom: 1px solid $s-color-gray;
+  animation: hr-animation 0.3s ease-out both;
 
-	/*** Animation ***/
-	@keyframes hr-animation {
-		from {
-			transform: scaleX(0);
-		}
+  /*** Animation ***/
+  @keyframes hr-animation {
+    from {
+      transform: scaleX(0);
+    }
 
-		to {
-			transform: scaleX(1);
-		}
-	}
+    to {
+      transform: scaleX(1);
+    }
+  }
 }
 
 /**
@@ -67,14 +66,14 @@ select,
 textarea,
 label,
 summary {
-	touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 /**
  * Reset normalize opiniated style
  */
 button {
-	line-height: $s-line-height-base;
-	font-family: inherit;
-	font-size: t-modular-scale(0);
+  line-height: $s-line-height-base;
+  font-family: inherit;
+  font-size: t-modular-scale(0);
 }

@@ -1,67 +1,67 @@
-@import '../../../assets/styles/settings/_settings';
-@import '../../../assets/styles/tools/_tools';
+@import "../../../assets/styles/settings/_settings";
+@import "../../../assets/styles/tools/_tools";
 
 .o-accordion {
-	$root: &;
+  $root: &;
 
-	display: flex;
-	flex-direction: column;
-	margin: t-vertical-rhythm(1) 0;
-	padding: 0;
-	list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: t-vertical-rhythm(1) 0;
+  padding: 0;
+  list-style: none;
 
-	&__item {
-		flex: 0 1 auto;
-		border-bottom: 1px solid $s-color-gray;
+  &__item {
+    flex: 0 1 auto;
+    border-bottom: 1px solid $s-color-gray;
 
-		/* Active */
-		&.is--active {
-			#{$root}__thumb {
-				color: $s-color-link;
-				font-weight: 700;
-			}
+    /* Active */
+    &.is--active {
+      #{$root}__thumb {
+        color: $s-color-link;
+        font-weight: 700;
+      }
 
-			#{$root}__thumb-icon {
-				transform: rotate(90deg);
-			}
-		}
-	}
+      #{$root}__thumb-icon {
+        transform: rotate(90deg);
+      }
+    }
+  }
 
-	/* Thumb */
-	&__thumb {
-		background-color: transparent;
-		border: 0;
-		outline: 0;
-		all: unset;
+  /* Thumb */
+  &__thumb {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    all: unset;
 
-		@include t-link($s-color-text-dimmed, 'none', $hover-decoration: 'none');
+    @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
 
-		display: block;
-		margin: 0;
-		padding: t-vertical-rhythm(.5) 0;
-		cursor: pointer;
-		transition: font-weight .2s ease-out;
-	}
+    display: block;
+    margin: 0;
+    padding: t-vertical-rhythm(0.5) 0;
+    cursor: pointer;
+    transition: font-weight 0.2s ease-out;
+  }
 
-	/* Thumb icon */
-	&__thumb-icon {
-		transition: transform .3s;
-		font-size: 1.5rem !important; /* stylelint-disable-line declaration-no-important */
-		line-height: 1 !important; /* stylelint-disable-line declaration-no-important */
-	}
+  /* Thumb icon */
+  &__thumb-icon {
+    transition: transform 0.3s;
+    font-size: 1.5rem !important; /* stylelint-disable-line declaration-no-important */
+    line-height: 1 !important; /* stylelint-disable-line declaration-no-important */
+  }
 
-	/* Panel */
-	&__panel {
-		margin: 0;
-		padding-bottom: t-vertical-rhythm(.5);
-		display: none;
+  /* Panel */
+  &__panel {
+    margin: 0;
+    padding-bottom: t-vertical-rhythm(0.5);
+    display: none;
 
-		*:first-child {
-			margin-top: 0;
-		}
+    *:first-child {
+      margin-top: 0;
+    }
 
-		*:last-child {
-			margin-bottom: 0;
-		}
-	}
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

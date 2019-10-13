@@ -11,17 +11,23 @@
  *
  * @example @include t-link;
  */
-@mixin t-link($color: $s-color-link, $decoration: 'none', $hover-color: $s-color-link-hover, $hover-decoration: 'underline', $active-color: $s-color-link-active) {
-	color: $color;
-	text-decoration: #{$decoration};
+@mixin t-link(
+  $color: $s-color-link,
+  $decoration: "none",
+  $hover-color: $s-color-link-hover,
+  $hover-decoration: "underline",
+  $active-color: $s-color-link-active
+) {
+  color: $color;
+  text-decoration: #{$decoration};
 
-	&:hover,
-	&:focus {
-		color: $hover-color;
-		text-decoration: #{$hover-decoration};
-	}
+  &:hover,
+  &:focus {
+    color: $hover-color;
+    text-decoration: #{$hover-decoration};
+  }
 
-	&:active {
-		color: $active-color;
-	}
+  &:active {
+    color: $active-color;
+  }
 }

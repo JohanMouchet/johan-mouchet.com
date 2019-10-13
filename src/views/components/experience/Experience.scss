@@ -1,16 +1,16 @@
-@import '../../../assets/styles/settings/_settings';
+@import "../../../assets/styles/settings/_settings";
 
 .c-experience {
-	&__heading {
-		margin-bottom: 0;
-	}
+  &__heading {
+    margin-bottom: 0;
+  }
 
-	&__company {
-		font-weight: 700;
-	}
+  &__company {
+    font-weight: 700;
+  }
 
-	&__subheading {
-		margin-top: 0;
-		color: $s-color-text-dimmed;
-	}
+  &__subheading {
+    margin-top: 0;
+    color: $s-color-text-dimmed;
+  }
 }

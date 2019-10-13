@@ -26,6 +26,7 @@
     margin-bottom: t-vertical-rhythm(1);
 
     /** States **/
+
     /*** Success ***/
     &--success #{$root}__label {
       color: $s-color-success;
@@ -196,6 +197,7 @@
 
       /** Checked **/
       &:checked {
+        /* stylelint-disable-next-line max-nesting-depth */
         ~ #{$root-toggle}-icon::before {
           background-color: $s-color-link;
         }
@@ -218,6 +220,7 @@
       #{$root-toggle}--radio & {
         border-radius: 50%;
 
+        /* stylelint-disable-next-line max-nesting-depth */
         &::before {
           border-radius: inherit;
         }
@@ -263,10 +266,12 @@
       border: 0;
     }
 
+    /* stylelint-disable no-descending-specificity */
     &::-moz-focus-inner,
     &::-moz-focus-outer {
       border: 0;
     }
+    /* stylelint-enable no-descending-specificity */
 
     &::-ms-track {
       height: auto;
@@ -293,6 +298,7 @@
   @include range-thumb("::-moz-range-thumb");
 
   /* States */
+
   /** Hover **/
   &__field:hover,
   &__toggle:hover &__toggle-icon {

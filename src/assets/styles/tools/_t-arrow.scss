@@ -9,48 +9,52 @@
  *
  * @example @include arrow(top, black, 15px);
  */
-@mixin t-arrow($arrow-direction: right, $arrow-color: currentColor, $arrow-size: 10px) {
-	width: 0;
-	height: 0;
-	border-style: solid;
+@mixin t-arrow(
+  $arrow-direction: right,
+  $arrow-color: currentColor,
+  $arrow-size: 10px
+) {
+  width: 0;
+  height: 0;
+  border-style: solid;
 
-	@if $arrow-direction == top {
-		border-width: 0 $arrow-size $arrow-size;
-		border-color: transparent transparent $arrow-color;
-	}
+  @if $arrow-direction == top {
+    border-width: 0 $arrow-size $arrow-size;
+    border-color: transparent transparent $arrow-color;
+  }
 
-	@if $arrow-direction == top-right {
-		border-width: 0 $arrow-size $arrow-size 0;
-		border-color: transparent $arrow-color transparent transparent;
-	}
+  @if $arrow-direction == top-right {
+    border-width: 0 $arrow-size $arrow-size 0;
+    border-color: transparent $arrow-color transparent transparent;
+  }
 
-	@if $arrow-direction == right {
-		border-width: $arrow-size 0 $arrow-size $arrow-size;
-		border-color: transparent transparent transparent $arrow-color;
-	}
+  @if $arrow-direction == right {
+    border-width: $arrow-size 0 $arrow-size $arrow-size;
+    border-color: transparent transparent transparent $arrow-color;
+  }
 
-	@if $arrow-direction == bottom-right {
-		border-width: 0 0 $arrow-size $arrow-size;
-		border-color: transparent transparent $arrow-color;
-	}
+  @if $arrow-direction == bottom-right {
+    border-width: 0 0 $arrow-size $arrow-size;
+    border-color: transparent transparent $arrow-color;
+  }
 
-	@if $arrow-direction == bottom {
-		border-width: $arrow-size $arrow-size 0;
-		border-color: $arrow-color transparent transparent;
-	}
+  @if $arrow-direction == bottom {
+    border-width: $arrow-size $arrow-size 0;
+    border-color: $arrow-color transparent transparent;
+  }
 
-	@if $arrow-direction == bottom-left {
-		border-width: $arrow-size 0 0 $arrow-size;
-		border-color: transparent transparent transparent $arrow-color;
-	}
+  @if $arrow-direction == bottom-left {
+    border-width: $arrow-size 0 0 $arrow-size;
+    border-color: transparent transparent transparent $arrow-color;
+  }
 
-	@if $arrow-direction == left {
-		border-width: $arrow-size $arrow-size $arrow-size 0;
-		border-color: transparent $arrow-color transparent transparent;
-	}
+  @if $arrow-direction == left {
+    border-width: $arrow-size $arrow-size $arrow-size 0;
+    border-color: transparent $arrow-color transparent transparent;
+  }
 
-	@if $arrow-direction == top-left {
-		border-width: $arrow-size $arrow-size 0 0;
-		border-color: $arrow-color transparent transparent;
-	}
+  @if $arrow-direction == top-left {
+    border-width: $arrow-size $arrow-size 0 0;
+    border-color: $arrow-color transparent transparent;
+  }
 }

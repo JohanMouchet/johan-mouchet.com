@@ -5,27 +5,27 @@
  */
 
 .u-anchor {
-	position: relative;
+  position: relative;
 
-	/** Link **/
-	&__link {
-		position: absolute;
-		right: 100%;
-		padding-right: .25em;
-		font-weight: 300;
-		font-style: normal;
-		opacity: 0;
+  /** Link **/
+  &__link {
+    position: absolute;
+    right: 100%;
+    padding-right: 0.25em;
+    font-weight: 300;
+    font-style: normal;
+    opacity: 0;
 
-		&:focus {
-			opacity: 1;
-			text-decoration: none;
-		}
-	}
+    &:focus {
+      opacity: 1;
+      text-decoration: none;
+    }
+  }
 
-	&:hover & {
-		&__link {
-			opacity: 1;
-			text-decoration: none;
-		}
-	}
+  &:hover & {
+    &__link {
+      opacity: 1;
+      text-decoration: none;
+    }
+  }
 }

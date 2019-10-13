@@ -3,11 +3,11 @@
  */
 
 .u-select {
-	&--all {
-		user-select: all;
-	}
+  &--all {
+    user-select: all;
+  }
 
-	&--none {
-		user-select: none;
-	}
+  &--none {
+    user-select: none;
+  }
 }

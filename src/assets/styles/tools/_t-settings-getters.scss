@@ -10,7 +10,7 @@
  * @example @media (min-width: t-breakpoint(breakpoint-name));
  */
 @function t-breakpoint($breakpoint-name) {
-	@return map-get($s-breakpoints, $breakpoint-name);
+  @return map-get($s-breakpoints, $breakpoint-name);
 }
 
 /**
@@ -21,7 +21,7 @@
  * @example z-index: t-layer(layer-name);
  */
 @function t-layer($layer-name) {
-	@return map-get($s-layers, $layer-name);
+  @return map-get($s-layers, $layer-name);
 }
 
 /**
@@ -32,7 +32,7 @@
  * @example background-image: url('#{t-path(path-name)}/image.jpg');
  */
 @function t-path($path-name) {
-	@return map-get($s-paths, $path-name);
+  @return map-get($s-paths, $path-name);
 }
 
 /**
@@ -43,5 +43,5 @@
  * @example border-radius: t-ui(property-name);
  */
 @function t-ui($property) {
-	@return map-get($s-ui, $property);
+  @return map-get($s-ui, $property);
 }

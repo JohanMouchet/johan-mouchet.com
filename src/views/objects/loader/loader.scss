@@ -1,26 +1,26 @@
-@import '../../../assets/styles/settings/_settings';
-@import '../../../assets/styles/tools/_tools';
+@import "../../../assets/styles/settings/_settings";
+@import "../../../assets/styles/tools/_tools";
 
 .o-loader {
-	display: inline-block;
-	height: t-vertical-rhythm(2, 'rem');
-	width: t-vertical-rhythm(2, 'rem');
-	vertical-align: middle;
-	border: 2px solid rgba($s-color-white, .5);
-	border-top-color: $s-color-secondary;
-	border-radius: 50%;
-	animation: loader-spin-animation 1s infinite ease;
+  display: inline-block;
+  height: t-vertical-rhythm(2, "rem");
+  width: t-vertical-rhythm(2, "rem");
+  vertical-align: middle;
+  border: 2px solid rgba($s-color-white, 0.5);
+  border-top-color: $s-color-secondary;
+  border-radius: 50%;
+  animation: loader-spin-animation 1s infinite ease;
 
-	/** Small **/
-	&--sm {
-		height: t-vertical-rhythm(.75, 'rem');
-		width: t-vertical-rhythm(.75, 'rem');
-	}
+  /** Small **/
+  &--sm {
+    height: t-vertical-rhythm(0.75, "rem");
+    width: t-vertical-rhythm(0.75, "rem");
+  }
 
-	/** Animation **/
-	@keyframes loader-spin-animation {
-		to {
-			transform: rotate(360deg);
-		}
-	}
+  /** Animation **/
+  @keyframes loader-spin-animation {
+    to {
+      transform: rotate(360deg);
+    }
+  }
 }

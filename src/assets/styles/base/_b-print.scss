@@ -2,75 +2,75 @@
  * Print
  */
 
-/* stylelint-disable selector-no-type, selector-no-qualifying-type, declaration-no-important, color-no-hex */
+/* stylelint-disable declaration-no-important, color-no-hex */
 
 @media print {
-	/* Base */
-	*:not([href]) {
-		&:not(.o-button),
-		&::before,
-		&::after {
-			color: #000 !important;
-			background: transparent !important;
-			text-shadow: none !important;
-			border-color: #000 !important;
-		}
-	}
+  /* Base */
+  *:not([href]) {
+    &:not(.o-button),
+    &::before,
+    &::after {
+      color: #000 !important;
+      background: transparent !important;
+      text-shadow: none !important;
+      border-color: #000 !important;
+    }
+  }
 
-	[href]:not([href^='javascript:']):not([href^='#']) {
-		text-decoration: underline;
+  [href]:not([href^="javascript:"]):not([href^="#"]) {
+    text-decoration: underline;
 
-		&::after {
-			content: ' (' attr(href) ')';
-			font-size: t-modular-scale(-1);
-			font-weight: 400;
-			font-style: italic;
-		}
-	}
+    &::after {
+      content: " (" attr(href) ")";
+      font-size: t-modular-scale(-1);
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
 
-	abbr[title]::after {
-		content: ' (' attr(title) ')';
-	}
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
 
-	pre,
-	blockquote {
-		page-break-inside: avoid;
-	}
+  pre,
+  blockquote {
+    page-break-inside: avoid;
+  }
 
-	thead {
-		display: table-header-group;
-	}
+  thead {
+    display: table-header-group;
+  }
 
-	tr,
-	img {
-		page-break-inside: avoid;
-	}
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
 
-	img {
-		max-width: 100% !important;
-	}
+  img {
+    max-width: 100% !important;
+  }
 
-	p,
-	h2,
-	h3 {
-		orphans: 3;
-		widows: 3;
-	}
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
 
-	h2,
-	h3 {
-		page-break-after: avoid;
-	}
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 
-	/* Additions */
-	.p-mast-nav,
-	.p-mast-header,
-	.p-mast-footer {
-		display: none;
-	}
+  /* Additions */
+  .p-mast-nav,
+  .p-mast-header,
+  .p-mast-footer {
+    display: none;
+  }
 
-	.l-main {
-		margin-top: 0;
-		margin-bottom: 0;
-	}
+  .l-main {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }

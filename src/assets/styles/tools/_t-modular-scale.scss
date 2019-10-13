@@ -9,37 +9,31 @@
  * @example font-style: t-modular-scale(1);
  * @example font-style: t-modular-scale(1, 'rem');
  */
-@function t-modular-scale($factor, $output-unit: 'em') {
-	@if $output-unit == 'em' {
-		$output-unit : 1em;
-	}
+@function t-modular-scale($factor, $output-unit: "em") {
+  @if $output-unit == "em" {
+    $output-unit: 1em;
+  } @else if $output-unit == "rem" {
+    $output-unit: 1rem;
+  } @else {
+    @error 't-modular-scale() only accepts `em` (default) or `rem` units.';
+  }
 
-	@else if $output-unit == 'rem' {
-		$output-unit : 1rem;
-	}
-
-	@else {
-		@error 't-modular-scale() only accepts `em` (default) or `rem` units.';
-	}
-
-	@return t-power($s-modular-scale-ratio, $factor) * $output-unit;
+  @return t-power($s-modular-scale-ratio, $factor) * $output-unit;
 }
 
 /* Power */
 @function t-power($number, $exponent) {
-	$value: 1;
+  $value: 1;
 
-	@if $exponent > 0 {
-		@for $i from 1 through $exponent {
-			$value: $value * $number;
-		}
-	}
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  } @else if $exponent < 0 {
+    @for $i from 1 through -$exponent {
+      $value: $value / $number;
+    }
+  }
 
-	@else if $exponent < 0 {
-		@for $i from 1 through -$exponent {
-			$value: $value / $number;
-		}
-	}
-
-	@return $value;
+  @return $value;
 }

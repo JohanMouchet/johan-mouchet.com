@@ -3,27 +3,27 @@
  */
 
 .u-counter {
-	counter-reset: index-1;
+  counter-reset: index-1;
 
-	/* Index */
-	@for $i from 1 through 6 {
-		&__index-#{$i} {
-			counter-increment: index-#{$i};
-			counter-reset: index-#{$i + 1};
+  /* Index */
+  @for $i from 1 through 6 {
+    &__index-#{$i} {
+      counter-increment: index-#{$i};
+      counter-reset: index-#{$i + 1};
 
-			&::before {
-				$k: '';
+      &::before {
+        $k: "";
 
-				@for $j from 1 through $i {
-					$k: $k + counter(index-#{$j}) + attr(data-counter-separator);
-				}
+        @for $j from 1 through $i {
+          $k: $k + counter(index-#{$j}) + attr(data-counter-separator);
+        }
 
-				content: #{$k};
-			}
-		}
-	}
+        content: #{$k};
+      }
+    }
+  }
 
-	&__index--space::before {
-		margin-right: .5em;
-	}
+  &__index--space::before {
+    margin-right: 0.5em;
+  }
 }

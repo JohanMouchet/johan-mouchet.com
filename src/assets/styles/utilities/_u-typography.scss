@@ -4,48 +4,48 @@
 
 /* Headings */
 .u-heading {
-	&--xl {
-		@include t-heading--xl;
-	}
+  &--xl {
+    @include t-heading--xl;
+  }
 
-	&--lg {
-		@include t-heading--lg;
-	}
+  &--lg {
+    @include t-heading--lg;
+  }
 
-	&--1 {
-		@include t-heading--1;
-	}
+  &--1 {
+    @include t-heading--1;
+  }
 
-	&--2 {
-		@include t-heading--2;
-	}
+  &--2 {
+    @include t-heading--2;
+  }
 
-	&--3 {
-		@include t-heading--3;
-	}
+  &--3 {
+    @include t-heading--3;
+  }
 
-	&--4 {
-		@include t-heading--4;
-	}
+  &--4 {
+    @include t-heading--4;
+  }
 
-	&--5 {
-		@include t-heading--5;
-	}
+  &--5 {
+    @include t-heading--5;
+  }
 
-	&--6 {
-		@include t-heading--6;
-	}
+  &--6 {
+    @include t-heading--6;
+  }
 
-	&--sm {
-		@include t-heading--sm;
-	}
+  &--sm {
+    @include t-heading--sm;
+  }
 
-	&--xs {
-		@include t-heading--xs;
-	}
+  &--xs {
+    @include t-heading--xs;
+  }
 }
 
 /* Secondary link */
 .u-link--secondary {
-	@include t-link($s-color-text-dimmed, $hover-decoration: 'none');
+  @include t-link($s-color-text-dimmed, $hover-decoration: "none");
 }

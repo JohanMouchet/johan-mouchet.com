@@ -4,10 +4,10 @@
 
 /* Flexbox Grid */
 $grid-breakpoints: (
-	sm: map-get($s-breakpoints, sm),
-	md: map-get($s-breakpoints, md),
-	lg: map-get($s-breakpoints, lg),
-	xl: map-get($s-breakpoints, xl),
+  sm: map-get($s-breakpoints, sm),
+  md: map-get($s-breakpoints, md),
+  lg: map-get($s-breakpoints, lg),
+  xl: map-get($s-breakpoints, xl)
 );
 
 $grid-gutter: 2rem;

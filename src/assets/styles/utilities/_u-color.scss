@@ -3,32 +3,32 @@
  */
 
 .u-color {
-	&--primary {
-		color: $s-color-primary;
-	}
+  &--primary {
+    color: $s-color-primary;
+  }
 
-	&--secondary {
-		color: $s-color-secondary;
-	}
+  &--secondary {
+    color: $s-color-secondary;
+  }
 
-	&--dimmed {
-		color: $s-color-text-dimmed;
-	}
+  &--dimmed {
+    color: $s-color-text-dimmed;
+  }
 
-	/** States colors **/
-	&--success {
-		color: $s-color-success;
-	}
+  /** States colors **/
+  &--success {
+    color: $s-color-success;
+  }
 
-	&--info {
-		color: $s-color-info;
-	}
+  &--info {
+    color: $s-color-info;
+  }
 
-	&--warning {
-		color: $s-color-warning;
-	}
+  &--warning {
+    color: $s-color-warning;
+  }
 
-	&--danger {
-		color: $s-color-danger;
-	}
+  &--danger {
+    color: $s-color-danger;
+  }
 }

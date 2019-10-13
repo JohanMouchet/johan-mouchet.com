@@ -1,270 +1,273 @@
-@import '../../../assets/styles/settings/_settings';
-@import '../../../assets/styles/tools/_tools';
+@import "../../../assets/styles/settings/_settings";
+@import "../../../assets/styles/tools/_tools";
 
-/* stylelint-disable selector-no-type, selector-max-type */
+/* stylelint-disable selector-max-type */
 table {
-	width: 100%;
-	border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .o-table {
-	$root: &;
-	$v-padding: t-vertical-rhythm(.375) !default;
-	$h-padding: $v-padding * 2;
-	$scale-factor: 2 !default;
+  $root: &;
+  $v-padding: t-vertical-rhythm(0.375) !default;
+  $h-padding: $v-padding * 2;
+  $scale-factor: 2 !default;
 
-	margin: t-vertical-rhythm(2) 0;
-	text-align: left;
+  margin: t-vertical-rhythm(2) 0;
+  text-align: left;
 
-	tbody tr:not(:last-child) {
-		border-bottom: 1px solid $s-color-gray;
-	}
+  tbody tr:not(:last-child) {
+    border-bottom: 1px solid $s-color-gray;
+  }
 
-	th,
-	td {
-		padding: $v-padding $h-padding;
-	}
+  th,
+  td {
+    padding: $v-padding $h-padding;
+  }
 
-	th {
-		font-weight: 700;
-		white-space: nowrap;
-	}
+  th {
+    font-weight: 700;
+    white-space: nowrap;
+  }
 
-	thead,
-	tfoot {
-		color: $s-color-secondary;
-	}
+  thead,
+  tfoot {
+    color: $s-color-secondary;
+  }
 
-	thead {
-		border-bottom: 2px solid;
-	}
+  thead {
+    border-bottom: 2px solid;
+  }
 
-	tfoot {
-		border-top: 1px solid;
-	}
+  tfoot {
+    border-top: 1px solid;
+  }
 
-	/** Align **/
-	/*** Top ***/
-	&--a-top {
-		thead,
-		tbody,
-		tfoot {
-			vertical-align: top;
-		}
-	}
+  /** Align **/
 
-	/*** Bottom ***/
-	&--a-bottom {
-		thead,
-		tbody,
-		tfoot {
-			vertical-align: bottom;
-		}
-	}
+  /*** Top ***/
+  &--a-top {
+    thead,
+    tbody,
+    tfoot {
+      vertical-align: top;
+    }
+  }
 
-	/** Fixed **/
-	&--fixed {
-		table-layout: fixed;
-	}
+  /*** Bottom ***/
+  &--a-bottom {
+    thead,
+    tbody,
+    tfoot {
+      vertical-align: bottom;
+    }
+  }
 
-	/** Vertical **/
-	&--vertical {
-		text-align: center;
+  /** Fixed **/
+  &--fixed {
+    table-layout: fixed;
+  }
 
-		tbody {
-			tr:not(:last-child) {
-				border-bottom: 0;
-			}
+  /** Vertical **/
+  &--vertical {
+    text-align: center;
 
-			th:not(:last-child),
-			td:not(:last-child) {
-				border-right: 1px solid $s-color-gray;
-			}
-		}
-	}
+    tbody {
+      tr:not(:last-child) {
+        border-bottom: 0;
+      }
 
-	/** Striped **/
-	&--striped {
-		tbody {
-			tr:not(:last-child) {
-				border-bottom-color: transparent;
-			}
+      th:not(:last-child),
+      td:not(:last-child) {
+        border-right: 1px solid $s-color-gray;
+      }
+    }
+  }
 
-			tr:nth-child(even) {
-				background-color: $s-color-gray-lighter;
-			}
-		}
-	}
+  /** Striped **/
+  &--striped {
+    tbody {
+      tr:not(:last-child) {
+        border-bottom-color: transparent;
+      }
 
-	/** Hover **/
-	&--hover {
-		tbody tr:hover {
-			background-color: $s-color-gray-lighter;
-		}
+      tr:nth-child(even) {
+        background-color: $s-color-gray-lighter;
+      }
+    }
+  }
 
-		// And striped
-		&#{$root}--striped {
-			tbody tr:hover {
-				background-color: $s-color-gray;
-			}
-		}
-	}
+  /** Hover **/
+  &--hover {
+    tbody tr:hover {
+      background-color: $s-color-gray-lighter;
+    }
 
-	/** Small spacing **/
-	/*** Vertical ***/
-	&--sm {
-		thead,
-		tfoot {
-			th,
-			td {
-				padding-left: $h-padding / $scale-factor;
-				padding-right: $h-padding / $scale-factor;
-			}
-		}
+    // And striped
+    &#{$root}--striped {
+      tbody tr:hover {
+        background-color: $s-color-gray;
+      }
+    }
+  }
 
-		tbody {
-			th,
-			td {
-				padding: $v-padding / $scale-factor $h-padding / $scale-factor;
-			}
-		}
-	}
+  /** Small spacing **/
 
-	/*** Vertical ***/
-	&--v-sm {
-		tbody {
-			th,
-			td {
-				padding-top: $v-padding / $scale-factor;
-				padding-bottom: $v-padding / $scale-factor;
-			}
-		}
-	}
+  /*** Vertical ***/
+  &--sm {
+    thead,
+    tfoot {
+      th,
+      td {
+        padding-left: $h-padding / $scale-factor;
+        padding-right: $h-padding / $scale-factor;
+      }
+    }
 
-	/*** Horizontal ***/
-	&--h-sm {
-		th,
-		td {
-			padding-left: $h-padding / $scale-factor;
-			padding-right: $h-padding / $scale-factor;
-		}
-	}
+    tbody {
+      th,
+      td {
+        padding: $v-padding / $scale-factor $h-padding / $scale-factor;
+      }
+    }
+  }
 
-	/** Large spacing **/
-	&--lg {
-		thead,
-		tfoot {
-			th,
-			td {
-				padding-left: $h-padding * $scale-factor;
-				padding-right: $h-padding * $scale-factor;
-			}
-		}
+  /*** Vertical ***/
+  &--v-sm {
+    tbody {
+      th,
+      td {
+        padding-top: $v-padding / $scale-factor;
+        padding-bottom: $v-padding / $scale-factor;
+      }
+    }
+  }
 
-		tbody {
-			th,
-			td {
-				padding: $v-padding * $scale-factor $h-padding * $scale-factor;
-			}
-		}
-	}
+  /*** Horizontal ***/
+  &--h-sm {
+    th,
+    td {
+      padding-left: $h-padding / $scale-factor;
+      padding-right: $h-padding / $scale-factor;
+    }
+  }
 
-	/*** Vertical ***/
-	&--v-lg {
-		tbody {
-			th,
-			td {
-				padding-top: $v-padding * $scale-factor;
-				padding-bottom: $v-padding * $scale-factor;
-			}
-		}
-	}
+  /** Large spacing **/
+  &--lg {
+    thead,
+    tfoot {
+      th,
+      td {
+        padding-left: $h-padding * $scale-factor;
+        padding-right: $h-padding * $scale-factor;
+      }
+    }
 
-	/*** Horizontal ***/
-	&--h-lg {
-		thead,
-		tfoot {
-			th,
-			td {
-				padding-left: $h-padding * $scale-factor;
-				padding-right: $h-padding * $scale-factor;
-			}
-		}
+    tbody {
+      th,
+      td {
+        padding: $v-padding * $scale-factor $h-padding * $scale-factor;
+      }
+    }
+  }
 
-		tbody {
-			th,
-			td {
-				padding-left: $h-padding * $scale-factor;
-				padding-right: $h-padding * $scale-factor;
-			}
-		}
-	}
+  /*** Vertical ***/
+  &--v-lg {
+    tbody {
+      th,
+      td {
+        padding-top: $v-padding * $scale-factor;
+        padding-bottom: $v-padding * $scale-factor;
+      }
+    }
+  }
 
-	/** Numerical column **/
-	/* stylelint-disable no-duplicate-selectors, selector-no-qualifying-type */
-	th,
-	td {
-		&.js-table-numerical-col,
-		&.js-table-numerical-cell {
-			text-align: right;
-		}
-	}
+  /*** Horizontal ***/
+  &--h-lg {
+    thead,
+    tfoot {
+      th,
+      td {
+        padding-left: $h-padding * $scale-factor;
+        padding-right: $h-padding * $scale-factor;
+      }
+    }
 
-	/** Responsive **/
-	@media screen and (max-width: t-breakpoint(md)) {
-		&--responsive {
-			display: inline-block;
-			max-width: 100%;
-			overflow-x: auto;
-			white-space: nowrap;
-			-webkit-overflow-scrolling: touch;
+    tbody {
+      th,
+      td {
+        padding-left: $h-padding * $scale-factor;
+        padding-right: $h-padding * $scale-factor;
+      }
+    }
+  }
 
-			/**
+  /** Numerical column **/
+  /* stylelint-disable no-duplicate-selectors, selector-no-qualifying-type */
+  th,
+  td {
+    &.js-table-numerical-col,
+    &.js-table-numerical-cell {
+      text-align: right;
+    }
+  }
+
+  /** Responsive **/
+  @media screen and (max-width: t-breakpoint(md)) {
+    &--responsive {
+      display: inline-block;
+      max-width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+
+      /**
 			 * Shadow
 			 * (Not compatible with .o-table--striped and .o-table--hover)
 			 */
-			&#{$root}--responsive-shadow:not(#{$root}--striped):not(#{$root}--hover) {
-				background: radial-gradient(
-					left,
-					ellipse,
-					rgba($s-color-black, .2),
-					transparent 75%
-				)
-					center left,
-					radial-gradient(
-					right,
-					ellipse,
-					rgba($s-color-black, .2),
-					transparent 75%
-				)
-					center right;
-				background-size: .5rem 100%, .5rem 100%;
-				background-attachment: scroll, scroll;
-				background-repeat: no-repeat;
+      &#{$root}--responsive-shadow:not(#{$root}--striped):not(#{$root}--hover) {
+        background: radial-gradient(
+              left,
+              ellipse,
+              rgba($s-color-black, 0.2),
+              transparent 75%
+            )
+            center left,
+          radial-gradient(
+              right,
+              ellipse,
+              rgba($s-color-black, 0.2),
+              transparent 75%
+            )
+            center right;
+        background-size: 0.5rem 100%, 0.5rem 100%;
+        background-attachment: scroll, scroll;
+        background-repeat: no-repeat;
 
-				th:first-child,
-				td:first-child {
-					background: linear-gradient(
-						to right,
-						rgba($s-color-white, 1) 50%,
-						transparent
-					);
-					background-repeat: no-repeat;
-					background-size: 1rem 100%;
-				}
+        /* stylelint-disable selector-max-pseudo-class */
+        th:first-child,
+        td:first-child {
+          background: linear-gradient(
+            to right,
+            rgba($s-color-white, 1) 50%,
+            transparent
+          );
+          background-repeat: no-repeat;
+          background-size: 1rem 100%;
+        }
 
-				th:last-child,
-				td:last-child {
-					background: linear-gradient(
-						to left,
-						rgba($s-color-white, 1) 50%,
-						transparent
-					);
-					background-repeat: no-repeat;
-					background-size: 1rem 100%;
-					background-position-x: 100%;
-				}
-			}
-		}
-	}
+        th:last-child,
+        td:last-child {
+          background: linear-gradient(
+            to left,
+            rgba($s-color-white, 1) 50%,
+            transparent
+          );
+          background-repeat: no-repeat;
+          background-size: 1rem 100%;
+          background-position-x: 100%;
+        }
+      }
+    }
+  }
 }

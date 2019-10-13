@@ -1,15 +1,15 @@
-@import '../../../assets/styles/settings/_settings';
-@import '../../../assets/styles/tools/_tools';
+@import "../../../assets/styles/settings/_settings";
+@import "../../../assets/styles/tools/_tools";
 
 .c-social-media {
-	margin-top: t-vertical-rhythm(.5);
-	white-space: nowrap;
+  margin-top: t-vertical-rhythm(0.5);
+  white-space: nowrap;
 
-	svg {
-		height: t-modular-scale(2);
-		width: t-modular-scale(2);
-		vertical-align: text-bottom;
-		margin-right: .75em;
-		fill: $s-color-primary;
-	}
+  svg {
+    height: t-modular-scale(2);
+    width: t-modular-scale(2);
+    vertical-align: text-bottom;
+    margin-right: 0.75em;
+    fill: $s-color-primary;
+  }
 }

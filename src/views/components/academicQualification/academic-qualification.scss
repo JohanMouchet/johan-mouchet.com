@@ -1,15 +1,15 @@
-@import '../../../assets/styles/settings/_settings';
+@import "../../../assets/styles/settings/_settings";
 
 .c-academic-qualification {
-	&__heading {
-		margin-bottom: 0;
-	}
+  &__heading {
+    margin-bottom: 0;
+  }
 
-	&__establishment {
-		font-weight: 700;
-	}
+  &__establishment {
+    font-weight: 700;
+  }
 
-	&__graduation-year {
-		color: $s-color-text-dimmed;
-	}
+  &__graduation-year {
+    color: $s-color-text-dimmed;
+  }
 }
