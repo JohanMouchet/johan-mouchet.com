@@ -1,6 +1,5 @@
 # TODO
 
-- Stylelint, add suggested additions: https://github.com/stylelint/stylelint-config-standard#suggested-additions
 - Import images as JS modules https://create-react-app.dev/docs/adding-images-fonts-and-files
 - Replace `{% if`
 - Replace `{% for`
