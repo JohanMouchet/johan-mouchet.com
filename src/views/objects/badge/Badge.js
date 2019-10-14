@@ -15,9 +15,9 @@ const Badge = (props: Props, children) => {
   const { metadata } = props;
 
   const BadgeClass = cx(
-    "o-badge"
-    // metadata.contextClass,
-    // metadata.additionalClasses
+    "o-badge",
+    metadata.contextClass,
+    metadata.additionalClasses
   );
 
   return <span className={BadgeClass}>{children}</span>;
