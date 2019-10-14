@@ -10,11 +10,12 @@ type Props = {
   metadata: {
     contextClass?: string,
     attributes?: { [key: string]: any }
-  }
+  },
+  children?: Node
 };
 
-const Anchor = (props: Props, children) => {
-  const { tag, url, id, marker, metadata } = props;
+const Anchor = (props: Props) => {
+  const { tag, url, id, marker, metadata, children } = props;
 
   const Tag = tag;
 

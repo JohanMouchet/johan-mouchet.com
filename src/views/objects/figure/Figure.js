@@ -13,11 +13,12 @@ type Props = {
     additionalClasses?: Array<string>,
     modifierClasses?: Array<string>,
     attributes?: { [key: string]: any }
-  }
+  },
+  children?: Node
 };
 
-const Figure = (props: Props, children) => {
-  const { prop1, prop2 } = props;
+const Figure = (props: Props) => {
+  const { prop1, prop2, children } = props;
 
   const FigureClass = cx(
     "o-figure",

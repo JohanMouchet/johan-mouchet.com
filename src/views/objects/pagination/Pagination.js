@@ -10,11 +10,12 @@ type LinkProps = {
   prev: boolean,
   next: boolean,
   last: boolean,
-  link: string
+  link: string,
+  children?: Node
 };
 
-const Link = (props: LinkProps, children: Node) => {
-  const { current, first, prev, next, last, link } = props;
+const Link = (props: LinkProps) => {
+  const { current, first, prev, next, last, link, children } = props;
 
   const linkClass = cx("o-pagination__index", {
     "is--active": current,

@@ -12,11 +12,12 @@ type ButtonProps = {
     additionalClasses?: Array<string>,
     modifierClasses?: Array<string>,
     attributes?: { [key: string]: any }
-  }
+  },
+  children?: Node
 };
 
-const Button = (props: ButtonProps, children) => {
-  const { prop1, prop2 } = props;
+const Button = (props: ButtonProps) => {
+  const { prop1, prop2, children } = props;
 
   const ButtonClass = cx(
     "o-button",
@@ -54,11 +55,12 @@ type ButtonSocialProps = {
     additionalClasses?: Array<string>,
     modifierClasses?: Array<string>,
     attributes?: { [key: string]: any }
-  }
+  },
+  children?: Node
 };
 
-const ButtonSocial = (props: ButtonSocialProps, children) => {
-  const { prop1, prop2 } = props;
+const ButtonSocial = (props: ButtonSocialProps) => {
+  const { prop1, prop2, children } = props;
 
   const ButtonSocialClass = cx(
     "o-button",

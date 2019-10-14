@@ -10,11 +10,12 @@ type LabelProps = {
     contextClass?: string,
     additionalClasses?: Array<string>,
     modifierClasses?: Array<string>
-  }
+  },
+  children?: Node
 };
 
-const Label = (props: LabelProps, children) => {
-  const { prop1, prop2 } = props;
+const Label = (props: LabelProps) => {
+  const { prop1, prop2, children } = props;
 
   const LabelClass = cx(
     "o-form__label",
@@ -95,11 +96,12 @@ type ToggleProps = {
     contextClass?: string,
     additionalClasses?: Array<string>,
     attributes?: { [key: string]: any }
-  }
+  },
+  children?: Node
 };
 
-const Toggle = (props: ToggleProps, children) => {
-  const { prop1, prop2 } = props;
+const Toggle = (props: ToggleProps) => {
+  const { prop1, prop2, children } = props;
 
   const ToggleClass = cx(
     "o-form__toggle",
@@ -143,11 +145,12 @@ type FileProps = {
     contextClass?: string,
     additionalClasses?: Array<string>,
     attributes?: { [key: string]: any }
-  }
+  },
+  children?: Node
 };
 
-const File = (props: FileProps, children) => {
-  const { prop1, prop2 } = props;
+const File = (props: FileProps) => {
+  const { prop1, prop2, children } = props;
 
   const FileClass = cx(
     "o-form__file",
@@ -243,11 +246,12 @@ type TextareaProps = {
     contextClass?: string,
     additionalClasses?: Array<string>,
     attributes?: { [key: string]: any }
-  }
+  },
+  children?: Node
 };
 
-const Textarea = (props: TextareaProps, children) => {
-  const { prop1, prop2 } = props;
+const Textarea = (props: TextareaProps) => {
+  const { prop1, prop2, children } = props;
 
   const TextareaClass = cx(
     "o-form__field",

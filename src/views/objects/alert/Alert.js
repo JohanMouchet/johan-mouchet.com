@@ -11,11 +11,12 @@ type Props = {
   metadata: {
     contextClass?: string,
     additionalClasses?: Array<string>
-  }
+  },
+  children?: Node
 };
 
-const Alert = (props: Props, children) => {
-  const { prop1, prop2 } = props;
+const Alert = (props: Props) => {
+  const { prop1, prop2, children } = props;
 
   const AlertClass = cx(
     "o-alert",
