@@ -7,7 +7,7 @@ type Props = {
   url: string,
   id: string,
   marker: string,
-  metadata: {
+  metadata?: {
     contextClass?: string,
     attributes?: { [key: string]: any }
   },

@@ -11,7 +11,7 @@ type Props = {
       url: string
     }
   ],
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>
   }

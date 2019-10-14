@@ -42,7 +42,7 @@ type NotesProps = {
       url?: string
     }
   ],
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>
   }

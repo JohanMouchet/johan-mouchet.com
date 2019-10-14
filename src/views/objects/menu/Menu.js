@@ -9,7 +9,7 @@
 
 // type Props = {
 //   menu: typeof Button,
-//   metadata: {
+//   metadata?: {
 //     additionalClasses?: Array<string>,
 //   }
 // };

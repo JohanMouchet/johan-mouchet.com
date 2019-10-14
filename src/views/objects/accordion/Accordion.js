@@ -6,7 +6,7 @@ import "./accordion.scss";
 
 type Props = {
   items: [{ thumb: string, panel: string }],
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>
   }

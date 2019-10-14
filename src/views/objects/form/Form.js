@@ -6,7 +6,7 @@ import "./form.scss";
 
 type LabelProps = {
   for?: string,
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
     modifierClasses?: Array<string>
@@ -48,7 +48,7 @@ type FieldProps = {
   type: string,
   name: string,
   value?: string,
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
     modifierClasses?: Array<string>,
@@ -92,7 +92,7 @@ type ToggleProps = {
   type: string,
   name?: string,
   value?: string,
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
     attributes?: { [key: string]: any }
@@ -141,7 +141,7 @@ type FileProps = {
   id?: string,
   name: string,
   multipleCaption?: string,
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
     attributes?: { [key: string]: any }
@@ -192,7 +192,7 @@ export { File };
 type SelectProps = {
   id?: string,
   name: string,
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
     attributes?: { [key: string]: any }
@@ -242,7 +242,7 @@ export { Select };
 type TextareaProps = {
   id?: string,
   name: string,
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
     attributes?: { [key: string]: any }
@@ -283,7 +283,7 @@ export { Textarea };
 type RangeProps = {
   id?: string,
   name: string,
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
     attributes?: { [key: string]: any }

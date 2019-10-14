@@ -11,7 +11,7 @@ type Props = {
       panel: string
     }
   ],
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>
   }

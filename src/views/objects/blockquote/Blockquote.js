@@ -8,7 +8,7 @@ type Props = {
   quote: Node,
   cite?: Node,
   pulled?: boolean,
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>
   }

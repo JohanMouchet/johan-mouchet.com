@@ -5,7 +5,7 @@ import cx from "classnames";
 import "./loader.scss";
 
 type Props = {
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
     modifierClasses?: Array<string>

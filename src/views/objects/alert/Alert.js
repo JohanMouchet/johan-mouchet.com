@@ -8,7 +8,7 @@ type Props = {
   type?: string,
   hidden: boolean,
   closable?: boolean,
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>
   },

@@ -8,7 +8,7 @@ type Props = {
   src: string,
   alt?: string,
   title?: string,
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
     modifierClasses?: Array<string>,

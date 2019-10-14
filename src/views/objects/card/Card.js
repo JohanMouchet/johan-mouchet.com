@@ -10,7 +10,7 @@ type Props = {
   header?: Node,
   body?: Node,
   footer?: Node,
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
     modifierClasses?: Array<string>

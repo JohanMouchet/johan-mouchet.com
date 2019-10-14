@@ -7,7 +7,7 @@ import "./notice.scss";
 type Props = {
   secondary?: Node,
   closeButton: boolean,
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>
   },

@@ -7,7 +7,7 @@ import "./button.scss";
 type ButtonProps = {
   type: string,
   url?: string,
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
     modifierClasses?: Array<string>,
@@ -50,7 +50,7 @@ type ButtonSocialProps = {
   url: string,
   icon: string,
   counter?: number,
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
     modifierClasses?: Array<string>,
@@ -99,7 +99,7 @@ export { ButtonSocial };
 type ButtonSocialBadgeProps = {
   url: string,
   icon: string,
-  metadata: {
+  metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
     modifierClasses?: Array<string>,
