@@ -1,6 +1,7 @@
 // @flow
 
 import * as React from "react";
+import cx from "classnames";
 
 type Props = {
   tag: string,
@@ -17,11 +18,13 @@ type Props = {
 const Anchor = (props: Props) => {
   const { tag, url, id, marker, metadata, children } = props;
 
+  const AnchorClass = cx("u-anchor", metadata.contextClass);
+
   const Tag = tag;
 
   return (
     id && (
-      <Tag id={id} className="u-anchor" {...metadata.attributes}>
+      <Tag id={id} className={AnchorClass} {...metadata.attributes}>
         <a href={url + "#" + id} className="u-anchor__link">
           {marker}
         </a>

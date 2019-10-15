@@ -6,5 +6,5 @@ import { text } from "@storybook/addon-knobs";
 import Badge from "./";
 
 storiesOf("Badge", module).add("default", () => (
-  <Badge>{text("children", "1")}</Badge>
+  <Badge>{text("children", "badge")}</Badge>
 ));

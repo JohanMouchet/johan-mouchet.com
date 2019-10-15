@@ -17,7 +17,14 @@ type Props = {
 };
 
 const ProgressBar = (props: Props) => {
-  const { label, total, filling, tooltip, tooltipOnHover, metadata } = props;
+  const {
+    label,
+    total,
+    filling,
+    tooltip,
+    tooltipOnHover,
+    metadata = {}
+  } = props;
 
   const ProgressBarClass = cx(
     "o-progress-bar",

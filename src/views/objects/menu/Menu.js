@@ -19,7 +19,7 @@
 // const Menu = (props: Props) => {
 // 	const {
 // 	  prop1,
-// 	  prop2
+//    metadata = {},
 // 	} = props;
 
 // 	const MenuClass = cx({

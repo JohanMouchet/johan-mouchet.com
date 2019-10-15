@@ -18,16 +18,13 @@ type Props = {
 };
 
 const Tabs = (props: Props) => {
-  const { prop1, prop2 } = props;
+  const { prop1, metadata = {} } = props;
 
   const TabsClass = cx(
     "o-tabs",
-    props.metadata.contextClass,
-    props.metadata.additionalClasses,
-    "js-tabs",
-    {
-      "Tabs--prop1": prop1
-    }
+    metadata.contextClass,
+    metadata.additionalClasses,
+    "js-tabs"
   );
 
   return (

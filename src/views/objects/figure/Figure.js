@@ -18,13 +18,13 @@ type Props = {
 };
 
 const Figure = (props: Props) => {
-  const { prop1, prop2, children } = props;
+  const { prop1, metadata = {}, children } = props;
 
   const FigureClass = cx(
     "o-figure",
-    props.metadata.contextClass,
-    props.metadata.modifierClasses,
-    props.metadata.additionalClasses,
+    metadata.contextClass,
+    metadata.modifierClasses,
+    metadata.additionalClasses,
     {
       "Figure--prop1": prop1
     }
@@ -37,7 +37,7 @@ const Figure = (props: Props) => {
         src={props.src}
         alt={props.alt}
         title={props.title}
-        {...props.metadata.attributes}
+        {...metadata.attributes}
       />
       {children && (
         <figcaption className="o-figure__caption">{children}</figcaption>

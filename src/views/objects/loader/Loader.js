@@ -13,11 +13,13 @@ type Props = {
 };
 
 const Loader = (props: Props) => {
+  const { metadata = {} } = props;
+
   const LoaderClass = cx(
     "o-loader",
-    props.metadata.contextClass,
-    props.metadata.modifierClasses,
-    props.metadata.additionalClasses
+    metadata.contextClass,
+    metadata.modifierClasses,
+    metadata.additionalClasses
   );
 
   return <div className={LoaderClass}></div>;

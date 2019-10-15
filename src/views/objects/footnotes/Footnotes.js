@@ -49,7 +49,7 @@ type NotesProps = {
 };
 
 const FootnotesNotes = (props: NotesProps) => {
-  const { notes, metadata } = props;
+  const { notes, metadata = {} } = props;
 
   const NotesClass = cx(
     "o-footnotes",

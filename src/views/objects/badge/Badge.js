@@ -12,12 +12,13 @@ type Props = {
 };
 
 const Badge = (props: Props) => {
-  const {
-    metadata: { contextClass, additionalClasses },
-    children
-  } = props;
+  const { metadata = {}, children } = props;
 
-  const BadgeClass = cx("o-badge", contextClass, additionalClasses);
+  const BadgeClass = cx(
+    "o-badge",
+    metadata.contextClass,
+    metadata.additionalClasses
+  );
 
   return <span className={BadgeClass}>{children}</span>;
 };

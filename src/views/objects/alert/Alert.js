@@ -16,12 +16,12 @@ type Props = {
 };
 
 const Alert = (props: Props) => {
-  const { prop1, prop2, children } = props;
+  const { prop1, metadata = {}, children } = props;
 
   const AlertClass = cx(
     "o-alert",
-    props.metadata.contextClass,
-    props.metadata.additionalClasses,
+    metadata.contextClass,
+    metadata.additionalClasses,
     {
       "Alert--prop1": prop1
     }

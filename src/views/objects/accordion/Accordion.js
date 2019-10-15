@@ -13,12 +13,12 @@ type Props = {
 };
 
 const Accordion = (props: Props) => {
-  const { prop1, prop2 } = props;
+  const { prop1, metadata = {} } = props;
 
   const AccordionClass = cx(
     "o-accordion",
-    props.metadata.contextClass,
-    props.metadata.additionalClasses,
+    metadata.contextClass,
+    metadata.additionalClasses,
     "js-accordion",
     {
       "Accordion--prop1": prop1

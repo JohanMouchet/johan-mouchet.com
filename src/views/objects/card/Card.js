@@ -18,13 +18,13 @@ type Props = {
 };
 
 const Card = (props: Props) => {
-  const { prop1, prop2 } = props;
+  const { prop1, metadata = {} } = props;
 
   const CardClass = cx(
     "o-card",
-    props.metadata.contextClass,
-    props.metadata.modifierClasses,
-    props.metadata.additionalClasses,
+    metadata.contextClass,
+    metadata.modifierClasses,
+    metadata.additionalClasses,
     {
       "Card--prop1": prop1
     }

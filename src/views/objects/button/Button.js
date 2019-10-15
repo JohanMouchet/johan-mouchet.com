@@ -17,24 +17,24 @@ type ButtonProps = {
 };
 
 const Button = (props: ButtonProps) => {
-  const { prop1, prop2, children } = props;
+  const { prop1, prop2, metadata = {}, children } = props;
 
   const ButtonClass = cx(
     "o-button",
-    props.metadata.contextClass,
-    props.metadata.modifierClasses,
-    props.metadata.additionalClasses,
+    metadata.contextClass,
+    metadata.modifierClasses,
+    metadata.additionalClasses,
     {
       "Button--prop1": prop1
     }
   );
 
   return props.type === "button" ? (
-    <button className={ButtonClass} {...props.metadata.attributes}>
+    <button className={ButtonClass} {...metadata.attributes}>
       {children}
     </button>
   ) : (
-    <a className={ButtonClass} href={props.url} {...props.metadata.attributes}>
+    <a className={ButtonClass} href={props.url} {...metadata.attributes}>
       {children}
     </a>
   );
@@ -60,13 +60,13 @@ type ButtonSocialProps = {
 };
 
 const ButtonSocial = (props: ButtonSocialProps) => {
-  const { prop1, prop2, children } = props;
+  const { prop1, prop2, metadata = {}, children } = props;
 
   const ButtonSocialClass = cx(
     "o-button",
-    props.metadata.contextClass,
-    props.metadata.modifierClasses,
-    props.metadata.additionalClasses,
+    metadata.contextClass,
+    metadata.modifierClasses,
+    metadata.additionalClasses,
     "o-button--social",
     {
       "ButtonSocial--prop1": prop1
@@ -79,7 +79,7 @@ const ButtonSocial = (props: ButtonSocialProps) => {
       href={props.url}
       target="_blank"
       rel="noopener noreferrer"
-      {...props.metadata.attributes}
+      {...metadata.attributes}
     >
       <span className="o-button__icon">{props.icon}</span>
       <span className="o-button__text">{children}</span>
@@ -108,13 +108,13 @@ type ButtonSocialBadgeProps = {
 };
 
 const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
-  const { prop1, prop2 } = props;
+  const { prop1, metadata = {} } = props;
 
   const ButtonSocialBadgeClass = cx(
     "o-button",
-    props.metadata.contextClass,
-    props.metadata.modifierClasses,
-    props.metadata.additionalClasses,
+    metadata.contextClass,
+    metadata.modifierClasses,
+    metadata.additionalClasses,
     "o-button--social",
     "o-button--social-badge",
     {
@@ -128,7 +128,7 @@ const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
       href={props.url}
       target="_blank"
       rel="noopener noreferrer"
-      {...props.metadata.attributes}
+      {...metadata.attributes}
     >
       <span className="o-button__icon">{props.icon}</span>
     </a>

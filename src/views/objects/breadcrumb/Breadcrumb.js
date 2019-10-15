@@ -18,7 +18,7 @@ type Props = {
 };
 
 const Breadcrumb = (props: Props) => {
-  const { levels, metadata } = props;
+  const { levels, metadata = {} } = props;
 
   const BreadcrumbClass = cx(
     "o-breadcrumb",

@@ -15,7 +15,7 @@ type Props = {
 };
 
 const Blockquote = (props: Props) => {
-  const { quote, cite, pulled, metadata } = props;
+  const { quote, cite, pulled, metadata = {} } = props;
 
   const BlockquoteClass = cx(
     "o-blockquote",
