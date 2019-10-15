@@ -2,9 +2,9 @@
 
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { text } from "@storybook/addon-knobs";
+import { withKnobs, text } from "@storybook/addon-knobs";
 import Badge from "./";
 
-storiesOf("Badge", module).add("default", () => (
-  <Badge>{text("children", "badge")}</Badge>
-));
+storiesOf("Badge", module)
+  .add("default", () => <Badge>{text("Children", "+1")}</Badge>)
+  .addDecorator(withKnobs);
