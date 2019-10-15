@@ -1,6 +1,5 @@
 # TODO
 
-- Import images as JS modules https://create-react-app.dev/docs/adding-images-fonts-and-files
 - Replace `{% if`
 - Replace `{% for`
 - Add `modifierClasses` to `cx`

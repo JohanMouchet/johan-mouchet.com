@@ -9,6 +9,8 @@ import {
   Reference,
   PersonalWorks
 } from "../components";
+import imageJohanMouchet from "../../assets/images/views/johan-mouchet.jpg";
+import imageJohanMouchetX2 from "../../assets/images/views/johan-mouchet@x2.jpg";
 import { ReactComponent as Icon500px } from "../../assets/images/icons/simple-icons/500px.svg";
 import { ReactComponent as IconCodepen } from "../../assets/images/icons/simple-icons/codepen.svg";
 import { ReactComponent as IconDribbble } from "../../assets/images/icons/simple-icons/dribbble.svg";
@@ -55,8 +57,8 @@ const Home = () => {
                   <div className="cell">
                     <img
                       className="c-about__portrait"
-                      src={`${PATHS.img}views/johan-mouchet.jpg`}
-                      srcset={`${PATHS.img}views/johan-mouchet.jpg, ${PATHS.img}views/johan-mouchet@x2.jpg 1.25x`}
+                      src={imageJohanMouchet}
+                      srcset={`${imageJohanMouchet}, ${imageJohanMouchetX2} 1.25x`}
                       alt="Johan Mouchet"
                     />
                   </div>
