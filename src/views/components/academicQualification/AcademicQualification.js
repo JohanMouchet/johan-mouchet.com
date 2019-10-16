@@ -20,26 +20,27 @@ type Props = {
 const AcademicQualification = (props: Props) => {
   const { prop1, prop2 } = props;
 
-  return (
-    props.qualifications &&
-    props.qualifications.map(qualification => (
-      <section className="c-academic-qualification">
-        <h3 className="c-academic-qualification__heading">
-          <a
-            className="c-academic-qualification__establishment"
-            href={qualification.establishment.URL}
-          >
-            {qualification.establishment.name}
-          </a>
-          , {qualification.location}
-        </h3>
-        <span className="c-academic-qualification__graduation-year">
-          {qualification.graduationYear}
-        </span>
-        <p className="c-academic-qualification__title">{qualification.title}</p>
-      </section>
-    ))
-  );
+  return !props.qualifications
+    ? null
+    : props.qualifications.map(qualification => (
+        <section className="c-academic-qualification">
+          <h3 className="c-academic-qualification__heading">
+            <a
+              className="c-academic-qualification__establishment"
+              href={qualification.establishment.URL}
+            >
+              {qualification.establishment.name}
+            </a>
+            , {qualification.location}
+          </h3>
+          <span className="c-academic-qualification__graduation-year">
+            {qualification.graduationYear}
+          </span>
+          <p className="c-academic-qualification__title">
+            {qualification.title}
+          </p>
+        </section>
+      ));
 };
 
 AcademicQualification.defaultProps = {

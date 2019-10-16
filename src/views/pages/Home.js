@@ -22,7 +22,7 @@ import { ReactComponent as IconTwitter } from "../../assets/images/icons/simple-
 import { ReactComponent as IconUnsplash } from "../../assets/images/icons/simple-icons/unsplash.svg";
 import { ReactComponent as IconYoutube } from "../../assets/images/icons/simple-icons/youtube.svg";
 
-const Home = () => {
+const Home = props => {
   return (
     <Default
       metadata={{

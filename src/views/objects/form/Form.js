@@ -217,21 +217,19 @@ const Select = (props: SelectProps) => {
     }
   );
 
-  return (
-    props.options && (
-      <select
-        id={props.id}
-        name={props.name}
-        className={`${SelectClass} o-form__field--select`}
-        {...metadata.attributes}
-      >
-        {props.options.map(option => (
-          <option value={props.value} {...metadata.attributes}>
-            {option.text}
-          </option>
-        ))}
-      </select>
-    )
+  return !props.options ? null : (
+    <select
+      id={props.id}
+      name={props.name}
+      className={`${SelectClass} o-form__field--select`}
+      {...metadata.attributes}
+    >
+      {props.options.map(option => (
+        <option value={props.value} {...metadata.attributes}>
+          {option.text}
+        </option>
+      ))}
+    </select>
   );
 };
 

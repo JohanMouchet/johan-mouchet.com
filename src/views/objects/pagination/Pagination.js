@@ -84,31 +84,29 @@ const Pagination = (props: Props) => {
   // [<<, <, ..., 2(lower), 3, 4, 5(current), 6, 7, 8(upper), ..., 12, >, >>]
   //           [<<, <, ..., 6(lower), 7, 8, 9(current), 10, 11, 12(upper), >]
 
-  return (
-    links && (
-      <ol className={PaginationClass}>
-        {/* first: lower > 1 */}
-        {/* prev: current > 1 */}
+  return !links ? null : (
+    <ol className={PaginationClass}>
+      {/* first: lower > 1 */}
+      {/* prev: current > 1 */}
 
-        {links.map((link, index) => {
-          // TODO: start at 1
-          //
-          // ...: lower > 2
-          // lowerRange: index < current
-          // current
-          // upperRange: index > current
-          // ...: upper < linksLength - 2
-          // last: upper < linksLength - 1
-          //
-          // <Link href={link} first>
-          //   <Icon first />
-          // </Link>
-        })}
+      {links.map((link, index) => {
+        // TODO: start at 1
+        //
+        // ...: lower > 2
+        // lowerRange: index < current
+        // current
+        // upperRange: index > current
+        // ...: upper < linksLength - 2
+        // last: upper < linksLength - 1
+        //
+        // <Link href={link} first>
+        //   <Icon first />
+        // </Link>
+      })}
 
-        {/* next: current < linksLength */}
-        {/* last: upper < linksLength */}
-      </ol>
-    )
+      {/* next: current < linksLength */}
+      {/* last: upper < linksLength */}
+    </ol>
   );
 };
 

@@ -55,49 +55,48 @@ const Experience = (props: Props) => {
     );
   };
 
-  return (
-    props.experiences &&
-    props.experiences.map(experience => (
-      <section className="c-experience">
-        <h3 className="c-experience__heading">
-          <a
-            href={experience.company.URL}
-            target={experience.company.URL && "_blank"}
-            rel={experience.company.URL && "noopener noreferrer"}
-            className={
-              experience.company.URL && "c-experience__company external-link"
-            }
-          >
-            {experience.company.name}
-          </a>
-          ,{experience.location} &mdash;
-          {experience.jobTitle}
-        </h3>
+  return !props.experiences
+    ? null
+    : props.experiences.map(experience => (
+        <section className="c-experience">
+          <h3 className="c-experience__heading">
+            <a
+              href={experience.company.URL}
+              target={experience.company.URL && "_blank"}
+              rel={experience.company.URL && "noopener noreferrer"}
+              className={
+                experience.company.URL && "c-experience__company external-link"
+              }
+            >
+              {experience.company.name}
+            </a>
+            ,{experience.location} &mdash;
+            {experience.jobTitle}
+          </h3>
 
-        <p className="c-experience__subheading">
-          <span className="c-experience__date">
-            {experience.startDate.getFullYear()}
-            {experience.endDate.getFullYear() >
-              experience.startDate.getFullYear() &&
-              ` &ndash;` + experience.endDate.getFullYear()}
-          </span>
-          <span className="c-experience__duration">
-            ({getDuration(experience.startDate, experience.endDate)})
-          </span>
-          )
-          {experience.contractType && (
-            <span className="c-experience__type">
-              / {experience.contractType}
+          <p className="c-experience__subheading">
+            <span className="c-experience__date">
+              {experience.startDate.getFullYear()}
+              {experience.endDate.getFullYear() >
+                experience.startDate.getFullYear() &&
+                ` &ndash;` + experience.endDate.getFullYear()}
             </span>
-          )}
-        </p>
+            <span className="c-experience__duration">
+              ({getDuration(experience.startDate, experience.endDate)})
+            </span>
+            )
+            {experience.contractType && (
+              <span className="c-experience__type">
+                / {experience.contractType}
+              </span>
+            )}
+          </p>
 
-        <p className="c-experience__lede">{experience.lede}</p>
+          <p className="c-experience__lede">{experience.lede}</p>
 
-        {experience.projects && <Projects props={experience.projects} />}
-      </section>
-    ))
-  );
+          {experience.projects && <Projects props={experience.projects} />}
+        </section>
+      ));
 };
 
 Experience.defaultProps = {

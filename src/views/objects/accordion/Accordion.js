@@ -27,31 +27,27 @@ const Accordion = (props: Props) => {
 
   // TODO: Choose active index, no fadeIn if active
 
-  return (
-    props.items && (
-      <ul className={AccordionClass}>
-        {props.items.map((item, index) => (
-          <li
-            className={`o-accordion__item js-accordion-item ${index === 0 &&
-              "is--active"}`}
-          >
-            <button className="o-accordion__thumb">
-              <i
-                className={`o-accordion__thumb-icon material-icons ${index >
-                  0 && "wow fadeInLeft"}`}
-                data-wow-delay={index > 0 && (index * 0.15)`s`}
-              >
-                chevron_right
-              </i>
-              {item.thumb}
-            </button>
-            <p className="o-accordion__panel js-accordion-panel">
-              {item.panel}
-            </p>
-          </li>
-        ))}
-      </ul>
-    )
+  return !props.items ? null : (
+    <ul className={AccordionClass}>
+      {props.items.map((item, index) => (
+        <li
+          className={`o-accordion__item js-accordion-item ${index === 0 &&
+            "is--active"}`}
+        >
+          <button className="o-accordion__thumb">
+            <i
+              className={`o-accordion__thumb-icon material-icons ${index > 0 &&
+                "wow fadeInLeft"}`}
+              data-wow-delay={index > 0 && (index * 0.15)`s`}
+            >
+              chevron_right
+            </i>
+            {item.thumb}
+          </button>
+          <p className="o-accordion__panel js-accordion-panel">{item.panel}</p>
+        </li>
+      ))}
+    </ul>
   );
 };
 

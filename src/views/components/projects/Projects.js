@@ -25,7 +25,7 @@
 //   const cellSize = projectQuantity < 5 ? 12 / projectQuantity : 3;
 
 //   return (
-//  props.projects &&
+//  !props.projects ? null :
 // 	(<div className="c-projects">
 // 		<div className="grid">
 // 			{props.projects.map(project => (
