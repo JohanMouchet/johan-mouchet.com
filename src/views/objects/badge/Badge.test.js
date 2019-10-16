@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Badge from ".";
+import Badge from "./";
 
-it("Badge renders without crashing", () => {
+it("Renders <Badge /> without crashing", () => {
   shallow(<Badge>+1</Badge>);
 });
