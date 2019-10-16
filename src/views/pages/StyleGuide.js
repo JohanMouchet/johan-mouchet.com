@@ -1,5 +1,5 @@
 import * as React from "react";
-import { PATHS } from "../../../constants/paths";
+import { PATHS } from "../../constants/paths";
 import { Default } from "../layouts";
 import {
   Blockquote,
@@ -27,11 +27,11 @@ import {
   Loader,
   Notice
 } from "../objects";
-import { ReactComponent as IconFacebook } from "../../../assets/images/icons/simple-icons/facebook.svg";
-import { ReactComponent as IconGooglePlus } from "../../../assets/images/icons/simple-icons/googleplus.svg";
-import { ReactComponent as IconLinkedIn } from "../../../assets/images/icons/simple-icons/linkedin.svg";
-import { ReactComponent as IconPinterest } from "../../../assets/images/icons/simple-icons/pinterest.svg";
-import { ReactComponent as IconTwitter } from "../../../assets/images/icons/simple-icons/twitter.svg";
+import { ReactComponent as IconFacebook } from "../../assets/images/icons/simple-icons/facebook.svg";
+import { ReactComponent as IconGooglePlus } from "../../assets/images/icons/simple-icons/googleplus.svg";
+import { ReactComponent as IconLinkedIn } from "../../assets/images/icons/simple-icons/linkedin.svg";
+import { ReactComponent as IconPinterest } from "../../assets/images/icons/simple-icons/pinterest.svg";
+import { ReactComponent as IconTwitter } from "../../assets/images/icons/simple-icons/twitter.svg";
 
 const StyleGuide = () => {
   return (
