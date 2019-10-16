@@ -28,23 +28,24 @@ const Breadcrumb = (props: Props) => {
 
   const lastLevel = levels.length - 1;
   return (
-    <>
-      <ol className={BreadcrumbClass}>
-        {levels.map((level, index) => (
-          <li
-            className="o-breadcrumb__level wow fadeInUp"
-            data-wow-delay={index > 0 && (index * 0.15)`s`}
-          >
-            <a className="o-breadcrumb__link" href={level.url && !lastLevel}>
-              {level.title}
-            </a>
-          </li>
-        ))}
-      </ol>
-      {/* TODO: check if work? */}
-      {/* <pre> */}
-      <script type="application/ld+json">
-        {`
+    levels && (
+      <>
+        <ol className={BreadcrumbClass}>
+          {levels.map((level, index) => (
+            <li
+              className="o-breadcrumb__level wow fadeInUp"
+              data-wow-delay={index > 0 && (index * 0.15)`s`}
+            >
+              <a className="o-breadcrumb__link" href={level.url && !lastLevel}>
+                {level.title}
+              </a>
+            </li>
+          ))}
+        </ol>
+        {/* TODO: check if work? */}
+        {/* <pre> */}
+        <script type="application/ld+json">
+          {`
 			"@context": "http://schema.org",
 			"@type": "BreadcrumbList",
 			"itemListElement": [
@@ -62,9 +63,10 @@ const Breadcrumb = (props: Props) => {
         )}
 			]
 		`}
-      </script>
-      {/* </pre> */}
-    </>
+        </script>
+        {/* </pre> */}
+      </>
+    )
   );
 };
 

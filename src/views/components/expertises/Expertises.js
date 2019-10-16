@@ -11,20 +11,22 @@ const Expertises = (props: Props) => {
   const { expertises } = props;
 
   return (
-    <ul className="c-expertises o-list--unstyled">
-      {expertises.map(expertise => (
-        <li className="c-expertise">
-          <ProgressBar
-            props={{
-              label: expertise.label,
-              filling: expertise.filling,
-              tooltip: expertise.tooltip,
-              tooltipOnHover: true
-            }}
-          />
-        </li>
-      ))}
-    </ul>
+    expertises && (
+      <ul className="c-expertises o-list--unstyled">
+        {expertises.map(expertise => (
+          <li className="c-expertise">
+            <ProgressBar
+              props={{
+                label: expertise.label,
+                filling: expertise.filling,
+                tooltip: expertise.tooltip,
+                tooltipOnHover: true
+              }}
+            />
+          </li>
+        ))}
+      </ul>
+    )
   );
 };
 

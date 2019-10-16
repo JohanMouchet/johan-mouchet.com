@@ -58,23 +58,25 @@ const FootnotesNotes = (props: NotesProps) => {
   );
 
   return (
-    <ol className={NotesClass}>
-      {notes.map(note => (
-        <li
-          id={`footnote:${note.prefix && note.prefix + "-"}${note.id}`}
-          className="o-footnotes__note"
-        >
-          {note.text}
-          <a
-            href={`${note.url}#footnote-ref:${note.prefix &&
-              note.prefix + "-"}${note.id}`}
-            className="footnote-backref"
+    notes && (
+      <ol className={NotesClass}>
+        {notes.map(note => (
+          <li
+            id={`footnote:${note.prefix && note.prefix + "-"}${note.id}`}
+            className="o-footnotes__note"
           >
-            &#x21a9;
-          </a>
-        </li>
-      ))}
-    </ol>
+            {note.text}
+            <a
+              href={`${note.url}#footnote-ref:${note.prefix &&
+                note.prefix + "-"}${note.id}`}
+              className="footnote-backref"
+            >
+              &#x21a9;
+            </a>
+          </li>
+        ))}
+      </ol>
+    )
   );
 };
 

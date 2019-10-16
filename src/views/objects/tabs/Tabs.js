@@ -28,23 +28,25 @@ const Tabs = (props: Props) => {
   );
 
   return (
-    <div className={TabsClass}>
-      <ul className="o-tabs__thumbs">
-        {props.tabs.map((tab, index) => (
-          <li
-            className="o-tabs__thumb js-tabs-thumb wow fadeInUp"
-            data-wow-delay={index > 0 && (index * 0.15)`s`}
-          >
-            <button className="o-tabs__button">{tab.thumb}</button>
-          </li>
-        ))}
-      </ul>
-      <ul className="o-tabs__panels">
-        {props.tabs.map(tab => (
-          <li className="o-tabs__panel js-tabs-panel">{tab.panel}</li>
-        ))}
-      </ul>
-    </div>
+    props.tabs && (
+      <div className={TabsClass}>
+        <ul className="o-tabs__thumbs">
+          {props.tabs.map((tab, index) => (
+            <li
+              className="o-tabs__thumb js-tabs-thumb wow fadeInUp"
+              data-wow-delay={index > 0 && (index * 0.15)`s`}
+            >
+              <button className="o-tabs__button">{tab.thumb}</button>
+            </li>
+          ))}
+        </ul>
+        <ul className="o-tabs__panels">
+          {props.tabs.map(tab => (
+            <li className="o-tabs__panel js-tabs-panel">{tab.panel}</li>
+          ))}
+        </ul>
+      </div>
+    )
   );
 };
 

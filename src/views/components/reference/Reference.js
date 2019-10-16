@@ -40,6 +40,7 @@ const Reference = (props: Props) => {
           </p>
         </div>
       ) : (
+        props.references &&
         props.references.map(reference => (
           <div className="cell cell--12-@xs cell--6-@md cell--4-@lg">
             <section className="c-reference">

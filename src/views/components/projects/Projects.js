@@ -25,9 +25,10 @@
 //   const cellSize = projectQuantity < 5 ? 12 / projectQuantity : 3;
 
 //   return (
-// 	<div className="c-projects">
+//  props.projects &&
+// 	(<div className="c-projects">
 // 		<div className="grid">
-// 			{props.map(project => (
+// 			{props.projects.map(project => (
 // 				<div className={`cell cell--12-@xs cell--6-@sm cell--${cellSize}-@md`}>
 // 					<div className="c-project">
 // 						{% if projectQuantity === 1 %}
@@ -76,7 +77,7 @@
 // 				</div>
 // 			))}
 // 		</div>
-// 	</div>
+// 	</div>)
 //   );
 // };
 
