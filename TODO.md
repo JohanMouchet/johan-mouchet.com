@@ -1,5 +1,6 @@
 # TODO
 
+- Use Absolute Imports: https://create-react-app.dev/docs/importing-a-component#absolute-imports
 - Replace `{% if`
 - Replace `{% for`
 - Add `modifierClasses` to `cx`
