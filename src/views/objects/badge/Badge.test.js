@@ -3,5 +3,5 @@ import { shallow } from "enzyme";
 import Badge from ".";
 
 it("Badge renders without crashing", () => {
-  shallow(<Badge />);
+  shallow(<Badge>+1</Badge>);
 });
