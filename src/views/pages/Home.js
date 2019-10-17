@@ -92,9 +92,9 @@ const Home = props => {
                   props={{
                     expertises: [
                       {
-                        label: "Vue.js",
-                        filling: 60,
-                        tooltip: "6/10"
+                        label: "React",
+                        filling: 80,
+                        tooltip: "8/10"
                       },
                       {
                         label: "HTML5",
@@ -108,8 +108,8 @@ const Home = props => {
                       },
                       {
                         label: "JavaScript <em>&mdash; ES2017</em>",
-                        filling: 70,
-                        tooltip: "7/10"
+                        filling: 80,
+                        tooltip: "8/10"
                       },
                       {
                         label: "UI & UX",
