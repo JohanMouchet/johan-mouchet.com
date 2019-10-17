@@ -4,6 +4,9 @@
 // import "./projects.scss";
 // import { ReactComponent as IconAward } from "../../../assets/images/icons/award.svg";
 
+// TODO: fix
+// TODO: diff timing with lib?
+
 // type Props = {
 //   projects: [{
 //  		name: string,
