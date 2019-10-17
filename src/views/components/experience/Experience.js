@@ -24,7 +24,7 @@ type Props = {
 };
 
 const Experience = (props: Props) => {
-  const { prop1, prop2 } = props;
+  const { experiences } = props;
 
   // TODO: Check logic, abstract to Utils?
   const getDuration = (startDate, endDate) => {

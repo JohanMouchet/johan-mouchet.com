@@ -1,5 +1,4 @@
 import * as React from "react";
-import { PATHS } from "../../constants/paths";
 import { Default } from "../layouts";
 import {
   Blockquote,

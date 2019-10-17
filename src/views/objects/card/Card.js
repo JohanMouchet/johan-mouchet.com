@@ -18,16 +18,13 @@ type Props = {
 };
 
 const Card = (props: Props) => {
-  const { prop1, metadata = {} } = props;
+  const { banner, bannerUrl, header, body, footer, metadata = {} } = props;
 
   const CardClass = cx(
     "o-card",
     metadata.contextClass,
     metadata.modifierClasses,
-    metadata.additionalClasses,
-    {
-      "Card--prop1": prop1
-    }
+    metadata.additionalClasses
   );
 
   const Tag = !header ? "header" : "div";
@@ -37,21 +34,15 @@ const Card = (props: Props) => {
       {(banner || bannerUrl) && (
         <Tag
           className="o-card__banner"
-          style={
-            bannerUrl && `backgroundImage: url('${bannerUrl}')`
-          }
+          style={bannerUrl && `backgroundImage: url('${bannerUrl}')`}
         >
           {banner === true ? "" : banner}
         </Tag>
       )}
       {/* TODO: <Card><Header>Sub comp</Header></Card> */}
-      {header && (
-        <header className="o-card__header">{header}</header>
-      )}
+      {header && <header className="o-card__header">{header}</header>}
       {body && <div className="o-card__body">{body}</div>}
-      {footer && (
-        <footer className="o-card__footer">{footer}</footer>
-      )}
+      {footer && <footer className="o-card__footer">{footer}</footer>}
     </section>
   );
 };

@@ -16,15 +16,12 @@ type Props = {
 };
 
 const Alert = (props: Props) => {
-  const { prop1, metadata = {}, children } = props;
+  const { type, hidden, closable, metadata = {}, children } = props;
 
   const AlertClass = cx(
     "o-alert",
     metadata.contextClass,
-    metadata.additionalClasses,
-    {
-      "Alert--prop1": prop1
-    }
+    metadata.additionalClasses
   );
 
   let icon = type => {

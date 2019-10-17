@@ -14,7 +14,7 @@ type Props = {
 };
 
 const SocialMedia = (props: Props) => {
-  const { prop1, prop2 } = props;
+  const { medias } = props;
 
   return !medias ? null : (
     <div className="grid">

@@ -17,16 +17,13 @@ type ButtonProps = {
 };
 
 const Button = (props: ButtonProps) => {
-  const { prop1, prop2, metadata = {}, children } = props;
+  const { type, url, metadata = {}, children } = props;
 
   const ButtonClass = cx(
     "o-button",
     metadata.contextClass,
     metadata.modifierClasses,
-    metadata.additionalClasses,
-    {
-      "Button--prop1": prop1
-    }
+    metadata.additionalClasses
   );
 
   return type === "button" ? (
@@ -60,17 +57,14 @@ type ButtonSocialProps = {
 };
 
 const ButtonSocial = (props: ButtonSocialProps) => {
-  const { prop1, prop2, metadata = {}, children } = props;
+  const { url, icon, counter, metadata = {}, children } = props;
 
   const ButtonSocialClass = cx(
     "o-button",
     metadata.contextClass,
     metadata.modifierClasses,
     metadata.additionalClasses,
-    "o-button--social",
-    {
-      "ButtonSocial--prop1": prop1
-    }
+    "o-button--social"
   );
 
   return (
@@ -83,9 +77,7 @@ const ButtonSocial = (props: ButtonSocialProps) => {
     >
       <span className="o-button__icon">{icon}</span>
       <span className="o-button__text">{children}</span>
-      {counter && (
-        <span className="o-button__counter">{counter}</span>
-      )}
+      {counter && <span className="o-button__counter">{counter}</span>}
     </a>
   );
 };
@@ -108,7 +100,7 @@ type ButtonSocialBadgeProps = {
 };
 
 const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
-  const { prop1, metadata = {} } = props;
+  const { url, icon, metadata = {} } = props;
 
   const ButtonSocialBadgeClass = cx(
     "o-button",
@@ -116,10 +108,7 @@ const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
     metadata.modifierClasses,
     metadata.additionalClasses,
     "o-button--social",
-    "o-button--social-badge",
-    {
-      "ButtonSocialBadge--prop1": prop1
-    }
+    "o-button--social-badge"
   );
 
   return (

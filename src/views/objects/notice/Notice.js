@@ -15,16 +15,13 @@ type Props = {
 };
 
 const Notice = (props: Props) => {
-  const { prop1, metadata = {}, children } = props;
+  const { secondary, closeButton, metadata = {}, children } = props;
 
   const NoticeClass = cx(
     "o-notice",
     metadata.contextClass,
     metadata.additionalClasses,
-    "js-notice",
-    {
-      "Notice--prop1": prop1
-    }
+    "js-notice"
   );
 
   return (

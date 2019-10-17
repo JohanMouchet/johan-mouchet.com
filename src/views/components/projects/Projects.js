@@ -16,11 +16,8 @@
 // };
 
 // const Projects = (props: Props) => {
-//   const {
-//     prop1,
-//     prop2
-//   } = props;
-
+//   const { projects } = props;
+//
 //   const projectQuantity = length;
 //   const cellSize = projectQuantity < 5 ? 12 / projectQuantity : 3;
 

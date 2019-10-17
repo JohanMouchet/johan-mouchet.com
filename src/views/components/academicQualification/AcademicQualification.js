@@ -18,7 +18,7 @@ type Props = {
 };
 
 const AcademicQualification = (props: Props) => {
-  const { prop1, prop2 } = props;
+  const { qualifications } = props;
 
   return !qualifications
     ? null

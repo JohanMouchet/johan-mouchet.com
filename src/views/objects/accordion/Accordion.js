@@ -13,16 +13,13 @@ type Props = {
 };
 
 const Accordion = (props: Props) => {
-  const { prop1, metadata = {} } = props;
+  const { items, metadata = {} } = props;
 
   const AccordionClass = cx(
     "o-accordion",
     metadata.contextClass,
     metadata.additionalClasses,
-    "js-accordion",
-    {
-      "Accordion--prop1": prop1
-    }
+    "js-accordion"
   );
 
   // TODO: Choose active index, no fadeIn if active

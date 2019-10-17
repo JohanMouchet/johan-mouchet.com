@@ -27,7 +27,7 @@ type Props = {
 };
 
 const Reference = (props: Props) => {
-  const { prop1, prop2 } = props;
+  const { requestOnly, references } = props;
 
   return (
     <div className="grid">

@@ -18,7 +18,7 @@
 
 // const Menu = (props: Props) => {
 // 	const {
-// 	  prop1,
+// 	  menu,
 //    metadata = {},
 // 	} = props;
 

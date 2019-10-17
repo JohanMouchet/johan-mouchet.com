@@ -8,7 +8,7 @@ type Props = {
 };
 
 const PersonalWorks = (props: Props) => {
-  const { prop1, prop2 } = props;
+  const { works } = props;
 
   return !works ? null : (
     <div className="c-personal-works">

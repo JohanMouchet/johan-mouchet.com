@@ -18,16 +18,13 @@ type Props = {
 };
 
 const Figure = (props: Props) => {
-  const { prop1, metadata = {}, children } = props;
+  const { src, alt, title, metadata = {}, children } = props;
 
   const FigureClass = cx(
     "o-figure",
     metadata.contextClass,
     metadata.modifierClasses,
-    metadata.additionalClasses,
-    {
-      "Figure--prop1": prop1
-    }
+    metadata.additionalClasses
   );
 
   return (

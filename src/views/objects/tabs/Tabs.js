@@ -18,7 +18,7 @@ type Props = {
 };
 
 const Tabs = (props: Props) => {
-  const { prop1, metadata = {} } = props;
+  const { tabs, metadata = {} } = props;
 
   const TabsClass = cx(
     "o-tabs",
