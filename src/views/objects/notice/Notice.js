@@ -34,12 +34,12 @@ const Notice = (props: Props) => {
           <div className="cell cell--@xs">
             <div className="o-notice__primary">{children}</div>
           </div>
-          {props.secondary && (
+          {secondary && (
             <div className="cell cell--0-@xs">
-              <div className="o-notice__secondary">{props.secondary}</div>
+              <div className="o-notice__secondary">{secondary}</div>
             </div>
           )}
-          {props.closeButton && (
+          {closeButton && (
             <div className="cell cell--0-@xs">
               <button className="o-notice__close js-notice-close">
                 &#x2716;

@@ -31,7 +31,7 @@ const Reference = (props: Props) => {
 
   return (
     <div className="grid">
-      {props.requestOnly ? (
+      {requestOnly ? (
         <div className="cell cell--12-@xs">
           <p>
             <i>
@@ -39,8 +39,8 @@ const Reference = (props: Props) => {
             </i>
           </p>
         </div>
-      ) : !props.references ? null : (
-        props.references.map(reference => (
+      ) : !references ? null : (
+        references.map(reference => (
           <div className="cell cell--12-@xs cell--6-@md cell--4-@lg">
             <section className="c-reference">
               <h3 className="c-reference__name">{reference.name}</h3>

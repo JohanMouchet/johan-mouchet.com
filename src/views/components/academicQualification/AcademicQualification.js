@@ -20,9 +20,9 @@ type Props = {
 const AcademicQualification = (props: Props) => {
   const { prop1, prop2 } = props;
 
-  return !props.qualifications
+  return !qualifications
     ? null
-    : props.qualifications.map(qualification => (
+    : qualifications.map(qualification => (
         <section className="c-academic-qualification">
           <h3 className="c-academic-qualification__heading">
             <a

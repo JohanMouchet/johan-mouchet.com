@@ -21,14 +21,14 @@
 //     prop2
 //   } = props;
 
-//   const projectQuantity = props.length;
+//   const projectQuantity = length;
 //   const cellSize = projectQuantity < 5 ? 12 / projectQuantity : 3;
 
 //   return (
-//  !props.projects ? null :
+//  !projects ? null :
 // 	(<div className="c-projects">
 // 		<div className="grid">
-// 			{props.projects.map(project => (
+// 			{projects.map(project => (
 // 				<div className={`cell cell--12-@xs cell--6-@sm cell--${cellSize}-@md`}>
 // 					<div className="c-project">
 // 						{% if projectQuantity === 1 %}
@@ -54,7 +54,7 @@
 
 // 								{project.awards && (
 // 									<ul className={`c-project__awards ${ projectQuantity === 1 && 'u-vr--top-0-@md'}`}>
-// 										{props.awards.map(award => (
+// 										{awards.map(award => (
 // 											<li className="c-project__award">
 // 												<a className="c-project__award-icon" href={award.URL}><IconAward /></a>
 // 												<span className="c-project__award-name"><em>{ award.name }</em>{award.category && (":", award.category)}</span>

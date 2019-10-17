@@ -27,9 +27,9 @@ const Accordion = (props: Props) => {
 
   // TODO: Choose active index, no fadeIn if active
 
-  return !props.items ? null : (
+  return !items ? null : (
     <ul className={AccordionClass}>
-      {props.items.map((item, index) => (
+      {items.map((item, index) => (
         <li
           className={`o-accordion__item js-accordion-item ${index === 0 &&
             "is--active"}`}

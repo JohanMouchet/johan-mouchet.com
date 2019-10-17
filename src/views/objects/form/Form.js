@@ -29,7 +29,7 @@ const Label = (props: LabelProps) => {
 
   return (
     <label
-      for={props.for}
+      for={for}
       className={`${LabelClass} ${!children && "o-form__label--block"}`}
     >
       {children || "&nbsp;"}
@@ -71,11 +71,11 @@ const Field = (props: FieldProps) => {
 
   return (
     <input
-      id={props.id}
-      type={props.type}
-      name={props.name}
-      value={props.value}
-      className={`${FieldClass} o-form__field--${props.type}`}
+      id={id}
+      type={type}
+      name={name}
+      value={value}
+      className={`${FieldClass} o-form__field--${type}`}
       {...metadata.attributes}
     />
   );
@@ -114,14 +114,14 @@ const Toggle = (props: ToggleProps) => {
 
   return (
     <label
-      className={`${ToggleClass} o-form__toggle--${props.type}`}
+      className={`${ToggleClass} o-form__toggle--${type}`}
       {...metadata.attributes}
     >
       <input
-        id={props.id}
-        type={props.type}
-        name={props.name}
-        value={props.value}
+        id={id}
+        type={type}
+        name={name}
+        value={value}
         className="o-form__toggle-input"
         {...metadata.attributes}
       />
@@ -164,13 +164,13 @@ const File = (props: FileProps) => {
   return (
     <label className={`${FileClass} o-button js-form-file`}>
       <input
-        id={props.id}
+        id={id}
         type="file"
-        name={props.name}
+        name={name}
         className="o-form__file-input js-form-file-input"
         data-multiple-caption={
-          props.multipleCaption
-            ? props.multipleCaption
+          multipleCaption
+            ? multipleCaption
             : "{count} files selected"
         }
         {...metadata.attributes}
@@ -217,15 +217,15 @@ const Select = (props: SelectProps) => {
     }
   );
 
-  return !props.options ? null : (
+  return !options ? null : (
     <select
-      id={props.id}
-      name={props.name}
+      id={id}
+      name={name}
       className={`${SelectClass} o-form__field--select`}
       {...metadata.attributes}
     >
-      {props.options.map(option => (
-        <option value={props.value} {...metadata.attributes}>
+      {options.map(option => (
+        <option value={value} {...metadata.attributes}>
           {option.text}
         </option>
       ))}
@@ -264,8 +264,8 @@ const Textarea = (props: TextareaProps) => {
 
   return (
     <textarea
-      id={props.id}
-      name={props.name}
+      id={id}
+      name={name}
       className={`${TextareaClass} o-form__field--textarea`}
       {...metadata.attributes}
     >
@@ -304,9 +304,9 @@ const Range = (props: RangeProps) => {
 
   return (
     <input
-      id={props.id}
+      id={id}
       type="range"
-      name={props.name}
+      name={name}
       className={RangeClass}
       {...metadata.attributes}
     />

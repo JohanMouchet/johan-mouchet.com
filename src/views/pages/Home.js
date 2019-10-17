@@ -58,7 +58,7 @@ const Home = props => {
                     <img
                       className="c-about__portrait"
                       src={imageJohanMouchet}
-                      srcset={`${imageJohanMouchet}, ${imageJohanMouchetX2} 1.25x`}
+                      srcSet={`${imageJohanMouchet}, ${imageJohanMouchetX2} 1.25x`}
                       alt="Johan Mouchet"
                     />
                   </div>

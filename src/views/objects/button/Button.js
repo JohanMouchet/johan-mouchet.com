@@ -29,12 +29,12 @@ const Button = (props: ButtonProps) => {
     }
   );
 
-  return props.type === "button" ? (
+  return type === "button" ? (
     <button className={ButtonClass} {...metadata.attributes}>
       {children}
     </button>
   ) : (
-    <a className={ButtonClass} href={props.url} {...metadata.attributes}>
+    <a className={ButtonClass} href={url} {...metadata.attributes}>
       {children}
     </a>
   );
@@ -76,15 +76,15 @@ const ButtonSocial = (props: ButtonSocialProps) => {
   return (
     <a
       className={ButtonSocialClass}
-      href={props.url}
+      href={url}
       target="_blank"
       rel="noopener noreferrer"
       {...metadata.attributes}
     >
-      <span className="o-button__icon">{props.icon}</span>
+      <span className="o-button__icon">{icon}</span>
       <span className="o-button__text">{children}</span>
-      {props.counter && (
-        <span className="o-button__counter">{props.counter}</span>
+      {counter && (
+        <span className="o-button__counter">{counter}</span>
       )}
     </a>
   );
@@ -125,12 +125,12 @@ const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
   return (
     <a
       className={ButtonSocialBadgeClass}
-      href={props.url}
+      href={url}
       target="_blank"
       rel="noopener noreferrer"
       {...metadata.attributes}
     >
-      <span className="o-button__icon">{props.icon}</span>
+      <span className="o-button__icon">{icon}</span>
     </a>
   );
 };

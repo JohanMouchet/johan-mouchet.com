@@ -16,9 +16,9 @@ type Props = {
 const SocialMedia = (props: Props) => {
   const { prop1, prop2 } = props;
 
-  return !props.medias ? null : (
+  return !medias ? null : (
     <div className="grid">
-      {props.medias.map(media => (
+      {medias.map(media => (
         <div className="c-social-media cell cell--6-@xs cell--4-@sm cell--12-@md">
           <a
             className="c-social-media__link"

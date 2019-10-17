@@ -30,27 +30,27 @@ const Card = (props: Props) => {
     }
   );
 
-  const Tag = !props.header ? "header" : "div";
+  const Tag = !header ? "header" : "div";
 
   return (
     <section className={CardClass}>
-      {(props.banner || props.bannerUrl) && (
+      {(banner || bannerUrl) && (
         <Tag
           className="o-card__banner"
           style={
-            props.bannerUrl && `backgroundImage: url('${props.bannerUrl}')`
+            bannerUrl && `backgroundImage: url('${bannerUrl}')`
           }
         >
-          {props.banner === true ? "" : props.banner}
+          {banner === true ? "" : banner}
         </Tag>
       )}
       {/* TODO: <Card><Header>Sub comp</Header></Card> */}
-      {props.header && (
-        <header className="o-card__header">{props.header}</header>
+      {header && (
+        <header className="o-card__header">{header}</header>
       )}
-      {props.body && <div className="o-card__body">{props.body}</div>}
-      {props.footer && (
-        <footer className="o-card__footer">{props.footer}</footer>
+      {body && <div className="o-card__body">{body}</div>}
+      {footer && (
+        <footer className="o-card__footer">{footer}</footer>
       )}
     </section>
   );

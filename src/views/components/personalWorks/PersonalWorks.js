@@ -10,10 +10,10 @@ type Props = {
 const PersonalWorks = (props: Props) => {
   const { prop1, prop2 } = props;
 
-  return !props.works ? null : (
+  return !works ? null : (
     <div className="c-personal-works">
       <div className="grid">
-        {props.works.map(work => (
+        {works.map(work => (
           <div className="cell cell--6-@xs cell--4-@sm cell--2-@md">
             <section className="c-personal-work">
               <a

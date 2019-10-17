@@ -55,9 +55,9 @@ const Experience = (props: Props) => {
     );
   };
 
-  return !props.experiences
+  return !experiences
     ? null
-    : props.experiences.map(experience => (
+    : experiences.map(experience => (
         <section className="c-experience">
           <h3 className="c-experience__heading">
             <a

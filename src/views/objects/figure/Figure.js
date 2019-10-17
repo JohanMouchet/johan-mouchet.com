@@ -34,9 +34,9 @@ const Figure = (props: Props) => {
     <figure className={FigureClass}>
       <img
         className="o-figure__img"
-        src={props.src}
-        alt={props.alt}
-        title={props.title}
+        src={src}
+        alt={alt}
+        title={title}
         {...metadata.attributes}
       />
       {children && (

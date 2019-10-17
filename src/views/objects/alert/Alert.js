@@ -48,12 +48,12 @@ const Alert = (props: Props) => {
 
   return (
     <div
-      className={`${AlertClass} o-alert--${props.type} ${!props.hidden &&
-        "is--visible"} ${props.closable && "js-alert"} wow`}
+      className={`${AlertClass} o-alert--${type} ${!hidden &&
+        "is--visible"} ${closable && "js-alert"} wow`}
     >
       <i className="o-alert__icon material-icons">{icon}</i>
       <div className="o-alert__content">{children}</div>
-      {props.closable && (
+      {closable && (
         <button className="o-alert__close js-alert-close">&#x2716;</button>
       )}
     </div>
