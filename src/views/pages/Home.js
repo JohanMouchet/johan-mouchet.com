@@ -290,7 +290,7 @@ const Home = props => {
                       },
                       location: "Melbourne",
                       jobTitle: "Front-end developer",
-                      startDate: "01/11/2017",
+                      startDate: new Date("2017/11/01"),
                       endDate: "Present",
                       lede:
                         "Global agency that delivers digital transformation powered by creativity, who believe in <em>Ideas Without Limits</em>, pushing the boundaries of technology and creativity.",
@@ -372,8 +372,8 @@ const Home = props => {
                       },
                       location: "London",
                       jobTitle: "Front-end developer",
-                      startDate: "01/11/2016",
-                      endDate: "01/10/2017",
+                      startDate: new Date("2016/11/01"),
+                      endDate: new Date("2017/10/01"),
                       lede:
                         "Leading digital marketing, technology and commerce consultancy which delivers at a UK, pan-European and global level.",
                       projects: [
@@ -445,8 +445,8 @@ const Home = props => {
                       location: "London",
                       jobTitle:
                         "Designer &amp; Front-end developer &amp; Marketing strategist",
-                      startDate: "01/06/2016",
-                      endDate: "01/11/2016",
+                      startDate: new Date("2016/06/01"),
+                      endDate: new Date("2016/11/01"),
                       contractType: "Contractor",
                       lede:
                         "Design, development and marketing strategy for a company that trains marine and offshore personnel on safety at sea.",
@@ -480,8 +480,8 @@ const Home = props => {
                       },
                       location: "London",
                       jobTitle: "Front-end developer",
-                      startDate: "01/12/2015",
-                      endDate: "01/05/2016",
+                      startDate: new Date("2015/12/01"),
+                      endDate: new Date("2016/05/01"),
                       lede:
                         "Award winning marketing agency which helps some of the world's most respected brands to strategically develop and implement marketing communications.",
                       projects: [
@@ -545,8 +545,8 @@ const Home = props => {
                       },
                       location: "London",
                       jobTitle: "Web designer & developer",
-                      startDate: "01/06/2014",
-                      endDate: "01/10/2015",
+                      startDate: new Date("2014/06/01"),
+                      endDate: new Date("2015/10/01"),
                       lede:
                         "Independent web marketing agency focused on Growth Hacking.<br /><br />Here are few of the websites I've designed and built using WordPress:",
                       projects: [
@@ -595,8 +595,8 @@ const Home = props => {
                       },
                       location: "Marseille",
                       jobTitle: "Front-end developer",
-                      startDate: "01/07/2013",
-                      endDate: "01/10/2013",
+                      startDate: new Date("2013/07/01"),
+                      endDate: new Date("2013/10/01"),
                       contractType: "Intern",
                       lede:
                         "PrestaShop eCommerce website for a garden products supplier. (The owner decided to close the website)."
@@ -608,8 +608,8 @@ const Home = props => {
                       },
                       location: "Marseille",
                       jobTitle: "Front-end developer",
-                      startDate: "01/07/2013",
-                      endDate: "01/10/2013",
+                      startDate: new Date("2013/07/01"),
+                      endDate: new Date("2013/10/01"),
                       contractType: "Part-time intern",
                       lede:
                         'Website development for a print company: product database, elaborated quotation, <abbr title="Search Engine Optimization">SEO</abbr>.'
@@ -621,8 +621,8 @@ const Home = props => {
                       },
                       location: "Marseille",
                       jobTitle: "Front-end developer",
-                      startDate: "01/07/2012",
-                      endDate: "01/10/2012",
+                      startDate: new Date("2012/07/01"),
+                      endDate: new Date("2012/10/01"),
                       contractType: "Full-time intern",
                       lede:
                         "Web intranet application for personnel management: account management, interactive calendar, multiple databases."
@@ -634,8 +634,8 @@ const Home = props => {
                       },
                       location: "Marseille",
                       jobTitle: "Front-end developer",
-                      startDate: "01/07/2011",
-                      endDate: "01/10/2011",
+                      startDate: new Date("2011/07/01"),
+                      endDate: new Date("2011/10/01"),
                       contractType: "Full-time intern",
                       lede:
                         'Various web designs for online selling ticket: including <a href="http://sigstrasbourg.fr/" target="_blank" className="external-link">SIG Basket</a> and <a href="http://biarritz-culture.com/" target="_blank" className="external-link">Biarritz culture</a>.'
@@ -647,8 +647,8 @@ const Home = props => {
                       },
                       location: "Marseille",
                       jobTitle: "Front-end developer",
-                      startDate: "01/07/2008",
-                      endDate: "01/10/2008",
+                      startDate: new Date("2008/07/01"),
+                      endDate: new Date("2008/10/01"),
                       contractType: "Contractor",
                       lede:
                         'Website development for a training centre: advanced online registration, databases, back office, <abbr title="Search Engine Optimization">SEO</abbr>, <abbr title="Search Engine Advertising">SEA</abbr>.'

@@ -15,8 +15,8 @@ type Props = {
       ],
       location: string,
       jobTitle: Node,
-      startDate: string,
-      endDate: string,
+      startDate: Date,
+      endDate: Date | string,
       lede: Node,
       projects: typeof Projects
     }
