@@ -42,7 +42,7 @@ const ProgressBar = (props: Props) => {
       <div className="o-progress-bar__container">
         <div
           className="o-progress-bar__filling wow"
-          style={`width: ${filling}%`}
+          style={{ width: filling + "%" }}
           data-progress-bar-tooltip={tooltip}
         ></div>
       </div>
