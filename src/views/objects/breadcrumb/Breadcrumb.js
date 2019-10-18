@@ -34,6 +34,7 @@ const Breadcrumb = (props: Props) => {
           <li
             className="o-breadcrumb__level wow fadeInUp"
             data-wow-delay={index > 0 && (index * 0.15)`s`}
+            key={level.url}
           >
             <a className="o-breadcrumb__link" href={level.url && !lastLevel}>
               {level.title}

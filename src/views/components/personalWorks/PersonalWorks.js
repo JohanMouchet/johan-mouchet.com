@@ -14,7 +14,10 @@ const PersonalWorks = (props: Props) => {
     <div className="c-personal-works">
       <div className="grid">
         {works.map(work => (
-          <div className="cell cell--6-@xs cell--4-@sm cell--2-@md">
+          <div
+            className="cell cell--6-@xs cell--4-@sm cell--2-@md"
+            key={work.thumbnailPath}
+          >
             <section className="c-personal-work">
               <a
                 className="c-personal-work__overlay"

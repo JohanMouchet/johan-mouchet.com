@@ -41,7 +41,10 @@ const Reference = (props: Props) => {
         </div>
       ) : !references ? null : (
         references.map(reference => (
-          <div className="cell cell--12-@xs cell--6-@md cell--4-@lg">
+          <div
+            className="cell cell--12-@xs cell--6-@md cell--4-@lg"
+            key={reference.name}
+          >
             <section className="c-reference">
               <h3 className="c-reference__name">{reference.name}</h3>
               <div>

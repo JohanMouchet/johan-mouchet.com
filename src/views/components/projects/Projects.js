@@ -29,7 +29,7 @@
 // 	(<div className="c-projects">
 // 		<div className="grid">
 // 			{projects.map(project => (
-// 				<div className={`cell cell--12-@xs cell--6-@sm cell--${cellSize}-@md`}>
+// 				<div className={`cell cell--12-@xs cell--6-@sm cell--${cellSize}-@md`} key={project.name + (project.lede && ' - ' + project.lede)}>
 // 					<div className="c-project">
 // 						{% if projectQuantity === 1 %}
 // 						<div className="grid">

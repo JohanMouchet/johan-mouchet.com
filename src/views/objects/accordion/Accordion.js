@@ -30,6 +30,7 @@ const Accordion = (props: Props) => {
         <li
           className={`o-accordion__item js-accordion-item ${index === 0 &&
             "is--active"}`}
+          key={item.thumb}
         >
           <button className="o-accordion__thumb">
             <i

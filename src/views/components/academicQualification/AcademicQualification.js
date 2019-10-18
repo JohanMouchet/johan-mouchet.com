@@ -23,7 +23,7 @@ const AcademicQualification = (props: Props) => {
   return !qualifications
     ? null
     : qualifications.map(qualification => (
-        <section className="c-academic-qualification">
+        <section className="c-academic-qualification" key={qualification.title}>
           <h3 className="c-academic-qualification__heading">
             <a
               className="c-academic-qualification__establishment"

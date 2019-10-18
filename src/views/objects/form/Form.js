@@ -211,7 +211,11 @@ const Select = (props: SelectProps) => {
       {...metadata.attributes}
     >
       {options.map(option => (
-        <option value={option.value} {...metadata.attributes}>
+        <option
+          value={option.value}
+          {...metadata.attributes}
+          key={option.value}
+        >
           {option.text}
         </option>
       ))}

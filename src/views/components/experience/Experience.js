@@ -58,7 +58,7 @@ const Experience = (props: Props) => {
   return !experiences
     ? null
     : experiences.map(experience => (
-        <section className="c-experience">
+        <section className="c-experience" key={experience.startDate}>
           <h3 className="c-experience__heading">
             <a
               href={experience.company.URL}

@@ -12,8 +12,8 @@ const Expertises = (props: Props) => {
 
   return !expertises ? null : (
     <ul className="c-expertises o-list--unstyled">
-      {expertises.map(expertise => (
-        <li className="c-expertise">
+      {expertises.map((expertise, index) => (
+        <li className="c-expertise" key={expertise.label || index}>
           <ProgressBar
             label={expertise.label}
             filling={expertise.filling}

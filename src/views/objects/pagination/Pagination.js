@@ -91,6 +91,7 @@ const Pagination = (props: Props) => {
 
       {links.map((link, index) => {
         // TODO: start at 1
+        // TODO: use key
         //
         // ...: lower > 2
         // lowerRange: index < current

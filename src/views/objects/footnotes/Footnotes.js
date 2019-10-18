@@ -63,6 +63,7 @@ const FootnotesNotes = (props: NotesProps) => {
         <li
           id={`footnote:${note.prefix && note.prefix + "-"}${note.id}`}
           className="o-footnotes__note"
+          key={note.id}
         >
           {note.text}
           <a

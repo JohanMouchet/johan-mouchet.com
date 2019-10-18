@@ -34,14 +34,17 @@ const Tabs = (props: Props) => {
           <li
             className="o-tabs__thumb js-tabs-thumb wow fadeInUp"
             data-wow-delay={index > 0 && (index * 0.15)`s`}
+            key={tab.thumb}
           >
             <button className="o-tabs__button">{tab.thumb}</button>
           </li>
         ))}
       </ul>
       <ul className="o-tabs__panels">
-        {tabs.map(tab => (
-          <li className="o-tabs__panel js-tabs-panel">{tab.panel}</li>
+        {tabs.map((tab, index) => (
+          <li className="o-tabs__panel js-tabs-panel" key={index}>
+            {tab.panel}
+          </li>
         ))}
       </ul>
     </div>
