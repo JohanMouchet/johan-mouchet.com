@@ -15,8 +15,8 @@ type Props = {
       ],
       location: string,
       jobTitle: Node,
-      startDate: Date,
-      endDate: Date | string,
+      startDate: string,
+      endDate: string,
       lede: Node,
       projects: typeof Projects
     }
@@ -27,9 +27,10 @@ const Experience = (props: Props) => {
   const { experiences } = props;
 
   // TODO: Check logic, abstract to Utils?
+  // TODO: process 'present'
   const getDuration = (startDate, endDate) => {
-    const start = new Date(startDate);
-    const end = new Date(endDate);
+    const start = startDate;
+    const end = endDate;
 
     const startYear = start.getFullYear();
     const endYear = end.getFullYear();
