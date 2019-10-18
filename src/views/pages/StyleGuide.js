@@ -137,129 +137,102 @@ const StyleGuide = () => {
                 <div className="grid color-palette-row">
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      props={{
-                        banner: true,
-                        body:
-                          '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-primary-lighter</code>',
-                        metadata: {
-                          contextClass: "sg-swatch",
-                          additionalClasses: ["sg-swatch--primary-lighter"],
-                          modifierClasses: ["sm "]
-                        }
+                      banner
+                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-primary-lighter</code>'
+                      metadata={{
+                        contextClass: "sg-swatch",
+                        additionalClasses: ["sg-swatch--primary-lighter"],
+                        modifierClasses: ["sm "]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      props={{
-                        banner: true,
-                        body:
-                          '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-primary</code>',
-                        metadata: {
-                          contextClass: "sg-swatch",
-                          additionalClasses: ["sg-swatch--primary"],
-                          modifierClasses: ["sm "]
-                        }
+                      banner
+                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-primary</code>'
+                      metadata={{
+                        contextClass: "sg-swatch",
+                        additionalClasses: ["sg-swatch--primary"],
+                        modifierClasses: ["sm "]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      props={{
-                        banner: true,
-                        body:
-                          '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-primary-darker</code>',
-                        metadata: {
-                          contextClass: "sg-swatch",
-                          additionalClasses: ["sg-swatch--primary-darker"],
-                          modifierClasses: ["sm "]
-                        }
+                      banner
+                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-primary-darker</code>'
+                      metadata={{
+                        contextClass: "sg-swatch",
+                        additionalClasses: ["sg-swatch--primary-darker"],
+                        modifierClasses: ["sm "]
                       }}
                     />
                   </div>
 
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      props={{
-                        banner: true,
-                        body:
-                          '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-secondary-lighter</code>',
-                        metadata: {
-                          contextClass: "sg-swatch",
-                          additionalClasses: ["sg-swatch--secondary-lighter"],
-                          modifierClasses: ["sm "]
-                        }
+                      banner
+                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-secondary-lighter</code>'
+                      metadata={{
+                        contextClass: "sg-swatch",
+                        additionalClasses: ["sg-swatch--secondary-lighter"],
+                        modifierClasses: ["sm "]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      props={{
-                        banner: true,
-                        body:
-                          '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-secondary</code>',
-                        metadata: {
-                          contextClass: "sg-swatch",
-                          additionalClasses: ["sg-swatch--secondary"],
-                          modifierClasses: ["sm "]
-                        }
+                      banner
+                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-secondary</code>'
+                      metadata={{
+                        contextClass: "sg-swatch",
+                        additionalClasses: ["sg-swatch--secondary"],
+                        modifierClasses: ["sm "]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      props={{
-                        banner: true,
-                        body:
-                          '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-secondary-darker</code>',
-                        metadata: {
-                          contextClass: "sg-swatch",
-                          additionalClasses: ["sg-swatch--secondary-darker"],
-                          modifierClasses: ["sm "]
-                        }
+                      banner
+                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-secondary-darker</code>'
+                      metadata={{
+                        contextClass: "sg-swatch",
+                        additionalClasses: ["sg-swatch--secondary-darker"],
+                        modifierClasses: ["sm "]
                       }}
                     />
                   </div>
 
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      props={{
-                        banner: true,
-                        body:
-                          '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-gray-lighter</code>',
-                        metadata: {
-                          contextClass: "sg-swatch",
-                          additionalClasses: ["sg-swatch--gray-lighter"],
-                          modifierClasses: ["sm "]
-                        }
+                      banner
+                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-gray-lighter</code>'
+                      metadata={{
+                        contextClass: "sg-swatch",
+                        additionalClasses: ["sg-swatch--gray-lighter"],
+                        modifierClasses: ["sm "]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      props={{
-                        banner: true,
-                        body:
-                          '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-gray</code>',
-                        metadata: {
-                          contextClass: "sg-swatch",
-                          additionalClasses: ["sg-swatch--gray"],
-                          modifierClasses: ["sm "]
-                        }
+                      banner
+                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-gray</code>'
+                      metadata={{
+                        contextClass: "sg-swatch",
+                        additionalClasses: ["sg-swatch--gray"],
+                        modifierClasses: ["sm "]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      props={{
-                        banner: true,
-                        body:
-                          '<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-gray-darker</code>',
-                        metadata: {
-                          contextClass: "sg-swatch",
-                          additionalClasses: ["sg-swatch--gray-darker"],
-                          modifierClasses: ["sm "]
-                        }
+                      banner
+                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-gray-darker</code>'
+                      metadata={{
+                        contextClass: "sg-swatch",
+                        additionalClasses: ["sg-swatch--gray-darker"],
+                        modifierClasses: ["sm "]
                       }}
                     />
                   </div>
@@ -284,57 +257,41 @@ const StyleGuide = () => {
                 <div className="grid">
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
                     <Card
-                      props={{
-                        header:
-                          '<span className="sg-typeface__glyph">Aa</span>',
-                        body:
-                          '<h3>Primary typeface</h3><p className="sg-typeface__name"></p>',
-                        metadata: {
-                          context: "sg-typeface",
-                          additionalClasses: ["sg-typeface--font-primary"]
-                        }
+                      header='<span className="sg-typeface__glyph">Aa</span>'
+                      body='<h3>Primary typeface</h3><p className="sg-typeface__name"></p>'
+                      metadata={{
+                        context: "sg-typeface",
+                        additionalClasses: ["sg-typeface--font-primary"]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
                     <Card
-                      props={{
-                        header:
-                          '<span className="sg-typeface__glyph">Aa</span>',
-                        body:
-                          '<h3>Secondary typeface</h3><p className="sg-typeface__name"></p>',
-                        metadata: {
-                          context: "sg-typeface",
-                          additionalClasses: ["sg-typeface--font-secondary"]
-                        }
+                      header='<span className="sg-typeface__glyph">Aa</span>'
+                      body='<h3>Secondary typeface</h3><p className="sg-typeface__name"></p>'
+                      metadata={{
+                        context: "sg-typeface",
+                        additionalClasses: ["sg-typeface--font-secondary"]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
                     <Card
-                      props={{
-                        header:
-                          '<span className="sg-typeface__glyph">Aa</span>',
-                        body:
-                          '<h3>Tertiary typeface</h3><p className="sg-typeface__name"></p>',
-                        metadata: {
-                          context: "sg-typeface",
-                          additionalClasses: ["sg-typeface--font-tertiary"]
-                        }
+                      header='<span className="sg-typeface__glyph">Aa</span>'
+                      body='<h3>Tertiary typeface</h3><p className="sg-typeface__name"></p>'
+                      metadata={{
+                        context: "sg-typeface",
+                        additionalClasses: ["sg-typeface--font-tertiary"]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
                     <Card
-                      props={{
-                        header:
-                          '<span className="sg-typeface__glyph">Aa</span>',
-                        body:
-                          '<h3>Quaternary typeface</h3><p className="sg-typeface__name"></p>',
-                        metadata: {
-                          context: "sg-typeface",
-                          additionalClasses: ["sg-typeface--font-quaternary"]
-                        }
+                      header='<span className="sg-typeface__glyph">Aa</span>'
+                      body='<h3>Quaternary typeface</h3><p className="sg-typeface__name"></p>'
+                      metadata={{
+                        context: "sg-typeface",
+                        additionalClasses: ["sg-typeface--font-quaternary"]
                       }}
                     />
                   </div>
@@ -588,11 +545,8 @@ const StyleGuide = () => {
                   Blockquote
                 </h2>
                 <Blockquote
-                  props={{
-                    quote:
-                      "Design is not just what it looks like and feels like. Design is how it works.",
-                    cite: '<a href="#">Steve Jobs</a>'
-                  }}
+                  quote="Design is not just what it looks like and feels like. Design is how it works."
+                  cite='<a href="#">Steve Jobs</a>'
                 />
 
                 <p>
@@ -603,13 +557,10 @@ const StyleGuide = () => {
                   Pulled <code>&amp;.o-blockquote--pulled</code>
                 </h3>
                 <Blockquote
-                  props={{
-                    quote:
-                      "Design is not just what it looks like and feels like. Design is how it works.",
-                    cite: '<a href="#">Steve Jobs</a>',
-                    metadata: {
-                      modifierClasses: ["pulled"]
-                    }
+                  quote="Design is not just what it looks like and feels like. Design is how it works."
+                  cite='<a href="#">Steve Jobs</a>'
+                  metadata={{
+                    modifierClasses: ["pulled"]
                   }}
                 />
 
@@ -746,23 +697,16 @@ const StyleGuide = () => {
                     <div className="grid">
                       <div className="cell cell--12-@xs cell--6-@sm">
                         <div className="o-form__group">
-                          <Label
-                            props={{
-                              for: "input-1",
-                              text: "Text input"
-                            }}
-                          />
+                          <Label id="input-1" text="Text input" />
 
                           <Field
-                            props={{
-                              id: "input-1",
-                              type: "text",
-                              name: "input-1",
-                              metadata: {
-                                attributes: {
-                                  placeholder: "Username",
-                                  required: ""
-                                }
+                            id="input-1"
+                            type="text"
+                            name="input-1"
+                            metadata={{
+                              attributes: {
+                                placeholder: "Username",
+                                required: ""
                               }
                             }}
                           />
@@ -771,23 +715,16 @@ const StyleGuide = () => {
 
                       <div className="cell cell--12-@xs cell--6-@sm">
                         <div className="o-form__group">
-                          <Label
-                            props={{
-                              for: "input-2",
-                              text: "Text input disabled"
-                            }}
-                          />
+                          <Label id="input-2" text="Text input disabled" />
 
                           <Field
-                            props={{
-                              id: "input-2",
-                              type: "text",
-                              name: "input-2",
-                              metadata: {
-                                attributes: {
-                                  placeholder: "Disabled",
-                                  disabled: ""
-                                }
+                            id="input-2"
+                            type="text"
+                            name="input-2"
+                            metadata={{
+                              attributes: {
+                                placeholder: "Disabled",
+                                disabled: ""
                               }
                             }}
                           />
@@ -796,54 +733,40 @@ const StyleGuide = () => {
 
                       <div className="cell cell--12-@xs cell--6-@sm">
                         <div className="o-form__group">
-                          <Label
-                            props={{
-                              for: "select-1",
-                              text: "Select"
-                            }}
-                          />
+                          <Label id="select-1" text="Select" />
 
                           <Select
-                            props={{
-                              id: "select-1",
-                              name: "select-1",
-                              options: [
-                                {
-                                  text: "Option 1",
-                                  value: "option-1"
-                                },
-                                {
-                                  text: "Option 2",
-                                  value: "option-2"
-                                },
-                                {
-                                  text: "Option 3",
-                                  value: "option-3"
-                                }
-                              ]
-                            }}
+                            id="select-1"
+                            name="select-1"
+                            options={[
+                              {
+                                text: "Option 1",
+                                value: "option-1"
+                              },
+                              {
+                                text: "Option 2",
+                                value: "option-2"
+                              },
+                              {
+                                text: "Option 3",
+                                value: "option-3"
+                              }
+                            ]}
                           />
                         </div>
                       </div>
 
                       <div className="cell cell--12-@xs cell--6-@sm">
                         <div className="o-form__group">
-                          <Label
-                            props={{
-                              for: "input-3",
-                              text: "Search"
-                            }}
-                          />
+                          <Label id="input-3" text="Search" />
 
                           <Field
-                            props={{
-                              id: "input-3",
-                              type: "search",
-                              name: "input-3",
-                              metadata: {
-                                attributes: {
-                                  placeholder: "Keyword"
-                                }
+                            id="input-3"
+                            type="search"
+                            name="input-3"
+                            metadata={{
+                              attributes: {
+                                placeholder: "Keyword"
                               }
                             }}
                           />
@@ -853,13 +776,11 @@ const StyleGuide = () => {
                       <div className="cell cell--12-@xs">
                         <div className="o-form__group">
                           <Textarea
-                            props={{
-                              name: "textarea-1",
-                              metadata: {
-                                attributes: {
-                                  rows: "4",
-                                  placeholder: "Textarea"
-                                }
+                            name="textarea-1"
+                            metadata={{
+                              attributes: {
+                                rows: "4",
+                                placeholder: "Textarea"
                               }
                             }}
                           />
@@ -869,49 +790,41 @@ const StyleGuide = () => {
                       <div className="cell cell--12-@xs cell--6-@md">
                         <div className="o-form__group">
                           <Label
-                            props={{
-                              for: "radio-1",
-                              text: "Radio",
-                              metadata: {
-                                modifierClasses: ["block"]
+                            id="radio-1"
+                            text="Radio"
+                            metadata={{
+                              modifierClasses: ["block"]
+                            }}
+                          />
+
+                          <Toggle
+                            id="radio-1"
+                            type="radio"
+                            name="radioChoice"
+                            value="option-1"
+                            text="Option 1"
+                            metadata={{
+                              attributes: {
+                                checked: ""
                               }
                             }}
                           />
 
                           <Toggle
-                            props={{
-                              id: "radio-1",
-                              type: "radio",
-                              name: "radioChoice",
-                              value: "option-1",
-                              text: "Option 1",
-                              metadata: {
-                                attributes: {
-                                  checked: ""
-                                }
-                              }
-                            }}
+                            type="radio"
+                            name="radioChoice"
+                            value="option-2"
+                            text="Option 2"
                           />
 
                           <Toggle
-                            props={{
-                              type: "radio",
-                              name: "radioChoice",
-                              value: "option-2",
-                              text: "Option 2"
-                            }}
-                          />
-
-                          <Toggle
-                            props={{
-                              type: "radio",
-                              name: "radioChoice",
-                              value: "disabled",
-                              text: "Disabled",
-                              metadata: {
-                                attributes: {
-                                  disabled: ""
-                                }
+                            type="radio"
+                            name="radioChoice"
+                            value="disabled"
+                            text="Disabled"
+                            metadata={{
+                              attributes: {
+                                disabled: ""
                               }
                             }}
                           />
@@ -919,49 +832,41 @@ const StyleGuide = () => {
 
                         <div className="o-form__group">
                           <Label
-                            props={{
-                              for: "checkbox-1",
-                              text: "Checkbox",
-                              metadata: {
-                                modifierClasses: ["block"]
+                            id="checkbox-1"
+                            text="Checkbox"
+                            metadata={{
+                              modifierClasses: ["block"]
+                            }}
+                          />
+
+                          <Toggle
+                            id="checkbox-1"
+                            type="checkbox"
+                            name="checkboxChoice"
+                            value="option-1"
+                            text="Option 1"
+                            metadata={{
+                              attributes: {
+                                checked: ""
                               }
                             }}
                           />
 
                           <Toggle
-                            props={{
-                              id: "checkbox-1",
-                              type: "checkbox",
-                              name: "checkboxChoice",
-                              value: "option-1",
-                              text: "Option 1",
-                              metadata: {
-                                attributes: {
-                                  checked: ""
-                                }
-                              }
-                            }}
+                            type="checkbox"
+                            name="checkboxChoice"
+                            value="option-2"
+                            text="Option 2"
                           />
 
                           <Toggle
-                            props={{
-                              type: "checkbox",
-                              name: "checkboxChoice",
-                              value: "option-2",
-                              text: "Option 2"
-                            }}
-                          />
-
-                          <Toggle
-                            props={{
-                              type: "checkbox",
-                              name: "checkboxChoice",
-                              value: "disabled",
-                              text: "Disabled",
-                              metadata: {
-                                attributes: {
-                                  disabled: ""
-                                }
+                            type="checkbox"
+                            name="checkboxChoice"
+                            value="disabled"
+                            text="Disabled"
+                            metadata={{
+                              attributes: {
+                                disabled: ""
                               }
                             }}
                           />
@@ -970,41 +875,26 @@ const StyleGuide = () => {
 
                       <div className="cell cell--12-@xs cell--6-@md">
                         <div className="o-form__group">
-                          <Label
-                            props={{
-                              for: "range-1",
-                              text: "Range"
-                            }}
-                          />
-                          <Range
-                            props={{
-                              id: "range-1",
-                              type: "range",
-                              name: "range-1"
-                            }}
-                          />
+                          <Label id="range-1" text="Range" />
+                          <Range id="range-1" type="range" name="range-1" />
                         </div>
 
                         <div className="o-form__group">
                           <Label
-                            props={{
-                              for: "file-1",
-                              text: "File",
-                              metadata: {
-                                modifierClasses: ["block"]
-                              }
+                            id="file-1"
+                            text="File"
+                            metadata={{
+                              modifierClasses: ["block"]
                             }}
                           />
 
                           <File
-                            props={{
-                              id: "file-1",
-                              name: "file-1",
-                              text: "Choose a file",
-                              metadata: {
-                                attributes: {
-                                  multiple: ""
-                                }
+                            id="file-1"
+                            name="file-1"
+                            text="Choose a file"
+                            metadata={{
+                              attributes: {
+                                multiple: ""
                               }
                             }}
                           />
@@ -1029,94 +919,67 @@ const StyleGuide = () => {
                     <div className="grid">
                       <div className="cell cell--12-@xs cell--4-@sm">
                         <div className="o-form__group o-form__group--success">
-                          <Label
-                            props={{
-                              for: "input-success",
-                              text: "Success"
-                            }}
-                          />
+                          <Label id="input-success" text="Success" />
 
                           <Field
-                            props={{
-                              id: "input-success",
-                              type: "text",
-                              name: "input-success",
-                              metadata: {
-                                attributes: {
-                                  placeholder: "Text"
-                                }
+                            id="input-success"
+                            type="text"
+                            name="input-success"
+                            metadata={{
+                              attributes: {
+                                placeholder: "Text"
                               }
                             }}
                           />
 
                           <Alert
-                            props={{
-                              type: "success",
-                              content: "<strong>Success</strong> message",
-                              closable: true
-                            }}
+                            type="success"
+                            content="<strong>Success</strong> message"
+                            closable
                           />
                         </div>
                       </div>
                       <div className="cell cell--12-@xs cell--4-@sm">
                         <div className="o-form__group o-form__group--error">
-                          <Label
-                            props={{
-                              for: "input-error",
-                              text: "Error"
-                            }}
-                          />
+                          <Label id="input-error" text="Error" />
 
                           <Field
-                            props={{
-                              id: "input-error",
-                              type: "text",
-                              name: "input-error",
-                              metadata: {
-                                attributes: {
-                                  placeholder: "Text"
-                                }
+                            id="input-error"
+                            type="text"
+                            name="input-error"
+                            metadata={{
+                              attributes: {
+                                placeholder: "Text"
                               }
                             }}
                           />
 
                           <Alert
-                            props={{
-                              type: "danger",
-                              content: "<strong>Error</strong> message",
-                              closable: true
-                            }}
+                            type="danger"
+                            content="<strong>Error</strong> message"
+                            closable
                           />
                         </div>
                       </div>
                       <div className="cell cell--12-@xs cell--4-@sm">
                         <div className="o-form__group o-form__group--warning">
-                          <Label
-                            props={{
-                              for: "input-warning",
-                              text: "Warning"
-                            }}
-                          />
+                          <Label id="input-warning" text="Warning" />
 
                           <Field
-                            props={{
-                              id: "input-warning",
-                              type: "text",
-                              name: "input-warning",
-                              metadata: {
-                                attributes: {
-                                  placeholder: "Text"
-                                }
+                            id="input-warning"
+                            type="text"
+                            name="input-warning"
+                            metadata={{
+                              attributes: {
+                                placeholder: "Text"
                               }
                             }}
                           />
 
                           <Alert
-                            props={{
-                              type: "warning",
-                              content: "<strong>Warning</strong> message",
-                              closable: true
-                            }}
+                            type="warning"
+                            content="<strong>Warning</strong> message"
+                            closable
                           />
                         </div>
                       </div>
@@ -1139,26 +1002,18 @@ const StyleGuide = () => {
                 </h2>
                 <div className="grid">
                   <div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
-                    <Button
-                      props={{
-                        type: "anchor",
-                        text: "Button",
-                        url: "#"
-                      }}
-                    />
+                    <Button type="anchor" text="Button" url="#" />
 
                     <code>.o-button</code>
                   </div>
 
                   <div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
                     <Button
-                      props={{
-                        type: "anchor",
-                        text: "Button",
-                        url: "#",
-                        metadata: {
-                          modifierClasses: ["primary"]
-                        }
+                      type="anchor"
+                      text="Button"
+                      url="#"
+                      metadata={{
+                        modifierClasses: ["primary"]
                       }}
                     />
 
@@ -1167,13 +1022,11 @@ const StyleGuide = () => {
 
                   <div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
                     <Button
-                      props={{
-                        type: "anchor",
-                        text: "Button",
-                        url: "#",
-                        metadata: {
-                          modifierClasses: ["secondary"]
-                        }
+                      type="anchor"
+                      text="Button"
+                      url="#"
+                      metadata={{
+                        modifierClasses: ["secondary"]
                       }}
                     />
 
@@ -1182,14 +1035,12 @@ const StyleGuide = () => {
 
                   <div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
                     <Button
-                      props={{
-                        type: "anchor",
-                        text: "Button",
-                        url: "#",
-                        metadata: {
-                          attributes: {
-                            disabled: ""
-                          }
+                      type="anchor"
+                      text="Button"
+                      url="#"
+                      metadata={{
+                        attributes: {
+                          disabled: ""
                         }
                       }}
                     />
@@ -1250,16 +1101,13 @@ const StyleGuide = () => {
                 <div className="grid">
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
-                      props={{
-                        url:
-                          "https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}",
-                        icon: IconFacebook,
-                        text: "Share",
-                        counter: 10,
-                        metadata: {
-                          attributes: {
-                            title: "Share on Facebook"
-                          }
+                      url="https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}"
+                      icon={IconFacebook}
+                      text="Share"
+                      counter={10}
+                      metadata={{
+                        attributes: {
+                          title: "Share on Facebook"
                         }
                       }}
                     />
@@ -1267,16 +1115,13 @@ const StyleGuide = () => {
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
-                      props={{
-                        url:
-                          "https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}",
-                        icon: IconTwitter,
-                        text: "Tweet",
-                        counter: 10,
-                        metadata: {
-                          attributes: {
-                            title: "Tweet this"
-                          }
+                      url="https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}"
+                      icon={IconTwitter}
+                      text="Tweet"
+                      counter={10}
+                      metadata={{
+                        attributes: {
+                          title: "Tweet this"
                         }
                       }}
                     />
@@ -1284,15 +1129,13 @@ const StyleGuide = () => {
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
-                      props={{
-                        url: "https://plus.google.com/share?url={URL}",
-                        icon: IconGooglePlus,
-                        text: "Share",
-                        counter: 10,
-                        metadata: {
-                          attributes: {
-                            title: "Share on Google+"
-                          }
+                      url="https://plus.google.com/share?url={URL}"
+                      icon={IconGooglePlus}
+                      text="Share"
+                      counter={10}
+                      metadata={{
+                        attributes: {
+                          title: "Share on Google+"
                         }
                       }}
                     />
@@ -1300,16 +1143,13 @@ const StyleGuide = () => {
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
-                      props={{
-                        url:
-                          "http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}",
-                        icon: IconPinterest,
-                        text: "Pin it",
-                        counter: 10,
-                        metadata: {
-                          attributes: {
-                            title: "Pin it"
-                          }
+                      url="http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}"
+                      icon={IconPinterest}
+                      text="Pin it"
+                      counter={10}
+                      metadata={{
+                        attributes: {
+                          title: "Pin it"
                         }
                       }}
                     />
@@ -1317,16 +1157,13 @@ const StyleGuide = () => {
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
-                      props={{
-                        url:
-                          "http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}",
-                        icon: IconLinkedIn,
-                        text: "Share",
-                        counter: 10,
-                        metadata: {
-                          attributes: {
-                            title: "Share on LinkedIn"
-                          }
+                      url="http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}"
+                      icon={IconLinkedIn}
+                      text="Share"
+                      counter={10}
+                      metadata={{
+                        attributes: {
+                          title: "Share on LinkedIn"
                         }
                       }}
                     />
@@ -1336,89 +1173,75 @@ const StyleGuide = () => {
                 <div className="grid">
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
-                      props={{
-                        url:
-                          "https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}",
-                        icon: IconFacebook,
-                        text: "Share",
-                        counter: 10,
-                        metadata: {
-                          attributes: {
-                            title: "Share on Facebook"
-                          },
-                          modifierClasses: ["social-facebook"]
-                        }
+                      url="https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}"
+                      icon={IconFacebook}
+                      text="Share"
+                      counter={10}
+                      metadata={{
+                        attributes: {
+                          title: "Share on Facebook"
+                        },
+                        modifierClasses: ["social-facebook"]
                       }}
                     />
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
-                      props={{
-                        url:
-                          "https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}",
-                        icon: IconTwitter,
-                        text: "Tweet",
-                        counter: 10,
-                        metadata: {
-                          attributes: {
-                            title: "Tweet this"
-                          },
-                          modifierClasses: ["social-twitter"]
-                        }
+                      url="https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}"
+                      icon={IconTwitter}
+                      text="Tweet"
+                      counter={10}
+                      metadata={{
+                        attributes: {
+                          title: "Tweet this"
+                        },
+                        modifierClasses: ["social-twitter"]
                       }}
                     />
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
-                      props={{
-                        url: "https://plus.google.com/share?url={URL}",
-                        icon: IconGooglePlus,
-                        text: "Share",
-                        counter: 10,
-                        metadata: {
-                          attributes: {
-                            title: "Share on Google+"
-                          },
-                          modifierClasses: ["social-googleplus"]
-                        }
+                      url="https://plus.google.com/share?url={URL}"
+                      icon={IconGooglePlus}
+                      text="Share"
+                      counter={10}
+                      metadata={{
+                        attributes: {
+                          title: "Share on Google+"
+                        },
+                        modifierClasses: ["social-googleplus"]
                       }}
                     />
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
-                      props={{
-                        url:
-                          "http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}",
-                        icon: IconPinterest,
-                        text: "Pin it",
-                        counter: 10,
-                        metadata: {
-                          attributes: {
-                            title: "Pin it"
-                          },
-                          modifierClasses: ["social-pinterest"]
-                        }
+                      url="http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}"
+                      icon={IconPinterest}
+                      text="Pin it"
+                      counter={10}
+                      metadata={{
+                        attributes: {
+                          title: "Pin it"
+                        },
+                        modifierClasses: ["social-pinterest"]
                       }}
                     />
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
-                      props={{
-                        url:
-                          "http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}",
-                        icon: IconLinkedIn,
-                        text: "Share",
-                        counter: 10,
-                        metadata: {
-                          attributes: {
-                            title: "Share on LinkedIn"
-                          },
-                          modifierClasses: ["social-linkedin"]
-                        }
+                      url="http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}"
+                      icon={IconLinkedIn}
+                      text="Share"
+                      counter={10}
+                      metadata={{
+                        attributes: {
+                          title: "Share on LinkedIn"
+                        },
+                        modifierClasses: ["social-linkedin"]
                       }}
                     />
                   </div>
@@ -1430,108 +1253,73 @@ const StyleGuide = () => {
                 </p>
                 <div className="grid">
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-                    <ButtonSocialBadge
-                      props={{
-                        url: "{URL}",
-                        icon: IconFacebook
-                      }}
-                    />
+                    <ButtonSocialBadge url="{URL}" icon={IconFacebook} />
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-                    <ButtonSocialBadge
-                      props={{
-                        url: "{URL}",
-                        icon: IconTwitter
-                      }}
-                    />
+                    <ButtonSocialBadge url="{URL}" icon={IconTwitter} />
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-                    <ButtonSocialBadge
-                      props={{
-                        url: "{URL}",
-                        icon: IconGooglePlus
-                      }}
-                    />
+                    <ButtonSocialBadge url="{URL}" icon={IconGooglePlus} />
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-                    <ButtonSocialBadge
-                      props={{
-                        url: "{URL}",
-                        icon: IconPinterest
-                      }}
-                    />
+                    <ButtonSocialBadge url="{URL}" icon={IconPinterest} />
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-                    <ButtonSocialBadge
-                      props={{
-                        url: "{URL}",
-                        icon: IconLinkedIn
-                      }}
-                    />
+                    <ButtonSocialBadge url="{URL}" icon={IconLinkedIn} />
                   </div>
                 </div>
 
                 <div className="grid">
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocialBadge
-                      props={{
-                        url: "{URL}",
-                        icon: IconFacebook,
-                        metadata: {
-                          modifierClasses: ["social-facebook"]
-                        }
+                      url="{URL}"
+                      icon={IconFacebook}
+                      metadata={{
+                        modifierClasses: ["social-facebook"]
                       }}
                     />
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocialBadge
-                      props={{
-                        url: "{URL}",
-                        icon: IconTwitter,
-                        metadata: {
-                          modifierClasses: ["social-twitter"]
-                        }
+                      url="{URL}"
+                      icon={IconTwitter}
+                      metadata={{
+                        modifierClasses: ["social-twitter"]
                       }}
                     />
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocialBadge
-                      props={{
-                        url: "{URL}",
-                        icon: IconGooglePlus,
-                        metadata: {
-                          modifierClasses: ["social-googleplus"]
-                        }
+                      url="{URL}"
+                      icon={IconGooglePlus}
+                      metadata={{
+                        modifierClasses: ["social-googleplus"]
                       }}
                     />
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocialBadge
-                      props={{
-                        url: "{URL}",
-                        icon: IconPinterest,
-                        metadata: {
-                          modifierClasses: ["social-pinterest"]
-                        }
+                      url="{URL}"
+                      icon={IconPinterest}
+                      metadata={{
+                        modifierClasses: ["social-pinterest"]
                       }}
                     />
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocialBadge
-                      props={{
-                        url: "{URL}",
-                        icon: IconLinkedIn,
-                        metadata: {
-                          modifierClasses: ["social-linkedin"]
-                        }
+                      url="{URL}"
+                      icon={IconLinkedIn}
+                      metadata={{
+                        modifierClasses: ["social-linkedin"]
                       }}
                     />
                   </div>
@@ -1963,92 +1751,77 @@ const StyleGuide = () => {
                 <div className="grid">
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
                     <Card
-                      props={{
-                        header: "<h3>Card <code>.o-card__header</code></h3>",
-                        body: `
+                      header="<h3>Card <code>.o-card__header</code></h3>"
+                      body={`
 										<p>
 											<code>.o-card__body</code> <br />
 											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, exercitationem dicta temporibus perspiciatis nesciunt accusamus cum, itaque at necessitatibus nostrum aut quo assumenda, culpa amet id. Suscipit provident, dolorem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 										</p>
 										<p>
 											Rem omnis distinctio nihil, neque sequi fugiat facilis, ducimus doloribus, officia iste laudantium quas veniam. Nulla facilis amet, expedita est aut aliquid.
-										</p>`,
-                        footer:
-                          '<a href="#">Read more</a> <code>.o-card__footer</code>'
-                      }}
+										</p>`}
+                      footer='<a href="#">Read more</a> <code>.o-card__footer</code>'
                     />
                   </div>
 
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
                     <Card
-                      props={{
-                        header: "<h3>Primary card</h3>",
-                        body: `
+                      header="<h3>Primary card</h3>"
+                      body={`
 										<span><sup className="u-heading--3">$</sup> <span className="u-heading--xl">3.99</span> <sub className="u-heading--sm">/month</sub></span>
 										<hr className="o-card__hr wow" />
 										<ul className="o-list--unstyled o-list--lg">
 											<li>Unlimited storage</li>
 											<li>Advanced Statistics</li>
 											<li>24/7 Support</li>
-										</ul>`,
-                        footer: '<a href="#" className="o-button">Upgrade</a>',
-                        metadata: {
-                          additionalClasses: ["u-align--center"],
-                          modifierClasses: ["primary "]
-                        }
+										</ul>`}
+                      footer='<a href="#" className="o-button">Upgrade</a>'
+                      metadata={{
+                        additionalClasses: ["u-align--center"],
+                        modifierClasses: ["primary "]
                       }}
                     />
                   </div>
 
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
                     <Card
-                      props={{
-                        header: "<h3>Secondary card</h3>",
-                        body: `
+                      header="<h3>Secondary card</h3>"
+                      body={`
 										<span><sup className="u-heading--3">$</sup> <span className="u-heading--xl">1.99</span> <sub className="u-heading--sm">/month</sub></span>
 										<hr className="o-card__hr wow" />
 										<ul className="o-list--unstyled o-list--lg">
 											<li>25Go storage</li>
 											<li>Basic statistics</li>
 											<li>No support</li>
-										</ul>`,
-                        footer: '<a href="#" className="o-button">Upgrade</a>',
-                        metadata: {
-                          additionalClasses: ["u-align--center"],
-                          modifierClasses: ["secondary "]
-                        }
+										</ul>`}
+                      footer='<a href="#" className="o-button">Upgrade</a>'
+                      metadata={{
+                        additionalClasses: ["u-align--center"],
+                        modifierClasses: ["secondary "]
                       }}
                     />
                   </div>
 
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
                     <Card
-                      props={{
-                        bannerUrl:
-                          "https://images.unsplash.com/photo-1464519046765-f6d70b82a0df?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80",
-                        header: "<h3>Card with banner</h3>",
-                        body:
-                          "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, exercitationem dicta temporibus perspiciatis nesciunt accusamus cum, itaque at necessitatibus nostrum aut quo assumenda, culpa amet id. Suscipit provident, dolorem recusandae.</p>",
-                        footer: '<a href="#">Read more</a>',
-                        metadata: {
-                          modifierClasses: ["banner-gradient "]
-                        }
+                      bannerUrl="https://images.unsplash.com/photo-1464519046765-f6d70b82a0df?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80"
+                      header="<h3>Card with banner</h3>"
+                      body="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, exercitationem dicta temporibus perspiciatis nesciunt accusamus cum, itaque at necessitatibus nostrum aut quo assumenda, culpa amet id. Suscipit provident, dolorem recusandae.</p>"
+                      footer='<a href="#">Read more</a>'
+                      metadata={{
+                        modifierClasses: ["banner-gradient "]
                       }}
                     />
                   </div>
 
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
                     <Card
-                      props={{
-                        banner: "<h3>Card with title inside banner</h3>",
-                        bannerUrl:
-                          "https://images.unsplash.com/photo-1464518983192-0de439b5d517?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80",
-                        body:
-                          "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, exercitationem dicta temporibus perspiciatis nesciunt accusamus cum, itaque at necessitatibus nostrum aut quo assumenda, culpa amet id. Suscipit provident, dolorem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem omnis distinctio nihil, neque sequi fugiat facilis, ducimus doloribus, officia iste laudantium quas veniam. Nulla facilis amet, expedita est aut aliquid.</p>",
-                        footer: '<a href="#">Read more</a>',
-                        metadata: {
-                          modifierClasses: ["banner-gradient "]
-                        }
+                      banner="<h3>Card with title inside banner</h3>"
+                      bannerUrl="https://images.unsplash.com/photo-1464518983192-0de439b5d517?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80"
+                      body="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, exercitationem dicta temporibus perspiciatis nesciunt accusamus cum, itaque at necessitatibus nostrum aut quo assumenda, culpa amet id. Suscipit provident, dolorem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem omnis distinctio nihil, neque sequi fugiat facilis, ducimus doloribus, officia iste laudantium quas veniam. Nulla facilis amet, expedita est aut aliquid.</p>"
+                      footer='<a href="#">Read more</a>'
+                      metadata={{
+                        modifierClasses: ["banner-gradient "]
                       }}
                     />
                   </div>
@@ -2069,14 +1842,10 @@ const StyleGuide = () => {
                 </h2>
 
                 <Figure
-                  props={{
-                    src:
-                      "https://images.unsplash.com/photo-1464519046765-f6d70b82a0df?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80",
-                    alt: "Figure alt",
-                    title: "Figure title",
-                    caption:
-                      'Fig1. See on <a href="https://unsplash.com/photos/sTBdWFQKDHE">Unsplash</a>'
-                  }}
+                  src="https://images.unsplash.com/photo-1464519046765-f6d70b82a0df?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80"
+                  alt="Figure alt"
+                  title="Figure title"
+                  caption='Fig1. See on <a href="https://unsplash.com/photos/sTBdWFQKDHE">Unsplash</a>'
                 />
 
                 <p>
@@ -2100,22 +1869,20 @@ const StyleGuide = () => {
                   Breadcrumb
                 </h2>
                 <Breadcrumb
-                  props={{
-                    levels: [
-                      {
-                        title: "Level 1",
-                        url: "#"
-                      },
-                      {
-                        title: "Level 2",
-                        url: "#"
-                      },
-                      {
-                        title: "Level 3",
-                        url: "#"
-                      }
-                    ]
-                  }}
+                  levels={[
+                    {
+                      title: "Level 1",
+                      url: "#"
+                    },
+                    {
+                      title: "Level 2",
+                      url: "#"
+                    },
+                    {
+                      title: "Level 3",
+                      url: "#"
+                    }
+                  ]}
                 />
               </article>
 
@@ -2132,25 +1899,23 @@ const StyleGuide = () => {
                   Tabs (JS)
                 </h2>
                 <Tabs
-                  props={{
-                    tabs: [
-                      {
-                        thumb: "Tab 1",
-                        panel:
-                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-                      },
-                      {
-                        thumb: "Tab 2",
-                        panel:
-                          "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."
-                      },
-                      {
-                        thumb: "Tab 3",
-                        panel:
-                          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                      }
-                    ]
-                  }}
+                  tabs={[
+                    {
+                      thumb: "Tab 1",
+                      panel:
+                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+                    },
+                    {
+                      thumb: "Tab 2",
+                      panel:
+                        "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."
+                    },
+                    {
+                      thumb: "Tab 3",
+                      panel:
+                        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    }
+                  ]}
                 />
               </article>
 
@@ -2167,25 +1932,23 @@ const StyleGuide = () => {
                   Accordion (JS)
                 </h2>
                 <Accordion
-                  props={{
-                    items: [
-                      {
-                        thumb: "Lorem ipsum",
-                        panel:
-                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque a voluptate sequi, exercitationem, corrupti recusandae reprehenderit, quasi voluptates dolorem omnis adipisci magnam maiores ducimus aut praesentium repellat! Laudantium iure, praesentium?"
-                      },
-                      {
-                        thumb: "Dolor sit amet",
-                        panel:
-                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequatur maxime nulla corrupti tempora eaque neque fuga iure libero, mollitia corporis sunt eligendi, quod facere at. Inventore dolore, vitae aliquam."
-                      },
-                      {
-                        thumb: "Consectetur adipisicing elit",
-                        panel:
-                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, temporibus, fugiat. Harum deserunt blanditiis iusto ea odio et id, quos, laudantium veniam mollitia animi obcaecati quas rerum, assumenda pariatur voluptatem?"
-                      }
-                    ]
-                  }}
+                  items={[
+                    {
+                      thumb: "Lorem ipsum",
+                      panel:
+                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque a voluptate sequi, exercitationem, corrupti recusandae reprehenderit, quasi voluptates dolorem omnis adipisci magnam maiores ducimus aut praesentium repellat! Laudantium iure, praesentium?"
+                    },
+                    {
+                      thumb: "Dolor sit amet",
+                      panel:
+                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequatur maxime nulla corrupti tempora eaque neque fuga iure libero, mollitia corporis sunt eligendi, quod facere at. Inventore dolore, vitae aliquam."
+                    },
+                    {
+                      thumb: "Consectetur adipisicing elit",
+                      panel:
+                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, temporibus, fugiat. Harum deserunt blanditiis iusto ea odio et id, quos, laudantium veniam mollitia animi obcaecati quas rerum, assumenda pariatur voluptatem?"
+                    }
+                  ]}
                 />
                 <p>
                   <em>Modifier:</em> <code>&amp;.is--active</code>
@@ -2208,24 +1971,22 @@ const StyleGuide = () => {
                   Pagination
                 </h2>
                 <Pagination
-                  props={{
-                    range: 3,
-                    current: 6,
-                    links: [
-                      "#1",
-                      "#2",
-                      "#3",
-                      "#4",
-                      "#5",
-                      "#6",
-                      "#7",
-                      "#8",
-                      "#9",
-                      "#10",
-                      "#11",
-                      "#12"
-                    ]
-                  }}
+                  range={3}
+                  current={6}
+                  links={[
+                    "#1",
+                    "#2",
+                    "#3",
+                    "#4",
+                    "#5",
+                    "#6",
+                    "#7",
+                    "#8",
+                    "#9",
+                    "#10",
+                    "#11",
+                    "#12"
+                  ]}
                 />
               </article>
 
@@ -2253,46 +2014,36 @@ const StyleGuide = () => {
                   Success <code>&amp;.o-alert--success</code>
                 </h3>
                 <Alert
-                  props={{
-                    type: "success",
-                    content: "Indicates a successful or positive action.",
-                    closable: true
-                  }}
+                  type="success"
+                  content="Indicates a successful or positive action."
+                  closable
                 />
 
                 <h3>
                   Info <code>&amp;.o-alert--info</code>
                 </h3>
                 <Alert
-                  props={{
-                    type: "info",
-                    content:
-                      "Indicates a neutral informative change or action.",
-                    closable: true
-                  }}
+                  type="info"
+                  content="Indicates a neutral informative change or action."
+                  closable
                 />
 
                 <h3>
                   Warning <code>&amp;.o-alert--warning</code>
                 </h3>
                 <Alert
-                  props={{
-                    type: "warning",
-                    content: "Indicates a warning that might need attention.",
-                    closable: true
-                  }}
+                  type="warning"
+                  content="Indicates a warning that might need attention."
+                  closable
                 />
 
                 <h3>
                   Danger <code>&amp;.o-alert--danger</code>
                 </h3>
                 <Alert
-                  props={{
-                    type: "danger",
-                    content:
-                      "Indicates a dangerous or potentially negative action.",
-                    closable: true
-                  }}
+                  type="danger"
+                  content="Indicates a dangerous or potentially negative action."
+                  closable
                 />
               </article>
 
@@ -2403,13 +2154,7 @@ const StyleGuide = () => {
                   <div className="cell cell--12-@xs cell--6-@sm">
                     <code>.o-progress-bar</code>
 
-                    <ProgressBar
-                      props={{
-                        label: "Label",
-                        total: "50 Go",
-                        filling: "60"
-                      }}
-                    />
+                    <ProgressBar label="Label" total="50 Go" filling={60} />
                   </div>
                   <div className="cell cell--12-@xs cell--6-@sm">
                     <code>
@@ -2417,12 +2162,10 @@ const StyleGuide = () => {
                     </code>
 
                     <ProgressBar
-                      props={{
-                        label: "Label",
-                        total: "50 Go",
-                        filling: "40",
-                        tooltip: "20 Go"
-                      }}
+                      label="Label"
+                      total="50 Go"
+                      filling={40}
+                      tooltip="20 Go"
                     />
                   </div>
                 </div>
@@ -2465,7 +2208,7 @@ const StyleGuide = () => {
                     <code>.o-loader</code>
                   </div>
                   <div className="cell cell--6-@xs">
-                    <Loader props={{ metadata: { modifierClasses: ["sm"] } }} />
+                    <Loader metadata={{ modifierClasses: ["sm"] }} />
 
                     <code>&amp;.o-loader--sm</code>
                   </div>
@@ -2486,37 +2229,30 @@ const StyleGuide = () => {
                 </h2>
                 <p>
                   Lorem ipsum
-                  <FootnotesReference
-                    props={{ id: "1", text: "[1]", url: "" }}
-                  />{" "}
-                  dolor sit amet, consectetur adipisicing elit. Dignissimos
-                  <FootnotesReference
-                    props={{ id: "2", text: "[2]", url: "" }}
-                  />
-                  , qui? Perferendis earum explicabo possimus odit porro odio
-                  velit illum nihil deleniti aliquam hic accusantium numquam
-                  sunt et, rem, ut ratione. Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Laborum ex voluptates, eos
-                  doloribus ipsam numquam ad inventore consequuntur dolorum
-                  ipsum eveniet maxime fuga, quaerat animi sit iste.
-                  Dignissimos, sit eligendi.
+                  <FootnotesReference id="1" text="[1]" url="" /> dolor sit
+                  amet, consectetur adipisicing elit. Dignissimos
+                  <FootnotesReference id="2" text="[2]" url="" />, qui?
+                  Perferendis earum explicabo possimus odit porro odio velit
+                  illum nihil deleniti aliquam hic accusantium numquam sunt et,
+                  rem, ut ratione. Lorem ipsum dolor sit amet, consectetur
+                  adipisicing elit. Laborum ex voluptates, eos doloribus ipsam
+                  numquam ad inventore consequuntur dolorum ipsum eveniet maxime
+                  fuga, quaerat animi sit iste. Dignissimos, sit eligendi.
                 </p>
 
                 <FootnotesNotes
-                  props={{
-                    notes: [
-                      {
-                        id: "1",
-                        text: "Lorem ipsum dolor sit amet.",
-                        url: ""
-                      },
-                      {
-                        id: "2",
-                        text: "Lorem ipsum dolor sit amet.",
-                        url: ""
-                      }
-                    ]
-                  }}
+                  notes={[
+                    {
+                      id: "1",
+                      text: "Lorem ipsum dolor sit amet.",
+                      url: ""
+                    },
+                    {
+                      id: "2",
+                      text: "Lorem ipsum dolor sit amet.",
+                      url: ""
+                    }
+                  ]}
                 />
               </article>
 
@@ -2813,15 +2549,11 @@ const StyleGuide = () => {
 
         {`<!-- Notice (JS) (remove ".u-is--hidden" to display) -->`}
         <Notice
-          props={{
-            primary:
-              '<p className="u-vr--bottom-0-@xs">This website uses cookies to ensure you the best experience. <a href="#">More info</a></p>',
-            secondary:
-              '<button className="o-button js-notice-close">Got it!</button>',
-            closeButton: true,
-            metadata: {
-              additionalClasses: ["u-is--hidden"]
-            }
+          primary='<p className="u-vr--bottom-0-@xs">This website uses cookies to ensure you the best experience. <a href="#">More info</a></p>'
+          secondary='<button className="o-button js-notice-close">Got it!</button>'
+          closeButton
+          metadata={{
+            additionalClasses: ["u-is--hidden"]
           }}
         />
       </>

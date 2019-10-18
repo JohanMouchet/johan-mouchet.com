@@ -37,9 +37,9 @@
 // 					(<a className={`o-menu__link ${ item.menu && 'o-menu__submenu-heading'}`} href={item.url} tabindex={!item.url && "0"}>
 // 						{item.text}
 // 					</a>)}
-// 				{item.button && <Button props={item.button} />}
+// 				{item.button && <Button {...item.button} />}
 
-// 				{item.menu && <Menu props={item, true }/>}
+// 				{item.menu && <Menu {...item, true }/>}
 // 			</li>
 // 		{% endfor %}
 // 	</ul>

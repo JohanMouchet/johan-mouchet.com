@@ -1,6 +1,5 @@
 # TODO
 
-- Change `<Comp props={{key: "value"}} />` to `key="value"`
 - Use Absolute Imports: https://create-react-app.dev/docs/importing-a-component#absolute-imports
   - add in .flowconfig https://create-react-app.dev/docs/adding-flow
 - Replace `{% if`

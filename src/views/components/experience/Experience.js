@@ -94,7 +94,7 @@ const Experience = (props: Props) => {
 
           <p className="c-experience__lede">{experience.lede}</p>
 
-          {experience.projects && <Projects props={experience.projects} />}
+          {experience.projects && <Projects {...experience.projects} />}
         </section>
       ));
 };

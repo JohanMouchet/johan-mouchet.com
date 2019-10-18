@@ -15,12 +15,10 @@ const Expertises = (props: Props) => {
       {expertises.map(expertise => (
         <li className="c-expertise">
           <ProgressBar
-            props={{
-              label: expertise.label,
-              filling: expertise.filling,
-              tooltip: expertise.tooltip,
-              tooltipOnHover: true
-            }}
+            label={expertise.label}
+            filling={expertise.filling}
+            tooltip={expertise.tooltip}
+            tooltipOnHover
           />
         </li>
       ))}
