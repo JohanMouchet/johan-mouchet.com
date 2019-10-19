@@ -30,8 +30,7 @@ const SocialMedia = (props: Props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            {media.icon}
-            {media.name}
+            {media.icon} {media.name}
           </a>
         </div>
       ))}

@@ -22,7 +22,7 @@ import { ReactComponent as IconTwitter } from "../../assets/images/icons/simple-
 import { ReactComponent as IconUnsplash } from "../../assets/images/icons/simple-icons/unsplash.svg";
 import { ReactComponent as IconYoutube } from "../../assets/images/icons/simple-icons/youtube.svg";
 
-const Home = props => {
+const Home = () => {
   return (
     <Default
       metadata={{
@@ -212,52 +212,52 @@ const Home = props => {
                     {
                       name: "LinkedIn",
                       URL: "https://www.linkedin.com/in/johanmouchet",
-                      icon: IconLinkedIn
+                      icon: <IconLinkedIn />
                     },
                     {
                       name: "Twitter",
                       URL: "https://twitter.com/JohanMouchet",
-                      icon: IconTwitter
+                      icon: <IconTwitter />
                     },
                     {
                       name: "CodePen",
                       URL: "http://codepen.io/johanmouchet/",
-                      icon: IconCodepen
+                      icon: <IconCodepen />
                     },
                     {
                       name: "Dribbble",
                       URL: "https://dribbble.com/JohanMouchet/likes",
-                      icon: IconDribbble
+                      icon: <IconDribbble />
                     },
                     {
                       name: "GitHub",
                       URL: "https://github.com/JohanMouchet",
-                      icon: IconGithub
+                      icon: <IconGithub />
                     },
                     {
                       name: "Unsplash",
                       URL: "https://unsplash.com/@johanmouchet/",
-                      icon: IconUnsplash
+                      icon: <IconUnsplash />
                     },
                     {
                       name: "500px",
                       URL: "https://500px.com/johanmouchet/",
-                      icon: Icon500px
+                      icon: <Icon500px />
                     },
                     {
                       name: "Instagram",
                       URL: "https://instagram.com/johanmouchet/",
-                      icon: IconInstagram
+                      icon: <IconInstagram />
                     },
                     {
                       name: "YouTube",
                       URL: "https://www.youtube.com/c/JohanMouchet",
-                      icon: IconYoutube
+                      icon: <IconYoutube />
                     },
                     {
                       name: "Spotify",
                       URL: "https://open.spotify.com/user/1126411547",
-                      icon: IconSpotify
+                      icon: <IconSpotify />
                     }
                   ]}
                 />
@@ -742,39 +742,39 @@ const Home = props => {
                       thumbnailPath:
                         PATHS.img + "views/personal-works/seville.jpg",
                       URL: "https://unsplash.com/photos/NwaCxOL0NTA",
-                      sourceIcon: IconUnsplash
+                      sourceIcon: <IconUnsplash />
                     },
                     {
                       thumbnailPath:
                         PATHS.img + "views/personal-works/marseille.jpg",
                       URL: "https://unsplash.com/photos/qB1h8ruSKnI",
-                      sourceIcon: IconUnsplash
+                      sourceIcon: <IconUnsplash />
                     },
                     {
                       thumbnailPath:
                         PATHS.img + "views/personal-works/death-valley.jpg",
                       URL:
                         "https://500px.com/photo/177991327/thirsty-coyote-death-valley-ca-by-johan-mouchet",
-                      sourceIcon: Icon500px
+                      sourceIcon: <Icon500px />
                     },
                     {
                       thumbnailPath:
                         PATHS.img + "views/personal-works/london.jpg",
                       URL: "https://unsplash.com/photos/5qeFuSId3H0",
-                      sourceIcon: IconUnsplash
+                      sourceIcon: <IconUnsplash />
                     },
                     {
                       thumbnailPath:
                         PATHS.img + "views/personal-works/copenhagen.jpg",
                       URL: "https://unsplash.com/photos/sTBdWFQKDHE",
-                      sourceIcon: IconUnsplash
+                      sourceIcon: <IconUnsplash />
                     },
                     {
                       thumbnailPath:
                         PATHS.img +
                         "views/personal-works/south-cost-of-england.jpg",
                       URL: "https://youtu.be/NAsS1T_V8-k",
-                      sourceIcon: IconYoutube
+                      sourceIcon: <IconYoutube />
                     }
                   ]}
                 />
