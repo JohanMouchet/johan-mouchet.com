@@ -62,7 +62,7 @@ const Reference = (props: Props) => {
                     {reference.company.name}
                   </a>
                 </span>{" "}
-                &mdash;{" "}
+                ⁠—{" "}
                 <span className="c-reference__job-title">
                   {reference.jobTitle}
                 </span>

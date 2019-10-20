@@ -98,12 +98,12 @@ const Home = () => {
                       tooltip: "10/10"
                     },
                     {
-                      label: "CSS3 <em>&amp; Sass</em>",
+                      label: "CSS3 <em>& Sass</em>",
                       filling: 100,
                       tooltip: "10/10"
                     },
                     {
-                      label: "JavaScript <em>&mdash; ES2017</em>",
+                      label: "JavaScript <em>⁠— ES2017</em>",
                       filling: 80,
                       tooltip: "8/10"
                     },
@@ -267,17 +267,6 @@ const Home = () => {
                 <div className="u-vr--top-2-@xs"></div>
                 <h2>Career experiences</h2>
 
-                {/* projects: [{
-                name: "name",
-                tagline: "tagline",
-                URL: "URL",
-                lede: "lede",
-                thumbnailPath: require("../../assets/images/views/career-experiences/..."),
-                details: [
-                  ""
-                ]
-              }] */}
-
                 <Experience
                   experiences={[
                     {
@@ -432,7 +421,7 @@ const Home = () => {
                       },
                       location: "London",
                       jobTitle:
-                        "Designer &amp; Front-end developer &amp; Marketing strategist",
+                        "Designer & Front-end developer & Marketing strategist",
                       startDate: new Date("2016/06/01"),
                       endDate: new Date("2016/11/01"),
                       contractType: "Contractor",
@@ -682,20 +671,6 @@ const Home = () => {
                     }
                   ]}
                 />
-
-                {/* {
-                name: "Zander MARTINEAU",
-                relation: "Former coworker",
-                company: {
-                  name: "TMW Unlimited",
-                  URL: "http://www.tmwunlimited.com"
-                },
-                jobTitle: "Creative Technology Lead",
-                contacts: {
-                  mail: "zander@martineau.tv",
-                  linkedin: "https://uk.linkedin.com/in/zandermartineau"
-                }
-              }, */}
               </article>
 
               <hr className="wow" />

@@ -2,6 +2,7 @@
 
 - Use Absolute Imports: https://create-react-app.dev/docs/importing-a-component#absolute-imports
   - add in .flowconfig https://create-react-app.dev/docs/adding-flow
+- Fix broken space `{" "}`
 - Replace `{% if`
 - Replace `{% for`
 - Add `modifierClasses` to `cx`
