@@ -1,5 +1,4 @@
 import * as React from "react";
-import { PATHS } from "../../constants/paths";
 import { Default } from "../layouts";
 import {
   Expertises,
@@ -9,8 +8,6 @@ import {
   Reference,
   PersonalWorks
 } from "../components";
-import imageJohanMouchet from "../../assets/images/views/johan-mouchet.jpg";
-import imageJohanMouchetX2 from "../../assets/images/views/johan-mouchet@x2.jpg";
 import { ReactComponent as Icon500px } from "../../assets/images/icons/simple-icons/500px.svg";
 import { ReactComponent as IconCodepen } from "../../assets/images/icons/simple-icons/codepen.svg";
 import { ReactComponent as IconDribbble } from "../../assets/images/icons/simple-icons/dribbble.svg";
@@ -57,8 +54,8 @@ const Home = () => {
                   <div className="cell">
                     <img
                       className="c-about__portrait"
-                      src={imageJohanMouchet}
-                      srcSet={`${imageJohanMouchet}, ${imageJohanMouchetX2} 1.25x`}
+                      src={require("../../assets/images/views/johan-mouchet.jpg")}
+                      srcSet={`${require("../../assets/images/views/johan-mouchet.jpg")}, ${require("../../assets/images/views/johan-mouchet@x2.jpg")} 1.25x`}
                       alt="Johan Mouchet"
                     />
                   </div>
@@ -275,7 +272,7 @@ const Home = () => {
                 tagline: "tagline",
                 URL: "URL",
                 lede: "lede",
-                thumbnailPath: PATHS.img + "views/career-experiences/...",
+                thumbnailPath: require("../../assets/images/views/career-experiences/..."),
                 details: [
                   ""
                 ]
@@ -291,7 +288,7 @@ const Home = () => {
                       location: "Melbourne",
                       jobTitle: "Front-end developer",
                       startDate: new Date("2017/11/01"),
-                      endDate: "Present",
+                      endDate: new Date(),
                       lede:
                         "Global agency that delivers digital transformation powered by creativity, who believe in <em>Ideas Without Limits</em>, pushing the boundaries of technology and creativity.",
                       projects: [
@@ -301,9 +298,7 @@ const Home = () => {
                           URL: "http://www.safecat.org.au",
                           lede:
                             "Joint <em>RSPCA</em> campaign website to help cat owners give their pet the safest and happiest life while ensuring they have no link to loss of wildlife.",
-                          thumbnailPath:
-                            PATHS.img +
-                            "views/career-experiences/zoos-victoria.jpg",
+                          thumbnailPath: require("../../assets/images/views/career-experiences/zoos-victoria.jpg"),
                           awards: [
                             {
                               name:
@@ -335,9 +330,7 @@ const Home = () => {
                           URL: "https://www.klipdesk.co",
                           lede:
                             "Web application dedicated to the sport rights holders industry. Allows to edit live or recorded streams to produce highlights shareable on social media.",
-                          thumbnailPath:
-                            PATHS.img +
-                            "views/career-experiences/klip-studio.jpg",
+                          thumbnailPath: require("../../assets/images/views/career-experiences/klip-studio.jpg"),
                           details: [
                             "React framework, <a href='https://react.semantic-ui.com/' target='_blank' rel='noopener noreferrer' className='external-link'><em>Semantic UI React</em></a> component library",
                             "<a href='https://github.com/google/shaka-player' target='_blank' rel='noopener noreferrer' className='external-link'><em>Shaka</em></a> web player, advanced video editing, cropping etc.",
@@ -354,8 +347,7 @@ const Home = () => {
                           URL: "https://www.pearson.com/asia/",
                           lede:
                             "Websites creation related to education for Pearson’s launch in three new markets through Asia.",
-                          thumbnailPath:
-                            PATHS.img + "views/career-experiences/pearson.jpg",
+                          thumbnailPath: require("../../assets/images/views/career-experiences/pearson.jpg"),
                           details: [
                             "<a href='' target='_blank' rel='noopener noreferrer' className='external-link'><em>Experience Manager</em></a>, enterprise content management",
                             "Content authoring, page and component building",
@@ -383,8 +375,7 @@ const Home = () => {
                           URL: "https://www.lexus.eu/en/",
                           lede:
                             "Website redesign to embody the new brand direction focused on a premium and lifestyle experience. Deployed into 35 countries of the European market and translated into 27 languages.",
-                          thumbnailPath:
-                            PATHS.img + "views/career-experiences/lexus.jpg",
+                          thumbnailPath: require("../../assets/images/views/career-experiences/lexus.jpg"),
                           details: [
                             "<a href='http://www.sdl.com/software-and-services/tridion-dx/tridion-sites.html'><em>SDL Web</em></a> (formerly Tridion), headless data driven CMS ",
                             "<em>Nunjucks</em> templating, component oriented, fed with datas stored in a <em>MongoDB</em> database",
@@ -405,9 +396,7 @@ const Home = () => {
                             "https://www.lexus.eu/discover-lexus/technology/lexus-safety-system/",
                           lede:
                             "Microsite creation to showcase <em>Lexus' Safety System Plus</em> technology.",
-                          thumbnailPath:
-                            PATHS.img +
-                            "views/career-experiences/lexus-safety-system-plus.jpg",
+                          thumbnailPath: require("../../assets/images/views/career-experiences/lexus-safety-system-plus.jpg"),
                           details: [
                             "Stack identical to the one of <em>Lexus 'v11'</em>",
                             "Full Screen, single-page design, done with <a href='https://github.com/alvarotrigo/fullPage.js' target='_blank' rel='noopener noreferrer' className='external-link'><em>fullPage.js</em></a>",
@@ -423,8 +412,7 @@ const Home = () => {
                           URL: "https://www.lowrance.com/",
                           lede:
                             "Delivery within a short turnaround of a global eCommerce website for a manufacturer of consumer marine electronics.",
-                          thumbnailPath:
-                            PATHS.img + "views/career-experiences/lowrance.jpg",
+                          thumbnailPath: require("../../assets/images/views/career-experiences/lowrance.jpg"),
                           details: [
                             "<a href='http://www.episerver.com/' target='_blank' rel='noopener noreferrer' className='external-link'><em>EPIServer</em></a> CMS for scalability",
                             "<em>Handlebars</em> / <em>Razor templating</em>, component oriented",
@@ -454,9 +442,7 @@ const Home = () => {
                         {
                           name: "Survie Mer Formation",
                           URL: "https://www.surviemerformation.com/",
-                          thumbnailPath:
-                            PATHS.img +
-                            "views/career-experiences/survie-mer-formation.jpg",
+                          thumbnailPath: require("../../assets/images/views/career-experiences/survie-mer-formation.jpg"),
                           details: [
                             "<em>Growth Hacking</em> strategy development (<em>AARRR</em> model) meant to increase online registrations",
                             "<em>UI</em> Refreshment: new brand identity, responsive design, cross-browser compatibility",
@@ -490,9 +476,7 @@ const Home = () => {
                           URL: "http://www.businessbankinginsight.co.uk",
                           lede:
                             "Analysis website of business banking providers, supported by the <em>HR Treasury</em>.",
-                          thumbnailPath:
-                            PATHS.img +
-                            "views/career-experiences/business-banking-insight.jpg",
+                          thumbnailPath: require("../../assets/images/views/career-experiences/business-banking-insight.jpg"),
                           details: [
                             "<i>AngularJS 2</i> templating",
                             "Front-end framework: <a href='http://trykickoff.com/' target='_blank' rel='noopener noreferrer' className='external-link'>Kickoff</a> (npm, Grunt, Sass, jQuery)",
@@ -508,9 +492,7 @@ const Home = () => {
                             "https://partofpt.princes-trust.org.uk/part-of-pt/",
                           lede:
                             "Crowdsourced event listing microsite for the <em>Prince's Trust</em> 40th anniversary celebration.",
-                          thumbnailPath:
-                            PATHS.img +
-                            "views/career-experiences/princes-trust.jpg",
+                          thumbnailPath: require("../../assets/images/views/career-experiences/princes-trust.jpg"),
                           details: [
                             "Front-end framework: <a href='http://trykickoff.com/' target='_blank' rel='noopener noreferrer' className='external-link'>Kickoff</a>",
                             "<a href='https://hashtagd.net/' target='_blank' rel='noopener noreferrer' className='external-link'>Hashtagd</a> APIs integration",
@@ -524,9 +506,7 @@ const Home = () => {
                           URL: "https://www.youtube.com/watch?v=3PyZVDrO_aI",
                           lede:
                             "Mobile web browser game based on rope skipping.",
-                          thumbnailPath:
-                            PATHS.img +
-                            "views/career-experiences/sport-relief-skipathon.jpg",
+                          thumbnailPath: require("../../assets/images/views/career-experiences/sport-relief-skipathon.jpg"),
                           details: [
                             "iOS and Android default browser support",
                             "Device 3D movement detection",
@@ -553,28 +533,22 @@ const Home = () => {
                         {
                           name: "Weholite",
                           URL: "http://www.weholite.co.uk/",
-                          thumbnailPath:
-                            PATHS.img + "views/career-experiences/weholite.jpg"
+                          thumbnailPath: require("../../assets/images/views/career-experiences/weholite.jpg")
                         },
                         {
                           name: "Hiremech",
                           URL: "http://www.hiremech.co.uk/",
-                          thumbnailPath:
-                            PATHS.img + "views/career-experiences/hiremech.jpg"
+                          thumbnailPath: require("../../assets/images/views/career-experiences/hiremech.jpg")
                         },
                         {
                           name: "Global Materials Handling",
                           URL: "http://globalforktrucks.com/",
-                          thumbnailPath:
-                            PATHS.img +
-                            "views/career-experiences/global-materials-handling.jpg"
+                          thumbnailPath: require("../../assets/images/views/career-experiences/global-materials-handling.jpg")
                         },
                         {
                           name: "Proton Motor",
                           URL: "http://www.proton-motor.com/",
-                          thumbnailPath:
-                            PATHS.img +
-                            "views/career-experiences/proton-motor.jpg"
+                          thumbnailPath: require("../../assets/images/views/career-experiences/proton-motor.jpg")
                         }
                       ]
                     }
@@ -739,40 +713,33 @@ const Home = () => {
                 <PersonalWorks
                   works={[
                     {
-                      thumbnailPath:
-                        PATHS.img + "views/personal-works/seville.jpg",
+                      thumbnailPath: require(`../../assets/images/views/personal-works/seville.jpg`),
                       URL: "https://unsplash.com/photos/NwaCxOL0NTA",
                       sourceIcon: <IconUnsplash />
                     },
                     {
-                      thumbnailPath:
-                        PATHS.img + "views/personal-works/marseille.jpg",
+                      thumbnailPath: require("../../assets/images/views/personal-works/marseille.jpg"),
                       URL: "https://unsplash.com/photos/qB1h8ruSKnI",
                       sourceIcon: <IconUnsplash />
                     },
                     {
-                      thumbnailPath:
-                        PATHS.img + "views/personal-works/death-valley.jpg",
+                      thumbnailPath: require("../../assets/images/views/personal-works/death-valley.jpg"),
                       URL:
                         "https://500px.com/photo/177991327/thirsty-coyote-death-valley-ca-by-johan-mouchet",
                       sourceIcon: <Icon500px />
                     },
                     {
-                      thumbnailPath:
-                        PATHS.img + "views/personal-works/london.jpg",
+                      thumbnailPath: require("../../assets/images/views/personal-works/london.jpg"),
                       URL: "https://unsplash.com/photos/5qeFuSId3H0",
                       sourceIcon: <IconUnsplash />
                     },
                     {
-                      thumbnailPath:
-                        PATHS.img + "views/personal-works/copenhagen.jpg",
+                      thumbnailPath: require("../../assets/images/views/personal-works/copenhagen.jpg"),
                       URL: "https://unsplash.com/photos/sTBdWFQKDHE",
                       sourceIcon: <IconUnsplash />
                     },
                     {
-                      thumbnailPath:
-                        PATHS.img +
-                        "views/personal-works/south-cost-of-england.jpg",
+                      thumbnailPath: require("../../assets/images/views/personal-works/south-cost-of-england.jpg"),
                       URL: "https://youtu.be/NAsS1T_V8-k",
                       sourceIcon: <IconYoutube />
                     }
