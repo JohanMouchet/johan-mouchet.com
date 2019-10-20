@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react";
-import { formatDistanceStrict } from "date-fns";
+import { formatDistance } from "date-fns";
 import "./experience.scss";
 import { Projects } from "../";
 
@@ -61,7 +61,11 @@ const Experience = (props: Props) => {
             </span>
             <span className="c-experience__duration">
               {" "}
-              ({formatDistanceStrict(experience.startDate, experience.endDate)})
+              (
+              {formatDistance(experience.startDate, experience.endDate, {
+                addSuffix: false
+              })}
+              )
             </span>
             {experience.contractType && (
               <span className="c-experience__type">
