@@ -56,6 +56,7 @@ const Menu = (props: Props) => {
                   )) ||
                     (item.button && <Button {...item.button} />) ||
                     (item.menu && renderMenu(menu, true))}
+                  {/* Pass children to Button */}
                 </li>
               ))}
         </ul>

@@ -34,7 +34,7 @@ const Card = (props: Props) => {
       {(banner || bannerUrl) && (
         <Tag
           className="o-card__banner"
-          style={bannerUrl && `backgroundImage: url('${bannerUrl}')`}
+          style={bannerUrl && { backgroundImage: `url(${bannerUrl})` }}
         >
           {banner === true ? "" : banner}
         </Tag>

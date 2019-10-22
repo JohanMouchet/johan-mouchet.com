@@ -441,7 +441,7 @@ const StyleGuide = () => {
                           <td>
                             <hr
                               className="wow"
-                              style="margin-top: 0; margin-bottom: 0;"
+                              style={{ marginTop: "0", marginBottom: "0" }}
                             />
                           </td>
                         </tr>
@@ -1002,7 +1002,9 @@ const StyleGuide = () => {
                 </h2>
                 <div className="grid">
                   <div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
-                    <Button type="anchor" text="Button" url="#" />
+                    <Button type="anchor" url="#">
+                      Button
+                    </Button>
 
                     <code>.o-button</code>
                   </div>
@@ -1010,12 +1012,13 @@ const StyleGuide = () => {
                   <div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
                     <Button
                       type="anchor"
-                      text="Button"
                       url="#"
                       metadata={{
                         modifierClasses: ["primary"]
                       }}
-                    />
+                    >
+                      Button
+                    </Button>
 
                     <code>&amp;.o-button--primary</code>
                   </div>
@@ -1023,12 +1026,13 @@ const StyleGuide = () => {
                   <div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
                     <Button
                       type="anchor"
-                      text="Button"
                       url="#"
                       metadata={{
                         modifierClasses: ["secondary"]
                       }}
-                    />
+                    >
+                      Button
+                    </Button>
 
                     <code>&amp;.o-button--secondary</code>
                   </div>
@@ -1036,14 +1040,15 @@ const StyleGuide = () => {
                   <div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
                     <Button
                       type="anchor"
-                      text="Button"
                       url="#"
                       metadata={{
                         attributes: {
                           disabled: ""
                         }
                       }}
-                    />
+                    >
+                      Button
+                    </Button>
 
                     <code>&amp;[disabled]</code>
                   </div>
@@ -1102,71 +1107,76 @@ const StyleGuide = () => {
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
                       url="https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}"
-                      icon={IconFacebook}
-                      text="Share"
+                      icon={<IconFacebook />}
                       counter={10}
                       metadata={{
                         attributes: {
                           title: "Share on Facebook"
                         }
                       }}
-                    />
+                    >
+                      Share
+                    </ButtonSocial>
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
                       url="https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}"
-                      icon={IconTwitter}
-                      text="Tweet"
+                      icon={<IconTwitter />}
                       counter={10}
                       metadata={{
                         attributes: {
                           title: "Tweet this"
                         }
                       }}
-                    />
+                    >
+                      Tweet
+                    </ButtonSocial>
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
                       url="https://plus.google.com/share?url={URL}"
-                      icon={IconGooglePlus}
-                      text="Share"
+                      icon={<IconGooglePlus />}
                       counter={10}
                       metadata={{
                         attributes: {
                           title: "Share on Google+"
                         }
                       }}
-                    />
+                    >
+                      Share
+                    </ButtonSocial>
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
                       url="http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}"
-                      icon={IconPinterest}
-                      text="Pin it"
+                      icon={<IconPinterest />}
                       counter={10}
                       metadata={{
                         attributes: {
                           title: "Pin it"
                         }
                       }}
-                    />
+                    >
+                      Pin it
+                    </ButtonSocial>
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
                       url="http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}"
-                      icon={IconLinkedIn}
-                      text="Share"
+                      icon={<IconLinkedIn />}
                       counter={10}
                       metadata={{
                         attributes: {
                           title: "Share on LinkedIn"
                         }
                       }}
-                    />
+                    >
+                      Share
+                    </ButtonSocial>
                   </div>
                 </div>
 
@@ -1174,8 +1184,7 @@ const StyleGuide = () => {
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
                       url="https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}"
-                      icon={IconFacebook}
-                      text="Share"
+                      icon={<IconFacebook />}
                       counter={10}
                       metadata={{
                         attributes: {
@@ -1183,14 +1192,15 @@ const StyleGuide = () => {
                         },
                         modifierClasses: ["social-facebook"]
                       }}
-                    />
+                    >
+                      Share
+                    </ButtonSocial>
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
                       url="https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}"
-                      icon={IconTwitter}
-                      text="Tweet"
+                      icon={<IconTwitter />}
                       counter={10}
                       metadata={{
                         attributes: {
@@ -1198,14 +1208,15 @@ const StyleGuide = () => {
                         },
                         modifierClasses: ["social-twitter"]
                       }}
-                    />
+                    >
+                      Tweet
+                    </ButtonSocial>
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
                       url="https://plus.google.com/share?url={URL}"
-                      icon={IconGooglePlus}
-                      text="Share"
+                      icon={<IconGooglePlus />}
                       counter={10}
                       metadata={{
                         attributes: {
@@ -1213,14 +1224,15 @@ const StyleGuide = () => {
                         },
                         modifierClasses: ["social-googleplus"]
                       }}
-                    />
+                    >
+                      Share
+                    </ButtonSocial>
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
                       url="http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}"
-                      icon={IconPinterest}
-                      text="Pin it"
+                      icon={<IconPinterest />}
                       counter={10}
                       metadata={{
                         attributes: {
@@ -1228,14 +1240,15 @@ const StyleGuide = () => {
                         },
                         modifierClasses: ["social-pinterest"]
                       }}
-                    />
+                    >
+                      Pin it
+                    </ButtonSocial>
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocial
                       url="http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}"
-                      icon={IconLinkedIn}
-                      text="Share"
+                      icon={<IconLinkedIn />}
                       counter={10}
                       metadata={{
                         attributes: {
@@ -1243,7 +1256,9 @@ const StyleGuide = () => {
                         },
                         modifierClasses: ["social-linkedin"]
                       }}
-                    />
+                    >
+                      Share
+                    </ButtonSocial>
                   </div>
                 </div>
 
@@ -1253,23 +1268,23 @@ const StyleGuide = () => {
                 </p>
                 <div className="grid">
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-                    <ButtonSocialBadge url="{URL}" icon={IconFacebook} />
+                    <ButtonSocialBadge url="{URL}" icon={<IconFacebook />} />
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-                    <ButtonSocialBadge url="{URL}" icon={IconTwitter} />
+                    <ButtonSocialBadge url="{URL}" icon={<IconTwitter />} />
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-                    <ButtonSocialBadge url="{URL}" icon={IconGooglePlus} />
+                    <ButtonSocialBadge url="{URL}" icon={<IconGooglePlus />} />
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-                    <ButtonSocialBadge url="{URL}" icon={IconPinterest} />
+                    <ButtonSocialBadge url="{URL}" icon={<IconPinterest />} />
                   </div>
 
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
-                    <ButtonSocialBadge url="{URL}" icon={IconLinkedIn} />
+                    <ButtonSocialBadge url="{URL}" icon={<IconLinkedIn />} />
                   </div>
                 </div>
 
@@ -1277,7 +1292,7 @@ const StyleGuide = () => {
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocialBadge
                       url="{URL}"
-                      icon={IconFacebook}
+                      icon={<IconFacebook />}
                       metadata={{
                         modifierClasses: ["social-facebook"]
                       }}
@@ -1287,7 +1302,7 @@ const StyleGuide = () => {
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocialBadge
                       url="{URL}"
-                      icon={IconTwitter}
+                      icon={<IconTwitter />}
                       metadata={{
                         modifierClasses: ["social-twitter"]
                       }}
@@ -1297,7 +1312,7 @@ const StyleGuide = () => {
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocialBadge
                       url="{URL}"
-                      icon={IconGooglePlus}
+                      icon={<IconGooglePlus />}
                       metadata={{
                         modifierClasses: ["social-googleplus"]
                       }}
@@ -1307,7 +1322,7 @@ const StyleGuide = () => {
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocialBadge
                       url="{URL}"
-                      icon={IconPinterest}
+                      icon={<IconPinterest />}
                       metadata={{
                         modifierClasses: ["social-pinterest"]
                       }}
@@ -1317,7 +1332,7 @@ const StyleGuide = () => {
                   <div className="cell cell--6-@xs cell--@sm u-vr--bottom-1-@xs">
                     <ButtonSocialBadge
                       url="{URL}"
-                      icon={IconLinkedIn}
+                      icon={<IconLinkedIn />}
                       metadata={{
                         modifierClasses: ["social-linkedin"]
                       }}

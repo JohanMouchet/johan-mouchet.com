@@ -36,7 +36,7 @@ const Accordion = (props: Props) => {
             <i
               className={`o-accordion__thumb-icon material-icons ${index > 0 &&
                 "wow fadeInLeft"}`}
-              data-wow-delay={index > 0 && (index * 0.15)`s`}
+              data-wow-delay={index > 0 && index * 0.15 + "s"}
             >
               chevron_right
             </i>
