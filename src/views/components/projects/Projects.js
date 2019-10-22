@@ -10,13 +10,13 @@ type Props = {
     {
       name: string,
       tagline?: string,
-      URL: string,
+      url: string,
       lede: string,
       thumbnailPath: string,
       awards?: [
         {
           name: string,
-          URL: string,
+          url: string,
           category: string
         }
       ],
@@ -33,7 +33,7 @@ const Projects = (props: Props) => {
 
   const renderThumbnail = project => (
     <a
-      href={project.URL}
+      href={project.url}
       target="_blank"
       rel="noopener noreferrer"
       className="c-project__link"
@@ -44,7 +44,7 @@ const Projects = (props: Props) => {
         alt={project.name}
       />
       <div
-        href={project.URL}
+        href={project.url}
         target="_blank"
         rel="noopener noreferrer"
         className="c-project__overlay"
@@ -78,7 +78,7 @@ const Projects = (props: Props) => {
         >
           {project.awards.map(award => (
             <li className="c-project__award">
-              <a className="c-project__award-icon" href={award.URL}>
+              <a className="c-project__award-icon" href={award.url}>
                 <IconAward />
               </a>
               <span className="c-project__award-name">

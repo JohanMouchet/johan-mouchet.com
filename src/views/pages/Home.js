@@ -160,7 +160,7 @@ const Home = () => {
                     {
                       establishment: {
                         name: "SUPINFO International University",
-                        URL: "https://www.supinfo.com/"
+                        url: "https://www.supinfo.com/"
                       },
                       location: "London",
                       graduationYear: 2015,
@@ -169,7 +169,7 @@ const Home = () => {
                     {
                       establishment: {
                         name: "SUPINFO International University",
-                        URL: "https://www.supinfo.com/"
+                        url: "https://www.supinfo.com/"
                       },
                       location: "Marseille",
                       graduationYear: 2013,
@@ -178,7 +178,7 @@ const Home = () => {
                     {
                       establishment: {
                         name: "Chevreul Blancarde high school",
-                        URL: "http://www.chevreulblancarde.com/"
+                        url: "http://www.chevreulblancarde.com/"
                       },
                       location: "Marseille",
                       graduationYear: 2010,
@@ -208,52 +208,52 @@ const Home = () => {
                   medias={[
                     {
                       name: "LinkedIn",
-                      URL: "https://www.linkedin.com/in/johanmouchet",
+                      url: "https://www.linkedin.com/in/johanmouchet",
                       icon: <IconLinkedIn />
                     },
                     {
                       name: "Twitter",
-                      URL: "https://twitter.com/JohanMouchet",
+                      url: "https://twitter.com/JohanMouchet",
                       icon: <IconTwitter />
                     },
                     {
                       name: "CodePen",
-                      URL: "http://codepen.io/johanmouchet/",
+                      url: "http://codepen.io/johanmouchet/",
                       icon: <IconCodepen />
                     },
                     {
                       name: "Dribbble",
-                      URL: "https://dribbble.com/JohanMouchet/likes",
+                      url: "https://dribbble.com/JohanMouchet/likes",
                       icon: <IconDribbble />
                     },
                     {
                       name: "GitHub",
-                      URL: "https://github.com/JohanMouchet",
+                      url: "https://github.com/JohanMouchet",
                       icon: <IconGithub />
                     },
                     {
                       name: "Unsplash",
-                      URL: "https://unsplash.com/@johanmouchet/",
+                      url: "https://unsplash.com/@johanmouchet/",
                       icon: <IconUnsplash />
                     },
                     {
                       name: "500px",
-                      URL: "https://500px.com/johanmouchet/",
+                      url: "https://500px.com/johanmouchet/",
                       icon: <Icon500px />
                     },
                     {
                       name: "Instagram",
-                      URL: "https://instagram.com/johanmouchet/",
+                      url: "https://instagram.com/johanmouchet/",
                       icon: <IconInstagram />
                     },
                     {
                       name: "YouTube",
-                      URL: "https://www.youtube.com/c/JohanMouchet",
+                      url: "https://www.youtube.com/c/JohanMouchet",
                       icon: <IconYoutube />
                     },
                     {
                       name: "Spotify",
-                      URL: "https://open.spotify.com/user/1126411547",
+                      url: "https://open.spotify.com/user/1126411547",
                       icon: <IconSpotify />
                     }
                   ]}
@@ -271,7 +271,7 @@ const Home = () => {
                   experiences={[
                     {
                       company: {
-                        URL: "https://isobar.com/au/en/",
+                        url: "https://isobar.com/au/en/",
                         name: "Isobar"
                       },
                       location: "Melbourne",
@@ -284,7 +284,7 @@ const Home = () => {
                         {
                           name: "Zoos Victoria",
                           tagline: "CatVR: Safe Cat, Safe Wildlife",
-                          URL: "http://www.safecat.org.au",
+                          url: "http://www.safecat.org.au",
                           lede:
                             "Joint <em>RSPCA</em> campaign website to help cat owners give their pet the safest and happiest life while ensuring they have no link to loss of wildlife.",
                           thumbnailPath: require("../../assets/images/views/career-experiences/zoos-victoria.jpg"),
@@ -292,13 +292,13 @@ const Home = () => {
                             {
                               name:
                                 "MADC 2018 (Melbourne Advertising and Design Club)",
-                              URL:
+                              url:
                                 "https://twitter.com/isobarAU/status/1058125158752313344?s=20",
                               category: "Best PR experience"
                             },
                             {
                               name: "One Show Awards shortlist",
-                              URL:
+                              url:
                                 "https://www.oneshow.org/viewentries/?id=51888",
                               category: "Media Relations"
                             }
@@ -316,7 +316,7 @@ const Home = () => {
                         },
                         {
                           name: "Klip Studio",
-                          URL: "https://www.klipdesk.co",
+                          url: "https://www.klipdesk.co",
                           lede:
                             "Web application dedicated to the sport rights holders industry. Allows to edit live or recorded streams to produce highlights shareable on social media.",
                           thumbnailPath: require("../../assets/images/views/career-experiences/klip-studio.jpg"),
@@ -333,7 +333,7 @@ const Home = () => {
                         {
                           name: "Pearson",
                           tagline: "Asia",
-                          URL: "https://www.pearson.com/asia/",
+                          url: "https://www.pearson.com/asia/",
                           lede:
                             "Websites creation related to education for Pearson’s launch in three new markets through Asia.",
                           thumbnailPath: require("../../assets/images/views/career-experiences/pearson.jpg"),
@@ -348,7 +348,7 @@ const Home = () => {
                     },
                     {
                       company: {
-                        URL: "https://www.amaze.com/",
+                        url: "https://www.amaze.com/",
                         name: "Amaze"
                       },
                       location: "London",
@@ -361,7 +361,7 @@ const Home = () => {
                         {
                           name: "Lexus",
                           tagline: "v11",
-                          URL: "https://www.lexus.eu/en/",
+                          url: "https://www.lexus.eu/en/",
                           lede:
                             "Website redesign to embody the new brand direction focused on a premium and lifestyle experience. Deployed into 35 countries of the European market and translated into 27 languages.",
                           thumbnailPath: require("../../assets/images/views/career-experiences/lexus.jpg"),
@@ -381,7 +381,7 @@ const Home = () => {
                         {
                           name: "Lexus",
                           tagline: "Safety System Plus",
-                          URL:
+                          url:
                             "https://www.lexus.eu/discover-lexus/technology/lexus-safety-system/",
                           lede:
                             "Microsite creation to showcase <em>Lexus' Safety System Plus</em> technology.",
@@ -398,7 +398,7 @@ const Home = () => {
                         {
                           name: "Navico",
                           tagline: "Lowrance",
-                          URL: "https://www.lowrance.com/",
+                          url: "https://www.lowrance.com/",
                           lede:
                             "Delivery within a short turnaround of a global eCommerce website for a manufacturer of consumer marine electronics.",
                           thumbnailPath: require("../../assets/images/views/career-experiences/lowrance.jpg"),
@@ -416,7 +416,7 @@ const Home = () => {
                     },
                     {
                       company: {
-                        URL: "https://www.surviemerformation.com/",
+                        url: "https://www.surviemerformation.com/",
                         name: "Survie Mer Formation"
                       },
                       location: "London",
@@ -430,7 +430,7 @@ const Home = () => {
                       projects: [
                         {
                           name: "Survie Mer Formation",
-                          URL: "https://www.surviemerformation.com/",
+                          url: "https://www.surviemerformation.com/",
                           thumbnailPath: require("../../assets/images/views/career-experiences/survie-mer-formation.jpg"),
                           details: [
                             "<em>Growth Hacking</em> strategy development (<em>AARRR</em> model) meant to increase online registrations",
@@ -450,7 +450,7 @@ const Home = () => {
                     },
                     {
                       company: {
-                        URL: "http://www.tmwunlimited.com/",
+                        url: "http://www.tmwunlimited.com/",
                         name: "TMW Unlimited"
                       },
                       location: "London",
@@ -462,7 +462,7 @@ const Home = () => {
                       projects: [
                         {
                           name: "Business Banking Insight",
-                          URL: "http://www.businessbankinginsight.co.uk",
+                          url: "http://www.businessbankinginsight.co.uk",
                           lede:
                             "Analysis website of business banking providers, supported by the <em>HR Treasury</em>.",
                           thumbnailPath: require("../../assets/images/views/career-experiences/business-banking-insight.jpg"),
@@ -477,7 +477,7 @@ const Home = () => {
                         {
                           name: "Prince's trust",
                           tagline: "#partofPT campaign",
-                          URL:
+                          url:
                             "https://partofpt.princes-trust.org.uk/part-of-pt/",
                           lede:
                             "Crowdsourced event listing microsite for the <em>Prince's Trust</em> 40th anniversary celebration.",
@@ -492,7 +492,7 @@ const Home = () => {
                         {
                           name: "Sport Relief",
                           tagline: "#Skipathon campaign (Over)",
-                          URL: "https://www.youtube.com/watch?v=3PyZVDrO_aI",
+                          url: "https://www.youtube.com/watch?v=3PyZVDrO_aI",
                           lede:
                             "Mobile web browser game based on rope skipping.",
                           thumbnailPath: require("../../assets/images/views/career-experiences/sport-relief-skipathon.jpg"),
@@ -510,7 +510,7 @@ const Home = () => {
                     {
                       company: {
                         name: "MOVE digital",
-                        URL: "http://www.movedigital.co.uk/"
+                        url: "http://www.movedigital.co.uk/"
                       },
                       location: "London",
                       jobTitle: "Web designer & developer",
@@ -521,22 +521,22 @@ const Home = () => {
                       projects: [
                         {
                           name: "Weholite",
-                          URL: "http://www.weholite.co.uk/",
+                          url: "http://www.weholite.co.uk/",
                           thumbnailPath: require("../../assets/images/views/career-experiences/weholite.jpg")
                         },
                         {
                           name: "Hiremech",
-                          URL: "http://www.hiremech.co.uk/",
+                          url: "http://www.hiremech.co.uk/",
                           thumbnailPath: require("../../assets/images/views/career-experiences/hiremech.jpg")
                         },
                         {
                           name: "Global Materials Handling",
-                          URL: "http://globalforktrucks.com/",
+                          url: "http://globalforktrucks.com/",
                           thumbnailPath: require("../../assets/images/views/career-experiences/global-materials-handling.jpg")
                         },
                         {
                           name: "Proton Motor",
-                          URL: "http://www.proton-motor.com/",
+                          url: "http://www.proton-motor.com/",
                           thumbnailPath: require("../../assets/images/views/career-experiences/proton-motor.jpg")
                         }
                       ]
@@ -567,7 +567,7 @@ const Home = () => {
                     {
                       company: {
                         name: "Radigraph",
-                        URL: "http://www.imprimerie-marseille-radigraph.fr/"
+                        url: "http://www.imprimerie-marseille-radigraph.fr/"
                       },
                       location: "Marseille",
                       jobTitle: "Front-end developer",
@@ -580,7 +580,7 @@ const Home = () => {
                     {
                       company: {
                         name: "Winlink santé",
-                        URL: "http://www.winlinksante.com/"
+                        url: "http://www.winlinksante.com/"
                       },
                       location: "Marseille",
                       jobTitle: "Front-end developer",
@@ -593,7 +593,7 @@ const Home = () => {
                     {
                       company: {
                         name: "Digitick",
-                        URL: "http://next.digitick.com/"
+                        url: "http://next.digitick.com/"
                       },
                       location: "Marseille",
                       jobTitle: "Front-end developer",
@@ -606,7 +606,7 @@ const Home = () => {
                     {
                       company: {
                         name: "Survie Mer Formation",
-                        URL: "http://www.surviemerformation.com/"
+                        url: "http://www.surviemerformation.com/"
                       },
                       location: "Marseille",
                       jobTitle: "Front-end developer",
@@ -633,7 +633,7 @@ const Home = () => {
                       relation: "Former line manager",
                       company: {
                         name: "Amaze",
-                        URL: "https://www.amaze.com/"
+                        url: "https://www.amaze.com/"
                       },
                       jobTitle: "Tech Director",
                       contacts: {
@@ -647,7 +647,7 @@ const Home = () => {
                       relation: "Former coworker",
                       company: {
                         name: "Amaze",
-                        URL: "https://www.amaze.com/"
+                        url: "https://www.amaze.com/"
                       },
                       jobTitle: "Senior Developer",
                       contacts: {
@@ -661,7 +661,7 @@ const Home = () => {
                       relation: "Former line manager",
                       company: {
                         name: "TMW Unlimited",
-                        URL: "http://www.tmwunlimited.com"
+                        url: "http://www.tmwunlimited.com"
                       },
                       jobTitle: "Creative Technology Lead",
                       contacts: {
@@ -689,33 +689,33 @@ const Home = () => {
                   works={[
                     {
                       thumbnailPath: require(`../../assets/images/views/personal-works/seville.jpg`),
-                      URL: "https://unsplash.com/photos/NwaCxOL0NTA",
+                      url: "https://unsplash.com/photos/NwaCxOL0NTA",
                       sourceIcon: <IconUnsplash />
                     },
                     {
                       thumbnailPath: require("../../assets/images/views/personal-works/marseille.jpg"),
-                      URL: "https://unsplash.com/photos/qB1h8ruSKnI",
+                      url: "https://unsplash.com/photos/qB1h8ruSKnI",
                       sourceIcon: <IconUnsplash />
                     },
                     {
                       thumbnailPath: require("../../assets/images/views/personal-works/death-valley.jpg"),
-                      URL:
+                      url:
                         "https://500px.com/photo/177991327/thirsty-coyote-death-valley-ca-by-johan-mouchet",
                       sourceIcon: <Icon500px />
                     },
                     {
                       thumbnailPath: require("../../assets/images/views/personal-works/london.jpg"),
-                      URL: "https://unsplash.com/photos/5qeFuSId3H0",
+                      url: "https://unsplash.com/photos/5qeFuSId3H0",
                       sourceIcon: <IconUnsplash />
                     },
                     {
                       thumbnailPath: require("../../assets/images/views/personal-works/copenhagen.jpg"),
-                      URL: "https://unsplash.com/photos/sTBdWFQKDHE",
+                      url: "https://unsplash.com/photos/sTBdWFQKDHE",
                       sourceIcon: <IconUnsplash />
                     },
                     {
                       thumbnailPath: require("../../assets/images/views/personal-works/south-cost-of-england.jpg"),
-                      URL: "https://youtu.be/NAsS1T_V8-k",
+                      url: "https://youtu.be/NAsS1T_V8-k",
                       sourceIcon: <IconYoutube />
                     }
                   ]}

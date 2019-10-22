@@ -7,7 +7,7 @@ type Props = {
   medias: [
     {
       name: string,
-      URL: string,
+      url: string,
       icon: string
     }
   ]
@@ -21,11 +21,11 @@ const SocialMedia = (props: Props) => {
       {medias.map(media => (
         <div
           className="c-social-media cell cell--6-@xs cell--4-@sm cell--12-@md"
-          key={media.URL}
+          key={media.url}
         >
           <a
             className="c-social-media__link"
-            href={media.URL}
+            href={media.url}
             title={`Follow me on ${media.name}`}
             target="_blank"
             rel="noopener noreferrer"

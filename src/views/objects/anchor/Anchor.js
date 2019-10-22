@@ -16,7 +16,7 @@ type Props = {
 };
 
 const Anchor = (props: Props) => {
-  const { tag, url, id, marker, metadata, children } = props;
+  const { tag, url, id, marker, metadata = {}, children } = props;
 
   const AnchorClass = cx("u-anchor", metadata.contextClass);
 

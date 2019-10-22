@@ -12,7 +12,7 @@ type Props = {
       company: [
         {
           name: string,
-          URL: string
+          url: string
         }
       ],
       jobTitle: string,
@@ -54,7 +54,7 @@ const Reference = (props: Props) => {
                 ,{" "}
                 <span className="c-reference__company">
                   <a
-                    href={reference.company.URL}
+                    href={reference.company.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="external-link"

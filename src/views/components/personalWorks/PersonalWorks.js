@@ -4,7 +4,14 @@ import * as React from "react";
 import "./personal-works.scss";
 
 type Props = {
-  works: [{ video: boolean, thumbnailPath: string, sourceIcon: Array<mixed> }]
+  works: [
+    {
+      video?: boolean,
+      url: string,
+      thumbnailPath: string,
+      sourceIcon: Array<mixed>
+    }
+  ]
 };
 
 const PersonalWorks = (props: Props) => {
@@ -21,7 +28,7 @@ const PersonalWorks = (props: Props) => {
             <section className="c-personal-work">
               <a
                 className="c-personal-work__overlay"
-                href={work.URL}
+                href={work.url}
                 target="_blank"
                 rel="noopener noreferrer"
               >

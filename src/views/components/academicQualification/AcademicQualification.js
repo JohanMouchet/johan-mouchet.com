@@ -8,7 +8,7 @@ type Props = {
     {
       establishment: {
         name: string,
-        URL: string
+        url: string
       },
       location: string,
       graduationYear: number,
@@ -27,7 +27,7 @@ const AcademicQualification = (props: Props) => {
           <h3 className="c-academic-qualification__heading">
             <a
               className="c-academic-qualification__establishment"
-              href={qualification.establishment.URL}
+              href={qualification.establishment.url}
             >
               {qualification.establishment.name}
             </a>

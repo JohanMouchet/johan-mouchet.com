@@ -10,7 +10,7 @@ type Props = {
     {
       company: [
         {
-          URL: string,
+          url: string,
           name: string
         }
       ],
@@ -35,9 +35,9 @@ const Experience = (props: Props) => {
         <section className="c-experience" key={experience.startDate}>
           <h3 className="c-experience__heading">
             <a
-              href={experience.company.URL && experience.company.URL}
-              target={experience.company.URL && "_blank"}
-              rel={experience.company.URL && "noopener noreferrer"}
+              href={experience.company.url && experience.company.url}
+              target={experience.company.url && "_blank"}
+              rel={experience.company.url && "noopener noreferrer"}
               className="c-experience__company external-link"
             >
               {experience.company.name}
