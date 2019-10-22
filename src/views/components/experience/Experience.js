@@ -35,17 +35,14 @@ const Experience = (props: Props) => {
         <section className="c-experience" key={experience.startDate}>
           <h3 className="c-experience__heading">
             <a
-              href={experience.company.URL}
+              href={experience.company.URL && experience.company.URL}
               target={experience.company.URL && "_blank"}
               rel={experience.company.URL && "noopener noreferrer"}
-              className={
-                experience.company.URL && "c-experience__company external-link"
-              }
+              className="c-experience__company external-link"
             >
               {experience.company.name}
             </a>
-            ,{experience.location} ⁠—
-            {experience.jobTitle}
+            , {experience.location} ⁠— {experience.jobTitle}
           </h3>
 
           <p className="c-experience__subheading">
@@ -58,9 +55,8 @@ const Experience = (props: Props) => {
                     experience.startDate.getFullYear() &&
                   " – " + experience.endDate.getFullYear()}
               {/* TODO: Year and month */}
-            </span>
+            </span>{" "}
             <span className="c-experience__duration">
-              {" "}
               (
               {formatDistance(experience.startDate, experience.endDate, {
                 addSuffix: false
@@ -77,7 +73,7 @@ const Experience = (props: Props) => {
 
           <p className="c-experience__lede">{experience.lede}</p>
 
-          {/* {experience.projects && <Projects {...experience.projects} />} */}
+          {experience.projects && <Projects projects={experience.projects} />}
         </section>
       ));
 };
