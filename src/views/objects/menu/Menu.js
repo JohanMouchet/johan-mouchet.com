@@ -5,18 +5,18 @@ import cx from "classnames";
 import "./menu.scss";
 import { Button } from "../";
 
-type MenuItem = {
-  text: string,
-  url?: string,
-  button?: Button,
-  metadata?: {
-    additionalClasses?: Array<string>
-  },
-  menu?: [MenuItem]
-};
-
 type Props = {
-  menu: [MenuItem]
+  menu: [
+    {
+      text: string,
+      url?: string,
+      button?: Button,
+      metadata?: {
+        additionalClasses?: Array<string>
+      },
+      menu?: [Props]
+    }
+  ]
 };
 
 const Menu = (props: Props) => {
