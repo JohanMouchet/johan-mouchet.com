@@ -27,7 +27,7 @@ const Label = (props: LabelProps) => {
   return (
     <label
       // TODO: props.for renamed to props.id
-      for={id}
+      htmlFor={id}
       className={`${LabelClass} ${!children && "o-form__label--block"}`}
     >
       {children || "&nbsp;"}
@@ -69,7 +69,7 @@ const Field = (props: FieldProps) => {
       id={id}
       type={type}
       name={name}
-      value={value}
+      defaultValue={value}
       className={`${FieldClass} o-form__field--${type}`}
       {...metadata.attributes}
     />
@@ -87,6 +87,7 @@ type ToggleProps = {
   type: string,
   name?: string,
   value?: string,
+  checked?: boolean,
   metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
@@ -95,8 +96,10 @@ type ToggleProps = {
   children?: Node
 };
 
+// TODO fix checked state
+
 const Toggle = (props: ToggleProps) => {
-  const { id, type, name, value, metadata = {}, children } = props;
+  const { id, type, name, value, checked, metadata = {}, children } = props;
 
   const ToggleClass = cx(
     "o-form__toggle",
@@ -113,8 +116,9 @@ const Toggle = (props: ToggleProps) => {
         id={id}
         type={type}
         name={name}
-        value={value}
+        defaultValue={value}
         className="o-form__toggle-input"
+        defaultChecked={checked}
         {...metadata.attributes}
       />
       <span className="o-form__toggle-icon"></span>
@@ -212,7 +216,7 @@ const Select = (props: SelectProps) => {
     >
       {options.map(option => (
         <option
-          value={option.value}
+          defaultValue={option.value}
           {...metadata.attributes}
           key={option.value}
         >

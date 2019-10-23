@@ -2076,7 +2076,7 @@ const StyleGuide = () => {
                 </h2>
                 <div className="grid">
                   <div className="cell cell--6-@xs cell--4-@sm cell--2-@md">
-                    <span data-tooltip="Top tooltip" tabindex="0">
+                    <span data-tooltip="Top tooltip" tabIndex="0">
                       Top (default)
                     </span>{" "}
                     <br />
@@ -2088,7 +2088,7 @@ const StyleGuide = () => {
                     <span
                       data-tooltip="Right tooltip"
                       data-tooltip-right
-                      tabindex="0"
+                      tabIndex="0"
                     >
                       Right
                     </span>{" "}
@@ -2099,7 +2099,7 @@ const StyleGuide = () => {
                     <span
                       data-tooltip="Bottom tooltip"
                       data-tooltip-bottom
-                      tabindex="0"
+                      tabIndex="0"
                     >
                       Bottom
                     </span>{" "}
@@ -2110,7 +2110,7 @@ const StyleGuide = () => {
                     <span
                       data-tooltip="Left tooltip"
                       data-tooltip-left
-                      tabindex="0"
+                      tabIndex="0"
                     >
                       Left
                     </span>{" "}
@@ -2121,7 +2121,7 @@ const StyleGuide = () => {
                     <span
                       data-tooltip="Indicator tooltip"
                       data-tooltip-indicator
-                      tabindex="0"
+                      tabIndex="0"
                     >
                       Indicator
                     </span>{" "}
@@ -2132,7 +2132,7 @@ const StyleGuide = () => {
                     <span
                       data-tooltip="Multiline tooltip, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod"
                       data-tooltip-multiline
-                      tabindex="0"
+                      tabIndex="0"
                     >
                       Multiline
                     </span>

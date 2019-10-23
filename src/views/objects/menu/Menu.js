@@ -49,7 +49,7 @@ const Menu = (props: Props) => {
                         item.metadata.additionalClasses
                       )}
                       href={item.url}
-                      tabindex={!item.url && "0"}
+                      tabIndex={!item.url && "0"}
                     >
                       {item.text}
                     </a>
