@@ -724,7 +724,7 @@ const StyleGuide = () => {
                             metadata={{
                               attributes: {
                                 placeholder: "Disabled",
-                                disabled: ""
+                                disabled: true
                               }
                             }}
                           />
@@ -803,11 +803,7 @@ const StyleGuide = () => {
                             name="radioChoice"
                             value="option-1"
                             text="Option 1"
-                            metadata={{
-                              attributes: {
-                                checked: ""
-                              }
-                            }}
+                            checked
                           />
 
                           <Toggle
@@ -824,7 +820,7 @@ const StyleGuide = () => {
                             text="Disabled"
                             metadata={{
                               attributes: {
-                                disabled: ""
+                                disabled: true
                               }
                             }}
                           />
@@ -845,11 +841,7 @@ const StyleGuide = () => {
                             name="checkboxChoice"
                             value="option-1"
                             text="Option 1"
-                            metadata={{
-                              attributes: {
-                                checked: ""
-                              }
-                            }}
+                            checked
                           />
 
                           <Toggle
@@ -866,7 +858,7 @@ const StyleGuide = () => {
                             text="Disabled"
                             metadata={{
                               attributes: {
-                                disabled: ""
+                                disabled: true
                               }
                             }}
                           />
@@ -1043,7 +1035,7 @@ const StyleGuide = () => {
                       url="#"
                       metadata={{
                         attributes: {
-                          disabled: ""
+                          disabled: true
                         }
                       }}
                     >

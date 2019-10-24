@@ -100,11 +100,9 @@ type ToggleProps = {
 
 const Toggle = (props: ToggleProps) => {
   const { id, type, name, value, checked, metadata = {}, children } = props;
-  const [check, setCheck] = useState(false);
+  const [check] = useState(checked);
 
-  useEffect(check => {
-    check = !check;
-  });
+  const handleChange = check => (check = !check);
 
   const ToggleClass = cx(
     "o-form__toggle",
@@ -124,9 +122,8 @@ const Toggle = (props: ToggleProps) => {
         defaultValue={value}
         className="o-form__toggle-input"
         defaultChecked={checked}
-        checked={check}
         {...metadata.attributes}
-        onChange={() => setCheck(check)}
+        onChange={() => handleChange(check)}
       />
       <span className="o-form__toggle-icon"></span>
       {children && <span className="o-form__toggle-text">{children}</span>}
