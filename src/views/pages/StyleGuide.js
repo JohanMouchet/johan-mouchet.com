@@ -138,33 +138,54 @@ const StyleGuide = () => {
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
                       banner
-                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-primary-lighter</code>'
+                      body={
+                        <>
+                          <div className="sg-swatch__color-code"></div>
+                          <code className="sg-swatch__color-name u-select--all">
+                            $color-primary-lighter
+                          </code>
+                        </>
+                      }
                       metadata={{
                         contextClass: "sg-swatch",
                         additionalClasses: ["sg-swatch--primary-lighter"],
-                        modifierClasses: ["sm "]
+                        modifierClasses: ["sm"]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
                       banner
-                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-primary</code>'
+                      body={
+                        <>
+                          <div className="sg-swatch__color-code"></div>
+                          <code className="sg-swatch__color-name u-select--all">
+                            $color-primary
+                          </code>
+                        </>
+                      }
                       metadata={{
                         contextClass: "sg-swatch",
                         additionalClasses: ["sg-swatch--primary"],
-                        modifierClasses: ["sm "]
+                        modifierClasses: ["sm"]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
                       banner
-                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-primary-darker</code>'
+                      body={
+                        <>
+                          <div className="sg-swatch__color-code"></div>
+                          <code className="sg-swatch__color-name u-select--all">
+                            $color-primary-darker
+                          </code>
+                        </>
+                      }
                       metadata={{
                         contextClass: "sg-swatch",
                         additionalClasses: ["sg-swatch--primary-darker"],
-                        modifierClasses: ["sm "]
+                        modifierClasses: ["sm"]
                       }}
                     />
                   </div>
@@ -172,33 +193,54 @@ const StyleGuide = () => {
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
                       banner
-                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-secondary-lighter</code>'
+                      body={
+                        <>
+                          <div className="sg-swatch__color-code"></div>
+                          <code className="sg-swatch__color-name u-select--all">
+                            $color-secondary-lighter
+                          </code>
+                        </>
+                      }
                       metadata={{
                         contextClass: "sg-swatch",
                         additionalClasses: ["sg-swatch--secondary-lighter"],
-                        modifierClasses: ["sm "]
+                        modifierClasses: ["sm"]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
                       banner
-                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-secondary</code>'
+                      body={
+                        <>
+                          <div className="sg-swatch__color-code"></div>
+                          <code className="sg-swatch__color-name u-select--all">
+                            $color-secondary
+                          </code>
+                        </>
+                      }
                       metadata={{
                         contextClass: "sg-swatch",
                         additionalClasses: ["sg-swatch--secondary"],
-                        modifierClasses: ["sm "]
+                        modifierClasses: ["sm"]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
                       banner
-                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-secondary-darker</code>'
+                      body={
+                        <>
+                          <div className="sg-swatch__color-code"></div>
+                          <code className="sg-swatch__color-name u-select--all">
+                            $color-secondary-darker
+                          </code>
+                        </>
+                      }
                       metadata={{
                         contextClass: "sg-swatch",
                         additionalClasses: ["sg-swatch--secondary-darker"],
-                        modifierClasses: ["sm "]
+                        modifierClasses: ["sm"]
                       }}
                     />
                   </div>
@@ -206,33 +248,54 @@ const StyleGuide = () => {
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
                       banner
-                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-gray-lighter</code>'
+                      body={
+                        <>
+                          <div className="sg-swatch__color-code"></div>
+                          <code className="sg-swatch__color-name u-select--all">
+                            $color-gray-lighter
+                          </code>
+                        </>
+                      }
                       metadata={{
                         contextClass: "sg-swatch",
                         additionalClasses: ["sg-swatch--gray-lighter"],
-                        modifierClasses: ["sm "]
+                        modifierClasses: ["sm"]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
                       banner
-                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-gray</code>'
+                      body={
+                        <>
+                          <div className="sg-swatch__color-code"></div>
+                          <code className="sg-swatch__color-name u-select--all">
+                            $color-gray
+                          </code>
+                        </>
+                      }
                       metadata={{
                         contextClass: "sg-swatch",
                         additionalClasses: ["sg-swatch--gray"],
-                        modifierClasses: ["sm "]
+                        modifierClasses: ["sm"]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
                       banner
-                      body='<div className="sg-swatch__color-code"></div><code className="sg-swatch__color-name u-select--all">$color-gray-darker</code>'
+                      body={
+                        <>
+                          <div className="sg-swatch__color-code"></div>
+                          <code className="sg-swatch__color-name u-select--all">
+                            $color-gray-darker
+                          </code>
+                        </>
+                      }
                       metadata={{
                         contextClass: "sg-swatch",
                         additionalClasses: ["sg-swatch--gray-darker"],
-                        modifierClasses: ["sm "]
+                        modifierClasses: ["sm"]
                       }}
                     />
                   </div>
@@ -257,8 +320,13 @@ const StyleGuide = () => {
                 <div className="grid">
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
                     <Card
-                      header='<span className="sg-typeface__glyph">Aa</span>'
-                      body='<h3>Primary typeface</h3><p className="sg-typeface__name"></p>'
+                      header={<span className="sg-typeface__glyph">Aa</span>}
+                      body={
+                        <>
+                          <h3>Primary typeface</h3>
+                          <p className="sg-typeface__name"></p>
+                        </>
+                      }
                       metadata={{
                         context: "sg-typeface",
                         additionalClasses: ["sg-typeface--font-primary"]
@@ -267,8 +335,13 @@ const StyleGuide = () => {
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
                     <Card
-                      header='<span className="sg-typeface__glyph">Aa</span>'
-                      body='<h3>Secondary typeface</h3><p className="sg-typeface__name"></p>'
+                      header={<span className="sg-typeface__glyph">Aa</span>}
+                      body={
+                        <>
+                          <h3>Secondary typeface</h3>
+                          <p className="sg-typeface__name"></p>
+                        </>
+                      }
                       metadata={{
                         context: "sg-typeface",
                         additionalClasses: ["sg-typeface--font-secondary"]
@@ -277,8 +350,13 @@ const StyleGuide = () => {
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
                     <Card
-                      header='<span className="sg-typeface__glyph">Aa</span>'
-                      body='<h3>Tertiary typeface</h3><p className="sg-typeface__name"></p>'
+                      header={<span className="sg-typeface__glyph">Aa</span>}
+                      body={
+                        <>
+                          <h3>Tertiary typeface</h3>
+                          <p className="sg-typeface__name"></p>
+                        </>
+                      }
                       metadata={{
                         context: "sg-typeface",
                         additionalClasses: ["sg-typeface--font-tertiary"]
@@ -287,8 +365,13 @@ const StyleGuide = () => {
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
                     <Card
-                      header='<span className="sg-typeface__glyph">Aa</span>'
-                      body='<h3>Quaternary typeface</h3><p className="sg-typeface__name"></p>'
+                      header={<span className="sg-typeface__glyph">Aa</span>}
+                      body={
+                        <>
+                          <h3>Quaternary typeface</h3>
+                          <p className="sg-typeface__name"></p>
+                        </>
+                      }
                       metadata={{
                         context: "sg-typeface",
                         additionalClasses: ["sg-typeface--font-quaternary"]
@@ -546,7 +629,7 @@ const StyleGuide = () => {
                 </h2>
                 <Blockquote
                   quote="Design is not just what it looks like and feels like. Design is how it works."
-                  cite='<a href="!#">Steve Jobs</a>'
+                  cite={<a href="!#">Steve Jobs</a>}
                 />
 
                 <p>
@@ -558,7 +641,7 @@ const StyleGuide = () => {
                 </h3>
                 <Blockquote
                   quote="Design is not just what it looks like and feels like. Design is how it works."
-                  cite='<a href="!#">Steve Jobs</a>'
+                  cite={<a href="!#">Steve Jobs</a>}
                   metadata={{
                     modifierClasses: ["pulled"]
                   }}
@@ -660,10 +743,11 @@ const StyleGuide = () => {
                 <h3>Syntax</h3>
                 <pre>
                   <code>
-                    &lt;div className="container <i>container--*</i>"&gt;
-                    &lt;div className="grid <i>g--modifier-*</i>"&gt; &lt;div
-                    className="cell <i>c--modifier-*</i>"&gt;&lt;/div&gt;
-                    &lt;/div&gt; &lt;/div&gt;
+                    {`<div className="container container--*">
+  <div className="grid g--modifier-*">
+    <div className="cell c--modifier-*"></div>
+  </div>
+</div>`}
                   </code>
                 </pre>
                 <em>Responsive:</em> *<code>@xs|@sm|@md|@lg|@xl</code>
@@ -1758,31 +1842,62 @@ const StyleGuide = () => {
                 <div className="grid">
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
                     <Card
-                      header="<h3>Card <code>.o-card__header</code></h3>"
-                      body={`
-										<p>
-											<code>.o-card__body</code> <br />
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, exercitationem dicta temporibus perspiciatis nesciunt accusamus cum, itaque at necessitatibus nostrum aut quo assumenda, culpa amet id. Suscipit provident, dolorem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-										</p>
-										<p>
-											Rem omnis distinctio nihil, neque sequi fugiat facilis, ducimus doloribus, officia iste laudantium quas veniam. Nulla facilis amet, expedita est aut aliquid.
-										</p>`}
-                      footer='<a href="!#">Read more</a> <code>.o-card__footer</code>'
+                      header={
+                        <h3>
+                          Card <code>.o-card__header</code>
+                        </h3>
+                      }
+                      body={
+                        <>
+                          <p>
+                            <code>.o-card__body</code> <br />
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Ipsa, exercitationem dicta temporibus
+                            perspiciatis nesciunt accusamus cum, itaque at
+                            necessitatibus nostrum aut quo assumenda, culpa amet
+                            id. Suscipit provident, dolorem recusandae. Lorem
+                            ipsum dolor sit amet, consectetur adipisicing elit.
+                          </p>
+                          <p>
+                            Rem omnis distinctio nihil, neque sequi fugiat
+                            facilis, ducimus doloribus, officia iste laudantium
+                            quas veniam. Nulla facilis amet, expedita est aut
+                            aliquid.
+                          </p>
+                        </>
+                      }
+                      footer={
+                        <>
+                          <a href="!#">Read more</a>{" "}
+                          <code>.o-card__footer</code>
+                        </>
+                      }
                     />
                   </div>
 
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
                     <Card
-                      header="<h3>Primary card</h3>"
-                      body={`
-										<span><sup className="u-heading--3">$</sup> <span className="u-heading--xl">3.99</span> <sub className="u-heading--sm">/month</sub></span>
-										<hr className="o-card__hr wow" />
-										<ul className="o-list--unstyled o-list--lg">
-											<li>Unlimited storage</li>
-											<li>Advanced Statistics</li>
-											<li>24/7 Support</li>
-										</ul>`}
-                      footer='<a href="!#" className="o-button">Upgrade</a>'
+                      header={<h3>Primary card</h3>}
+                      body={
+                        <>
+                          <span>
+                            <sup className="u-heading--3">$</sup>{" "}
+                            <span className="u-heading--xl">3.99</span>{" "}
+                            <sub className="u-heading--sm">/month</sub>
+                          </span>
+                          <hr className="o-card__hr wow" />
+                          <ul className="o-list--unstyled o-list--lg">
+                            <li>Unlimited storage</li>
+                            <li>Advanced Statistics</li>
+                            <li>24/7 Support</li>
+                          </ul>
+                        </>
+                      }
+                      footer={
+                        <a href="!#" className="o-button">
+                          Upgrade
+                        </a>
+                      }
                       metadata={{
                         additionalClasses: ["u-align--center"],
                         modifierClasses: ["primary "]
@@ -1792,16 +1907,27 @@ const StyleGuide = () => {
 
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
                     <Card
-                      header="<h3>Secondary card</h3>"
-                      body={`
-										<span><sup className="u-heading--3">$</sup> <span className="u-heading--xl">1.99</span> <sub className="u-heading--sm">/month</sub></span>
-										<hr className="o-card__hr wow" />
-										<ul className="o-list--unstyled o-list--lg">
-											<li>25Go storage</li>
-											<li>Basic statistics</li>
-											<li>No support</li>
-										</ul>`}
-                      footer='<a href="!#" className="o-button">Upgrade</a>'
+                      header={<h3>Secondary card</h3>}
+                      body={
+                        <>
+                          <span>
+                            <sup className="u-heading--3">$</sup>{" "}
+                            <span className="u-heading--xl">1.99</span>{" "}
+                            <sub className="u-heading--sm">/month</sub>
+                          </span>
+                          <hr className="o-card__hr wow" />
+                          <ul className="o-list--unstyled o-list--lg">
+                            <li>25Go storage</li>
+                            <li>Basic statistics</li>
+                            <li>No support</li>
+                          </ul>
+                        </>
+                      }
+                      footer={
+                        <a href="!#" className="o-button">
+                          Upgrade
+                        </a>
+                      }
                       metadata={{
                         additionalClasses: ["u-align--center"],
                         modifierClasses: ["secondary "]
@@ -1812,9 +1938,17 @@ const StyleGuide = () => {
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
                     <Card
                       bannerUrl="https://images.unsplash.com/photo-1464519046765-f6d70b82a0df?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80"
-                      header="<h3>Card with banner</h3>"
-                      body="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, exercitationem dicta temporibus perspiciatis nesciunt accusamus cum, itaque at necessitatibus nostrum aut quo assumenda, culpa amet id. Suscipit provident, dolorem recusandae.</p>"
-                      footer='<a href="!#">Read more</a>'
+                      header={<h3>Card with banner</h3>}
+                      body={
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Ipsa, exercitationem dicta temporibus
+                          perspiciatis nesciunt accusamus cum, itaque at
+                          necessitatibus nostrum aut quo assumenda, culpa amet
+                          id. Suscipit provident, dolorem recusandae.
+                        </p>
+                      }
+                      footer={<a href="!#">Read more</a>}
                       metadata={{
                         modifierClasses: ["banner-gradient "]
                       }}
@@ -1823,10 +1957,23 @@ const StyleGuide = () => {
 
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
                     <Card
-                      banner="<h3>Card with title inside banner</h3>"
+                      banner={<h3>Card with title inside banner</h3>}
                       bannerUrl="https://images.unsplash.com/photo-1464518983192-0de439b5d517?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80"
-                      body="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, exercitationem dicta temporibus perspiciatis nesciunt accusamus cum, itaque at necessitatibus nostrum aut quo assumenda, culpa amet id. Suscipit provident, dolorem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem omnis distinctio nihil, neque sequi fugiat facilis, ducimus doloribus, officia iste laudantium quas veniam. Nulla facilis amet, expedita est aut aliquid.</p>"
-                      footer='<a href="!#">Read more</a>'
+                      body={
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Ipsa, exercitationem dicta temporibus
+                          perspiciatis nesciunt accusamus cum, itaque at
+                          necessitatibus nostrum aut quo assumenda, culpa amet
+                          id. Suscipit provident, dolorem recusandae. Lorem
+                          ipsum dolor sit amet, consectetur adipisicing elit.
+                          Rem omnis distinctio nihil, neque sequi fugiat
+                          facilis, ducimus doloribus, officia iste laudantium
+                          quas veniam. Nulla facilis amet, expedita est aut
+                          aliquid.
+                        </p>
+                      }
+                      footer={<a href="!#">Read more</a>}
                       metadata={{
                         modifierClasses: ["banner-gradient "]
                       }}
@@ -1852,7 +1999,14 @@ const StyleGuide = () => {
                   src="https://images.unsplash.com/photo-1464519046765-f6d70b82a0df?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80"
                   alt="Figure alt"
                   title="Figure title"
-                  caption='Fig1. See on <a href="https://unsplash.com/photos/sTBdWFQKDHE">Unsplash</a>'
+                  caption={
+                    <>
+                      Fig1. See on{" "}
+                      <a href="https://unsplash.com/photos/sTBdWFQKDHE">
+                        Unsplash
+                      </a>
+                    </>
+                  }
                 />
 
                 <p>

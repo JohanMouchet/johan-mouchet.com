@@ -8,12 +8,10 @@ import { Projects } from "../";
 type Props = {
   experiences: [
     {
-      company: [
-        {
-          url: string,
-          name: string
-        }
-      ],
+      company: {
+        url: string,
+        name: string
+      },
       location: string,
       jobTitle: Node,
       startDate: string,
@@ -32,7 +30,10 @@ const Experience = (props: Props) => {
   return !experiences
     ? null
     : experiences.map(experience => (
-        <section className="c-experience" key={experience.startDate}>
+        <section
+          className="c-experience"
+          key={experience.company.name + " - " + experience.startDate}
+        >
           <h3 className="c-experience__heading">
             <a
               href={experience.company.url && experience.company.url}

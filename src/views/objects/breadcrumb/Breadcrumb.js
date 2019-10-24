@@ -36,7 +36,10 @@ const Breadcrumb = (props: Props) => {
             data-wow-delay={index > 0 && index * 0.15 + "s"}
             key={level.url}
           >
-            <a className="o-breadcrumb__link" href={level.url && !lastLevel}>
+            <a
+              className="o-breadcrumb__link"
+              {...(!lastLevel && level.url && { href: level.url })}
+            >
               {level.title}
             </a>
           </li>

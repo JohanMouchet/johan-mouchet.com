@@ -77,13 +77,13 @@ const Projects = (props: Props) => {
           })}
         >
           {project.awards.map(award => (
-            <li className="c-project__award">
+            <li className="c-project__award" key={award.name}>
               <a className="c-project__award-icon" href={award.url}>
                 <IconAward />
               </a>
               <span className="c-project__award-name">
                 <em>{award.name}</em>
-                {award.category && (":", award.category)}
+                {award.category && ": " + award.category}
               </span>
             </li>
           ))}
@@ -96,8 +96,10 @@ const Projects = (props: Props) => {
             "u-vr--top-0-@xs": singleProject
           })}
         >
-          {project.details.map(detail => (
-            <li className="c-project__detail">{detail}</li>
+          {project.details.map((detail, index) => (
+            <li className="c-project__detail" key={index}>
+              {detail}
+            </li>
           ))}
         </ul>
       )}
