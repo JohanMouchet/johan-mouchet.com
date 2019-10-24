@@ -17,7 +17,7 @@ import {
   Breadcrumb,
   Tabs,
   Accordion,
-  Pagination,
+  // Pagination,
   Alert,
   ProgressBar,
   Badge,
