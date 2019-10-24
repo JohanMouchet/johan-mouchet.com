@@ -1985,7 +1985,7 @@ const StyleGuide = () => {
                   </a>
                   Pagination
                 </h2>
-                <Pagination
+                {/* <Pagination
                   range={3}
                   current={6}
                   links={[
@@ -2002,7 +2002,7 @@ const StyleGuide = () => {
                     "#11",
                     "#12"
                   ]}
-                />
+                /> */}
               </article>
 
               <hr className="l-article-separator" />
