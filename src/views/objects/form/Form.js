@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import cx from "classnames";
 import "./form.scss";
 
