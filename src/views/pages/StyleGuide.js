@@ -359,7 +359,7 @@ const StyleGuide = () => {
                             <code>&lt;a&gt;</code>
                           </td>
                           <td>
-                            <a href="#">Link text</a>
+                            <a href="!#">Link text</a>
                           </td>
                         </tr>
                         <tr>
@@ -546,7 +546,7 @@ const StyleGuide = () => {
                 </h2>
                 <Blockquote
                   quote="Design is not just what it looks like and feels like. Design is how it works."
-                  cite='<a href="#">Steve Jobs</a>'
+                  cite='<a href="!#">Steve Jobs</a>'
                 />
 
                 <p>
@@ -558,7 +558,7 @@ const StyleGuide = () => {
                 </h3>
                 <Blockquote
                   quote="Design is not just what it looks like and feels like. Design is how it works."
-                  cite='<a href="#">Steve Jobs</a>'
+                  cite='<a href="!#">Steve Jobs</a>'
                   metadata={{
                     modifierClasses: ["pulled"]
                   }}
@@ -1775,7 +1775,7 @@ const StyleGuide = () => {
 										<p>
 											Rem omnis distinctio nihil, neque sequi fugiat facilis, ducimus doloribus, officia iste laudantium quas veniam. Nulla facilis amet, expedita est aut aliquid.
 										</p>`}
-                      footer='<a href="#">Read more</a> <code>.o-card__footer</code>'
+                      footer='<a href="!#">Read more</a> <code>.o-card__footer</code>'
                     />
                   </div>
 
@@ -1790,7 +1790,7 @@ const StyleGuide = () => {
 											<li>Advanced Statistics</li>
 											<li>24/7 Support</li>
 										</ul>`}
-                      footer='<a href="#" className="o-button">Upgrade</a>'
+                      footer='<a href="!#" className="o-button">Upgrade</a>'
                       metadata={{
                         additionalClasses: ["u-align--center"],
                         modifierClasses: ["primary "]
@@ -1809,7 +1809,7 @@ const StyleGuide = () => {
 											<li>Basic statistics</li>
 											<li>No support</li>
 										</ul>`}
-                      footer='<a href="#" className="o-button">Upgrade</a>'
+                      footer='<a href="!#" className="o-button">Upgrade</a>'
                       metadata={{
                         additionalClasses: ["u-align--center"],
                         modifierClasses: ["secondary "]
@@ -1822,7 +1822,7 @@ const StyleGuide = () => {
                       bannerUrl="https://images.unsplash.com/photo-1464519046765-f6d70b82a0df?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80"
                       header="<h3>Card with banner</h3>"
                       body="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, exercitationem dicta temporibus perspiciatis nesciunt accusamus cum, itaque at necessitatibus nostrum aut quo assumenda, culpa amet id. Suscipit provident, dolorem recusandae.</p>"
-                      footer='<a href="#">Read more</a>'
+                      footer='<a href="!#">Read more</a>'
                       metadata={{
                         modifierClasses: ["banner-gradient "]
                       }}
@@ -1834,7 +1834,7 @@ const StyleGuide = () => {
                       banner="<h3>Card with title inside banner</h3>"
                       bannerUrl="https://images.unsplash.com/photo-1464518983192-0de439b5d517?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80"
                       body="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, exercitationem dicta temporibus perspiciatis nesciunt accusamus cum, itaque at necessitatibus nostrum aut quo assumenda, culpa amet id. Suscipit provident, dolorem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem omnis distinctio nihil, neque sequi fugiat facilis, ducimus doloribus, officia iste laudantium quas veniam. Nulla facilis amet, expedita est aut aliquid.</p>"
-                      footer='<a href="#">Read more</a>'
+                      footer='<a href="!#">Read more</a>'
                       metadata={{
                         modifierClasses: ["banner-gradient "]
                       }}
@@ -2198,7 +2198,7 @@ const StyleGuide = () => {
                   </a>
                   Badge
                 </h2>
-                <a href="#">
+                <a href="!#">
                   Activity
                   <Badge>30</Badge>
                 </a>
@@ -2564,7 +2564,7 @@ const StyleGuide = () => {
 
         {`<!-- Notice (JS) (remove ".u-is--hidden" to display) -->`}
         <Notice
-          primary='<p className="u-vr--bottom-0-@xs">This website uses cookies to ensure you the best experience. <a href="#">More info</a></p>'
+          primary='<p className="u-vr--bottom-0-@xs">This website uses cookies to ensure you the best experience. <a href="!#">More info</a></p>'
           secondary='<button className="o-button js-notice-close">Got it!</button>'
           closeButton
           metadata={{
