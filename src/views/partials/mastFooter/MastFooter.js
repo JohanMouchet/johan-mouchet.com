@@ -1,9 +1,9 @@
 // @flow
 
 import * as React from "react";
-import { VERSIONS } from "../../../constants/versions";
+import { VERSIONS } from "constants/versions";
 import "./mast-footer.scss";
-import { ReactComponent as IconArrowDown } from "../../../assets/images/icons/arrow-down.svg";
+import { ReactComponent as IconArrowDown } from "assets/images/icons/arrow-down.svg";
 
 const MastFooter = () => {
   const year = new Date().getFullYear();

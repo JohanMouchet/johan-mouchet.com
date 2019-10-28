@@ -3,7 +3,7 @@
 import * as React from "react";
 import { formatDistance } from "date-fns";
 import "./experience.scss";
-import { Projects } from "../";
+import { Projects } from "views/components";
 
 type Props = {
   experiences: [

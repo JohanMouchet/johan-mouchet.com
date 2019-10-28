@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react";
-import { ProgressBar } from "../../objects";
+import { ProgressBar } from "views/objects";
 
 type Props = {
   expertises: typeof ProgressBar

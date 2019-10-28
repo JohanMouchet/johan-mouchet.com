@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Default } from "../layouts";
+import { Default } from "views/layouts";
 import {
   Blockquote,
   Label,
@@ -25,13 +25,13 @@ import {
   FootnotesNotes,
   Loader,
   Notice
-} from "../objects";
-import { ReactComponent as IconFacebook } from "../../assets/images/icons/simple-icons/facebook.svg";
-import { ReactComponent as IconGooglePlus } from "../../assets/images/icons/simple-icons/googleplus.svg";
-import { ReactComponent as IconLinkedIn } from "../../assets/images/icons/simple-icons/linkedin.svg";
-import { ReactComponent as IconPinterest } from "../../assets/images/icons/simple-icons/pinterest.svg";
-import { ReactComponent as IconTwitter } from "../../assets/images/icons/simple-icons/twitter.svg";
-import "../../assets/styles/pages/style-guide.scss";
+} from "views/objects";
+import { ReactComponent as IconFacebook } from "assets/images/icons/simple-icons/facebook.svg";
+import { ReactComponent as IconGooglePlus } from "assets/images/icons/simple-icons/googleplus.svg";
+import { ReactComponent as IconLinkedIn } from "assets/images/icons/simple-icons/linkedin.svg";
+import { ReactComponent as IconPinterest } from "assets/images/icons/simple-icons/pinterest.svg";
+import { ReactComponent as IconTwitter } from "assets/images/icons/simple-icons/twitter.svg";
+import "assets/styles/pages/style-guide.scss";
 
 const StyleGuide = () => {
   return (

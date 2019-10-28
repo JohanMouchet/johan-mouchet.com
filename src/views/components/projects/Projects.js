@@ -3,7 +3,7 @@
 import * as React from "react";
 import cx from "classnames";
 import "./projects.scss";
-import { ReactComponent as IconAward } from "../../../assets/images/icons/award.svg";
+import { ReactComponent as IconAward } from "assets/images/icons/award.svg";
 
 type Props = {
   projects: [

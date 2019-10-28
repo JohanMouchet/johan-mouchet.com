@@ -3,7 +3,7 @@
 import * as React from "react";
 import cx from "classnames";
 import "./menu.scss";
-import { Button } from "../";
+import { Button } from "views/objects";
 
 type MenuItem = {
   text: string,

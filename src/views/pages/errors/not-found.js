@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Default } from "../layouts";
+import { Default } from "views/layouts";
 
 const NotFound = () => {
   return (
