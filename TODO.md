@@ -1,9 +1,6 @@
 # TODO
 
-- Use Absolute Imports: https://create-react-app.dev/docs/importing-a-component#absolute-imports
-  - add in .flowconfig https://create-react-app.dev/docs/adding-flow
 - Fix broken space `{" "}`
-- Inline cx, from `className={`class \${newClass}`}` to `className={cx("class", {"newClass": isTrue})}`
 - Add `modifierClasses` to `cx`
   ```
     cx(

@@ -20,6 +20,12 @@ const Alert = (props: Props) => {
 
   const AlertClass = cx(
     "o-alert",
+    `o-alert--${type}`,
+    {
+      "is--visible": !hidden,
+      "js-alert": closable
+    },
+    "wow",
     metadata.contextClass,
     metadata.additionalClasses
   );
@@ -37,10 +43,7 @@ const Alert = (props: Props) => {
   };
 
   return (
-    <div
-      className={`${AlertClass} o-alert--${type} ${!hidden &&
-        "is--visible"} ${closable && "js-alert"} wow`}
-    >
+    <div className={AlertClass}>
       <i className="o-alert__icon material-icons">{getIcon(type)}</i>
       <div className="o-alert__content">{content}</div>
       {closable && (

@@ -28,14 +28,16 @@ const Accordion = (props: Props) => {
     <ul className={AccordionClass}>
       {items.map((item, index) => (
         <li
-          className={`o-accordion__item js-accordion-item ${index === 0 &&
-            "is--active"}`}
+          className={cx("o-accordion__item", "js-accordion-item", {
+            "is--active": index === 0
+          })}
           key={item.thumb}
         >
           <button className="o-accordion__thumb">
             <i
-              className={`o-accordion__thumb-icon material-icons ${index > 0 &&
-                "wow fadeInLeft"}`}
+              className={cx("o-accordion__thumb-icon", "material-icons", {
+                "wow fadeInLeft": index > 0
+              })}
               data-wow-delay={index > 0 && index * 0.15 + "s"}
             >
               chevron_right

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import StyleGuide from "./views/pages/StyleGuide";
-import * as serviceWorker from "./serviceWorker";
+import StyleGuide from "views/pages/StyleGuide";
+import * as serviceWorker from "serviceWorker";
 
 ReactDOM.render(<StyleGuide />, document.getElementById("root"));
 
