@@ -31,6 +31,7 @@ import { ReactComponent as IconGooglePlus } from "../../assets/images/icons/simp
 import { ReactComponent as IconLinkedIn } from "../../assets/images/icons/simple-icons/linkedin.svg";
 import { ReactComponent as IconPinterest } from "../../assets/images/icons/simple-icons/pinterest.svg";
 import { ReactComponent as IconTwitter } from "../../assets/images/icons/simple-icons/twitter.svg";
+import "../../assets/styles/pages/style-guide.scss";
 
 const StyleGuide = () => {
   return (
@@ -49,67 +50,67 @@ const StyleGuide = () => {
               <h2>Table of content</h2>
               <ol className="o-list--lg o-list--hStriped o-list--linkBlock">
                 <li>
-                  <a href="style-guide#sg-colorPalette">Color palette</a>
+                  <a href="#sg-colorPalette">Color palette</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-typography">Typography</a>
+                  <a href="#sg-typography">Typography</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-blockquote">Blockquote</a>
+                  <a href="#sg-blockquote">Blockquote</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-grid">Grid</a>
+                  <a href="#sg-grid">Grid</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-form">Form</a>
+                  <a href="#sg-form">Form</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-button">Button</a>
+                  <a href="#sg-button">Button</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-list">List</a>
+                  <a href="#sg-list">List</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-table">Table</a>
+                  <a href="#sg-table">Table</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-card">Card</a>
+                  <a href="#sg-card">Card</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-figure">Figure</a>
+                  <a href="#sg-figure">Figure</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-breadcrumb">Breadcrumb</a>
+                  <a href="#sg-breadcrumb">Breadcrumb</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-tabs">Tabs</a>
+                  <a href="#sg-tabs">Tabs</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-accordion">Accordion</a>
+                  <a href="#sg-accordion">Accordion</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-pagination">Pagination</a>
+                  <a href="#sg-pagination">Pagination</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-alert">Alert</a>
+                  <a href="#sg-alert">Alert</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-tooltip">Tooltip</a>
+                  <a href="#sg-tooltip">Tooltip</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-progress-bar">Progress bar</a>
+                  <a href="#sg-progress-bar">Progress bar</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-badge">Badge</a>
+                  <a href="#sg-badge">Badge</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-loader">Loader</a>
+                  <a href="#sg-loader">Loader</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-footnotes">Footnotes</a>
+                  <a href="#sg-footnotes">Footnotes</a>
                 </li>
                 <li>
-                  <a href="style-guide#sg-guidelines">Coding guidelines</a>
+                  <a href="#sg-guidelines">Coding guidelines</a>
                 </li>
               </ol>
             </aside>
@@ -126,10 +127,7 @@ const StyleGuide = () => {
                   className="u-counter__StyleGuide-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a
-                    href="style-guide#sg-colorPalette"
-                    className="u-anchor__link"
-                  >
+                  <a href="#sg-colorPalette" className="u-anchor__link">
                     #
                   </a>
                   Color palette
@@ -137,7 +135,7 @@ const StyleGuide = () => {
                 <div className="grid color-palette-row">
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      banner
+                      banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
                           <div className="sg-swatch__color-code"></div>
@@ -155,7 +153,7 @@ const StyleGuide = () => {
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      banner
+                      banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
                           <div className="sg-swatch__color-code"></div>
@@ -173,7 +171,7 @@ const StyleGuide = () => {
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      banner
+                      banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
                           <div className="sg-swatch__color-code"></div>
@@ -192,7 +190,7 @@ const StyleGuide = () => {
 
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      banner
+                      banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
                           <div className="sg-swatch__color-code"></div>
@@ -210,7 +208,7 @@ const StyleGuide = () => {
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      banner
+                      banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
                           <div className="sg-swatch__color-code"></div>
@@ -228,7 +226,7 @@ const StyleGuide = () => {
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      banner
+                      banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
                           <div className="sg-swatch__color-code"></div>
@@ -247,7 +245,7 @@ const StyleGuide = () => {
 
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      banner
+                      banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
                           <div className="sg-swatch__color-code"></div>
@@ -265,7 +263,7 @@ const StyleGuide = () => {
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      banner
+                      banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
                           <div className="sg-swatch__color-code"></div>
@@ -283,7 +281,7 @@ const StyleGuide = () => {
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
-                      banner
+                      banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
                           <div className="sg-swatch__color-code"></div>
@@ -309,10 +307,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a
-                    href="style-guide#sg-typography"
-                    className="u-anchor__link"
-                  >
+                  <a href="#sg-typography" className="u-anchor__link">
                     #
                   </a>
                   Typography
@@ -619,10 +614,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a
-                    href="style-guide#sg-blockquote"
-                    className="u-anchor__link"
-                  >
+                  <a href="#sg-blockquote" className="u-anchor__link">
                     #
                   </a>
                   Blockquote
@@ -671,7 +663,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a href="style-guide#sg-grid" className="u-anchor__link">
+                  <a href="#sg-grid" className="u-anchor__link">
                     #
                   </a>
                   Grid
@@ -760,7 +752,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a href="style-guide#sg-form" className="u-anchor__link">
+                  <a href="#sg-form" className="u-anchor__link">
                     #
                   </a>
                   Form
@@ -989,8 +981,7 @@ const StyleGuide = () => {
                       <br />
                       <br />
                       <em>Recommendation:</em> use{" "}
-                      <a href="style-guide#sg-alert">alerts</a> for state
-                      messages
+                      <a href="#sg-alert">alerts</a> for state messages
                     </p>
                     <div className="grid">
                       <div className="cell cell--12-@xs cell--4-@sm">
@@ -1071,7 +1062,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a href="style-guide#sg-button" className="u-anchor__link">
+                  <a href="#sg-button" className="u-anchor__link">
                     #
                   </a>
                   Button
@@ -1424,7 +1415,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a href="style-guide#sg-list" className="u-anchor__link">
+                  <a href="#sg-list" className="u-anchor__link">
                     #
                   </a>
                   List
@@ -1499,7 +1490,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a href="style-guide#sg-table" className="u-anchor__link">
+                  <a href="#sg-table" className="u-anchor__link">
                     #
                   </a>
                   Table
@@ -1820,7 +1811,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a href="style-guide#sg-card" className="u-anchor__link">
+                  <a href="#sg-card" className="u-anchor__link">
                     #
                   </a>
                   Card
@@ -1989,7 +1980,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a href="style-guide#sg-figure" className="u-anchor__link">
+                  <a href="#sg-figure" className="u-anchor__link">
                     #
                   </a>
                   Figure
@@ -2021,10 +2012,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a
-                    href="style-guide#sg-breadcrumb"
-                    className="u-anchor__link"
-                  >
+                  <a href="#sg-breadcrumb" className="u-anchor__link">
                     #
                   </a>
                   Breadcrumb
@@ -2054,7 +2042,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a href="style-guide#sg-tabs" className="u-anchor__link">
+                  <a href="#sg-tabs" className="u-anchor__link">
                     #
                   </a>
                   Tabs (JS)
@@ -2087,7 +2075,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a href="style-guide#sg-accordion" className="u-anchor__link">
+                  <a href="#sg-accordion" className="u-anchor__link">
                     #
                   </a>
                   Accordion (JS)
@@ -2123,10 +2111,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a
-                    href="style-guide#sg-pagination"
-                    className="u-anchor__link"
-                  >
+                  <a href="#sg-pagination" className="u-anchor__link">
                     #
                   </a>
                   Pagination
@@ -2158,7 +2143,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a href="style-guide#sg-alert" className="u-anchor__link">
+                  <a href="#sg-alert" className="u-anchor__link">
                     #
                   </a>
                   Alert (JS)
@@ -2215,7 +2200,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a href="style-guide#sg-tooltip" className="u-anchor__link">
+                  <a href="#sg-tooltip" className="u-anchor__link">
                     #
                   </a>
                   Tooltip
@@ -2295,10 +2280,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a
-                    href="style-guide#sg-progress-bar"
-                    className="u-anchor__link"
-                  >
+                  <a href="#sg-progress-bar" className="u-anchor__link">
                     #
                   </a>
                   Progress bar
@@ -2339,7 +2321,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a href="style-guide#sg-badge" className="u-anchor__link">
+                  <a href="#sg-badge" className="u-anchor__link">
                     #
                   </a>
                   Badge
@@ -2357,7 +2339,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a href="style-guide#sg-loader" className="u-anchor__link">
+                  <a href="#sg-loader" className="u-anchor__link">
                     #
                   </a>
                   Loader
@@ -2383,7 +2365,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a href="style-guide#sg-footnotes" className="u-anchor__link">
+                  <a href="#sg-footnotes" className="u-anchor__link">
                     #
                   </a>
                   Footnotes
@@ -2424,10 +2406,7 @@ const StyleGuide = () => {
                   className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
-                  <a
-                    href="style-guide#sg-guidelines"
-                    className="u-anchor__link"
-                  >
+                  <a href="#sg-guidelines" className="u-anchor__link">
                     #
                   </a>
                   Coding guidelines

@@ -1,16 +1,23 @@
+@import "../../../assets/styles/settings/_settings";
+@import "../../../assets/styles/tools/_tools";
+
 /**
 * Style guide
 */
 
 /* Color palette */
-// TODO: convert into p-, import into styleguide
 .sg-swatch {
   $root: &;
 
   margin-bottom: $grid-gutter;
 
+  .o-card__banner {
+    min-height: 0;
+    padding: 0;
+  }
+
   /** Color **/
-  &-o-card__banner {
+  &__color {
     min-height: t-vertical-rhythm(2);
     transition: min-height 0.3s;
 
@@ -35,7 +42,7 @@
   }
 
   @mixin swatch($color) {
-    #{$root}-o-card__banner {
+    #{$root}__color {
       background-color: $color;
     }
 

@@ -5,7 +5,7 @@ import cx from "classnames";
 import "./card.scss";
 
 type Props = {
-  banner?: string,
+  banner?: boolean | Node,
   bannerUrl?: string,
   header?: Node,
   body?: Node,
@@ -36,7 +36,7 @@ const Card = (props: Props) => {
           className="o-card__banner"
           style={bannerUrl && { backgroundImage: `url(${bannerUrl})` }}
         >
-          {banner === true ? "" : banner}
+          {banner}
         </Tag>
       )}
       {/* TODO: <Card><Header>Sub comp</Header></Card> */}
