@@ -1,6 +1,14 @@
 # TODO
 
 - Fix broken space `{" "}`
+- File structure:
+  ```
+    src/views/components/
+      comp-name/ (camel)
+        - index.js
+        - CompName.js (capitalized)
+        - CompName.scss
+  ```
 - Add `modifierClasses` to `cx`
   ```
     cx(

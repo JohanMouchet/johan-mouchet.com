@@ -3,8 +3,10 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withKnobs, text } from "@storybook/addon-knobs";
-import Badge from "./";
+import MastFooter from ".";
 
-storiesOf("Objects/Badge", module)
-  .add("default", () => <Badge>{text("Children", "+1")}</Badge>)
+storiesOf("Partials/MastFooter", module)
+  .add("default", () => (
+    <MastFooter>{text("propName", "default value")}</MastFooter>
+  ))
   .addDecorator(withKnobs);

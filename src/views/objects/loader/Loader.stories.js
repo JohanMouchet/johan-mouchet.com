@@ -3,8 +3,8 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withKnobs, text } from "@storybook/addon-knobs";
-import Badge from "./";
+import Loader from ".";
 
-storiesOf("Objects/Badge", module)
-  .add("default", () => <Badge>{text("Children", "+1")}</Badge>)
+storiesOf("Objects/Loader", module)
+  .add("default", () => <Loader>{text("propName", "default value")}</Loader>)
   .addDecorator(withKnobs);

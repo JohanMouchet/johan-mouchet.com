@@ -3,8 +3,10 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withKnobs, text } from "@storybook/addon-knobs";
-import Badge from "./";
+import Blockquote from ".";
 
-storiesOf("Objects/Badge", module)
-  .add("default", () => <Badge>{text("Children", "+1")}</Badge>)
+storiesOf("Objects/Blockquote", module)
+  .add("default", () => (
+    <Blockquote>{text("propName", "default value")}</Blockquote>
+  ))
   .addDecorator(withKnobs);
