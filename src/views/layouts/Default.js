@@ -8,11 +8,13 @@ const Default = props => {
   const { children } = props;
 
   return (
-    <>
-      <MastHeader />
-      {children}
-      <MastFooter />
-    </>
+    <div className="l-layout">
+      <div className="l-layout__inner">
+        <MastHeader />
+        {children}
+        <MastFooter />
+      </div>
+    </div>
   );
 };
 

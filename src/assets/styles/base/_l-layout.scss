@@ -2,8 +2,26 @@
  * Layout
  */
 
+.l-layout {
+  min-height: 100vh;
+  display: flex;
+  border: t-vertical-rhythm(0.2) solid $s-color-primary;
+
+  @media (min-width: t-breakpoint(md)) {
+    border-width: t-vertical-rhythm(1);
+  }
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba($s-color-black, 0.5);
+  }
+}
+
 /* Main */
 .l-main {
+  flex-grow: 1;
   margin-top: t-vertical-rhythm(3);
   margin-bottom: t-vertical-rhythm(3);
 
