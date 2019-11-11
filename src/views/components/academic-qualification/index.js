@@ -1,1 +1,1 @@
-export { default } from "./AcademicQualification.js.js";
+export { default } from "./AcademicQualification.js";
