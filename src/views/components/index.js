@@ -1,5 +1,5 @@
 export { default as About } from "./about";
-export { default as Expertises } from "./expertises";
+export { default as Skills } from "./skills";
 export { default as AcademicQualification } from "./academic-qualification";
 export { default as Experience } from "./experience";
 export { default as PersonalWorks } from "./personal-works";

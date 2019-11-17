@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Default } from "views/layouts";
 import {
-  Expertises,
+  Skills,
   AcademicQualification,
   SocialMedia,
   Experience,
@@ -81,14 +81,18 @@ const Home = () => {
         <div className="container container--noGutter-lgGrid">
           <div className="grid grid--lgGutter-@xs">
             <div className="l-cell--gray-lighter cell cell--12-@xs cell--3-@md">
-              <article className="p-expertises">
+              <article className="p-skills">
                 <div className="u-vr--top-2-@xs"></div>
-                <h2>Expertises</h2>
+                <h2>Skills</h2>
 
-                <Expertises
-                  expertises={[
+                <Skills
+                  skills={[
                     {
-                      label: "React",
+                      label: (
+                        <>
+                          React <em>& Redux</em>
+                        </>
+                      ),
                       filling: 80,
                       tooltip: "8/10"
                     },
@@ -126,15 +130,15 @@ const Home = () => {
 
               <hr className="wow" />
 
-              <article className="p-skills">
-                <h2>Skills</h2>
+              <article className="p-tools">
+                <h2>Tools</h2>
                 <p>
-                  Sass, BEM, ITCSS, Bootstrap, Nunjucks / Twig / Handlebars,
-                  CMS, Microdata, ES2017, jQuery, APIs, Webpack, Yarn / npm,
-                  Gulp / Grunt, Git (Gitflow), Zeplin / InVision / Photoshop,
-                  Responsive design, Web performance, Cross-browser
-                  compatibility, Accessibility, Standards, Search Engine
-                  Marketing, Analytics, Atlassian suite, Agile, Open source
+                  Storybook, BEM, ITCSS, Bootstrap, Nunjucks / Twig /
+                  Handlebars, CMS, Microdata, APIs, jQuery, npm / Yarn, Webpack
+                  / Gulp / Grunt, Git (Gitflow), Zeplin, Responsive design, Web
+                  performance, Cross-browser compatibility, Accessibility, Web
+                  Standards, Linters, Search Engine Marketing, Analytics,
+                  Atlassian suite, Agile, Open source
                 </p>
               </article>
 
