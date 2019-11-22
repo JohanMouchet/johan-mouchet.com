@@ -14,6 +14,7 @@
       &::before {
         $k: "";
 
+        /* stylelint-disable-next-line max-nesting-depth */
         @for $j from 1 through $i {
           $k: $k + counter(index-#{$j}) + attr(data-counter-separator);
         }

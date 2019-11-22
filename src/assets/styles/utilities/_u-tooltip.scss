@@ -39,6 +39,7 @@ $u-tooltip-slide-distance: 0.5rem !default;
 }
 
 /** Top (default) **/
+/* stylelint-disable no-descending-specificity */
 [data-tooltip],
 [data-tooltip-top] {
   &::after {
@@ -52,6 +53,7 @@ $u-tooltip-slide-distance: 0.5rem !default;
     transform: translate(-50%, -$u-tooltip-slide-distance);
   }
 }
+/* stylelint-enable no-descending-specificity */
 
 /** Right **/
 [data-tooltip-right] {

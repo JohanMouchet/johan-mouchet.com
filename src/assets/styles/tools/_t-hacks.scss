@@ -16,11 +16,10 @@
   $property: "border-width",
   $border-width: 2
 ) {
-  /* stylelint-disable media-feature-name-no-vendor-prefix */
+  /* stylelint-disable-next-line media-feature-name-no-vendor-prefix */
   @media (-webkit-min-device-pixel-ratio: 1.25) {
     #{$property}: $border-width - 0.01px;
   }
-  /* stylelint-enable */
 }
 
 /**
@@ -31,14 +30,13 @@
  * @example @include t-wekkit-input-autofill-color;
  */
 @mixin t-wekkit-input-autofill-color {
-  /* stylelint-disable at-rule-no-vendor-prefix */
+  /* stylelint-disable-next-line at-rule-no-vendor-prefix */
   @-webkit-keyframes t-wekkit-input-autofill-color {
     to {
       color: $s-color-text;
       background: transparent;
     }
   }
-  /* stylelint-enable */
 
   :-webkit-autofill {
     animation: t-wekkit-input-autofill-color both;

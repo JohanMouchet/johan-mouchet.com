@@ -78,7 +78,7 @@
       width: 100%;
       background: currentColor;
       animation: line-animation 0.5s ease-out both;
-
+      /* stylelint-disable max-nesting-depth */
       @keyframes line-animation {
         from {
           transform: scaleY(0);
@@ -88,6 +88,7 @@
           transform: scaleY(100%);
         }
       }
+      /* stylelint-enable max-nesting-depth */
     }
   }
 
@@ -105,7 +106,7 @@
 
     #{$root}__text {
       animation: left-slide-animation 0.5s 0.5s ease-out both;
-
+      /* stylelint-disable max-nesting-depth */
       @keyframes left-slide-animation {
         0% {
           transform: translateX(100%);
@@ -120,6 +121,7 @@
           transform: translateX(0);
         }
       }
+      /* stylelint-enable max-nesting-depth */
     }
   }
 
@@ -129,7 +131,7 @@
 
     #{$root}__text {
       animation: right-slide-animation 0.5s 0.5s ease-out both;
-
+      /* stylelint-disable max-nesting-depth */
       @keyframes right-slide-animation {
         0% {
           transform: translateX(-100%);
@@ -144,6 +146,7 @@
           transform: translateX(0);
         }
       }
+      /* stylelint-enable max-nesting-depth */
     }
   }
 

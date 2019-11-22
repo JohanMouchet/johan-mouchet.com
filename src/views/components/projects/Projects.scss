@@ -20,6 +20,7 @@
         text-decoration: none;
         opacity: 0;
 
+        /* stylelint-disable-next-line max-nesting-depth */
         &::before {
           transform: scaleX(0);
         }

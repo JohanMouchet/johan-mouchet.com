@@ -49,8 +49,10 @@
   }
 
   &__cocorico {
-    $s-color-bleu: #0157a2; /* stylelint-disable-line color-no-hex */
-    $s-color-rouge: #eb3e3a; /* stylelint-disable-line color-no-hex */
+    /* stylelint-disable color-no-hex */
+    $s-color-bleu: #0157a2;
+    $s-color-rouge: #eb3e3a;
+    /* stylelint-enable color-no-hex */
 
     position: relative;
     transition: background 0.2s ease-out;

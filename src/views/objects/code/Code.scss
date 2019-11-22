@@ -1,7 +1,7 @@
 @import "assets/styles/settings/_settings";
 @import "assets/styles/tools/_tools";
 
-/* stylelint-disable selector-max-type */
+/* stylelint-disable selector-no-type, no-descending-specificity, selector-max-type, selector-no-qualifying-type */
 pre {
   max-height: 50vh;
   line-height: 1.2rem;

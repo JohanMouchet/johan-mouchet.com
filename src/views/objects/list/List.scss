@@ -1,7 +1,7 @@
 @import "assets/styles/settings/_settings";
 @import "assets/styles/tools/_tools";
 
-/* stylelint-disable selector-max-type, no-duplicate-selectors */
+/* stylelint-disable selector-no-type, selector-max-type, no-duplicate-selectors, selector-no-qualifying-type, no-descending-specificity */
 
 /* Unordered & ordered list */
 ul,
@@ -84,6 +84,7 @@ ol {
         padding-left: 0;
         border-left: 0;
 
+        /* stylelint-disable-next-line max-nesting-depth */
         &:not(:first-child) {
           padding-left: 1em;
           margin-left: 1em;

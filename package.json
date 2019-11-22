@@ -18,7 +18,7 @@
     "analyze": "source-map-explorer build/static/js/*.js",
     "lint:js": "eslint src/**/*.{js,jsx,json}",
     "lint:css": "stylelint src/**/*.{css,scss}",
-    "format": "eslint --fix src/**/*.{js,jsx,json} && stylelint --fix src/**/*.{css,scss} && prettier --write src/**/*.{md}",
+    "format": "eslint --fix src/**/*.{js,jsx,json} && stylelint --fix src/**/*.{css,scss} && prettier --write src/**/*.md",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },
@@ -59,7 +59,7 @@
       "stylelint --fix",
       "git add"
     ],
-    "src/**/*.{md}": [
+    "src/**/*.md": [
       "prettier --write",
       "git add"
     ]

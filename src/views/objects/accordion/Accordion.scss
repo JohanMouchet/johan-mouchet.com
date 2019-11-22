@@ -46,8 +46,10 @@
   /* Thumb icon */
   &__thumb-icon {
     transition: transform 0.3s;
-    font-size: 1.5rem !important; /* stylelint-disable-line declaration-no-important */
-    line-height: 1 !important; /* stylelint-disable-line declaration-no-important */
+    /* stylelint-disable declaration-no-important */
+    font-size: 1.5rem !important;
+    line-height: 1 !important;
+    /* stylelint-enable declaration-no-important */
   }
 
   /* Panel */

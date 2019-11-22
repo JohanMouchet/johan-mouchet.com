@@ -67,6 +67,7 @@
   }
 
   /** Tooltip **/
+  /* stylelint-disable no-descending-specificity */
   [data-progress-bar-tooltip] {
     &::before,
     &::after {
@@ -93,6 +94,7 @@
       @include t-arrow(bottom-right, currentColor, 0.4em);
     }
   }
+  /* stylelint-enable no-descending-specificity */
 
   /*** Animation ***/
   @keyframes progress-bar-filling-animation {

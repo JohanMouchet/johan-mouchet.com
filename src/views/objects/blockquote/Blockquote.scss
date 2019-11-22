@@ -64,6 +64,7 @@
     font-size: t-modular-scale(-2);
     color: $s-color-text-dimmed;
 
+    /* stylelint-disable-next-line no-descending-specificity */
     [href] {
       @include t-link($s-color-text-dimmed);
     }

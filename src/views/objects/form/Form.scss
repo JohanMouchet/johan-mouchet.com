@@ -271,13 +271,12 @@
     &::-moz-focus-outer {
       border: 0;
     }
-    /* stylelint-enable no-descending-specificity */
 
     &::-ms-track {
       height: auto;
       border-radius: t-vertical-rhythm(0.4, "rem");
     }
-    /* stylelint-enable */
+    /* stylelint-enable no-descending-specificity */
   }
 
   /** Thumb **/
