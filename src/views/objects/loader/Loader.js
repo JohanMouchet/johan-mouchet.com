@@ -8,8 +8,7 @@ type Props = {
   size: "sm",
   metadata?: {
     contextClass?: string,
-    additionalClasses?: Array<string>,
-    modifierClasses?: Array<string>
+    additionalClasses?: Array<string>
   }
 };
 
@@ -20,7 +19,6 @@ const Loader = (props: Props) => {
     "o-loader",
     { [`o-loader--${size}`]: size },
     metadata.contextClass,
-    metadata.modifierClasses,
     metadata.additionalClasses
   );
 

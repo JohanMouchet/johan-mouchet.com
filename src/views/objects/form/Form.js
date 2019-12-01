@@ -7,22 +7,21 @@ import "./Form.scss";
 
 type LabelProps = {
   id?: string,
+  block: boolean,
   metadata?: {
     contextClass?: string,
-    additionalClasses?: Array<string>,
-    modifierClasses?: Array<string>
+    additionalClasses?: Array<string>
   },
   children?: Node
 };
 
 const Label = (props: LabelProps) => {
-  const { id, metadata = {}, children } = props;
+  const { id, block, metadata = {}, children } = props;
 
   const LabelClass = cx(
     "o-form__label",
-    { "o-form__label--block": !children },
+    { "o-form__label--block": block || !children },
     metadata.contextClass,
-    metadata.modifierClasses,
     metadata.additionalClasses
   );
 
@@ -44,22 +43,22 @@ type FieldProps = {
   type: string,
   name: string,
   value?: string,
+  variant?: "no-corner-left" | "no-corner-right",
   metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
-    modifierClasses?: Array<string>,
     attributes?: { [key: string]: any }
   }
 };
 
 const Field = (props: FieldProps) => {
-  const { id, type, name, value, metadata = {} } = props;
+  const { id, type, name, value, variant, metadata = {} } = props;
 
   const FieldClass = cx(
     "o-form__field",
     `o-form__field--${type}`,
+    { [`o-form__field--${variant}`]: variant },
     metadata.contextClass,
-    metadata.modifierClasses,
     metadata.additionalClasses
   );
 

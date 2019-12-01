@@ -20,8 +20,7 @@ type Props = {
   size?: "sm" | "lg",
   metadata?: {
     contextClass?: string,
-    additionalClasses?: Array<string>,
-    modifierClasses?: Array<string>
+    additionalClasses?: Array<string>
   }
 };
 
@@ -44,7 +43,6 @@ const Card = (props: Props) => {
       [`o-card--${size}`]: size
     },
     metadata.contextClass,
-    metadata.modifierClasses,
     metadata.additionalClasses
   );
 

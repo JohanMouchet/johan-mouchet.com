@@ -12,7 +12,6 @@ type Props = {
   metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
-    modifierClasses?: Array<string>,
     attributes?: { [key: string]: any }
   },
   children?: Node
@@ -27,7 +26,6 @@ const Figure = (props: Props) => {
       [`o-figure--centered`]: centered
     },
     metadata.contextClass,
-    metadata.modifierClasses,
     metadata.additionalClasses
   );
 

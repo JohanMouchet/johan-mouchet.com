@@ -775,7 +775,7 @@ const StyleGuide = () => {
                     <div className="grid">
                       <div className="cell cell--12-@xs cell--6-@sm">
                         <div className="o-form__group">
-                          <Label id="input-1" text="Text input" />
+                          <Label id="input-1">Text input</Label>
 
                           <Field
                             id="input-1"
@@ -793,7 +793,7 @@ const StyleGuide = () => {
 
                       <div className="cell cell--12-@xs cell--6-@sm">
                         <div className="o-form__group">
-                          <Label id="input-2" text="Text input disabled" />
+                          <Label id="input-2">Text input disabled</Label>
 
                           <Field
                             id="input-2"
@@ -811,7 +811,7 @@ const StyleGuide = () => {
 
                       <div className="cell cell--12-@xs cell--6-@sm">
                         <div className="o-form__group">
-                          <Label id="select-1" text="Select" />
+                          <Label id="select-1">Select</Label>
 
                           <Select
                             id="select-1"
@@ -836,7 +836,7 @@ const StyleGuide = () => {
 
                       <div className="cell cell--12-@xs cell--6-@sm">
                         <div className="o-form__group">
-                          <Label id="input-3" text="Search" />
+                          <Label id="input-3">Search</Label>
 
                           <Field
                             id="input-3"
@@ -867,107 +867,102 @@ const StyleGuide = () => {
 
                       <div className="cell cell--12-@xs cell--6-@md">
                         <div className="o-form__group">
-                          <Label
-                            id="radio-1"
-                            text="Radio"
-                            metadata={{
-                              modifierClasses: ["block"]
-                            }}
-                          />
+                          <Label id="radio-1" block>
+                            Radio
+                          </Label>
 
                           <Toggle
                             id="radio-1"
                             type="radio"
                             name="radioChoice"
                             value="option-1"
-                            text="Option 1"
                             checked
-                          />
+                          >
+                            Option 1
+                          </Toggle>
 
                           <Toggle
                             type="radio"
                             name="radioChoice"
                             value="option-2"
-                            text="Option 2"
-                          />
+                          >
+                            Option 2
+                          </Toggle>
 
                           <Toggle
                             type="radio"
                             name="radioChoice"
                             value="disabled"
-                            text="Disabled"
                             metadata={{
                               attributes: {
                                 disabled: true
                               }
                             }}
-                          />
+                          >
+                            Disabled
+                          </Toggle>
                         </div>
 
                         <div className="o-form__group">
-                          <Label
-                            id="checkbox-1"
-                            text="Checkbox"
-                            metadata={{
-                              modifierClasses: ["block"]
-                            }}
-                          />
+                          <Label id="checkbox-1" block>
+                            Checkbox
+                          </Label>
 
                           <Toggle
                             id="checkbox-1"
                             type="checkbox"
                             name="checkboxChoice"
                             value="option-1"
-                            text="Option 1"
                             checked
-                          />
+                          >
+                            Option 1
+                          </Toggle>
 
                           <Toggle
                             type="checkbox"
                             name="checkboxChoice"
                             value="option-2"
-                            text="Option 2"
-                          />
+                          >
+                            Option 2
+                          </Toggle>
 
                           <Toggle
                             type="checkbox"
                             name="checkboxChoice"
                             value="disabled"
-                            text="Disabled"
                             metadata={{
                               attributes: {
                                 disabled: true
                               }
                             }}
-                          />
+                          >
+                            Disabled
+                          </Toggle>
                         </div>
                       </div>
 
                       <div className="cell cell--12-@xs cell--6-@md">
                         <div className="o-form__group">
-                          <Label id="range-1" text="Range" />
+                          <Label id="range-1">Range</Label>
                           <Range id="range-1" type="range" name="range-1" />
                         </div>
 
                         <div className="o-form__group">
-                          <Label
-                            id="file-1"
-                            text="File"
-                            metadata={{
-                              modifierClasses: ["block"]
-                            }}
-                          />
+                          <Label id="file-1" block>
+                            File
+                          </Label>
 
                           <File
                             id="file-1"
                             name="file-1"
-                            text="Choose a file"
                             metadata={{
                               attributes: {
                                 multiple: ""
                               }
                             }}
-                          />
+                          >
+                            Choose a file
+                          </File>
                         </div>
                       </div>
                     </div>
@@ -988,7 +983,7 @@ const StyleGuide = () => {
                     <div className="grid">
                       <div className="cell cell--12-@xs cell--4-@sm">
                         <div className="o-form__group o-form__group--success">
-                          <Label id="input-success" text="Success" />
+                          <Label id="input-success">Success</Label>
 
                           <Field
                             id="input-success"
@@ -1010,7 +1005,7 @@ const StyleGuide = () => {
                       </div>
                       <div className="cell cell--12-@xs cell--4-@sm">
                         <div className="o-form__group o-form__group--error">
-                          <Label id="input-error" text="Error" />
+                          <Label id="input-error">Error</Label>
 
                           <Field
                             id="input-error"
@@ -1032,7 +1027,7 @@ const StyleGuide = () => {
                       </div>
                       <div className="cell cell--12-@xs cell--4-@sm">
                         <div className="o-form__group o-form__group--warning">
-                          <Label id="input-warning" text="Warning" />
+                          <Label id="input-warning">Warning</Label>
 
                           <Field
                             id="input-warning"
