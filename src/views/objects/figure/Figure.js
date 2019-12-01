@@ -8,6 +8,7 @@ type Props = {
   src: string,
   alt?: string,
   title?: string,
+  centered?: boolean,
   metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
@@ -18,10 +19,13 @@ type Props = {
 };
 
 const Figure = (props: Props) => {
-  const { src, alt, title, metadata = {}, children } = props;
+  const { src, alt, title, centered, metadata = {}, children } = props;
 
   const FigureClass = cx(
     "o-figure",
+    {
+      [`o-figure--centered`]: centered
+    },
     metadata.contextClass,
     metadata.modifierClasses,
     metadata.additionalClasses

@@ -9,7 +9,7 @@ type Props = {
   total?: Node,
   filling: number,
   tooltip?: Node,
-  tooltipOnHover: boolean,
+  tooltipOnHover?: boolean,
   metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>

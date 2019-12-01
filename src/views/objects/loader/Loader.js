@@ -5,6 +5,7 @@ import cx from "classnames";
 import "./Loader.scss";
 
 type Props = {
+  size: "sm",
   metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
@@ -13,10 +14,11 @@ type Props = {
 };
 
 const Loader = (props: Props) => {
-  const { metadata = {} } = props;
+  const { size, metadata = {} } = props;
 
   const LoaderClass = cx(
     "o-loader",
+    { [`o-loader--${size}`]: size },
     metadata.contextClass,
     metadata.modifierClasses,
     metadata.additionalClasses

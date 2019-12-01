@@ -5,11 +5,11 @@ import cx from "classnames";
 import "./Button.scss";
 
 type ButtonProps = {
-  variant?: "primary" | "secondary",
-  size?: "sm" | "lg",
-  block?: Boolean | "@sm" | "@md",
   type: string,
   url?: string,
+  variant?: "primary" | "secondary",
+  size?: "sm" | "lg",
+  block?: boolean | "@sm" | "@md",
   metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
@@ -19,7 +19,7 @@ type ButtonProps = {
 };
 
 const Button = (props: ButtonProps) => {
-  const { variant, size, block, type, url, metadata = {}, children } = props;
+  const { type, url, variant, size, block, metadata = {}, children } = props;
 
   const ButtonClass = cx(
     "o-button",
@@ -51,6 +51,9 @@ Button.defaultProps = {
 export { Button };
 
 type ButtonSocialProps = {
+  url: string,
+  icon: string,
+  counter?: number,
   variant?:
     | "primary"
     | "secondary"
@@ -60,10 +63,7 @@ type ButtonSocialProps = {
     | "social-linkedin"
     | "social-pinterest",
   size?: "sm" | "lg",
-  block?: Boolean | "sm" | "md",
-  url: string,
-  icon: string,
-  counter?: number,
+  block?: boolean | "sm" | "md",
   metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
@@ -74,12 +74,12 @@ type ButtonSocialProps = {
 
 const ButtonSocial = (props: ButtonSocialProps) => {
   const {
-    variant,
-    size,
-    block,
     url,
     icon,
     counter,
+    variant,
+    size,
+    block,
     metadata = {},
     children
   } = props;
@@ -119,6 +119,8 @@ ButtonSocial.defaultProps = {
 export { ButtonSocial };
 
 type ButtonSocialBadgeProps = {
+  url: string,
+  icon: string,
   variant?:
     | "primary"
     | "secondary"
@@ -127,10 +129,6 @@ type ButtonSocialBadgeProps = {
     | "social-googleplus"
     | "social-linkedin"
     | "social-pinterest",
-  size?: "sm" | "lg",
-  block?: Boolean | "sm" | "md",
-  url: string,
-  icon: string,
   metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
@@ -139,7 +137,7 @@ type ButtonSocialBadgeProps = {
 };
 
 const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
-  const { variant, url, icon, metadata = {} } = props;
+  const { url, icon, variant, metadata = {} } = props;
 
   const ButtonSocialBadgeClass = cx(
     "o-button",

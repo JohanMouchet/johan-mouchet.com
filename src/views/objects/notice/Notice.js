@@ -7,6 +7,7 @@ import "./Notice.scss";
 type Props = {
   secondary?: Node,
   closeButton: boolean,
+  isActive?: boolean,
   metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>
@@ -15,10 +16,11 @@ type Props = {
 };
 
 const Notice = (props: Props) => {
-  const { secondary, closeButton, metadata = {}, children } = props;
+  const { secondary, closeButton, isActive, metadata = {}, children } = props;
 
   const NoticeClass = cx(
     "o-notice",
+    { "is--active": isActive },
     metadata.contextClass,
     metadata.additionalClasses,
     "js-notice"

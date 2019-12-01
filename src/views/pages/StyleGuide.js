@@ -2327,7 +2327,7 @@ const StyleGuide = () => {
                     <code>.o-loader</code>
                   </div>
                   <div className="cell cell--6-@xs">
-                    <Loader metadata={{ modifierClasses: ["sm"] }} />
+                    <Loader size="sm" />
 
                     <code>&amp;.o-loader--sm</code>
                   </div>

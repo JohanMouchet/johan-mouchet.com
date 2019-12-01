@@ -5,10 +5,10 @@ import cx from "classnames";
 import "./Alert.scss";
 
 type Props = {
-  variant?: "info" | "success" | "warning" | "danger",
   content?: Node,
   hidden: boolean,
   closable?: boolean,
+  variant?: "info" | "success" | "warning" | "danger",
   metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>
@@ -16,7 +16,7 @@ type Props = {
 };
 
 const Alert = (props: Props) => {
-  const { variant, content, hidden, closable, metadata = {} } = props;
+  const { content, hidden, closable, variant, metadata = {} } = props;
 
   const AlertClass = cx(
     "o-alert",
