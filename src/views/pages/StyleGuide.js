@@ -135,6 +135,7 @@ const StyleGuide = () => {
                 <div className="grid color-palette-row">
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
+                      size="sm"
                       banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
@@ -146,13 +147,13 @@ const StyleGuide = () => {
                       }
                       metadata={{
                         contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--primary-lighter"],
-                        modifierClasses: ["sm"]
+                        additionalClasses: ["sg-swatch--primary-lighter"]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
+                      size="sm"
                       banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
@@ -164,13 +165,13 @@ const StyleGuide = () => {
                       }
                       metadata={{
                         contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--primary"],
-                        modifierClasses: ["sm"]
+                        additionalClasses: ["sg-swatch--primary"]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
+                      size="sm"
                       banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
@@ -182,14 +183,14 @@ const StyleGuide = () => {
                       }
                       metadata={{
                         contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--primary-darker"],
-                        modifierClasses: ["sm"]
+                        additionalClasses: ["sg-swatch--primary-darker"]
                       }}
                     />
                   </div>
 
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
+                      size="sm"
                       banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
@@ -201,13 +202,13 @@ const StyleGuide = () => {
                       }
                       metadata={{
                         contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--secondary-lighter"],
-                        modifierClasses: ["sm"]
+                        additionalClasses: ["sg-swatch--secondary-lighter"]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
+                      size="sm"
                       banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
@@ -219,13 +220,13 @@ const StyleGuide = () => {
                       }
                       metadata={{
                         contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--secondary"],
-                        modifierClasses: ["sm"]
+                        additionalClasses: ["sg-swatch--secondary"]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
+                      size="sm"
                       banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
@@ -237,14 +238,14 @@ const StyleGuide = () => {
                       }
                       metadata={{
                         contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--secondary-darker"],
-                        modifierClasses: ["sm"]
+                        additionalClasses: ["sg-swatch--secondary-darker"]
                       }}
                     />
                   </div>
 
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
+                      size="sm"
                       banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
@@ -256,13 +257,13 @@ const StyleGuide = () => {
                       }
                       metadata={{
                         contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--gray-lighter"],
-                        modifierClasses: ["sm"]
+                        additionalClasses: ["sg-swatch--gray-lighter"]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
+                      size="sm"
                       banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
@@ -274,13 +275,13 @@ const StyleGuide = () => {
                       }
                       metadata={{
                         contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--gray"],
-                        modifierClasses: ["sm"]
+                        additionalClasses: ["sg-swatch--gray"]
                       }}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
                     <Card
+                      size="sm"
                       banner={<div className="sg-swatch__color"></div>}
                       body={
                         <>
@@ -292,8 +293,7 @@ const StyleGuide = () => {
                       }
                       metadata={{
                         contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--gray-darker"],
-                        modifierClasses: ["sm"]
+                        additionalClasses: ["sg-swatch--gray-darker"]
                       }}
                     />
                   </div>
@@ -315,6 +315,7 @@ const StyleGuide = () => {
                 <div className="grid">
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
                     <Card
+                      size="sm"
                       header={<span className="sg-typeface__glyph">Aa</span>}
                       body={
                         <>
@@ -330,6 +331,7 @@ const StyleGuide = () => {
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
                     <Card
+                      size="sm"
                       header={<span className="sg-typeface__glyph">Aa</span>}
                       body={
                         <>
@@ -345,6 +347,7 @@ const StyleGuide = () => {
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
                     <Card
+                      size="sm"
                       header={<span className="sg-typeface__glyph">Aa</span>}
                       body={
                         <>
@@ -360,6 +363,7 @@ const StyleGuide = () => {
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
                     <Card
+                      size="sm"
                       header={<span className="sg-typeface__glyph">Aa</span>}
                       body={
                         <>
@@ -634,9 +638,7 @@ const StyleGuide = () => {
                 <Blockquote
                   quote="Design is not just what it looks like and feels like. Design is how it works."
                   cite={<a href="!#">Steve Jobs</a>}
-                  metadata={{
-                    modifierClasses: ["pulled"]
-                  }}
+                  pulled
                 />
 
                 <p>
@@ -1000,7 +1002,7 @@ const StyleGuide = () => {
                           />
 
                           <Alert
-                            type="success"
+                            variant="success"
                             content="<strong>Success</strong> message"
                             closable
                           />
@@ -1022,7 +1024,7 @@ const StyleGuide = () => {
                           />
 
                           <Alert
-                            type="danger"
+                            variant="danger"
                             content="<strong>Error</strong> message"
                             closable
                           />
@@ -1044,7 +1046,7 @@ const StyleGuide = () => {
                           />
 
                           <Alert
-                            type="warning"
+                            variant="warning"
                             content="<strong>Warning</strong> message"
                             closable
                           />
@@ -1077,13 +1079,7 @@ const StyleGuide = () => {
                   </div>
 
                   <div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
-                    <Button
-                      type="anchor"
-                      url="#"
-                      metadata={{
-                        modifierClasses: ["primary"]
-                      }}
-                    >
+                    <Button type="anchor" url="#" variant="primary">
                       Button
                     </Button>
 
@@ -1091,13 +1087,7 @@ const StyleGuide = () => {
                   </div>
 
                   <div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
-                    <Button
-                      type="anchor"
-                      url="#"
-                      metadata={{
-                        modifierClasses: ["secondary"]
-                      }}
-                    >
+                    <Button type="anchor" url="#" variant="secondary">
                       Button
                     </Button>
 
@@ -1253,11 +1243,11 @@ const StyleGuide = () => {
                       url="https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}"
                       icon={<IconFacebook />}
                       counter={10}
+                      variant="social-facebook"
                       metadata={{
                         attributes: {
                           title: "Share on Facebook"
-                        },
-                        modifierClasses: ["social-facebook"]
+                        }
                       }}
                     >
                       Share
@@ -1269,11 +1259,11 @@ const StyleGuide = () => {
                       url="https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}"
                       icon={<IconTwitter />}
                       counter={10}
+                      variant="social-twitter"
                       metadata={{
                         attributes: {
                           title: "Tweet this"
-                        },
-                        modifierClasses: ["social-twitter"]
+                        }
                       }}
                     >
                       Tweet
@@ -1285,11 +1275,11 @@ const StyleGuide = () => {
                       url="https://plus.google.com/share?url={URL}"
                       icon={<IconGooglePlus />}
                       counter={10}
+                      variant="social-googleplus"
                       metadata={{
                         attributes: {
                           title: "Share on Google+"
-                        },
-                        modifierClasses: ["social-googleplus"]
+                        }
                       }}
                     >
                       Share
@@ -1301,11 +1291,11 @@ const StyleGuide = () => {
                       url="http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}"
                       icon={<IconPinterest />}
                       counter={10}
+                      variant="social-pinterest"
                       metadata={{
                         attributes: {
                           title: "Pin it"
-                        },
-                        modifierClasses: ["social-pinterest"]
+                        }
                       }}
                     >
                       Pin it
@@ -1317,11 +1307,11 @@ const StyleGuide = () => {
                       url="http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}"
                       icon={<IconLinkedIn />}
                       counter={10}
+                      variant="social-linkedin"
                       metadata={{
                         attributes: {
                           title: "Share on LinkedIn"
-                        },
-                        modifierClasses: ["social-linkedin"]
+                        }
                       }}
                     >
                       Share
@@ -1360,9 +1350,7 @@ const StyleGuide = () => {
                     <ButtonSocialBadge
                       url="{URL}"
                       icon={<IconFacebook />}
-                      metadata={{
-                        modifierClasses: ["social-facebook"]
-                      }}
+                      variant="social-facebook"
                     />
                   </div>
 
@@ -1370,9 +1358,7 @@ const StyleGuide = () => {
                     <ButtonSocialBadge
                       url="{URL}"
                       icon={<IconTwitter />}
-                      metadata={{
-                        modifierClasses: ["social-twitter"]
-                      }}
+                      variant="social-twitter"
                     />
                   </div>
 
@@ -1380,9 +1366,7 @@ const StyleGuide = () => {
                     <ButtonSocialBadge
                       url="{URL}"
                       icon={<IconGooglePlus />}
-                      metadata={{
-                        modifierClasses: ["social-googleplus"]
-                      }}
+                      variant="social-googleplus"
                     />
                   </div>
 
@@ -1390,9 +1374,7 @@ const StyleGuide = () => {
                     <ButtonSocialBadge
                       url="{URL}"
                       icon={<IconPinterest />}
-                      metadata={{
-                        modifierClasses: ["social-pinterest"]
-                      }}
+                      variant="social-pinterest"
                     />
                   </div>
 
@@ -1400,9 +1382,7 @@ const StyleGuide = () => {
                     <ButtonSocialBadge
                       url="{URL}"
                       icon={<IconLinkedIn />}
-                      metadata={{
-                        modifierClasses: ["social-linkedin"]
-                      }}
+                      variant="social-linkedin"
                     />
                   </div>
                 </div>
@@ -1868,6 +1848,7 @@ const StyleGuide = () => {
 
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
                     <Card
+                      variant="primary"
                       header={<h3>Primary card</h3>}
                       body={
                         <>
@@ -1890,14 +1871,14 @@ const StyleGuide = () => {
                         </a>
                       }
                       metadata={{
-                        additionalClasses: ["u-align--center"],
-                        modifierClasses: ["primary "]
+                        additionalClasses: ["u-align--center"]
                       }}
                     />
                   </div>
 
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
                     <Card
+                      variant="secondary"
                       header={<h3>Secondary card</h3>}
                       body={
                         <>
@@ -1920,14 +1901,14 @@ const StyleGuide = () => {
                         </a>
                       }
                       metadata={{
-                        additionalClasses: ["u-align--center"],
-                        modifierClasses: ["secondary "]
+                        additionalClasses: ["u-align--center"]
                       }}
                     />
                   </div>
 
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
                     <Card
+                      variant="banner-gradient"
                       bannerUrl="https://images.unsplash.com/photo-1464519046765-f6d70b82a0df?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80"
                       header={<h3>Card with banner</h3>}
                       body={
@@ -1940,14 +1921,12 @@ const StyleGuide = () => {
                         </p>
                       }
                       footer={<a href="!#">Read more</a>}
-                      metadata={{
-                        modifierClasses: ["banner-gradient "]
-                      }}
                     />
                   </div>
 
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--4-@md">
                     <Card
+                      variant="banner-gradient"
                       banner={<h3>Card with title inside banner</h3>}
                       bannerUrl="https://images.unsplash.com/photo-1464518983192-0de439b5d517?dpr=1&auto=format&crop=entropy&fit=crop&w=540&h=360&q=80"
                       body={
@@ -1965,9 +1944,6 @@ const StyleGuide = () => {
                         </p>
                       }
                       footer={<a href="!#">Read more</a>}
-                      metadata={{
-                        modifierClasses: ["banner-gradient "]
-                      }}
                     />
                   </div>
                 </div>
@@ -2160,7 +2136,7 @@ const StyleGuide = () => {
                   Success <code>&amp;.o-alert--success</code>
                 </h3>
                 <Alert
-                  type="success"
+                  variant="success"
                   content="Indicates a successful or positive action."
                   closable
                 />
@@ -2169,7 +2145,7 @@ const StyleGuide = () => {
                   Info <code>&amp;.o-alert--info</code>
                 </h3>
                 <Alert
-                  type="info"
+                  variant="info"
                   content="Indicates a neutral informative change or action."
                   closable
                 />
@@ -2178,7 +2154,7 @@ const StyleGuide = () => {
                   Warning <code>&amp;.o-alert--warning</code>
                 </h3>
                 <Alert
-                  type="warning"
+                  variant="warning"
                   content="Indicates a warning that might need attention."
                   closable
                 />
@@ -2187,7 +2163,7 @@ const StyleGuide = () => {
                   Danger <code>&amp;.o-alert--danger</code>
                 </h3>
                 <Alert
-                  type="danger"
+                  variant="danger"
                   content="Indicates a dangerous or potentially negative action."
                   closable
                 />

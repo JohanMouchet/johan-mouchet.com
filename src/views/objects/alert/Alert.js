@@ -5,7 +5,7 @@ import cx from "classnames";
 import "./Alert.scss";
 
 type Props = {
-  type?: "info" | "success" | "warning" | "danger",
+  variant?: "info" | "success" | "warning" | "danger",
   content?: Node,
   hidden: boolean,
   closable?: boolean,
@@ -16,11 +16,11 @@ type Props = {
 };
 
 const Alert = (props: Props) => {
-  const { type, content, hidden, closable, metadata = {} } = props;
+  const { variant, content, hidden, closable, metadata = {} } = props;
 
   const AlertClass = cx(
     "o-alert",
-    `o-alert--${type}`,
+    `o-alert--${variant}`,
     {
       "is--visible": !hidden,
       "js-alert": closable
@@ -30,21 +30,21 @@ const Alert = (props: Props) => {
     metadata.additionalClasses
   );
 
-  const getIcon = type => {
-    if (type === "info") {
+  const getIcon = variant => {
+    if (variant === "info") {
       return "info";
-    } else if (type === "success") {
+    } else if (variant === "success") {
       return "check_circle";
-    } else if (type === "warning") {
+    } else if (variant === "warning") {
       return "warning";
-    } else if (type === "danger") {
+    } else if (variant === "danger") {
       return "error";
     }
   };
 
   return (
     <div className={AlertClass}>
-      <i className="o-alert__icon material-icons">{getIcon(type)}</i>
+      <i className="o-alert__icon material-icons">{getIcon(variant)}</i>
       <div className="o-alert__content">{content}</div>
       {closable && (
         <button className="o-alert__close js-alert-close">&#x2716;</button>
@@ -54,7 +54,7 @@ const Alert = (props: Props) => {
 };
 
 Alert.defaultProps = {
-  type: "info"
+  variant: "info"
 };
 
 export default Alert;

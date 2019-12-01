@@ -5,6 +5,14 @@ import cx from "classnames";
 import "./Card.scss";
 
 type Props = {
+  variant?:
+    | "secondary"
+    | "primary"
+    | "hover"
+    | "forward"
+    | "active"
+    | "banner-gradient",
+  size?: "sm" | "lg",
   banner?: boolean | Node,
   bannerUrl?: string,
   header?: Node,
@@ -18,10 +26,23 @@ type Props = {
 };
 
 const Card = (props: Props) => {
-  const { banner, bannerUrl, header, body, footer, metadata = {} } = props;
+  const {
+    variant,
+    size,
+    banner,
+    bannerUrl,
+    header,
+    body,
+    footer,
+    metadata = {}
+  } = props;
 
   const CardClass = cx(
     "o-card",
+    {
+      [`o-card--${variant}`]: variant,
+      [`o-card--${size}`]: size
+    },
     metadata.contextClass,
     metadata.modifierClasses,
     metadata.additionalClasses

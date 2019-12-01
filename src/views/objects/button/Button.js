@@ -5,24 +5,31 @@ import cx from "classnames";
 import "./Button.scss";
 
 type ButtonProps = {
+  variant?: "primary" | "secondary",
+  size?: "sm" | "lg",
+  block?: Boolean | "@sm" | "@md",
   type: string,
   url?: string,
   metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
-    modifierClasses?: Array<string>,
     attributes?: { [key: string]: any }
   },
   children?: Node
 };
 
 const Button = (props: ButtonProps) => {
-  const { type, url, metadata = {}, children } = props;
+  const { variant, size, block, type, url, metadata = {}, children } = props;
 
   const ButtonClass = cx(
     "o-button",
+    {
+      [`o-button--${variant}`]: variant,
+      [`o-button--${size}`]: size,
+      "o-button--block": block === true,
+      [`o-button--block${"-" + block}`]: typeof block === "string"
+    },
     metadata.contextClass,
-    metadata.modifierClasses,
     metadata.additionalClasses
   );
 
@@ -44,27 +51,50 @@ Button.defaultProps = {
 export { Button };
 
 type ButtonSocialProps = {
+  variant?:
+    | "primary"
+    | "secondary"
+    | "social-twitter"
+    | "social-facebook"
+    | "social-googleplus"
+    | "social-linkedin"
+    | "social-pinterest",
+  size?: "sm" | "lg",
+  block?: Boolean | "sm" | "md",
   url: string,
   icon: string,
   counter?: number,
   metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
-    modifierClasses?: Array<string>,
     attributes?: { [key: string]: any }
   },
   children?: Node
 };
 
 const ButtonSocial = (props: ButtonSocialProps) => {
-  const { url, icon, counter, metadata = {}, children } = props;
+  const {
+    variant,
+    size,
+    block,
+    url,
+    icon,
+    counter,
+    metadata = {},
+    children
+  } = props;
 
   const ButtonSocialClass = cx(
     "o-button",
+    {
+      [`o-button--${variant}`]: variant,
+      [`o-button--${size}`]: size,
+      "o-button--block": block === true,
+      [`o-button--block${"-" + block}`]: typeof block === "string"
+    },
+    "o-button--social",
     metadata.contextClass,
-    metadata.modifierClasses,
-    metadata.additionalClasses,
-    "o-button--social"
+    metadata.additionalClasses
   );
 
   return (
@@ -89,26 +119,37 @@ ButtonSocial.defaultProps = {
 export { ButtonSocial };
 
 type ButtonSocialBadgeProps = {
+  variant?:
+    | "primary"
+    | "secondary"
+    | "social-twitter"
+    | "social-facebook"
+    | "social-googleplus"
+    | "social-linkedin"
+    | "social-pinterest",
+  size?: "sm" | "lg",
+  block?: Boolean | "sm" | "md",
   url: string,
   icon: string,
   metadata?: {
     contextClass?: string,
     additionalClasses?: Array<string>,
-    modifierClasses?: Array<string>,
     attributes?: { [key: string]: any }
   }
 };
 
 const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
-  const { url, icon, metadata = {} } = props;
+  const { variant, url, icon, metadata = {} } = props;
 
   const ButtonSocialBadgeClass = cx(
     "o-button",
-    metadata.contextClass,
-    metadata.modifierClasses,
-    metadata.additionalClasses,
+    {
+      [`o-button--${variant}`]: variant
+    },
     "o-button--social",
-    "o-button--social-badge"
+    "o-button--social-badge",
+    metadata.contextClass,
+    metadata.additionalClasses
   );
 
   return (
