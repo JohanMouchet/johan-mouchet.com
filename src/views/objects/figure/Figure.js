@@ -9,24 +9,20 @@ type Props = {
   alt?: string,
   title?: string,
   centered?: boolean,
-  metadata?: {
-    contextClass?: string,
-    additionalClasses?: Array<string>,
-    attributes?: { [key: string]: any }
-  },
+  extraClasses?: string | Array | Object,
+  attributes?: { [key: string]: any },
   children?: Node
 };
 
 const Figure = (props: Props) => {
-  const { src, alt, title, centered, metadata = {}, children } = props;
+  const { src, alt, title, centered, extraClasses, attributes, children } = props;
 
   const FigureClass = cx(
     "o-figure",
     {
       [`o-figure--centered`]: centered
     },
-    metadata.contextClass,
-    metadata.additionalClasses
+    extraClasses
   );
 
   return (
@@ -36,7 +32,7 @@ const Figure = (props: Props) => {
         src={src}
         alt={alt}
         title={title}
-        {...metadata.attributes}
+        {...attributes}
       />
       {children && (
         <figcaption className="o-figure__caption">{children}</figcaption>

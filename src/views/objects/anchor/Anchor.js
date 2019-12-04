@@ -8,23 +8,21 @@ type Props = {
   url: string,
   id: string,
   marker: string,
-  metadata?: {
-    contextClass?: string,
-    attributes?: { [key: string]: any }
-  },
+  extraClasses?: string | Array | Object,
+  attributes?: { [key: string]: any },
   children?: Node
 };
 
 const Anchor = (props: Props) => {
-  const { tag, url, id, marker, metadata = {}, children } = props;
+  const { tag, url, id, marker, extraClasses, attributes, children } = props;
 
-  const AnchorClass = cx("u-anchor", metadata.contextClass);
+  const AnchorClass = cx("u-anchor", extraClasses);
 
   const Tag = tag;
 
   return (
     id && (
-      <Tag id={id} className={AnchorClass} {...metadata.attributes}>
+      <Tag id={id} className={AnchorClass} {...attributes}>
         <a href={url + "#" + id} className="u-anchor__link">
           {marker}
         </a>

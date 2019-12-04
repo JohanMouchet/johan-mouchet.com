@@ -11,20 +11,13 @@ type Props = {
       url: string
     }
   ],
-  metadata?: {
-    contextClass?: string,
-    additionalClasses?: Array<string>
-  }
+  extraClasses?: string | Array | Object
 };
 
 const Breadcrumb = (props: Props) => {
-  const { levels, metadata = {} } = props;
+  const { levels, extraClasses } = props;
 
-  const BreadcrumbClass = cx(
-    "o-breadcrumb",
-    metadata.contextClass,
-    metadata.additionalClasses
-  );
+  const BreadcrumbClass = cx("o-breadcrumb", extraClasses);
 
   const lastLevel = levels.length - 1;
   return !levels ? null : (

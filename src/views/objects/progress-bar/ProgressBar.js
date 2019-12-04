@@ -10,30 +10,15 @@ type Props = {
   filling: number,
   tooltip?: Node,
   tooltipOnHover?: boolean,
-  metadata?: {
-    contextClass?: string,
-    additionalClasses?: Array<string>
-  }
+  extraClasses?: string | Array | Object
 };
 
 const ProgressBar = (props: Props) => {
-  const {
-    label,
-    total,
-    filling,
-    tooltip,
-    tooltipOnHover,
-    metadata = {}
-  } = props;
+  const { label, total, filling, tooltip, tooltipOnHover, extraClasses } = props;
 
-  const ProgressBarClass = cx(
-    "o-progress-bar",
-    metadata.contextClass,
-    metadata.additionalClasses,
-    {
-      "o-progress-bar--tooltip-hover": tooltipOnHover
-    }
-  );
+  const ProgressBarClass = cx("o-progress-bar", extraClasses, {
+    "o-progress-bar--tooltip-hover": tooltipOnHover
+  });
 
   return (
     <div className={ProgressBarClass}>

@@ -9,9 +9,7 @@ type MenuItem = {
   text: string,
   url?: string,
   button?: Button,
-  metadata?: {
-    additionalClasses?: Array<string>
-  },
+  extraClasses?: string | Array | Object,
   menu?: [MenuItem]
 };
 
@@ -38,16 +36,14 @@ const Menu = (props: Props) => {
                   className={cx(
                     "o-menu__item",
                     { "o-menu__item--has-children": item.menu },
-                    item.metadata.additionalClasses
+                    item.extraClasses
                   )}
                 >
                   {(item.text && (
                     <a
-                      className={cx(
-                        "o-menu__link",
-                        { "o-menu__submenu-heading": item.menu },
-                        item.metadata.additionalClasses
-                      )}
+                      className={cx("o-menu__link", {
+                        "o-menu__submenu-heading": item.menu
+                      })}
                       href={item.url}
                       tabIndex={!item.url && "0"}
                     >
@@ -56,7 +52,7 @@ const Menu = (props: Props) => {
                   )) ||
                     (item.button && <Button {...item.button} />) ||
                     (item.menu && renderMenu(menu, true))}
-                  {/* Pass children to Button */}
+                  {/* TODO: Pass children to Button */}
                 </li>
               ))}
         </ul>

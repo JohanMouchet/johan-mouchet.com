@@ -10,16 +10,22 @@ type ButtonProps = {
   variant?: "primary" | "secondary",
   size?: "sm" | "lg",
   block?: boolean | "@sm" | "@md",
-  metadata?: {
-    contextClass?: string,
-    additionalClasses?: Array<string>,
-    attributes?: { [key: string]: any }
-  },
+  extraClasses?: string | Array | Object,
+  attributes?: { [key: string]: any },
   children?: Node
 };
 
 const Button = (props: ButtonProps) => {
-  const { type, url, variant, size, block, metadata = {}, children } = props;
+  const {
+    type,
+    url,
+    variant,
+    size,
+    block,
+    extraClasses,
+    attributes,
+    children
+  } = props;
 
   const ButtonClass = cx(
     "o-button",
@@ -29,16 +35,15 @@ const Button = (props: ButtonProps) => {
       "o-button--block": block === true,
       [`o-button--block${"-" + block}`]: typeof block === "string"
     },
-    metadata.contextClass,
-    metadata.additionalClasses
+    extraClasses
   );
 
   return type === "button" ? (
-    <button className={ButtonClass} {...metadata.attributes}>
+    <button className={ButtonClass} {...attributes}>
       {children}
     </button>
   ) : (
-    <a className={ButtonClass} href={url} {...metadata.attributes}>
+    <a className={ButtonClass} href={url} {...attributes}>
       {children}
     </a>
   );
@@ -64,11 +69,8 @@ type ButtonSocialProps = {
     | "social-pinterest",
   size?: "sm" | "lg",
   block?: boolean | "sm" | "md",
-  metadata?: {
-    contextClass?: string,
-    additionalClasses?: Array<string>,
-    attributes?: { [key: string]: any }
-  },
+  extraClasses?: string | Array | Object,
+  attributes?: { [key: string]: any },
   children?: Node
 };
 
@@ -80,7 +82,8 @@ const ButtonSocial = (props: ButtonSocialProps) => {
     variant,
     size,
     block,
-    metadata = {},
+    extraClasses,
+    attributes,
     children
   } = props;
 
@@ -93,8 +96,7 @@ const ButtonSocial = (props: ButtonSocialProps) => {
       [`o-button--block${"-" + block}`]: typeof block === "string"
     },
     "o-button--social",
-    metadata.contextClass,
-    metadata.additionalClasses
+    extraClasses
   );
 
   return (
@@ -103,7 +105,7 @@ const ButtonSocial = (props: ButtonSocialProps) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      {...metadata.attributes}
+      {...attributes}
     >
       <span className="o-button__icon">{icon}</span>
       <span className="o-button__text">{children}</span>
@@ -129,15 +131,12 @@ type ButtonSocialBadgeProps = {
     | "social-googleplus"
     | "social-linkedin"
     | "social-pinterest",
-  metadata?: {
-    contextClass?: string,
-    additionalClasses?: Array<string>,
-    attributes?: { [key: string]: any }
-  }
+  extraClasses?: string | Array | Object,
+  attributes?: { [key: string]: any }
 };
 
 const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
-  const { url, icon, variant, metadata = {} } = props;
+  const { url, icon, variant, extraClasses, attributes } = props;
 
   const ButtonSocialBadgeClass = cx(
     "o-button",
@@ -146,8 +145,7 @@ const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
     },
     "o-button--social",
     "o-button--social-badge",
-    metadata.contextClass,
-    metadata.additionalClasses
+    extraClasses
   );
 
   return (
@@ -156,7 +154,7 @@ const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      {...metadata.attributes}
+      {...attributes}
     >
       <span className="o-button__icon">{icon}</span>
     </a>

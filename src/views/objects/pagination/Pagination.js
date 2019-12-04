@@ -62,16 +62,16 @@
 // type Props = {
 //   range: number,
 //   current: number,
-//   links: Array<string>
+//   links: Array<string>,
+//   extraClasses?: string | Array | Object,
 // };
 
 // const Pagination = (props: Props) => {
-//   const { range, current, links, metadata = {} } = props;
+//   const { range, current, links, extraClasses } = props;
 
 //   const PaginationClass = cx(
 //     "o-pagination",
-//     metadata.contextClass,
-//     metadata.additionalClasses
+//     extraClasses
 //   );
 
 //   // TODO: contextClass()

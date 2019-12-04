@@ -6,20 +6,16 @@ import "./Loader.scss";
 
 type Props = {
   size: "sm",
-  metadata?: {
-    contextClass?: string,
-    additionalClasses?: Array<string>
-  }
+  extraClasses?: string | Array | Object
 };
 
 const Loader = (props: Props) => {
-  const { size, metadata = {} } = props;
+  const { size, extraClasses } = props;
 
   const LoaderClass = cx(
     "o-loader",
     { [`o-loader--${size}`]: size },
-    metadata.contextClass,
-    metadata.additionalClasses
+    extraClasses
   );
 
   return <div className={LoaderClass}></div>;

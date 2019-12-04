@@ -11,21 +11,13 @@ type Props = {
       panel: string
     }
   ],
-  metadata?: {
-    contextClass?: string,
-    additionalClasses?: Array<string>
-  }
+  extraClasses?: string | Array | Object
 };
 
 const Tabs = (props: Props) => {
-  const { tabs, metadata = {} } = props;
+  const { tabs, extraClasses } = props;
 
-  const TabsClass = cx(
-    "o-tabs",
-    metadata.contextClass,
-    metadata.additionalClasses,
-    "js-tabs"
-  );
+  const TabsClass = cx("o-tabs", extraClasses, "js-tabs");
 
   return !tabs ? null : (
     <div className={TabsClass}>

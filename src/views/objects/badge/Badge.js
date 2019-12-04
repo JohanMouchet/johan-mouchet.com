@@ -5,20 +5,13 @@ import cx from "classnames";
 import "./Badge.scss";
 
 type Props = {
-  metadata?: {
-    contextClass?: string,
-    additionalClasses?: Array<string>
-  }
+  extraClasses?: string | Array | Object
 };
 
 const Badge = (props: Props) => {
-  const { metadata = {}, children } = props;
+  const { extraClasses, children } = props;
 
-  const BadgeClass = cx(
-    "o-badge",
-    metadata.contextClass,
-    metadata.additionalClasses
-  );
+  const BadgeClass = cx("o-badge", extraClasses);
 
   return <span className={BadgeClass}>{children}</span>;
 };

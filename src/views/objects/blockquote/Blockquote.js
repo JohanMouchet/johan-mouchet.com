@@ -8,24 +8,15 @@ type Props = {
   quote: Node,
   cite?: Node,
   pulled?: boolean,
-  metadata?: {
-    contextClass?: string,
-    additionalClasses?: Array<string>
-  }
+  extraClasses?: string | Array | Object
 };
 
 const Blockquote = (props: Props) => {
-  const { quote, cite, pulled, metadata = {} } = props;
+  const { quote, cite, pulled, extraClasses } = props;
 
-  const BlockquoteClass = cx(
-    "o-blockquote",
-    metadata.contextClass,
-    metadata.additionalClasses,
-    "wow",
-    {
-      "o-blockquote--pulled": pulled
-    }
-  );
+  const BlockquoteClass = cx("o-blockquote", extraClasses, "wow", {
+    "o-blockquote--pulled": pulled
+  });
 
   return (
     <blockquote className={BlockquoteClass}>

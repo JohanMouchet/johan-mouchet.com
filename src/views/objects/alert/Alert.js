@@ -9,14 +9,11 @@ type Props = {
   hidden: boolean,
   closable?: boolean,
   variant?: "info" | "success" | "warning" | "danger",
-  metadata?: {
-    contextClass?: string,
-    additionalClasses?: Array<string>
-  }
+  extraClasses?: string | Array | Object
 };
 
 const Alert = (props: Props) => {
-  const { content, hidden, closable, variant, metadata = {} } = props;
+  const { content, hidden, closable, variant, extraClasses } = props;
 
   const AlertClass = cx(
     "o-alert",
@@ -26,8 +23,7 @@ const Alert = (props: Props) => {
       "js-alert": closable
     },
     "wow",
-    metadata.contextClass,
-    metadata.additionalClasses
+    extraClasses
   );
 
   const getIcon = variant => {

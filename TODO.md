@@ -1,6 +1,5 @@
 # TODO
 
-- Combine `additionalClasses` and `contextClass`: extraClass?
 - Use defaultProps when needed
 - Compose components <Parent><Child>1</Child></Parent>
 - Improve Storybook

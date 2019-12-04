@@ -145,10 +145,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      metadata={{
-                        contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--primary-lighter"]
-                      }}
+                      extraClasses={["sg-swatch", "sg-swatch--primary-lighter"]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
@@ -163,10 +160,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      metadata={{
-                        contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--primary"]
-                      }}
+                      extraClasses={["sg-swatch", "sg-swatch--primary"]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
@@ -181,10 +175,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      metadata={{
-                        contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--primary-darker"]
-                      }}
+                      extraClasses={["sg-swatch", "sg-swatch--primary-darker"]}
                     />
                   </div>
 
@@ -200,10 +191,10 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      metadata={{
-                        contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--secondary-lighter"]
-                      }}
+                      extraClasses={[
+                        "sg-swatch",
+                        "sg-swatch--secondary-lighter"
+                      ]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
@@ -218,10 +209,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      metadata={{
-                        contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--secondary"]
-                      }}
+                      extraClasses={["sg-swatch", "sg-swatch--secondary"]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
@@ -236,10 +224,10 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      metadata={{
-                        contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--secondary-darker"]
-                      }}
+                      extraClasses={[
+                        "sg-swatch",
+                        "sg-swatch--secondary-darker"
+                      ]}
                     />
                   </div>
 
@@ -255,10 +243,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      metadata={{
-                        contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--gray-lighter"]
-                      }}
+                      extraClasses={["sg-swatch", "sg-swatch--gray-lighter"]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
@@ -273,10 +258,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      metadata={{
-                        contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--gray"]
-                      }}
+                      extraClasses={["sg-swatch", "sg-swatch--gray"]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
@@ -291,10 +273,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      metadata={{
-                        contextClass: "sg-swatch",
-                        additionalClasses: ["sg-swatch--gray-darker"]
-                      }}
+                      extraClasses={["sg-swatch", "sg-swatch--gray-darker"]}
                     />
                   </div>
                 </div>
@@ -323,10 +302,10 @@ const StyleGuide = () => {
                           <p className="sg-typeface__name"></p>
                         </>
                       }
-                      metadata={{
-                        context: "sg-typeface",
-                        additionalClasses: ["sg-typeface--font-primary"]
-                      }}
+                      extraClasses={[
+                        "sg-typeface",
+                        "sg-typeface--font-primary"
+                      ]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
@@ -339,10 +318,10 @@ const StyleGuide = () => {
                           <p className="sg-typeface__name"></p>
                         </>
                       }
-                      metadata={{
-                        context: "sg-typeface",
-                        additionalClasses: ["sg-typeface--font-secondary"]
-                      }}
+                      extraClasses={[
+                        "sg-typeface",
+                        "sg-typeface--font-secondary"
+                      ]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
@@ -355,10 +334,10 @@ const StyleGuide = () => {
                           <p className="sg-typeface__name"></p>
                         </>
                       }
-                      metadata={{
-                        context: "sg-typeface",
-                        additionalClasses: ["sg-typeface--font-tertiary"]
-                      }}
+                      extraClasses={[
+                        "sg-typeface",
+                        "sg-typeface--font-tertiary"
+                      ]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
@@ -371,10 +350,10 @@ const StyleGuide = () => {
                           <p className="sg-typeface__name"></p>
                         </>
                       }
-                      metadata={{
-                        context: "sg-typeface",
-                        additionalClasses: ["sg-typeface--font-quaternary"]
-                      }}
+                      extraClasses={[
+                        "sg-typeface",
+                        "sg-typeface--font-quaternary"
+                      ]}
                     />
                   </div>
                 </div>
@@ -781,11 +760,9 @@ const StyleGuide = () => {
                             id="input-1"
                             type="text"
                             name="input-1"
-                            metadata={{
-                              attributes: {
-                                placeholder: "Username",
-                                required: ""
-                              }
+                            attributes={{
+                              placeholder: "Username",
+                              required: true
                             }}
                           />
                         </div>
@@ -799,11 +776,9 @@ const StyleGuide = () => {
                             id="input-2"
                             type="text"
                             name="input-2"
-                            metadata={{
-                              attributes: {
-                                placeholder: "Disabled",
-                                disabled: true
-                              }
+                            attributes={{
+                              placeholder: "Disabled",
+                              disabled: true
                             }}
                           />
                         </div>
@@ -842,10 +817,8 @@ const StyleGuide = () => {
                             id="input-3"
                             type="search"
                             name="input-3"
-                            metadata={{
-                              attributes: {
-                                placeholder: "Keyword"
-                              }
+                            attributes={{
+                              placeholder: "Keyword"
                             }}
                           />
                         </div>
@@ -855,11 +828,9 @@ const StyleGuide = () => {
                         <div className="o-form__group">
                           <Textarea
                             name="textarea-1"
-                            metadata={{
-                              attributes: {
-                                rows: "4",
-                                placeholder: "Textarea"
-                              }
+                            attributes={{
+                              rows: "4",
+                              placeholder: "Textarea"
                             }}
                           />
                         </div>
@@ -893,10 +864,8 @@ const StyleGuide = () => {
                             type="radio"
                             name="radioChoice"
                             value="disabled"
-                            metadata={{
-                              attributes: {
-                                disabled: true
-                              }
+                            attributes={{
+                              title: "test"
                             }}
                           >
                             Disabled
@@ -930,10 +899,8 @@ const StyleGuide = () => {
                             type="checkbox"
                             name="checkboxChoice"
                             value="disabled"
-                            metadata={{
-                              attributes: {
-                                disabled: true
-                              }
+                            attributes={{
+                              disabled: true
                             }}
                           >
                             Disabled
@@ -955,10 +922,8 @@ const StyleGuide = () => {
                           <File
                             id="file-1"
                             name="file-1"
-                            metadata={{
-                              attributes: {
-                                multiple: ""
-                              }
+                            attributes={{
+                              multiple: true
                             }}
                           >
                             Choose a file
@@ -989,10 +954,8 @@ const StyleGuide = () => {
                             id="input-success"
                             type="text"
                             name="input-success"
-                            metadata={{
-                              attributes: {
-                                placeholder: "Text"
-                              }
+                            attributes={{
+                              placeholder: "Text"
                             }}
                           />
 
@@ -1011,10 +974,8 @@ const StyleGuide = () => {
                             id="input-error"
                             type="text"
                             name="input-error"
-                            metadata={{
-                              attributes: {
-                                placeholder: "Text"
-                              }
+                            attributes={{
+                              placeholder: "Text"
                             }}
                           />
 
@@ -1033,10 +994,8 @@ const StyleGuide = () => {
                             id="input-warning"
                             type="text"
                             name="input-warning"
-                            metadata={{
-                              attributes: {
-                                placeholder: "Text"
-                              }
+                            attributes={{
+                              placeholder: "Text"
                             }}
                           />
 
@@ -1093,10 +1052,8 @@ const StyleGuide = () => {
                     <Button
                       type="anchor"
                       url="#"
-                      metadata={{
-                        attributes: {
-                          disabled: true
-                        }
+                      attributes={{
+                        disabled: true
                       }}
                     >
                       Button
@@ -1161,10 +1118,8 @@ const StyleGuide = () => {
                       url="https://www.facebook.com/sharer/sharer.php?u={URL}&t={TITLE}"
                       icon={<IconFacebook />}
                       counter={10}
-                      metadata={{
-                        attributes: {
-                          title: "Share on Facebook"
-                        }
+                      attributes={{
+                        title: "Share on Facebook"
                       }}
                     >
                       Share
@@ -1176,10 +1131,8 @@ const StyleGuide = () => {
                       url="https://twitter.com/intent/tweet?source={URL}&text={TITLE}:%20{URL}"
                       icon={<IconTwitter />}
                       counter={10}
-                      metadata={{
-                        attributes: {
-                          title: "Tweet this"
-                        }
+                      attributes={{
+                        title: "Tweet this"
                       }}
                     >
                       Tweet
@@ -1191,10 +1144,8 @@ const StyleGuide = () => {
                       url="https://plus.google.com/share?url={URL}"
                       icon={<IconGooglePlus />}
                       counter={10}
-                      metadata={{
-                        attributes: {
-                          title: "Share on Google+"
-                        }
+                      attributes={{
+                        title: "Share on Google+"
                       }}
                     >
                       Share
@@ -1206,10 +1157,8 @@ const StyleGuide = () => {
                       url="http://pinterest.com/pin/create/button/?url={URL}&description={DESCRIPTION}"
                       icon={<IconPinterest />}
                       counter={10}
-                      metadata={{
-                        attributes: {
-                          title: "Pin it"
-                        }
+                      attributes={{
+                        title: "Pin it"
                       }}
                     >
                       Pin it
@@ -1221,10 +1170,8 @@ const StyleGuide = () => {
                       url="http://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={DESCRIPTION}&source={URL}"
                       icon={<IconLinkedIn />}
                       counter={10}
-                      metadata={{
-                        attributes: {
-                          title: "Share on LinkedIn"
-                        }
+                      attributes={{
+                        title: "Share on LinkedIn"
                       }}
                     >
                       Share
@@ -1239,10 +1186,8 @@ const StyleGuide = () => {
                       icon={<IconFacebook />}
                       counter={10}
                       variant="social-facebook"
-                      metadata={{
-                        attributes: {
-                          title: "Share on Facebook"
-                        }
+                      attributes={{
+                        title: "Share on Facebook"
                       }}
                     >
                       Share
@@ -1255,10 +1200,8 @@ const StyleGuide = () => {
                       icon={<IconTwitter />}
                       counter={10}
                       variant="social-twitter"
-                      metadata={{
-                        attributes: {
-                          title: "Tweet this"
-                        }
+                      attributes={{
+                        title: "Tweet this"
                       }}
                     >
                       Tweet
@@ -1271,10 +1214,8 @@ const StyleGuide = () => {
                       icon={<IconGooglePlus />}
                       counter={10}
                       variant="social-googleplus"
-                      metadata={{
-                        attributes: {
-                          title: "Share on Google+"
-                        }
+                      attributes={{
+                        title: "Share on Google+"
                       }}
                     >
                       Share
@@ -1287,10 +1228,8 @@ const StyleGuide = () => {
                       icon={<IconPinterest />}
                       counter={10}
                       variant="social-pinterest"
-                      metadata={{
-                        attributes: {
-                          title: "Pin it"
-                        }
+                      attributes={{
+                        title: "Pin it"
                       }}
                     >
                       Pin it
@@ -1303,10 +1242,8 @@ const StyleGuide = () => {
                       icon={<IconLinkedIn />}
                       counter={10}
                       variant="social-linkedin"
-                      metadata={{
-                        attributes: {
-                          title: "Share on LinkedIn"
-                        }
+                      attributes={{
+                        title: "Share on LinkedIn"
                       }}
                     >
                       Share
@@ -1865,9 +1802,7 @@ const StyleGuide = () => {
                           Upgrade
                         </a>
                       }
-                      metadata={{
-                        additionalClasses: ["u-align--center"]
-                      }}
+                      extraClasses={["u-align--center"]}
                     />
                   </div>
 
@@ -1895,9 +1830,7 @@ const StyleGuide = () => {
                           Upgrade
                         </a>
                       }
-                      metadata={{
-                        additionalClasses: ["u-align--center"]
-                      }}
+                      extraClasses={["u-align--center"]}
                     />
                   </div>
 
@@ -2663,9 +2596,7 @@ const StyleGuide = () => {
           primary='<p className="u-vr--bottom-0-@xs">This website uses cookies to ensure you the best experience. <a href="!#">More info</a></p>'
           secondary='<button className="o-button js-notice-close">Got it!</button>'
           closeButton
-          metadata={{
-            additionalClasses: ["u-is--hidden"]
-          }}
+          extraClasses={["u-is--hidden"]}
         />
       </>
     </Default>

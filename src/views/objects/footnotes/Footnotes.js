@@ -42,20 +42,13 @@ type NotesProps = {
       url?: string
     }
   ],
-  metadata?: {
-    contextClass?: string,
-    additionalClasses?: Array<string>
-  }
+  extraClasses?: string | Array | Object
 };
 
 const FootnotesNotes = (props: NotesProps) => {
-  const { notes, metadata = {} } = props;
+  const { notes, extraClasses } = props;
 
-  const NotesClass = cx(
-    "o-footnotes",
-    metadata.contextClass,
-    metadata.additionalClasses
-  );
+  const NotesClass = cx("o-footnotes", extraClasses);
 
   return !notes ? null : (
     <ol className={NotesClass}>

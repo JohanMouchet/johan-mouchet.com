@@ -18,10 +18,7 @@ type Props = {
     | "active"
     | "banner-gradient",
   size?: "sm" | "lg",
-  metadata?: {
-    contextClass?: string,
-    additionalClasses?: Array<string>
-  }
+  extraClasses?: string | Array | Object
 };
 
 const Card = (props: Props) => {
@@ -33,7 +30,7 @@ const Card = (props: Props) => {
     footer,
     variant,
     size,
-    metadata = {}
+    extraClasses
   } = props;
 
   const CardClass = cx(
@@ -42,8 +39,7 @@ const Card = (props: Props) => {
       [`o-card--${variant}`]: variant,
       [`o-card--${size}`]: size
     },
-    metadata.contextClass,
-    metadata.additionalClasses
+    extraClasses
   );
 
   const Tag = !header ? "header" : "div";
