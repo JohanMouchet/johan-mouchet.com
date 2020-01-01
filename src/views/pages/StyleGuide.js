@@ -2291,13 +2291,11 @@ const StyleGuide = () => {
                   notes={[
                     {
                       id: "1",
-                      text: "Lorem ipsum dolor sit amet.",
-                      url: ""
+                      text: "Lorem ipsum dolor sit amet."
                     },
                     {
                       id: "2",
-                      text: "Lorem ipsum dolor sit amet.",
-                      url: ""
+                      text: "Lorem ipsum dolor sit amet."
                     }
                   ]}
                 />
