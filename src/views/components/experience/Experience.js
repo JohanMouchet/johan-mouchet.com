@@ -79,8 +79,4 @@ const Experience = (props: Props) => {
       ));
 };
 
-Experience.defaultProps = {
-  prop1: 2
-};
-
 export default Experience;

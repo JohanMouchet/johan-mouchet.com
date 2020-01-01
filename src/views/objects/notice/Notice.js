@@ -47,8 +47,4 @@ const Notice = (props: Props) => {
   );
 };
 
-Notice.defaultProps = {
-  prop1: 2
-};
-
 export default Notice;

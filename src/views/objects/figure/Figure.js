@@ -15,7 +15,15 @@ type Props = {
 };
 
 const Figure = (props: Props) => {
-  const { src, alt, title, centered, extraClasses, attributes, children } = props;
+  const {
+    src,
+    alt,
+    title,
+    centered,
+    extraClasses,
+    attributes,
+    children
+  } = props;
 
   const FigureClass = cx(
     "o-figure",
@@ -39,10 +47,6 @@ const Figure = (props: Props) => {
       )}
     </figure>
   );
-};
-
-Figure.defaultProps = {
-  prop1: 2
 };
 
 export default Figure;

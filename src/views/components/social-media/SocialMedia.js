@@ -38,8 +38,4 @@ const SocialMedia = (props: Props) => {
   );
 };
 
-SocialMedia.defaultProps = {
-  prop1: 2
-};
-
 export default SocialMedia;

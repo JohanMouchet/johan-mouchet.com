@@ -28,10 +28,6 @@ const Label = (props: LabelProps) => {
   );
 };
 
-Label.defaultProps = {
-  prop1: 2
-};
-
 export { Label };
 
 type FieldProps = {
@@ -66,15 +62,11 @@ const Field = (props: FieldProps) => {
   );
 };
 
-Field.defaultProps = {
-  prop1: 2
-};
-
 export { Field };
 
 type ToggleProps = {
   id?: string,
-  type: string,
+  type: "checkbox" | "radio",
   name?: string,
   value?: string,
   checked?: boolean,
@@ -125,7 +117,7 @@ const Toggle = (props: ToggleProps) => {
 };
 
 Toggle.defaultProps = {
-  prop1: 2
+  type: "checkbox"
 };
 
 export { Toggle };
@@ -140,9 +132,21 @@ type FileProps = {
 };
 
 const File = (props: FileProps) => {
-  const { id, name, multipleCaption, extraClasses, attributes, children } = props;
+  const {
+    id,
+    name,
+    multipleCaption,
+    extraClasses,
+    attributes,
+    children
+  } = props;
 
-  const FileClass = cx("o-form__file", "o-button", "js-form-file", extraClasses);
+  const FileClass = cx(
+    "o-form__file",
+    "o-button",
+    "js-form-file",
+    extraClasses
+  );
 
   return (
     <label className={FileClass}>
@@ -164,10 +168,6 @@ const File = (props: FileProps) => {
   );
 };
 
-File.defaultProps = {
-  prop1: 2
-};
-
 export { File };
 
 type SelectProps = {
@@ -187,7 +187,11 @@ type SelectProps = {
 const Select = (props: SelectProps) => {
   const { id, name, options, extraClasses, attributes } = props;
 
-  const SelectClass = cx("o-form__field", "o-form__field--select", extraClasses);
+  const SelectClass = cx(
+    "o-form__field",
+    "o-form__field--select",
+    extraClasses
+  );
 
   return !options ? null : (
     <select id={id} name={name} className={SelectClass} {...attributes}>
@@ -202,10 +206,6 @@ const Select = (props: SelectProps) => {
       ))}
     </select>
   );
-};
-
-Select.defaultProps = {
-  prop1: 2
 };
 
 export { Select };
@@ -234,10 +234,6 @@ const Textarea = (props: TextareaProps) => {
   );
 };
 
-Textarea.defaultProps = {
-  prop1: 2
-};
-
 export { Textarea };
 
 type RangeProps = {
@@ -261,10 +257,6 @@ const Range = (props: RangeProps) => {
       {...attributes}
     />
   );
-};
-
-Range.defaultProps = {
-  prop1: 2
 };
 
 export { Range };

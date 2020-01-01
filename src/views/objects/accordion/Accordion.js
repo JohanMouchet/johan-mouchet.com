@@ -43,8 +43,4 @@ const Accordion = (props: Props) => {
   );
 };
 
-Accordion.defaultProps = {
-  prop1: 2
-};
-
 export default Accordion;

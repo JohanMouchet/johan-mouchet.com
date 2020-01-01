@@ -5,7 +5,7 @@ import cx from "classnames";
 import "./Button.scss";
 
 type ButtonProps = {
-  type: string,
+  type: "anchor" | "button",
   url?: string,
   variant?: "primary" | "secondary",
   size?: "sm" | "lg",
@@ -50,7 +50,7 @@ const Button = (props: ButtonProps) => {
 };
 
 Button.defaultProps = {
-  prop1: 2
+  type: "button"
 };
 
 export { Button };
@@ -114,10 +114,6 @@ const ButtonSocial = (props: ButtonSocialProps) => {
   );
 };
 
-ButtonSocial.defaultProps = {
-  prop1: 2
-};
-
 export { ButtonSocial };
 
 type ButtonSocialBadgeProps = {
@@ -159,10 +155,6 @@ const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
       <span className="o-button__icon">{icon}</span>
     </a>
   );
-};
-
-ButtonSocialBadge.defaultProps = {
-  prop1: 2
 };
 
 export { ButtonSocialBadge };

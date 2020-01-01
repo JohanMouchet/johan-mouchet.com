@@ -89,8 +89,4 @@ const Reference = (props: Props) => {
   );
 };
 
-Reference.defaultProps = {
-  prop1: 2
-};
-
 export default Reference;

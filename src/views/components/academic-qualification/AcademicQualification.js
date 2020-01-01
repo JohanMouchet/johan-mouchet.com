@@ -43,8 +43,4 @@ const AcademicQualification = (props: Props) => {
       ));
 };
 
-AcademicQualification.defaultProps = {
-  prop1: 2
-};
-
 export default AcademicQualification;

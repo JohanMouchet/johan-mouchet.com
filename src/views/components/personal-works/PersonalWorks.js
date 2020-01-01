@@ -51,8 +51,4 @@ const PersonalWorks = (props: Props) => {
   );
 };
 
-PersonalWorks.defaultProps = {
-  prop1: 2
-};
-
 export default PersonalWorks;
