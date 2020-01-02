@@ -191,10 +191,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      className={[
-                        "sg-swatch",
-                        "sg-swatch--secondary-lighter"
-                      ]}
+                      className={["sg-swatch", "sg-swatch--secondary-lighter"]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
@@ -224,10 +221,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      className={[
-                        "sg-swatch",
-                        "sg-swatch--secondary-darker"
-                      ]}
+                      className={["sg-swatch", "sg-swatch--secondary-darker"]}
                     />
                   </div>
 
@@ -302,10 +296,7 @@ const StyleGuide = () => {
                           <p className="sg-typeface__name"></p>
                         </>
                       }
-                      className={[
-                        "sg-typeface",
-                        "sg-typeface--font-primary"
-                      ]}
+                      className={["sg-typeface", "sg-typeface--font-primary"]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
@@ -318,10 +309,7 @@ const StyleGuide = () => {
                           <p className="sg-typeface__name"></p>
                         </>
                       }
-                      className={[
-                        "sg-typeface",
-                        "sg-typeface--font-secondary"
-                      ]}
+                      className={["sg-typeface", "sg-typeface--font-secondary"]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
@@ -334,10 +322,7 @@ const StyleGuide = () => {
                           <p className="sg-typeface__name"></p>
                         </>
                       }
-                      className={[
-                        "sg-typeface",
-                        "sg-typeface--font-tertiary"
-                      ]}
+                      className={["sg-typeface", "sg-typeface--font-tertiary"]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--6-@sm cell--3-@md">
@@ -961,7 +946,11 @@ const StyleGuide = () => {
 
                           <Alert
                             variant="success"
-                            content="<strong>Success</strong> message"
+                            content={
+                              <>
+                                <strong>Success</strong> message
+                              </>
+                            }
                             closable
                           />
                         </div>
@@ -981,7 +970,11 @@ const StyleGuide = () => {
 
                           <Alert
                             variant="danger"
-                            content="<strong>Error</strong> message"
+                            content={
+                              <>
+                                <strong>Error</strong> message
+                              </>
+                            }
                             closable
                           />
                         </div>
@@ -1001,7 +994,11 @@ const StyleGuide = () => {
 
                           <Alert
                             variant="warning"
-                            content="<strong>Warning</strong> message"
+                            content={
+                              <>
+                                <strong>Warning</strong> message
+                              </>
+                            }
                             closable
                           />
                         </div>
