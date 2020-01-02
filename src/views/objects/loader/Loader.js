@@ -12,11 +12,7 @@ type Props = {
 const Loader = (props: Props) => {
   const { size, className } = props;
 
-  const LoaderClass = cx(
-    "o-loader",
-    { [`o-loader--${size}`]: size },
-    className
-  );
+  const LoaderClass = cx("o-loader", size && `o-loader--${size}`, className);
 
   return <div className={LoaderClass}></div>;
 };

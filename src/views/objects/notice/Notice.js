@@ -17,7 +17,7 @@ const Notice = (props: Props) => {
 
   const NoticeClass = cx(
     "o-notice",
-    { "is--active": isActive },
+    isActive && "is--active",
     className,
     "js-notice"
   );

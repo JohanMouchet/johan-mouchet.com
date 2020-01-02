@@ -17,13 +17,14 @@
 // const Link = (props: LinkProps) => {
 //   const { current, first, prev, next, last, link, children } = props;
 
-//   const linkClass = cx("o-pagination__index", {
-//     "is--active": current,
-//     "o-pagination__index--first": first,
-//     "o-pagination__index--prev": prev,
-//     "o-pagination__index--next": next,
-//     "o-pagination__index--last": last
-//   });
+//   const linkClass = cx(
+//     "o-pagination__index",
+//     current && "is--active",
+//     first && "o-pagination__index--first",
+//     prev && "o-pagination__index--prev",
+//     next && "o-pagination__index--next",
+//     last && "o-pagination__index--last"
+//   );
 
 //   return (
 //     <li className={linkClass}>
@@ -44,10 +45,13 @@
 // const Icon = (props: IconProps) => {
 //   const { first, prev, next, last } = props;
 
-//   const iconClass = cx("o-pagination__icon", "material-icons", "wow", {
-//     fadeInLeft: first || prev,
-//     fadeInRight: next || last
-//   });
+//   const iconClass = cx(
+//     "o-pagination__icon",
+//     "material-icons",
+//     "wow",
+//     (first || prev) && "fadeInLeft",
+//     (next || last) && "fadeInRight"
+//   );
 
 //   return (
 //     <i className={iconClass} data-wow-delay={(first || last) && ".15s"}>
@@ -63,16 +67,13 @@
 //   range: number,
 //   current: number,
 //   links: Array<string>,
-//   className?: string | Array | Object,
+//   className?: string | Array | Object
 // };
 
 // const Pagination = (props: Props) => {
 //   const { range, current, links, className } = props;
 
-//   const PaginationClass = cx(
-//     "o-pagination",
-//     className
-//   );
+//   const PaginationClass = cx("o-pagination", className);
 
 //   // TODO: contextClass()
 

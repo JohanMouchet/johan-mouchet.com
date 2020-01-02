@@ -29,12 +29,11 @@ const Button = (props: ButtonProps) => {
 
   const ButtonClass = cx(
     "o-button",
-    {
-      [`o-button--${variant}`]: variant,
-      [`o-button--${size}`]: size,
-      "o-button--block": block === true,
-      [`o-button--block${"-" + block}`]: typeof block === "string"
-    },
+    size && `o-button--${size}`,
+    variant && `o-button--${variant}`,
+    typeof block === "string"
+      ? `o-button--block${"-" + block}`
+      : block === true && "o-button--block",
     className
   );
 
@@ -89,12 +88,11 @@ const ButtonSocial = (props: ButtonSocialProps) => {
 
   const ButtonSocialClass = cx(
     "o-button",
-    {
-      [`o-button--${variant}`]: variant,
-      [`o-button--${size}`]: size,
-      "o-button--block": block === true,
-      [`o-button--block${"-" + block}`]: typeof block === "string"
-    },
+    size && `o-button--${size}`,
+    variant && `o-button--${variant}`,
+    typeof block === "string"
+      ? `o-button--block${"-" + block}`
+      : block === true && "o-button--block",
     "o-button--social",
     className
   );
@@ -136,9 +134,7 @@ const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
 
   const ButtonSocialBadgeClass = cx(
     "o-button",
-    {
-      [`o-button--${variant}`]: variant
-    },
+    variant && `o-button--${variant}`,
     "o-button--social",
     "o-button--social-badge",
     className

@@ -15,21 +15,11 @@ type Props = {
 };
 
 const Figure = (props: Props) => {
-  const {
-    src,
-    alt,
-    title,
-    centered,
-    className,
-    attributes,
-    children
-  } = props;
+  const { src, alt, title, centered, className, attributes, children } = props;
 
   const FigureClass = cx(
     "o-figure",
-    {
-      [`o-figure--centered`]: centered
-    },
+    centered && `o-figure--centered`,
     className
   );
 

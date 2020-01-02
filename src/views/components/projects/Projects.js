@@ -62,9 +62,7 @@ const Projects = (props: Props) => {
     <>
       {project.lede && (
         <p
-          className={cx("c-project__lede", {
-            "u-vr--top-0-@xs": singleProject
-          })}
+          className={cx("c-project__lede", singleProject && "u-vr--top-0-@xs")}
         >
           {project.lede}
         </p>
@@ -72,9 +70,10 @@ const Projects = (props: Props) => {
 
       {project.awards && (
         <ul
-          className={cx("c-project__awards", {
-            "u-vr--top-0-@xs": singleProject
-          })}
+          className={cx(
+            "c-project__awards",
+            singleProject && "u-vr--top-0-@xs"
+          )}
         >
           {project.awards.map(award => (
             <li className="c-project__award" key={award.name}>
@@ -92,9 +91,10 @@ const Projects = (props: Props) => {
 
       {!project.details ? null : (
         <ul
-          className={cx("c-project__details", {
-            "u-vr--top-0-@xs": singleProject
-          })}
+          className={cx(
+            "c-project__details",
+            singleProject && "u-vr--top-0-@xs"
+          )}
         >
           {project.details.map((detail, index) => (
             <li className="c-project__detail" key={index}>

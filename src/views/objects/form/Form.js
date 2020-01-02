@@ -17,7 +17,7 @@ const Label = (props: LabelProps) => {
 
   const LabelClass = cx(
     "o-form__label",
-    { "o-form__label--block": block || !children },
+    (block || !children) && "o-form__label--block",
     className
   );
 
@@ -46,7 +46,7 @@ const Field = (props: FieldProps) => {
   const FieldClass = cx(
     "o-form__field",
     `o-form__field--${type}`,
-    { [`o-form__field--${variant}`]: variant },
+    variant && `o-form__field--${variant}`,
     className
   );
 
@@ -132,21 +132,9 @@ type FileProps = {
 };
 
 const File = (props: FileProps) => {
-  const {
-    id,
-    name,
-    multipleCaption,
-    className,
-    attributes,
-    children
-  } = props;
+  const { id, name, multipleCaption, className, attributes, children } = props;
 
-  const FileClass = cx(
-    "o-form__file",
-    "o-button",
-    "js-form-file",
-    className
-  );
+  const FileClass = cx("o-form__file", "o-button", "js-form-file", className);
 
   return (
     <label className={FileClass}>
@@ -187,11 +175,7 @@ type SelectProps = {
 const Select = (props: SelectProps) => {
   const { id, name, options, className, attributes } = props;
 
-  const SelectClass = cx(
-    "o-form__field",
-    "o-form__field--select",
-    className
-  );
+  const SelectClass = cx("o-form__field", "o-form__field--select", className);
 
   return !options ? null : (
     <select id={id} name={name} className={SelectClass} {...attributes}>

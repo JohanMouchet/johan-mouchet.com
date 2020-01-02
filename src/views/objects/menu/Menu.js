@@ -21,10 +21,7 @@ const Menu = (props: Props) => {
   const { menu } = props;
 
   const renderMenu = (menu, isSubmenu) => {
-    const MenuClass = cx({
-      "o-menu": !isSubmenu,
-      "o-menu__submenu": isSubmenu
-    });
+    const MenuClass = cx(isSubmenu ? "o-menu__submenu" : "o-menu");
 
     return (
       menu && (
@@ -35,15 +32,16 @@ const Menu = (props: Props) => {
                 <li
                   className={cx(
                     "o-menu__item",
-                    { "o-menu__item--has-children": item.menu },
+                    item.menu && "o-menu__item--has-children",
                     item.className
                   )}
                 >
                   {(item.text && (
                     <a
-                      className={cx("o-menu__link", {
-                        "o-menu__submenu-heading": item.menu
-                      })}
+                      className={cx(
+                        "o-menu__link",
+                        item.menu && "o-menu__submenu-heading"
+                      )}
                       href={item.url}
                       tabIndex={!item.url && "0"}
                     >

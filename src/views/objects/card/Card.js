@@ -35,10 +35,8 @@ const Card = (props: Props) => {
 
   const CardClass = cx(
     "o-card",
-    {
-      [`o-card--${variant}`]: variant,
-      [`o-card--${size}`]: size
-    },
+    variant && `o-card--${variant}`,
+    size && `o-card--${size}`,
     className
   );
 

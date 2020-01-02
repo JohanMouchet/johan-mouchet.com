@@ -18,10 +18,8 @@ const Alert = (props: Props) => {
   const AlertClass = cx(
     "o-alert",
     `o-alert--${variant}`,
-    {
-      "is--visible": !hidden,
-      "js-alert": closable
-    },
+    !hidden && "is--visible",
+    closable && "js-alert",
     "wow",
     className
   );
