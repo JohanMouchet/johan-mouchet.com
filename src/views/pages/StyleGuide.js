@@ -1022,33 +1022,25 @@ const StyleGuide = () => {
                 </h2>
                 <div className="grid">
                   <div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
-                    <Button type="anchor" url="#">
-                      Button
-                    </Button>
+                    <Button>Button</Button>
 
                     <code>.o-button</code>
                   </div>
 
                   <div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
-                    <Button type="anchor" url="#" variant="primary">
-                      Button
-                    </Button>
+                    <Button variant="primary">Button</Button>
 
                     <code>&amp;.o-button--primary</code>
                   </div>
 
                   <div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
-                    <Button type="anchor" url="#" variant="secondary">
-                      Button
-                    </Button>
+                    <Button variant="secondary">Button</Button>
 
                     <code>&amp;.o-button--secondary</code>
                   </div>
 
                   <div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
                     <Button
-                      type="anchor"
-                      url="#"
                       attributes={{
                         disabled: true
                       }}

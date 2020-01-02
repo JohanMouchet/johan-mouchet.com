@@ -5,7 +5,7 @@ import cx from "classnames";
 import "./Button.scss";
 
 type ButtonProps = {
-  type: "anchor" | "button",
+  type: "anchor" | "button" | "submit" | "reset",
   url?: string,
   variant?: "primary" | "secondary",
   size?: "sm" | "lg",
@@ -38,14 +38,14 @@ const Button = (props: ButtonProps) => {
     className
   );
 
-  return type === "button" ? (
-    <button className={ButtonClass} {...attributes}>
-      {children}
-    </button>
-  ) : (
+  return type === "anchor" ? (
     <a className={ButtonClass} href={url} {...attributes}>
       {children}
     </a>
+  ) : (
+    <button className={ButtonClass} type={type} {...attributes}>
+      {children}
+    </button>
   );
 };
 
