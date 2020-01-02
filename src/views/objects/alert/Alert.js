@@ -15,7 +15,7 @@ type Props = {
 const Alert = (props: Props) => {
   const { content, hidden, closable, variant, className } = props;
 
-  const AlertClass = cx(
+  const classNames = cx(
     "o-alert",
     `o-alert--${variant}`,
     !hidden && "is--visible",
@@ -37,7 +37,7 @@ const Alert = (props: Props) => {
   };
 
   return (
-    <div className={AlertClass}>
+    <div className={classNames}>
       <i className="o-alert__icon material-icons">{getIcon(variant)}</i>
       <div className="o-alert__content">{content}</div>
       {closable && (

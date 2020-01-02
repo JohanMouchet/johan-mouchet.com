@@ -15,14 +15,14 @@ type LabelProps = {
 const Label = (props: LabelProps) => {
   const { id, block, className, children } = props;
 
-  const LabelClass = cx(
+  const classNames = cx(
     "o-form__label",
     (block || !children) && "o-form__label--block",
     className
   );
 
   return (
-    <label htmlFor={id} className={LabelClass}>
+    <label htmlFor={id} className={classNames}>
       {children || "&nbsp;"}
     </label>
   );
@@ -43,7 +43,7 @@ type FieldProps = {
 const Field = (props: FieldProps) => {
   const { id, type, name, value, variant, className, attributes } = props;
 
-  const FieldClass = cx(
+  const classNames = cx(
     "o-form__field",
     `o-form__field--${type}`,
     variant && `o-form__field--${variant}`,
@@ -56,7 +56,7 @@ const Field = (props: FieldProps) => {
       type={type}
       name={name}
       defaultValue={value}
-      className={FieldClass}
+      className={classNames}
       {...attributes}
     />
   );
@@ -92,14 +92,14 @@ const Toggle = (props: ToggleProps) => {
 
   const handleChange = check => (check = !check);
 
-  const ToggleClass = cx(
+  const classNames = cx(
     "o-form__toggle",
     `o-form__toggle--${type}`,
     className
   );
 
   return (
-    <label className={ToggleClass} {...attributes}>
+    <label className={classNames} {...attributes}>
       <input
         id={id}
         type={type}
@@ -134,10 +134,10 @@ type FileProps = {
 const File = (props: FileProps) => {
   const { id, name, multipleCaption, className, attributes, children } = props;
 
-  const FileClass = cx("o-form__file", "o-button", "js-form-file", className);
+  const classNames = cx("o-form__file", "o-button", "js-form-file", className);
 
   return (
-    <label className={FileClass}>
+    <label className={classNames}>
       <input
         id={id}
         type="file"
@@ -175,10 +175,10 @@ type SelectProps = {
 const Select = (props: SelectProps) => {
   const { id, name, options, className, attributes } = props;
 
-  const SelectClass = cx("o-form__field", "o-form__field--select", className);
+  const classNames = cx("o-form__field", "o-form__field--select", className);
 
   return !options ? null : (
-    <select id={id} name={name} className={SelectClass} {...attributes}>
+    <select id={id} name={name} className={classNames} {...attributes}>
       {options.map(option => (
         <option
           defaultValue={option.value}
@@ -205,14 +205,14 @@ type TextareaProps = {
 const Textarea = (props: TextareaProps) => {
   const { id, name, className, attributes, children } = props;
 
-  const TextareaClass = cx(
+  const classNames = cx(
     "o-form__field",
     "o-form__field--textarea",
     className
   );
 
   return (
-    <textarea id={id} name={name} className={TextareaClass} {...attributes}>
+    <textarea id={id} name={name} className={classNames} {...attributes}>
       {children}
     </textarea>
   );
@@ -230,14 +230,14 @@ type RangeProps = {
 const Range = (props: RangeProps) => {
   const { id, name, className, attributes } = props;
 
-  const RangeClass = cx("o-form__range", className);
+  const classNames = cx("o-form__range", className);
 
   return (
     <input
       id={id}
       type="range"
       name={name}
-      className={RangeClass}
+      className={classNames}
       {...attributes}
     />
   );

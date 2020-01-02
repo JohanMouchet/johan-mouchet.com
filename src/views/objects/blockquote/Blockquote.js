@@ -14,7 +14,7 @@ type Props = {
 const Blockquote = (props: Props) => {
   const { quote, cite, pulled, className } = props;
 
-  const BlockquoteClass = cx(
+  const classNames = cx(
     "o-blockquote",
     className,
     "wow",
@@ -22,7 +22,7 @@ const Blockquote = (props: Props) => {
   );
 
   return (
-    <blockquote className={BlockquoteClass}>
+    <blockquote className={classNames}>
       <div className="o-blockquote__quotes">{quote}</div>
       {cite && <cite className="o-blockquote__cite">{cite}</cite>}
     </blockquote>

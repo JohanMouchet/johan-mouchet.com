@@ -33,7 +33,7 @@ const Card = (props: Props) => {
     className
   } = props;
 
-  const CardClass = cx(
+  const classNames = cx(
     "o-card",
     variant && `o-card--${variant}`,
     size && `o-card--${size}`,
@@ -43,7 +43,7 @@ const Card = (props: Props) => {
   const Tag = !header ? "header" : "div";
 
   return (
-    <section className={CardClass}>
+    <section className={classNames}>
       {(banner || bannerUrl) && (
         <Tag
           className="o-card__banner"

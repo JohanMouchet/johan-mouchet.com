@@ -12,12 +12,12 @@ type Props = {
 const Accordion = (props: Props) => {
   const { items, className } = props;
 
-  const AccordionClass = cx("o-accordion", className, "js-accordion");
+  const classNames = cx("o-accordion", className, "js-accordion");
 
   // TODO: Choose active index, no fadeIn if active
 
   return !items ? null : (
-    <ul className={AccordionClass}>
+    <ul className={classNames}>
       {items.map((item, index) => (
         <li
           className={cx(

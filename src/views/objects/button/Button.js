@@ -27,7 +27,7 @@ const Button = (props: ButtonProps) => {
     children
   } = props;
 
-  const ButtonClass = cx(
+  const classNames = cx(
     "o-button",
     size && `o-button--${size}`,
     variant && `o-button--${variant}`,
@@ -38,11 +38,11 @@ const Button = (props: ButtonProps) => {
   );
 
   return type === "anchor" ? (
-    <a className={ButtonClass} href={url} {...attributes}>
+    <a className={classNames} href={url} {...attributes}>
       {children}
     </a>
   ) : (
-    <button className={ButtonClass} type={type} {...attributes}>
+    <button className={classNames} type={type} {...attributes}>
       {children}
     </button>
   );
@@ -86,7 +86,7 @@ const ButtonSocial = (props: ButtonSocialProps) => {
     children
   } = props;
 
-  const ButtonSocialClass = cx(
+  const classNames = cx(
     "o-button",
     size && `o-button--${size}`,
     variant && `o-button--${variant}`,
@@ -99,7 +99,7 @@ const ButtonSocial = (props: ButtonSocialProps) => {
 
   return (
     <a
-      className={ButtonSocialClass}
+      className={classNames}
       href={url}
       target="_blank"
       rel="noopener noreferrer"
@@ -132,7 +132,7 @@ type ButtonSocialBadgeProps = {
 const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
   const { url, icon, variant, className, attributes } = props;
 
-  const ButtonSocialBadgeClass = cx(
+  const classNames = cx(
     "o-button",
     variant && `o-button--${variant}`,
     "o-button--social",
@@ -142,7 +142,7 @@ const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
 
   return (
     <a
-      className={ButtonSocialBadgeClass}
+      className={classNames}
       href={url}
       target="_blank"
       rel="noopener noreferrer"

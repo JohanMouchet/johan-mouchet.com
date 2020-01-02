@@ -17,10 +17,10 @@ type Props = {
 const Tabs = (props: Props) => {
   const { tabs, className } = props;
 
-  const TabsClass = cx("o-tabs", className, "js-tabs");
+  const classNames = cx("o-tabs", className, "js-tabs");
 
   return !tabs ? null : (
-    <div className={TabsClass}>
+    <div className={classNames}>
       <ul className="o-tabs__thumbs">
         {tabs.map((tab, index) => (
           <li

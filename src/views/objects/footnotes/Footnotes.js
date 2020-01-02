@@ -47,10 +47,10 @@ type NotesProps = {
 const FootnotesNotes = (props: NotesProps) => {
   const { notes, className } = props;
 
-  const NotesClass = cx("o-footnotes", className);
+  const classNames = cx("o-footnotes", className);
 
   return (
-    <ol className={NotesClass}>
+    <ol className={classNames}>
       {notes.map(note => (
         <li
           id={`footnote:${note.prefix ? note.prefix + "-" : ""}${note.id}`}

@@ -21,11 +21,11 @@ const Menu = (props: Props) => {
   const { menu } = props;
 
   const renderMenu = (menu, isSubmenu) => {
-    const MenuClass = cx(isSubmenu ? "o-menu__submenu" : "o-menu");
+    const classNames = cx(isSubmenu ? "o-menu__submenu" : "o-menu");
 
     return (
       menu && (
-        <ul className={MenuClass}>
+        <ul className={classNames}>
           {!menu
             ? null
             : menu.map(item => (

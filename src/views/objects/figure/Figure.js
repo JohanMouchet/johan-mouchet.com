@@ -17,14 +17,14 @@ type Props = {
 const Figure = (props: Props) => {
   const { src, alt, title, centered, className, attributes, children } = props;
 
-  const FigureClass = cx(
+  const classNames = cx(
     "o-figure",
     centered && `o-figure--centered`,
     className
   );
 
   return (
-    <figure className={FigureClass}>
+    <figure className={classNames}>
       <img
         className="o-figure__img"
         src={src}

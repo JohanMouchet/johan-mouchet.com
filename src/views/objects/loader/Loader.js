@@ -12,9 +12,9 @@ type Props = {
 const Loader = (props: Props) => {
   const { size, className } = props;
 
-  const LoaderClass = cx("o-loader", size && `o-loader--${size}`, className);
+  const classNames = cx("o-loader", size && `o-loader--${size}`, className);
 
-  return <div className={LoaderClass}></div>;
+  return <div className={classNames}></div>;
 };
 
 export default Loader;

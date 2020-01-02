@@ -11,9 +11,9 @@ type Props = {
 const Badge = (props: Props) => {
   const { className, children } = props;
 
-  const BadgeClass = cx("o-badge", className);
+  const classNames = cx("o-badge", className);
 
-  return <span className={BadgeClass}>{children}</span>;
+  return <span className={classNames}>{children}</span>;
 };
 
 export default Badge;

@@ -16,14 +16,14 @@ type Props = {
 const ProgressBar = (props: Props) => {
   const { label, total, filling, tooltip, tooltipOnHover, className } = props;
 
-  const ProgressBarClass = cx(
+  const classNames = cx(
     "o-progress-bar",
     className,
     tooltipOnHover && "o-progress-bar--tooltip-hover"
   );
 
   return (
-    <div className={ProgressBarClass}>
+    <div className={classNames}>
       {label && <span className="o-progress-bar__label">{label}</span>}
       {total && <span className="o-progress-bar__total">{total}</span>}
       <div className="o-progress-bar__container">

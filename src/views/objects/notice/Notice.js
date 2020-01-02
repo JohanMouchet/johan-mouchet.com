@@ -15,7 +15,7 @@ type Props = {
 const Notice = (props: Props) => {
   const { secondary, closeButton, isActive, className, children } = props;
 
-  const NoticeClass = cx(
+  const classNames = cx(
     "o-notice",
     isActive && "is--active",
     className,
@@ -23,7 +23,7 @@ const Notice = (props: Props) => {
   );
 
   return (
-    <div className={NoticeClass}>
+    <div className={classNames}>
       <div className="container container--lg">
         <div className="grid grid--yCenter-@xs">
           <div className="cell cell--@xs">

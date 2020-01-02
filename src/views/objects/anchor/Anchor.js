@@ -16,13 +16,13 @@ type Props = {
 const Anchor = (props: Props) => {
   const { tag, url, id, marker, className, attributes, children } = props;
 
-  const AnchorClass = cx("u-anchor", className);
+  const classNames = cx("u-anchor", className);
 
   const Tag = tag;
 
   return (
     id && (
-      <Tag id={id} className={AnchorClass} {...attributes}>
+      <Tag id={id} className={classNames} {...attributes}>
         <a href={url + "#" + id} className="u-anchor__link">
           {marker}
         </a>

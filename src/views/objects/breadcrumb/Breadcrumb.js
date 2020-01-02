@@ -17,12 +17,12 @@ type Props = {
 const Breadcrumb = (props: Props) => {
   const { levels, className } = props;
 
-  const BreadcrumbClass = cx("o-breadcrumb", className);
+  const classNames = cx("o-breadcrumb", className);
 
   const lastLevel = levels.length - 1;
   return !levels ? null : (
     <>
-      <ol className={BreadcrumbClass}>
+      <ol className={classNames}>
         {levels.map((level, index) => (
           <li
             className="o-breadcrumb__level wow fadeInUp"
