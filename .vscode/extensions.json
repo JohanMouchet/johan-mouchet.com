@@ -1,7 +1,7 @@
 {
   "recommendations": [
     "dbaeumer.vscode-eslint",
-    "shinnn.stylelint",
+    "stylelint.stylelint",
     "esbenp.prettier-vscode"
   ]
 }
