@@ -10,7 +10,7 @@ type ButtonProps = {
   variant?: "primary" | "secondary",
   size?: "sm" | "lg",
   block?: boolean | "@sm" | "@md",
-  extraClasses?: string | Array | Object,
+  className?: string | Array | Object,
   attributes?: { [key: string]: any },
   children?: Node
 };
@@ -22,7 +22,7 @@ const Button = (props: ButtonProps) => {
     variant,
     size,
     block,
-    extraClasses,
+    className,
     attributes,
     children
   } = props;
@@ -35,7 +35,7 @@ const Button = (props: ButtonProps) => {
       "o-button--block": block === true,
       [`o-button--block${"-" + block}`]: typeof block === "string"
     },
-    extraClasses
+    className
   );
 
   return type === "button" ? (
@@ -69,7 +69,7 @@ type ButtonSocialProps = {
     | "social-pinterest",
   size?: "sm" | "lg",
   block?: boolean | "sm" | "md",
-  extraClasses?: string | Array | Object,
+  className?: string | Array | Object,
   attributes?: { [key: string]: any },
   children?: Node
 };
@@ -82,7 +82,7 @@ const ButtonSocial = (props: ButtonSocialProps) => {
     variant,
     size,
     block,
-    extraClasses,
+    className,
     attributes,
     children
   } = props;
@@ -96,7 +96,7 @@ const ButtonSocial = (props: ButtonSocialProps) => {
       [`o-button--block${"-" + block}`]: typeof block === "string"
     },
     "o-button--social",
-    extraClasses
+    className
   );
 
   return (
@@ -127,12 +127,12 @@ type ButtonSocialBadgeProps = {
     | "social-googleplus"
     | "social-linkedin"
     | "social-pinterest",
-  extraClasses?: string | Array | Object,
+  className?: string | Array | Object,
   attributes?: { [key: string]: any }
 };
 
 const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
-  const { url, icon, variant, extraClasses, attributes } = props;
+  const { url, icon, variant, className, attributes } = props;
 
   const ButtonSocialBadgeClass = cx(
     "o-button",
@@ -141,7 +141,7 @@ const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
     },
     "o-button--social",
     "o-button--social-badge",
-    extraClasses
+    className
   );
 
   return (

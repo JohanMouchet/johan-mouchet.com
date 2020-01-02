@@ -11,13 +11,13 @@ type Props = {
       panel: string
     }
   ],
-  extraClasses?: string | Array | Object
+  className?: string | Array | Object
 };
 
 const Tabs = (props: Props) => {
-  const { tabs, extraClasses } = props;
+  const { tabs, className } = props;
 
-  const TabsClass = cx("o-tabs", extraClasses, "js-tabs");
+  const TabsClass = cx("o-tabs", className, "js-tabs");
 
   return !tabs ? null : (
     <div className={TabsClass}>

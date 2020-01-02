@@ -8,17 +8,17 @@ import "./Form.scss";
 type LabelProps = {
   id?: string,
   block: boolean,
-  extraClasses?: string | Array | Object,
+  className?: string | Array | Object,
   children?: Node
 };
 
 const Label = (props: LabelProps) => {
-  const { id, block, extraClasses, children } = props;
+  const { id, block, className, children } = props;
 
   const LabelClass = cx(
     "o-form__label",
     { "o-form__label--block": block || !children },
-    extraClasses
+    className
   );
 
   return (
@@ -36,18 +36,18 @@ type FieldProps = {
   name: string,
   value?: string,
   variant?: "no-corner-left" | "no-corner-right",
-  extraClasses?: string | Array | Object,
+  className?: string | Array | Object,
   attributes?: { [key: string]: any }
 };
 
 const Field = (props: FieldProps) => {
-  const { id, type, name, value, variant, extraClasses, attributes } = props;
+  const { id, type, name, value, variant, className, attributes } = props;
 
   const FieldClass = cx(
     "o-form__field",
     `o-form__field--${type}`,
     { [`o-form__field--${variant}`]: variant },
-    extraClasses
+    className
   );
 
   return (
@@ -70,7 +70,7 @@ type ToggleProps = {
   name?: string,
   value?: string,
   checked?: boolean,
-  extraClasses?: string | Array | Object,
+  className?: string | Array | Object,
   attributes?: { [key: string]: any },
   children?: Node
 };
@@ -84,7 +84,7 @@ const Toggle = (props: ToggleProps) => {
     name,
     value,
     checked,
-    extraClasses,
+    className,
     attributes,
     children
   } = props;
@@ -95,7 +95,7 @@ const Toggle = (props: ToggleProps) => {
   const ToggleClass = cx(
     "o-form__toggle",
     `o-form__toggle--${type}`,
-    extraClasses
+    className
   );
 
   return (
@@ -126,7 +126,7 @@ type FileProps = {
   id?: string,
   name: string,
   multipleCaption?: string,
-  extraClasses?: string | Array | Object,
+  className?: string | Array | Object,
   attributes?: { [key: string]: any },
   children?: Node
 };
@@ -136,7 +136,7 @@ const File = (props: FileProps) => {
     id,
     name,
     multipleCaption,
-    extraClasses,
+    className,
     attributes,
     children
   } = props;
@@ -145,7 +145,7 @@ const File = (props: FileProps) => {
     "o-form__file",
     "o-button",
     "js-form-file",
-    extraClasses
+    className
   );
 
   return (
@@ -180,17 +180,17 @@ type SelectProps = {
       attributes: Array<string>
     }
   ],
-  extraClasses?: string | Array | Object,
+  className?: string | Array | Object,
   attributes?: { [key: string]: any }
 };
 
 const Select = (props: SelectProps) => {
-  const { id, name, options, extraClasses, attributes } = props;
+  const { id, name, options, className, attributes } = props;
 
   const SelectClass = cx(
     "o-form__field",
     "o-form__field--select",
-    extraClasses
+    className
   );
 
   return !options ? null : (
@@ -213,18 +213,18 @@ export { Select };
 type TextareaProps = {
   id?: string,
   name: string,
-  extraClasses?: string | Array | Object,
+  className?: string | Array | Object,
   attributes?: { [key: string]: any },
   children?: Node
 };
 
 const Textarea = (props: TextareaProps) => {
-  const { id, name, extraClasses, attributes, children } = props;
+  const { id, name, className, attributes, children } = props;
 
   const TextareaClass = cx(
     "o-form__field",
     "o-form__field--textarea",
-    extraClasses
+    className
   );
 
   return (
@@ -239,14 +239,14 @@ export { Textarea };
 type RangeProps = {
   id?: string,
   name: string,
-  extraClasses?: string | Array | Object,
+  className?: string | Array | Object,
   attributes?: { [key: string]: any }
 };
 
 const Range = (props: RangeProps) => {
-  const { id, name, extraClasses, attributes } = props;
+  const { id, name, className, attributes } = props;
 
-  const RangeClass = cx("o-form__range", extraClasses);
+  const RangeClass = cx("o-form__range", className);
 
   return (
     <input

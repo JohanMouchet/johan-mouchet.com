@@ -8,15 +8,15 @@ type Props = {
   url: string,
   id: string,
   marker: string,
-  extraClasses?: string | Array | Object,
+  className?: string | Array | Object,
   attributes?: { [key: string]: any },
   children?: Node
 };
 
 const Anchor = (props: Props) => {
-  const { tag, url, id, marker, extraClasses, attributes, children } = props;
+  const { tag, url, id, marker, className, attributes, children } = props;
 
-  const AnchorClass = cx("u-anchor", extraClasses);
+  const AnchorClass = cx("u-anchor", className);
 
   const Tag = tag;
 

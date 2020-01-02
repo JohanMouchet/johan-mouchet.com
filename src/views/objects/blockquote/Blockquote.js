@@ -8,13 +8,13 @@ type Props = {
   quote: Node,
   cite?: Node,
   pulled?: boolean,
-  extraClasses?: string | Array | Object
+  className?: string | Array | Object
 };
 
 const Blockquote = (props: Props) => {
-  const { quote, cite, pulled, extraClasses } = props;
+  const { quote, cite, pulled, className } = props;
 
-  const BlockquoteClass = cx("o-blockquote", extraClasses, "wow", {
+  const BlockquoteClass = cx("o-blockquote", className, "wow", {
     "o-blockquote--pulled": pulled
   });
 

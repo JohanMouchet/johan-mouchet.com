@@ -41,13 +41,13 @@ type NotesProps = {
       url?: string
     }
   ],
-  extraClasses?: string | Array | Object
+  className?: string | Array | Object
 };
 
 const FootnotesNotes = (props: NotesProps) => {
-  const { notes, extraClasses } = props;
+  const { notes, className } = props;
 
-  const NotesClass = cx("o-footnotes", extraClasses);
+  const NotesClass = cx("o-footnotes", className);
 
   return (
     <ol className={NotesClass}>

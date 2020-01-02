@@ -10,13 +10,13 @@ type Props = {
   filling: number,
   tooltip?: Node,
   tooltipOnHover?: boolean,
-  extraClasses?: string | Array | Object
+  className?: string | Array | Object
 };
 
 const ProgressBar = (props: Props) => {
-  const { label, total, filling, tooltip, tooltipOnHover, extraClasses } = props;
+  const { label, total, filling, tooltip, tooltipOnHover, className } = props;
 
-  const ProgressBarClass = cx("o-progress-bar", extraClasses, {
+  const ProgressBarClass = cx("o-progress-bar", className, {
     "o-progress-bar--tooltip-hover": tooltipOnHover
   });
 

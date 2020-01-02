@@ -18,7 +18,7 @@ type Props = {
     | "active"
     | "banner-gradient",
   size?: "sm" | "lg",
-  extraClasses?: string | Array | Object
+  className?: string | Array | Object
 };
 
 const Card = (props: Props) => {
@@ -30,7 +30,7 @@ const Card = (props: Props) => {
     footer,
     variant,
     size,
-    extraClasses
+    className
   } = props;
 
   const CardClass = cx(
@@ -39,7 +39,7 @@ const Card = (props: Props) => {
       [`o-card--${variant}`]: variant,
       [`o-card--${size}`]: size
     },
-    extraClasses
+    className
   );
 
   const Tag = !header ? "header" : "div";

@@ -9,7 +9,7 @@ type MenuItem = {
   text: string,
   url?: string,
   button?: Button,
-  extraClasses?: string | Array | Object,
+  className?: string | Array | Object,
   menu?: [MenuItem]
 };
 
@@ -36,7 +36,7 @@ const Menu = (props: Props) => {
                   className={cx(
                     "o-menu__item",
                     { "o-menu__item--has-children": item.menu },
-                    item.extraClasses
+                    item.className
                   )}
                 >
                   {(item.text && (

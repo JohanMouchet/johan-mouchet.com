@@ -8,17 +8,17 @@ type Props = {
   secondary?: Node,
   closeButton: boolean,
   isActive?: boolean,
-  extraClasses?: string | Array | Object,
+  className?: string | Array | Object,
   children?: Node
 };
 
 const Notice = (props: Props) => {
-  const { secondary, closeButton, isActive, extraClasses, children } = props;
+  const { secondary, closeButton, isActive, className, children } = props;
 
   const NoticeClass = cx(
     "o-notice",
     { "is--active": isActive },
-    extraClasses,
+    className,
     "js-notice"
   );
 

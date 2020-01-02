@@ -5,13 +5,13 @@ import cx from "classnames";
 import "./Badge.scss";
 
 type Props = {
-  extraClasses?: string | Array | Object
+  className?: string | Array | Object
 };
 
 const Badge = (props: Props) => {
-  const { extraClasses, children } = props;
+  const { className, children } = props;
 
-  const BadgeClass = cx("o-badge", extraClasses);
+  const BadgeClass = cx("o-badge", className);
 
   return <span className={BadgeClass}>{children}</span>;
 };

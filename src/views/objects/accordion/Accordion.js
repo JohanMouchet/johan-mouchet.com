@@ -6,13 +6,13 @@ import "./Accordion.scss";
 
 type Props = {
   items: [{ thumb: string, panel: string }],
-  extraClasses?: string | Array | Object
+  className?: string | Array | Object
 };
 
 const Accordion = (props: Props) => {
-  const { items, extraClasses } = props;
+  const { items, className } = props;
 
-  const AccordionClass = cx("o-accordion", extraClasses, "js-accordion");
+  const AccordionClass = cx("o-accordion", className, "js-accordion");
 
   // TODO: Choose active index, no fadeIn if active
 

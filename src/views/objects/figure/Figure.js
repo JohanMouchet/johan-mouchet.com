@@ -9,7 +9,7 @@ type Props = {
   alt?: string,
   title?: string,
   centered?: boolean,
-  extraClasses?: string | Array | Object,
+  className?: string | Array | Object,
   attributes?: { [key: string]: any },
   children?: Node
 };
@@ -20,7 +20,7 @@ const Figure = (props: Props) => {
     alt,
     title,
     centered,
-    extraClasses,
+    className,
     attributes,
     children
   } = props;
@@ -30,7 +30,7 @@ const Figure = (props: Props) => {
     {
       [`o-figure--centered`]: centered
     },
-    extraClasses
+    className
   );
 
   return (

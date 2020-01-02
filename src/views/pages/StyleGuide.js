@@ -145,7 +145,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      extraClasses={["sg-swatch", "sg-swatch--primary-lighter"]}
+                      className={["sg-swatch", "sg-swatch--primary-lighter"]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
@@ -160,7 +160,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      extraClasses={["sg-swatch", "sg-swatch--primary"]}
+                      className={["sg-swatch", "sg-swatch--primary"]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
@@ -175,7 +175,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      extraClasses={["sg-swatch", "sg-swatch--primary-darker"]}
+                      className={["sg-swatch", "sg-swatch--primary-darker"]}
                     />
                   </div>
 
@@ -191,7 +191,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      extraClasses={[
+                      className={[
                         "sg-swatch",
                         "sg-swatch--secondary-lighter"
                       ]}
@@ -209,7 +209,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      extraClasses={["sg-swatch", "sg-swatch--secondary"]}
+                      className={["sg-swatch", "sg-swatch--secondary"]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
@@ -224,7 +224,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      extraClasses={[
+                      className={[
                         "sg-swatch",
                         "sg-swatch--secondary-darker"
                       ]}
@@ -243,7 +243,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      extraClasses={["sg-swatch", "sg-swatch--gray-lighter"]}
+                      className={["sg-swatch", "sg-swatch--gray-lighter"]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
@@ -258,7 +258,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      extraClasses={["sg-swatch", "sg-swatch--gray"]}
+                      className={["sg-swatch", "sg-swatch--gray"]}
                     />
                   </div>
                   <div className="o-card-group cell cell--12-@xs cell--4-@sm">
@@ -273,7 +273,7 @@ const StyleGuide = () => {
                           </code>
                         </>
                       }
-                      extraClasses={["sg-swatch", "sg-swatch--gray-darker"]}
+                      className={["sg-swatch", "sg-swatch--gray-darker"]}
                     />
                   </div>
                 </div>
@@ -302,7 +302,7 @@ const StyleGuide = () => {
                           <p className="sg-typeface__name"></p>
                         </>
                       }
-                      extraClasses={[
+                      className={[
                         "sg-typeface",
                         "sg-typeface--font-primary"
                       ]}
@@ -318,7 +318,7 @@ const StyleGuide = () => {
                           <p className="sg-typeface__name"></p>
                         </>
                       }
-                      extraClasses={[
+                      className={[
                         "sg-typeface",
                         "sg-typeface--font-secondary"
                       ]}
@@ -334,7 +334,7 @@ const StyleGuide = () => {
                           <p className="sg-typeface__name"></p>
                         </>
                       }
-                      extraClasses={[
+                      className={[
                         "sg-typeface",
                         "sg-typeface--font-tertiary"
                       ]}
@@ -350,7 +350,7 @@ const StyleGuide = () => {
                           <p className="sg-typeface__name"></p>
                         </>
                       }
-                      extraClasses={[
+                      className={[
                         "sg-typeface",
                         "sg-typeface--font-quaternary"
                       ]}
@@ -1802,7 +1802,7 @@ const StyleGuide = () => {
                           Upgrade
                         </a>
                       }
-                      extraClasses={["u-align--center"]}
+                      className={["u-align--center"]}
                     />
                   </div>
 
@@ -1830,7 +1830,7 @@ const StyleGuide = () => {
                           Upgrade
                         </a>
                       }
-                      extraClasses={["u-align--center"]}
+                      className={["u-align--center"]}
                     />
                   </div>
 
@@ -2594,7 +2594,7 @@ const StyleGuide = () => {
           primary='<p className="u-vr--bottom-0-@xs">This website uses cookies to ensure you the best experience. <a href="!#">More info</a></p>'
           secondary='<button className="o-button js-notice-close">Got it!</button>'
           closeButton
-          extraClasses={["u-is--hidden"]}
+          className={["u-is--hidden"]}
         />
       </>
     </Default>

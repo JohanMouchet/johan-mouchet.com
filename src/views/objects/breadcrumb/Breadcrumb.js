@@ -11,13 +11,13 @@ type Props = {
       url: string
     }
   ],
-  extraClasses?: string | Array | Object
+  className?: string | Array | Object
 };
 
 const Breadcrumb = (props: Props) => {
-  const { levels, extraClasses } = props;
+  const { levels, className } = props;
 
-  const BreadcrumbClass = cx("o-breadcrumb", extraClasses);
+  const BreadcrumbClass = cx("o-breadcrumb", className);
 
   const lastLevel = levels.length - 1;
   return !levels ? null : (

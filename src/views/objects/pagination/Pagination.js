@@ -63,15 +63,15 @@
 //   range: number,
 //   current: number,
 //   links: Array<string>,
-//   extraClasses?: string | Array | Object,
+//   className?: string | Array | Object,
 // };
 
 // const Pagination = (props: Props) => {
-//   const { range, current, links, extraClasses } = props;
+//   const { range, current, links, className } = props;
 
 //   const PaginationClass = cx(
 //     "o-pagination",
-//     extraClasses
+//     className
 //   );
 
 //   // TODO: contextClass()
