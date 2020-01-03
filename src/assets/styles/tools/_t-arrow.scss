@@ -7,7 +7,7 @@
  * @param {color}  [arrow-color = currentColor] - Color of the arrow
  * @param {number} [arrow-size = 10px]          - Size of the arrow
  *
- * @example @include arrow(top, black, 15px);
+ * @example @include t-arrow(top, black, 15px);
  */
 @mixin t-arrow(
   $arrow-direction: right,
