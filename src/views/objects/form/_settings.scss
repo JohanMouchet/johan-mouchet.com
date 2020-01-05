@@ -1,0 +1,15 @@
+@import "assets/styles/settings/_settings";
+
+$form-settings: (
+  hover: (
+    color: $s-color-gray-lighter
+  ),
+  focus: (
+    color: $s-color-text
+  ),
+  disabled: (
+    color: $s-color-gray,
+    color-secondary: $s-color-gray-lighter,
+    color-tertiary: $s-color-gray-darker
+  )
+);

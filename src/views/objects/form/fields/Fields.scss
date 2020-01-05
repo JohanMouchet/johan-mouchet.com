@@ -1,0 +1,116 @@
+@import "assets/styles/settings/_settings";
+@import "assets/styles/tools/_tools";
+@import "../_settings";
+
+.o-form__field {
+  appearance: none;
+  height: t-vertical-rhythm(1.75);
+  line-height: $s-line-height-base;
+  width: 100%;
+  vertical-align: middle;
+  padding: 0 t-vertical-rhythm(0.5);
+  border: 2px solid $s-color-gray;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: t-modular-scale(0);
+  color: $s-color-text;
+  text-overflow: ellipsis;
+  transition: color 0.2s, background 0.2s, border 0.2s;
+
+  @include t-wekkit-hdpi-small-dimension;
+
+  &--no-corner-left {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &--no-corner-right {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  /* Placeholder */
+  &::placeholder {
+    color: $s-color-gray-darker;
+  }
+
+  /** Textarea **/
+  &--textarea {
+    height: auto;
+    padding-top: t-vertical-rhythm(0.5);
+    padding-bottom: t-vertical-rhythm(0.5);
+    resize: vertical;
+  }
+
+  /** Color **/
+  &--color {
+    padding: 0 0.2em !important; /* stylelint-disable-line declaration-no-important */
+  }
+
+  /** Icons **/
+  &--search,
+  &--select {
+    padding-right: 2em !important; /* stylelint-disable-line declaration-no-important */
+    background-repeat: no-repeat;
+    background-position: right 0.25em center;
+    background-size: 1.5em;
+  }
+
+  /*** Search ***/
+  &--search {
+    background-image: url("#{t-path(icons)}/search.svg");
+  }
+
+  /*** Select ***/
+  &--select {
+    background-image: url("#{t-path(icons)}/arrow-down.svg");
+
+    &:not(:disabled) {
+      cursor: pointer;
+    }
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  /***
+     * Picker
+     *
+     * Overwrite inputs that use picker / spin
+     * (Experimental, won’t work in all browsers)
+     ***/
+  &::-webkit-calendar-picker-indicator {
+    padding-top: 50%;
+    padding-bottom: 50%;
+  }
+
+  &::-webkit-inner-spin-button {
+    height: 100%;
+  }
+
+  /* States */
+
+  /** Hover **/
+  &:hover {
+    border-color: t-map-deep-get($form-settings, hover, color);
+  }
+
+  /** Focus **/
+  &:focus {
+    outline: none;
+    border-color: t-map-deep-get($form-settings, focus, color);
+  }
+
+  /** Disabled **/
+  &:disabled {
+    color: t-map-deep-get($form-settings, disabled, color-tertiary);
+    background-color: t-map-deep-get($form-settings, disabled, color-secondary);
+    border-color: t-map-deep-get($form-settings, disabled, color);
+  }
+
+  /* Required */
+  &:required {
+    box-shadow: none;
+  }
+}

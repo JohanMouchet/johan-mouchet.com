@@ -1,0 +1,8 @@
+// @import "assets/styles/utilities/_utilities";
+
+.o-form__file {
+  &-input {
+    // TODO: find a way to import single utility
+    // @extend .u-is--visuallyHidden;
+  }
+}

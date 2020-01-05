@@ -1,6 +1,6 @@
 # TODO
 
-- Split form components, export Toggle as Checkbox | Radio
+- Split Toggles: Checkbox | Radio
 - Compose components <Parent><Child>1</Child></Parent>
 - Improve Storybook
 - Fix Tabs, Accordion, Alert, Table Numerical column

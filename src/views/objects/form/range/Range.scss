@@ -1,0 +1,102 @@
+@import "assets/styles/settings/_settings";
+@import "assets/styles/tools/_tools";
+@import "../_settings";
+
+/* (Experimental, won’t work in all browsers) */
+.o-form__range {
+  appearance: none;
+  width: 100%;
+  height: 2px;
+  background-color: $s-color-gray;
+  outline: none;
+  margin-top: t-vertical-rhythm(0.5, "rem");
+  margin-bottom: t-vertical-rhythm(0.5, "rem");
+  padding: 0;
+  transition: background 0.2s ease-out;
+
+  @include t-wekkit-hdpi-small-dimension("height", 2);
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  // Firefox overrides
+  &::-moz-range-track {
+    background-color: $s-color-gray;
+    border: 0;
+  }
+
+  /* stylelint-disable no-descending-specificity */
+  &::-moz-focus-inner,
+  &::-moz-focus-outer {
+    border: 0;
+  }
+
+  &::-ms-track {
+    height: auto;
+    border-radius: t-vertical-rhythm(0.4, "rem");
+  }
+  /* stylelint-enable no-descending-specificity */
+
+  /** Thumb **/
+  @mixin range-thumb($vendor-prefix) {
+    &#{$vendor-prefix} {
+      appearance: none;
+      width: t-vertical-rhythm(0.8, "rem");
+      height: t-vertical-rhythm(0.8, "rem");
+      border-radius: 50%;
+      border: 2px solid $s-color-secondary;
+      background: $s-color-white;
+    }
+  }
+
+  @include range-thumb("::-webkit-slider-thumb");
+  @include range-thumb("::-moz-range-thumb");
+
+  /* States */
+
+  /** Hover **/
+  &:hover {
+    background-color: t-map-deep-get($form-settings, hover, color);
+
+    &::-moz-range-track {
+      background-color: t-map-deep-get($form-settings, hover, color);
+    }
+  }
+
+  /** Focus **/
+  &:focus {
+    background-color: t-map-deep-get($form-settings, focus, color);
+
+    &::-moz-range-track {
+      background-color: t-map-deep-get($form-settings, focus, color);
+    }
+  }
+
+  /** Disabled **/
+  &:disabled {
+    background-color: t-map-deep-get($form-settings, disabled, color);
+
+    &::-moz-range-track {
+      background-color: t-map-deep-get($form-settings, disabled, color);
+    }
+
+    &::-webkit-slider-thumb {
+      background-color: t-map-deep-get(
+        $form-settings,
+        disabled,
+        color-secondary
+      );
+      border-color: t-map-deep-get($form-settings, disabled, color);
+    }
+
+    &::-moz-range-thumb {
+      background-color: t-map-deep-get(
+        $form-settings,
+        disabled,
+        color-secondary
+      );
+      border-color: t-map-deep-get($form-settings, disabled, color);
+    }
+  }
+}

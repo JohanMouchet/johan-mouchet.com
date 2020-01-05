@@ -21,24 +21,3 @@
     #{$property}: $border-width - 0.01px;
   }
 }
-
-/**
- * Wekkit input autofill color fix
- *
- * Removes webkit input autofill color
- *
- * @example @include t-wekkit-input-autofill-color;
- */
-@mixin t-wekkit-input-autofill-color {
-  /* stylelint-disable-next-line at-rule-no-vendor-prefix */
-  @-webkit-keyframes t-wekkit-input-autofill-color {
-    to {
-      color: $s-color-text;
-      background: transparent;
-    }
-  }
-
-  :-webkit-autofill {
-    animation: t-wekkit-input-autofill-color both;
-  }
-}
