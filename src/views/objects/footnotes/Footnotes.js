@@ -41,7 +41,7 @@ type NotesProps = {
       url?: string
     }
   ],
-  className?: string | Array | Object
+  className?: string | Array<string> | Object
 };
 
 const FootnotesNotes = (props: NotesProps) => {

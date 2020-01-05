@@ -10,7 +10,7 @@ type ButtonProps = {
   variant?: "primary" | "secondary",
   size?: "sm" | "lg",
   block?: boolean | "@sm" | "@md",
-  className?: string | Array | Object,
+  className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
   children?: Node
 };
@@ -68,7 +68,7 @@ type ButtonSocialProps = {
     | "social-pinterest",
   size?: "sm" | "lg",
   block?: boolean | "sm" | "md",
-  className?: string | Array | Object,
+  className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
   children?: Node
 };
@@ -125,7 +125,7 @@ type ButtonSocialBadgeProps = {
     | "social-googleplus"
     | "social-linkedin"
     | "social-pinterest",
-  className?: string | Array | Object,
+  className?: string | Array<string> | Object,
   attributes?: { [key: string]: any }
 };
 

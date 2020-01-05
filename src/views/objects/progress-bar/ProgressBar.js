@@ -10,7 +10,7 @@ type Props = {
   filling: number,
   tooltip?: Node,
   tooltipOnHover?: boolean,
-  className?: string | Array | Object
+  className?: string | Array<string> | Object
 };
 
 const ProgressBar = (props: Props) => {

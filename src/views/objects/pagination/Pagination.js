@@ -67,7 +67,7 @@
 //   range: number,
 //   current: number,
 //   links: Array<string>,
-//   className?: string | Array | Object
+//   className?: string | Array<string> | Object
 // };
 
 // const Pagination = (props: Props) => {

@@ -11,7 +11,7 @@ type Props = {
       panel: string
     }
   ],
-  className?: string | Array | Object
+  className?: string | Array<string> | Object
 };
 
 const Tabs = (props: Props) => {

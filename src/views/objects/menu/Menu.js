@@ -9,7 +9,7 @@ type MenuItem = {
   text: string,
   url?: string,
   button?: Button,
-  className?: string | Array | Object,
+  className?: string | Array<string> | Object,
   menu?: [MenuItem]
 };
 

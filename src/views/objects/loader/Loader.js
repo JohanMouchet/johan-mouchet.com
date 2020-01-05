@@ -6,7 +6,7 @@ import "./Loader.scss";
 
 type Props = {
   size: "sm",
-  className?: string | Array | Object
+  className?: string | Array<string> | Object
 };
 
 const Loader = (props: Props) => {

@@ -11,7 +11,7 @@ type Props = {
       url: string
     }
   ],
-  className?: string | Array | Object
+  className?: string | Array<string> | Object
 };
 
 const Breadcrumb = (props: Props) => {

@@ -8,7 +8,7 @@ type Props = {
   quote: Node,
   cite?: Node,
   pulled?: boolean,
-  className?: string | Array | Object
+  className?: string | Array<string> | Object
 };
 
 const Blockquote = (props: Props) => {

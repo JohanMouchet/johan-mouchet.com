@@ -18,7 +18,7 @@ type Props = {
     | "active"
     | "banner-gradient",
   size?: "sm" | "lg",
-  className?: string | Array | Object
+  className?: string | Array<string> | Object
 };
 
 const Card = (props: Props) => {

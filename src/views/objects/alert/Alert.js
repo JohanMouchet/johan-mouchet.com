@@ -9,7 +9,7 @@ type Props = {
   hidden: boolean,
   closable?: boolean,
   variant?: "info" | "success" | "warning" | "danger",
-  className?: string | Array | Object
+  className?: string | Array<string> | Object
 };
 
 const Alert = (props: Props) => {

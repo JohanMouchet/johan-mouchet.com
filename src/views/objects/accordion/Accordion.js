@@ -6,7 +6,7 @@ import "./Accordion.scss";
 
 type Props = {
   items: [{ thumb: string, panel: string }],
-  className?: string | Array | Object
+  className?: string | Array<string> | Object
 };
 
 const Accordion = (props: Props) => {

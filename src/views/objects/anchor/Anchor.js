@@ -8,7 +8,7 @@ type Props = {
   url: string,
   id: string,
   marker: string,
-  className?: string | Array | Object,
+  className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
   children?: Node
 };

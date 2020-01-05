@@ -8,7 +8,7 @@ import "./Form.scss";
 type LabelProps = {
   id?: string,
   block: boolean,
-  className?: string | Array | Object,
+  className?: string | Array<string> | Object,
   children?: Node
 };
 
@@ -36,7 +36,7 @@ type FieldProps = {
   name: string,
   value?: string,
   variant?: "no-corner-left" | "no-corner-right",
-  className?: string | Array | Object,
+  className?: string | Array<string> | Object,
   attributes?: { [key: string]: any }
 };
 
@@ -70,7 +70,7 @@ type ToggleProps = {
   name?: string,
   value?: string,
   checked?: boolean,
-  className?: string | Array | Object,
+  className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
   children?: Node
 };
@@ -92,11 +92,7 @@ const Toggle = (props: ToggleProps) => {
 
   const handleChange = check => (check = !check);
 
-  const classNames = cx(
-    "o-form__toggle",
-    `o-form__toggle--${type}`,
-    className
-  );
+  const classNames = cx("o-form__toggle", `o-form__toggle--${type}`, className);
 
   return (
     <label className={classNames} {...attributes}>
@@ -126,7 +122,7 @@ type FileProps = {
   id?: string,
   name: string,
   multipleCaption?: string,
-  className?: string | Array | Object,
+  className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
   children?: Node
 };
@@ -168,7 +164,7 @@ type SelectProps = {
       attributes: Array<string>
     }
   ],
-  className?: string | Array | Object,
+  className?: string | Array<string> | Object,
   attributes?: { [key: string]: any }
 };
 
@@ -197,7 +193,7 @@ export { Select };
 type TextareaProps = {
   id?: string,
   name: string,
-  className?: string | Array | Object,
+  className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
   children?: Node
 };
@@ -205,11 +201,7 @@ type TextareaProps = {
 const Textarea = (props: TextareaProps) => {
   const { id, name, className, attributes, children } = props;
 
-  const classNames = cx(
-    "o-form__field",
-    "o-form__field--textarea",
-    className
-  );
+  const classNames = cx("o-form__field", "o-form__field--textarea", className);
 
   return (
     <textarea id={id} name={name} className={classNames} {...attributes}>
@@ -223,7 +215,7 @@ export { Textarea };
 type RangeProps = {
   id?: string,
   name: string,
-  className?: string | Array | Object,
+  className?: string | Array<string> | Object,
   attributes?: { [key: string]: any }
 };
 

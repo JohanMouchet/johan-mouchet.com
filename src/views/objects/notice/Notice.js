@@ -8,7 +8,7 @@ type Props = {
   secondary?: Node,
   closeButton: boolean,
   isActive?: boolean,
-  className?: string | Array | Object,
+  className?: string | Array<string> | Object,
   children?: Node
 };
 

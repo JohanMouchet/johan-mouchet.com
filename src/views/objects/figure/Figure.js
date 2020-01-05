@@ -9,7 +9,7 @@ type Props = {
   alt?: string,
   title?: string,
   centered?: boolean,
-  className?: string | Array | Object,
+  className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
   children?: Node
 };
