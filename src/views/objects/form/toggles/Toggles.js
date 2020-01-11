@@ -53,8 +53,8 @@ const Toggle = (props: Props) => {
   );
 };
 
-Toggle.defaultProps = {
-  type: "checkbox"
-};
+const Checkbox = (props: Props) => Toggle({ ...props, type: "checkbox" });
 
-export { Toggle };
+const Radio = (props: Props) => Toggle({ ...props, type: "radio" });
+
+export { Checkbox, Radio };

@@ -4,7 +4,8 @@ import {
   Blockquote,
   Label,
   Field,
-  Toggle,
+  Checkbox,
+  Radio,
   File,
   Select,
   Textarea,
@@ -823,46 +824,11 @@ const StyleGuide = () => {
 
                       <div className="cell cell--12-@xs cell--6-@md">
                         <div className="o-form__group">
-                          <Label id="radio-1" block>
-                            Radio
-                          </Label>
-
-                          <Toggle
-                            id="radio-1"
-                            type="radio"
-                            name="radioChoice"
-                            value="option-1"
-                            checked
-                          >
-                            Option 1
-                          </Toggle>
-
-                          <Toggle
-                            type="radio"
-                            name="radioChoice"
-                            value="option-2"
-                          >
-                            Option 2
-                          </Toggle>
-
-                          <Toggle
-                            type="radio"
-                            name="radioChoice"
-                            value="disabled"
-                            attributes={{
-                              title: "test"
-                            }}
-                          >
-                            Disabled
-                          </Toggle>
-                        </div>
-
-                        <div className="o-form__group">
                           <Label id="checkbox-1" block>
                             Checkbox
                           </Label>
 
-                          <Toggle
+                          <Checkbox
                             id="checkbox-1"
                             type="checkbox"
                             name="checkboxChoice"
@@ -870,17 +836,17 @@ const StyleGuide = () => {
                             checked
                           >
                             Option 1
-                          </Toggle>
+                          </Checkbox>
 
-                          <Toggle
+                          <Checkbox
                             type="checkbox"
                             name="checkboxChoice"
                             value="option-2"
                           >
                             Option 2
-                          </Toggle>
+                          </Checkbox>
 
-                          <Toggle
+                          <Checkbox
                             type="checkbox"
                             name="checkboxChoice"
                             value="disabled"
@@ -889,7 +855,42 @@ const StyleGuide = () => {
                             }}
                           >
                             Disabled
-                          </Toggle>
+                          </Checkbox>
+                        </div>
+
+                        <div className="o-form__group">
+                          <Label id="radio-1" block>
+                            Radio
+                          </Label>
+
+                          <Radio
+                            id="radio-1"
+                            type="radio"
+                            name="radioChoice"
+                            value="option-1"
+                            checked
+                          >
+                            Option 1
+                          </Radio>
+
+                          <Radio
+                            type="radio"
+                            name="radioChoice"
+                            value="option-2"
+                          >
+                            Option 2
+                          </Radio>
+
+                          <Radio
+                            type="radio"
+                            name="radioChoice"
+                            value="disabled"
+                            attributes={{
+                              disabled: true
+                            }}
+                          >
+                            Disabled
+                          </Radio>
                         </div>
                       </div>
 
