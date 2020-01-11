@@ -2584,7 +2584,7 @@ const StyleGuide = () => {
           primary='<p className="u-vr--bottom-0-@xs">This website uses cookies to ensure you the best experience. <a href="!#">More info</a></p>'
           secondary='<button className="o-button js-notice-close">Got it!</button>'
           closeButton
-          className={["u-is--hidden"]}
+          className="u-is--hidden"
         />
       </>
     </Default>
