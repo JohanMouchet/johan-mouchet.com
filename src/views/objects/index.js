@@ -11,16 +11,11 @@ export { Button, ButtonSocial, ButtonSocialBadge } from "./button";
 export { default as Card } from "./card";
 export { default as Figure } from "./figure";
 export { FootnotesReference, FootnotesNotes } from "./footnotes";
-export {
-  Label,
-  Field,
-  Checkbox,
-  Radio,
-  File,
-  Select,
-  Textarea,
-  Range
-} from "./form";
+export { default as Label } from "./form/layout/Layout";
+export { Field, Select, Textarea } from "./form/fields/Fields";
+export { Checkbox, Radio } from "./form/toggles/Toggles";
+export { default as File } from "./form/file/File";
+export { default as Range } from "./form/range/Range";
 export { default as Loader } from "./loader";
 export { default as Menu } from "./menu";
 export { default as Notice } from "./notice";

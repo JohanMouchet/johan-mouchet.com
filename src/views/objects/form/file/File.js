@@ -38,4 +38,4 @@ const File = (props: Props) => {
   );
 };
 
-export { File };
+export default File;

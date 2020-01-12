@@ -27,4 +27,4 @@ const Label = (props: Props) => {
   );
 };
 
-export { Label };
+export default Label;

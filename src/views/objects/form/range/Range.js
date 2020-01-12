@@ -27,4 +27,4 @@ const Range = (props: Props) => {
   );
 };
 
-export { Range };
+export default Range;
