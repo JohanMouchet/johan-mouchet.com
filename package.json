@@ -65,11 +65,13 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.2.3",
-    "@storybook/addon-knobs": "^5.2.3",
-    "@storybook/addon-links": "^5.2.3",
-    "@storybook/addons": "^5.2.3",
-    "@storybook/react": "^5.2.3",
+    "@storybook/addon-actions": "^5.3.3",
+    "@storybook/addon-docs": "^5.3.3",
+    "@storybook/addon-knobs": "^5.3.3",
+    "@storybook/addon-links": "^5.3.3",
+    "@storybook/addons": "^5.3.3",
+    "@storybook/preset-create-react-app": "^1.5.1",
+    "@storybook/react": "^5.3.3",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "eslint-config-prettier": "^6.3.0",

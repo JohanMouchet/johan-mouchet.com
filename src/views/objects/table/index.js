@@ -1,1 +1,1 @@
-export default "./table.scss ";
+export default "./Table.scss ";
