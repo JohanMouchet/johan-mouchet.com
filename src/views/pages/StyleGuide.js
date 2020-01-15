@@ -47,9 +47,9 @@ const StyleGuide = () => {
       <>
         <div className="container container--xl" id="styleGuide">
           <div className="grid">
-            <aside className="l-aside l-aside--capped cell cell--12-@xs cell--2-@md">
+            <aside className="l-aside cell cell--12-@xs cell--2-@md">
               <h2>Table of content</h2>
-              <ol className="o-list--lg o-list--hStriped o-list--linkBlock">
+              <ol className="o-list--lg o-list--hStriped o-list--linkBlock o-list--responsive-capped">
                 <li>
                   <a href="#sg-colorPalette">Color palette</a>
                 </li>

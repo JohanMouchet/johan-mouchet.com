@@ -34,57 +34,6 @@
 /* Aside */
 .l-aside {
   margin-top: t-vertical-rhythm(3);
-
-  /** Capped **/
-  &--capped {
-    @media screen and (max-width: t-breakpoint(md)) {
-      max-height: 50vh;
-      overflow-y: auto;
-      border-top: 1px solid $s-color-gray;
-      border-bottom: 1px solid $s-color-gray;
-      background: radial-gradient(
-            top,
-            ellipse,
-            rgba($s-color-black, 0.2),
-            transparent 75%
-          )
-          center top,
-        radial-gradient(
-            bottom,
-            ellipse,
-            rgba($s-color-black, 0.2),
-            transparent 75%
-          )
-          center bottom;
-      background-size: 100% 0.5rem, 100% 0.5rem;
-      background-attachment: scroll, scroll;
-      background-repeat: no-repeat;
-
-      > *:first-child {
-        margin-top: 0;
-        padding-top: t-vertical-rhythm(1, "rem");
-        background: linear-gradient(
-          to bottom,
-          rgba($s-color-white, 1) 50%,
-          transparent
-        );
-        background-repeat: no-repeat;
-        background-size: 100% 1rem;
-      }
-
-      > *:last-child {
-        margin-bottom: 0;
-        background: linear-gradient(
-          to top,
-          rgba($s-color-white, 1) 50%,
-          transparent
-        );
-        background-repeat: no-repeat;
-        background-size: 100% 1rem;
-        background-position-y: 100%;
-      }
-    }
-  }
 }
 
 /* Article */

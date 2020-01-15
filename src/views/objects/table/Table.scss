@@ -227,15 +227,13 @@ table {
 			 */
       &#{$root}--responsive-shadow:not(#{$root}--striped):not(#{$root}--hover) {
         background: radial-gradient(
-              left,
-              ellipse,
+              ellipse at left,
               rgba($s-color-black, 0.2),
               transparent 75%
             )
             center left,
           radial-gradient(
-              right,
-              ellipse,
+              ellipse at right,
               rgba($s-color-black, 0.2),
               transparent 75%
             )

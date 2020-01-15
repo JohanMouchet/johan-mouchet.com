@@ -132,6 +132,18 @@ ol {
       display: block;
     }
   }
+
+  /** Capped **/
+  &.o-list--responsive-capped {
+    @media screen and (max-width: t-breakpoint(md)) {
+      padding-left: 2em;
+      padding-right: 2em;
+      max-height: 50vh;
+      overflow-y: auto;
+      border-top: 1px solid $s-color-gray;
+      border-bottom: 1px solid $s-color-gray;
+    }
+  }
 }
 
 /* Description list */
