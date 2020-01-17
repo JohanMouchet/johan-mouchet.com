@@ -155,7 +155,7 @@ const Home = () => {
               <hr className="wow" />
 
               <article className="p-language">
-                <h2>Language</h2>
+                <h2>Languages</h2>
                 <ul className="o-list--unstyled">
                   <li>English: C1 Advanced</li>
                   <li>French: Native</li>
@@ -165,7 +165,7 @@ const Home = () => {
               <hr className="wow" />
 
               <article className="p-academic-qualifications">
-                <h2>Academic qualifications</h2>
+                <h2>Academic Qualifications</h2>
 
                 <AcademicQualification
                   qualifications={[
@@ -207,14 +207,23 @@ const Home = () => {
                 <h2>Interests</h2>
                 <p>
                   Web &amp; Graphic design, Development, Photography, Video
-                  Editing, Drawing, Traveling, Cycling, Running, Fitness
+                  Editing, Drawing, Traveling, Cycling, Running, Fitness,
+                  Volunteer{" "}
+                  <a
+                    href="https://youngcodersau.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="external-link"
+                  >
+                    @YoungCodersAU
+                  </a>
                 </p>
               </article>
 
               <hr className="wow" />
 
               <article className="p-social-medias">
-                <h2>Social media</h2>
+                <h2>Social Media</h2>
 
                 <SocialMedia
                   medias={[
@@ -277,7 +286,7 @@ const Home = () => {
             <div className="cell cell--12-@xs cell--9-@md">
               <article className="p-career-experiences">
                 <div className="u-vr--top-2-@xs"></div>
-                <h2>Career experiences</h2>
+                <h2>Career Experiences</h2>
 
                 <Experience
                   experiences={[
@@ -601,7 +610,7 @@ const Home = () => {
                             </>,
                             "Advanced multi layers CSS animations",
                             "Responsive design, device orientation aware",
-                            <>Performance optimised, QA tested</>
+                            <>Performance optimised</>
                           ]
                         },
                         {
@@ -693,8 +702,8 @@ const Home = () => {
                           details: [
                             <>
                               <em>Growth Hacking</em> strategy development (
-                              <em>AARRR</em> model) meant to increase online
-                              registrations
+                              <em>AARRR</em> model) meant to increase
+                              acquisition and increase conversion rate
                             </>,
                             <>
                               <em>UI</em> Refreshment: new brand identity,
@@ -1094,7 +1103,7 @@ const Home = () => {
               <hr className="wow" />
 
               <article className="p-personal-works">
-                <h2>Personal works</h2>
+                <h2>Personal Works</h2>
 
                 <p>
                   When I'm not designing websites I like to take pictures,
@@ -1143,7 +1152,7 @@ const Home = () => {
               <hr className="wow" />
 
               <article className="p-contact" id="p-contact">
-                <h2>Get in touch</h2>
+                <h2>Get In Touch</h2>
 
                 <a
                   href="mailto:mouchet.johan@gmail.com"
