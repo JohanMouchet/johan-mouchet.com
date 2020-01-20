@@ -258,14 +258,14 @@ const Home = () => {
                       icon: <IconCodepen />
                     },
                     {
-                      name: "Dribbble",
-                      url: "https://dribbble.com/JohanMouchet/likes",
-                      icon: <IconDribbble />
-                    },
-                    {
                       name: "GitHub",
                       url: "https://github.com/JohanMouchet",
                       icon: <IconGithub />
+                    },
+                    {
+                      name: "Dribbble",
+                      url: "https://dribbble.com/JohanMouchet/likes",
+                      icon: <IconDribbble />
                     },
                     {
                       name: "Unsplash",
