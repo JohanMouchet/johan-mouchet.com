@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Default } from "views/layouts";
+import { Anchor } from "views/objects";
 import {
   Skills,
   AcademicQualification,
@@ -83,7 +84,9 @@ const Home = () => {
             <div className="l-cell--gray-lighter cell cell--12-@xs cell--3-@md">
               <article className="p-skills">
                 <div className="u-vr--top-2-@xs"></div>
-                <h2>Skills</h2>
+                <Anchor tag="h2" id="skills">
+                  Skills
+                </Anchor>
 
                 <Skills
                   skills={[
@@ -131,7 +134,9 @@ const Home = () => {
               <hr className="wow" />
 
               <article className="p-tools">
-                <h2>Tools</h2>
+                <Anchor tag="h2" id="tools">
+                  Tools
+                </Anchor>
                 <p>
                   Storybook, BEM, ITCSS, Bootstrap, Nunjucks / Twig /
                   Handlebars, CMS, Microdata, APIs, jQuery, npm / Yarn, Webpack
@@ -145,7 +150,9 @@ const Home = () => {
               <hr className="wow" />
 
               <article className="p-profile">
-                <h2>Profile</h2>
+                <Anchor tag="h2" id="profile">
+                  Profile
+                </Anchor>
                 <p>
                   Positive, Enthusiast about new technologies, Motivated, Enjoy
                   knowledge sharing
@@ -155,7 +162,9 @@ const Home = () => {
               <hr className="wow" />
 
               <article className="p-language">
-                <h2>Languages</h2>
+                <Anchor tag="h2" id="languages">
+                  Languages
+                </Anchor>
                 <ul className="o-list--unstyled">
                   <li>English: C1 Advanced</li>
                   <li>French: Native</li>
@@ -165,7 +174,9 @@ const Home = () => {
               <hr className="wow" />
 
               <article className="p-academic-qualifications">
-                <h2>Academic Qualifications</h2>
+                <Anchor tag="h2" id="academic-qualifications">
+                  Academic Qualifications
+                </Anchor>
 
                 <AcademicQualification
                   qualifications={[
@@ -204,7 +215,9 @@ const Home = () => {
               <hr className="wow" />
 
               <article className="p-interests">
-                <h2>Interests</h2>
+                <Anchor tag="h2" id="interests">
+                  Interests
+                </Anchor>
                 <p>
                   Web &amp; Graphic design, Development, Photography, Video
                   Editing, Drawing, Traveling, Cycling, Running, Fitness,
@@ -223,7 +236,9 @@ const Home = () => {
               <hr className="wow" />
 
               <article className="p-social-medias">
-                <h2>Social Media</h2>
+                <Anchor tag="h2" id="social-media">
+                  Social Media
+                </Anchor>
 
                 <SocialMedia
                   medias={[
@@ -286,7 +301,9 @@ const Home = () => {
             <div className="cell cell--12-@xs cell--9-@md">
               <article className="p-career-experiences">
                 <div className="u-vr--top-2-@xs"></div>
-                <h2>Career Experiences</h2>
+                <Anchor tag="h2" id="career-experiences">
+                  Career Experiences
+                </Anchor>
 
                 <Experience
                   experiences={[
@@ -942,7 +959,9 @@ const Home = () => {
               <hr className="wow" />
 
               <article className="p-internships">
-                <h2>Internships</h2>
+                <Anchor tag="h2" id="internships">
+                  Internships
+                </Anchor>
 
                 <Experience
                   experiences={[
@@ -1050,7 +1069,9 @@ const Home = () => {
               <hr className="wow" />
 
               <article className="p-references">
-                <h2>References</h2>
+                <Anchor tag="h2" id="references">
+                  References
+                </Anchor>
 
                 <Reference
                   requestOnly
@@ -1103,7 +1124,9 @@ const Home = () => {
               <hr className="wow" />
 
               <article className="p-personal-works">
-                <h2>Personal Works</h2>
+                <Anchor tag="h2" id="personal-works">
+                  Personal Works
+                </Anchor>
 
                 <p>
                   When I'm not designing websites I like to take pictures,
@@ -1152,7 +1175,9 @@ const Home = () => {
               <hr className="wow" />
 
               <article className="p-contact" id="p-contact">
-                <h2>Get In Touch</h2>
+                <Anchor tag="h2" id="get-in-touch">
+                  Get In Touch
+                </Anchor>
 
                 <a
                   href="mailto:mouchet.johan@gmail.com"

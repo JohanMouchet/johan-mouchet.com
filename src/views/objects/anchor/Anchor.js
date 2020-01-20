@@ -5,7 +5,6 @@ import cx from "classnames";
 
 type Props = {
   tag: string,
-  url: string,
   id: string,
   marker: string,
   className?: string | Array<string> | Object,
@@ -14,7 +13,7 @@ type Props = {
 };
 
 const Anchor = (props: Props) => {
-  const { tag, url, id, marker, className, attributes, children } = props;
+  const { tag, id, marker, className, attributes, children } = props;
 
   const classNames = cx("u-anchor", className);
 
@@ -23,7 +22,7 @@ const Anchor = (props: Props) => {
   return (
     id && (
       <Tag id={id} className={classNames} {...attributes}>
-        <a href={url + "#" + id} className="u-anchor__link">
+        <a href={`#${id}`} className="u-anchor__link">
           {marker}
         </a>
         {children}

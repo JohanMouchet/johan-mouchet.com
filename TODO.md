@@ -11,7 +11,6 @@
 
 ## Content
 
-- Add Anchor to Home page
 - Update Personal Works photos
 - Improve Print
 - Styling for `.external-link`?
