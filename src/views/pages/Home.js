@@ -1138,28 +1138,32 @@ const Home = () => {
                 <PersonalWorks
                   works={[
                     {
-                      thumbnailPath: require(`assets/images/views/personal-works/seville.jpg`),
-                      url: "https://unsplash.com/photos/NwaCxOL0NTA",
+                      thumbnailPath:
+                        "https://source.unsplash.com/6Y23pU8xyHU/200x200",
+                      url: "https://unsplash.com/photos/6Y23pU8xyHU",
                       sourceIcon: <IconUnsplash />
                     },
                     {
-                      thumbnailPath: require("assets/images/views/personal-works/marseille.jpg"),
-                      url: "https://unsplash.com/photos/qB1h8ruSKnI",
+                      thumbnailPath:
+                        "https://source.unsplash.com/m9VIwiyzGSc/200x200",
+                      url: "https://unsplash.com/photos/m9VIwiyzGSc",
                       sourceIcon: <IconUnsplash />
                     },
                     {
-                      thumbnailPath: require("assets/images/views/personal-works/death-valley.jpg"),
-                      url:
-                        "https://500px.com/photo/177991327/thirsty-coyote-death-valley-ca-by-johan-mouchet",
-                      sourceIcon: <Icon500px />
-                    },
-                    {
-                      thumbnailPath: require("assets/images/views/personal-works/london.jpg"),
-                      url: "https://unsplash.com/photos/5qeFuSId3H0",
+                      thumbnailPath:
+                        "https://source.unsplash.com/hLXsjf0dGgo/200x200",
+                      url: "https://unsplash.com/photos/hLXsjf0dGgo",
                       sourceIcon: <IconUnsplash />
                     },
                     {
-                      thumbnailPath: require("assets/images/views/personal-works/copenhagen.jpg"),
+                      thumbnailPath:
+                        "https://source.unsplash.com/JjEZKXTGPio/200x200",
+                      url: "https://unsplash.com/photos/JjEZKXTGPio",
+                      sourceIcon: <IconUnsplash />
+                    },
+                    {
+                      thumbnailPath:
+                        "https://source.unsplash.com/sTBdWFQKDHE/200x200",
                       url: "https://unsplash.com/photos/sTBdWFQKDHE",
                       sourceIcon: <IconUnsplash />
                     },

@@ -11,7 +11,6 @@
 
 ## Content
 
-- Update Personal Works photos
 - Improve Print
 - Styling for `.external-link`?
 - Internships in a dropdown
