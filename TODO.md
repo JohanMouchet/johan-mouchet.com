@@ -12,7 +12,6 @@
 ## Content
 
 - Improve Print
-- Styling for `.external-link`?
 - Internships in a dropdown
 - Project (concept), Team (nbr of people), Role
 - Inspo https://dribbble.com/fuviz
@@ -28,6 +27,8 @@
   - Capitalize titles
   - Language's'
   - SMF details
+  - Profile
+  - Tools
   - more
 
 # Fix

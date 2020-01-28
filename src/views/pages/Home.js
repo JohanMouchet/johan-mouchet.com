@@ -47,9 +47,7 @@ const Home = () => {
               </div>
 
               <div className="l-cell--gray-lighter cell cell--0-@xs cell--6-@sm"></div>
-            </div>
 
-            <div className="grid grid--lgGutter-@xs">
               <div className="l-cell--gray cell cell--12-@xs cell--6-@sm cell--3-@md">
                 <div className="l-grid--full-height grid grid--xCenter-@xs grid--yCenter-@xs">
                   <div className="cell">
@@ -91,11 +89,7 @@ const Home = () => {
                 <Skills
                   skills={[
                     {
-                      label: (
-                        <>
-                          React <em>& Redux</em>
-                        </>
-                      ),
+                      label: "React & Redux",
                       filling: 80,
                       tooltip: "8/10"
                     },
@@ -105,20 +99,12 @@ const Home = () => {
                       tooltip: "10/10"
                     },
                     {
-                      label: (
-                        <>
-                          CSS3 <em>& Sass</em>
-                        </>
-                      ),
+                      label: "CSS3 & Sass",
                       filling: 100,
                       tooltip: "10/10"
                     },
                     {
-                      label: (
-                        <>
-                          JavaScript ⁠— <em>ES2017</em>
-                        </>
-                      ),
+                      label: "JavaScript ⁠— ES2019",
                       filling: 80,
                       tooltip: "8/10"
                     },
@@ -138,12 +124,11 @@ const Home = () => {
                   Tools
                 </Anchor>
                 <p>
-                  Storybook, BEM, ITCSS, Bootstrap, Nunjucks / Twig /
-                  Handlebars, CMS, Microdata, APIs, jQuery, npm / Yarn, Webpack
-                  / Gulp / Grunt, Git (Gitflow), Zeplin, Responsive design, Web
-                  performance, Cross-browser compatibility, Accessibility, Web
-                  Standards, Linters, Search Engine Marketing, Analytics,
-                  Atlassian suite, Agile, Open source
+                  JAMstack, Storybook, Jest, Headless CMS, REST API, npm,
+                  Webpack / Gulp, PostCSS, Git (Gitflow), CI/CD, Babel, Zeplin,
+                  Responsive design, Performance, Accessibility, Web Standards,
+                  Linters / Formatter, SEO, Analytics, Atlassian suite, Agile,
+                  Open source
                 </p>
               </article>
 
@@ -154,8 +139,7 @@ const Home = () => {
                   Profile
                 </Anchor>
                 <p>
-                  Positive, Enthusiast about new technologies, Motivated, Enjoy
-                  knowledge sharing
+                  Creative, Learning Enthusiast, Motivated, Knowledge Sharer
                 </p>
               </article>
 
