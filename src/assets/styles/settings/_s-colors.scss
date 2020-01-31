@@ -7,27 +7,27 @@
 /* Scheme */
 
 /** Primary **/
-$s-color-primary: #203747;
-$s-color-primary-lighter: lighten($s-color-primary, 7%);
-$s-color-primary-darker: darken($s-color-primary, 7%);
+$s-color-primary: #21354f;
+$s-color-primary-lighter: scale-color($s-color-primary, $lightness: 15%);
+$s-color-primary-darker: scale-color($s-color-primary, $lightness: -15%);
 
 /** Secondary **/
-$s-color-secondary: #d1c09e;
-$s-color-secondary-lighter: lighten($s-color-secondary, 7%);
-$s-color-secondary-darker: darken($s-color-secondary, 7%);
+$s-color-secondary: #d9c7ae;
+$s-color-secondary-lighter: scale-color($s-color-secondary, $lightness: 15%);
+$s-color-secondary-darker: scale-color($s-color-secondary, $lightness: -15%);
 
 /** Shades of gray **/
 $s-color-white: #fff;
-$s-color-gray: #ebebeb;
-$s-color-gray-lighter: lighten($s-color-gray, 5%);
-$s-color-gray-darker: darken($s-color-gray, 5%);
+$s-color-gray: #eef2f6;
+$s-color-gray-lighter: lighten($s-color-gray, 3%);
+$s-color-gray-darker: darken($s-color-gray, 3%);
 $s-color-black: #111;
 
 /** States **/
-$s-color-success: #659f13;
-$s-color-info: #1f8dd6;
-$s-color-warning: #faa732;
-$s-color-danger: #da314b;
+$s-color-success: #68d391;
+$s-color-info: #63b3ed;
+$s-color-warning: #f6ad55;
+$s-color-danger: #fc8181;
 
 /* Other */
 

@@ -4,19 +4,19 @@
 
 /* stylelint-disable color-no-hex */
 
-$s-font-size-base: 0.875; // em = 14 px
-$s-font-size-mobile: $s-font-size-base / 1.05; // Comment if unwanted
+$s-font-size-base: 0.9375; // em = 15 px
+$s-font-size-mobile: $s-font-size-base * 0.9333; // Comment if unwanted
 $s-line-height-base: 1.6;
 $s-modular-scale-ratio: 1.2;
 
-$s-font-family-primary: helvetica, arial, serif;
+$s-font-family-primary: system-ui, helvetica, arial, serif;
 $s-font-family-secondary: "Times New Roman", times, serif;
 $s-font-family-tertiary: "Abril Fatface", $s-font-family-secondary;
 $s-font-family-quaternary: monospace;
 
-$s-color-heading: #222;
-$s-color-text: #666;
-$s-color-text-dimmed: lighten($s-color-text, 37.5%);
+$s-color-heading: #1a202c;
+$s-color-text: #718096;
+$s-color-text-dimmed: scale-color($s-color-text, $lightness: 50%);
 
 /** Links **/
 $s-color-link: $s-color-secondary;
