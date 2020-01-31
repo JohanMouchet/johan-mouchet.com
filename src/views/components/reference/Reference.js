@@ -26,9 +26,7 @@ type Props = {
   ]
 };
 
-const Reference = (props: Props) => {
-  const { requestOnly, references } = props;
-
+const Reference = ({ requestOnly, references }: Props) => {
   return requestOnly ? (
     <p>
       <i>

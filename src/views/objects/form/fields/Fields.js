@@ -14,9 +14,15 @@ type FieldProps = {
   attributes?: { [key: string]: any }
 };
 
-const Field = (props: FieldProps) => {
-  const { id, type, name, value, variant, className, attributes } = props;
-
+const Field = ({
+  id,
+  type,
+  name,
+  value,
+  variant,
+  className,
+  attributes
+}: FieldProps) => {
   const classNames = cx(
     "o-form__field",
     `o-form__field--${type}`,
@@ -52,9 +58,7 @@ type SelectProps = {
   attributes?: { [key: string]: any }
 };
 
-const Select = (props: SelectProps) => {
-  const { id, name, options, className, attributes } = props;
-
+const Select = ({ id, name, options, className, attributes }: SelectProps) => {
   const classNames = cx("o-form__field", "o-form__field--select", className);
 
   return !options ? null : (
@@ -82,9 +86,13 @@ type TextareaProps = {
   children?: Node
 };
 
-const Textarea = (props: TextareaProps) => {
-  const { id, name, className, attributes, children } = props;
-
+const Textarea = ({
+  id,
+  name,
+  className,
+  attributes,
+  children
+}: TextareaProps) => {
   const classNames = cx("o-form__field", "o-form__field--textarea", className);
 
   return (

@@ -14,10 +14,8 @@ type Props = {
   ]
 };
 
-const PersonalWorks = (props: Props) => {
-  const { works } = props;
-
-  return !works ? null : (
+const PersonalWorks = ({ works }: Props) =>
+  !works ? null : (
     <div className="c-personal-works">
       <div className="grid">
         {works.map(work => (
@@ -49,6 +47,5 @@ const PersonalWorks = (props: Props) => {
       </div>
     </div>
   );
-};
 
 export default PersonalWorks;

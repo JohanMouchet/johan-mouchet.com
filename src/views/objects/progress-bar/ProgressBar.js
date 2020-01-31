@@ -13,9 +13,14 @@ type Props = {
   className?: string | Array<string> | Object
 };
 
-const ProgressBar = (props: Props) => {
-  const { label, total, filling, tooltip, tooltipOnHover, className } = props;
-
+const ProgressBar = ({
+  label,
+  total,
+  filling,
+  tooltip,
+  tooltipOnHover,
+  className
+}: Props) => {
   const classNames = cx(
     "o-progress-bar",
     className,

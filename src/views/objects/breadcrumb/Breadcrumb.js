@@ -14,9 +14,7 @@ type Props = {
   className?: string | Array<string> | Object
 };
 
-const Breadcrumb = (props: Props) => {
-  const { levels, className } = props;
-
+const Breadcrumb = ({ levels, className }: Props) => {
   const classNames = cx("o-breadcrumb", className);
 
   const lastLevel = levels.length - 1;

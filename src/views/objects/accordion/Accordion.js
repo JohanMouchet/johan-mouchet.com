@@ -9,9 +9,7 @@ type Props = {
   className?: string | Array<string> | Object
 };
 
-const Accordion = (props: Props) => {
-  const { items, className } = props;
-
+const Accordion = ({ items, className }: Props) => {
   const classNames = cx("o-accordion", className, "js-accordion");
 
   // TODO: Choose active index, no fadeIn if active

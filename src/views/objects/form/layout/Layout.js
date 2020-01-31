@@ -11,9 +11,7 @@ type Props = {
   children?: Node
 };
 
-const Label = (props: Props) => {
-  const { id, block, className, children } = props;
-
+const Label = ({ id, block, className, children }: Props) => {
   const classNames = cx(
     "o-form__label",
     (block || !children) && "o-form__label--block",

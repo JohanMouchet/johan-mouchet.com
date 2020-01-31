@@ -11,9 +11,7 @@ type Props = {
   attributes?: { [key: string]: any }
 };
 
-const Range = (props: Props) => {
-  const { id, name, className, attributes } = props;
-
+const Range = ({ id, name, className, attributes }: Props) => {
   const classNames = cx("o-form__range", className);
 
   return (

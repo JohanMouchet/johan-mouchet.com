@@ -14,9 +14,7 @@ type Props = {
   className?: string | Array<string> | Object
 };
 
-const Tabs = (props: Props) => {
-  const { tabs, className } = props;
-
+const Tabs = ({ tabs, className }: Props) => {
   const classNames = cx("o-tabs", className, "js-tabs");
 
   return !tabs ? null : (

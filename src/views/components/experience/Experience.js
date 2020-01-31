@@ -22,9 +22,7 @@ type Props = {
   ]
 };
 
-const Experience = (props: Props) => {
-  const { experiences } = props;
-
+const Experience = ({ experiences }: Props) => {
   const today = new Date();
 
   return !experiences

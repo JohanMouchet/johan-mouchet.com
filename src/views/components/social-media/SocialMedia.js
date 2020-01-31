@@ -13,10 +13,8 @@ type Props = {
   ]
 };
 
-const SocialMedia = (props: Props) => {
-  const { medias } = props;
-
-  return !medias ? null : (
+const SocialMedia = ({ medias }: Props) =>
+  !medias ? null : (
     <div className="grid">
       {medias.map(media => (
         <div
@@ -36,6 +34,5 @@ const SocialMedia = (props: Props) => {
       ))}
     </div>
   );
-};
 
 export default SocialMedia;

@@ -13,9 +13,14 @@ type Props = {
   children?: Node
 };
 
-const File = (props: Props) => {
-  const { id, name, multipleCaption, className, attributes, children } = props;
-
+const File = ({
+  id,
+  name,
+  multipleCaption,
+  className,
+  attributes,
+  children
+}: Props) => {
   const classNames = cx("o-form__file", "o-button", "js-form-file", className);
 
   return (

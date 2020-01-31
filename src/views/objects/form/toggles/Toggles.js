@@ -18,17 +18,16 @@ type Props = {
 
 // TODO: fix checked state
 
-const Toggle = (props: Props) => {
-  const {
-    id,
-    type,
-    name,
-    value,
-    checked,
-    className,
-    attributes,
-    children
-  } = props;
+const Toggle = ({
+  id,
+  type,
+  name,
+  value,
+  checked,
+  className,
+  attributes,
+  children
+}: Props) => {
   const [check] = useState(checked);
 
   const handleChange = check => (check = !check);

@@ -14,9 +14,15 @@ type Props = {
   children?: Node
 };
 
-const Figure = (props: Props) => {
-  const { src, alt, title, centered, className, attributes, children } = props;
-
+const Figure = ({
+  src,
+  alt,
+  title,
+  centered,
+  className,
+  attributes,
+  children
+}: Props) => {
   const classNames = cx(
     "o-figure",
     centered && `o-figure--centered`,

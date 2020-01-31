@@ -12,9 +12,13 @@ type Props = {
   children?: Node
 };
 
-const Notice = (props: Props) => {
-  const { secondary, closeButton, isActive, className, children } = props;
-
+const Notice = ({
+  secondary,
+  closeButton,
+  isActive,
+  className,
+  children
+}: Props) => {
   const classNames = cx(
     "o-notice",
     isActive && "is--active",

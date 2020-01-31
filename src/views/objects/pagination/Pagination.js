@@ -14,8 +14,7 @@
 //   children?: Node
 // };
 
-// const Link = (props: LinkProps) => {
-//   const { current, first, prev, next, last, link, children } = props;
+// const Link = ({ current, first, prev, next, last, link, children }: LinkProps) => {
 
 //   const classNames = cx(
 //     "o-pagination__index",
@@ -42,8 +41,7 @@
 //   last: boolean
 // };
 
-// const Icon = (props: IconProps) => {
-//   const { first, prev, next, last } = props;
+// const Icon = ({ first, prev, next, last }: IconProps) => {
 
 //   const classNames = cx(
 //     "o-pagination__icon",
@@ -70,8 +68,7 @@
 //   className?: string | Array<string> | Object
 // };
 
-// const Pagination = (props: Props) => {
-//   const { range, current, links, className } = props;
+// const Pagination = ({ range, current, links, className }: Props) => {
 
 //   const classNames = cx("o-pagination", className);
 

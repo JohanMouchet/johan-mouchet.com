@@ -21,18 +21,16 @@ type Props = {
   className?: string | Array<string> | Object
 };
 
-const Card = (props: Props) => {
-  const {
-    banner,
-    bannerUrl,
-    header,
-    body,
-    footer,
-    variant,
-    size,
-    className
-  } = props;
-
+const Card = ({
+  banner,
+  bannerUrl,
+  header,
+  body,
+  footer,
+  variant,
+  size,
+  className
+}: Props) => {
   const classNames = cx(
     "o-card",
     variant && `o-card--${variant}`,

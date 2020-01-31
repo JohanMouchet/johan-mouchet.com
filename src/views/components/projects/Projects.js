@@ -25,9 +25,7 @@ type Props = {
   ]
 };
 
-const Projects = (props: Props) => {
-  const { projects } = props;
-
+const Projects = ({ projects }: Props) => {
   const projectQuantity = projects.length;
   const cellSize = projectQuantity <= 4 ? 12 / projectQuantity : 3;
 

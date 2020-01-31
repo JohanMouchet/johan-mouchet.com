@@ -9,9 +9,7 @@ type Props = {
   className?: string | Array<string> | Object
 };
 
-const Loader = (props: Props) => {
-  const { size, className } = props;
-
+const Loader = ({ size, className }: Props) => {
   const classNames = cx("o-loader", size && `o-loader--${size}`, className);
 
   return <div className={classNames}></div>;

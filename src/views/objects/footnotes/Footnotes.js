@@ -10,21 +10,17 @@ type ReferenceProps = {
   text: string
 };
 
-const FootnotesReference = (props: ReferenceProps) => {
-  const { id, prefix, text } = props;
-
-  return (
-    <sup>
-      <a
-        id={`footnote-ref:${prefix && prefix + "-"}${id}`}
-        className="o-footnote-ref"
-        href={`#footnote:${prefix && prefix + "-"}${id}`}
-      >
-        {text}
-      </a>
-    </sup>
-  );
-};
+const FootnotesReference = ({ id, prefix, text }: ReferenceProps) => (
+  <sup>
+    <a
+      id={`footnote-ref:${prefix && prefix + "-"}${id}`}
+      className="o-footnote-ref"
+      href={`#footnote:${prefix && prefix + "-"}${id}`}
+    >
+      {text}
+    </a>
+  </sup>
+);
 
 FootnotesReference.defaultProps = {
   prefix: ""
@@ -44,9 +40,7 @@ type NotesProps = {
   className?: string | Array<string> | Object
 };
 
-const FootnotesNotes = (props: NotesProps) => {
-  const { notes, className } = props;
-
+const FootnotesNotes = ({ notes, className }: NotesProps) => {
   const classNames = cx("o-footnotes", className);
 
   return (

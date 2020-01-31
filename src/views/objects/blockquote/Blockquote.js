@@ -11,9 +11,7 @@ type Props = {
   className?: string | Array<string> | Object
 };
 
-const Blockquote = (props: Props) => {
-  const { quote, cite, pulled, className } = props;
-
+const Blockquote = ({ quote, cite, pulled, className }: Props) => {
   const classNames = cx(
     "o-blockquote",
     className,

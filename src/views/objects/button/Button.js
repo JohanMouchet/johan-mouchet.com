@@ -15,18 +15,16 @@ type ButtonProps = {
   children?: Node
 };
 
-const Button = (props: ButtonProps) => {
-  const {
-    type,
-    url,
-    variant,
-    size,
-    block,
-    className,
-    attributes,
-    children
-  } = props;
-
+const Button = ({
+  type,
+  url,
+  variant,
+  size,
+  block,
+  className,
+  attributes,
+  children
+}: ButtonProps) => {
   const classNames = cx(
     "o-button",
     size && `o-button--${size}`,
@@ -73,19 +71,17 @@ type ButtonSocialProps = {
   children?: Node
 };
 
-const ButtonSocial = (props: ButtonSocialProps) => {
-  const {
-    url,
-    icon,
-    counter,
-    variant,
-    size,
-    block,
-    className,
-    attributes,
-    children
-  } = props;
-
+const ButtonSocial = ({
+  url,
+  icon,
+  counter,
+  variant,
+  size,
+  block,
+  className,
+  attributes,
+  children
+}: ButtonSocialProps) => {
   const classNames = cx(
     "o-button",
     size && `o-button--${size}`,
@@ -129,9 +125,13 @@ type ButtonSocialBadgeProps = {
   attributes?: { [key: string]: any }
 };
 
-const ButtonSocialBadge = (props: ButtonSocialBadgeProps) => {
-  const { url, icon, variant, className, attributes } = props;
-
+const ButtonSocialBadge = ({
+  url,
+  icon,
+  variant,
+  className,
+  attributes
+}: ButtonSocialBadgeProps) => {
   const classNames = cx(
     "o-button",
     variant && `o-button--${variant}`,

@@ -17,9 +17,7 @@ type Props = {
   menu: [MenuItem]
 };
 
-const Menu = (props: Props) => {
-  const { menu } = props;
-
+const Menu = ({ menu }: Props) => {
   const renderMenu = (menu, isSubmenu) => {
     const classNames = cx(isSubmenu ? "o-menu__submenu" : "o-menu");
 

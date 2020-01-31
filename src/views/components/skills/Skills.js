@@ -7,10 +7,8 @@ type Props = {
   skills: typeof ProgressBar
 };
 
-const Skills = (props: Props) => {
-  const { skills } = props;
-
-  return !skills ? null : (
+const Skills = ({ skills }: Props) =>
+  !skills ? null : (
     <ul className="c-skills o-list--unstyled">
       {skills.map(skill => (
         <li className="c-skill" key={skill.label}>
@@ -24,6 +22,5 @@ const Skills = (props: Props) => {
       ))}
     </ul>
   );
-};
 
 export default Skills;

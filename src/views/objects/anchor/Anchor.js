@@ -12,9 +12,14 @@ type Props = {
   children?: Node
 };
 
-const Anchor = (props: Props) => {
-  const { tag, id, marker, className, attributes, children } = props;
-
+const Anchor = ({
+  tag,
+  id,
+  marker,
+  className,
+  attributes,
+  children
+}: Props) => {
   const classNames = cx("u-anchor", className);
 
   const Tag = tag;
