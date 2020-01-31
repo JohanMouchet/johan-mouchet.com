@@ -125,7 +125,7 @@ const StyleGuide = () => {
                 className="l-article l-article--noTSpacing"
               >
                 <h2
-                  className="u-counter__StyleGuide-1 u-counter__index--space u-anchor"
+                  className="u-counter__index-1 u-counter__index--space u-anchor"
                   data-counter-separator="."
                 >
                   <a href="#sg-colorPalette" className="u-anchor__link">

@@ -62,7 +62,7 @@ const FootnotesNotes = (props: NotesProps) => {
             href={`#footnote-ref:${note.prefix ? note.prefix + "-" : ""}${
               note.id
             }`}
-            className="footnote-backref"
+            className="o-footnotes__backref"
           >
             &#x21a9;
           </a>
