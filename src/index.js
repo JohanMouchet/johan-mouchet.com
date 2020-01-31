@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import StyleGuide from "views/pages/StyleGuide";
+import Home from "views/pages/Home";
 import * as serviceWorker from "serviceWorker";
 
-ReactDOM.render(<StyleGuide />, document.getElementById("root"));
+ReactDOM.render(<Home />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
