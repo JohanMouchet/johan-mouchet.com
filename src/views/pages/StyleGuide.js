@@ -945,15 +945,9 @@ const StyleGuide = () => {
                             }}
                           />
 
-                          <Alert
-                            variant="success"
-                            content={
-                              <>
-                                <strong>Success</strong> message
-                              </>
-                            }
-                            closable
-                          />
+                          <Alert variant="success" closable>
+                            <strong>Success</strong> message
+                          </Alert>
                         </div>
                       </div>
                       <div className="cell cell--12-@xs cell--4-@sm">
@@ -969,15 +963,9 @@ const StyleGuide = () => {
                             }}
                           />
 
-                          <Alert
-                            variant="danger"
-                            content={
-                              <>
-                                <strong>Error</strong> message
-                              </>
-                            }
-                            closable
-                          />
+                          <Alert variant="danger" closable>
+                            <strong>Error</strong> message
+                          </Alert>
                         </div>
                       </div>
                       <div className="cell cell--12-@xs cell--4-@sm">
@@ -993,15 +981,9 @@ const StyleGuide = () => {
                             }}
                           />
 
-                          <Alert
-                            variant="warning"
-                            content={
-                              <>
-                                <strong>Warning</strong> message
-                              </>
-                            }
-                            closable
-                          />
+                          <Alert variant="warning" closable>
+                            <strong>Warning</strong> message
+                          </Alert>
                         </div>
                       </div>
                     </div>
@@ -2053,38 +2035,30 @@ const StyleGuide = () => {
                 <h3>
                   Success <code>&amp;.o-alert--success</code>
                 </h3>
-                <Alert
-                  variant="success"
-                  content="Indicates a successful or positive action."
-                  closable
-                />
+                <Alert variant="success" closable>
+                  Indicates a successful or positive action.
+                </Alert>
 
                 <h3>
                   Info <code>&amp;.o-alert--info</code>
                 </h3>
-                <Alert
-                  variant="info"
-                  content="Indicates a neutral informative change or action."
-                  closable
-                />
+                <Alert variant="info" closable>
+                  Indicates a neutral informative change or action.
+                </Alert>
 
                 <h3>
                   Warning <code>&amp;.o-alert--warning</code>
                 </h3>
-                <Alert
-                  variant="warning"
-                  content="Indicates a warning that might need attention."
-                  closable
-                />
+                <Alert variant="warning" closable>
+                  Indicates a warning that might need attention.
+                </Alert>
 
                 <h3>
                   Danger <code>&amp;.o-alert--danger</code>
                 </h3>
-                <Alert
-                  variant="danger"
-                  content="Indicates a dangerous or potentially negative action."
-                  closable
-                />
+                <Alert variant="danger" closable>
+                  Indicates a dangerous or potentially negative action.
+                </Alert>
               </article>
 
               <hr className="l-article-separator" />
