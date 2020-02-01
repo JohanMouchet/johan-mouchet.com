@@ -490,28 +490,6 @@ const StyleGuide = () => (
                       <tr>
                         <td>
                           <code className="u-select--all">
-                            .u-color--primary
-                          </code>
-                        </td>
-                        <td>
-                          <span className="u-color--primary">Primary text</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <code className="u-select--all">
-                            .u-color--secondary
-                          </code>
-                        </td>
-                        <td>
-                          <span className="u-color--secondary">
-                            Secondary text
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <code className="u-select--all">
                             .u-color--dimmed
                           </code>
                         </td>
