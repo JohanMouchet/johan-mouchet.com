@@ -16,7 +16,7 @@ type ButtonProps = {
 };
 
 const Button = ({
-  type,
+  type = "button",
   url,
   variant,
   size,
@@ -44,10 +44,6 @@ const Button = ({
       {children}
     </button>
   );
-};
-
-Button.defaultProps = {
-  type: "button"
 };
 
 export { Button };

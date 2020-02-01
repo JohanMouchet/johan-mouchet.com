@@ -16,7 +16,7 @@ type Props = {
 const ProgressBar = ({
   label,
   total,
-  filling,
+  filling = 0,
   tooltip,
   tooltipOnHover,
   className
@@ -40,10 +40,6 @@ const ProgressBar = ({
       </div>
     </div>
   );
-};
-
-ProgressBar.defaultProps = {
-  filling: 0
 };
 
 export default ProgressBar;
