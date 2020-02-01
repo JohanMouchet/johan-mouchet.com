@@ -17,7 +17,7 @@ import {
   Figure,
   Breadcrumb,
   Tabs,
-  Accordion,
+  Details,
   // Pagination,
   Alert,
   ProgressBar,
@@ -86,7 +86,7 @@ const StyleGuide = () => (
                 <a href="#sg-tabs">Tabs</a>
               </li>
               <li>
-                <a href="#sg-accordion">Accordion</a>
+                <a href="#sg-details">Details</a>
               </li>
               <li>
                 <a href="#sg-pagination">Pagination</a>
@@ -1900,37 +1900,37 @@ const StyleGuide = () => (
 
             <hr className="l-article-separator" />
 
-            <article id="sg-accordion" className="l-article">
+            <article id="sg-details" className="l-article">
               <h2
                 className="u-counter__index-1 u-counter__index--space u-anchor"
                 data-counter-separator="."
               >
-                <a href="#sg-accordion" className="u-anchor__link">
+                <a href="#sg-details" className="u-anchor__link">
                   #
                 </a>
-                Accordion (JS)
+                Details
               </h2>
-              <Accordion
-                items={[
-                  {
-                    thumb: "Lorem ipsum",
-                    panel:
-                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque a voluptate sequi, exercitationem, corrupti recusandae reprehenderit, quasi voluptates dolorem omnis adipisci magnam maiores ducimus aut praesentium repellat! Laudantium iure, praesentium?"
-                  },
-                  {
-                    thumb: "Dolor sit amet",
-                    panel:
-                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequatur maxime nulla corrupti tempora eaque neque fuga iure libero, mollitia corporis sunt eligendi, quod facere at. Inventore dolore, vitae aliquam."
-                  },
-                  {
-                    thumb: "Consectetur adipisicing elit",
-                    panel:
-                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, temporibus, fugiat. Harum deserunt blanditiis iusto ea odio et id, quos, laudantium veniam mollitia animi obcaecati quas rerum, assumenda pariatur voluptatem?"
-                  }
-                ]}
-              />
+              <Details summary="Lorem ipsum" attributes={{ open: true }}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque
+                a voluptate sequi, exercitationem, corrupti recusandae
+                reprehenderit, quasi voluptates dolorem omnis adipisci magnam
+                maiores ducimus aut praesentium repellat! Laudantium iure,
+                praesentium?
+              </Details>
+              <Details summary="Dolor sit amet">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid consequatur maxime nulla corrupti tempora eaque neque
+                fuga iure libero, mollitia corporis sunt eligendi, quod facere
+                at. Inventore dolore, vitae aliquam.
+              </Details>
+              <Details summary="Consectetur adipisicing elit">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea,
+                temporibus, fugiat. Harum deserunt blanditiis iusto ea odio et
+                id, quos, laudantium veniam mollitia animi obcaecati quas rerum,
+                assumenda pariatur voluptatem?
+              </Details>
               <p>
-                <em>Modifier:</em> <code>&amp;.is--active</code>
+                <em>Modifier:</em> <code>[open]</code>
               </p>
             </article>
 

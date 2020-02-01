@@ -1,12 +1,11 @@
 import * as React from "react";
 import { Default } from "views/layouts";
-import { Anchor } from "views/objects";
+import { Anchor, Details } from "views/objects";
 import {
   Skills,
   AcademicQualification,
   SocialMedia,
   Experience,
-  Reference,
   PersonalWorks
 } from "views/components";
 import { ReactComponent as Icon500px } from "assets/images/icons/simple-icons/500px.svg";
@@ -935,166 +934,114 @@ const Home = () => (
 
             <hr className="wow" />
 
-            <article className="p-internships">
-              <Anchor tag="h2" id="internships">
+            <article className="p-internships u-is--hidden-@print">
+              <Anchor tag="h2" id="internships" className="u-vr--bottom-0-@xs">
                 Internships
               </Anchor>
 
-              <Experience
-                experiences={[
-                  {
-                    company: {
-                      name: "Jardin France Design"
+              <Details summary="Details">
+                <Experience
+                  experiences={[
+                    {
+                      company: {
+                        name: "Jardin France Design"
+                      },
+                      location: "Marseille",
+                      jobTitle: "Front-end developer",
+                      startDate: new Date("2013/07/01"),
+                      endDate: new Date("2013/10/01"),
+                      contractType: "Intern",
+                      lede:
+                        "PrestaShop eCommerce website for a garden products supplier. (The owner decided to close the website)."
                     },
-                    location: "Marseille",
-                    jobTitle: "Front-end developer",
-                    startDate: new Date("2013/07/01"),
-                    endDate: new Date("2013/10/01"),
-                    contractType: "Intern",
-                    lede:
-                      "PrestaShop eCommerce website for a garden products supplier. (The owner decided to close the website)."
-                  },
-                  {
-                    company: {
-                      name: "Radigraph",
-                      url: "http://www.imprimerie-marseille-radigraph.fr/"
+                    {
+                      company: {
+                        name: "Radigraph",
+                        url: "http://www.imprimerie-marseille-radigraph.fr/"
+                      },
+                      location: "Marseille",
+                      jobTitle: "Front-end developer",
+                      startDate: new Date("2013/07/01"),
+                      endDate: new Date("2013/10/01"),
+                      contractType: "Part-time intern",
+                      lede: (
+                        <>
+                          Website development for a print company: product
+                          database, elaborated quotation,{" "}
+                          <abbr title="Search Engine Optimization">SEO</abbr>.
+                        </>
+                      )
                     },
-                    location: "Marseille",
-                    jobTitle: "Front-end developer",
-                    startDate: new Date("2013/07/01"),
-                    endDate: new Date("2013/10/01"),
-                    contractType: "Part-time intern",
-                    lede: (
-                      <>
-                        Website development for a print company: product
-                        database, elaborated quotation,{" "}
-                        <abbr title="Search Engine Optimization">SEO</abbr>.
-                      </>
-                    )
-                  },
-                  {
-                    company: {
-                      name: "Winlink santé",
-                      url: "http://www.winlinksante.com/"
+                    {
+                      company: {
+                        name: "Winlink santé",
+                        url: "http://www.winlinksante.com/"
+                      },
+                      location: "Marseille",
+                      jobTitle: "Front-end developer",
+                      startDate: new Date("2012/07/01"),
+                      endDate: new Date("2012/10/01"),
+                      contractType: "Full-time intern",
+                      lede:
+                        "Web intranet application for personnel management: account management, interactive calendar, multiple databases."
                     },
-                    location: "Marseille",
-                    jobTitle: "Front-end developer",
-                    startDate: new Date("2012/07/01"),
-                    endDate: new Date("2012/10/01"),
-                    contractType: "Full-time intern",
-                    lede:
-                      "Web intranet application for personnel management: account management, interactive calendar, multiple databases."
-                  },
-                  {
-                    company: {
-                      name: "Digitick",
-                      url: "http://next.digitick.com/"
+                    {
+                      company: {
+                        name: "Digitick",
+                        url: "http://next.digitick.com/"
+                      },
+                      location: "Marseille",
+                      jobTitle: "Front-end developer",
+                      startDate: new Date("2011/07/01"),
+                      endDate: new Date("2011/10/01"),
+                      contractType: "Full-time intern",
+                      lede: (
+                        <>
+                          Various web designs for online selling ticket:
+                          including{" "}
+                          <a
+                            href="http://sigstrasbourg.fr/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="external-link"
+                          >
+                            SIG Basket
+                          </a>{" "}
+                          and{" "}
+                          <a
+                            href="http://biarritz-culture.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="external-link"
+                          >
+                            Biarritz culture
+                          </a>
+                          .
+                        </>
+                      )
                     },
-                    location: "Marseille",
-                    jobTitle: "Front-end developer",
-                    startDate: new Date("2011/07/01"),
-                    endDate: new Date("2011/10/01"),
-                    contractType: "Full-time intern",
-                    lede: (
-                      <>
-                        Various web designs for online selling ticket: including{" "}
-                        <a
-                          href="http://sigstrasbourg.fr/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="external-link"
-                        >
-                          SIG Basket
-                        </a>{" "}
-                        and{" "}
-                        <a
-                          href="http://biarritz-culture.com/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="external-link"
-                        >
-                          Biarritz culture
-                        </a>
-                        .
-                      </>
-                    )
-                  },
-                  {
-                    company: {
-                      name: "Survie Mer Formation",
-                      url: "http://www.surviemerformation.com/"
-                    },
-                    location: "Marseille",
-                    jobTitle: "Front-end developer",
-                    startDate: new Date("2008/07/01"),
-                    endDate: new Date("2008/10/01"),
-                    contractType: "Contractor",
-                    lede: (
-                      <>
-                        Website development for a training centre: advanced
-                        online registration, databases, back office,{" "}
-                        <abbr title="Search Engine Optimization">SEO</abbr>,{" "}
-                        <abbr title="Search Engine Advertising">SEA</abbr>.
-                      </>
-                    )
-                  }
-                ]}
-              />
-            </article>
-
-            <hr className="wow" />
-
-            <article className="p-references">
-              <Anchor tag="h2" id="references">
-                References
-              </Anchor>
-
-              <Reference
-                requestOnly
-                references={[
-                  {
-                    name: "Kevin Mar-Molinero",
-                    relation: "Former line manager",
-                    company: {
-                      name: "Amaze",
-                      url: "https://www.amaze.com/"
-                    },
-                    jobTitle: "Tech Director",
-                    contacts: {
-                      mail: "kevinmarmolinero@gmail.com",
-                      linkedin:
-                        "https://www.linkedin.com/in/kevin-mar-molinero-3b6695a"
+                    {
+                      company: {
+                        name: "Survie Mer Formation",
+                        url: "http://www.surviemerformation.com/"
+                      },
+                      location: "Marseille",
+                      jobTitle: "Front-end developer",
+                      startDate: new Date("2008/07/01"),
+                      endDate: new Date("2008/10/01"),
+                      contractType: "Contractor",
+                      lede: (
+                        <>
+                          Website development for a training centre: advanced
+                          online registration, databases, back office,{" "}
+                          <abbr title="Search Engine Optimization">SEO</abbr>,{" "}
+                          <abbr title="Search Engine Advertising">SEA</abbr>.
+                        </>
+                      )
                     }
-                  },
-                  {
-                    name: "Neil Brown",
-                    relation: "Former coworker",
-                    company: {
-                      name: "Amaze",
-                      url: "https://www.amaze.com/"
-                    },
-                    jobTitle: "Senior Developer",
-                    contacts: {
-                      mail: "neilbrown08@hotmail.com",
-                      linkedin:
-                        "https://www.linkedin.com/in/neil-brown-714a3017"
-                    }
-                  },
-                  {
-                    name: "Ciaran PARK",
-                    relation: "Former line manager",
-                    company: {
-                      name: "TMW Unlimited",
-                      url: "http://www.tmwunlimited.com"
-                    },
-                    jobTitle: "Creative Technology Lead",
-                    contacts: {
-                      mail: "cpark@tmwunlimited.com",
-                      linkedin: "https://uk.linkedin.com/in/ciaranpark"
-                    }
-                  }
-                ]}
-              />
+                  ]}
+                />
+              </Details>
             </article>
 
             <hr className="wow" />

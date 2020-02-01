@@ -1,0 +1,32 @@
+@import "assets/styles/settings/_settings";
+@import "assets/styles/tools/_tools";
+
+.o-details {
+  margin: t-vertical-rhythm(1) 0;
+  border-bottom: 1px solid $s-color-gray;
+
+  /* Summary */
+  &__summary {
+    @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
+
+    cursor: pointer;
+    outline: 0;
+    display: block;
+    margin: 0;
+    padding: t-vertical-rhythm(0.5) 0;
+    transition: font-weight 0.2s ease-out;
+  }
+
+  /* Panel */
+  &__panel {
+    padding-bottom: t-vertical-rhythm(0.5);
+
+    > *:first-child {
+      margin-top: 0;
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
