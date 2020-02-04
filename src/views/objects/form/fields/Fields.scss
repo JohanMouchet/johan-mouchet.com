@@ -44,13 +44,13 @@
 
   /** Color **/
   &--color {
-    padding: 0 0.2em !important; /* stylelint-disable-line declaration-no-important */
+    padding: 0 0.2em;
   }
 
   /** Icons **/
   &--search,
   &--select:not([multiple]) {
-    padding-right: 2em !important; /* stylelint-disable-line declaration-no-important */
+    padding-right: 2em;
     background-repeat: no-repeat;
     background-position: right 0.25em center;
     background-size: 1.5em;
