@@ -2,8 +2,17 @@
 @import "assets/styles/tools/_tools";
 
 .o-details {
+  $root: &;
+
   margin: t-vertical-rhythm(1) 0;
   border-bottom: 1px solid $s-color-gray;
+
+  &[open] {
+    #{$root}__summary {
+      color: $s-color-link;
+      font-weight: 700;
+    }
+  }
 
   /* Summary */
   &__summary {
@@ -14,7 +23,6 @@
     display: block;
     margin: 0;
     padding: t-vertical-rhythm(0.5) 0;
-    transition: font-weight 0.2s ease-out;
   }
 
   /* Panel */

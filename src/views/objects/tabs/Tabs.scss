@@ -50,7 +50,6 @@
     display: block;
     padding: t-vertical-rhythm(0.5) 1.5em;
     cursor: pointer;
-    transition: font-weight 0.2s ease-out;
 
     &::after {
       content: "";
