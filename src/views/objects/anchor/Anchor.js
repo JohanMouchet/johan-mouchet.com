@@ -13,9 +13,9 @@ type Props = {
 };
 
 const Anchor = ({
-  tag,
+  tag = "span",
   id,
-  marker,
+  marker = "#",
   className,
   attributes,
   children
@@ -34,11 +34,6 @@ const Anchor = ({
       </Tag>
     )
   );
-};
-
-Anchor.defaultProps = {
-  tag: "span",
-  marker: "#"
 };
 
 export default Anchor;

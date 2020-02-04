@@ -12,7 +12,13 @@ type Props = {
   children: Node
 };
 
-const Alert = ({ hidden, closable, variant, className, children }: Props) => {
+const Alert = ({
+  hidden,
+  closable,
+  variant = "info",
+  className,
+  children
+}: Props) => {
   const classNames = cx(
     "o-alert",
     variant && `o-alert--${variant}`,
@@ -43,10 +49,6 @@ const Alert = ({ hidden, closable, variant, className, children }: Props) => {
       )}
     </div>
   );
-};
-
-Alert.defaultProps = {
-  variant: "info"
 };
 
 export default Alert;

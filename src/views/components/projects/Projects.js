@@ -87,7 +87,7 @@ const Projects = ({ projects }: Props) => {
         </ul>
       )}
 
-      {!project.details ? null : (
+      {project.details && (
         <ul
           className={cx(
             "c-project__details",
