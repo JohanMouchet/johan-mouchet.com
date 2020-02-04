@@ -600,11 +600,11 @@ const StyleGuide = () => (
                 Grid
               </h2>
               <p>
-                <a href="https://github.com/JohanMouchet/flexboxgrid-sass">
-                  Flexbox Grid Sass
+                <a href="https://github.com/JohanMouchet/fluxgrid">Fluxgrid</a>.
+                Look at a{" "}
+                <a href="https://johanmouchet.github.io/fluxgrid/index.html">
+                  demo
                 </a>
-                . Look at a{" "}
-                <a href="http://codepen.io/johanmouchet/pen/ORKLdm">demo</a>
               </p>
               <p>
                 <strong>Columns:</strong> 12
