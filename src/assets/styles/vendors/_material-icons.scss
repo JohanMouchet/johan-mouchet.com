@@ -4,71 +4,53 @@
 
 /* stylelint-disable declaration-no-important */
 .material-icons {
-	font-size: inherit !important;
-	line-height: inherit !important;
-	vertical-align: bottom;
+  font-size: inherit;
+  line-height: inherit;
+  vertical-align: bottom;
 
-	/* Options */
-	&--sm,
-	&--md,
-	&--lg,
-	&--xl {
-		line-height: 1 !important;
-		vertical-align: middle;
-	}
+  /* Options */
+  &--sm,
+  &--md,
+  &--lg,
+  &--xl {
+    line-height: 1;
+    vertical-align: middle;
+  }
 
-	&--sm {
-		font-size: t-modular-scale(0) !important;
-	}
+  &--sm {
+    font-size: t-modular-scale(0);
+  }
 
-	&--md {
-		font-size: t-modular-scale(2) !important;
-	}
+  &--md {
+    font-size: t-modular-scale(2);
+  }
 
-	&--lg {
-		font-size: t-modular-scale(4) !important;
-	}
+  &--lg {
+    font-size: t-modular-scale(4);
+  }
 
-	&--xl {
-		font-size: t-modular-scale(6) !important;
-	}
+  &--xl {
+    font-size: t-modular-scale(6);
+  }
 
-	&--middle {
-		vertical-align: middle;
-		line-height: 0 !important;
-	}
+  &--middle {
+    vertical-align: middle;
+    line-height: 0;
+  }
 
-	/* Other */
-	h1 > &,
-	h2 > &,
-	h3 > &,
-	h4 > &,
-	h5 > &,
-	h6 > & {
-		color: $s-color-secondary;
-	}
+  /* Other */
+  h1 > &,
+  h2 > &,
+  h3 > &,
+  h4 > &,
+  h5 > &,
+  h6 > & {
+    color: $s-color-secondary;
+  }
 
-	.o-button > & {
-		font-size: t-modular-scale(2) !important;
-		line-height: 1 !important;
-		vertical-align: middle;
-	}
-}
-
-@mixin material-icon($icon: null, $font-size: inherit, $vertical-align: middle) {
-	content: '#{$icon}';
-	font-family: 'Material Icons';
-	font-weight: 400;
-	font-style: normal;
-	font-size: #{$font-size};
-	line-height: 1;
-	vertical-align: #{$vertical-align};
-	letter-spacing: normal;
-	text-transform: none;
-	display: inline-block;
-	white-space: nowrap;
-	word-wrap: normal;
-	direction: ltr;
-	font-feature-settings: 'liga';
-	-webkit-font-smoothing: antialiased;
+  .o-button > & {
+    font-size: t-modular-scale(2);
+    line-height: 1;
+    vertical-align: middle;
+  }
 }
