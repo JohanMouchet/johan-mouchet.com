@@ -36,6 +36,7 @@ const Figure = ({
         src={src}
         alt={alt}
         title={title}
+        loading="lazy"
         {...attributes}
       />
       {children && (

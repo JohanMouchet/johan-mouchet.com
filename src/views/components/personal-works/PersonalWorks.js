@@ -34,6 +34,7 @@ const PersonalWorks = ({ works }: Props) =>
                   className="c-personal-work__thumbnail"
                   src={work.thumbnailPath}
                   alt="Personal work"
+                  loading="lazy"
                 />
                 {work.sourceIcon && (
                   <span className="c-personal-work__source">

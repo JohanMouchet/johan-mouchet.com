@@ -54,6 +54,7 @@ const Home = () => (
                     src={require("assets/images/views/johan-mouchet.jpg")}
                     srcSet={`${require("assets/images/views/johan-mouchet.jpg")}, ${require("assets/images/views/johan-mouchet@x2.jpg")} 1.25x`}
                     alt="Johan Mouchet"
+                    loading="auto"
                   />
                 </div>
               </div>

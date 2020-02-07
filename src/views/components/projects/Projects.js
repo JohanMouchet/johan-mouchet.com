@@ -40,6 +40,7 @@ const Projects = ({ projects }: Props) => {
         className="c-project__thumbnail"
         src={project.thumbnailPath}
         alt={project.name}
+        loading="lazy"
       />
       <div
         href={project.url}
