@@ -2,7 +2,10 @@
 
 ## Tech
 
-- Improve Storybook, expose to new page
+- Storybook
+  - Add addons: Viewport, Source, Docs, a11y https://storybook.js.org/addons/
+  - Add all views
+  - Expose to a new page .com/Storybook
 - Fix Tabs, Alert, Table Numerical column
 - Add Jest snapshots
 - Use Environment Variables to load on prod only (ex Analytics): https://create-react-app.dev/docs/adding-custom-environment-variables#!
