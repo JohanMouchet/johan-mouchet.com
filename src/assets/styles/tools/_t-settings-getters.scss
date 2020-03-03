@@ -42,6 +42,6 @@
  *
  * @example border-radius: t-ui(property-name);
  */
-@function t-ui($property) {
-  @return map-get($s-ui, $property);
+@function t-ui($property...) {
+  @return t-map-deep-get($s-ui, $property...);
 }

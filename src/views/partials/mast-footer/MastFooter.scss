@@ -3,9 +3,9 @@
 
 .p-mast-footer {
   padding: t-vertical-rhythm(1.2) 0;
-  background: url("#{t-path(theme)}/footer.jpg") right center no-repeat
-    $s-color-primary;
-  background-size: cover;
+  background: t-ui(pattern, dots),
+    url("#{t-path(theme)}/footer.jpg") right center/cover no-repeat
+      $s-color-primary;
   letter-spacing: 0.1em;
   font-family: $s-font-family-quaternary;
   text-shadow: 1px 1px 1px rgba($s-color-black, 0.3);

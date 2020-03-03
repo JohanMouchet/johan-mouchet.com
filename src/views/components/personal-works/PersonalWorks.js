@@ -20,7 +20,7 @@ const PersonalWorks = ({ works }: Props) =>
       <div className="grid">
         {works.map(work => (
           <div
-            className="cell cell--6-@xs cell--4-@sm cell--2-@md"
+            className="cell cell--6-@xs cell--4-@sm cell--2-@md u-vr--bottom-1-@xs u-vr--bottom-0-@md"
             key={work.thumbnailPath}
           >
             <section className="c-personal-work">

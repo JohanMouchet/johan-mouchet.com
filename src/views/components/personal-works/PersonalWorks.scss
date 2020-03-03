@@ -16,10 +16,11 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background-image: linear-gradient(
-        rgba($s-color-primary-lighter, 0.7),
-        rgba($s-color-primary-darker, 0.9)
-      );
+      background-image: t-ui(pattern, dots),
+        linear-gradient(
+          rgba($s-color-primary-lighter, 0.7),
+          rgba($s-color-primary-darker, 0.9)
+        );
       transform-origin: 100% 50%;
       transition: transform 0.2s ease-out;
     }
