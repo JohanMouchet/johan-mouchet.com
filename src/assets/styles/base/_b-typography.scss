@@ -30,7 +30,6 @@ h6 {
   line-height: $s-line-height-base / 1.2;
   font-family: $s-font-family-secondary;
   color: $s-color-heading;
-  font-weight: 300;
   margin-top: 0;
 
   /** Underline **/
@@ -99,6 +98,7 @@ h2 {
 @mixin t-heading--3 {
   @include t-heading(2, 2, 1) {
     font-style: italic;
+    font-weight: 400;
   }
 }
 
@@ -107,7 +107,9 @@ h3 {
 }
 
 @mixin t-heading--4 {
-  @include t-heading(1, 1, 1);
+  @include t-heading(1, 1, 1) {
+    font-weight: 400;
+  }
 }
 
 h4 {
@@ -115,7 +117,9 @@ h4 {
 }
 
 @mixin t-heading--5 {
-  @include t-heading(0, 1, 1);
+  @include t-heading(0, 1, 1) {
+    font-weight: 400;
+  }
 }
 
 h5 {
@@ -123,7 +127,9 @@ h5 {
 }
 
 @mixin t-heading--6 {
-  @include t-heading(-1, 1, 1);
+  @include t-heading(-1, 1, 1) {
+    font-weight: 400;
+  }
 }
 
 h6 {
@@ -131,11 +137,15 @@ h6 {
 }
 
 @mixin t-heading--sm {
-  @include t-heading(-2, 1, 1);
+  @include t-heading(-2, 1, 1) {
+    font-weight: 400;
+  }
 }
 
 @mixin t-heading--xs {
-  @include t-heading(-3, 1, 1);
+  @include t-heading(-3, 1, 1) {
+    font-weight: 400;
+  }
 }
 
 [href] {

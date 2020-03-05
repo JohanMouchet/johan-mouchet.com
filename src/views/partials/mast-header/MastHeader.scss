@@ -47,7 +47,7 @@
     color: $s-color-white;
     font-family: $s-font-family-tertiary;
     font-size: t-modular-scale(4);
-    font-weight: 300;
+    font-weight: 400;
     text-transform: uppercase;
     transition: font-size 0.5s;
     transform: skew(-$skew-angle);
@@ -169,7 +169,7 @@
     font-size: t-modular-scale(0);
     letter-spacing: 0.4em;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
     color: $s-color-secondary;
     animation: tagline-animation 0.4s 1s ease-out both;
 
