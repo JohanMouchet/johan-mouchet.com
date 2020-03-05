@@ -66,11 +66,19 @@ h6 {
 
 // These types are also available as utilities: .u-heading--*
 @mixin t-heading--xl {
-  @include t-heading(6, 2, 2);
+  @include t-heading(6, 2, 2) {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
 }
 
 @mixin t-heading--lg {
-  @include t-heading(5, 2, 2);
+  @include t-heading(5, 2, 2) {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
 }
 
 @mixin t-heading--1 {
