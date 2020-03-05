@@ -955,7 +955,7 @@ const Home = () => (
                           endDate: new Date("2013/10/01"),
                           contractType: "Intern",
                           lede:
-                            "PrestaShop eCommerce website for a garden products supplier. (The owner decided to close the website)."
+                            "PrestaShop eCommerce website for a garden products supplier. (Discontinued)."
                         },
                         {
                           company: {
