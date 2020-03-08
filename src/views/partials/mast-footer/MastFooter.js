@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react";
-import { VERSIONS } from "constants/versions";
+import VERSIONS from "constants/versions";
 import "./MastFooter.scss";
 import { ReactComponent as IconArrowDown } from "assets/images/icons/arrow-down.svg";
 

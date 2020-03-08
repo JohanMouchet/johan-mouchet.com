@@ -8,8 +8,7 @@ module.exports = {
       name: "@storybook/addon-docs",
       options: { configureJSX: true }
     },
-    {
-      name: "@storybook/preset-create-react-app"
-    }
+    "@storybook/addon-viewport/register",
+    "@storybook/preset-create-react-app"
   ]
 };

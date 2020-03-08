@@ -3,7 +3,7 @@
 ## Tech
 
 - Storybook
-  - Add addons: Viewport, Source, Docs, a11y https://storybook.js.org/addons/
+  - Add addons: Source, Docs, a11y https://storybook.js.org/addons/
   - Add all views
   - Expose to a new page .com/Storybook
 - Fix Tabs, Alert, Table Numerical column
