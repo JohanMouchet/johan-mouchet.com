@@ -119,13 +119,6 @@
     animation: none;
 
     @include t-wekkit-hdpi-small-dimension;
-
-    /** Sizes **/
-    @each $bp-short, $bp-size in $s-breakpoints {
-      &--#{$bp-short} {
-        max-width: calc(#{$bp-size} - #{2 * $grid-outer-margin});
-      }
-    }
   }
 }
 

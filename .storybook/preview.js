@@ -1,5 +1,5 @@
 import { addParameters } from "@storybook/react";
-import BREAKPOINTS from "../src/constants/breakpoints";
+import { BREAKPOINTS } from "../src/constants/breakpoints";
 
 addParameters({
   viewport: {

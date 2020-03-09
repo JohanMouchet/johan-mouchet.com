@@ -94,7 +94,7 @@
 @include vertical-rhythm-spacers("xs");
 
 @each $bp-short, $bp-size in $s-breakpoints {
-  @media (min-width: $bp-size) {
+  @media (min-width: t-breakpoint($bp-short)) {
     @include vertical-rhythm-spacers($bp-short);
   }
 }

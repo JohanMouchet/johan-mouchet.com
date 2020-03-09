@@ -1,7 +1,9 @@
-export default {
-  xs: "419px",
-  sm: "420px",
-  md: "768px",
-  lg: "1024px",
-  xl: "1280px"
+import breakpoints from "../assets/styles/settings/_s-breakpoints.scss";
+
+export const BREAKPOINTS = {
+  xs: breakpoints.xs,
+  sm: breakpoints.sm,
+  md: breakpoints.md,
+  lg: breakpoints.lg,
+  xl: breakpoints.xl
 };

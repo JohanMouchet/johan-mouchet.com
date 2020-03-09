@@ -13,3 +13,11 @@ $s-breakpoints: (
     xl: 1280px + 1,
   // Extra large devices (extra large desktops): 1280px and up
 );
+
+:export {
+  xs: map-get($s-breakpoints, sm) - 2;
+
+  @each $bp-name, $bp-size in $s-breakpoints {
+    #{unquote($bp-name)}: $bp-size - 1;
+  }
+}
