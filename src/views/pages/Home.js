@@ -293,7 +293,7 @@ const Home = () => (
                     },
                     location: "Melbourne",
                     jobTitle: "Front-end developer",
-                    startDate: new Date("2017/11/01"),
+                    startDate: new Date("2017/11/11"),
                     endDate: new Date(),
                     lede: (
                       <>
@@ -481,8 +481,8 @@ const Home = () => (
                     },
                     location: "London",
                     jobTitle: "Front-end developer",
-                    startDate: new Date("2016/11/01"),
-                    endDate: new Date("2017/10/01"),
+                    startDate: new Date("2016/11/14"),
+                    endDate: new Date("2017/10/19"),
                     lede:
                       "Leading digital marketing, technology and commerce consultancy which delivers at a UK, pan-European and global level.",
                     projects: [
@@ -684,8 +684,8 @@ const Home = () => (
                     location: "London",
                     jobTitle:
                       "Designer & Front-end developer & Marketing strategist",
-                    startDate: new Date("2016/06/01"),
-                    endDate: new Date("2016/11/01"),
+                    startDate: new Date("2016/05/04"),
+                    endDate: new Date("2016/11/13"),
                     contractType: "Contractor",
                     lede:
                       "Design, development and marketing strategy for a company that trains marine and offshore personnel on safety at sea.",
@@ -767,8 +767,8 @@ const Home = () => (
                     },
                     location: "London",
                     jobTitle: "Front-end developer",
-                    startDate: new Date("2015/12/01"),
-                    endDate: new Date("2016/05/01"),
+                    startDate: new Date("2015/12/07"),
+                    endDate: new Date("2016/05/03"),
                     lede:
                       "Award winning marketing agency which helps some of the world's most respected brands to strategically develop and implement marketing communications.",
                     projects: [
@@ -894,7 +894,7 @@ const Home = () => (
                     },
                     location: "London",
                     jobTitle: "Web designer & developer",
-                    startDate: new Date("2014/06/01"),
+                    startDate: new Date("2014/07/09"),
                     endDate: new Date("2015/10/01"),
                     lede: (
                       <>
