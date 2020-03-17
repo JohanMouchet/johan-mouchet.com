@@ -22,18 +22,6 @@
   - Flow
   - See Sam's preso
 
-## Update pdf CV
-
-- Expertises > Skills
-- Skills > Tools
-- 'QA Tested'
-- Capitalize titles
-- Language's'
-- SMF details
-- Profile
-- Tools
-- more
-
 # Fix
 
 - Keep Sass prefix `t-`, explore `@use`?
