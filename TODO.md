@@ -15,13 +15,14 @@
 ## Content
 
 - Career experiences: Highlight (Jetstar, Lexus, SMF, j-m.com) / All
-- Improve Print
-- Inspo https://dribbble.com/fuviz
 - Add Jetstar
   - Agile
   - SpeedCurve
   - Flow
   - See Sam's preso
+- Improve Print
+- Sticky nav?: J/M logo, 'MENU' + burger menu to Anchors
+- Inspo https://dribbble.com/fuviz
 
 # Fix
 
