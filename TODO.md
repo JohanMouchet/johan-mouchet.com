@@ -23,6 +23,19 @@
 - Improve Print
 - Sticky nav?: J/M logo, 'MENU' + burger menu to Anchors
 - Inspo https://dribbble.com/fuviz
+- dark mode:
+  ```css
+  @media (prefers-color-scheme: dark) {
+    body {
+      color: white;
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    body {
+      color: black;
+    }
+  }
+  ```
 
 # Fix
 
