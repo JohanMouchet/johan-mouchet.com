@@ -12,16 +12,11 @@
 - Convert `js-`
 - Convert pages/NotFound to generic error page
 
-## Content
+## Design
 
-- Career experiences: Highlight (Jetstar, Lexus, SMF, j-m.com) / All
-- Add Jetstar
-  - Agile
-  - SpeedCurve
-  - Flow
-  - See Sam's preso
+- layout: max-width, larger padding, border-radius, fix gradient `radial-gradient(circle at top center, ...)`
 - Improve Print
-- Sticky nav?: J/M logo, 'MENU' + burger menu to Anchors
+- Sticky nav?: header background, J/M logo, 'MENU' + burger menu to Anchors
 - Inspo https://dribbble.com/fuviz
 - dark mode:
   ```css
@@ -36,6 +31,15 @@
     }
   }
   ```
+
+## Content
+
+- Career experiences: Highlight (Jetstar, Lexus, SMF, j-m.com) / All
+- Add Jetstar
+  - Agile
+  - SpeedCurve
+  - Flow
+  - See Sam's preso
 
 # Fix
 
