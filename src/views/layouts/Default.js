@@ -6,6 +6,7 @@ import "assets/styles/_styles.scss";
 
 const Default = ({ children }) => (
   <div className="l-layout">
+    <div className="l-layout__background"></div>
     <div className="l-layout__inner">
       <MastHeader />
       {children}

@@ -14,7 +14,6 @@
 
 ## Design
 
-- layout: max-width, larger padding, border-radius, fix gradient `radial-gradient(circle at top center, ...)`
 - Improve Print
 - Sticky nav?: header background, J/M logo, 'MENU' + burger menu to Anchors
 - Inspo https://dribbble.com/fuviz
