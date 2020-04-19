@@ -40,6 +40,10 @@
   - Flow
   - See Sam's preso
 
+## CV
+
+- Add month to experience date
+
 # Fix
 
 - Keep Sass prefix `t-`, explore `@use`?

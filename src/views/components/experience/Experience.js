@@ -10,16 +10,16 @@ type Props = {
     {
       company: {
         url: string,
-        name: string
+        name: string,
       },
       location: string,
       jobTitle: Node,
       startDate: string,
       endDate: string,
       lede: Node,
-      projects: Projects
+      projects: Projects,
     }
-  ]
+  ],
 };
 
 const Experience = ({ experiences }: Props) => {
@@ -27,7 +27,7 @@ const Experience = ({ experiences }: Props) => {
 
   return !experiences
     ? null
-    : experiences.map(experience => (
+    : experiences.map((experience) => (
         <section
           className="c-experience"
           key={experience.company.name + " - " + experience.startDate}
@@ -46,19 +46,22 @@ const Experience = ({ experiences }: Props) => {
 
           <p className="c-experience__subheading">
             <span className="c-experience__date">
-              {experience.startDate.getFullYear()}
+              {`${experience.startDate.toLocaleString("en-gb", {
+                month: "short",
+              })} ${experience.startDate.getFullYear()}`}
 
               {experience.endDate.toDateString() === today.toDateString()
                 ? " – Present"
                 : experience.endDate.getFullYear() >
                     experience.startDate.getFullYear() &&
-                  " – " + experience.endDate.getFullYear()}
-              {/* TODO: Year and month */}
+                  ` –  ${experience.endDate.toLocaleString("en-gb", {
+                    month: "short",
+                  })} ${experience.endDate.getFullYear()}`}
             </span>{" "}
             <span className="c-experience__duration">
               (
               {formatDistance(experience.startDate, experience.endDate, {
-                addSuffix: false
+                addSuffix: false,
               })}
               )
             </span>
