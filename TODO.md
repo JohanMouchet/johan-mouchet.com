@@ -43,6 +43,7 @@
 ## CV
 
 - Add month to experience date
+- Check experience dates
 
 # Fix
 

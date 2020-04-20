@@ -6,7 +6,7 @@ import {
   AcademicQualification,
   SocialMedia,
   Experience,
-  PersonalWorks
+  PersonalWorks,
 } from "views/components";
 import { ReactComponent as Icon500px } from "assets/images/icons/simple-icons/500px.svg";
 import { ReactComponent as IconCodepen } from "assets/images/icons/simple-icons/codepen.svg";
@@ -25,7 +25,7 @@ const Home = () => (
       id: "home",
       title: "Johan Mouchet",
       description:
-        "Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications."
+        "Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.",
     }}
   >
     <main className="l-main l-main--no-margin">
@@ -90,28 +90,28 @@ const Home = () => (
                   {
                     label: "React & Redux",
                     filling: 80,
-                    tooltip: "8/10"
+                    tooltip: "8/10",
                   },
                   {
                     label: "HTML5",
                     filling: 100,
-                    tooltip: "10/10"
+                    tooltip: "10/10",
                   },
                   {
                     label: "CSS3 & Sass",
                     filling: 100,
-                    tooltip: "10/10"
+                    tooltip: "10/10",
                   },
                   {
                     label: "JavaScript ⁠— ES2019",
                     filling: 80,
-                    tooltip: "8/10"
+                    tooltip: "8/10",
                   },
                   {
                     label: "UI & UX",
                     filling: 90,
-                    tooltip: "9/10"
-                  }
+                    tooltip: "9/10",
+                  },
                 ]}
               />
             </article>
@@ -163,30 +163,31 @@ const Home = () => (
                   {
                     establishment: {
                       name: "SUPINFO International University",
-                      url: "https://www.supinfo.com/"
+                      url: "https://www.supinfo.com/",
                     },
                     location: "London",
                     graduationYear: 2015,
-                    title: "Master degree in IT and computer science"
+                    title: "Master degree in IT and computer science",
                   },
                   {
                     establishment: {
                       name: "SUPINFO International University",
-                      url: "https://www.supinfo.com/"
+                      url: "https://www.supinfo.com/",
                     },
                     location: "Marseille",
                     graduationYear: 2013,
-                    title: "Bachelor degree in IT and computer science"
+                    title: "Bachelor degree in IT and computer science",
                   },
                   {
                     establishment: {
                       name: "Chevreul Blancarde high school",
-                      url: "http://www.chevreulblancarde.com/"
+                      url: "http://www.chevreulblancarde.com/",
                     },
                     location: "Marseille",
                     graduationYear: 2010,
-                    title: "Baccalauréat scientifique (High School Certificate)"
-                  }
+                    title:
+                      "Baccalauréat scientifique (High School Certificate)",
+                  },
                 ]}
               />
             </article>
@@ -224,53 +225,53 @@ const Home = () => (
                   {
                     name: "LinkedIn",
                     url: "https://www.linkedin.com/in/johanmouchet",
-                    icon: <IconLinkedIn />
+                    icon: <IconLinkedIn />,
                   },
                   {
                     name: "Twitter",
                     url: "https://twitter.com/JohanMouchet",
-                    icon: <IconTwitter />
+                    icon: <IconTwitter />,
                   },
                   {
                     name: "CodePen",
                     url: "http://codepen.io/johanmouchet/",
-                    icon: <IconCodepen />
+                    icon: <IconCodepen />,
                   },
                   {
                     name: "GitHub",
                     url: "https://github.com/JohanMouchet",
-                    icon: <IconGithub />
+                    icon: <IconGithub />,
                   },
                   {
                     name: "Dribbble",
                     url: "https://dribbble.com/JohanMouchet/likes",
-                    icon: <IconDribbble />
+                    icon: <IconDribbble />,
                   },
                   {
                     name: "Unsplash",
                     url: "https://unsplash.com/@johanmouchet/",
-                    icon: <IconUnsplash />
+                    icon: <IconUnsplash />,
                   },
                   {
                     name: "500px",
                     url: "https://500px.com/johanmouchet/",
-                    icon: <Icon500px />
+                    icon: <Icon500px />,
                   },
                   {
                     name: "Instagram",
                     url: "https://instagram.com/johanmouchet/",
-                    icon: <IconInstagram />
+                    icon: <IconInstagram />,
                   },
                   {
                     name: "YouTube",
                     url: "https://www.youtube.com/c/JohanMouchet",
-                    icon: <IconYoutube />
+                    icon: <IconYoutube />,
                   },
                   {
                     name: "Spotify",
                     url: "https://open.spotify.com/user/1126411547",
-                    icon: <IconSpotify />
-                  }
+                    icon: <IconSpotify />,
+                  },
                 ]}
               />
             </article>
@@ -289,7 +290,7 @@ const Home = () => (
                   {
                     company: {
                       url: "https://isobar.com/au/en/",
-                      name: "Isobar"
+                      name: "Isobar",
                     },
                     location: "Melbourne",
                     jobTitle: "Front-end developer",
@@ -323,14 +324,14 @@ const Home = () => (
                               "MADC 2018 (Melbourne Advertising and Design Club)",
                             url:
                               "https://twitter.com/isobarAU/status/1058125158752313344?s=20",
-                            category: "Best PR experience"
+                            category: "Best PR experience",
                           },
                           {
                             name: "One Show Awards shortlist",
                             url:
                               "https://www.oneshow.org/viewentries/?id=51888",
-                            category: "Media Relations"
-                          }
+                            category: "Media Relations",
+                          },
                         ],
                         details: [
                           <>
@@ -386,8 +387,8 @@ const Home = () => (
                           <>
                             Front-end tooling: <em>Yarn</em>, <em>Gulp</em>,{" "}
                             <em>Webpack</em>, linting
-                          </>
-                        ]
+                          </>,
+                        ],
                       },
                       {
                         name: "Klip Studio",
@@ -445,8 +446,8 @@ const Home = () => (
                           <>
                             Front-end tooling: <em>Create React App</em>,{" "}
                             <em>npm</em>, linting
-                          </>
-                        ]
+                          </>,
+                        ],
                       },
                       {
                         name: "Pearson",
@@ -469,15 +470,15 @@ const Home = () => (
                           </>,
                           "Content authoring, page and component building",
                           "Market customisation, translation",
-                          "Registration forms"
-                        ]
-                      }
-                    ]
+                          "Registration forms",
+                        ],
+                      },
+                    ],
                   },
                   {
                     company: {
                       url: "https://www.amaze.com/",
-                      name: "Amaze"
+                      name: "Amaze",
                     },
                     location: "London",
                     jobTitle: "Front-end developer",
@@ -560,8 +561,8 @@ const Home = () => (
                           <>
                             Environment: <em>Vagrant</em>, Continuous
                             integration: <em>Heroku</em>
-                          </>
-                        ]
+                          </>,
+                        ],
                       },
                       {
                         name: "Lexus",
@@ -605,8 +606,8 @@ const Home = () => (
                           </>,
                           "Advanced multi layers CSS animations",
                           "Responsive design, device orientation aware",
-                          <>Performance optimised</>
-                        ]
+                          <>Performance optimised</>,
+                        ],
                       },
                       {
                         name: "Navico",
@@ -671,15 +672,15 @@ const Home = () => (
                           <>
                             Front-end tooling: <em>npm</em>, <em>Gulp</em>,
                             linting
-                          </>
-                        ]
-                      }
-                    ]
+                          </>,
+                        ],
+                      },
+                    ],
                   },
                   {
                     company: {
                       url: "https://www.surviemerformation.com/",
-                      name: "Survie Mer Formation"
+                      name: "Survie Mer Formation",
                     },
                     location: "London",
                     jobTitle:
@@ -755,15 +756,15 @@ const Home = () => (
                           <>
                             <em>Analytics</em>: setup <em>Google Analytics</em>{" "}
                             events and goals
-                          </>
-                        ]
-                      }
-                    ]
+                          </>,
+                        ],
+                      },
+                    ],
                   },
                   {
                     company: {
                       url: "http://www.tmwunlimited.com/",
-                      name: "TMW Unlimited"
+                      name: "TMW Unlimited",
                     },
                     location: "London",
                     jobTitle: "Front-end developer",
@@ -810,8 +811,8 @@ const Home = () => (
                             library integration
                           </>,
                           "Front-end dynamic filtering feature",
-                          "Back-end collaboration for CMS integration"
-                        ]
+                          "Back-end collaboration for CMS integration",
+                        ],
                       },
                       {
                         name: "Prince's trust",
@@ -852,8 +853,8 @@ const Home = () => (
                           <>
                             <i>OAuth</i> integration for Twitter sharing
                           </>,
-                          "Lazy loaded events from database"
-                        ]
+                          "Lazy loaded events from database",
+                        ],
                       },
                       {
                         name: "Sport Relief",
@@ -882,15 +883,15 @@ const Home = () => (
                             <i>OAuth</i> integration for Facebook and Twitter
                             registration and sharing
                           </>,
-                          "HTML5 canvas and CSS3 animations"
-                        ]
-                      }
-                    ]
+                          "HTML5 canvas and CSS3 animations",
+                        ],
+                      },
+                    ],
                   },
                   {
                     company: {
                       name: "MOVE digital",
-                      url: "http://www.movedigital.co.uk/"
+                      url: "http://www.movedigital.co.uk/",
                     },
                     location: "London",
                     jobTitle: "Web designer & developer",
@@ -910,25 +911,25 @@ const Home = () => (
                       {
                         name: "Weholite",
                         url: "http://www.weholite.co.uk/",
-                        thumbnailPath: require("assets/images/views/career-experiences/weholite.jpg")
+                        thumbnailPath: require("assets/images/views/career-experiences/weholite.jpg"),
                       },
                       {
                         name: "Hiremech",
                         url: "http://www.hiremech.co.uk/",
-                        thumbnailPath: require("assets/images/views/career-experiences/hiremech.jpg")
+                        thumbnailPath: require("assets/images/views/career-experiences/hiremech.jpg"),
                       },
                       {
                         name: "Global Materials Handling",
                         url: "http://globalforktrucks.com/",
-                        thumbnailPath: require("assets/images/views/career-experiences/global-materials-handling.jpg")
+                        thumbnailPath: require("assets/images/views/career-experiences/global-materials-handling.jpg"),
                       },
                       {
                         name: "Proton Motor",
                         url: "http://www.proton-motor.com/",
-                        thumbnailPath: require("assets/images/views/career-experiences/proton-motor.jpg")
-                      }
-                    ]
-                  }
+                        thumbnailPath: require("assets/images/views/career-experiences/proton-motor.jpg"),
+                      },
+                    ],
+                  },
                 ]}
               />
             </article>
@@ -947,7 +948,7 @@ const Home = () => (
                       experiences={[
                         {
                           company: {
-                            name: "Jardin France Design"
+                            name: "Jardin France Design",
                           },
                           location: "Marseille",
                           jobTitle: "Front-end developer",
@@ -955,12 +956,13 @@ const Home = () => (
                           endDate: new Date("2013/10/01"),
                           contractType: "Intern",
                           lede:
-                            "PrestaShop eCommerce website for a garden products supplier. (Discontinued)."
+                            "PrestaShop eCommerce website for a garden products supplier. (Discontinued).",
                         },
                         {
                           company: {
                             name: "Radigraph",
-                            url: "http://www.imprimerie-marseille-radigraph.fr/"
+                            url:
+                              "http://www.imprimerie-marseille-radigraph.fr/",
                           },
                           location: "Marseille",
                           jobTitle: "Front-end developer",
@@ -976,31 +978,31 @@ const Home = () => (
                               </abbr>
                               .
                             </>
-                          )
+                          ),
                         },
                         {
                           company: {
                             name: "Winlink santé",
-                            url: "http://www.winlinksante.com/"
+                            url: "http://www.winlinksante.com/",
                           },
                           location: "Marseille",
                           jobTitle: "Front-end developer",
                           startDate: new Date("2012/07/01"),
                           endDate: new Date("2012/10/01"),
-                          contractType: "Full-time intern",
+                          contractType: "Intern",
                           lede:
-                            "Web intranet application for personnel management: account management, interactive calendar, multiple databases."
+                            "Web intranet application for personnel management: account management, interactive calendar, multiple databases.",
                         },
                         {
                           company: {
                             name: "Digitick",
-                            url: "http://next.digitick.com/"
+                            url: "http://next.digitick.com/",
                           },
                           location: "Marseille",
                           jobTitle: "Front-end developer",
                           startDate: new Date("2011/07/01"),
                           endDate: new Date("2011/10/01"),
-                          contractType: "Full-time intern",
+                          contractType: "Intern",
                           lede: (
                             <>
                               Various web designs for online selling ticket:
@@ -1024,12 +1026,12 @@ const Home = () => (
                               </a>
                               .
                             </>
-                          )
+                          ),
                         },
                         {
                           company: {
                             name: "Survie Mer Formation",
-                            url: "http://www.surviemerformation.com/"
+                            url: "http://www.surviemerformation.com/",
                           },
                           location: "Marseille",
                           jobTitle: "Front-end developer",
@@ -1048,8 +1050,8 @@ const Home = () => (
                               <abbr title="Search Engine Advertising">SEA</abbr>
                               .
                             </>
-                          )
-                        }
+                          ),
+                        },
                       ]}
                     />
                   </Details>
@@ -1077,37 +1079,37 @@ const Home = () => (
                     thumbnailPath:
                       "https://source.unsplash.com/6Y23pU8xyHU/200x200",
                     url: "https://unsplash.com/photos/6Y23pU8xyHU",
-                    sourceIcon: <IconUnsplash />
+                    sourceIcon: <IconUnsplash />,
                   },
                   {
                     thumbnailPath:
                       "https://source.unsplash.com/m9VIwiyzGSc/200x200",
                     url: "https://unsplash.com/photos/m9VIwiyzGSc",
-                    sourceIcon: <IconUnsplash />
+                    sourceIcon: <IconUnsplash />,
                   },
                   {
                     thumbnailPath:
                       "https://source.unsplash.com/hLXsjf0dGgo/200x200",
                     url: "https://unsplash.com/photos/hLXsjf0dGgo",
-                    sourceIcon: <IconUnsplash />
+                    sourceIcon: <IconUnsplash />,
                   },
                   {
                     thumbnailPath:
                       "https://source.unsplash.com/JjEZKXTGPio/200x200",
                     url: "https://unsplash.com/photos/JjEZKXTGPio",
-                    sourceIcon: <IconUnsplash />
+                    sourceIcon: <IconUnsplash />,
                   },
                   {
                     thumbnailPath:
                       "https://source.unsplash.com/sTBdWFQKDHE/200x200",
                     url: "https://unsplash.com/photos/sTBdWFQKDHE",
-                    sourceIcon: <IconUnsplash />
+                    sourceIcon: <IconUnsplash />,
                   },
                   {
                     thumbnailPath: require("assets/images/views/personal-works/south-cost-of-england.jpg"),
                     url: "https://youtu.be/NAsS1T_V8-k",
-                    sourceIcon: <IconYoutube />
-                  }
+                    sourceIcon: <IconYoutube />,
+                  },
                 ]}
               />
             </article>

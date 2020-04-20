@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react";
-import { formatDistance } from "date-fns";
+import { differenceInCalendarMonths } from "date-fns";
 import "./Experience.scss";
 import { Projects } from "views/components";
 
@@ -25,6 +25,25 @@ type Props = {
 const Experience = ({ experiences }: Props) => {
   const today = new Date();
 
+  const duration = (endDate, startDate) => {
+    const durationInMonths = differenceInCalendarMonths(endDate, startDate);
+    const years = Math.floor(durationInMonths / 12);
+    const months = durationInMonths % 12;
+    const yearsFormated =
+      years >= 1 ? `${years} ${years >= 2 ? " yrs" : " yr"}` : "";
+    const monthsFormated =
+      months >= 1 ? `${months} ${months >= 2 ? " mos" : " mo"}` : "";
+
+    const monthsFormatedMin =
+      !yearsFormated && !monthsFormated ? "1 mo" : monthsFormated;
+
+    return (
+      yearsFormated +
+      (yearsFormated && monthsFormatedMin && " ") +
+      monthsFormatedMin
+    );
+  };
+
   return !experiences
     ? null
     : experiences.map((experience) => (
@@ -46,24 +65,28 @@ const Experience = ({ experiences }: Props) => {
 
           <p className="c-experience__subheading">
             <span className="c-experience__date">
-              {`${experience.startDate.toLocaleString("en-gb", {
+              {`${experience.startDate.toLocaleString("en-GB", {
                 month: "short",
               })} ${experience.startDate.getFullYear()}`}
 
               {experience.endDate.toDateString() === today.toDateString()
                 ? " – Present"
-                : experience.endDate.getFullYear() >
-                    experience.startDate.getFullYear() &&
-                  ` –  ${experience.endDate.toLocaleString("en-gb", {
-                    month: "short",
-                  })} ${experience.endDate.getFullYear()}`}
-            </span>{" "}
+                : [
+                    (experience.endDate.getFullYear() >
+                      experience.startDate.getFullYear() ||
+                      experience.endDate.getMonth() >
+                        experience.startDate.getMonth()) &&
+                      ` –  ${experience.endDate.toLocaleString("en-GB", {
+                        month: "short",
+                      })}`,
+                    experience.endDate.getFullYear() >
+                      experience.startDate.getFullYear() &&
+                      ` ${experience.endDate.getFullYear()}`,
+                  ]}
+            </span>
             <span className="c-experience__duration">
-              (
-              {formatDistance(experience.startDate, experience.endDate, {
-                addSuffix: false,
-              })}
-              )
+              {" "}
+              ({duration(experience.endDate, experience.startDate)})
             </span>
             {experience.contractType && (
               <span className="c-experience__type">
