@@ -124,9 +124,10 @@ const Home = () => (
               </Anchor>
               <p>
                 JAMstack, Storybook, Jest, Headless CMS, REST API, npm, Webpack
-                / Gulp, PostCSS, Git (Gitflow), CI/CD, Babel, Zeplin, Responsive
-                design, Performance, Accessibility, Web Standards, Linters /
-                Formatter, SEO, Analytics, Atlassian suite, Agile, Open source
+                / Gulp, PostCSS, Git (Gitflow), CI/CD, Babel, ESlint, Stylelint,
+                Prettier, Zeplin, Responsive design, Performance, Accessibility,
+                Web Standards, SEO, Analytics, Atlassian suite, Agile, Open
+                source
               </p>
             </article>
 
@@ -206,7 +207,6 @@ const Home = () => (
                   href="https://youngcodersau.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="external-link"
                 >
                   @YoungCodersAU
                 </a>
@@ -333,44 +333,23 @@ const Home = () => (
                             category: "Media Relations",
                           },
                         ],
-                        details: [
+                        features: [
                           <>
                             <a
                               href="https://www.contentful.com/"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
                               <em>Contentful</em>
-                            </a>
-                            , headless CMS
-                          </>,
-                          <>
-                            <em>Handlebars</em> templating, component oriented
-                          </>,
-                          <>
-                            <a
-                              href="https://github.com/desandro/masonry"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>Masonry</em>
                             </a>{" "}
-                            grid layout
+                            integration , headless CMS
                           </>,
                           "Community submission forms with client side validation",
                           "Social media sharing",
+                        ],
+                        architecture: [
                           <>
-                            <a
-                              href="https://github.com/ghosh/micromodal"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>Micromodal</em>
-                            </a>{" "}
-                            accessible modal dialogs
+                            <em>Handlebars</em> templating, component oriented
                           </>,
                           <>
                             <em>Bootstrap 4</em>, <em>Sass</em>,{" "}
@@ -378,15 +357,35 @@ const Home = () => (
                               href="http://getbem.com/"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
                               <em>BEM</em>
                             </a>{" "}
                             naming scheme
                           </>,
                           <>
-                            Front-end tooling: <em>Yarn</em>, <em>Gulp</em>,{" "}
-                            <em>Webpack</em>, linting
+                            <em>Webpack</em>, <em>Gulp</em>
+                          </>,
+                        ],
+                        libraries: [
+                          <>
+                            <a
+                              href="https://github.com/desandro/masonry"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <em>Masonry</em>
+                            </a>{" "}
+                            grid layout
+                          </>,
+                          <>
+                            <a
+                              href="https://github.com/ghosh/micromodal"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <em>Micromodal</em>
+                            </a>{" "}
+                            accessible modal dialogs
                           </>,
                         ],
                       },
@@ -396,14 +395,18 @@ const Home = () => (
                         lede:
                           "Web application dedicated to the sport rights holders industry. Allows to edit live or recorded streams to produce highlights shareable on social media.",
                         thumbnailPath: require("assets/images/views/career-experiences/klip-studio.jpg"),
-                        details: [
+                        features: [
+                          "Content tagging, filtering, sorting",
+                          "Audience engagement tracking through social media APIs",
+                          "Social media publishing",
+                        ],
+                        architecture: [
                           <>
-                            React framework,{" "}
+                            <em>React</em>,{" "}
                             <a
                               href="https://react.semantic-ui.com/"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
                               <em>Semantic UI React</em>
                             </a>{" "}
@@ -411,24 +414,9 @@ const Home = () => (
                           </>,
                           <>
                             <a
-                              href="https://github.com/google/shaka-player"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>Shaka</em>
-                            </a>{" "}
-                            web player, advanced video editing, cropping etc.
-                          </>,
-                          "Content tagging, filtering, sorting",
-                          "Audience engagement tracking through social media APIs",
-                          "Social media publishing",
-                          <>
-                            <a
                               href="https://semantic-ui.com/"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
                               <em>Semantic UI</em>
                             </a>
@@ -437,15 +425,25 @@ const Home = () => (
                               href="http://getbem.com/"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
                               <em>BEM</em>
                             </a>{" "}
                             naming scheme
                           </>,
                           <>
-                            Front-end tooling: <em>Create React App</em>,{" "}
-                            <em>npm</em>, linting
+                            <em>Create React App</em>
+                          </>,
+                        ],
+                        libraries: [
+                          <>
+                            <a
+                              href="https://github.com/google/shaka-player"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <em>Shaka</em>
+                            </a>{" "}
+                            web player, advanced video editing
                           </>,
                         ],
                       },
@@ -456,21 +454,22 @@ const Home = () => (
                         lede:
                           "Websites creation related to education for Pearson’s launch in three new markets through Asia.",
                         thumbnailPath: require("assets/images/views/career-experiences/pearson.jpg"),
-                        details: [
+                        features: [
+                          "Content authoring, page and component building",
+                          "Market customisation, internationalisation",
+                          "Registration forms",
+                        ],
+                        architecture: [
                           <>
                             <a
                               href="https://www.adobe.com/au/marketing/experience-manager.html"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
                               <em>Adobe Experience Manager</em>
                             </a>
                             , enterprise content management
                           </>,
-                          "Content authoring, page and component building",
-                          "Market customisation, translation",
-                          "Registration forms",
                         ],
                       },
                     ],
@@ -494,37 +493,28 @@ const Home = () => (
                         lede:
                           "Website redesign to embody the new brand direction focused on a premium and lifestyle experience. Deployed into 35 countries of the European market and translated into 27 languages.",
                         thumbnailPath: require("assets/images/views/career-experiences/lexus.jpg"),
-                        details: [
+                        features: [
                           <>
                             <a href="http://www.sdl.com/software-and-services/tridion-dx/tridion-sites.html">
                               <em>SDL Web</em>
                             </a>{" "}
                             (formerly Tridion), headless data driven CMS{" "}
                           </>,
+                          "HTML5 Geolocation API, Google Maps API",
+                          "AAA accessibility standard",
+                        ],
+                        architecture: [
                           <>
                             <em>Nunjucks</em> templating, component oriented,
                             fed with datas stored in a <em>MongoDB</em> database
                           </>,
-                          <>
-                            <a
-                              href="https://github.com/kenwheeler/slick/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>Slick</em>
-                            </a>{" "}
-                            carousel integration, lazy loading
-                          </>,
-                          "HTML5 Geolocation API, Google maps API",
-                          "AAA accessibility standard",
+
                           <>
                             Sass +{" "}
                             <a
                               href="http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
                               <em>ITCSS</em>
                             </a>{" "}
@@ -533,34 +523,42 @@ const Home = () => (
                               href="http://getbem.com/"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
                               <em>BEM</em>
                             </a>{" "}
                             naming scheme
                           </>,
+                          <em>Backbone.js</em>,
                           <>
-                            Advanced CSS animations with{" "}
+                            <em>jQuery</em>, progressive enhancement
+                          </>,
+                          <>
+                            <em>Grunt</em>, <em>RequireJS</em>
+                          </>,
+                          <>
+                            <em>Vagrant</em> environment, <em>Heroku</em> CI/CD
+                          </>,
+                        ],
+                        libraries: [
+                          <>
+                            <a
+                              href="https://github.com/kenwheeler/slick/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <em>Slick</em>
+                            </a>{" "}
+                            carousel
+                          </>,
+                          <>
                             <a
                               href="http://imakewebthings.com/waypoints/"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
                               <em>Waypoints js</em>
-                            </a>
-                          </>,
-                          <>
-                            Progressive enhancement with JavaScript:{" "}
-                            <em>Backbone.js</em>, <em>jQuery</em>
-                          </>,
-                          <>
-                            Front-end tooling: <em>npm</em>, <em>Grunt</em>,{" "}
-                            <em>RequireJS</em>, linting
-                          </>,
-                          <>
-                            Environment: <em>Vagrant</em>, Continuous
-                            integration: <em>Heroku</em>
+                            </a>{" "}
+                            advanced CSS animations
                           </>,
                         ],
                       },
@@ -576,37 +574,39 @@ const Home = () => (
                           </>
                         ),
                         thumbnailPath: require("assets/images/views/career-experiences/lexus-safety-system-plus.jpg"),
-                        details: [
+                        features: [
+                          "Advanced multi layers CSS animations",
+                          "Responsive design, device orientation aware",
+                          <>Performance optimised</>,
+                        ],
+                        architecture: [
                           <>
                             Stack identical to the one of <em>Lexus 'v11'</em>
                           </>,
                           <>
-                            Full Screen, single-page design, done with{" "}
-                            <a
-                              href="https://github.com/alvarotrigo/fullPage.js"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>fullPage.js</em>
-                            </a>
-                          </>,
-                          <>
-                            Integration of a <em>Three.js</em> API (realised by
-                            the talented{" "}
+                            <em>Three.js</em> integration (designed by the
+                            talented{" "}
                             <a
                               href="http://danielbrowns.com/"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
                               Daniel Brown
                             </a>
                             )
                           </>,
-                          "Advanced multi layers CSS animations",
-                          "Responsive design, device orientation aware",
-                          <>Performance optimised</>,
+                        ],
+                        libraries: [
+                          <>
+                            <a
+                              href="https://github.com/alvarotrigo/fullPage.js"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <em>fullPage.js</em>
+                            </a>
+                            , single-page design
+                          </>,
                         ],
                       },
                       {
@@ -616,41 +616,30 @@ const Home = () => (
                         lede:
                           "Delivery within a short turnaround of a global eCommerce website for a manufacturer of consumer marine electronics.",
                         thumbnailPath: require("assets/images/views/career-experiences/lowrance.jpg"),
-                        details: [
+                        features: [
                           <>
                             <a
                               href="http://www.episerver.com/"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
                               <em>EPIServer</em>
                             </a>{" "}
                             CMS for scalability
                           </>,
+                          "AAA accessibility standard",
+                        ],
+                        architecture: [
                           <>
                             <em>Handlebars</em> / <em>Razor templating</em>,
                             component oriented
                           </>,
-                          <>
-                            Client side form verification done with{" "}
-                            <a
-                              href="https://github.com/jquery-validation/jquery-validation"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>jquery-validation</em>
-                            </a>
-                          </>,
-                          "AAA accessibility standard",
                           <>
                             Sass +{" "}
                             <a
                               href="http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
                               <em>ITCSS</em>
                             </a>{" "}
@@ -659,19 +648,26 @@ const Home = () => (
                               href="http://getbem.com/"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
                               <em>BEM</em>
                             </a>{" "}
                             naming scheme
                           </>,
                           <>
-                            Progressive enhancement with JavaScript (
-                            <em>jQuery</em>)
+                            <em>jQuery</em>, progressive enhancement
                           </>,
+                          <em>Gulp</em>,
+                        ],
+                        libraries: [
                           <>
-                            Front-end tooling: <em>npm</em>, <em>Gulp</em>,
-                            linting
+                            <a
+                              href="https://github.com/jquery-validation/jquery-validation"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <em>jquery-validation</em>
+                            </a>
+                            , client side form verification
                           </>,
                         ],
                       },
@@ -695,7 +691,7 @@ const Home = () => (
                         name: "Survie Mer Formation",
                         url: "https://www.surviemerformation.com/",
                         thumbnailPath: require("assets/images/views/career-experiences/survie-mer-formation.jpg"),
-                        details: [
+                        features: [
                           <>
                             <em>Growth Hacking</em> strategy development (
                             <em>AARRR</em> model) meant to increase acquisition
@@ -714,6 +710,19 @@ const Home = () => (
                             <em>Photoshop</em>
                           </>,
                           <>
+                            <em>SEO</em>: use of <em>Open Graph</em> protocol,{" "}
+                            <em>JSON-LD</em> microdata
+                          </>,
+                          <>
+                            <em>SEA</em>: AdWords campaign creation
+                          </>,
+                          <>
+                            <em>Analytics</em>: <em>Google Analytics</em> events
+                            and goals tracking
+                          </>,
+                        ],
+                        architecture: [
+                          <>
                             <em>Twig</em> templating, component oriented, fed
                             with datas stored in a <em>MySQL</em> database
                           </>,
@@ -723,7 +732,6 @@ const Home = () => (
                               href="http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
                               <em>ITCSS</em>
                             </a>{" "}
@@ -732,30 +740,36 @@ const Home = () => (
                               href="http://getbem.com/"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
                               <em>BEM</em>
                             </a>{" "}
                             naming scheme
                           </>,
                           <>
-                            Progressive enhancement with JavaScript (
-                            <em>jQuery</em>)
+                            <em>jQuery</em>, progressive enhancement
+                          </>,
+                          <em>Grunt</em>,
+                        ],
+                        libraries: [
+                          <>
+                            <a
+                              href="https://github.com/kenwheeler/slick/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <em>Slick</em>
+                            </a>{" "}
+                            carousel
                           </>,
                           <>
-                            Front-end tooling: <em>Yarn</em>, <em>Grunt</em>,
-                            linting{" "}
-                          </>,
-                          <>
-                            <em>SEO</em>: use of <em>Open Graph</em> protocol,{" "}
-                            <em>JSON-LD</em> microdata
-                          </>,
-                          <>
-                            <em>SEA</em>: AdWords campaign creation
-                          </>,
-                          <>
-                            <em>Analytics</em>: setup <em>Google Analytics</em>{" "}
-                            events and goals
+                            <a
+                              href="https://github.com/graingert/WOW/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <em>WOW.js</em>
+                            </a>{" "}
+                            animation
                           </>,
                         ],
                       },
@@ -783,35 +797,33 @@ const Home = () => (
                           </>
                         ),
                         thumbnailPath: require("assets/images/views/career-experiences/business-banking-insight.jpg"),
-                        details: [
+                        features: ["Dynamic filtering", "CMS integration"],
+                        architecture: [
                           <>
-                            <i>AngularJS 2</i> templating
+                            <em>AngularJS 2</em>
                           </>,
                           <>
-                            Front-end framework:{" "}
                             <a
                               href="http://trykickoff.com/"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
-                              Kickoff
+                              <em>Kickoff</em>
                             </a>{" "}
-                            (npm, Grunt, Sass, jQuery)
+                            framework (Grunt, Sass, jQuery)
                           </>,
+                        ],
+                        libraries: [
                           <>
                             <a
                               href="https://www.amcharts.com/"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
                               amCharts
                             </a>{" "}
-                            library integration
+                            integration
                           </>,
-                          "Front-end dynamic filtering feature",
-                          "Back-end collaboration for CMS integration",
                         ],
                       },
                       {
@@ -827,33 +839,33 @@ const Home = () => (
                           </>
                         ),
                         thumbnailPath: require("assets/images/views/career-experiences/princes-trust.jpg"),
-                        details: [
+                        features: ["Lazy loaded events from database"],
+                        architecture: [
                           <>
-                            Front-end framework:{" "}
                             <a
                               href="http://trykickoff.com/"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
-                              Kickoff
-                            </a>
+                              <em>Kickoff</em>
+                            </a>{" "}
+                            framework
                           </>,
+                        ],
+                        libraries: [
                           <>
                             <a
                               href="https://hashtagd.net/"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
-                              Hashtagd
+                              <em>Hashtagd</em>
                             </a>{" "}
                             APIs integration
                           </>,
                           <>
-                            <i>OAuth</i> integration for Twitter sharing
+                            <em>OAuth</em> integration for Twitter sharing
                           </>,
-                          "Lazy loaded events from database",
                         ],
                       },
                       {
@@ -862,28 +874,31 @@ const Home = () => (
                         url: "https://www.youtube.com/watch?v=3PyZVDrO_aI",
                         lede: "Mobile web browser game based on rope skipping.",
                         thumbnailPath: require("assets/images/views/career-experiences/sport-relief-skipathon.jpg"),
-                        details: [
+                        features: [
+                          "HTML5 canvas and CSS3 animations",
                           "iOS and Android default browser support",
                           "Device 3D movement detection",
+                        ],
+                        architecture: [
                           <>
-                            <i>React</i> templating
+                            <em>React</em>
                           </>,
                           <>
-                            Front-end framework:{" "}
                             <a
                               href="http://trykickoff.com/"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="external-link"
                             >
-                              Kickoff
-                            </a>
+                              <em>Kickoff</em>
+                            </a>{" "}
+                            framework
                           </>,
+                        ],
+                        libraries: [
                           <>
-                            <i>OAuth</i> integration for Facebook and Twitter
+                            <em>OAuth</em> integration for Facebook and Twitter
                             registration and sharing
                           </>,
-                          "HTML5 canvas and CSS3 animations",
                         ],
                       },
                     ],
@@ -1011,7 +1026,6 @@ const Home = () => (
                                 href="http://sigstrasbourg.fr/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="external-link"
                               >
                                 SIG Basket
                               </a>{" "}
@@ -1020,7 +1034,6 @@ const Home = () => (
                                 href="http://biarritz-culture.com/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="external-link"
                               >
                                 Biarritz culture
                               </a>
@@ -1067,10 +1080,8 @@ const Home = () => (
               </Anchor>
 
               <p>
-                When I'm not designing websites I like to take pictures, create
-                infographic, doodle and make short films.
-                <br />
-                Here are some of my personal works:
+                When I'm not developing websites I like to take pictures, create
+                infographics, doodle and make short films.
               </p>
 
               <PersonalWorks

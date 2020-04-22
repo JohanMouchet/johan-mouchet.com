@@ -4,6 +4,7 @@ import * as React from "react";
 import cx from "classnames";
 import "./Projects.scss";
 import { ReactComponent as IconAward } from "assets/images/icons/award.svg";
+import pluralize from "utils/pluralize";
 
 type Props = {
   projects: [
@@ -17,19 +18,21 @@ type Props = {
         {
           name: string,
           url: string,
-          category: string
+          category: string,
         }
       ],
-      details?: Array<Node>
+      features?: Array<Node>,
+      architecture?: Array<Node>,
+      libraries?: Array<Node>,
     }
-  ]
+  ],
 };
 
 const Projects = ({ projects }: Props) => {
   const projectQuantity = projects.length;
   const cellSize = projectQuantity <= 4 ? 12 / projectQuantity : 3;
 
-  const renderThumbnail = project => (
+  const renderThumbnail = (project) => (
     <a
       href={project.url}
       target="_blank"
@@ -74,7 +77,7 @@ const Projects = ({ projects }: Props) => {
             singleProject && "u-vr--top-0-@xs"
           )}
         >
-          {project.awards.map(award => (
+          {project.awards.map((award) => (
             <li className="c-project__award" key={award.name}>
               <a className="c-project__award-icon" href={award.url}>
                 <IconAward />
@@ -88,18 +91,52 @@ const Projects = ({ projects }: Props) => {
         </ul>
       )}
 
-      {project.details && (
+      {(project.features || project.architecture || project.libraries) && (
         <ul
-          className={cx(
-            "c-project__details",
-            singleProject && "u-vr--top-0-@xs"
-          )}
+          className={cx(singleProject && !project.awards && "u-vr--top-0-@xs")}
         >
-          {project.details.map((detail, index) => (
-            <li className="c-project__detail" key={index}>
-              {detail}
-            </li>
-          ))}
+          {project.features && [
+            <li>
+              <span className="c-project__details-heading">
+                {pluralize("Feature", project.features.length)}
+              </span>
+              <ul className="c-project__details">
+                {project.features.map((detail) => (
+                  <li className="c-project__detail" key={detail}>
+                    {detail}
+                  </li>
+                ))}
+              </ul>
+            </li>,
+          ]}
+
+          {project.architecture && [
+            <li>
+              <span className="c-project__details-heading">Architecture</span>
+              <ul className="c-project__details">
+                {project.architecture.map((detail) => (
+                  <li className="c-project__detail" key={detail}>
+                    {detail}
+                  </li>
+                ))}
+              </ul>
+            </li>,
+          ]}
+
+          {project.libraries && [
+            <li>
+              <span className="c-project__details-heading">
+                {pluralize("Library", project.features.length)}
+              </span>
+              <ul className="c-project__details">
+                {project.libraries.map((detail) => (
+                  <li className="c-project__detail" key={detail}>
+                    {detail}
+                  </li>
+                ))}
+              </ul>
+            </li>,
+          ]}
         </ul>
       )}
     </>
@@ -107,32 +144,37 @@ const Projects = ({ projects }: Props) => {
 
   return !projects ? null : (
     <div className="c-projects">
-      <div className="grid">
-        {projects.map(project => (
+      {projectQuantity > 1 ? (
+        <div className="grid">
+          {projects.map((project) => (
+            <div
+              className={`cell cell--12-@xs cell--6-@sm cell--${cellSize}-@lg`}
+              key={project.name + (project.tagline && " - " + project.tagline)}
+            >
+              <div className="c-project">
+                {renderThumbnail(project)}
+                {renderContent(project)}
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        projects.map((project) => (
           <div
-            className={`cell cell--12-@xs cell--6-@sm cell--${cellSize}-@md`}
+            className="c-project c-project--single"
             key={project.name + (project.tagline && " - " + project.tagline)}
           >
-            <div className="c-project">
-              {projectQuantity > 1 ? (
-                <>
-                  {renderThumbnail(project)}
-                  {renderContent(project)}
-                </>
-              ) : (
-                <div className="grid">
-                  <div className="cell cell--12-@xs cell--4-@md">
-                    {renderThumbnail(project)}
-                  </div>
-                  <div className="cell cell--12-@xs cell--8-@md">
-                    {renderContent(project, true)}
-                  </div>
-                </div>
-              )}
+            <div className="grid">
+              <div className="cell cell--12-@xs cell--6-@sm cell--4-@lg">
+                {renderThumbnail(project)}
+              </div>
+              <div className="cell cell--12-@xs cell--6-@sm cell--8-@lg">
+                {renderContent(project, true)}
+              </div>
             </div>
           </div>
-        ))}
-      </div>
+        ))
+      )}
     </div>
   );
 };

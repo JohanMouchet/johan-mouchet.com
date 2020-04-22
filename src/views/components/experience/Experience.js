@@ -4,6 +4,7 @@ import * as React from "react";
 import { differenceInCalendarMonths } from "date-fns";
 import "./Experience.scss";
 import { Projects } from "views/components";
+import pluralize from "utils/pluralize";
 
 type Props = {
   experiences: [
@@ -29,11 +30,8 @@ const Experience = ({ experiences }: Props) => {
     const durationInMonths = differenceInCalendarMonths(endDate, startDate);
     const years = Math.floor(durationInMonths / 12);
     const months = durationInMonths % 12;
-    const yearsFormated =
-      years >= 1 ? `${years} ${years >= 2 ? " yrs" : " yr"}` : "";
-    const monthsFormated =
-      months >= 1 ? `${months} ${months >= 2 ? " mos" : " mo"}` : "";
-
+    const yearsFormated = years >= 1 ? pluralize(`${years} yr`, years) : "";
+    const monthsFormated = months >= 1 ? pluralize(`${months} mo`, months) : "";
     const monthsFormatedMin =
       !yearsFormated && !monthsFormated ? "1 mo" : monthsFormated;
 
@@ -56,7 +54,7 @@ const Experience = ({ experiences }: Props) => {
               href={experience.company.url && experience.company.url}
               target={experience.company.url && "_blank"}
               rel={experience.company.url && "noopener noreferrer"}
-              className="c-experience__company external-link"
+              className="c-experience__company"
             >
               {experience.company.name}
             </a>

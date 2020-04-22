@@ -90,6 +90,10 @@
     font-size: t-modular-scale(-1);
   }
 
+  &__details-heading {
+    font-weight: 500;
+  }
+
   &__awards {
     padding-left: 0;
     list-style-type: none;
@@ -100,8 +104,9 @@
     display: flex;
 
     &-icon {
-      flex: 0 1 1.5em;
+      flex: 0 1 1.2em;
       align-self: flex-start;
+      margin-right: 0.3em;
     }
 
     &-name {
@@ -113,6 +118,15 @@
       width: 1.2em;
       fill: currentColor;
       vertical-align: middle;
+    }
+  }
+
+  &--single {
+    @media (min-width: t-breakpoint(lg)) {
+      #{$root}__details {
+        columns: 2;
+        column-gap: 3em;
+      }
     }
   }
 }

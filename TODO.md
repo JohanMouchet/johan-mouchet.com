@@ -2,6 +2,7 @@
 
 ## Tech
 
+- Fix key `Check the render method of Projects`
 - Storybook
   - Add addons: Source, Docs, a11y https://storybook.js.org/addons/
   - Add all views
@@ -33,17 +34,42 @@
 
 ## Content
 
+- Re write intro
 - Career experiences: Highlight (Jetstar, Lexus, SMF, j-m.com) / All
-- Add Jetstar
-  - Agile
-  - SpeedCurve
+- Jetstar:
+
+  ### Features
+
+  - Sitecore integration
+  - MPS
+  - Accessibility
+
+  ### Architecture
+
+  - Webpack
+  - React
+  - Redux
   - Flow
-  - See Sam's preso
+  - Jest, Enzyme
+  - Storybook
+  - Sass + CSS Modules
+  - Git, Pre-commit git hooks
+  - Linters / Formater
+
+  ### Libraries
+
+  - Immutable.js
+  - Local Forage
+  - Date-fns
+  - Swiperjs
+  - Fuse
+  - SpeedCurve
+
+- Open Source: GitHub, Codepen
 
 ## CV
 
-- Add month to experience date
-- Check experience dates
+-
 
 # Fix
 
