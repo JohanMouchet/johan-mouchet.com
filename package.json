@@ -5,6 +5,8 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "date-fns": "^2.11.1",
+    "dompurify": "^2.0.8",
+    "html-react-parser": "^0.10.3",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
