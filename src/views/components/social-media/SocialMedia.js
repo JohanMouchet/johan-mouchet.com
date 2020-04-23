@@ -8,15 +8,15 @@ type Props = {
     {
       name: string,
       url: string,
-      icon: string
+      icon: string,
     }
-  ]
+  ],
 };
 
 const SocialMedia = ({ medias }: Props) =>
   !medias ? null : (
     <div className="grid">
-      {medias.map(media => (
+      {medias.map((media) => (
         <div
           className="c-social-media cell cell--6-@xs cell--4-@sm cell--12-@md"
           key={media.url}

@@ -5,7 +5,7 @@ import cx from "classnames";
 import "./Badge.scss";
 
 type Props = {
-  className?: string | Array<string> | Object
+  className?: string | Array<string> | Object,
 };
 
 const Badge = ({ className, children }: Props) => {

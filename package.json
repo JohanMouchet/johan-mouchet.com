@@ -18,9 +18,9 @@
     "test": "jest",
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer build/static/js/*.js",
-    "lint:js": "eslint src/**/*.{js,jsx,json}",
+    "lint:js": "eslint src/**/*.{js,json}",
     "lint:css": "stylelint src/**/*.{css,scss}",
-    "format": "eslint --fix src/**/*.{js,jsx,json} && stylelint --fix src/**/*.{css,scss} && prettier --write src/**/*.md",
+    "format": "eslint --fix src/**/*.{js,json} && stylelint --fix src/**/*.{css,scss} && prettier --write src/**/*.md",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },
@@ -61,7 +61,7 @@
       "eslint --fix",
       "git add"
     ],
-    "_DISABLED_src/**/*.{js,jsx,json}": [
+    "src/**/*.{js,json}": [
       "eslint --fix",
       "git add"
     ],
