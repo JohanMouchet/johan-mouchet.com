@@ -5,6 +5,7 @@ import { differenceInCalendarMonths } from "date-fns";
 import "./Experience.scss";
 import { Projects } from "views/components";
 import pluralize from "utils/pluralize";
+import parse from "utils/parse";
 
 type Props = {
   experiences: [
@@ -94,7 +95,7 @@ const Experience = ({ experiences }: Props) => {
             )}
           </p>
 
-          <p className="c-experience__lede">{experience.lede}</p>
+          <p className="c-experience__lede">{parse(experience.lede)}</p>
 
           {experience.projects && <Projects projects={experience.projects} />}
         </section>

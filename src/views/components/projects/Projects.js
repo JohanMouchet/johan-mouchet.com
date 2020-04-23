@@ -5,6 +5,7 @@ import cx from "classnames";
 import "./Projects.scss";
 import { ReactComponent as IconAward } from "assets/images/icons/award.svg";
 import pluralize from "utils/pluralize";
+import parse from "utils/parse";
 
 type Props = {
   projects: [
@@ -66,7 +67,7 @@ const Projects = ({ projects }: Props) => {
         <p
           className={cx("c-project__lede", singleProject && "u-vr--top-0-@xs")}
         >
-          {project.lede}
+          {parse(project.lede)}
         </p>
       )}
 
@@ -96,14 +97,14 @@ const Projects = ({ projects }: Props) => {
           className={cx(singleProject && !project.awards && "u-vr--top-0-@xs")}
         >
           {project.features && [
-            <li>
+            <li key="features">
               <span className="c-project__details-heading">
                 {pluralize("Feature", project.features.length)}
               </span>
               <ul className="c-project__details">
                 {project.features.map((detail) => (
-                  <li className="c-project__detail" key={detail}>
-                    {detail}
+                  <li className="c-project__detail" key={parse(detail)}>
+                    {parse(detail)}
                   </li>
                 ))}
               </ul>
@@ -111,12 +112,12 @@ const Projects = ({ projects }: Props) => {
           ]}
 
           {project.architecture && [
-            <li>
+            <li key="architecture">
               <span className="c-project__details-heading">Architecture</span>
               <ul className="c-project__details">
                 {project.architecture.map((detail) => (
-                  <li className="c-project__detail" key={detail}>
-                    {detail}
+                  <li className="c-project__detail" key={parse(detail)}>
+                    {parse(detail)}
                   </li>
                 ))}
               </ul>
@@ -124,14 +125,14 @@ const Projects = ({ projects }: Props) => {
           ]}
 
           {project.libraries && [
-            <li>
+            <li key="libraries">
               <span className="c-project__details-heading">
                 {pluralize("Library", project.features.length)}
               </span>
               <ul className="c-project__details">
                 {project.libraries.map((detail) => (
-                  <li className="c-project__detail" key={detail}>
-                    {detail}
+                  <li className="c-project__detail" key={parse(detail)}>
+                    {parse(detail)}
                   </li>
                 ))}
               </ul>
