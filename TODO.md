@@ -2,7 +2,6 @@
 
 ## Tech
 
-- Fix key `Check the render method of Projects`
 - Storybook
   - Add addons: Source, Docs, a11y https://storybook.js.org/addons/
   - Add all views
