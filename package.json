@@ -28,7 +28,15 @@
     "extends": [
       "react-app",
       "plugin:prettier/recommended"
-    ]
+    ],
+    "rules": {
+      "prettier/prettier": [
+        2,
+        {
+          "endOfLine": "auto"
+        }
+      ]
+    }
   },
   "browserslist": {
     "production": [
