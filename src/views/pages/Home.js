@@ -65,7 +65,7 @@ const Home = () => (
               <h2 className="c-about__heading">Right now,</h2>
 
               <p className="c-about__paragraph">
-                I recently relocated to <b>Melbourne</b> looking for a new
+                In 2017 I relocated to <b>Melbourne</b> looking for a new
                 opportunity to take my career to the next level. I'm committed
                 and ready to work within a fast paced environment on innovative
                 and impactful projects.

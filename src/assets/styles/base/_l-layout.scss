@@ -4,8 +4,11 @@
 
 .l-layout {
   min-height: 100vh;
+  max-width: t-breakpoint(xxl);
   display: flex;
+  margin: 0 auto;
   padding: t-vertical-rhythm(0.2);
+  box-sizing: content-box;
 
   @media (min-width: t-breakpoint(md)) {
     padding: t-vertical-rhythm(1) t-vertical-rhythm(2);
@@ -48,8 +51,7 @@
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    max-width: t-breakpoint(xxl);
-    margin: 0 auto;
+    width: 100%;
     box-shadow: 0 10px 15px -3px rgba($s-color-black, 0.4),
       0 4px 6px -2px rgba($s-color-black, 0.4);
     background-color: $s-color-white;
@@ -78,7 +80,7 @@
 .l-article {
   $l-article: (
     v-padding: t-vertical-rhythm(2),
-    scale-factor: 2
+    scale-factor: 2,
   );
 
   margin-top: map-get($l-article, v-padding);
