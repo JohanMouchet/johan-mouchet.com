@@ -15,10 +15,10 @@ type Props = {
         name: string,
       },
       location: string,
-      jobTitle: Node,
+      jobTitle: string,
       startDate: string,
       endDate: string,
-      lede: Node,
+      lede: string,
       projects: Projects,
     }
   ],

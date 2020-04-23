@@ -5,17 +5,17 @@ import cx from "classnames";
 import "./Details.scss";
 
 type Props = {
-  summary?: Node,
+  summary?: string,
   className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
-  children: Node
+  children: Node,
 };
 
 const Details = ({
   summary = "Details",
   className,
   attributes,
-  children
+  children,
 }: Props) => {
   const classNames = cx("o-details", className);
 

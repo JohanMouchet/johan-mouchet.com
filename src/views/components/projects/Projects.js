@@ -22,9 +22,9 @@ type Props = {
           category: string,
         }
       ],
-      features?: Array<Node>,
-      architecture?: Array<Node>,
-      libraries?: Array<Node>,
+      features?: Array<string>,
+      architecture?: Array<string>,
+      libraries?: Array<string>,
     }
   ],
 };
@@ -150,7 +150,7 @@ const Projects = ({ projects }: Props) => {
           {projects.map((project) => (
             <div
               className={`cell cell--12-@xs cell--6-@sm cell--${cellSize}-@lg`}
-              key={project.name + (project.tagline && " - " + project.tagline)}
+              key={project.name + project.tagline}
             >
               <div className="c-project">
                 {renderThumbnail(project)}
@@ -160,21 +160,19 @@ const Projects = ({ projects }: Props) => {
           ))}
         </div>
       ) : (
-        projects.map((project) => (
-          <div
-            className="c-project c-project--single"
-            key={project.name + (project.tagline && " - " + project.tagline)}
-          >
-            <div className="grid">
-              <div className="cell cell--12-@xs cell--6-@sm cell--4-@lg">
-                {renderThumbnail(project)}
-              </div>
-              <div className="cell cell--12-@xs cell--6-@sm cell--8-@lg">
-                {renderContent(project, true)}
-              </div>
+        <div
+          className="c-project c-project--single"
+          key={projects[0].name + projects[0].tagline}
+        >
+          <div className="grid">
+            <div className="cell cell--12-@xs cell--6-@sm cell--4-@lg">
+              {renderThumbnail(projects[0])}
+            </div>
+            <div className="cell cell--12-@xs cell--6-@sm cell--8-@lg">
+              {renderContent(projects[0], true)}
             </div>
           </div>
-        ))
+        </div>
       )}
     </div>
   );

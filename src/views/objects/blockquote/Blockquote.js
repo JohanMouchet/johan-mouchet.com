@@ -6,9 +6,9 @@ import "./Blockquote.scss";
 
 type Props = {
   quote: Node,
-  cite?: Node,
+  cite?: string,
   pulled?: boolean,
-  className?: string | Array<string> | Object
+  className?: string | Array<string> | Object,
 };
 
 const Blockquote = ({ quote, cite, pulled, className }: Props) => {
