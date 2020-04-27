@@ -39,7 +39,7 @@
     }
 
     &::after {
-      background: t-ui(pattern, dots);
+      background: url("#{t-path(theme)}/layout-grain.png");
     }
   }
 
@@ -78,7 +78,7 @@
 .l-article {
   $l-article: (
     v-padding: t-vertical-rhythm(2),
-    scale-factor: 2
+    scale-factor: 2,
   );
 
   margin-top: map-get($l-article, v-padding);
