@@ -6,7 +6,7 @@
 
   &__link {
     display: block;
-    max-width: 400px;
+    max-width: 430px;
     margin-bottom: t-vertical-rhythm(1);
     position: relative;
     overflow: hidden;
@@ -88,6 +88,10 @@
   &__tagline {
     margin: 0;
     font-size: t-modular-scale(-1);
+  }
+
+  &__details-section {
+    margin-top: t-vertical-rhythm(1);
   }
 
   &__details-heading {

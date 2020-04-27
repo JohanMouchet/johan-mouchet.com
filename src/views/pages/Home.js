@@ -61,11 +61,9 @@ const Home = () => (
 
             <div className="l-cell--gray-lighter cell cell--hidden-@xs cell--visible-@md cell--3-@md"></div>
 
-            <div className="cell cell--12-@xs cell--6-@sm">
-              <h2 className="c-about__heading">Right now,</h2>
-
-              <p className="c-about__paragraph">
-                In 2017 I relocated to <b>Melbourne</b> looking for a new
+            <div className="cell cell--12-@xs cell--6-@sm cell--yCenter-@sm">
+              <p className="c-about__paragraph u-vr--top-2-@xs">
+                I relocated to <b>Melbourne</b> In 2017 looking for a new
                 opportunity to take my career to the next level. I'm committed
                 and ready to work within a fast paced environment on innovative
                 and impactful projects.
@@ -297,6 +295,38 @@ const Home = () => (
                     lede: /*html*/ `Global agency that delivers digital transformation powered by creativity, who believe in <em>Ideas Without Limits</em>, pushing the boundaries of technology and creativity.`,
                     projects: [
                       {
+                        highlight: true,
+                        name: /*html*/ `Jetstar`,
+                        tagline: /*html*/ `tagline`,
+                        url: /*html*/ `https://www.jetstar.com/au/en/home?tab=1`,
+                        lede: /*html*/ `lede`,
+                        thumbnailPath: require("assets/images/views/career-experiences/zoos-victoria.jpg"),
+                        features: [
+                          /*html*/ `Sitecore integration`,
+                          /*html*/ `MPS`,
+                          /*html*/ `Accessibility`,
+                        ],
+                        architecture: [
+                          /*html*/ `Webpack`,
+                          /*html*/ `React`,
+                          /*html*/ `Redux`,
+                          /*html*/ `Flow`,
+                          /*html*/ `Jest, Enzyme`,
+                          /*html*/ `Storybook`,
+                          /*html*/ `Sass + CSS Modules`,
+                          /*html*/ `Git, Pre-commit git hooks`,
+                          /*html*/ `Linters / Formater`,
+                        ],
+                        libraries: [
+                          /*html*/ `Immutable.js`,
+                          /*html*/ `Local Forage`,
+                          /*html*/ `Date-fns`,
+                          /*html*/ `Swiperjs`,
+                          /*html*/ `Fuse`,
+                          /*html*/ `SpeedCurve`,
+                        ],
+                      },
+                      {
                         name: /*html*/ `Zoos Victoria`,
                         tagline: /*html*/ `CatVR: Safe Cat, Safe Wildlife`,
                         url: /*html*/ `http://www.safecat.org.au`,
@@ -455,6 +485,7 @@ const Home = () => (
                     lede: /*html*/ `Design, development and marketing strategy for a company that trains marine and offshore personnel on safety at sea.`,
                     projects: [
                       {
+                        highlight: true,
                         name: /*html*/ `Survie Mer Formation`,
                         url: /*html*/ `https://www.surviemerformation.com/`,
                         thumbnailPath: require("assets/images/views/career-experiences/survie-mer-formation.jpg"),

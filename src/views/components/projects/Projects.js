@@ -10,6 +10,7 @@ import parse from "utils/parse";
 type Props = {
   projects: [
     {
+      highlight?: boolean,
       name: string,
       tagline?: string,
       url: string,
@@ -30,9 +31,6 @@ type Props = {
 };
 
 const Projects = ({ projects }: Props) => {
-  const projectQuantity = projects.length;
-  const cellSize = projectQuantity <= 4 ? 12 / projectQuantity : 3;
-
   const renderThumbnail = (project) => (
     <a
       href={project.url}
@@ -61,22 +59,17 @@ const Projects = ({ projects }: Props) => {
     </a>
   );
 
-  const renderContent = (project, singleProject = false) => (
+  const renderContent = (project, highlighted) => (
     <>
       {project.lede && (
-        <p
-          className={cx("c-project__lede", singleProject && "u-vr--top-0-@xs")}
-        >
+        <p className={cx("c-project__lede", highlighted && "u-vr--top-0-@xs")}>
           {parse(project.lede)}
         </p>
       )}
 
       {project.awards && (
         <ul
-          className={cx(
-            "c-project__awards",
-            singleProject && "u-vr--top-0-@xs"
-          )}
+          className={cx("c-project__awards", highlighted && "u-vr--top-0-@xs")}
         >
           {project.awards.map((award) => (
             <li className="c-project__award" key={award.name}>
@@ -94,14 +87,17 @@ const Projects = ({ projects }: Props) => {
 
       {(project.features || project.architecture || project.libraries) && (
         <ul
-          className={cx(singleProject && !project.awards && "u-vr--top-0-@xs")}
+          className={cx(
+            "c-project__details",
+            highlighted && !project.awards && "u-vr--top-0-@xs"
+          )}
         >
           {project.features && [
-            <li key="features">
+            <li className="c-project__details-section" key="features">
               <span className="c-project__details-heading">
                 {pluralize("Feature", project.features.length)}
               </span>
-              <ul className="c-project__details">
+              <ul className="c-project__detail-list">
                 {project.features.map((detail) => (
                   <li className="c-project__detail" key={parse(detail)}>
                     {parse(detail)}
@@ -112,9 +108,9 @@ const Projects = ({ projects }: Props) => {
           ]}
 
           {project.architecture && [
-            <li key="architecture">
+            <li className="c-project__details-section" key="architecture">
               <span className="c-project__details-heading">Architecture</span>
-              <ul className="c-project__details">
+              <ul className="c-project__detail-list">
                 {project.architecture.map((detail) => (
                   <li className="c-project__detail" key={parse(detail)}>
                     {parse(detail)}
@@ -125,11 +121,11 @@ const Projects = ({ projects }: Props) => {
           ]}
 
           {project.libraries && [
-            <li key="libraries">
+            <li className="c-project__details-section" key="libraries">
               <span className="c-project__details-heading">
                 {pluralize("Library", project.features.length)}
               </span>
-              <ul className="c-project__details">
+              <ul className="c-project__detail-list">
                 {project.libraries.map((detail) => (
                   <li className="c-project__detail" key={parse(detail)}>
                     {parse(detail)}
@@ -145,11 +141,30 @@ const Projects = ({ projects }: Props) => {
 
   return !projects ? null : (
     <div className="c-projects">
-      {projectQuantity > 1 ? (
-        <div className="grid">
-          {projects.map((project) => (
+      <div className="grid">
+        {projects.map((project) =>
+          project.highlight ? (
             <div
-              className={`cell cell--12-@xs cell--6-@sm cell--${cellSize}-@lg`}
+              className="cell cell--12-@xs"
+              key={project.name + project.tagline}
+            >
+              <div className="c-project c-project--single">
+                <div className="grid">
+                  <div className="cell cell--12-@xs cell--6-@sm cell--4-@lg">
+                    {renderThumbnail(project)}
+                  </div>
+                  <div className="cell cell--12-@xs cell--6-@sm cell--8-@lg">
+                    {renderContent(project, true)}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div
+              className={cx("cell cell--12-@xs cell--6-@sm", {
+                "cell--4-@lg": project.lede,
+                "cell--3-@lg": !project.lede,
+              })}
               key={project.name + project.tagline}
             >
               <div className="c-project">
@@ -157,23 +172,9 @@ const Projects = ({ projects }: Props) => {
                 {renderContent(project)}
               </div>
             </div>
-          ))}
-        </div>
-      ) : (
-        <div
-          className="c-project c-project--single"
-          key={projects[0].name + projects[0].tagline}
-        >
-          <div className="grid">
-            <div className="cell cell--12-@xs cell--6-@sm cell--4-@lg">
-              {renderThumbnail(projects[0])}
-            </div>
-            <div className="cell cell--12-@xs cell--6-@sm cell--8-@lg">
-              {renderContent(projects[0], true)}
-            </div>
-          </div>
-        </div>
-      )}
+          )
+        )}
+      </div>
     </div>
   );
 };
