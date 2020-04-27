@@ -4,6 +4,7 @@
 
 .l-layout {
   min-height: 100vh;
+  min-height: stretch;
   max-width: t-breakpoint(xxl);
   display: flex;
   margin: 0 auto;
