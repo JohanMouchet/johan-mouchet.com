@@ -8,15 +8,15 @@
   max-width: t-breakpoint(xxl);
   display: flex;
   margin: 0 auto;
-  padding: t-vertical-rhythm(0.2);
+  padding: t-vertical-rhythm(0.5) t-vertical-rhythm(0.25);
   box-sizing: content-box;
+
+  @media (min-width: t-breakpoint(sm)) {
+    padding: t-vertical-rhythm(0.5) t-vertical-rhythm(1);
+  }
 
   @media (min-width: t-breakpoint(md)) {
     padding: t-vertical-rhythm(1) t-vertical-rhythm(2);
-  }
-
-  @media (min-width: t-breakpoint(lg)) {
-    padding: t-vertical-rhythm(2) t-vertical-rhythm(4);
   }
 
   &__background {
