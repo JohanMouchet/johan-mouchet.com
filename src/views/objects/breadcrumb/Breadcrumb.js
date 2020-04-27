@@ -8,10 +8,10 @@ type Props = {
   levels: [
     {
       title: string,
-      url: string
+      url: string,
     }
   ],
-  className?: string | Array<string> | Object
+  className?: string | Array<string> | Object,
 };
 
 const Breadcrumb = ({ levels, className }: Props) => {

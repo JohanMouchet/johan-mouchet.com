@@ -5,5 +5,5 @@ export const BREAKPOINTS = {
   sm: breakpoints.sm,
   md: breakpoints.md,
   lg: breakpoints.lg,
-  xl: breakpoints.xl
+  xl: breakpoints.xl,
 };

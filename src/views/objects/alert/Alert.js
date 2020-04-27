@@ -9,7 +9,7 @@ type Props = {
   closable?: boolean,
   variant?: "info" | "success" | "warning" | "danger",
   className?: string | Array<string> | Object,
-  children: Node
+  children: Node,
 };
 
 const Alert = ({
@@ -17,7 +17,7 @@ const Alert = ({
   closable,
   variant = "info",
   className,
-  children
+  children,
 }: Props) => {
   const classNames = cx(
     "o-alert",
@@ -28,7 +28,7 @@ const Alert = ({
     className
   );
 
-  const getIcon = variant => {
+  const getIcon = (variant) => {
     if (variant === "info") {
       return "info";
     } else if (variant === "success") {

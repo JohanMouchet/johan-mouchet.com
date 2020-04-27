@@ -18,7 +18,7 @@ type Props = {
     | "active"
     | "banner-gradient",
   size?: "sm" | "lg",
-  className?: string | Array<string> | Object
+  className?: string | Array<string> | Object,
 };
 
 const Card = ({
@@ -29,7 +29,7 @@ const Card = ({
   footer,
   variant,
   size,
-  className
+  className,
 }: Props) => {
   const classNames = cx(
     "o-card",

@@ -5,11 +5,11 @@ import cx from "classnames";
 import "./Notice.scss";
 
 type Props = {
-  secondary?: Node,
+  secondary?: string,
   closeButton: boolean,
   isActive?: boolean,
   className?: string | Array<string> | Object,
-  children?: Node
+  children?: Node,
 };
 
 const Notice = ({
@@ -17,7 +17,7 @@ const Notice = ({
   closeButton,
   isActive,
   className,
-  children
+  children,
 }: Props) => {
   const classNames = cx(
     "o-notice",

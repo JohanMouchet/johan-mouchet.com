@@ -12,7 +12,7 @@ type ButtonProps = {
   block?: boolean | "@sm" | "@md",
   className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
-  children?: Node
+  children?: Node,
 };
 
 const Button = ({
@@ -23,7 +23,7 @@ const Button = ({
   block,
   className,
   attributes,
-  children
+  children,
 }: ButtonProps) => {
   const classNames = cx(
     "o-button",
@@ -64,7 +64,7 @@ type ButtonSocialProps = {
   block?: boolean | "sm" | "md",
   className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
-  children?: Node
+  children?: Node,
 };
 
 const ButtonSocial = ({
@@ -76,7 +76,7 @@ const ButtonSocial = ({
   block,
   className,
   attributes,
-  children
+  children,
 }: ButtonSocialProps) => {
   const classNames = cx(
     "o-button",
@@ -118,7 +118,7 @@ type ButtonSocialBadgeProps = {
     | "social-linkedin"
     | "social-pinterest",
   className?: string | Array<string> | Object,
-  attributes?: { [key: string]: any }
+  attributes?: { [key: string]: any },
 };
 
 const ButtonSocialBadge = ({
@@ -126,7 +126,7 @@ const ButtonSocialBadge = ({
   icon,
   variant,
   className,
-  attributes
+  attributes,
 }: ButtonSocialBadgeProps) => {
   const classNames = cx(
     "o-button",

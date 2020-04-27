@@ -10,7 +10,7 @@ type Props = {
   multipleCaption?: string,
   className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
-  children?: Node
+  children?: Node,
 };
 
 const File = ({
@@ -19,7 +19,7 @@ const File = ({
   multipleCaption,
   className,
   attributes,
-  children
+  children,
 }: Props) => {
   const classNames = cx("o-form__file", "o-button", "js-form-file", className);
 

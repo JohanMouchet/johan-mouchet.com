@@ -8,19 +8,19 @@ type Props = {
     {
       establishment: {
         name: string,
-        url: string
+        url: string,
       },
       location: string,
       graduationYear: number,
-      title: string
+      title: string,
     }
-  ]
+  ],
 };
 
 const AcademicQualification = ({ qualifications }: Props) =>
   !qualifications
     ? null
-    : qualifications.map(qualification => (
+    : qualifications.map((qualification) => (
         <section className="c-academic-qualification" key={qualification.title}>
           <h3 className="c-academic-qualification__heading">
             <a

@@ -11,7 +11,7 @@ type Props = {
   centered?: boolean,
   className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
-  children?: Node
+  children?: Node,
 };
 
 const Figure = ({
@@ -21,7 +21,7 @@ const Figure = ({
   centered,
   className,
   attributes,
-  children
+  children,
 }: Props) => {
   const classNames = cx(
     "o-figure",

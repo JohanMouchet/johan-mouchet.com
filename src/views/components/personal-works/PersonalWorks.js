@@ -9,16 +9,16 @@ type Props = {
       video?: boolean,
       url: string,
       thumbnailPath: string,
-      sourceIcon: Array<mixed>
+      sourceIcon: Array<mixed>,
     }
-  ]
+  ],
 };
 
 const PersonalWorks = ({ works }: Props) =>
   !works ? null : (
     <div className="c-personal-works">
       <div className="grid">
-        {works.map(work => (
+        {works.map((work) => (
           <div
             className="cell cell--6-@xs cell--4-@sm cell--2-@md u-vr--bottom-1-@xs u-vr--bottom-0-@md"
             key={work.thumbnailPath}

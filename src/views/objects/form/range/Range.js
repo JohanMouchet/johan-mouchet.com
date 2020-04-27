@@ -8,7 +8,7 @@ type Props = {
   id?: string,
   name: string,
   className?: string | Array<string> | Object,
-  attributes?: { [key: string]: any }
+  attributes?: { [key: string]: any },
 };
 
 const Range = ({ id, name, className, attributes }: Props) => {

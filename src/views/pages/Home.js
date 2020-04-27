@@ -22,10 +22,9 @@ import { ReactComponent as IconYoutube } from "assets/images/icons/simple-icons/
 const Home = () => (
   <Default
     metadata={{
-      id: "home",
-      title: "Johan Mouchet",
-      description:
-        "Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.",
+      id: /*html*/ `home`,
+      title: /*html*/ `Johan Mouchet`,
+      description: /*html*/ `Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.`,
     }}
   >
     <main className="l-main l-main--no-margin">
@@ -62,11 +61,9 @@ const Home = () => (
 
             <div className="l-cell--gray-lighter cell cell--hidden-@xs cell--visible-@md cell--3-@md"></div>
 
-            <div className="cell cell--12-@xs cell--6-@sm">
-              <h2 className="c-about__heading">Right now,</h2>
-
-              <p className="c-about__paragraph">
-                I recently relocated to <b>Melbourne</b> looking for a new
+            <div className="cell cell--12-@xs cell--6-@sm cell--yCenter-@sm">
+              <p className="c-about__paragraph u-vr--top-2-@xs">
+                I relocated to <b>Melbourne</b> In 2017 looking for a new
                 opportunity to take my career to the next level. I'm committed
                 and ready to work within a fast paced environment on innovative
                 and impactful projects.
@@ -88,29 +85,29 @@ const Home = () => (
               <Skills
                 skills={[
                   {
-                    label: "React & Redux",
+                    label: /*html*/ `React & Redux`,
                     filling: 80,
-                    tooltip: "8/10",
+                    tooltip: /*html*/ `8/10`,
                   },
                   {
-                    label: "HTML5",
+                    label: /*html*/ `HTML5`,
                     filling: 100,
-                    tooltip: "10/10",
+                    tooltip: /*html*/ `10/10`,
                   },
                   {
-                    label: "CSS3 & Sass",
+                    label: /*html*/ `CSS3 & Sass`,
                     filling: 100,
-                    tooltip: "10/10",
+                    tooltip: /*html*/ `10/10`,
                   },
                   {
-                    label: "JavaScript ⁠— ES2019",
+                    label: /*html*/ `JavaScript ⁠— ES2019`,
                     filling: 80,
-                    tooltip: "8/10",
+                    tooltip: /*html*/ `8/10`,
                   },
                   {
-                    label: "UI & UX",
+                    label: /*html*/ `UI & UX`,
                     filling: 90,
-                    tooltip: "9/10",
+                    tooltip: /*html*/ `9/10`,
                   },
                 ]}
               />
@@ -124,9 +121,10 @@ const Home = () => (
               </Anchor>
               <p>
                 JAMstack, Storybook, Jest, Headless CMS, REST API, npm, Webpack
-                / Gulp, PostCSS, Git (Gitflow), CI/CD, Babel, Zeplin, Responsive
-                design, Performance, Accessibility, Web Standards, Linters /
-                Formatter, SEO, Analytics, Atlassian suite, Agile, Open source
+                / Gulp, PostCSS, Git (Gitflow), CI/CD, Babel, ESlint, Stylelint,
+                Prettier, Zeplin, Responsive design, Performance, Accessibility,
+                Web Standards, SEO, Analytics, Atlassian suite, Agile, Open
+                source
               </p>
             </article>
 
@@ -162,31 +160,30 @@ const Home = () => (
                 qualifications={[
                   {
                     establishment: {
-                      name: "SUPINFO International University",
-                      url: "https://www.supinfo.com/",
+                      name: /*html*/ `SUPINFO International University`,
+                      url: /*html*/ `https://www.supinfo.com/`,
                     },
-                    location: "London",
+                    location: /*html*/ `London`,
                     graduationYear: 2015,
-                    title: "Master degree in IT and computer science",
+                    title: /*html*/ `Master degree in IT and computer science`,
                   },
                   {
                     establishment: {
-                      name: "SUPINFO International University",
-                      url: "https://www.supinfo.com/",
+                      name: /*html*/ `SUPINFO International University`,
+                      url: /*html*/ `https://www.supinfo.com/`,
                     },
-                    location: "Marseille",
+                    location: /*html*/ `Marseille`,
                     graduationYear: 2013,
-                    title: "Bachelor degree in IT and computer science",
+                    title: /*html*/ `Bachelor degree in IT and computer science`,
                   },
                   {
                     establishment: {
-                      name: "Chevreul Blancarde high school",
-                      url: "http://www.chevreulblancarde.com/",
+                      name: /*html*/ `Chevreul Blancarde high school`,
+                      url: /*html*/ `http://www.chevreulblancarde.com/`,
                     },
-                    location: "Marseille",
+                    location: /*html*/ `Marseille`,
                     graduationYear: 2010,
-                    title:
-                      "Baccalauréat scientifique (High School Certificate)",
+                    title: /*html*/ `Baccalauréat scientifique (High School Certificate)`,
                   },
                 ]}
               />
@@ -201,12 +198,11 @@ const Home = () => (
               <p>
                 Web &amp; Graphic design, Development, Photography, Video
                 Editing, Drawing, Traveling, Cycling, Running, Fitness,
-                Volunteer{" "}
+                Volunteer
                 <a
                   href="https://youngcodersau.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="external-link"
                 >
                   @YoungCodersAU
                 </a>
@@ -223,53 +219,53 @@ const Home = () => (
               <SocialMedia
                 medias={[
                   {
-                    name: "LinkedIn",
-                    url: "https://www.linkedin.com/in/johanmouchet",
+                    name: /*html*/ `LinkedIn`,
+                    url: /*html*/ `https://www.linkedin.com/in/johanmouchet`,
                     icon: <IconLinkedIn />,
                   },
                   {
-                    name: "Twitter",
-                    url: "https://twitter.com/JohanMouchet",
+                    name: /*html*/ `Twitter`,
+                    url: /*html*/ `https://twitter.com/JohanMouchet`,
                     icon: <IconTwitter />,
                   },
                   {
-                    name: "CodePen",
-                    url: "http://codepen.io/johanmouchet/",
+                    name: /*html*/ `CodePen`,
+                    url: /*html*/ `http://codepen.io/johanmouchet/`,
                     icon: <IconCodepen />,
                   },
                   {
-                    name: "GitHub",
-                    url: "https://github.com/JohanMouchet",
+                    name: /*html*/ `GitHub`,
+                    url: /*html*/ `https://github.com/JohanMouchet`,
                     icon: <IconGithub />,
                   },
                   {
-                    name: "Dribbble",
-                    url: "https://dribbble.com/JohanMouchet/likes",
+                    name: /*html*/ `Dribbble`,
+                    url: /*html*/ `https://dribbble.com/JohanMouchet/likes`,
                     icon: <IconDribbble />,
                   },
                   {
-                    name: "Unsplash",
-                    url: "https://unsplash.com/@johanmouchet/",
+                    name: /*html*/ `Unsplash`,
+                    url: /*html*/ `https://unsplash.com/@johanmouchet/`,
                     icon: <IconUnsplash />,
                   },
                   {
-                    name: "500px",
-                    url: "https://500px.com/johanmouchet/",
+                    name: /*html*/ `500px`,
+                    url: /*html*/ `https://500px.com/johanmouchet/`,
                     icon: <Icon500px />,
                   },
                   {
-                    name: "Instagram",
-                    url: "https://instagram.com/johanmouchet/",
+                    name: /*html*/ `Instagram`,
+                    url: /*html*/ `https://instagram.com/johanmouchet/`,
                     icon: <IconInstagram />,
                   },
                   {
-                    name: "YouTube",
-                    url: "https://www.youtube.com/c/JohanMouchet",
+                    name: /*html*/ `YouTube`,
+                    url: /*html*/ `https://www.youtube.com/c/JohanMouchet`,
                     icon: <IconYoutube />,
                   },
                   {
-                    name: "Spotify",
-                    url: "https://open.spotify.com/user/1126411547",
+                    name: /*html*/ `Spotify`,
+                    url: /*html*/ `https://open.spotify.com/user/1126411547`,
                     icon: <IconSpotify />,
                   },
                 ]}
@@ -289,643 +285,322 @@ const Home = () => (
                 experiences={[
                   {
                     company: {
-                      url: "https://isobar.com/au/en/",
-                      name: "Isobar",
+                      url: /*html*/ `https://isobar.com/au/en/`,
+                      name: /*html*/ `Isobar`,
                     },
-                    location: "Melbourne",
-                    jobTitle: "Front-end developer",
+                    location: /*html*/ `Melbourne`,
+                    jobTitle: /*html*/ `Front-end developer`,
                     startDate: new Date("2017/11/11"),
                     endDate: new Date(),
-                    lede: (
-                      <>
-                        Global agency that delivers digital transformation
-                        powered by creativity, who believe in{" "}
-                        <em>Ideas Without Limits</em>, pushing the boundaries of
-                        technology and creativity.
-                      </>
-                    ),
+                    lede: /*html*/ `Global agency that delivers digital transformation powered by creativity, who believe in <em>Ideas Without Limits</em>, pushing the boundaries of technology and creativity.`,
                     projects: [
                       {
-                        name: "Zoos Victoria",
-                        tagline: "CatVR: Safe Cat, Safe Wildlife",
-                        url: "http://www.safecat.org.au",
-                        lede: (
-                          <>
-                            Joint <em>RSPCA</em> campaign website to help cat
-                            owners give their pet the safest and happiest life
-                            while ensuring they have no link to loss of
-                            wildlife.
-                          </>
-                        ),
+                        highlight: true,
+                        name: /*html*/ `Jetstar`,
+                        tagline: /*html*/ `tagline`,
+                        url: /*html*/ `https://www.jetstar.com/au/en/home?tab=1`,
+                        lede: /*html*/ `lede`,
+                        thumbnailPath: require("assets/images/views/career-experiences/zoos-victoria.jpg"),
+                        features: [
+                          /*html*/ `Sitecore integration`,
+                          /*html*/ `MPS`,
+                          /*html*/ `Accessibility`,
+                        ],
+                        architecture: [
+                          /*html*/ `Webpack`,
+                          /*html*/ `React`,
+                          /*html*/ `Redux`,
+                          /*html*/ `Flow`,
+                          /*html*/ `Jest, Enzyme`,
+                          /*html*/ `Storybook`,
+                          /*html*/ `Sass + CSS Modules`,
+                          /*html*/ `Git, Pre-commit git hooks`,
+                          /*html*/ `Linters / Formater`,
+                        ],
+                        libraries: [
+                          /*html*/ `Immutable.js`,
+                          /*html*/ `Local Forage`,
+                          /*html*/ `Date-fns`,
+                          /*html*/ `Swiperjs`,
+                          /*html*/ `Fuse`,
+                          /*html*/ `SpeedCurve`,
+                        ],
+                      },
+                      {
+                        name: /*html*/ `Zoos Victoria`,
+                        tagline: /*html*/ `CatVR: Safe Cat, Safe Wildlife`,
+                        url: /*html*/ `http://www.safecat.org.au`,
+                        lede: /*html*/ `Joint <em>RSPCA</em> campaign website to help cat owners give their pet the safest and happiest life while ensuring they have no link to loss of wildlife.`,
                         thumbnailPath: require("assets/images/views/career-experiences/zoos-victoria.jpg"),
                         awards: [
                           {
-                            name:
-                              "MADC 2018 (Melbourne Advertising and Design Club)",
-                            url:
-                              "https://twitter.com/isobarAU/status/1058125158752313344?s=20",
-                            category: "Best PR experience",
+                            name: /*html*/ `MADC 2018 (Melbourne Advertising and Design Club)`,
+                            url: /*html*/ `https://twitter.com/isobarAU/status/1058125158752313344?s=20`,
+                            category: /*html*/ `Best PR experience`,
                           },
                           {
-                            name: "One Show Awards shortlist",
-                            url:
-                              "https://www.oneshow.org/viewentries/?id=51888",
-                            category: "Media Relations",
+                            name: /*html*/ `One Show Awards shortlist`,
+                            url: /*html*/ `https://www.oneshow.org/viewentries/?id=51888`,
+                            category: /*html*/ `Media Relations`,
                           },
                         ],
-                        details: [
-                          <>
-                            <a
-                              href="https://www.contentful.com/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>Contentful</em>
-                            </a>
-                            , headless CMS
-                          </>,
-                          <>
-                            <em>Handlebars</em> templating, component oriented
-                          </>,
-                          <>
-                            <a
-                              href="https://github.com/desandro/masonry"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>Masonry</em>
-                            </a>{" "}
-                            grid layout
-                          </>,
-                          "Community submission forms with client side validation",
-                          "Social media sharing",
-                          <>
-                            <a
-                              href="https://github.com/ghosh/micromodal"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>Micromodal</em>
-                            </a>{" "}
-                            accessible modal dialogs
-                          </>,
-                          <>
-                            <em>Bootstrap 4</em>, <em>Sass</em>,{" "}
-                            <a
-                              href="http://getbem.com/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>BEM</em>
-                            </a>{" "}
-                            naming scheme
-                          </>,
-                          <>
-                            Front-end tooling: <em>Yarn</em>, <em>Gulp</em>,{" "}
-                            <em>Webpack</em>, linting
-                          </>,
+                        features: [
+                          /*html*/ `<a href="https://www.contentful.com/" target="_blank" rel="noopener noreferrer"><em>Contentful</em></a> integration, headless CMS`,
+                          /*html*/ `Community submission forms with client side validation`,
+                          /*html*/ `Social media sharing`,
+                        ],
+                        architecture: [
+                          /*html*/ `<em>Handlebars</em> templating, component oriented`,
+                          /*html*/ `<em>Bootstrap 4</em>, <em>Sass</em>, <a href="http://getbem.com/" target="_blank" rel="noopener noreferrer"><em>BEM</em></a> naming scheme`,
+                          /*html*/ `<em>Webpack</em>, <em>Gulp</em>`,
+                        ],
+                        libraries: [
+                          /*html*/ `<a href="https://github.com/desandro/masonry" target="_blank" rel="noopener noreferrer"><em>Masonry</em></a> grid layout`,
+                          /*html*/ `<a href="https://github.com/ghosh/micromodal" target="_blank" rel="noopener noreferrer"><em>Micromodal</em></a> accessible modal dialogs`,
                         ],
                       },
                       {
-                        name: "Klip Studio",
-                        url: "https://www.klipdesk.co",
-                        lede:
-                          "Web application dedicated to the sport rights holders industry. Allows to edit live or recorded streams to produce highlights shareable on social media.",
+                        name: /*html*/ `Klip Studio`,
+                        url: /*html*/ `https://www.klipdesk.co`,
+                        lede: /*html*/ `Web application dedicated to the sport rights holders industry. Allows to edit live or recorded streams to produce highlights shareable on social media.`,
                         thumbnailPath: require("assets/images/views/career-experiences/klip-studio.jpg"),
-                        details: [
-                          <>
-                            React framework,{" "}
-                            <a
-                              href="https://react.semantic-ui.com/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>Semantic UI React</em>
-                            </a>{" "}
-                            component library
-                          </>,
-                          <>
-                            <a
-                              href="https://github.com/google/shaka-player"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>Shaka</em>
-                            </a>{" "}
-                            web player, advanced video editing, cropping etc.
-                          </>,
-                          "Content tagging, filtering, sorting",
-                          "Audience engagement tracking through social media APIs",
-                          "Social media publishing",
-                          <>
-                            <a
-                              href="https://semantic-ui.com/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>Semantic UI</em>
-                            </a>
-                            , <em>Less</em>,{" "}
-                            <a
-                              href="http://getbem.com/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>BEM</em>
-                            </a>{" "}
-                            naming scheme
-                          </>,
-                          <>
-                            Front-end tooling: <em>Create React App</em>,{" "}
-                            <em>npm</em>, linting
-                          </>,
+                        features: [
+                          /*html*/ `Content tagging, filtering, sorting`,
+                          /*html*/ `Audience engagement tracking through social media APIs`,
+                          /*html*/ `Social media publishing`,
+                        ],
+                        architecture: [
+                          /*html*/ `<em>React</em>, <a href="https://react.semantic-ui.com/" target="_blank" rel="noopener noreferrer"><em>Semantic UI React</em></a> component library`,
+                          /*html*/ `<a href="https://semantic-ui.com/" target="_blank" rel="noopener noreferrer"><em>Semantic UI</em></a>, <em>Less</em>, <a href="http://getbem.com/" target="_blank" rel="noopener noreferrer"><em>BEM</em></a> naming scheme`,
+                          /*html*/ `<em>Create React App</em>`,
+                        ],
+                        libraries: [
+                          /*html*/ `<a href="https://github.com/google/shaka-player" target="_blank" rel="noopener noreferrer"><em>Shaka</em></a> web player, advanced video editing`,
                         ],
                       },
                       {
-                        name: "Pearson",
-                        tagline: "Asia",
-                        url: "https://www.pearson.com/asia/",
-                        lede:
-                          "Websites creation related to education for Pearson’s launch in three new markets through Asia.",
+                        name: /*html*/ `Pearson`,
+                        tagline: /*html*/ `Asia`,
+                        url: /*html*/ `https://www.pearson.com/asia/`,
+                        lede: /*html*/ `Websites creation related to education for Pearson’s launch in three new markets through Asia.`,
                         thumbnailPath: require("assets/images/views/career-experiences/pearson.jpg"),
-                        details: [
-                          <>
-                            <a
-                              href="https://www.adobe.com/au/marketing/experience-manager.html"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>Adobe Experience Manager</em>
-                            </a>
-                            , enterprise content management
-                          </>,
-                          "Content authoring, page and component building",
-                          "Market customisation, translation",
-                          "Registration forms",
+                        features: [
+                          /*html*/ `Content authoring, page and component building`,
+                          /*html*/ `Market customisation, internationalisation`,
+                          /*html*/ `Registration forms`,
+                        ],
+                        architecture: [
+                          /*html*/ `<a href="https://www.adobe.com/au/marketing/experience-manager.html" target="_blank" rel="noopener noreferrer"><em>Adobe Experience Manager</em></a>, enterprise content management`,
                         ],
                       },
                     ],
                   },
                   {
                     company: {
-                      url: "https://www.amaze.com/",
-                      name: "Amaze",
+                      url: /*html*/ `https://www.amaze.com/`,
+                      name: /*html*/ `Amaze`,
                     },
-                    location: "London",
-                    jobTitle: "Front-end developer",
+                    location: /*html*/ `London`,
+                    jobTitle: /*html*/ `Front-end developer`,
                     startDate: new Date("2016/11/14"),
                     endDate: new Date("2017/10/19"),
-                    lede:
-                      "Leading digital marketing, technology and commerce consultancy which delivers at a UK, pan-European and global level.",
+                    lede: /*html*/ `Leading digital marketing, technology and commerce consultancy which delivers at a UK, pan-European and global level.`,
                     projects: [
                       {
-                        name: "Lexus",
-                        tagline: "v11",
-                        url: "https://www.lexus.eu/en/",
-                        lede:
-                          "Website redesign to embody the new brand direction focused on a premium and lifestyle experience. Deployed into 35 countries of the European market and translated into 27 languages.",
+                        name: /*html*/ `Lexus`,
+                        tagline: /*html*/ `v11`,
+                        url: /*html*/ `https://www.lexus.eu/en/`,
+                        lede: /*html*/ `Website redesign to embody the new brand direction focused on a premium and lifestyle experience. Deployed into 35 countries of the European market and translated into 27 languages.`,
                         thumbnailPath: require("assets/images/views/career-experiences/lexus.jpg"),
-                        details: [
-                          <>
-                            <a href="http://www.sdl.com/software-and-services/tridion-dx/tridion-sites.html">
-                              <em>SDL Web</em>
-                            </a>{" "}
-                            (formerly Tridion), headless data driven CMS{" "}
-                          </>,
-                          <>
-                            <em>Nunjucks</em> templating, component oriented,
-                            fed with datas stored in a <em>MongoDB</em> database
-                          </>,
-                          <>
-                            <a
-                              href="https://github.com/kenwheeler/slick/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>Slick</em>
-                            </a>{" "}
-                            carousel integration, lazy loading
-                          </>,
-                          "HTML5 Geolocation API, Google maps API",
-                          "AAA accessibility standard",
-                          <>
-                            Sass +{" "}
-                            <a
-                              href="http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>ITCSS</em>
-                            </a>{" "}
-                            architecture,{" "}
-                            <a
-                              href="http://getbem.com/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>BEM</em>
-                            </a>{" "}
-                            naming scheme
-                          </>,
-                          <>
-                            Advanced CSS animations with{" "}
-                            <a
-                              href="http://imakewebthings.com/waypoints/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>Waypoints js</em>
-                            </a>
-                          </>,
-                          <>
-                            Progressive enhancement with JavaScript:{" "}
-                            <em>Backbone.js</em>, <em>jQuery</em>
-                          </>,
-                          <>
-                            Front-end tooling: <em>npm</em>, <em>Grunt</em>,{" "}
-                            <em>RequireJS</em>, linting
-                          </>,
-                          <>
-                            Environment: <em>Vagrant</em>, Continuous
-                            integration: <em>Heroku</em>
-                          </>,
+                        features: [
+                          /*html*/ `<a href="http://www.sdl.com/software-and-services/tridion-dx/tridion-sites.html"><em>SDL Web</em></a> (formerly Tridion), headless data driven CMS`,
+                          /*html*/ `HTML5 Geolocation API, Google Maps API`,
+                          /*html*/ `AAA accessibility standard`,
+                        ],
+                        architecture: [
+                          /*html*/ `<em>Nunjucks</em> templating, component oriented,fed with datas stored in a <em>MongoDB</em> database`,
+
+                          /*html*/ `Sass + <a href="http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528" target="_blank" rel="noopener noreferrer"><em>ITCSS</em></a> architecture, <a href="http://getbem.com/" target="_blank" rel="noopener noreferrer"><em>BEM</em></a> naming scheme`,
+                          /*html*/ `<em>Backbone.js</em>`,
+                          /*html*/ `<em>jQuery</em>, progressive enhancement`,
+                          /*html*/ `<em>Grunt</em>, <em>RequireJS</em>`,
+                          /*html*/ `<em>Vagrant</em> environment, <em>Heroku</em> CI/CD`,
+                        ],
+                        libraries: [
+                          /*html*/ `<a href="https://github.com/kenwheeler/slick/" target="_blank" rel="noopener noreferrer"><em>Slick</em></a> carousel`,
+                          /*html*/ `<a href="http://imakewebthings.com/waypoints/" target="_blank" rel="noopener noreferrer"><em>Waypoints js</em></a> advanced CSS animations`,
                         ],
                       },
                       {
-                        name: "Lexus",
-                        tagline: "Safety System Plus",
-                        url:
-                          "https://www.lexus.eu/discover-lexus/technology/lexus-safety-system/",
-                        lede: (
-                          <>
-                            Microsite creation to showcase{" "}
-                            <em>Lexus' Safety System Plus</em> technology.
-                          </>
-                        ),
+                        name: /*html*/ `Lexus`,
+                        tagline: /*html*/ `Safety System Plus`,
+                        url: /*html*/ `https://www.lexus.eu/discover-lexus/technology/lexus-safety-system/`,
+                        lede: /*html*/ `Microsite creation to showcase <em>Lexus' Safety System Plus</em> technology.`,
                         thumbnailPath: require("assets/images/views/career-experiences/lexus-safety-system-plus.jpg"),
-                        details: [
-                          <>
-                            Stack identical to the one of <em>Lexus 'v11'</em>
-                          </>,
-                          <>
-                            Full Screen, single-page design, done with{" "}
-                            <a
-                              href="https://github.com/alvarotrigo/fullPage.js"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>fullPage.js</em>
-                            </a>
-                          </>,
-                          <>
-                            Integration of a <em>Three.js</em> API (realised by
-                            the talented{" "}
-                            <a
-                              href="http://danielbrowns.com/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              Daniel Brown
-                            </a>
-                            )
-                          </>,
-                          "Advanced multi layers CSS animations",
-                          "Responsive design, device orientation aware",
-                          <>Performance optimised</>,
+                        features: [
+                          /*html*/ `Advanced multi layers CSS animations`,
+                          /*html*/ `Responsive design, device orientation aware`,
+                          /*html*/ `Performance optimised`,
+                        ],
+                        architecture: [
+                          /*html*/ `Stack identical to the one of <em>Lexus 'v11'</em>`,
+                          /*html*/ `<em>Three.js</em> integration (designed by the talented <a href="http://danielbrowns.com/" target="_blank" rel="noopener noreferrer">Daniel Brown</a>)`,
+                        ],
+                        libraries: [
+                          /*html*/ `<a href="https://github.com/alvarotrigo/fullPage.js" target="_blank" rel="noopener noreferrer"><em>fullPage.js</em></a>, single-page design`,
                         ],
                       },
                       {
-                        name: "Navico",
-                        tagline: "Lowrance",
-                        url: "https://www.lowrance.com/",
-                        lede:
-                          "Delivery within a short turnaround of a global eCommerce website for a manufacturer of consumer marine electronics.",
+                        name: /*html*/ `Navico`,
+                        tagline: /*html*/ `Lowrance`,
+                        url: /*html*/ `https://www.lowrance.com/`,
+                        lede: /*html*/ `Delivery within a short turnaround of a global eCommerce website for a manufacturer of consumer marine electronics.`,
                         thumbnailPath: require("assets/images/views/career-experiences/lowrance.jpg"),
-                        details: [
-                          <>
-                            <a
-                              href="http://www.episerver.com/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>EPIServer</em>
-                            </a>{" "}
-                            CMS for scalability
-                          </>,
-                          <>
-                            <em>Handlebars</em> / <em>Razor templating</em>,
-                            component oriented
-                          </>,
-                          <>
-                            Client side form verification done with{" "}
-                            <a
-                              href="https://github.com/jquery-validation/jquery-validation"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>jquery-validation</em>
-                            </a>
-                          </>,
-                          "AAA accessibility standard",
-                          <>
-                            Sass +{" "}
-                            <a
-                              href="http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>ITCSS</em>
-                            </a>{" "}
-                            architecture,{" "}
-                            <a
-                              href="http://getbem.com/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>BEM</em>
-                            </a>{" "}
-                            naming scheme
-                          </>,
-                          <>
-                            Progressive enhancement with JavaScript (
-                            <em>jQuery</em>)
-                          </>,
-                          <>
-                            Front-end tooling: <em>npm</em>, <em>Gulp</em>,
-                            linting
-                          </>,
+                        features: [
+                          /*html*/ `<a href="http://www.episerver.com/" target="_blank" rel="noopener noreferrer"><em>EPIServer</em></a> CMS for scalability`,
+                          /*html*/ `AAA accessibility standard`,
+                        ],
+                        architecture: [
+                          /*html*/ `<em>Handlebars</em> / <em>Razor templating</em>,component oriented`,
+                          /*html*/ `Sass + <a href="http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528" target="_blank" rel="noopener noreferrer"><em>ITCSS</em></a> architecture, <a href="http://getbem.com/" target="_blank" rel="noopener noreferrer"><em>BEM</em></a> naming scheme`,
+                          /*html*/ `<em>jQuery</em>, progressive enhancement`,
+                          /*html*/ `<em>Gulp</em>`,
+                        ],
+                        libraries: [
+                          /*html*/ `<a href="https://github.com/jquery-validation/jquery-validation" target="_blank" rel="noopener noreferrer"><em>jquery-validation</em></a>, client side form verification`,
                         ],
                       },
                     ],
                   },
                   {
                     company: {
-                      url: "https://www.surviemerformation.com/",
-                      name: "Survie Mer Formation",
+                      url: /*html*/ `https://www.surviemerformation.com/`,
+                      name: /*html*/ `Survie Mer Formation`,
                     },
-                    location: "London",
-                    jobTitle:
-                      "Designer & Front-end developer & Marketing strategist",
+                    location: /*html*/ `London`,
+                    jobTitle: /*html*/ `Designer & Front-end developer & Marketing strategist`,
                     startDate: new Date("2016/05/04"),
                     endDate: new Date("2016/11/13"),
-                    contractType: "Contractor",
-                    lede:
-                      "Design, development and marketing strategy for a company that trains marine and offshore personnel on safety at sea.",
+                    contractType: /*html*/ `Contractor`,
+                    lede: /*html*/ `Design, development and marketing strategy for a company that trains marine and offshore personnel on safety at sea.`,
                     projects: [
                       {
-                        name: "Survie Mer Formation",
-                        url: "https://www.surviemerformation.com/",
+                        highlight: true,
+                        name: /*html*/ `Survie Mer Formation`,
+                        url: /*html*/ `https://www.surviemerformation.com/`,
                         thumbnailPath: require("assets/images/views/career-experiences/survie-mer-formation.jpg"),
-                        details: [
-                          <>
-                            <em>Growth Hacking</em> strategy development (
-                            <em>AARRR</em> model) meant to increase acquisition
-                            and increase conversion rate
-                          </>,
-                          <>
-                            <em>UI</em> Refreshment: new brand identity,
-                            responsive design, cross-browser compatibility
-                          </>,
-                          <>
-                            <em>UX</em> Revampment: focused towards user
-                            conversion, web performance, accessibility
-                          </>,
-                          <>
-                            Wireframe, mockup and prototype done with{" "}
-                            <em>Photoshop</em>
-                          </>,
-                          <>
-                            <em>Twig</em> templating, component oriented, fed
-                            with datas stored in a <em>MySQL</em> database
-                          </>,
-                          <>
-                            Sass +{" "}
-                            <a
-                              href="http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>ITCSS</em>
-                            </a>{" "}
-                            architecture,{" "}
-                            <a
-                              href="http://getbem.com/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              <em>BEM</em>
-                            </a>{" "}
-                            naming scheme
-                          </>,
-                          <>
-                            Progressive enhancement with JavaScript (
-                            <em>jQuery</em>)
-                          </>,
-                          <>
-                            Front-end tooling: <em>Yarn</em>, <em>Grunt</em>,
-                            linting{" "}
-                          </>,
-                          <>
-                            <em>SEO</em>: use of <em>Open Graph</em> protocol,{" "}
-                            <em>JSON-LD</em> microdata
-                          </>,
-                          <>
-                            <em>SEA</em>: AdWords campaign creation
-                          </>,
-                          <>
-                            <em>Analytics</em>: setup <em>Google Analytics</em>{" "}
-                            events and goals
-                          </>,
+                        features: [
+                          /*html*/ `<em>Growth Hacking</em> strategy development (<em>AARRR</em> model) meant to increase acquisition and increase conversion rate`,
+                          /*html*/ `<em>UI</em> Refreshment: new brand identity,responsive design, cross-browser compatibility`,
+                          /*html*/ `<em>UX</em> Revampment: focused towards user conversion, web performance, accessibility`,
+                          /*html*/ `Wireframe, mockup and prototype done with <em>Photoshop</em>`,
+                          /*html*/ `<em>SEO</em>: use of <em>Open Graph</em> protocol, <em>JSON-LD</em> microdata`,
+                          /*html*/ `<em>SEA</em>: AdWords campaign creation`,
+                          /*html*/ `<em>Analytics</em>: <em>Google Analytics</em> events and goals tracking`,
+                        ],
+                        architecture: [
+                          /*html*/ `<em>Twig</em> templating, component oriented, fed with data stored in a <em>MySQL</em> database`,
+                          /*html*/ `Sass + <a href="http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528" target="_blank" rel="noopener noreferrer"><em>ITCSS</em></a> architecture, <a href="http://getbem.com/" target="_blank" rel="noopener noreferrer"><em>BEM</em></a> naming scheme`,
+                          /*html*/ `<em>jQuery</em>, progressive enhancement`,
+                          /*html*/ `<em>Grunt</em>`,
+                        ],
+                        libraries: [
+                          /*html*/ `<a href="https://github.com/kenwheeler/slick/" target="_blank" rel="noopener noreferrer"><em>Slick</em></a> carousel`,
+                          /*html*/ `<a href="https://github.com/graingert/WOW/" target="_blank" rel="noopener noreferrer"><em>WOW.js</em></a> animation`,
                         ],
                       },
                     ],
                   },
                   {
                     company: {
-                      url: "http://www.tmwunlimited.com/",
-                      name: "TMW Unlimited",
+                      url: /*html*/ `http://www.tmwunlimited.com/`,
+                      name: /*html*/ `TMW Unlimited`,
                     },
-                    location: "London",
-                    jobTitle: "Front-end developer",
+                    location: /*html*/ `London`,
+                    jobTitle: /*html*/ `Front-end developer`,
                     startDate: new Date("2015/12/07"),
                     endDate: new Date("2016/05/03"),
-                    lede:
-                      "Award winning marketing agency which helps some of the world's most respected brands to strategically develop and implement marketing communications.",
+                    lede: /*html*/ `Award winning marketing agency which helps some of the world's most respected brands to strategically develop and implement marketing communications.`,
                     projects: [
                       {
-                        name: "Business Banking Insight",
-                        url: "http://www.businessbankinginsight.co.uk",
-                        lede: (
-                          <>
-                            Analysis website of business banking providers,
-                            supported by the <em>HR Treasury</em>.
-                          </>
-                        ),
+                        name: /*html*/ `Business Banking Insight`,
+                        url: /*html*/ `http://www.businessbankinginsight.co.uk`,
+                        lede: /*html*/ `Analysis website of business banking providers,supported by the <em>HR Treasury</em>.`,
                         thumbnailPath: require("assets/images/views/career-experiences/business-banking-insight.jpg"),
-                        details: [
-                          <>
-                            <i>AngularJS 2</i> templating
-                          </>,
-                          <>
-                            Front-end framework:{" "}
-                            <a
-                              href="http://trykickoff.com/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              Kickoff
-                            </a>{" "}
-                            (npm, Grunt, Sass, jQuery)
-                          </>,
-                          <>
-                            <a
-                              href="https://www.amcharts.com/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              amCharts
-                            </a>{" "}
-                            library integration
-                          </>,
-                          "Front-end dynamic filtering feature",
-                          "Back-end collaboration for CMS integration",
+                        features: [`Dynamic filtering`, `CMS integration`],
+                        architecture: [
+                          /*html*/ `<em>AngularJS 2</em>`,
+                          /*html*/ `<a href="http://trykickoff.com/" target="_blank" rel="noopener noreferrer"><em>Kickoff</em></a> framework (Grunt, Sass, jQuery)`,
+                        ],
+                        libraries: [
+                          /*html*/ `<a href="https://www.amcharts.com/" target="_blank" rel="noopener noreferrer">amCharts</a> integration`,
                         ],
                       },
                       {
-                        name: "Prince's trust",
-                        tagline: "#partofPT campaign",
-                        url:
-                          "https://partofpt.princes-trust.org.uk/part-of-pt/",
-                        lede: (
-                          <>
-                            Crowdsourced event listing microsite for the{" "}
-                            <em>Prince's Trust</em> 40th anniversary
-                            celebration.
-                          </>
-                        ),
+                        name: /*html*/ `Prince's trust`,
+                        tagline: /*html*/ `#partofPT campaign`,
+                        url: /*html*/ `https://partofpt.princes-trust.org.uk/part-of-pt/`,
+                        lede: /*html*/ `Crowdsourced event listing microsite for the <em>Prince's Trust</em> 40th anniversary celebration.`,
                         thumbnailPath: require("assets/images/views/career-experiences/princes-trust.jpg"),
-                        details: [
-                          <>
-                            Front-end framework:{" "}
-                            <a
-                              href="http://trykickoff.com/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              Kickoff
-                            </a>
-                          </>,
-                          <>
-                            <a
-                              href="https://hashtagd.net/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              Hashtagd
-                            </a>{" "}
-                            APIs integration
-                          </>,
-                          <>
-                            <i>OAuth</i> integration for Twitter sharing
-                          </>,
-                          "Lazy loaded events from database",
+                        features: ["Lazy loaded events from database"],
+                        architecture: [
+                          /*html*/ `<a href="http://trykickoff.com/" target="_blank" rel="noopener noreferrer"><em>Kickoff</em></a> framework`,
+                        ],
+                        libraries: [
+                          /*html*/ `<a href="https://hashtagd.net/" target="_blank" rel="noopener noreferrer"><em>Hashtagd</em></a> APIs integration`,
+                          /*html*/ `<em>OAuth</em> integration for Twitter sharing`,
                         ],
                       },
                       {
-                        name: "Sport Relief",
-                        tagline: "#Skipathon campaign (Over)",
-                        url: "https://www.youtube.com/watch?v=3PyZVDrO_aI",
-                        lede: "Mobile web browser game based on rope skipping.",
+                        name: /*html*/ `Sport Relief`,
+                        tagline: /*html*/ `#Skipathon campaign (Over)`,
+                        url: /*html*/ `https://www.youtube.com/watch?v=3PyZVDrO_aI`,
+                        lede: /*html*/ `Mobile web browser game based on rope skipping.`,
                         thumbnailPath: require("assets/images/views/career-experiences/sport-relief-skipathon.jpg"),
-                        details: [
-                          "iOS and Android default browser support",
-                          "Device 3D movement detection",
-                          <>
-                            <i>React</i> templating
-                          </>,
-                          <>
-                            Front-end framework:{" "}
-                            <a
-                              href="http://trykickoff.com/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="external-link"
-                            >
-                              Kickoff
-                            </a>
-                          </>,
-                          <>
-                            <i>OAuth</i> integration for Facebook and Twitter
-                            registration and sharing
-                          </>,
-                          "HTML5 canvas and CSS3 animations",
+                        features: [
+                          /*html*/ `HTML5 canvas and CSS3 animations`,
+                          /*html*/ `iOS and Android default browser support`,
+                          /*html*/ `Device 3D movement detection`,
+                        ],
+                        architecture: [
+                          /*html*/ `<em>React</em>`,
+                          /*html*/ `<a href="http://trykickoff.com/" target="_blank" rel="noopener noreferrer"><em>Kickoff</em></a> framework`,
+                        ],
+                        libraries: [
+                          /*html*/ `<em>OAuth</em> integration for Facebook and Twitter registration and sharing`,
                         ],
                       },
                     ],
                   },
                   {
                     company: {
-                      name: "MOVE digital",
-                      url: "http://www.movedigital.co.uk/",
+                      name: /*html*/ `MOVE digital`,
+                      url: /*html*/ `http://www.movedigital.co.uk/`,
                     },
-                    location: "London",
-                    jobTitle: "Web designer & developer",
+                    location: /*html*/ `London`,
+                    jobTitle: /*html*/ `Web designer & developer`,
                     startDate: new Date("2014/07/09"),
                     endDate: new Date("2015/10/01"),
-                    lede: (
-                      <>
-                        Independent web marketing agency focused on Growth
-                        Hacking.
-                        <br />
-                        <br />
-                        Here are few of the websites I've designed and built
-                        using WordPress:
-                      </>
-                    ),
+                    lede: /*html*/ `Independent web marketing agency focused on Growth Hacking.<br /><br />Here are few of the websites I've designed and built using WordPress:`,
                     projects: [
                       {
-                        name: "Weholite",
-                        url: "http://www.weholite.co.uk/",
+                        name: /*html*/ `Weholite`,
+                        url: /*html*/ `http://www.weholite.co.uk/`,
                         thumbnailPath: require("assets/images/views/career-experiences/weholite.jpg"),
                       },
                       {
-                        name: "Hiremech",
-                        url: "http://www.hiremech.co.uk/",
+                        name: /*html*/ `Hiremech`,
+                        url: /*html*/ `http://www.hiremech.co.uk/`,
                         thumbnailPath: require("assets/images/views/career-experiences/hiremech.jpg"),
                       },
                       {
-                        name: "Global Materials Handling",
-                        url: "http://globalforktrucks.com/",
+                        name: /*html*/ `Global Materials Handling`,
+                        url: /*html*/ `http://globalforktrucks.com/`,
                         thumbnailPath: require("assets/images/views/career-experiences/global-materials-handling.jpg"),
                       },
                       {
-                        name: "Proton Motor",
-                        url: "http://www.proton-motor.com/",
+                        name: /*html*/ `Proton Motor`,
+                        url: /*html*/ `http://www.proton-motor.com/`,
                         thumbnailPath: require("assets/images/views/career-experiences/proton-motor.jpg"),
                       },
                     ],
@@ -947,110 +622,61 @@ const Home = () => (
                     <Experience
                       experiences={[
                         {
-                          company: {
-                            name: "Jardin France Design",
-                          },
-                          location: "Marseille",
-                          jobTitle: "Front-end developer",
+                          company: { name: /*html*/ `Jardin France Design` },
+                          location: /*html*/ `Marseille`,
+                          jobTitle: /*html*/ `Front-end developer`,
                           startDate: new Date("2013/07/01"),
                           endDate: new Date("2013/10/01"),
-                          contractType: "Intern",
-                          lede:
-                            "PrestaShop eCommerce website for a garden products supplier. (Discontinued).",
+                          contractType: /*html*/ `Intern`,
+                          lede: /*html*/ `PrestaShop eCommerce website for a garden products supplier. (Discontinued).`,
                         },
                         {
                           company: {
-                            name: "Radigraph",
-                            url:
-                              "http://www.imprimerie-marseille-radigraph.fr/",
+                            name: /*html*/ `Radigraph`,
+                            url: /*html*/ `http://www.imprimerie-marseille-radigraph.fr/`,
                           },
-                          location: "Marseille",
-                          jobTitle: "Front-end developer",
+                          location: /*html*/ `Marseille`,
+                          jobTitle: /*html*/ `Front-end developer`,
                           startDate: new Date("2013/07/01"),
                           endDate: new Date("2013/10/01"),
-                          contractType: "Part-time intern",
-                          lede: (
-                            <>
-                              Website development for a print company: product
-                              database, elaborated quotation,{" "}
-                              <abbr title="Search Engine Optimization">
-                                SEO
-                              </abbr>
-                              .
-                            </>
-                          ),
+                          contractType: /*html*/ `Part-time intern`,
+                          lede: /*html*/ `Website development for a print company: product database, elaborated quotation,  <abbr title="Search Engine Optimization">  SEO </abbr> .`,
                         },
                         {
                           company: {
-                            name: "Winlink santé",
-                            url: "http://www.winlinksante.com/",
+                            name: /*html*/ `Winlink santé`,
+                            url: /*html*/ `http://www.winlinksante.com/`,
                           },
-                          location: "Marseille",
-                          jobTitle: "Front-end developer",
+                          location: /*html*/ `Marseille`,
+                          jobTitle: /*html*/ `Front-end developer`,
                           startDate: new Date("2012/07/01"),
                           endDate: new Date("2012/10/01"),
-                          contractType: "Intern",
-                          lede:
-                            "Web intranet application for personnel management: account management, interactive calendar, multiple databases.",
+                          contractType: /*html*/ `Intern`,
+                          lede: /*html*/ `Web intranet application for personnel management: account management, interactive calendar, multiple databases.`,
                         },
                         {
                           company: {
-                            name: "Digitick",
-                            url: "http://next.digitick.com/",
+                            name: /*html*/ `Digitick`,
+                            url: /*html*/ `http://next.digitick.com/`,
                           },
-                          location: "Marseille",
-                          jobTitle: "Front-end developer",
+                          location: /*html*/ `Marseille`,
+                          jobTitle: /*html*/ `Front-end developer`,
                           startDate: new Date("2011/07/01"),
                           endDate: new Date("2011/10/01"),
-                          contractType: "Intern",
-                          lede: (
-                            <>
-                              Various web designs for online selling ticket:
-                              including{" "}
-                              <a
-                                href="http://sigstrasbourg.fr/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="external-link"
-                              >
-                                SIG Basket
-                              </a>{" "}
-                              and{" "}
-                              <a
-                                href="http://biarritz-culture.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="external-link"
-                              >
-                                Biarritz culture
-                              </a>
-                              .
-                            </>
-                          ),
+                          contractType: /*html*/ `Intern`,
+                          lede: /*html*/ `Various web designs for online selling ticket: including  <a  href="http://sigstrasbourg.fr/"  target="_blank"  rel="noopener noreferrer" >  SIG Basket </a>  and  <a  href="http://biarritz-culture.com/"  target="_blank"  rel="noopener noreferrer" >  Biarritz culture </a> .`,
                         },
                         {
                           company: {
-                            name: "Survie Mer Formation",
-                            url: "http://www.surviemerformation.com/",
+                            name: /*html*/ `Survie Mer Formation`,
+                            url: /*html*/ `http://www.surviemerformation.com/`,
                           },
-                          location: "Marseille",
-                          jobTitle: "Front-end developer",
+                          location: /*html*/ `Marseille`,
+                          jobTitle: /*html*/ `Front-end developer`,
                           startDate: new Date("2008/07/01"),
                           endDate: new Date("2008/10/01"),
-                          contractType: "Contractor",
-                          lede: (
-                            <>
-                              Website development for a training centre:
-                              advanced online registration, databases, back
-                              office,{" "}
-                              <abbr title="Search Engine Optimization">
-                                SEO
-                              </abbr>
-                              ,{" "}
-                              <abbr title="Search Engine Advertising">SEA</abbr>
-                              .
-                            </>
-                          ),
+                          contractType: /*html*/ `Contractor`,
+                          lede: /*html*/ `Website development for a training centre: advanced online registration, databases, back office,  <abbr title="Search Engine Optimization">  SEO </abbr> ,  <abbr title="Search Engine Advertising">SEA</abbr> .`,
                         },
                       ]}
                     />
@@ -1067,47 +693,40 @@ const Home = () => (
               </Anchor>
 
               <p>
-                When I'm not designing websites I like to take pictures, create
-                infographic, doodle and make short films.
-                <br />
-                Here are some of my personal works:
+                When I'm not developing websites I like to take pictures, create
+                infographics, doodle and make short films.
               </p>
 
               <PersonalWorks
                 works={[
                   {
-                    thumbnailPath:
-                      "https://source.unsplash.com/6Y23pU8xyHU/200x200",
-                    url: "https://unsplash.com/photos/6Y23pU8xyHU",
+                    thumbnailPath: /*html*/ `https://source.unsplash.com/6Y23pU8xyHU/200x200`,
+                    url: /*html*/ `https://unsplash.com/photos/6Y23pU8xyHU`,
                     sourceIcon: <IconUnsplash />,
                   },
                   {
-                    thumbnailPath:
-                      "https://source.unsplash.com/m9VIwiyzGSc/200x200",
-                    url: "https://unsplash.com/photos/m9VIwiyzGSc",
+                    thumbnailPath: /*html*/ `https://source.unsplash.com/m9VIwiyzGSc/200x200`,
+                    url: /*html*/ `https://unsplash.com/photos/m9VIwiyzGSc`,
                     sourceIcon: <IconUnsplash />,
                   },
                   {
-                    thumbnailPath:
-                      "https://source.unsplash.com/hLXsjf0dGgo/200x200",
-                    url: "https://unsplash.com/photos/hLXsjf0dGgo",
+                    thumbnailPath: /*html*/ `https://source.unsplash.com/hLXsjf0dGgo/200x200`,
+                    url: /*html*/ `https://unsplash.com/photos/hLXsjf0dGgo`,
                     sourceIcon: <IconUnsplash />,
                   },
                   {
-                    thumbnailPath:
-                      "https://source.unsplash.com/JjEZKXTGPio/200x200",
-                    url: "https://unsplash.com/photos/JjEZKXTGPio",
+                    thumbnailPath: /*html*/ `https://source.unsplash.com/JjEZKXTGPio/200x200`,
+                    url: /*html*/ `https://unsplash.com/photos/JjEZKXTGPio`,
                     sourceIcon: <IconUnsplash />,
                   },
                   {
-                    thumbnailPath:
-                      "https://source.unsplash.com/sTBdWFQKDHE/200x200",
-                    url: "https://unsplash.com/photos/sTBdWFQKDHE",
+                    thumbnailPath: /*html*/ `https://source.unsplash.com/sTBdWFQKDHE/200x200`,
+                    url: /*html*/ `https://unsplash.com/photos/sTBdWFQKDHE`,
                     sourceIcon: <IconUnsplash />,
                   },
                   {
                     thumbnailPath: require("assets/images/views/personal-works/south-cost-of-england.jpg"),
-                    url: "https://youtu.be/NAsS1T_V8-k",
+                    url: /*html*/ `https://youtu.be/NAsS1T_V8-k`,
                     sourceIcon: <IconYoutube />,
                   },
                 ]}

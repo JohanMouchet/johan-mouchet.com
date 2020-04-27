@@ -8,7 +8,7 @@ type Props = {
   id?: string,
   block: boolean,
   className?: string | Array<string> | Object,
-  children?: Node
+  children?: Node,
 };
 
 const Label = ({ id, block, className, children }: Props) => {

@@ -25,7 +25,7 @@ import {
   FootnotesReference,
   FootnotesNotes,
   Loader,
-  Notice
+  Notice,
 } from "views/objects";
 import { ReactComponent as IconFacebook } from "assets/images/icons/simple-icons/facebook.svg";
 import { ReactComponent as IconGooglePlus } from "assets/images/icons/simple-icons/googleplus.svg";
@@ -40,11 +40,11 @@ const StyleGuide = () => (
       id: "styleguide",
       title: "Johan Mouchet - Styleguide",
       description:
-        "Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications."
+        "Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.",
     }}
   >
     <>
-      <div className="container container--xl" id="styleGuide">
+      <div className="container" id="styleGuide">
         <div className="grid">
           <aside className="l-aside cell cell--12-@xs cell--2-@md">
             <h2>Table of content</h2>
@@ -712,7 +712,7 @@ const StyleGuide = () => (
                           name="input-1"
                           attributes={{
                             placeholder: "Username",
-                            required: true
+                            required: true,
                           }}
                         />
                       </div>
@@ -728,7 +728,7 @@ const StyleGuide = () => (
                           name="input-2"
                           attributes={{
                             placeholder: "Disabled",
-                            disabled: true
+                            disabled: true,
                           }}
                         />
                       </div>
@@ -744,16 +744,16 @@ const StyleGuide = () => (
                           options={[
                             {
                               text: "Option 1",
-                              value: "option-1"
+                              value: "option-1",
                             },
                             {
                               text: "Option 2",
-                              value: "option-2"
+                              value: "option-2",
                             },
                             {
                               text: "Option 3",
-                              value: "option-3"
-                            }
+                              value: "option-3",
+                            },
                           ]}
                         />
                       </div>
@@ -768,7 +768,7 @@ const StyleGuide = () => (
                           type="search"
                           name="input-3"
                           attributes={{
-                            placeholder: "Keyword"
+                            placeholder: "Keyword",
                           }}
                         />
                       </div>
@@ -780,7 +780,7 @@ const StyleGuide = () => (
                           name="textarea-1"
                           attributes={{
                             rows: "4",
-                            placeholder: "Textarea"
+                            placeholder: "Textarea",
                           }}
                         />
                       </div>
@@ -815,7 +815,7 @@ const StyleGuide = () => (
                           name="checkboxChoice"
                           value="disabled"
                           attributes={{
-                            disabled: true
+                            disabled: true,
                           }}
                         >
                           Disabled
@@ -846,7 +846,7 @@ const StyleGuide = () => (
                           name="radioChoice"
                           value="disabled"
                           attributes={{
-                            disabled: true
+                            disabled: true,
                           }}
                         >
                           Disabled
@@ -869,7 +869,7 @@ const StyleGuide = () => (
                           id="file-1"
                           name="file-1"
                           attributes={{
-                            multiple: true
+                            multiple: true,
                           }}
                         >
                           Choose a file
@@ -899,7 +899,7 @@ const StyleGuide = () => (
                           type="text"
                           name="input-success"
                           attributes={{
-                            placeholder: "Text"
+                            placeholder: "Text",
                           }}
                         />
 
@@ -917,7 +917,7 @@ const StyleGuide = () => (
                           type="text"
                           name="input-error"
                           attributes={{
-                            placeholder: "Text"
+                            placeholder: "Text",
                           }}
                         />
 
@@ -935,7 +935,7 @@ const StyleGuide = () => (
                           type="text"
                           name="input-warning"
                           attributes={{
-                            placeholder: "Text"
+                            placeholder: "Text",
                           }}
                         />
 
@@ -983,7 +983,7 @@ const StyleGuide = () => (
                 <div className="cell cell--12-@xs cell--3-@sm u-vr--bottom-1-@xs u-vr--bottom-0-@sm">
                   <Button
                     attributes={{
-                      disabled: true
+                      disabled: true,
                     }}
                   >
                     Button
@@ -1049,7 +1049,7 @@ const StyleGuide = () => (
                     icon={<IconFacebook />}
                     counter={10}
                     attributes={{
-                      title: "Share on Facebook"
+                      title: "Share on Facebook",
                     }}
                   >
                     Share
@@ -1062,7 +1062,7 @@ const StyleGuide = () => (
                     icon={<IconTwitter />}
                     counter={10}
                     attributes={{
-                      title: "Tweet this"
+                      title: "Tweet this",
                     }}
                   >
                     Tweet
@@ -1075,7 +1075,7 @@ const StyleGuide = () => (
                     icon={<IconGooglePlus />}
                     counter={10}
                     attributes={{
-                      title: "Share on Google+"
+                      title: "Share on Google+",
                     }}
                   >
                     Share
@@ -1088,7 +1088,7 @@ const StyleGuide = () => (
                     icon={<IconPinterest />}
                     counter={10}
                     attributes={{
-                      title: "Pin it"
+                      title: "Pin it",
                     }}
                   >
                     Pin it
@@ -1101,7 +1101,7 @@ const StyleGuide = () => (
                     icon={<IconLinkedIn />}
                     counter={10}
                     attributes={{
-                      title: "Share on LinkedIn"
+                      title: "Share on LinkedIn",
                     }}
                   >
                     Share
@@ -1117,7 +1117,7 @@ const StyleGuide = () => (
                     counter={10}
                     variant="social-facebook"
                     attributes={{
-                      title: "Share on Facebook"
+                      title: "Share on Facebook",
                     }}
                   >
                     Share
@@ -1131,7 +1131,7 @@ const StyleGuide = () => (
                     counter={10}
                     variant="social-twitter"
                     attributes={{
-                      title: "Tweet this"
+                      title: "Tweet this",
                     }}
                   >
                     Tweet
@@ -1145,7 +1145,7 @@ const StyleGuide = () => (
                     counter={10}
                     variant="social-googleplus"
                     attributes={{
-                      title: "Share on Google+"
+                      title: "Share on Google+",
                     }}
                   >
                     Share
@@ -1159,7 +1159,7 @@ const StyleGuide = () => (
                     counter={10}
                     variant="social-pinterest"
                     attributes={{
-                      title: "Pin it"
+                      title: "Pin it",
                     }}
                   >
                     Pin it
@@ -1173,7 +1173,7 @@ const StyleGuide = () => (
                     counter={10}
                     variant="social-linkedin"
                     attributes={{
-                      title: "Share on LinkedIn"
+                      title: "Share on LinkedIn",
                     }}
                   >
                     Share
@@ -1851,16 +1851,16 @@ const StyleGuide = () => (
                 levels={[
                   {
                     title: "Level 1",
-                    url: "#1"
+                    url: "#1",
                   },
                   {
                     title: "Level 2",
-                    url: "#2"
+                    url: "#2",
                   },
                   {
                     title: "Level 3",
-                    url: "#3"
-                  }
+                    url: "#3",
+                  },
                 ]}
               />
             </article>
@@ -1882,18 +1882,18 @@ const StyleGuide = () => (
                   {
                     thumb: "Tab 1",
                     panel:
-                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
                   },
                   {
                     thumb: "Tab 2",
                     panel:
-                      "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."
+                      "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
                   },
                   {
                     thumb: "Tab 3",
                     panel:
-                      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                  }
+                      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                  },
                 ]}
               />
             </article>
@@ -2209,12 +2209,12 @@ const StyleGuide = () => (
                 notes={[
                   {
                     id: "1",
-                    text: "Lorem ipsum dolor sit amet."
+                    text: "Lorem ipsum dolor sit amet.",
                   },
                   {
                     id: "2",
-                    text: "Lorem ipsum dolor sit amet."
-                  }
+                    text: "Lorem ipsum dolor sit amet.",
+                  },
                 ]}
               />
             </article>

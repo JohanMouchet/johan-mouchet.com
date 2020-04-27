@@ -5,12 +5,12 @@ import cx from "classnames";
 import "./ProgressBar.scss";
 
 type Props = {
-  label?: Node,
-  total?: Node,
+  label?: string,
+  total?: string,
   filling: number,
-  tooltip?: Node,
+  tooltip?: string,
   tooltipOnHover?: boolean,
-  className?: string | Array<string> | Object
+  className?: string | Array<string> | Object,
 };
 
 const ProgressBar = ({
@@ -19,7 +19,7 @@ const ProgressBar = ({
   filling = 0,
   tooltip,
   tooltipOnHover,
-  className
+  className,
 }: Props) => {
   const classNames = cx(
     "o-progress-bar",

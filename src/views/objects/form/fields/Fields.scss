@@ -62,6 +62,7 @@
   }
 
   /*** Select ***/
+  /* stylelint-disable-next-line no-descending-specificity */
   &--select {
     &:not([multiple]) {
       background-image: url("#{t-path(icons)}/arrow-down.svg");

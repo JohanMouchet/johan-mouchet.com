@@ -10,11 +10,11 @@ type MenuItem = {
   url?: string,
   button?: Button,
   className?: string | Array<string> | Object,
-  menu?: [MenuItem]
+  menu?: [MenuItem],
 };
 
 type Props = {
-  menu: [MenuItem]
+  menu: [MenuItem],
 };
 
 const Menu = ({ menu }: Props) => {
@@ -24,7 +24,7 @@ const Menu = ({ menu }: Props) => {
     return !menu ? null : (
       <ul className={classNames}>
         {menu &&
-          menu.map(item => (
+          menu.map((item) => (
             <li
               className={cx(
                 "o-menu__item",

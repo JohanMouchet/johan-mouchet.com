@@ -2,14 +2,14 @@
 
 $form-settings: (
   hover: (
-    color: $s-color-gray-lighter
+    color: $s-color-gray-lighter,
   ),
   focus: (
-    color: $s-color-text
+    color: $s-color-text,
   ),
   disabled: (
     color: $s-color-gray,
     color-secondary: $s-color-gray-lighter,
-    color-tertiary: $s-color-gray-darker
-  )
+    color-tertiary: $s-color-gray-darker,
+  ),
 );

@@ -4,6 +4,8 @@ import * as React from "react";
 import { differenceInCalendarMonths } from "date-fns";
 import "./Experience.scss";
 import { Projects } from "views/components";
+import pluralize from "utils/pluralize";
+import parse from "utils/parse";
 
 type Props = {
   experiences: [
@@ -13,10 +15,10 @@ type Props = {
         name: string,
       },
       location: string,
-      jobTitle: Node,
+      jobTitle: string,
       startDate: string,
       endDate: string,
-      lede: Node,
+      lede: string,
       projects: Projects,
     }
   ],
@@ -29,11 +31,8 @@ const Experience = ({ experiences }: Props) => {
     const durationInMonths = differenceInCalendarMonths(endDate, startDate);
     const years = Math.floor(durationInMonths / 12);
     const months = durationInMonths % 12;
-    const yearsFormated =
-      years >= 1 ? `${years} ${years >= 2 ? " yrs" : " yr"}` : "";
-    const monthsFormated =
-      months >= 1 ? `${months} ${months >= 2 ? " mos" : " mo"}` : "";
-
+    const yearsFormated = years >= 1 ? pluralize(`${years} yr`, years) : "";
+    const monthsFormated = months >= 1 ? pluralize(`${months} mo`, months) : "";
     const monthsFormatedMin =
       !yearsFormated && !monthsFormated ? "1 mo" : monthsFormated;
 
@@ -56,7 +55,7 @@ const Experience = ({ experiences }: Props) => {
               href={experience.company.url && experience.company.url}
               target={experience.company.url && "_blank"}
               rel={experience.company.url && "noopener noreferrer"}
-              className="c-experience__company external-link"
+              className="c-experience__company"
             >
               {experience.company.name}
             </a>
@@ -96,7 +95,7 @@ const Experience = ({ experiences }: Props) => {
             )}
           </p>
 
-          <p className="c-experience__lede">{experience.lede}</p>
+          <p className="c-experience__lede">{parse(experience.lede)}</p>
 
           {experience.projects && <Projects projects={experience.projects} />}
         </section>

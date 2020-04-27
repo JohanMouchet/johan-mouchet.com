@@ -8,10 +8,10 @@ type Props = {
   tabs: [
     {
       thumb: string,
-      panel: string
+      panel: string,
     }
   ],
-  className?: string | Array<string> | Object
+  className?: string | Array<string> | Object,
 };
 
 const Tabs = ({ tabs, className }: Props) => {

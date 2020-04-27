@@ -13,7 +13,7 @@ type Props = {
   checked?: boolean,
   className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
-  children?: Node
+  children?: Node,
 };
 
 // TODO: fix checked state
@@ -26,11 +26,11 @@ const Toggle = ({
   checked,
   className,
   attributes,
-  children
+  children,
 }: Props) => {
   const [check] = useState(checked);
 
-  const handleChange = check => (check = !check);
+  const handleChange = (check) => (check = !check);
 
   const classNames = cx("o-form__toggle", `o-form__toggle--${type}`, className);
 

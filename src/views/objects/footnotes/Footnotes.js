@@ -7,7 +7,7 @@ import "./Footnotes.scss";
 type ReferenceProps = {
   id: string,
   prefix?: string,
-  text: string
+  text: string,
 };
 
 const FootnotesReference = ({ id, prefix = "", text }: ReferenceProps) => (
@@ -30,10 +30,10 @@ type NotesProps = {
       id: string,
       prefix?: string,
       text: string,
-      url?: string
+      url?: string,
     }
   ],
-  className?: string | Array<string> | Object
+  className?: string | Array<string> | Object,
 };
 
 const FootnotesNotes = ({ notes, className }: NotesProps) => {
@@ -41,7 +41,7 @@ const FootnotesNotes = ({ notes, className }: NotesProps) => {
 
   return !notes ? null : (
     <ol className={classNames}>
-      {notes.map(note => (
+      {notes.map((note) => (
         <li
           id={`footnote:${note.prefix ? note.prefix + "-" : ""}${note.id}`}
           className="o-footnotes__note"

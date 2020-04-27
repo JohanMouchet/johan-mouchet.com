@@ -11,7 +11,7 @@ type FieldProps = {
   value?: string,
   variant?: "no-corner-left" | "no-corner-right",
   className?: string | Array<string> | Object,
-  attributes?: { [key: string]: any }
+  attributes?: { [key: string]: any },
 };
 
 const Field = ({
@@ -21,7 +21,7 @@ const Field = ({
   value,
   variant,
   className,
-  attributes
+  attributes,
 }: FieldProps) => {
   const classNames = cx(
     "o-form__field",
@@ -51,11 +51,11 @@ type SelectProps = {
     {
       text: string,
       value: string,
-      attributes: Array<string>
+      attributes: Array<string>,
     }
   ],
   className?: string | Array<string> | Object,
-  attributes?: { [key: string]: any }
+  attributes?: { [key: string]: any },
 };
 
 const Select = ({ id, name, options, className, attributes }: SelectProps) => {
@@ -63,7 +63,7 @@ const Select = ({ id, name, options, className, attributes }: SelectProps) => {
 
   return !options ? null : (
     <select id={id} name={name} className={classNames} {...attributes}>
-      {options.map(option => (
+      {options.map((option) => (
         <option
           defaultValue={option.value}
           {...option.attributes}
@@ -83,7 +83,7 @@ type TextareaProps = {
   name: string,
   className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
-  children?: Node
+  children?: Node,
 };
 
 const Textarea = ({
@@ -91,7 +91,7 @@ const Textarea = ({
   name,
   className,
   attributes,
-  children
+  children,
 }: TextareaProps) => {
   const classNames = cx("o-form__field", "o-form__field--textarea", className);
 
