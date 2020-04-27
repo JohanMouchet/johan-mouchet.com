@@ -90,12 +90,12 @@
     font-size: t-modular-scale(-1);
   }
 
-  &__details-section {
-    margin-top: t-vertical-rhythm(1);
-  }
-
   &__details-heading {
     font-weight: 500;
+  }
+
+  &__details-list {
+    margin-top: 0;
   }
 
   &__awards {
@@ -125,12 +125,12 @@
     }
   }
 
-  &--single {
-    @media (min-width: t-breakpoint(lg)) {
-      #{$root}__details {
-        columns: 2;
-        column-gap: 3em;
-      }
-    }
+  &--highlighted {
+    margin-bottom: t-vertical-rhythm(1);
+    padding: t-vertical-rhythm(1) t-vertical-rhythm(1) 0;
+    border: 1.99px solid $s-color-secondary-lighter;
+    border-radius: 6px;
+
+    @include t-wekkit-hdpi-small-dimension;
   }
 }
