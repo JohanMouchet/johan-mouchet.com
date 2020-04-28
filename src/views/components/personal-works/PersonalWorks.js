@@ -24,12 +24,7 @@ const PersonalWorks = ({ works }: Props) =>
             key={work.thumbnailPath}
           >
             <section className="c-personal-work">
-              <a
-                className="c-personal-work__overlay"
-                href={work.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a className="c-personal-work__overlay" href={work.url}>
                 <img
                   className="c-personal-work__thumbnail"
                   src={work.thumbnailPath}

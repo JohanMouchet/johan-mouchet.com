@@ -90,13 +90,7 @@ const ButtonSocial = ({
   );
 
   return (
-    <a
-      className={classNames}
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      {...attributes}
-    >
+    <a className={classNames} href={url} {...attributes}>
       <span className="o-button__icon">{icon}</span>
       <span className="o-button__text">{children}</span>
       {counter && <span className="o-button__counter">{counter}</span>}

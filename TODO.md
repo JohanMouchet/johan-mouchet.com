@@ -16,7 +16,6 @@
 
 - Improve Print
 - Sticky nav?: header background, J/M logo, 'MENU' + burger menu to Anchors
-- Inspo https://dribbble.com/fuviz
 - dark mode:
   ```css
   @media (prefers-color-scheme: dark) {
@@ -33,12 +32,7 @@
 
 ## Content
 
-- Re write intro: define background, strongest skills
-- Open Source: GitHub, Codepen
-- Jetstar lede:
-  - "Retain and Convert"
-  - How many POS?
-  - Agile
+- Open Source: GitHub, Codepen?
 
 ## CV
 
@@ -47,4 +41,4 @@
 # Fix
 
 - Keep Sass prefix `t-`, explore `@use`?
-- Address `// TODO`
+- Address all `// TODO`
