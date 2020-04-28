@@ -8,12 +8,6 @@
     "stylelint-config-prettier"
   ],
   "rules": {
-    "prettier/prettier": [
-      true,
-      {
-        "endOfLine": "auto"
-      }
-    ],
     "at-rule-no-unknown": null,
     "at-rule-no-vendor-prefix": [
       true,
