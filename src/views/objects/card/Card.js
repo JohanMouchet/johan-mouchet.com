@@ -50,7 +50,6 @@ const Card = ({
           {banner}
         </Tag>
       )}
-      {/* TODO: <Card><Header>Sub comp</Header></Card> */}
       {header && <header className="o-card__header">{header}</header>}
       {body && <div className="o-card__body">{body}</div>}
       {footer && <footer className="o-card__footer">{footer}</footer>}

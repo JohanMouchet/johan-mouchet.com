@@ -11,6 +11,11 @@
 - Use Environment Variables to load on prod only (ex Analytics): https://create-react-app.dev/docs/adding-custom-environment-variables#!
 - Convert `js-`
 - Convert pages/NotFound to generic error page
+- Add WOW.js
+- Add id to body `<body id={`page-\${metadata.id}`}>`
+- Remove `.html` legacy files
+- Keep Sass prefix `t-`, explore `@use`?
+- Address all `// TODO`
 
 ## Design
 
@@ -33,13 +38,3 @@
 ## Content
 
 - Open Source: GitHub, Codepen?
-
-## CV
-
-- Career highlight: Jetstar, Lexus, SMF, j-m.com
-
-# Fix
-
-- Remove `.html` legacy files
-- Keep Sass prefix `t-`, explore `@use`?
-- Address all `// TODO`

@@ -6,7 +6,7 @@ import {
   AcademicQualification,
   SocialMedia,
   Experience,
-  PersonalWorks
+  PersonalWorks,
 } from "views/components";
 import { ReactComponent as Icon500px } from "assets/images/icons/simple-icons/500px.svg";
 import { ReactComponent as IconCodepen } from "assets/images/icons/simple-icons/codepen.svg";
@@ -24,7 +24,7 @@ const Home = () => (
     metadata={{
       id: /*html*/ `home`,
       title: /*html*/ `Johan Mouchet`,
-      description: /*html*/ `Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.`
+      description: /*html*/ `Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.`,
     }}
   >
     <main className="l-main l-main--no-margin">
@@ -88,28 +88,28 @@ const Home = () => (
                   {
                     label: /*html*/ `React & Redux`,
                     filling: 80,
-                    tooltip: /*html*/ `8/10`
+                    tooltip: /*html*/ `8/10`,
                   },
                   {
                     label: /*html*/ `HTML5`,
                     filling: 100,
-                    tooltip: /*html*/ `10/10`
+                    tooltip: /*html*/ `10/10`,
                   },
                   {
                     label: /*html*/ `CSS3 & Sass`,
                     filling: 100,
-                    tooltip: /*html*/ `10/10`
+                    tooltip: /*html*/ `10/10`,
                   },
                   {
                     label: /*html*/ `JavaScript ⁠— ES2019`,
                     filling: 80,
-                    tooltip: /*html*/ `8/10`
+                    tooltip: /*html*/ `8/10`,
                   },
                   {
                     label: /*html*/ `UI & UX`,
                     filling: 90,
-                    tooltip: /*html*/ `9/10`
-                  }
+                    tooltip: /*html*/ `9/10`,
+                  },
                 ]}
               />
             </article>
@@ -161,21 +161,21 @@ const Home = () => (
                   {
                     establishment: {
                       name: /*html*/ `SUPINFO International University`,
-                      url: /*html*/ `https://www.supinfo.com/`
+                      url: /*html*/ `https://www.supinfo.com/`,
                     },
                     location: /*html*/ `London`,
                     graduationYear: 2015,
-                    title: /*html*/ `Master degree in IT and computer science`
+                    title: /*html*/ `Master degree in IT and computer science`,
                   },
                   {
                     establishment: {
                       name: /*html*/ `SUPINFO International University`,
-                      url: /*html*/ `https://www.supinfo.com/`
+                      url: /*html*/ `https://www.supinfo.com/`,
                     },
                     location: /*html*/ `Marseille`,
                     graduationYear: 2013,
-                    title: /*html*/ `Bachelor degree in IT and computer science`
-                  }
+                    title: /*html*/ `Bachelor degree in IT and computer science`,
+                  },
                 ]}
               />
             </article>
@@ -206,53 +206,53 @@ const Home = () => (
                   {
                     name: /*html*/ `LinkedIn`,
                     url: /*html*/ `https://www.linkedin.com/in/johanmouchet`,
-                    icon: <IconLinkedIn />
+                    icon: <IconLinkedIn />,
                   },
                   {
                     name: /*html*/ `Twitter`,
                     url: /*html*/ `https://twitter.com/JohanMouchet`,
-                    icon: <IconTwitter />
+                    icon: <IconTwitter />,
                   },
                   {
                     name: /*html*/ `CodePen`,
                     url: /*html*/ `http://codepen.io/johanmouchet/`,
-                    icon: <IconCodepen />
+                    icon: <IconCodepen />,
                   },
                   {
                     name: /*html*/ `GitHub`,
                     url: /*html*/ `https://github.com/JohanMouchet`,
-                    icon: <IconGithub />
+                    icon: <IconGithub />,
                   },
                   {
                     name: /*html*/ `Dribbble`,
                     url: /*html*/ `https://dribbble.com/JohanMouchet/likes`,
-                    icon: <IconDribbble />
+                    icon: <IconDribbble />,
                   },
                   {
                     name: /*html*/ `Unsplash`,
                     url: /*html*/ `https://unsplash.com/@johanmouchet/`,
-                    icon: <IconUnsplash />
+                    icon: <IconUnsplash />,
                   },
                   {
                     name: /*html*/ `500px`,
                     url: /*html*/ `https://500px.com/johanmouchet/`,
-                    icon: <Icon500px />
+                    icon: <Icon500px />,
                   },
                   {
                     name: /*html*/ `Instagram`,
                     url: /*html*/ `https://instagram.com/johanmouchet/`,
-                    icon: <IconInstagram />
+                    icon: <IconInstagram />,
                   },
                   {
                     name: /*html*/ `YouTube`,
                     url: /*html*/ `https://www.youtube.com/c/JohanMouchet`,
-                    icon: <IconYoutube />
+                    icon: <IconYoutube />,
                   },
                   {
                     name: /*html*/ `Spotify`,
                     url: /*html*/ `https://open.spotify.com/user/1126411547`,
-                    icon: <IconSpotify />
-                  }
+                    icon: <IconSpotify />,
+                  },
                 ]}
               />
             </article>
@@ -271,7 +271,7 @@ const Home = () => (
                   {
                     company: {
                       url: /*html*/ `https://isobar.com/au/en/`,
-                      name: /*html*/ `Isobar`
+                      name: /*html*/ `Isobar`,
                     },
                     location: /*html*/ `Melbourne`,
                     jobTitle: /*html*/ `Front-end developer`,
@@ -286,10 +286,10 @@ const Home = () => (
                         lede: /*html*/ `Modernization, development of new features and upkeep of Jetstar's international website in an Agile environment.`,
                         thumbnailPath: require("assets/images/views/career-experiences/jetstar.jpg"),
                         achievements: [
-                          /*html*/ `Participated to the migration of the <a href="https://www.jetstar.com/au/en/flights"><em>Flight Search</em></a> experience to React & Redux for faster and extensive results: increased conversion by 1.3% on the <em>Cheap Flights</em> pages.`,
-                          /*html*/ `Contributed to the creation a landing page to promote Jetstar <a href="https://www.jetstar.com/au/en/creditcards"><em>Credit Cards</em></a>: surpassed the conversion target by 230% in the first month of launch.`,
+                          /*html*/ `Participated in the migration of the <a href="https://www.jetstar.com/au/en/flights"><em>Flight Search</em></a> experience to React & Redux for faster and extensive results: increased conversion by 1.3% on the <em>Cheap Flights</em> pages.`,
+                          /*html*/ `Contributed to the creation of a landing page to promote Jetstar <a href="https://www.jetstar.com/au/en/creditcards"><em>Credit Cards</em></a>: surpassed the conversion target by 230% in the first month of launch.`,
                           /*html*/ `Integrated a responsive utility-based Sass grid I built and open sourced: <a href="https://github.com/JohanMouchet/fluxgrid">Fluxgrid</a>.`,
-                          /*html*/ `Advocated for performance tracking and optimisations: slowed down the <span data-tooltip="First Meaningful Paint" data-tooltip-indicator>FMP</span> trend, decreased the <span data-tooltip="Time To Interactive" data-tooltip-indicator>TTI</span> by ~9.5% and the bundle size by ~15%.`
+                          /*html*/ `Advocated for performance tracking and optimisations: slowed down the <span data-tooltip="First Meaningful Paint" data-tooltip-indicator>FMP</span> trend, decreased the <span data-tooltip="Time To Interactive" data-tooltip-indicator>TTI</span> by ~9.5% and the bundle size by ~15%.`,
                         ],
                         architecture: [
                           /*html*/ `Sitecore CMS`,
@@ -298,7 +298,7 @@ const Home = () => (
                           /*html*/ `Flow`,
                           /*html*/ `Jest, Enzyme`,
                           /*html*/ `Storybook`,
-                          /*html*/ `Sass + CSS Modules`
+                          /*html*/ `Sass + CSS Modules`,
                         ],
                         libraries: [
                           /*html*/ `<a href="https://github.com/immutable-js/immutable-js">Immutable.js</a>`,
@@ -307,8 +307,8 @@ const Home = () => (
                           /*html*/ `<a href="https://github.com/nolimits4web/swiper">Swiperjs</a> carousel`,
                           /*html*/ `<a href="https://github.com/smebberson/fuse">Fuse</a>`,
                           /*html*/ `<a href="https://speedcurve.com/">SpeedCurve</a> performance tracking`,
-                          /*html*/ `<a href="https://raygun.com/">Raygun</a> monitoring`
-                        ]
+                          /*html*/ `<a href="https://raygun.com/">Raygun</a> monitoring`,
+                        ],
                       },
                       {
                         name: /*html*/ `Zoos Victoria`,
@@ -319,7 +319,7 @@ const Home = () => (
                         achievements: [
                           /*html*/ `Developed a community submissible forms with client side validation.`,
                           /*html*/ `Integrated social media sharing.`,
-                          /*html*/ `Awarded<ul><li><span data-tooltip="Melbourne Advertising and Design Club" data-tooltip-indicator>MADC</span> 2018: <a href="https://twitter.com/isobarAU/status/1058125158752313344?s=20">Best PR experience</a></li><li>One Show Awards shortlist: <a href="https://www.oneshow.org/viewentries/?id=51888">Media Relations</a></li></ul>`
+                          /*html*/ `Awarded<ul><li><span data-tooltip="Melbourne Advertising and Design Club" data-tooltip-indicator>MADC</span> 2018: <a href="https://twitter.com/isobarAU/status/1058125158752313344?s=20">Best PR experience</a></li><li>One Show Awards shortlist: <a href="https://www.oneshow.org/viewentries/?id=51888">Media Relations</a></li></ul>`,
                         ],
                         architecture: [
                           /*html*/ `<a href="https://www.contentful.com/">Contentful</a>`,
@@ -328,12 +328,12 @@ const Home = () => (
                           /*html*/ `Sass`,
                           /*html*/ `BEM naming scheme`,
                           /*html*/ `Webpack`,
-                          /*html*/ `Gulp`
+                          /*html*/ `Gulp`,
                         ],
                         libraries: [
                           /*html*/ `<a href="https://github.com/desandro/masonry">Masonry</a> grid layout`,
-                          /*html*/ `<a href="https://github.com/ghosh/micromodal">Micromodal</a> accessible modal dialogs`
-                        ]
+                          /*html*/ `<a href="https://github.com/ghosh/micromodal">Micromodal</a> accessible modal dialogs`,
+                        ],
                       },
                       {
                         name: /*html*/ `Klip Studio`,
@@ -343,19 +343,19 @@ const Home = () => (
                         achievements: [
                           /*html*/ `Developed content tagging, filtering and sorting features.`,
                           /*html*/ `Integrated audience engagement tracking through social media APIs.`,
-                          /*html*/ `Integrated social media sharing.`
+                          /*html*/ `Integrated social media sharing.`,
                         ],
                         architecture: [
                           /*html*/ `React`,
                           /*html*/ `<a href="https://react.semantic-ui.com/">Semantic UI React</a> component library`,
                           /*html*/ `Create React App`,
                           /*html*/ `Less`,
-                          /*html*/ `BEM naming scheme`
+                          /*html*/ `BEM naming scheme`,
                         ],
                         libraries: [
                           /*html*/ `<a href="https://semantic-ui.com/">Semantic UI</a>`,
-                          /*html*/ `<a href="https://github.com/google/shaka-player">Shaka</a> web player - advanced video editing`
-                        ]
+                          /*html*/ `<a href="https://github.com/google/shaka-player">Shaka</a> web player - advanced video editing`,
+                        ],
                       },
                       {
                         name: /*html*/ `Pearson`,
@@ -366,18 +366,18 @@ const Home = () => (
                         achievements: [
                           /*html*/ `Participated to content authoring.`,
                           /*html*/ `Modified components to suit market.`,
-                          /*html*/ `Developed registration forms.`
+                          /*html*/ `Developed registration forms.`,
                         ],
                         architecture: [
-                          /*html*/ `<a href="https://www.adobe.com/au/marketing/experience-manager.html">Adobe Experience Manager</a> enterprise CMS`
-                        ]
-                      }
-                    ]
+                          /*html*/ `<a href="https://www.adobe.com/au/marketing/experience-manager.html">Adobe Experience Manager</a> enterprise CMS`,
+                        ],
+                      },
+                    ],
                   },
                   {
                     company: {
                       url: /*html*/ `https://www.amaze.com/`,
-                      name: /*html*/ `Amaze`
+                      name: /*html*/ `Amaze`,
                     },
                     location: /*html*/ `London`,
                     jobTitle: /*html*/ `Front-end developer`,
@@ -395,8 +395,8 @@ const Home = () => (
                         achievements: [
                           /*html*/ `Developed multiple responsive components following AAA accessibility standard.`,
                           /*html*/ `Contributed to develop a <a href="https://www.lexus.co.uk/forms/find-a-centre">module</a> that uses the browser Geolocation and Google Maps' APIs to locate the nearest Lexus dealer.`,
-                          /*html*/ `Built a hero carousel with background video using <a href="https://github.com/kenwheeler/slick/">Slick</a>.`,
-                          /*html*/ `Contributed to the parallax <a href="https://www.lexus.co.uk/car-models/rc-f/#experience">"Experience"</a> component.`
+                          /*html*/ `Built a hero carousel with background video using Slick.`,
+                          /*html*/ `Contributed to the parallax <a href="https://www.lexus.co.uk/car-models/rc-f/#experience"><em>"Experience"</em></a> component.`,
                         ],
                         architecture: [
                           /*html*/ `<a href="http://www.sdl.com/software-and-services/tridion-dx/tridion-sites.html">SDL Tridion Sites</a> - headless CMS`,
@@ -409,12 +409,12 @@ const Home = () => (
                           /*html*/ `Grunt`,
                           /*html*/ `RequireJS`,
                           /*html*/ `Vagrant environment`,
-                          /*html*/ `Heroku CI/CD`
+                          /*html*/ `Heroku CI/CD`,
                         ],
                         libraries: [
                           /*html*/ `<a href="https://github.com/kenwheeler/slick/">Slick</a> carousel`,
-                          /*html*/ `<a href="http://imakewebthings.com/waypoints/">Waypoints js</a> advanced CSS animations`
-                        ]
+                          /*html*/ `<a href="http://imakewebthings.com/waypoints/">Waypoints js</a> advanced CSS animations`,
+                        ],
                       },
                       {
                         name: /*html*/ `Lexus`,
@@ -426,15 +426,15 @@ const Home = () => (
                           /*html*/ `Integrated fullPage.js for a single-page design.`,
                           /*html*/ `Created advanced multi layers CSS animations.`,
                           /*html*/ `Developed with a responsive design / device orientation aware approach.`,
-                          /*html*/ `Optimised performances.`
+                          /*html*/ `Optimised performances.`,
                         ],
                         architecture: [
                           /*html*/ `Technical stack identical to the one of <em>Lexus 'v11'</em>`,
-                          /*html*/ `Three.js 3D graphics designed by the talented <a href="http://danielbrowns.com/">Daniel Brown</a>`
+                          /*html*/ `Three.js 3D graphics designed by the talented <a href="http://danielbrowns.com/">Daniel Brown</a>`,
                         ],
                         libraries: [
-                          /*html*/ `<a href="https://github.com/alvarotrigo/fullPage.js">fullPage.js</a>`
-                        ]
+                          /*html*/ `<a href="https://github.com/alvarotrigo/fullPage.js">fullPage.js</a>`,
+                        ],
                       },
                       {
                         name: /*html*/ `Navico`,
@@ -443,7 +443,7 @@ const Home = () => (
                         lede: /*html*/ `Delivery within a short turnaround of a global eCommerce website for a manufacturer of consumer marine electronics.`,
                         thumbnailPath: require("assets/images/views/career-experiences/lowrance.jpg"),
                         achievements: [
-                          /*html*/ `Developed multiple responsive components following AAA accessibility standard.`
+                          /*html*/ `Developed multiple responsive components following AAA accessibility standard.`,
                         ],
                         architecture: [
                           /*html*/ `<a href="http://www.episerver.com/">EPIServer</a> CMS`,
@@ -451,18 +451,18 @@ const Home = () => (
                           /*html*/ `Sass`,
                           /*html*/ `<a href="https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> CSS architecture`,
                           /*html*/ `jQuery`,
-                          /*html*/ `Gulp`
+                          /*html*/ `Gulp`,
                         ],
                         libraries: [
-                          /*html*/ `<a href="https://github.com/jquery-validation/jquery-validation">jquery-validation</a> client side form verification`
-                        ]
-                      }
-                    ]
+                          /*html*/ `<a href="https://github.com/jquery-validation/jquery-validation">jquery-validation</a> client side form verification`,
+                        ],
+                      },
+                    ],
                   },
                   {
                     company: {
                       url: /*html*/ `https://www.surviemerformation.com/`,
-                      name: /*html*/ `Survie Mer Formation`
+                      name: /*html*/ `Survie Mer Formation`,
                     },
                     location: /*html*/ `London`,
                     jobTitle: /*html*/ `Designer & Front-end developer & Marketing strategist`,
@@ -484,7 +484,7 @@ const Home = () => (
                           /*html*/ `Optimised SEO with the use of Open Graph protocol and JSON-LD microdata.`,
                           /*html*/ `Created a tailored AdWords campaign: increased Clics by 10.1%, decreased <span data-tooltip="Cost Per Click" data-tooltip-indicator>CPC</span> by 6.6% YoY.`,
                           /*html*/ `Implemented Google Analytics custom events and goals tracking.`,
-                          /*html*/ `Setup the architecture and built the front-end.`
+                          /*html*/ `Setup the architecture and built the front-end.`,
                         ],
                         architecture: [
                           /*html*/ `Twig templating - component oriented`,
@@ -492,19 +492,19 @@ const Home = () => (
                           /*html*/ `Sass`,
                           /*html*/ `<a href="https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> CSS architecture`,
                           /*html*/ `jQuery progressive enhancement`,
-                          /*html*/ `Grunt`
+                          /*html*/ `Grunt`,
                         ],
                         libraries: [
                           /*html*/ `<a href="https://github.com/kenwheeler/slick/">Slick</a> carousel`,
-                          /*html*/ `<a href="https://github.com/graingert/WOW/">WOW.js</a> animation`
-                        ]
-                      }
-                    ]
+                          /*html*/ `<a href="https://github.com/graingert/WOW/">WOW.js</a> animation`,
+                        ],
+                      },
+                    ],
                   },
                   {
                     company: {
                       url: /*html*/ `http://www.tmwunlimited.com/`,
-                      name: /*html*/ `TMW Unlimited`
+                      name: /*html*/ `TMW Unlimited`,
                     },
                     location: /*html*/ `London`,
                     jobTitle: /*html*/ `Front-end developer`,
@@ -520,15 +520,15 @@ const Home = () => (
                         achievements: [
                           /*html*/ `Developed tables with filtering and sorting capacity.`,
                           /*html*/ `Created dynamic graphics with amCharts.`,
-                          /*html*/ `Integrated social media sharing.`
+                          /*html*/ `Integrated social media sharing.`,
                         ],
                         architecture: [
                           /*html*/ `AngularJS 2`,
-                          /*html*/ `<a href="http://trykickoff.com/">Kickoff</a> framework (Grunt, Sass, jQuery)`
+                          /*html*/ `<a href="http://trykickoff.com/">Kickoff</a> framework (Grunt, Sass, jQuery)`,
                         ],
                         libraries: [
-                          /*html*/ `<a href="https://www.amcharts.com/">amCharts</a>`
-                        ]
+                          /*html*/ `<a href="https://www.amcharts.com/">amCharts</a>`,
+                        ],
                       },
                       {
                         name: /*html*/ `Prince's trust`,
@@ -540,15 +540,15 @@ const Home = () => (
                           /*html*/ `Developed multiple UI components.`,
                           /*html*/ `Integrated Hashtagd APIs to create a wall of social media content.`,
                           /*html*/ `Integrated OAuth authentication.`,
-                          /*html*/ `Integrated social media sharing.`
+                          /*html*/ `Integrated social media sharing.`,
                         ],
                         architecture: [
-                          /*html*/ `<a href="http://trykickoff.com/">Kickoff</a> framework`
+                          /*html*/ `<a href="http://trykickoff.com/">Kickoff</a> framework`,
                         ],
                         libraries: [
                           /*html*/ `<a href="https://hashtagd.net/">Hashtagd</a>`,
-                          /*html*/ `OAuth`
-                        ]
+                          /*html*/ `OAuth`,
+                        ],
                       },
                       {
                         name: /*html*/ `Sport Relief`,
@@ -561,20 +561,20 @@ const Home = () => (
                           /*html*/ `Ensured iOS and Android default browser support`,
                           /*html*/ `Used <a href="https://developers.google.com/web/fundamentals/native-hardware/device-orientation">Device Orientation & Motion</a> APIs`,
                           /*html*/ `Integrated OAuth authentication.`,
-                          /*html*/ `Integrated social media sharing.`
+                          /*html*/ `Integrated social media sharing.`,
                         ],
                         architecture: [
                           /*html*/ `React`,
-                          /*html*/ `<a href="http://trykickoff.com/">Kickoff</a> framework`
+                          /*html*/ `<a href="http://trykickoff.com/">Kickoff</a> framework`,
                         ],
-                        libraries: [/*html*/ `OAuth`]
-                      }
-                    ]
+                        libraries: [/*html*/ `OAuth`],
+                      },
+                    ],
                   },
                   {
                     company: {
                       name: /*html*/ `MOVE digital`,
-                      url: /*html*/ `http://www.movedigital.co.uk/`
+                      url: /*html*/ `http://www.movedigital.co.uk/`,
                     },
                     location: /*html*/ `London`,
                     jobTitle: /*html*/ `Web designer & developer`,
@@ -585,25 +585,25 @@ const Home = () => (
                       {
                         name: /*html*/ `Weholite`,
                         url: /*html*/ `http://www.weholite.co.uk/`,
-                        thumbnailPath: require("assets/images/views/career-experiences/weholite.jpg")
+                        thumbnailPath: require("assets/images/views/career-experiences/weholite.jpg"),
                       },
                       {
                         name: /*html*/ `Hiremech`,
                         url: /*html*/ `http://www.hiremech.co.uk/`,
-                        thumbnailPath: require("assets/images/views/career-experiences/hiremech.jpg")
+                        thumbnailPath: require("assets/images/views/career-experiences/hiremech.jpg"),
                       },
                       {
                         name: /*html*/ `Global Materials Handling`,
                         url: /*html*/ `http://globalforktrucks.com/`,
-                        thumbnailPath: require("assets/images/views/career-experiences/global-materials-handling.jpg")
+                        thumbnailPath: require("assets/images/views/career-experiences/global-materials-handling.jpg"),
                       },
                       {
                         name: /*html*/ `Proton Motor`,
                         url: /*html*/ `http://www.proton-motor.com/`,
-                        thumbnailPath: require("assets/images/views/career-experiences/proton-motor.jpg")
-                      }
-                    ]
-                  }
+                        thumbnailPath: require("assets/images/views/career-experiences/proton-motor.jpg"),
+                      },
+                    ],
+                  },
                 ]}
               />
             </article>
@@ -625,33 +625,33 @@ const Home = () => (
                   {
                     thumbnailPath: /*html*/ `https://source.unsplash.com/6Y23pU8xyHU/200x200`,
                     url: /*html*/ `https://unsplash.com/photos/6Y23pU8xyHU`,
-                    sourceIcon: <IconUnsplash />
+                    sourceIcon: <IconUnsplash />,
                   },
                   {
                     thumbnailPath: /*html*/ `https://source.unsplash.com/m9VIwiyzGSc/200x200`,
                     url: /*html*/ `https://unsplash.com/photos/m9VIwiyzGSc`,
-                    sourceIcon: <IconUnsplash />
+                    sourceIcon: <IconUnsplash />,
                   },
                   {
                     thumbnailPath: /*html*/ `https://source.unsplash.com/hLXsjf0dGgo/200x200`,
                     url: /*html*/ `https://unsplash.com/photos/hLXsjf0dGgo`,
-                    sourceIcon: <IconUnsplash />
+                    sourceIcon: <IconUnsplash />,
                   },
                   {
                     thumbnailPath: /*html*/ `https://source.unsplash.com/JjEZKXTGPio/200x200`,
                     url: /*html*/ `https://unsplash.com/photos/JjEZKXTGPio`,
-                    sourceIcon: <IconUnsplash />
+                    sourceIcon: <IconUnsplash />,
                   },
                   {
                     thumbnailPath: /*html*/ `https://source.unsplash.com/sTBdWFQKDHE/200x200`,
                     url: /*html*/ `https://unsplash.com/photos/sTBdWFQKDHE`,
-                    sourceIcon: <IconUnsplash />
+                    sourceIcon: <IconUnsplash />,
                   },
                   {
                     thumbnailPath: require("assets/images/views/personal-works/south-cost-of-england.jpg"),
                     url: /*html*/ `https://youtu.be/NAsS1T_V8-k`,
-                    sourceIcon: <IconYoutube />
-                  }
+                    sourceIcon: <IconYoutube />,
+                  },
                 ]}
               />
             </article>
