@@ -67,7 +67,7 @@ const Home = () => (
                 I'm driven by my appreciation for design, enthusiasm for new
                 technologies and desire to collaborate. I'm committed and ready
                 to work within a fast paced environment on innovative and
-                impactful projects.
+                impactful ideas.
               </p>
             </div>
           </div>
@@ -283,13 +283,13 @@ const Home = () => (
                         highlight: true,
                         name: /*html*/ `Jetstar`,
                         url: /*html*/ `https://www.jetstar.com/au/en/home`,
-                        lede: /*html*/ `Upkeep and development of new features for Jetstar's international website in an Agile environment.`,
+                        lede: /*html*/ `Modernization, development of new features and upkeep of Jetstar's international website in an Agile environment.`,
                         thumbnailPath: require("assets/images/views/career-experiences/jetstar.jpg"),
                         achievements: [
-                          /*html*/ `Migrated the <a href="https://www.jetstar.com/au/en/flights"><em>Flight Search</em></a> experience to React & Redux for faster and extensive results: increased conversion by 1.29% on the <em>Cheap Flights</em> pages.`,
-                          /*html*/ `Created a landing page to promote Jetstar <a href="https://www.jetstar.com/au/en/creditcards"><em>Credit Cards</em></a>: surpassed the conversion target by 230% in the first month of launch.`,
+                          /*html*/ `Participated to the migration of the <a href="https://www.jetstar.com/au/en/flights"><em>Flight Search</em></a> experience to React & Redux for faster and extensive results: increased conversion by 1.3% on the <em>Cheap Flights</em> pages.`,
+                          /*html*/ `Contributed to the creation a landing page to promote Jetstar <a href="https://www.jetstar.com/au/en/creditcards"><em>Credit Cards</em></a>: surpassed the conversion target by 230% in the first month of launch.`,
                           /*html*/ `Integrated a responsive utility-based Sass grid I built and open sourced: <a href="https://github.com/JohanMouchet/fluxgrid">Fluxgrid</a>.`,
-                          /*html*/ `Advocated for performance tracking and optimisations: slowed down the <span data-tooltip="First Meaningful Paint" data-tooltip-indicator>FMP</span> trend, decreased the <span data-tooltip="Time To Interactive" data-tooltip-indicator>TTI</span> by ~9.5%, and the bundle size by ~15%.`
+                          /*html*/ `Advocated for performance tracking and optimisations: slowed down the <span data-tooltip="First Meaningful Paint" data-tooltip-indicator>FMP</span> trend, decreased the <span data-tooltip="Time To Interactive" data-tooltip-indicator>TTI</span> by ~9.5% and the bundle size by ~15%.`
                         ],
                         architecture: [
                           /*html*/ `Sitecore CMS`,
@@ -317,13 +317,9 @@ const Home = () => (
                         lede: /*html*/ `Joint <em>RSPCA</em> campaign website to help cat owners give their pet the safest and happiest life while ensuring they have no link to loss of wildlife.`,
                         thumbnailPath: require("assets/images/views/career-experiences/zoos-victoria.jpg"),
                         achievements: [
-                          /*html*/ `Developped a community submissible forms with client side validation.`,
+                          /*html*/ `Developed a community submissible forms with client side validation.`,
                           /*html*/ `Integrated social media sharing.`,
-                          /*html*/ `Awarded<ul><li><span data-tooltip="Melbourne Advertising and Design Club" data-tooltip-indicator>MADC</span> 2018: <a href="https://twitter.com/isobarAU/status/1058125158752313344?s=20">Best PR experience</a></li><li>One Show Awards shortlist: <a href="https://www.oneshow.org/viewentries/?id=51888">Media Relations</a></li></ul>`,
-                          /*html*/ [
-                            `<span data-tooltip="Melbourne Advertising and Design Club" data-tooltip-indicator>MADC</span> 2018: <a href="https://twitter.com/isobarAU/status/1058125158752313344?s=20">Best PR experience</a>`,
-                            `One Show Awards shortlist: <a href="https://www.oneshow.org/viewentries/?id=51888">Media Relations</a>`
-                          ]
+                          /*html*/ `Awarded<ul><li><span data-tooltip="Melbourne Advertising and Design Club" data-tooltip-indicator>MADC</span> 2018: <a href="https://twitter.com/isobarAU/status/1058125158752313344?s=20">Best PR experience</a></li><li>One Show Awards shortlist: <a href="https://www.oneshow.org/viewentries/?id=51888">Media Relations</a></li></ul>`
                         ],
                         architecture: [
                           /*html*/ `<a href="https://www.contentful.com/">Contentful</a>`,
@@ -345,9 +341,9 @@ const Home = () => (
                         lede: /*html*/ `Web application dedicated to the sport rights holders industry. Allows to edit live or recorded streams to produce highlights shareable on social media.`,
                         thumbnailPath: require("assets/images/views/career-experiences/klip-studio.jpg"),
                         achievements: [
-                          /*html*/ `Developed content tagging, filtering and sorting features`,
-                          /*html*/ `Integrated audience engagement tracking through social media APIs`,
-                          /*html*/ `Integrated social media publishing`
+                          /*html*/ `Developed content tagging, filtering and sorting features.`,
+                          /*html*/ `Integrated audience engagement tracking through social media APIs.`,
+                          /*html*/ `Integrated social media sharing.`
                         ],
                         architecture: [
                           /*html*/ `React`,
@@ -368,9 +364,9 @@ const Home = () => (
                         lede: /*html*/ `Websites creation related to education for Pearson’s launch in three new markets through Asia.`,
                         thumbnailPath: require("assets/images/views/career-experiences/pearson.jpg"),
                         achievements: [
-                          /*html*/ `Participated to content authoring`,
-                          /*html*/ `Modified components to suit market`,
-                          /*html*/ `Developed registration forms`
+                          /*html*/ `Participated to content authoring.`,
+                          /*html*/ `Modified components to suit market.`,
+                          /*html*/ `Developed registration forms.`
                         ],
                         architecture: [
                           /*html*/ `<a href="https://www.adobe.com/au/marketing/experience-manager.html">Adobe Experience Manager</a> enterprise CMS`
@@ -398,18 +394,18 @@ const Home = () => (
                         thumbnailPath: require("assets/images/views/career-experiences/lexus.jpg"),
                         achievements: [
                           /*html*/ `Developed multiple responsive components following AAA accessibility standard.`,
-                          /*html*/ `Developed a <a href="https://www.lexus.co.uk/forms/find-a-centre">module</a> that uses the browser Geolocation and Google Maps' APIs to locate the nearest Lexus dealer.`,
+                          /*html*/ `Contributed to develop a <a href="https://www.lexus.co.uk/forms/find-a-centre">module</a> that uses the browser Geolocation and Google Maps' APIs to locate the nearest Lexus dealer.`,
                           /*html*/ `Built a hero carousel with background video using <a href="https://github.com/kenwheeler/slick/">Slick</a>.`,
-                          /*html*/ `Contributed to the <a href="https://www.lexus.co.uk/car-models/rc-f/#experience">"Experience"</a> component.`
+                          /*html*/ `Contributed to the parallax <a href="https://www.lexus.co.uk/car-models/rc-f/#experience">"Experience"</a> component.`
                         ],
                         architecture: [
-                          /*html*/ `<a href="http://www.sdl.com/software-and-services/tridion-dx/tridion-sites.html">SDL Tridion Sites</a> - headless data driven CMS`,
+                          /*html*/ `<a href="http://www.sdl.com/software-and-services/tridion-dx/tridion-sites.html">SDL Tridion Sites</a> - headless CMS`,
                           /*html*/ `Nunjucks templating - component oriented`,
                           /*html*/ `MongoDB database`,
-                          /*html*/ `Sass + <a href="http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528">ITCSS</a> architecture`,
-                          /*html*/ `BEM naming scheme`,
+                          /*html*/ `Sass`,
+                          /*html*/ `<a href="https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> CSS architecture`,
                           /*html*/ `Backbone.js`,
-                          /*html*/ `jQuery progressive enhancement`,
+                          /*html*/ `jQuery`,
                           /*html*/ `Grunt`,
                           /*html*/ `RequireJS`,
                           /*html*/ `Vagrant environment`,
@@ -427,10 +423,10 @@ const Home = () => (
                         lede: /*html*/ `Microsite creation to showcase <em>Lexus' Safety System Plus</em> technology.`,
                         thumbnailPath: require("assets/images/views/career-experiences/lexus-safety-system-plus.jpg"),
                         achievements: [
-                          /*html*/ `Used fullPage.js for a single-page design`,
-                          /*html*/ `Created advanced multi layers CSS animations`,
-                          /*html*/ `Developed with a responsive design / device orientation aware approach`,
-                          /*html*/ `Optimised performance`
+                          /*html*/ `Integrated fullPage.js for a single-page design.`,
+                          /*html*/ `Created advanced multi layers CSS animations.`,
+                          /*html*/ `Developed with a responsive design / device orientation aware approach.`,
+                          /*html*/ `Optimised performances.`
                         ],
                         architecture: [
                           /*html*/ `Technical stack identical to the one of <em>Lexus 'v11'</em>`,
@@ -452,9 +448,9 @@ const Home = () => (
                         architecture: [
                           /*html*/ `<a href="http://www.episerver.com/">EPIServer</a> CMS`,
                           /*html*/ `Handlebars / Razor templating - component oriented`,
-                          /*html*/ `Sass + <a href="http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528">ITCSS</a> architecture`,
-                          /*html*/ `BEM naming scheme`,
-                          /*html*/ `jQuery progressive enhancement`,
+                          /*html*/ `Sass`,
+                          /*html*/ `<a href="https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> CSS architecture`,
+                          /*html*/ `jQuery`,
                           /*html*/ `Gulp`
                         ],
                         libraries: [
@@ -482,19 +478,19 @@ const Home = () => (
                         lede: /*html*/ `Redesign, development and marketing strategy aimed at increasing acquisition and conversion rate.`,
                         thumbnailPath: require("assets/images/views/career-experiences/survie-mer-formation.jpg"),
                         achievements: [
-                          /*html*/ `Designed a Growth Hacking strategy following the AARRR model.`,
+                          /*html*/ `Designed a Growth Hacking strategy following the AARRR model: increased conversion by 12.6%.`,
                           /*html*/ `Refreshed the UI with a new brand identity, responsive design and cross-browser compatibility.`,
                           /*html*/ `Revamped the UX with a focus on user conversion, web performance and accessibility.`,
                           /*html*/ `Optimised SEO with the use of Open Graph protocol and JSON-LD microdata.`,
-                          /*html*/ `Created a tailored AdWords campaign: increased Clics by 10.10%, decreased <span data-tooltip="Cost Per Click" data-tooltip-indicator>CPC</span> by 6.65% YoY.`,
+                          /*html*/ `Created a tailored AdWords campaign: increased Clics by 10.1%, decreased <span data-tooltip="Cost Per Click" data-tooltip-indicator>CPC</span> by 6.6% YoY.`,
                           /*html*/ `Implemented Google Analytics custom events and goals tracking.`,
                           /*html*/ `Setup the architecture and built the front-end.`
                         ],
                         architecture: [
                           /*html*/ `Twig templating - component oriented`,
                           /*html*/ `MySQL database`,
-                          /*html*/ `Sass + <a href="http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528">ITCSS</a> architecture`,
-                          /*html*/ `BEM naming scheme`,
+                          /*html*/ `Sass`,
+                          /*html*/ `<a href="https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> CSS architecture`,
                           /*html*/ `jQuery progressive enhancement`,
                           /*html*/ `Grunt`
                         ],
@@ -521,7 +517,11 @@ const Home = () => (
                         url: /*html*/ `http://www.businessbankinginsight.co.uk`,
                         lede: /*html*/ `Analysis website of business banking providers, supported by the <em>HR Treasury</em>.`,
                         thumbnailPath: require("assets/images/views/career-experiences/business-banking-insight.jpg"),
-                        achievements: [`Dynamic filtering`, `CMS integration`],
+                        achievements: [
+                          /*html*/ `Developed tables with filtering and sorting capacity.`,
+                          /*html*/ `Created dynamic graphics with amCharts.`,
+                          /*html*/ `Integrated social media sharing.`
+                        ],
                         architecture: [
                           /*html*/ `AngularJS 2`,
                           /*html*/ `<a href="http://trykickoff.com/">Kickoff</a> framework (Grunt, Sass, jQuery)`
@@ -536,7 +536,12 @@ const Home = () => (
                         url: /*html*/ `https://partofpt.princes-trust.org.uk/part-of-pt/`,
                         lede: /*html*/ `Crowdsourced event listing microsite for the <em>Prince's Trust</em> 40th anniversary celebration.`,
                         thumbnailPath: require("assets/images/views/career-experiences/princes-trust.jpg"),
-                        achievements: ["Lazy loaded events from database"],
+                        achievements: [
+                          /*html*/ `Developed multiple UI components.`,
+                          /*html*/ `Integrated Hashtagd APIs to create a wall of social media content.`,
+                          /*html*/ `Integrated OAuth authentication.`,
+                          /*html*/ `Integrated social media sharing.`
+                        ],
                         architecture: [
                           /*html*/ `<a href="http://trykickoff.com/">Kickoff</a> framework`
                         ],
@@ -552,9 +557,11 @@ const Home = () => (
                         lede: /*html*/ `Mobile web browser game based on rope skipping.`,
                         thumbnailPath: require("assets/images/views/career-experiences/sport-relief-skipathon.jpg"),
                         achievements: [
-                          /*html*/ `HTML5 canvas and CSS3 animations: <a href="https://codepen.io/johanmouchet/pen/OMgwMg">PoC</a>`,
-                          /*html*/ `iOS and Android default browser support`,
-                          /*html*/ `Device 3D movement detection`
+                          /*html*/ `Created HTML5 canvas and CSS3 animations: <a href="https://codepen.io/johanmouchet/pen/OMgwMg">PoC</a>`,
+                          /*html*/ `Ensured iOS and Android default browser support`,
+                          /*html*/ `Used <a href="https://developers.google.com/web/fundamentals/native-hardware/device-orientation">Device Orientation & Motion</a> APIs`,
+                          /*html*/ `Integrated OAuth authentication.`,
+                          /*html*/ `Integrated social media sharing.`
                         ],
                         architecture: [
                           /*html*/ `React`,
@@ -656,9 +663,13 @@ const Home = () => (
                 Get In Touch
               </Anchor>
 
-              <a href="mailto:mouchet.johan@gmail.com">
-                mouchet.johan[at]gmail.com
-              </a>
+              <p>
+                <a href="mailto:mouchet.johan@gmail.com">
+                  mouchet.johan[at]gmail.com
+                </a>
+                <br />
+                <a href="https://www.linkedin.com/in/johanmouchet">LinkedIn</a>
+              </p>
             </article>
             <div className="u-vr--top-2-@xs"></div>
           </div>

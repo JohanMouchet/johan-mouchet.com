@@ -40,5 +40,6 @@
 
 # Fix
 
+- Remove `.html` legacy files
 - Keep Sass prefix `t-`, explore `@use`?
 - Address all `// TODO`
