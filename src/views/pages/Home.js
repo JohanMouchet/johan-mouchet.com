@@ -188,7 +188,7 @@ const Home = () => (
               </Anchor>
               <p>
                 Web &amp; Graphic design, Development, Photography, Video
-                Editing, Drawing, Traveling, Cycling, Running, Fitness,
+                Editing, Drawing, Travelling, Cycling, Running, Fitness,
                 Volunteer{" "}
                 <a href="https://youngcodersau.com/">@YoungCodersAU</a>
               </p>
@@ -283,7 +283,7 @@ const Home = () => (
                         highlight: true,
                         name: /*html*/ `Jetstar`,
                         url: /*html*/ `https://www.jetstar.com/au/en/home`,
-                        lede: /*html*/ `Modernization, development of new features and upkeep of Jetstar's international website in an Agile environment.`,
+                        lede: /*html*/ `Modernisation, development of new features and upkeep of Jetstar's international website in an Agile environment.`,
                         thumbnailPath: require("assets/images/views/career-experiences/jetstar.jpg"),
                         achievements: [
                           /*html*/ `Participated in the migration of the <a href="https://www.jetstar.com/au/en/flights"><em>Flight Search</em></a> experience to React & Redux for faster and extensive results: increased conversion by 1.3% on the <em>Cheap Flights</em> pages.`,
