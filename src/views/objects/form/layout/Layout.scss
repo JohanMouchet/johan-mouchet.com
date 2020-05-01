@@ -17,7 +17,7 @@
     padding: 0 0.5em;
     color: $s-color-primary;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
     font-size: t-modular-scale(0);
   }
 
@@ -57,7 +57,7 @@
     display: inline-block;
     margin-top: t-vertical-rhythm(0.25);
     margin-bottom: t-vertical-rhythm(0.25);
-    font-weight: 700;
+    font-weight: 500;
     transition: color 0.3s;
 
     /** Block **/

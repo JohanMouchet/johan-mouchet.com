@@ -27,7 +27,7 @@
     /*** Active ***/
     &.is--active #{$root}__link {
       color: $s-color-link;
-      font-weight: 700;
+      font-weight: 500;
       position: relative;
 
       &::after {

@@ -24,7 +24,7 @@
     /** Active **/
     &.is--active #{$root}__button {
       color: $s-color-link;
-      font-weight: 700;
+      font-weight: 500;
 
       &:hover,
       &:focus {
