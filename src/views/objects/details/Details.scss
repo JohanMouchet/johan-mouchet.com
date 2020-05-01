@@ -10,7 +10,7 @@
   &[open] {
     #{$root}__summary {
       color: $s-color-link;
-      font-weight: 700;
+      font-weight: 500;
     }
   }
 
@@ -35,6 +35,14 @@
 
     > *:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  &--compact {
+    border-bottom: 0;
+
+    #{$root}__summary {
+      padding: 0;
     }
   }
 }

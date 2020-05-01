@@ -5,7 +5,7 @@ import {
   Skills,
   AcademicQualification,
   SocialMedia,
-  Experience,
+  Experiences,
   PersonalWorks,
 } from "views/components";
 import { ReactComponent as Icon500px } from "assets/images/icons/simple-icons/500px.svg";
@@ -114,7 +114,7 @@ const Home = () => (
               />
             </article>
 
-            <hr className="wow" />
+            <hr />
 
             <article className="p-tools">
               <Anchor tag="h2" id="tools">
@@ -128,7 +128,7 @@ const Home = () => (
               </p>
             </article>
 
-            <hr className="wow" />
+            <hr />
 
             <article className="p-profile">
               <Anchor tag="h2" id="profile">
@@ -137,7 +137,7 @@ const Home = () => (
               <p>Creative, Learning Enthusiast, Motivated, Knowledge Sharer</p>
             </article>
 
-            <hr className="wow" />
+            <hr />
 
             <article className="p-language">
               <Anchor tag="h2" id="languages">
@@ -149,7 +149,7 @@ const Home = () => (
               </ul>
             </article>
 
-            <hr className="wow" />
+            <hr />
 
             <article className="p-academic-qualifications">
               <Anchor tag="h2" id="academic-qualifications">
@@ -180,7 +180,7 @@ const Home = () => (
               />
             </article>
 
-            <hr className="wow" />
+            <hr />
 
             <article className="p-interests">
               <Anchor tag="h2" id="interests">
@@ -194,7 +194,7 @@ const Home = () => (
               </p>
             </article>
 
-            <hr className="wow" />
+            <hr />
 
             <article className="p-social-medias">
               <Anchor tag="h2" id="social-media">
@@ -266,7 +266,7 @@ const Home = () => (
                 Career Experiences
               </Anchor>
 
-              <Experience
+              <Experiences
                 experiences={[
                   {
                     company: {
@@ -518,7 +518,7 @@ const Home = () => (
                         lede: /*html*/ `Analysis website of business banking providers, supported by the <em>HR Treasury</em>.`,
                         thumbnailPath: require("assets/images/views/career-experiences/business-banking-insight.jpg"),
                         achievements: [
-                          /*html*/ `Developed tables with filtering and sorting capacity.`,
+                          /*html*/ `Developed tables with filtering and sorting capabilities.`,
                           /*html*/ `Created dynamic graphics with amCharts.`,
                           /*html*/ `Integrated social media sharing.`,
                         ],
@@ -608,7 +608,7 @@ const Home = () => (
               />
             </article>
 
-            <hr className="wow" />
+            <hr />
 
             <article className="p-personal-works">
               <Anchor tag="h2" id="personal-works">
@@ -656,7 +656,7 @@ const Home = () => (
               />
             </article>
 
-            <hr className="wow" />
+            <hr />
 
             <article className="p-contact" id="p-contact">
               <Anchor tag="h2" id="get-in-touch">

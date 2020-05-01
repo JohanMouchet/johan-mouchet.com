@@ -18,13 +18,13 @@ type Props = {
       thumbnailPath: string,
       achievements?: Array<string>,
       architecture?: Array<string>,
-      libraries?: Array<string>
+      libraries?: Array<string>,
     }
-  ]
+  ],
 };
 
 const Projects = ({ projects }: Props) => {
-  const renderThumbnail = project => (
+  const renderThumbnail = (project) => (
     <>
       <a href={project.url} className="c-project__link">
         <img
@@ -33,20 +33,20 @@ const Projects = ({ projects }: Props) => {
           alt={project.name}
           loading="lazy"
         />
-        <a href={project.url} className="c-project__overlay">
+        <div href={project.url} className="c-project__overlay">
           <h4 className="c-project__title">{project.name}</h4>
           <span className="c-project__line"></span>
           {project.tagline && (
             <span className="c-project__tagline">{project.tagline}</span>
           )}
-        </a>
+        </div>
       </a>
 
       {project.lede && <p className="c-project__lede">{parse(project.lede)}</p>}
     </>
   );
 
-  const renderContent = project => (
+  const renderContent = (project) => (
     <>
       {project.achievements && (
         <div className="c-project__details">
@@ -54,7 +54,7 @@ const Projects = ({ projects }: Props) => {
             Key {pluralize("Achievement", project.achievements.length)}
           </b>
           <ul className="c-project__details-list">
-            {project.achievements.map(detail => (
+            {project.achievements.map((detail) => (
               <li className="c-project__detail" key={parse(detail)}>
                 {parse(detail)}
               </li>
@@ -88,7 +88,7 @@ const Projects = ({ projects }: Props) => {
   return !projects ? null : (
     <div className="c-projects">
       <div className="grid">
-        {projects.map(project =>
+        {projects.map((project) =>
           project.highlight ? (
             <div
               className="cell cell--12-@xs"
@@ -109,7 +109,7 @@ const Projects = ({ projects }: Props) => {
             <div
               className={cx("cell cell--12-@xs cell--6-@sm", {
                 "cell--4-@lg": project.lede,
-                "cell--3-@lg": !project.lede
+                "cell--3-@lg": !project.lede,
               })}
               key={project.name + project.tagline}
             >
@@ -118,7 +118,9 @@ const Projects = ({ projects }: Props) => {
                 {(project.achievements ||
                   project.architecture ||
                   project.libraries) && (
-                  <Details summary="Details">{renderContent(project)}</Details>
+                  <Details summary="Details" variant="compact">
+                    {renderContent(project)}
+                  </Details>
                 )}
               </div>
             </div>
