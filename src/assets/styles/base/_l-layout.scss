@@ -152,15 +152,6 @@
     padding-bottom: map-get($l-article, v-padding) *
       map-get($l-article, scale-factor);
   }
-
-  /** Separator **/
-  &-separator {
-    max-width: 100%;
-    border-bottom: 2px solid $s-color-gray;
-    animation: none;
-
-    @include t-wekkit-hdpi-small-dimension;
-  }
 }
 
 .l-cell {

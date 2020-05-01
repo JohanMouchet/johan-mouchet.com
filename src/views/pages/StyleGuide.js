@@ -273,7 +273,7 @@ const StyleGuide = () => (
               </div>
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-typography" className="l-article">
               <h2
@@ -481,10 +481,7 @@ const StyleGuide = () => (
                           <code>&lt;hr&gt;</code>
                         </td>
                         <td>
-                          <hr
-                            className="wow"
-                            style={{ marginTop: "0", marginBottom: "0" }}
-                          />
+                          <hr style={{ marginTop: "0", marginBottom: "0" }} />
                         </td>
                       </tr>
                       <tr>
@@ -541,7 +538,7 @@ const StyleGuide = () => (
               </div>
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-blockquote" className="l-article">
               <h2
@@ -587,7 +584,7 @@ const StyleGuide = () => (
               </p>
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-grid" className="l-article">
               <h2
@@ -676,7 +673,7 @@ const StyleGuide = () => (
               <em>Responsive:</em> *<code>@xs|@sm|@md|@lg|@xl</code>
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-form" className="l-article">
               <h2
@@ -949,7 +946,7 @@ const StyleGuide = () => (
               </form>
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-button" className="l-article">
               <h2
@@ -1250,7 +1247,7 @@ const StyleGuide = () => (
               </div>
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-list" className="l-article">
               <h2
@@ -1325,7 +1322,7 @@ const StyleGuide = () => (
               </div>
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-table" className="l-article">
               <h2
@@ -1645,7 +1642,7 @@ const StyleGuide = () => (
               </div>
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-card" className="l-article">
               <h2
@@ -1716,7 +1713,7 @@ const StyleGuide = () => (
                           <span className="u-heading--xl">3.99</span>{" "}
                           <sub className="u-heading--sm">/month</sub>
                         </span>
-                        <hr className="o-card__hr wow" />
+                        <hr className="o-card__hr" />
                         <ul className="o-list--unstyled o-list--lg">
                           <li>Unlimited storage</li>
                           <li>Advanced Statistics</li>
@@ -1744,7 +1741,7 @@ const StyleGuide = () => (
                           <span className="u-heading--xl">1.99</span>{" "}
                           <sub className="u-heading--sm">/month</sub>
                         </span>
-                        <hr className="o-card__hr wow" />
+                        <hr className="o-card__hr" />
                         <ul className="o-list--unstyled o-list--lg">
                           <li>25Go storage</li>
                           <li>Basic statistics</li>
@@ -1803,7 +1800,7 @@ const StyleGuide = () => (
               </div>
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-figure" className="l-article">
               <h2
@@ -1835,7 +1832,7 @@ const StyleGuide = () => (
               </p>
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-breadcrumb" className="l-article">
               <h2
@@ -1865,7 +1862,7 @@ const StyleGuide = () => (
               />
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-tabs" className="l-article">
               <h2
@@ -1898,7 +1895,7 @@ const StyleGuide = () => (
               />
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-details" className="l-article">
               <h2
@@ -1934,7 +1931,7 @@ const StyleGuide = () => (
               </p>
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-pagination" className="l-article">
               <h2
@@ -1966,7 +1963,7 @@ const StyleGuide = () => (
                 /> */}
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-alert" className="l-article">
               <h2
@@ -2015,7 +2012,7 @@ const StyleGuide = () => (
               </Alert>
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-tooltip" className="l-article">
               <h2
@@ -2095,7 +2092,7 @@ const StyleGuide = () => (
               </div>
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-progress-bar" className="l-article">
               <h2
@@ -2136,7 +2133,7 @@ const StyleGuide = () => (
               </div>
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-badge" className="l-article">
               <h2
@@ -2154,7 +2151,7 @@ const StyleGuide = () => (
               </a>
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-loader" className="l-article">
               <h2
@@ -2180,7 +2177,7 @@ const StyleGuide = () => (
               </div>
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-footnotes" className="l-article">
               <h2
@@ -2219,7 +2216,7 @@ const StyleGuide = () => (
               />
             </article>
 
-            <hr className="l-article-separator" />
+            <hr />
 
             <article id="sg-guidelines" className="l-article">
               <h2
