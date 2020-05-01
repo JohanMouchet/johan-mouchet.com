@@ -6,6 +6,7 @@ import "./Details.scss";
 
 type Props = {
   summary?: string,
+  variant?: "compact",
   className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
   children: Node,
@@ -13,11 +14,16 @@ type Props = {
 
 const Details = ({
   summary = "Details",
+  variant,
   className,
   attributes,
   children,
 }: Props) => {
-  const classNames = cx("o-details", className);
+  const classNames = cx(
+    "o-details",
+    variant && `o-details--${variant}`,
+    className
+  );
 
   return !children ? null : (
     <details className={classNames} {...attributes}>

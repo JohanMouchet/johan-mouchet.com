@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { differenceInCalendarMonths } from "date-fns";
-import "./Experience.scss";
+import "./Experiences.scss";
 import { Projects } from "views/components";
 import pluralize from "utils/pluralize";
 import parse from "utils/parse";
@@ -24,7 +24,7 @@ type Props = {
   ],
 };
 
-const Experience = ({ experiences }: Props) => {
+const Experiences = ({ experiences }: Props) => {
   const today = new Date();
 
   const duration = (endDate, startDate) => {
@@ -43,9 +43,9 @@ const Experience = ({ experiences }: Props) => {
     );
   };
 
-  return !experiences
-    ? null
-    : experiences.map((experience) => (
+  return !experiences ? null : (
+    <div className="c-experiences">
+      {experiences.map((experience) => (
         <section
           className="c-experience"
           key={experience.company.name + " - " + experience.startDate}
@@ -99,7 +99,10 @@ const Experience = ({ experiences }: Props) => {
 
           {experience.projects && <Projects projects={experience.projects} />}
         </section>
-      ));
+      ))}
+      ;
+    </div>
+  );
 };
 
-export default Experience;
+export default Experiences;

@@ -3,10 +3,10 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withKnobs, text } from "@storybook/addon-knobs";
-import Experience from ".";
+import Experiences from ".";
 
-storiesOf("Components/Experience", module)
+storiesOf("Components/Experiences", module)
   .add("default", () => (
-    <Experience>{text("propName", "default value")}</Experience>
+    <Experiences>{text("propName", "default value")}</Experiences>
   ))
   .addDecorator(withKnobs);

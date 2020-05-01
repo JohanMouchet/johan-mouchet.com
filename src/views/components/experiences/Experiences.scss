@@ -1,6 +1,12 @@
 @import "assets/styles/settings/_settings";
+@import "assets/styles/tools/_tools";
 
 .c-experience {
+    &:not(:first-child) {
+      border-top: 1px solid $s-color-gray;
+      padding-top: t-vertical-rhythm(1);
+    }
+
   &__heading {
     margin-bottom: 0;
   }
