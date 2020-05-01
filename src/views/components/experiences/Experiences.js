@@ -100,7 +100,6 @@ const Experiences = ({ experiences }: Props) => {
           {experience.projects && <Projects projects={experience.projects} />}
         </section>
       ))}
-      ;
     </div>
   );
 };
