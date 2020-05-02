@@ -63,32 +63,21 @@
 
   /* Line */
   &__line {
-    height: t-vertical-rhythm(8, "rem");
+    height: 2.5em;
     width: 2px;
     margin-left: 3px;
     margin-right: 3px;
-    position: relative;
+    background: currentColor;
+    animation: line-animation 0.5s ease-out both;
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: currentColor;
-      animation: line-animation 0.5s ease-out both;
-      /* stylelint-disable max-nesting-depth */
-      @keyframes line-animation {
-        from {
-          transform: scaleY(0);
-        }
-
-        to {
-          transform: scaleY(100%);
-        }
+    @keyframes line-animation {
+      from {
+        transform: scaleY(0);
       }
-      /* stylelint-enable max-nesting-depth */
+
+      to {
+        transform: scaleY(100%);
+      }
     }
   }
 
@@ -100,7 +89,7 @@
   }
 
   &__half--left {
-    margin-bottom: t-vertical-rhythm(2, "rem");
+    margin-bottom: 0.65em;
     padding-right: 0.2em;
     text-align: right;
 
@@ -126,7 +115,7 @@
   }
 
   &__half--right {
-    margin-top: t-vertical-rhythm(2, "rem");
+    margin-top: 0.65em;
     padding-left: 0.2em;
 
     #{$root}__text {
@@ -190,25 +179,8 @@
   }
 
   &__tagline-breaker {
-    display: block;
-
     @media (min-width: t-breakpoint(md)) {
       display: none;
     }
-  }
-
-  /* Language */
-  &__language {
-    position: absolute;
-    bottom: t-vertical-rhythm(1);
-    right: t-vertical-rhythm(1);
-    color: $s-color-white;
-  }
-
-  &__language-link {
-    font-size: t-modular-scale(-1);
-    font-style: italic;
-    color: inherit;
-    text-decoration: none;
   }
 }

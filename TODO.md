@@ -8,10 +8,7 @@
   - Expose to a new page .com/Storybook
 - Add Jest snapshots
 - Fix Tabs, Alert, Table Numerical column
-- Use Environment Variables to load on prod only (ex Analytics): https://create-react-app.dev/docs/adding-custom-environment-variables#!
 - Convert `js-`
-- Convert pages/NotFound to generic error page
-- Add WOW.js
 - Add id to body `<body id={`page-\${metadata.id}`}>`
 - Remove `.html` legacy files
 - Keep Sass prefix `t-`, explore `@use`?
@@ -19,21 +16,22 @@
 
 ## Design
 
-- Improve Print
-- Sticky nav?: header background, J/M logo, 'MENU' + burger menu to Anchors
-- dark mode:
-  ```css
-  @media (prefers-color-scheme: dark) {
-    body {
-      color: white;
-    }
+- ? Improve Print
+- ? Sticky nav: header background, J/M logo, 'MENU' + burger menu to Anchors
+- ? dark mode:
+
+```css
+@media (prefers-color-scheme: dark) {
+  body {
+    color: white;
   }
-  @media (prefers-color-scheme: light) {
-    body {
-      color: black;
-    }
+}
+@media (prefers-color-scheme: light) {
+  body {
+    color: black;
   }
-  ```
+}
+```
 
 ## Content
 
