@@ -1,11 +1,14 @@
 import * as React from "react";
+import { Link } from "wouter";
 import { Default } from "views/layouts";
 
 const NotFound = () => (
   <Default
-    id="not-found"
-    title="Johan Mouchet - 404 not found"
-    description="Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications."
+    metadata={{
+      id: /*html*/ `not-found`,
+      title: /*html*/ `Johan Mouchet - 404 not found`,
+      description: /*html*/ `Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.`,
+    }}
   >
     <main className="l-main">
       <div className="container u-full--height">
@@ -13,12 +16,12 @@ const NotFound = () => (
           <div className="cell u-align--center">
             <h1>
               Error 404
-              <i className="heading-underline heading-underline--c wow"></i>
+              <i className="heading-underline heading-underline--c"></i>
             </h1>
             <p>
               Woops. Looks like this page doesn't exist.
               <br />
-              Please get back to the <a href="/">homepage</a>.<br />
+              Please get back to the <Link href="/">homepage</Link>.<br />
               <code>'[⁰﹏⁰]'</code>
             </p>
           </div>
