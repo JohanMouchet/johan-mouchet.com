@@ -1,0 +1,11 @@
+{
+  "name": "Johan Mouchet",
+  "short_name": "Johan Mouchet",
+  "icons": [{
+      "src": "google-touch-icon.png",
+      "sizes": "512x512"
+  }],
+  "background_color": "#ffffff",
+  "theme_color": "#21354f",
+  "display": "fullscreen"
+}
