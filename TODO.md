@@ -9,8 +9,6 @@
 - Add Jest snapshots
 - Fix Tabs, Alert, Table Numerical column
 - Convert `js-`
-- Convert pages/NotFound to generic error page
-- Add WOW.js
 - Add id to body `<body id={`page-\${metadata.id}`}>`
 - Remove `.html` legacy files
 - Keep Sass prefix `t-`, explore `@use`?
