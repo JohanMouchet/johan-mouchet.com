@@ -1,12 +1,14 @@
 // @flow
 
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withKnobs, text } from "@storybook/addon-knobs";
+import { text } from "@storybook/addon-knobs";
 import PersonalWorks from ".";
 
-storiesOf("Components/PersonalWorks", module)
-  .add("default", () => (
-    <PersonalWorks>{text("propName", "default value")}</PersonalWorks>
-  ))
-  .addDecorator(withKnobs);
+export default {
+  component: PersonalWorks,
+  title: "Components/PersonalWorks",
+};
+
+export const personalWorks = () => (
+  <PersonalWorks>{text("propName", "default value")}</PersonalWorks>
+);

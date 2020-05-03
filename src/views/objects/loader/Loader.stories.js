@@ -1,10 +1,14 @@
 // @flow
 
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withKnobs, text } from "@storybook/addon-knobs";
+import { text } from "@storybook/addon-knobs";
 import Loader from ".";
 
-storiesOf("Objects/Loader", module)
-  .add("default", () => <Loader>{text("propName", "default value")}</Loader>)
-  .addDecorator(withKnobs);
+export default {
+  component: Loader,
+  title: "Objects/Loader",
+};
+
+export const loader = () => (
+  <Loader>{text("propName", "default value")}</Loader>
+);

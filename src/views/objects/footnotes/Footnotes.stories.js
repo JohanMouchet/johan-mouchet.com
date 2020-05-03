@@ -1,12 +1,14 @@
 // @flow
 
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withKnobs, text } from "@storybook/addon-knobs";
+import { text } from "@storybook/addon-knobs";
 import { FootnotesReference } from ".";
 
-storiesOf("Objects/Footnotes", module)
-  .add("default", () => (
-    <FootnotesReference>{text("propName", "default value")}</FootnotesReference>
-  ))
-  .addDecorator(withKnobs);
+export default {
+  component: FootnotesReference,
+  title: "Objects/Footnotes",
+};
+
+export const footnotes = () => (
+  <FootnotesReference>{text("propName", "default value")}</FootnotesReference>
+);

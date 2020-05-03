@@ -1,10 +1,12 @@
 // @flow
 
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withKnobs, text } from "@storybook/addon-knobs";
+import { text } from "@storybook/addon-knobs";
 import { Field } from ".";
 
-storiesOf("Objects/Form/Field", module)
-  .add("default", () => <Field>{text("propName", "default value")}</Field>)
-  .addDecorator(withKnobs);
+export default {
+  component: Field,
+  title: "Objects/Form/Field",
+};
+
+export const field = () => <Field>{text("propName", "default value")}</Field>;

@@ -1,12 +1,14 @@
 // @flow
 
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withKnobs, text } from "@storybook/addon-knobs";
+import { text } from "@storybook/addon-knobs";
 import Breadcrumb from ".";
 
-storiesOf("Objects/Breadcrumb", module)
-  .add("default", () => (
-    <Breadcrumb>{text("propName", "default value")}</Breadcrumb>
-  ))
-  .addDecorator(withKnobs);
+export default {
+  component: Breadcrumb,
+  title: "Objects/Breadcrumb",
+};
+
+export const breadcrumb = () => (
+  <Breadcrumb>{text("propName", "default value")}</Breadcrumb>
+);

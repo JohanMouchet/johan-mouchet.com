@@ -1,10 +1,12 @@
 // @flow
 
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withKnobs, text } from "@storybook/addon-knobs";
+import { text } from "@storybook/addon-knobs";
 import Tabs from ".";
 
-storiesOf("Objects/Tabs", module)
-  .add("default", () => <Tabs>{text("propName", "default value")}</Tabs>)
-  .addDecorator(withKnobs);
+export default {
+  component: Tabs,
+  title: "Objects/Tabs",
+};
+
+export const tabs = () => <Tabs>{text("propName", "default value")}</Tabs>;
