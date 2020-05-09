@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import Menu from ".";
+
+<Meta title="Objects/Menu" component={Menu} />
+
+# Menu
+
+<Preview>
+  <Story name="default">
+    <Menu>{text("propName", "default value")}</Menu>
+  </Story>
+</Preview>

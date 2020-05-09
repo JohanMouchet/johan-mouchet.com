@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import Range from ".";
+
+<Meta title="Objects/Form/Range" component={Range} />
+
+# Range
+
+<Preview>
+  <Story name="default">
+    <Range>{text("propName", "default value")}</Range>
+  </Story>
+</Preview>

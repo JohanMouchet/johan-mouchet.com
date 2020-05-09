@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import Blockquote from ".";
+
+<Meta title="Objects/Blockquote" component={Blockquote} />
+
+# Blockquote
+
+<Preview>
+  <Story name="default">
+    <Blockquote>{text("propName", "default value")}</Blockquote>
+  </Story>
+</Preview>

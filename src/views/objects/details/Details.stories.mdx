@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import Details from ".";
+
+<Meta title="Objects/Details" component={Details} />
+
+# Details
+
+<Preview>
+  <Story name="default">
+    <Details>{text("propName", "default value")}</Details>
+  </Story>
+</Preview>

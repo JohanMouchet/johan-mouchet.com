@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import Anchor from ".";
+
+<Meta title="Objects/Anchor" component={Anchor} />
+
+# Anchor
+
+<Preview>
+  <Story name="default">
+    <Anchor>{text("propName", "default value")}</Anchor>
+  </Story>
+</Preview>

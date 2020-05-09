@@ -1,5 +1,6 @@
 import { addParameters } from "@storybook/react";
 import { BREAKPOINTS } from "../src/constants/breakpoints";
+import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 
 addParameters({
   viewport: {
@@ -45,5 +46,9 @@ addParameters({
         type: "desktop"
       }
     }
-  }
+  },
+  docs: {
+    container: DocsContainer,
+    page: DocsPage,
+  },
 });

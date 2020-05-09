@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import Badge from ".";
+
+<Meta title="Objects/Badge" component={Badge} />
+
+# Badge
+
+<Preview>
+  <Story name="default">
+    <Badge>{text("Children", "+1")}</Badge>
+  </Story>
+</Preview>

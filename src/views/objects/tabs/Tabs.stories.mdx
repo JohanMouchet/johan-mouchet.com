@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import Tabs from ".";
+
+<Meta title="Objects/Tabs" component={Tabs} />
+
+# Tabs
+
+<Preview>
+  <Story name="default">
+    <Tabs>{text("propName", "default value")}</Tabs>
+  </Story>
+</Preview>

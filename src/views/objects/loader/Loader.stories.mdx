@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import Loader from ".";
+
+<Meta title="Objects/Loader" component={Loader} />
+
+# Loader
+
+<Preview>
+  <Story name="default">
+    <Loader>{text("propName", "default value")}</Loader>
+  </Story>
+</Preview>

@@ -1,0 +1,16 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import AcademicQualification from ".";
+
+<Meta
+  title="Components/AcademicQualification"
+  component={AcademicQualification}
+/>
+
+<Preview>
+  <Story name="default">
+    <AcademicQualification>
+      {text("propName", "default value")}
+    </AcademicQualification>
+  </Story>
+</Preview>

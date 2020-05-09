@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import Notice from ".";
+
+<Meta title="Objects/Notice" component={Notice} />
+
+# Notice
+
+<Preview>
+  <Story name="default">
+    <Notice>{text("propName", "default value")}</Notice>
+  </Story>
+</Preview>

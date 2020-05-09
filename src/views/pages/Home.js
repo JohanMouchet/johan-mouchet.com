@@ -121,10 +121,10 @@ const Home = () => (
                 Tools
               </Anchor>
               <p>
-                JAMstack, Headless CMS, Storybook, Jest, APIs, npm, Webpack /
-                Gulp, Git, CI / CD, ESlint, Stylelint, Prettier, Zeplin,
-                Responsive design, Performance, Accessibility, Web Standards,
-                SEO, Analytics, Atlassian suite, Agile, Open source
+                JAMstack, Headless CMS, Storybook, Jest, Enzyme, APIs, npm,
+                Webpack / Gulp, Git, CI / CD, ESlint, Stylelint, Prettier,
+                Zeplin, Responsive design, Performance, Accessibility, Web
+                Standards, SEO, Analytics, Atlassian suite, Agile, Open source
               </p>
             </article>
 

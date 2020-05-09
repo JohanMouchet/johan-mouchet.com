@@ -1,0 +1,21 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import { Checkbox, Radio } from ".";
+
+<Meta title="Objects/Form/Toggles" component={Checkbox} />
+
+# Checkbox
+
+<Preview>
+  <Story name="Checkbox">
+    <Checkbox>{text("propName", "default value")}</Checkbox>
+  </Story>
+</Preview>
+
+# Radio
+
+<Preview>
+  <Story name="Radio">
+    <Radio>{text("propName", "default value")}</Radio>
+  </Story>
+</Preview>

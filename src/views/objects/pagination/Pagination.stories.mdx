@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import Pagination from ".";
+
+<Meta title="Objects/Pagination" component={Pagination} />
+
+# Pagination
+
+<Preview>
+  <Story name="default">
+    <Pagination>{text("propName", "default value")}</Pagination>
+  </Story>
+</Preview>
