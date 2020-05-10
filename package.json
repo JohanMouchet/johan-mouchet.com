@@ -36,11 +36,8 @@
           "*.mdx"
         ],
         "extends": [
-          "plugin:mdx/overrides"
-        ],
-        "rules": {
-          "no-unused-expressions": 0
-        }
+          "plugin:mdx/recommended"
+        ]
       }
     ]
   },
