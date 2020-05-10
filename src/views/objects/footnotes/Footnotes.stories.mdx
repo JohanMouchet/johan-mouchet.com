@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import { FootnotesReference } from ".";
+
+<Meta title="Objects/Footnotes" component={FootnotesReference} />
+
+# FootnotesReference
+
+<Preview>
+  <Story name="default">
+    <FootnotesReference propName={text("propName", "default value")} />
+  </Story>
+</Preview>

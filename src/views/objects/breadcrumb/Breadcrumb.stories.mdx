@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import Breadcrumb from ".";
+
+<Meta title="Objects/Breadcrumb" component={Breadcrumb} />
+
+# Breadcrumb
+
+<Preview>
+  <Story name="default">
+    <Breadcrumb propName={text("propName", "default value")} />
+  </Story>
+</Preview>

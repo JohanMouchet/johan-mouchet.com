@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import Experience from ".";
+
+<Meta title="Components/Experience" component={Experience} />
+
+# Experience
+
+<Preview>
+  <Story name="default">
+    <Experience propName={text("propName", "default value")} />
+  </Story>
+</Preview>

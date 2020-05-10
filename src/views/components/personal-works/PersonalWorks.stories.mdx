@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import PersonalWorks from ".";
+
+<Meta title="Components/PersonalWorks" component={PersonalWorks} />
+
+# PersonalWorks
+
+<Preview>
+  <Story name="default">
+    <PersonalWorks propName={text("propName", "default value")} />
+  </Story>
+</Preview>

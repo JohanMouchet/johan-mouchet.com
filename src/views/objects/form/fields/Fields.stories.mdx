@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import { Field } from ".";
+
+<Meta title="Objects/Form/Field" component={Field} />
+
+# Field
+
+<Preview>
+  <Story name="default">
+    <Field propName={text("propName", "default value")} />
+  </Story>
+</Preview>

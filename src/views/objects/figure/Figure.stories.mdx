@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import Figure from ".";
+
+<Meta title="Objects/Figure" component={Figure} />
+
+# Figure
+
+<Preview>
+  <Story name="default">
+    <Figure propName={text("propName", "default value")} />
+  </Story>
+</Preview>

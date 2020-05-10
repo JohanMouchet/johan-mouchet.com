@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import ProgressBar from ".";
+
+<Meta title="Objects/ProgressBar" component={ProgressBar} />
+
+# ProgressBar
+
+<Preview>
+  <Story name="default">
+    <ProgressBar propName={text("propName", "default value")} />
+  </Story>
+</Preview>

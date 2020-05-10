@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import Label from ".";
+
+<Meta title="Objects/Form/Layout" component={Label} />
+
+# Label
+
+<Preview>
+  <Story name="default">
+    <Label propName={text("propName", "default value")} />
+  </Story>
+</Preview>

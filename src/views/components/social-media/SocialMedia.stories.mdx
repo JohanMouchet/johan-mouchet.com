@@ -1,0 +1,13 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import SocialMedia from ".";
+
+<Meta title="Components/SocialMedia" component={SocialMedia} />
+
+# SocialMedia
+
+<Preview>
+  <Story name="default">
+    <SocialMedia propName={text("propName", "default value")} />
+  </Story>
+</Preview>
