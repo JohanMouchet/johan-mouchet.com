@@ -36,10 +36,11 @@
           "*.mdx"
         ],
         "extends": [
-          "react-app",
-          "plugin:prettier/recommended",
           "plugin:mdx/overrides"
-        ]
+        ],
+        "rules": {
+          "no-unused-expressions": 0
+        }
       }
     ]
   },
