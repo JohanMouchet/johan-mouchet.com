@@ -2,10 +2,23 @@
 
 import * as React from "react";
 import { VERSIONS } from "constants/versions";
-import "./MastFooter.scss";
+import { PROFILE } from "constants/profile";
 import { ReactComponent as IconArrowDown } from "assets/images/icons/arrow-down.svg";
+import "./MastFooter.scss";
 
-const MastFooter = () => {
+type Props = {
+  version: string,
+  copyright: string,
+  topButtonTitle: String,
+};
+
+const MastFooter = ({
+  version = VERSIONS.site,
+  copyright = /* html*/ `${
+    PROFILE.firstName
+  } ${PROFILE.lastName.toUpperCase()}`,
+  topButtonTitle = /* html*/ `Get to the top`,
+}: Props) => {
   const year = new Date().getFullYear();
 
   return (
@@ -13,11 +26,11 @@ const MastFooter = () => {
       <div className="container">
         <div className="grid grid--yCenter-@xs grid--noWrap-@xs">
           <div className="cell cell--0-@xs">
-            <span className="p-mast-footer__version">{VERSIONS.site}</span>
+            <span className="p-mast-footer__version">{version}</span>
           </div>
           <div className="cell cell--@xs">
             <p className="p-mast-footer__copyright">
-              {year} &copy; Johan MOUCHET{" "}
+              {year} &copy; {copyright}{" "}
               <span className="p-mast-footer__copyright-separator">|</span>
               <br /> Made in{" "}
               <span className="p-mast-footer__cocorico">France</span>
@@ -27,7 +40,7 @@ const MastFooter = () => {
             <a
               className="p-mast-footer__page-top"
               href="#page-top"
-              title="Go top"
+              title={topButtonTitle}
             >
               <IconArrowDown />
             </a>

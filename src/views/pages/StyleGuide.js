@@ -1,4 +1,5 @@
 import * as React from "react";
+import { PROFILE } from "constants/profile";
 import { Default } from "views/layouts";
 import {
   Blockquote,
@@ -37,10 +38,9 @@ import "./StyleGuide.scss";
 const StyleGuide = () => (
   <Default
     metadata={{
-      id: "styleguide",
-      title: "Johan Mouchet - Styleguide",
-      description:
-        "Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.",
+      id: /*html*/ `styleguide`,
+      title: /*html*/ `${PROFILE.firstName} ${PROFILE.lastName} - Styleguide`,
+      description: /*html*/ `Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.`,
     }}
   >
     <>

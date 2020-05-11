@@ -1,4 +1,5 @@
 import * as React from "react";
+import { PROFILE } from "constants/profile";
 import { Default } from "views/layouts";
 import { Anchor } from "views/objects";
 import {
@@ -23,7 +24,7 @@ const Home = () => (
   <Default
     metadata={{
       id: /*html*/ `home`,
-      title: /*html*/ `Johan Mouchet`,
+      title: /*html*/ `${PROFILE.firstName} ${PROFILE.lastName}`,
       description: /*html*/ `Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.`,
     }}
   >
@@ -49,9 +50,9 @@ const Home = () => (
                 <div className="cell">
                   <img
                     className="c-about__portrait"
-                    src={require("assets/images/views/johan-mouchet.jpg")}
-                    srcSet={`${require("assets/images/views/johan-mouchet.jpg")}, ${require("assets/images/views/johan-mouchet@x2.jpg")} 1.25x`}
-                    alt="Johan Mouchet"
+                    src={PROFILE.image.x1}
+                    srcSet={`${PROFILE.image.x1}, ${PROFILE.image.x2} 1.25x`}
+                    alt={`${PROFILE.firstName} ${PROFILE.lastName}`}
                     loading="auto"
                   />
                 </div>
@@ -205,52 +206,52 @@ const Home = () => (
                 medias={[
                   {
                     name: /*html*/ `LinkedIn`,
-                    url: /*html*/ `https://www.linkedin.com/in/johanmouchet`,
+                    url: /*html*/ PROFILE.socialNetwork.linkedIn,
                     icon: <IconLinkedIn />,
                   },
                   {
                     name: /*html*/ `Twitter`,
-                    url: /*html*/ `https://twitter.com/JohanMouchet`,
+                    url: /*html*/ PROFILE.socialNetwork.twitter,
                     icon: <IconTwitter />,
                   },
                   {
                     name: /*html*/ `CodePen`,
-                    url: /*html*/ `http://codepen.io/johanmouchet/`,
+                    url: /*html*/ PROFILE.socialNetwork.codePen,
                     icon: <IconCodepen />,
                   },
                   {
                     name: /*html*/ `GitHub`,
-                    url: /*html*/ `https://github.com/JohanMouchet`,
+                    url: /*html*/ PROFILE.socialNetwork.gitHub,
                     icon: <IconGithub />,
                   },
                   {
                     name: /*html*/ `Dribbble`,
-                    url: /*html*/ `https://dribbble.com/JohanMouchet/likes`,
+                    url: /*html*/ PROFILE.socialNetwork.dribbble,
                     icon: <IconDribbble />,
                   },
                   {
                     name: /*html*/ `Unsplash`,
-                    url: /*html*/ `https://unsplash.com/@johanmouchet/`,
+                    url: /*html*/ PROFILE.socialNetwork.unsplash,
                     icon: <IconUnsplash />,
                   },
                   {
                     name: /*html*/ `500px`,
-                    url: /*html*/ `https://500px.com/johanmouchet/`,
+                    url: /*html*/ PROFILE.socialNetwork.fiveHundredPx,
                     icon: <Icon500px />,
                   },
                   {
                     name: /*html*/ `Instagram`,
-                    url: /*html*/ `https://instagram.com/johanmouchet/`,
+                    url: /*html*/ PROFILE.socialNetwork.instagram,
                     icon: <IconInstagram />,
                   },
                   {
                     name: /*html*/ `YouTube`,
-                    url: /*html*/ `https://www.youtube.com/c/JohanMouchet`,
+                    url: /*html*/ PROFILE.socialNetwork.youTube,
                     icon: <IconYoutube />,
                   },
                   {
                     name: /*html*/ `Spotify`,
-                    url: /*html*/ `https://open.spotify.com/user/1126411547`,
+                    url: /*html*/ PROFILE.socialNetwork.spotify,
                     icon: <IconSpotify />,
                   },
                 ]}
@@ -665,11 +666,9 @@ const Home = () => (
               </Anchor>
 
               <p>
-                <a href="mailto:mouchet.johan@gmail.com">
-                  mouchet.johan[at]gmail.com
-                </a>
+                <a href={`mailto:${PROFILE.email}`}>{PROFILE.email}</a>
                 <br />
-                <a href="https://www.linkedin.com/in/johanmouchet">LinkedIn</a>
+                <a href={PROFILE.socialNetwork.linkedIn}>LinkedIn</a>
               </p>
             </article>
             <div className="u-vr--top-2-@xs"></div>

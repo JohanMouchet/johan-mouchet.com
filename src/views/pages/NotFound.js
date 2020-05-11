@@ -1,4 +1,5 @@
 import * as React from "react";
+import { PROFILE } from "constants/profile";
 import { Link } from "wouter";
 import { Default } from "views/layouts";
 
@@ -6,7 +7,7 @@ const NotFound = () => (
   <Default
     metadata={{
       id: /*html*/ `not-found`,
-      title: /*html*/ `Johan Mouchet - 404 not found`,
+      title: /*html*/ `${PROFILE.firstName} ${PROFILE.lastName} - 404 not found`,
       description: /*html*/ `Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.`,
     }}
   >
