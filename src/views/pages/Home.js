@@ -51,8 +51,10 @@ const Home = () => (
                   <img
                     className="c-about__portrait"
                     src={PROFILE.image.x1}
-                    srcSet={`${PROFILE.image.x1}, ${PROFILE.image.x2} 1.25x`}
-                    alt={`${PROFILE.firstName} ${PROFILE.lastName}`}
+                    srcSet={
+                      /*html*/ `${PROFILE.image.x1}, ${PROFILE.image.x2} 1.25x`
+                    }
+                    alt={/*html*/ `${PROFILE.firstName} ${PROFILE.lastName}`}
                     loading="auto"
                   />
                 </div>
@@ -206,52 +208,52 @@ const Home = () => (
                 medias={[
                   {
                     name: /*html*/ `LinkedIn`,
-                    url: /*html*/ PROFILE.socialNetworks.linkedIn,
+                    url: PROFILE.socialNetworks.linkedIn,
                     icon: <IconLinkedIn />,
                   },
                   {
                     name: /*html*/ `Twitter`,
-                    url: /*html*/ PROFILE.socialNetworks.twitter,
+                    url: PROFILE.socialNetworks.twitter,
                     icon: <IconTwitter />,
                   },
                   {
                     name: /*html*/ `CodePen`,
-                    url: /*html*/ PROFILE.socialNetworks.codePen,
+                    url: PROFILE.socialNetworks.codePen,
                     icon: <IconCodepen />,
                   },
                   {
                     name: /*html*/ `GitHub`,
-                    url: /*html*/ PROFILE.socialNetworks.gitHub,
+                    url: PROFILE.socialNetworks.gitHub,
                     icon: <IconGithub />,
                   },
                   {
                     name: /*html*/ `Dribbble`,
-                    url: /*html*/ PROFILE.socialNetworks.dribbble,
+                    url: PROFILE.socialNetworks.dribbble,
                     icon: <IconDribbble />,
                   },
                   {
                     name: /*html*/ `Unsplash`,
-                    url: /*html*/ PROFILE.socialNetworks.unsplash,
+                    url: PROFILE.socialNetworks.unsplash,
                     icon: <IconUnsplash />,
                   },
                   {
                     name: /*html*/ `500px`,
-                    url: /*html*/ PROFILE.socialNetworks.fiveHundredPx,
+                    url: PROFILE.socialNetworks.fiveHundredPx,
                     icon: <Icon500px />,
                   },
                   {
                     name: /*html*/ `Instagram`,
-                    url: /*html*/ PROFILE.socialNetworks.instagram,
+                    url: PROFILE.socialNetworks.instagram,
                     icon: <IconInstagram />,
                   },
                   {
                     name: /*html*/ `YouTube`,
-                    url: /*html*/ PROFILE.socialNetworks.youTube,
+                    url: PROFILE.socialNetworks.youTube,
                     icon: <IconYoutube />,
                   },
                   {
                     name: /*html*/ `Spotify`,
-                    url: /*html*/ PROFILE.socialNetworks.spotify,
+                    url: PROFILE.socialNetworks.spotify,
                     icon: <IconSpotify />,
                   },
                 ]}
