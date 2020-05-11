@@ -8,6 +8,13 @@ import Tabs from ".";
 
 <Preview>
   <Story name="default">
-    <Tabs propName={text("propName", "default value")} />
+    <Tabs
+      tabs={[
+        {
+          thumb: text("thumb", "thumb"),
+          panel: text("panel", "panel"),
+        },
+      ]}
+    />
   </Story>
 </Preview>

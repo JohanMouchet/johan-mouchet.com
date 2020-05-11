@@ -2,8 +2,8 @@
 
 ## Tech
 
+- Add components: List, Code, Table
 - Storybook
-  - Add addons: Source, Docs, a11y https://storybook.js.org/addons/
   - Add all views
   - Expose to a new page .com/Storybook
 - Add Jest snapshots
@@ -18,20 +18,7 @@
 
 - ? Improve Print
 - ? Sticky nav: header background, J/M logo, 'MENU' + burger menu to Anchors
-- ? dark mode:
-
-```css
-@media (prefers-color-scheme: dark) {
-  body {
-    color: white;
-  }
-}
-@media (prefers-color-scheme: light) {
-  body {
-    color: black;
-  }
-}
-```
+- ? Photo viewer with Unsplash API: https://www.instagram.com/p/B_-e1zrjN7S/
 
 ## Content
 

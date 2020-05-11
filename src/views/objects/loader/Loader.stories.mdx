@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { text } from "@storybook/addon-knobs";
+import { select } from "@storybook/addon-knobs";
 import Loader from ".";
 
 <Meta title="Objects/Loader" component={Loader} />
@@ -8,6 +8,6 @@ import Loader from ".";
 
 <Preview>
   <Story name="default">
-    <Loader propName={text("propName", "default value")} />
+    <Loader size={select("size", { sm: "sm" })} />
   </Story>
 </Preview>

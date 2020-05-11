@@ -1,13 +1,29 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { text } from "@storybook/addon-knobs";
+import { text, boolean, select } from "@storybook/addon-knobs";
 import PersonalWorks from ".";
+import { ReactComponent as IconUnsplash } from "assets/images/icons/simple-icons/unsplash.svg";
+import { ReactComponent as IconYoutube } from "assets/images/icons/simple-icons/youtube.svg";
 
 <Meta title="Components/PersonalWorks" component={PersonalWorks} />
 
 # PersonalWorks
 
+<!-- TDOD: is sourceIcon an Array? -->
+
 <Preview>
   <Story name="default">
-    <PersonalWorks propName={text("propName", "default value")} />
+    <PersonalWorks
+      works={[
+        {
+          video: boolean("video", true),
+          url: text("url", "url"),
+          thumbnailPath: text("thumbnailPath", "thumbnailPath"),
+          sourceIcon: select("sourceIcon", {
+            Unsplash: <IconUnsplash />,
+            Youtube: <IconYoutube />,
+          }),
+        },
+      ]}
+    />
   </Story>
 </Preview>

@@ -8,6 +8,13 @@ import Breadcrumb from ".";
 
 <Preview>
   <Story name="default">
-    <Breadcrumb propName={text("propName", "default value")} />
+    <Breadcrumb
+      levels={[
+        {
+          title: text("title", "title"),
+          url: text("url", "url"),
+        },
+      ]}
+    />
   </Story>
 </Preview>

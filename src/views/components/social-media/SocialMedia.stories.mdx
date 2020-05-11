@@ -8,6 +8,14 @@ import SocialMedia from ".";
 
 <Preview>
   <Story name="default">
-    <SocialMedia propName={text("propName", "default value")} />
+    <SocialMedia
+      medias={[
+        {
+          name: text("name", "name"),
+          url: text("url", "url"),
+          icon: text("icon", "icon"),
+        },
+      ]}
+    />
   </Story>
 </Preview>

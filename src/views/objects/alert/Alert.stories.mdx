@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { text } from "@storybook/addon-knobs";
+import { text, boolean, select } from "@storybook/addon-knobs";
 import Alert from ".";
 
 <Meta title="Objects/Alert" component={Alert} />
@@ -8,6 +8,17 @@ import Alert from ".";
 
 <Preview>
   <Story name="default">
-    <Alert propName={text("propName", "default value")} />
+    <Alert
+      hidden={boolean("hidden", true)}
+      closable={boolean("closable", true)}
+      variant={select("variant", {
+        info: "info",
+        success: "success",
+        warning: "warning",
+        danger: "danger",
+      })}
+    >
+      {text("children", "children")}
+    </Alert>
   </Story>
 </Preview>

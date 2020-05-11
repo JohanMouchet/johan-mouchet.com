@@ -8,6 +8,12 @@ import File from ".";
 
 <Preview>
   <Story name="default">
-    <File propName={text("propName", "default value")} />
+    <File
+      id={text("id", "id")}
+      name={text("name", "name")}
+      multipleCaption={text("multipleCaption", "multipleCaption")}
+    >
+      {text("children", "children")}
+    </File>
   </Story>
 </Preview>

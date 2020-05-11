@@ -1,0 +1,22 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text } from "@storybook/addon-knobs";
+import { Select } from ".";
+
+<Meta title="Objects/Form/Fields/Select" component={Select} />
+
+# Select
+
+<Preview>
+  <Story name="default">
+    <Select
+      id={text("id", "id")}
+      name={text("name", "name")}
+      options={[
+        {
+          text: text("text", "text"),
+          value: text("value", "value"),
+        },
+      ]}
+    />
+  </Story>
+</Preview>

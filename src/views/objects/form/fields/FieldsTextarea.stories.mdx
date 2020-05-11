@@ -1,13 +1,13 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
-import Range from ".";
+import { Textarea } from ".";
 
-<Meta title="Objects/Form/Range" component={Range} />
+<Meta title="Objects/Form/Fields/Textarea" component={Textarea} />
 
-# Range
+# Textarea
 
 <Preview>
   <Story name="default">
-    <Range id={text("id", "id")} name={text("name", "name")} />
+    <Textarea id={text("id", "id")} name={text("name", "name")} />
   </Story>
 </Preview>

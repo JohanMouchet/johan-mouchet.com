@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { text } from "@storybook/addon-knobs";
+import { text, boolean } from "@storybook/addon-knobs";
 import Notice from ".";
 
 <Meta title="Objects/Notice" component={Notice} />
@@ -8,6 +8,10 @@ import Notice from ".";
 
 <Preview>
   <Story name="default">
-    <Notice propName={text("propName", "default value")} />
+    <Notice
+      secondary={text("secondary", "secondary")}
+      closeButton={boolean("closeButton", true)}
+      isActive={boolean("isActive", true)}
+    />
   </Story>
 </Preview>

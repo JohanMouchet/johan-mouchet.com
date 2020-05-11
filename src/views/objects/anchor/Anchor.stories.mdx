@@ -8,6 +8,12 @@ import Anchor from ".";
 
 <Preview>
   <Story name="default">
-    <Anchor propName={text("propName", "default value")} />
+    <Anchor
+      tag={text("tag", "tag")}
+      id={text("id", "id")}
+      marker={text("marker", "marker")}
+    >
+      {text("children", "children")}
+    </Anchor>
   </Story>
 </Preview>
