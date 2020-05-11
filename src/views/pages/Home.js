@@ -206,52 +206,52 @@ const Home = () => (
                 medias={[
                   {
                     name: /*html*/ `LinkedIn`,
-                    url: /*html*/ PROFILE.socialNetwork.linkedIn,
+                    url: /*html*/ PROFILE.socialNetworks.linkedIn,
                     icon: <IconLinkedIn />,
                   },
                   {
                     name: /*html*/ `Twitter`,
-                    url: /*html*/ PROFILE.socialNetwork.twitter,
+                    url: /*html*/ PROFILE.socialNetworks.twitter,
                     icon: <IconTwitter />,
                   },
                   {
                     name: /*html*/ `CodePen`,
-                    url: /*html*/ PROFILE.socialNetwork.codePen,
+                    url: /*html*/ PROFILE.socialNetworks.codePen,
                     icon: <IconCodepen />,
                   },
                   {
                     name: /*html*/ `GitHub`,
-                    url: /*html*/ PROFILE.socialNetwork.gitHub,
+                    url: /*html*/ PROFILE.socialNetworks.gitHub,
                     icon: <IconGithub />,
                   },
                   {
                     name: /*html*/ `Dribbble`,
-                    url: /*html*/ PROFILE.socialNetwork.dribbble,
+                    url: /*html*/ PROFILE.socialNetworks.dribbble,
                     icon: <IconDribbble />,
                   },
                   {
                     name: /*html*/ `Unsplash`,
-                    url: /*html*/ PROFILE.socialNetwork.unsplash,
+                    url: /*html*/ PROFILE.socialNetworks.unsplash,
                     icon: <IconUnsplash />,
                   },
                   {
                     name: /*html*/ `500px`,
-                    url: /*html*/ PROFILE.socialNetwork.fiveHundredPx,
+                    url: /*html*/ PROFILE.socialNetworks.fiveHundredPx,
                     icon: <Icon500px />,
                   },
                   {
                     name: /*html*/ `Instagram`,
-                    url: /*html*/ PROFILE.socialNetwork.instagram,
+                    url: /*html*/ PROFILE.socialNetworks.instagram,
                     icon: <IconInstagram />,
                   },
                   {
                     name: /*html*/ `YouTube`,
-                    url: /*html*/ PROFILE.socialNetwork.youTube,
+                    url: /*html*/ PROFILE.socialNetworks.youTube,
                     icon: <IconYoutube />,
                   },
                   {
                     name: /*html*/ `Spotify`,
-                    url: /*html*/ PROFILE.socialNetwork.spotify,
+                    url: /*html*/ PROFILE.socialNetworks.spotify,
                     icon: <IconSpotify />,
                   },
                 ]}
@@ -668,7 +668,7 @@ const Home = () => (
               <p>
                 <a href={`mailto:${PROFILE.email}`}>{PROFILE.email}</a>
                 <br />
-                <a href={PROFILE.socialNetwork.linkedIn}>LinkedIn</a>
+                <a href={PROFILE.socialNetworks.linkedIn}>LinkedIn</a>
               </p>
             </article>
             <div className="u-vr--top-2-@xs"></div>

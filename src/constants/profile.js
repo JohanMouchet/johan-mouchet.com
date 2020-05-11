@@ -9,7 +9,7 @@ export const PROFILE = {
     x2: profileImageX2,
   },
   email: "mouchet.johan@gmail.com",
-  socialNetwork: {
+  socialNetworks: {
     linkedIn: `https://www.linkedin.com/in/johanmouchet`,
     twitter: `https://twitter.com/JohanMouchet`,
     codePen: `http://codepen.io/johanmouchet/`,
