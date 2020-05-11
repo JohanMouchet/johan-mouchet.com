@@ -514,6 +514,7 @@ const Home = () => (
                     projects: [
                       {
                         name: /*html*/ `Business Banking Insight`,
+                        tagline: /*html*/ `Discontinued`,
                         url: /*html*/ `http://www.businessbankinginsight.co.uk`,
                         lede: /*html*/ `Analysis website of business banking providers, supported by the <em>HR Treasury</em>.`,
                         thumbnailPath: require("assets/images/views/career-experiences/business-banking-insight.jpg"),
@@ -532,7 +533,7 @@ const Home = () => (
                       },
                       {
                         name: /*html*/ `Prince's trust`,
-                        tagline: /*html*/ `#partofPT campaign`,
+                        tagline: /*html*/ `#partofPT campaign (Over)`,
                         url: /*html*/ `https://partofpt.princes-trust.org.uk/part-of-pt/`,
                         lede: /*html*/ `Crowdsourced event listing microsite for the <em>Prince's Trust</em> 40th anniversary celebration.`,
                         thumbnailPath: require("assets/images/views/career-experiences/princes-trust.jpg"),
