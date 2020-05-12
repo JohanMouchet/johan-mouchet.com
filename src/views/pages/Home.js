@@ -91,7 +91,7 @@ const Home = () => (
               <Skills
                 skills={[
                   {
-                    label: /*html*/ `React & Redux`,
+                    label: /*html*/ `React`,
                     filling: 80,
                     tooltip: /*html*/ `8/10`,
                   },
@@ -126,10 +126,10 @@ const Home = () => (
                 Tools
               </Anchor>
               <p>
-                JAMstack, Headless CMS, Storybook, Jest, Enzyme, APIs, npm,
-                Webpack / Gulp, Git, CI / CD, ESlint, Stylelint, Prettier,
-                Zeplin, Responsive design, Performance, Accessibility, Web
-                Standards, SEO, Analytics, Atlassian suite, Agile, Open source
+                JAMstack, Storybook, Jest, Enzyme, Flow, Redux, CSS Modules,
+                Webpack / Gulp, npm, Headless CMS, APIs, Git, CI / CD, Linters,
+                Prettier, Zeplin, Responsive design, Accessibility, Performance,
+                SEO, Analytics, Atlassian suite, Agile, Open source
               </p>
             </article>
 
