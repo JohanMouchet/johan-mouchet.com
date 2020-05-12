@@ -3,13 +3,13 @@
 import * as React from "react";
 import { VERSIONS } from "constants/versions";
 import { PROFILE } from "constants/profile";
-import { ReactComponent as IconArrowDown } from "assets/images/icons/arrow-down.svg";
+import { IconArrowDown } from "views/objects";
 import "./MastFooter.scss";
 
 type Props = {
   version: string,
   copyright: string,
-  topButtonTitle: String,
+  topButtonTitle: string,
 };
 
 const MastFooter = ({

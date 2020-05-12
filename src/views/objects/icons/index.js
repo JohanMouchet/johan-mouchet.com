@@ -1,0 +1,12 @@
+export { ReactComponent as Icon500px } from "./simple-icons/500px.svg";
+export { ReactComponent as IconCodepen } from "./simple-icons/codepen.svg";
+export { ReactComponent as IconDribbble } from "./simple-icons/dribbble.svg";
+export { ReactComponent as IconGithub } from "./simple-icons/github.svg";
+export { ReactComponent as IconInstagram } from "./simple-icons/instagram.svg";
+export { ReactComponent as IconLinkedIn } from "./simple-icons/linkedin.svg";
+export { ReactComponent as IconSpotify } from "./simple-icons/spotify.svg";
+export { ReactComponent as IconTwitter } from "./simple-icons/twitter.svg";
+export { ReactComponent as IconUnsplash } from "./simple-icons/unsplash.svg";
+export { ReactComponent as IconYoutube } from "./simple-icons/youtube.svg";
+export { ReactComponent as IconArrowDown } from "./arrow-down.svg";
+export { ReactComponent as IconSearch } from "./search.svg";

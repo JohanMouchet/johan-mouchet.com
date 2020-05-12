@@ -10,6 +10,20 @@ export { default as Code } from "./code";
 export { default as Details } from "./details";
 export { default as Figure } from "./figure";
 export { default as File } from "./form/file/File";
+export {
+  Icon500px,
+  IconCodepen,
+  IconDribbble,
+  IconGithub,
+  IconInstagram,
+  IconLinkedIn,
+  IconSpotify,
+  IconTwitter,
+  IconUnsplash,
+  IconYoutube,
+  IconArrowDown,
+  IconSearch,
+} from "./icons";
 export { default as Label } from "./form/layout/Layout";
 export { default as List } from "./list";
 export { default as Loader } from "./loader";

@@ -1,7 +1,19 @@
 import * as React from "react";
 import { PROFILE } from "constants/profile";
 import { Default } from "views/layouts";
-import { Anchor } from "views/objects";
+import {
+  Anchor,
+  Icon500px,
+  IconCodepen,
+  IconDribbble,
+  IconGithub,
+  IconInstagram,
+  IconLinkedIn,
+  IconSpotify,
+  IconTwitter,
+  IconUnsplash,
+  IconYoutube,
+} from "views/objects";
 import {
   Skills,
   AcademicQualification,
@@ -9,16 +21,6 @@ import {
   Experiences,
   PersonalWorks,
 } from "views/components";
-import { ReactComponent as Icon500px } from "assets/images/icons/simple-icons/500px.svg";
-import { ReactComponent as IconCodepen } from "assets/images/icons/simple-icons/codepen.svg";
-import { ReactComponent as IconDribbble } from "assets/images/icons/simple-icons/dribbble.svg";
-import { ReactComponent as IconGithub } from "assets/images/icons/simple-icons/github.svg";
-import { ReactComponent as IconInstagram } from "assets/images/icons/simple-icons/instagram.svg";
-import { ReactComponent as IconLinkedIn } from "assets/images/icons/simple-icons/linkedin.svg";
-import { ReactComponent as IconSpotify } from "assets/images/icons/simple-icons/spotify.svg";
-import { ReactComponent as IconTwitter } from "assets/images/icons/simple-icons/twitter.svg";
-import { ReactComponent as IconUnsplash } from "assets/images/icons/simple-icons/unsplash.svg";
-import { ReactComponent as IconYoutube } from "assets/images/icons/simple-icons/youtube.svg";
 
 const Home = () => (
   <Default
