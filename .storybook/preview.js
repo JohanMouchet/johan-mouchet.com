@@ -1,6 +1,8 @@
-import { addParameters } from "@storybook/react";
+import React from 'react';
+import { addParameters, addDecorator } from "@storybook/react";
 import { BREAKPOINTS } from "../src/constants/breakpoints";
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
+import "assets/styles/_styles.scss";
 
 addParameters({
   viewport: {
@@ -52,3 +54,5 @@ addParameters({
     page: DocsPage,
   },
 });
+
+addDecorator(storyFn => <div className="container">{storyFn()}</div>);
