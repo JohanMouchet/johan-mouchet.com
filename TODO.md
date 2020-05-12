@@ -2,9 +2,9 @@
 
 ## Tech
 
-- Add components: List, Code, Table
 - Storybook
-  - Add all views
+  - Add tokens
+  - Add components: List, Code, Table
   - Expose to a new page .com/Storybook
 - Add Jest snapshots
 - Fix Tabs, Alert, Table Numerical column
