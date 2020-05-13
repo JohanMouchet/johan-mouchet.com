@@ -23,10 +23,8 @@ type Props = {
   ],
 };
 
-const Experiences = ({ experiences }: Props) => {
-  const today = new Date();
-
-  return !experiences ? null : (
+const Experiences = ({ experiences }: Props) =>
+  !experiences ? null : (
     <div className="c-experiences">
       {experiences.map((experience) => (
         <section
@@ -51,7 +49,7 @@ const Experiences = ({ experiences }: Props) => {
                 month: "short",
               })} ${experience.startDate.getFullYear()}`}
 
-              {experience.endDate.toDateString() === today.toDateString()
+              {experience.endDate.toDateString() === new Date().toDateString()
                 ? " – Present"
                 : [
                     (experience.endDate.getFullYear() >
@@ -85,6 +83,5 @@ const Experiences = ({ experiences }: Props) => {
       ))}
     </div>
   );
-};
 
 export default Experiences;

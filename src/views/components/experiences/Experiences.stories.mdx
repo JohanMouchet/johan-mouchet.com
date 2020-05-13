@@ -17,8 +17,8 @@ import Experiences from ".";
           },
           location: text("location", "location"),
           jobTitle: text("jobTitle", "jobTitle"),
-          startDate: date("startDate", new Date().getFullYear() - 1),
-          endDate: date("endDate", new Date()),
+          startDate: text("startDate", new Date()),
+          endDate: text("endDate", new Date()),
           lede: text("lede", "lede"),
         },
       ]}
