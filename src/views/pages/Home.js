@@ -280,8 +280,8 @@ const Home = () => (
                     },
                     location: /*html*/ `Melbourne`,
                     jobTitle: /*html*/ `Front-end developer`,
-                    startDate: new Date("2017/11/11"),
-                    endDate: new Date("2020/04/27"),
+                    startDate: new Date("2017-11-11"),
+                    endDate: new Date("2020-04-27"),
                     lede: /*html*/ `Global agency that delivers digital transformation powered by creativity, who believe in <em>Ideas Without Limits</em>, pushing the boundaries of technology and creativity.`,
                     projects: [
                       {
@@ -386,8 +386,8 @@ const Home = () => (
                     },
                     location: /*html*/ `London`,
                     jobTitle: /*html*/ `Front-end developer`,
-                    startDate: new Date("2016/11/14"),
-                    endDate: new Date("2017/10/19"),
+                    startDate: new Date("2016-11-14"),
+                    endDate: new Date("2017-10-19"),
                     lede: /*html*/ `Leading digital marketing, technology and commerce consultancy which delivers at a UK, pan-European and global level.`,
                     projects: [
                       {
@@ -471,8 +471,8 @@ const Home = () => (
                     },
                     location: /*html*/ `London`,
                     jobTitle: /*html*/ `Designer & Front-end developer & Marketing strategist`,
-                    startDate: new Date("2016/05/04"),
-                    endDate: new Date("2016/11/13"),
+                    startDate: new Date("2016-05-04"),
+                    endDate: new Date("2016-11-13"),
                     contractType: /*html*/ `Contractor`,
                     lede: /*html*/ `French leader in the training of marine and offshore personnel on safety at sea.`,
                     projects: [
@@ -513,8 +513,8 @@ const Home = () => (
                     },
                     location: /*html*/ `London`,
                     jobTitle: /*html*/ `Front-end developer`,
-                    startDate: new Date("2015/12/07"),
-                    endDate: new Date("2016/05/03"),
+                    startDate: new Date("2015-12-07"),
+                    endDate: new Date("2016-05-03"),
                     lede: /*html*/ `Award winning marketing agency which helps some of the world's most respected brands to strategically develop and implement marketing communications.`,
                     projects: [
                       {
@@ -584,8 +584,8 @@ const Home = () => (
                     },
                     location: /*html*/ `London`,
                     jobTitle: /*html*/ `Web designer & developer`,
-                    startDate: new Date("2014/07/09"),
-                    endDate: new Date("2015/10/01"),
+                    startDate: new Date("2014-07-09"),
+                    endDate: new Date("2015-10-01"),
                     lede: /*html*/ `Independent web marketing agency focused on Growth Hacking.<br /><br />Here are few of the websites I've designed and built using WordPress:`,
                     projects: [
                       {

@@ -68,7 +68,7 @@ const Experiences = ({ experiences }: Props) => {
             </span>
             <span className="c-experience__duration">
               {" "}
-              ({duration(experience.endDate, experience.startDate, "1 mo")})
+              ({duration(experience.startDate, experience.endDate, "1 mo")})
             </span>
             {experience.contractType && (
               <span className="c-experience__type">

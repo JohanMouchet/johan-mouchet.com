@@ -3,7 +3,7 @@
 import { differenceInCalendarMonths } from "date-fns";
 import pluralize from "utils/pluralize";
 
-const duration = (endDate: Date, startDate: Date, minimumLabel: string) => {
+const duration = (startDate: Date, endDate: Date, minimumLabel: string) => {
   if (startDate <= endDate) {
     const durationInMonths = differenceInCalendarMonths(endDate, startDate);
     const years = Math.floor(durationInMonths / 12);
@@ -20,7 +20,7 @@ const duration = (endDate: Date, startDate: Date, minimumLabel: string) => {
       yearsFormated + (yearsFormated && monthsFormated && " ") + monthsFormated
     );
   } else {
-    throw new Error("startDate must be earlier than endDate");
+    throw new Error("startDate must be anterior to endDate");
   }
 };
 
