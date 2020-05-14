@@ -4,6 +4,7 @@
 
 - Storybook
   - Add tokens
+  - Add fakker
   - Add components: List, Code, Table
   - Expose to a new page .com/Storybook
 - Add Jest snapshots
