@@ -1,0 +1,24 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { IconArrowDown, IconSearch } from ".";
+
+<Meta title="Objects/Icons" component={IconArrowDown} />
+
+# Icons - UI
+
+<Preview>
+  <Story name="UI">
+    {() => {
+      const icons = [<IconArrowDown />, <IconSearch />]
+
+      return (
+        <div className="grid">
+          {icons.map((icon) => (
+            <div className="cell cell--3-@xs cell--2-@sm cell--1-@md">
+              {icon}
+            </div>
+          ))}
+        </div>
+      )
+    }}
+  </Story>
+</Preview>
