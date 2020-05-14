@@ -9,7 +9,7 @@ type Props = {
       video?: boolean,
       url: string,
       thumbnailPath: string,
-      sourceIcon: Array<mixed>,
+      sourceIcon: React.Node,
     }
   ],
 };

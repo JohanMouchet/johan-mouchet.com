@@ -4,7 +4,7 @@ import * as React from "react";
 import { MastHeader, MastFooter } from "views/partials";
 import "assets/styles/_styles.scss";
 
-const Default = ({ children }) => (
+const Default = ({ children }: Node) => (
   <div className="l-layout">
     <div className="l-layout__background"></div>
     <div className="l-layout__inner">

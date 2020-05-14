@@ -54,7 +54,7 @@ const Projects = ({ projects }: Props) => {
             Key {pluralize("Achievement", project.achievements.length)}
           </b>
           <ul className="c-project__details-list">
-            {project.achievements.map((detail) => (
+            {project?.achievements?.map((detail) => (
               <li className="c-project__detail" key={parse(detail)}>
                 {parse(detail)}
               </li>
@@ -92,7 +92,7 @@ const Projects = ({ projects }: Props) => {
           project.highlight ? (
             <div
               className="cell cell--12-@xs"
-              key={project.name + project.tagline}
+              key={project.name + (project.tagline || "")}
             >
               <div className="c-project c-project--highlighted">
                 <div className="grid">
@@ -111,7 +111,7 @@ const Projects = ({ projects }: Props) => {
                 "cell--4-@lg": project.lede,
                 "cell--3-@lg": !project.lede,
               })}
-              key={project.name + project.tagline}
+              key={project.name + (project.tagline || "")}
             >
               <div className="c-project">
                 {renderThumbnail(project)}

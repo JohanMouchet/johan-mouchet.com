@@ -6,8 +6,8 @@ import parse from "utils/parse";
 import "./MastHeader.scss";
 
 type Props = {
-  firstname: string,
-  lastname: string,
+  firstName: string,
+  lastName: string,
   tagline: string,
 };
 
