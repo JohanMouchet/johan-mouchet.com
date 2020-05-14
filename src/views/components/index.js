@@ -1,4 +1,3 @@
-export { default as About } from "./about";
 export { default as AcademicQualification } from "./academic-qualification";
 export { default as Experiences } from "./experiences";
 export { default as PersonalWorks } from "./personal-works";

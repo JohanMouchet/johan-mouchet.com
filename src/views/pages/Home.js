@@ -21,6 +21,7 @@ import {
   Experiences,
   PersonalWorks,
 } from "views/components";
+import "./Home.scss";
 
 const Home = () => (
   <Default
