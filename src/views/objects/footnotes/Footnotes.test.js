@@ -1,7 +1,11 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Footnotes from ".";
+import { FootnotesReference, FootnotesNotes } from ".";
 
-it("Renders <Footnotes /> without crashing", () => {
-  shallow(<Footnotes />);
+it("Renders <FootnotesReference /> without crashing", () => {
+  shallow(<FootnotesReference />);
+});
+
+it("Renders <FootnotesNotes /> without crashing", () => {
+  shallow(<FootnotesNotes />);
 });
