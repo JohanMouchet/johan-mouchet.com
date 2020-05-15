@@ -10,7 +10,19 @@ import Menu from ".";
   <Story name="default">
     <Menu
       menu={[
-        { text: text("text", "text"), url: text("url", "url"), button: Button },
+        {
+          text: text("text", "text", "Item 1"),
+          url: text("url", "url", "Item 1"),
+        },
+        {
+          text: text("text", "text", "Item 2"),
+          menu: [
+            {
+              text: text("text", "text", "Item 2 - Submenu 1"),
+              url: text("url", "url", "Item 2 - Submenu 1"),
+            },
+          ],
+        },
       ]}
     />
   </Story>
