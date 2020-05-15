@@ -10,7 +10,7 @@ import Details from ".";
   <Story name="default">
     <Details
       summary={text("summary", "summary")}
-      variant={select("variant", { compact: "compact" })}
+      variant={select("variant", { "": null, compact: "compact" })}
     >
       {text("children", "children")}
     </Details>
