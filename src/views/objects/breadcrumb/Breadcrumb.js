@@ -16,8 +16,8 @@ type Props = {
 
 const Breadcrumb = ({ levels, className }: Props) => {
   const classNames = cx("o-breadcrumb", className);
+  const lastLevel = levels?.length - 1;
 
-  const lastLevel = levels.length - 1;
   return !levels ? null : (
     <>
       <ol className={classNames}>
@@ -29,7 +29,7 @@ const Breadcrumb = ({ levels, className }: Props) => {
           >
             <a
               className="o-breadcrumb__link"
-              {...(!lastLevel && level.url && { href: level.url })}
+              href={index !== lastLevel && level.url}
             >
               {level.title}
             </a>
