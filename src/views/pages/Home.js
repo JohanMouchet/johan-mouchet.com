@@ -290,7 +290,7 @@ const Home = () => (
                         name: /*html*/ `Jetstar`,
                         url: /*html*/ `https://www.jetstar.com/au/en/home`,
                         lede: /*html*/ `Modernisation, development of new features and upkeep of Jetstar's international website in an Agile environment.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/jetstar.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/jetstar.jpg"),
                         achievements: [
                           /*html*/ `Participated in the migration of the <a href="https://www.jetstar.com/au/en/flights"><em>Flight Search</em></a> experience to React & Redux for faster and extensive results: increased conversion by 1.3% on the <em>Cheap Flights</em> pages.`,
                           /*html*/ `Contributed to the creation of a landing page to promote Jetstar <a href="https://www.jetstar.com/au/en/creditcards"><em>Credit Cards</em></a>: surpassed the conversion target by 230% in the first month of launch.`,
@@ -321,7 +321,7 @@ const Home = () => (
                         tagline: /*html*/ `CatVR: Safe Cat, Safe Wildlife`,
                         url: /*html*/ `http://www.safecat.org.au`,
                         lede: /*html*/ `Joint <em>RSPCA</em> campaign website to help cat owners give their pet the safest and happiest life while ensuring they have no link to loss of wildlife.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/zoos-victoria.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/zoos-victoria.jpg"),
                         achievements: [
                           /*html*/ `Developed a community submissible forms with client side validation.`,
                           /*html*/ `Integrated social media sharing.`,
@@ -345,7 +345,7 @@ const Home = () => (
                         name: /*html*/ `Klip Studio`,
                         url: /*html*/ `https://www.klipdesk.co`,
                         lede: /*html*/ `Web application dedicated to the sport rights holders industry. Allows to edit live or recorded streams to produce highlights shareable on social media.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/klip-studio.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/klip-studio.jpg"),
                         achievements: [
                           /*html*/ `Developed content tagging, filtering and sorting features.`,
                           /*html*/ `Integrated audience engagement tracking through social media APIs.`,
@@ -368,7 +368,7 @@ const Home = () => (
                         tagline: /*html*/ `Asia`,
                         url: /*html*/ `https://www.pearson.com/asia/`,
                         lede: /*html*/ `Websites creation related to education for Pearson’s launch in three new markets through Asia.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/pearson.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/pearson.jpg"),
                         achievements: [
                           /*html*/ `Participated to content authoring.`,
                           /*html*/ `Modified components to suit market.`,
@@ -397,7 +397,7 @@ const Home = () => (
                         tagline: /*html*/ `v11`,
                         url: /*html*/ `https://www.lexus.eu/en/`,
                         lede: /*html*/ `Website redesign to embody the new brand direction focused on a premium and lifestyle experience. Deployed into 35 countries of the European market and translated into 27 languages.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/lexus.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/lexus.jpg"),
                         achievements: [
                           /*html*/ `Developed multiple responsive components following AAA accessibility standard.`,
                           /*html*/ `Contributed to develop a <a href="https://www.lexus.co.uk/forms/find-a-centre">module</a> that uses the browser Geolocation and Google Maps' APIs to locate the nearest Lexus dealer.`,
@@ -427,7 +427,7 @@ const Home = () => (
                         tagline: /*html*/ `Safety System Plus`,
                         url: /*html*/ `https://www.lexus.eu/discover-lexus/technology/lexus-safety-system/`,
                         lede: /*html*/ `Microsite creation to showcase <em>Lexus' Safety System Plus</em> technology.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/lexus-safety-system-plus.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/lexus-safety-system-plus.jpg"),
                         achievements: [
                           /*html*/ `Integrated fullPage.js for a single-page design.`,
                           /*html*/ `Created advanced multi layers CSS animations.`,
@@ -447,7 +447,7 @@ const Home = () => (
                         tagline: /*html*/ `Lowrance`,
                         url: /*html*/ `https://www.lowrance.com/`,
                         lede: /*html*/ `Delivery within a short turnaround of a global eCommerce website for a manufacturer of consumer marine electronics.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/lowrance.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/lowrance.jpg"),
                         achievements: [
                           /*html*/ `Developed multiple responsive components following AAA accessibility standard.`,
                         ],
@@ -482,7 +482,7 @@ const Home = () => (
                         name: /*html*/ `Survie Mer Formation`,
                         url: /*html*/ `https://www.surviemerformation.com/`,
                         lede: /*html*/ `Redesign, development and marketing strategy aimed at increasing acquisition and conversion rate.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/survie-mer-formation.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/survie-mer-formation.jpg"),
                         achievements: [
                           /*html*/ `Designed a Growth Hacking strategy following the AARRR model: increased conversion by 12.6%.`,
                           /*html*/ `Refreshed the UI with a new brand identity, responsive design and cross-browser compatibility.`,
@@ -523,7 +523,7 @@ const Home = () => (
                         tagline: /*html*/ `Discontinued`,
                         url: /*html*/ `http://www.businessbankinginsight.co.uk`,
                         lede: /*html*/ `Analysis website of business banking providers, supported by the <em>HR Treasury</em>.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/business-banking-insight.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/business-banking-insight.jpg"),
                         achievements: [
                           /*html*/ `Developed tables with filtering and sorting capabilities.`,
                           /*html*/ `Created dynamic graphics with amCharts.`,
@@ -542,7 +542,7 @@ const Home = () => (
                         tagline: /*html*/ `#partofPT campaign (Over)`,
                         url: /*html*/ `https://partofpt.princes-trust.org.uk/part-of-pt/`,
                         lede: /*html*/ `Crowdsourced event listing microsite for the <em>Prince's Trust</em> 40th anniversary celebration.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/princes-trust.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/princes-trust.jpg"),
                         achievements: [
                           /*html*/ `Developed multiple UI components.`,
                           /*html*/ `Integrated Hashtagd APIs to create a wall of social media content.`,
@@ -562,7 +562,7 @@ const Home = () => (
                         tagline: /*html*/ `#Skipathon campaign (Over)`,
                         url: /*html*/ `https://www.youtube.com/watch?v=3PyZVDrO_aI`,
                         lede: /*html*/ `Mobile web browser game based on rope skipping.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/sport-relief-skipathon.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/sport-relief-skipathon.jpg"),
                         achievements: [
                           /*html*/ `Created HTML5 canvas and CSS3 animations: <a href="https://codepen.io/johanmouchet/pen/OMgwMg">PoC</a>`,
                           /*html*/ `Ensured iOS and Android default browser support`,
@@ -592,22 +592,22 @@ const Home = () => (
                       {
                         name: /*html*/ `Weholite`,
                         url: /*html*/ `http://www.weholite.co.uk/`,
-                        thumbnailPath: require("assets/images/views/career-experiences/weholite.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/weholite.jpg"),
                       },
                       {
                         name: /*html*/ `Hiremech`,
                         url: /*html*/ `http://www.hiremech.co.uk/`,
-                        thumbnailPath: require("assets/images/views/career-experiences/hiremech.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/hiremech.jpg"),
                       },
                       {
                         name: /*html*/ `Global Materials Handling`,
                         url: /*html*/ `http://globalforktrucks.com/`,
-                        thumbnailPath: require("assets/images/views/career-experiences/global-materials-handling.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/global-materials-handling.jpg"),
                       },
                       {
                         name: /*html*/ `Proton Motor`,
                         url: /*html*/ `http://www.proton-motor.com/`,
-                        thumbnailPath: require("assets/images/views/career-experiences/proton-motor.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/proton-motor.jpg"),
                       },
                     ],
                   },
@@ -630,32 +630,32 @@ const Home = () => (
               <PersonalWorks
                 works={[
                   {
-                    thumbnailPath: /*html*/ `https://source.unsplash.com/6Y23pU8xyHU/200x200`,
+                    thumbnailSrc: /*html*/ `https://source.unsplash.com/6Y23pU8xyHU/200x200`,
                     url: /*html*/ `https://unsplash.com/photos/6Y23pU8xyHU`,
                     sourceIcon: <IconUnsplash />,
                   },
                   {
-                    thumbnailPath: /*html*/ `https://source.unsplash.com/m9VIwiyzGSc/200x200`,
+                    thumbnailSrc: /*html*/ `https://source.unsplash.com/m9VIwiyzGSc/200x200`,
                     url: /*html*/ `https://unsplash.com/photos/m9VIwiyzGSc`,
                     sourceIcon: <IconUnsplash />,
                   },
                   {
-                    thumbnailPath: /*html*/ `https://source.unsplash.com/hLXsjf0dGgo/200x200`,
+                    thumbnailSrc: /*html*/ `https://source.unsplash.com/hLXsjf0dGgo/200x200`,
                     url: /*html*/ `https://unsplash.com/photos/hLXsjf0dGgo`,
                     sourceIcon: <IconUnsplash />,
                   },
                   {
-                    thumbnailPath: /*html*/ `https://source.unsplash.com/JjEZKXTGPio/200x200`,
+                    thumbnailSrc: /*html*/ `https://source.unsplash.com/JjEZKXTGPio/200x200`,
                     url: /*html*/ `https://unsplash.com/photos/JjEZKXTGPio`,
                     sourceIcon: <IconUnsplash />,
                   },
                   {
-                    thumbnailPath: /*html*/ `https://source.unsplash.com/sTBdWFQKDHE/200x200`,
+                    thumbnailSrc: /*html*/ `https://source.unsplash.com/sTBdWFQKDHE/200x200`,
                     url: /*html*/ `https://unsplash.com/photos/sTBdWFQKDHE`,
                     sourceIcon: <IconUnsplash />,
                   },
                   {
-                    thumbnailPath: require("assets/images/views/personal-works/south-cost-of-england.jpg"),
+                    thumbnailSrc: require("assets/images/views/personal-works/south-cost-of-england.jpg"),
                     url: /*html*/ `https://youtu.be/NAsS1T_V8-k`,
                     sourceIcon: <IconYoutube />,
                   },

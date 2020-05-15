@@ -8,6 +8,8 @@ import { Textarea } from ".";
 
 <Preview>
   <Story name="default">
-    <Textarea id={text("id", "id")} name={text("name", "name")} />
+    <Textarea id={text("id", "id")} name={text("name", "name")}>
+      {text("children", "children")}
+    </Textarea>
   </Story>
 </Preview>

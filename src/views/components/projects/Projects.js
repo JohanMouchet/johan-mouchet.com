@@ -15,7 +15,7 @@ type Props = {
       tagline?: string,
       url: string,
       lede: string,
-      thumbnailPath: string,
+      thumbnailSrc: string,
       achievements?: Array<string>,
       architecture?: Array<string>,
       libraries?: Array<string>,
@@ -29,7 +29,7 @@ const Projects = ({ projects }: Props) => {
       <a href={project.url} className="c-project__link">
         <img
           className="c-project__thumbnail"
-          src={project.thumbnailPath}
+          src={project.thumbnailSrc}
           alt={project.name}
           loading="lazy"
         />
