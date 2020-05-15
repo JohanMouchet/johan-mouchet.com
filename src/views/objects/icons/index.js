@@ -8,5 +8,5 @@ export { ReactComponent as IconSpotify } from "./svg/simple-icons/spotify.svg";
 export { ReactComponent as IconTwitter } from "./svg/simple-icons/twitter.svg";
 export { ReactComponent as IconUnsplash } from "./svg/simple-icons/unsplash.svg";
 export { ReactComponent as IconYoutube } from "./svg/simple-icons/youtube.svg";
-export { ReactComponent as IconArrowDown } from "./svg/arrow-down.svg";
-export { ReactComponent as IconSearch } from "./svg/search.svg";
+export { ReactComponent as IconChevronDown } from "./svg/bootstrap/chevron-down.svg";
+export { ReactComponent as IconSearch } from "./svg/bootstrap/search.svg";

@@ -174,8 +174,8 @@
   /*** Icon ***/
   &__icon {
     svg {
-      height: 1.2em;
-      width: 1.2em;
+      height: t-modular-scale(1);
+      width: t-modular-scale(1);
       vertical-align: text-top;
     }
 

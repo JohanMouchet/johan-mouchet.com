@@ -3,7 +3,7 @@
 import * as React from "react";
 import { VERSIONS } from "constants/versions";
 import { PROFILE } from "constants/profile";
-import { IconArrowDown } from "views/objects";
+import { IconChevronDown } from "views/objects";
 import "./MastFooter.scss";
 
 type Props = {
@@ -42,7 +42,7 @@ const MastFooter = ({
               href="#page-top"
               title={topButtonTitle}
             >
-              <IconArrowDown />
+              <IconChevronDown />
             </a>
           </div>
         </div>

@@ -21,7 +21,7 @@ export {
   IconTwitter,
   IconUnsplash,
   IconYoutube,
-  IconArrowDown,
+  IconChevronDown,
   IconSearch,
 } from "./icons";
 export { default as Label } from "./form/layout/Layout";
