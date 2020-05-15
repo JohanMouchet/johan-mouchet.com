@@ -7,6 +7,7 @@
   - Add fakker
   - Add components: List, Code, Table
   - Expose to a new page .com/Storybook
+- Replace wow.js
 - Add Jest snapshots
 - Fix Tabs, Alert, Table Numerical column
 - Convert `js-`
