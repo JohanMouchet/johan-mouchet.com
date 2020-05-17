@@ -36,6 +36,16 @@
 }
 
 /**
+ * Shadow
+ *
+ * @param {string} shadow-name
+ *
+ * @example box-shadow: t-shadow(shadow-name);
+ */
+@function t-shadow($shadow-name) {
+  @return map-get($s-shadows, $shadow-name);
+}
+
 /**
  * Background
  *
