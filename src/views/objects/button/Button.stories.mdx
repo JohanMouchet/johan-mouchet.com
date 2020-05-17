@@ -18,7 +18,6 @@ import { Button } from ".";
       url={text("url", "url")}
       variant={select("variant", {
         "": null,
-        variant: "variant",
         primary: "primary",
         secondary: "secondary",
       })}
@@ -29,6 +28,7 @@ import { Button } from ".";
       })}
       block={select("block", {
         "": null,
+        "true": true,
         "@sm": "@sm",
         "@md": "@md",
       })}

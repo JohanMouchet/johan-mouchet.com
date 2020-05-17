@@ -9,10 +9,9 @@ import Alert from ".";
 <Preview>
   <Story name="default">
     <Alert
-      hidden={boolean("hidden", true)}
+      hidden={boolean("hidden", false)}
       closable={boolean("closable", true)}
       variant={select("variant", {
-        "": null,
         info: "info",
         success: "success",
         warning: "warning",
