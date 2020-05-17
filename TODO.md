@@ -4,7 +4,7 @@
 
 - Storybook
   - Add tokens
-  - Add fakker
+  - Add faker
   - Add components: List, Code, Table
   - Expose to a new page .com/Storybook
 - Replace wow.js

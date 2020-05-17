@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import cx from "classnames";
+import { IconX } from "views/objects";
 import "./Notice.scss";
 
 type Props = {
@@ -29,7 +30,7 @@ const Notice = ({
   return (
     <div className={classNames}>
       <div className="container container--lg">
-        <div className="grid grid--yCenter-@xs">
+        <div className="grid grid--yCenter-@xs grid--noWrap-@xs">
           <div className="cell cell--@xs">
             <div className="o-notice__primary">{children}</div>
           </div>
@@ -41,7 +42,7 @@ const Notice = ({
           {closeButton && (
             <div className="cell cell--0-@xs">
               <button className="o-notice__close js-notice-close">
-                &#x2716;
+                <IconX />
               </button>
             </div>
           )}

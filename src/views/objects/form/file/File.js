@@ -35,7 +35,7 @@ const File = ({
         }
         {...attributes}
       />
-      <i className="material-icons">file_upload</i>
+      {/* TODO: file_upload */}
       {children && (
         <span className="o-form__file-text js-form-file-text">{children}</span>
       )}

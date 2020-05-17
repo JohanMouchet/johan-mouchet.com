@@ -1979,9 +1979,6 @@ const StyleGuide = () => (
                 <code>.o-alert</code>. To show with{" "}
                 <code>&amp;.is--visible</code>
               </p>
-              <p>
-                <em>Optional:</em> <code>&gt; .material-icons</code>
-              </p>
 
               <h3>
                 Success <code>&amp;.o-alert--success</code>

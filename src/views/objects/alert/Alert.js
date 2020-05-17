@@ -2,6 +2,13 @@
 
 import * as React from "react";
 import cx from "classnames";
+import {
+  IconCheckCircle,
+  IconExclamationCircle,
+  IconExclamationTriangle,
+  IconInfoCircle,
+  IconX,
+} from "views/objects";
 import "./Alert.scss";
 
 type Props = {
@@ -30,22 +37,24 @@ const Alert = ({
 
   const getIcon = (variant) => {
     if (variant === "info") {
-      return "info";
+      return <IconInfoCircle />;
     } else if (variant === "success") {
-      return "check_circle";
+      return <IconCheckCircle />;
     } else if (variant === "warning") {
-      return "warning";
+      return <IconExclamationTriangle />;
     } else if (variant === "danger") {
-      return "error";
+      return <IconExclamationCircle />;
     }
   };
 
   return (
     <div className={classNames}>
-      <i className="o-alert__icon material-icons">{getIcon(variant)}</i>
+      <span className="o-alert__icon">{getIcon(variant)}</span>
       <div className="o-alert__content">{children}</div>
       {closable && (
-        <button className="o-alert__close js-alert-close">&#x2716;</button>
+        <button className="o-alert__close js-alert-close">
+          <IconX />
+        </button>
       )}
     </div>
   );

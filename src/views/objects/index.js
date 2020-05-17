@@ -21,8 +21,15 @@ export {
   IconTwitter,
   IconUnsplash,
   IconYoutube,
+  IconArrowReturn,
+  IconCheckCircle,
   IconChevronDown,
+  IconCloudUpload,
+  IconExclamationCircle,
+  IconExclamationTriangle,
+  IconInfoCircle,
   IconSearch,
+  IconX,
 } from "./icons";
 export { default as Label } from "./form/layout/Layout";
 export { default as List } from "./list";

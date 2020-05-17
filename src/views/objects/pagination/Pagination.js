@@ -45,7 +45,6 @@
 
 //   const classNames = cx(
 //     "o-pagination__icon",
-//     "material-icons",
 //     "wow",
 //     (first || prev) && "fadeInLeft",
 //     (next || last) && "fadeInRight"

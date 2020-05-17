@@ -51,14 +51,14 @@
 
   /*** Search ***/
   &--search {
-    background-image: url("#{t-path(icons)}/bootstrap/search.svg");
+    background-image: url("#{t-path(icons)}/ui/search.svg");
   }
 
   /*** Select ***/
   /* stylelint-disable-next-line no-descending-specificity */
   &--select {
     &:not([multiple]) {
-      background-image: url("#{t-path(icons)}/bootstrap/chevron-down.svg");
+      background-image: url("#{t-path(icons)}/ui/chevron-down.svg");
     }
 
     &[multiple] {

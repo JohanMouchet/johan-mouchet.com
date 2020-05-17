@@ -35,5 +35,10 @@
     @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
 
     cursor: pointer;
+
+    svg {
+      font-size: t-modular-scale(1);
+      vertical-align: middle;
+    }
   }
 }

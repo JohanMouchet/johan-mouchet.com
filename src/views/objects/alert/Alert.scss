@@ -11,10 +11,13 @@
 
   /* Icon */
   &__icon {
-    flex: 0 1 auto;
+    flex: 0 0 auto;
     margin-right: 1em;
-    font-size: t-modular-scale(2);
-    line-height: 1.25;
+
+    svg {
+      font-size: t-modular-scale(1);
+      vertical-align: middle;
+    }
   }
 
   /* Content */
@@ -41,9 +44,14 @@
 
     @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
 
-    flex: 0 1 auto;
+    flex: 0 0 auto;
     margin-left: 1em;
     cursor: pointer;
+
+    svg {
+      font-size: t-modular-scale(1);
+      vertical-align: middle;
+    }
   }
 
   /** Active **/

@@ -24,4 +24,13 @@
       margin-bottom: t-vertical-rhythm(1);
     }
   }
+
+  &__backref {
+    text-decoration: none;
+
+    svg {
+      font-size: t-modular-scale(1);
+      vertical-align: middle;
+    }
+  }
 }
