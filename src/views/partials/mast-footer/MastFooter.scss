@@ -3,7 +3,7 @@
 
 .p-mast-footer {
   padding: t-vertical-rhythm(1.2) 0;
-  background: t-ui(pattern, dots),
+  background: t-background(dots),
     url("#{t-path(theme)}/footer.jpg") right center/cover no-repeat
       $s-color-primary;
   letter-spacing: 0.1em;

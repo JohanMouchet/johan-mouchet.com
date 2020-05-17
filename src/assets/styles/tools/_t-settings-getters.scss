@@ -36,12 +36,13 @@
 }
 
 /**
- * User Interface
+/**
+ * Background
  *
- * @param {string} property-name
+ * @param {string} background-name
  *
- * @example border-radius: t-ui(property-name);
+ * @example background: t-background(background-name);
  */
-@function t-ui($property...) {
-  @return t-map-deep-get($s-ui, $property...);
+@function t-background($background-name) {
+  @return map-get($s-backgrounds, $background-name);
 }

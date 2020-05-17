@@ -16,7 +16,7 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background-image: t-ui(pattern, dots),
+      background-image: t-background(dots),
         linear-gradient(
           rgba($s-color-primary-lighter, 0.7),
           rgba($s-color-primary-darker, 0.9)
