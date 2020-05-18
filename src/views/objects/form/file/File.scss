@@ -1,8 +1,21 @@
+@import "assets/styles/settings/_settings";
+@import "assets/styles/tools/_tools";
 // @import "assets/styles/utilities/_utilities";
 
 .o-form__file {
   &-input {
     // TODO: find a way to import single utility
     // @extend .u-is--visuallyHidden;
+  }
+
+  &-icon {
+    svg {
+      font-size: t-modular-scale(1);
+      vertical-align: middle;
+    }
+  }
+
+  &-text {
+    margin-left: 0.5em;
   }
 }
