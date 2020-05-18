@@ -1,6 +1,7 @@
 // @flow
 
 import * as React from "react";
+import { useState } from "react";
 import cx from "classnames";
 import {
   IconCheckCircle,
@@ -12,25 +13,30 @@ import {
 import "./Alert.scss";
 
 type Props = {
-  hidden: boolean,
+  isOpen?: boolean,
   closable?: boolean,
   variant?: "info" | "success" | "warning" | "danger",
+  position?: "fixed-bottom" | "fixed-bottom-right",
   className?: string | Array<string> | Object,
   children: Node,
 };
 
 const Alert = ({
-  hidden,
+  isOpen = true,
   closable,
   variant = "info",
+  position,
   className,
   children,
 }: Props) => {
+  const [open, setOpenState] = useState(isOpen);
+
   const classNames = cx(
     "o-alert",
+    closable && "o-alert--closable",
     variant && `o-alert--${variant}`,
-    !hidden && "is--visible",
-    closable && "js-alert",
+    position && `o-alert--${position}`,
+    "container",
     "wow",
     className
   );
@@ -48,15 +54,25 @@ const Alert = ({
   };
 
   return (
-    <div className={classNames}>
-      <span className="o-alert__icon">{getIcon(variant)}</span>
-      <div className="o-alert__content">{children}</div>
-      {closable && (
-        <button className="o-alert__close js-alert-close">
-          <IconX />
-        </button>
-      )}
-    </div>
+    open && (
+      <div className={classNames}>
+        <div className="grid grid--noWrap-@xs">
+          <div className="o-alert__icon cell">{getIcon(variant)}</div>
+          <div className="o-alert__content cell cell--@xs">{children}</div>
+          {closable && (
+            <div className="o-alert__close cell">
+              <button
+                className="o-alert__close-button"
+                aria-label="Close"
+                onClick={() => setOpenState(!open)}
+              >
+                <IconX />
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    )
   );
 };
 

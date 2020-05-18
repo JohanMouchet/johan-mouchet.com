@@ -35,7 +35,6 @@ export { default as Label } from "./form/layout/Layout";
 export { default as List } from "./list";
 export { default as Loader } from "./loader";
 export { default as Menu } from "./menu";
-export { default as Notice } from "./notice";
 export { default as Pagination } from "./pagination";
 export { default as ProgressBar } from "./progress-bar";
 export { default as Range } from "./form/range/Range";

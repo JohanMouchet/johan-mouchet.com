@@ -2,17 +2,24 @@
 @import "assets/styles/tools/_tools";
 
 .o-alert {
-  display: none;
   align-items: flex-start;
-  margin: t-vertical-rhythm(1) 1em;
-  padding: t-vertical-rhythm(0.75) 1em;
+  margin: t-vertical-rhythm(1) 0;
+  padding: t-vertical-rhythm(0.75) ($grid-gutter / 2);
   border-left: 2px solid;
   background-color: $s-color-gray-lighter;
+  animation: alert-animation 0.3s ease-out both;
+
+  /* Animation */
+  @keyframes alert-animation {
+    from {
+      opacity: 0;
+      transform: translateY(t-vertical-rhythm(1));
+    }
+  }
 
   /* Icon */
   &__icon {
-    flex: 0 0 auto;
-    margin-right: 1em;
+    flex-shrink: 0;
 
     svg {
       font-size: t-modular-scale(1);
@@ -22,8 +29,7 @@
 
   /* Content */
   &__content {
-    flex: 1 1 auto;
-    align-self: center;
+    padding-left: 0;
 
     *:first-child {
       margin-top: 0;
@@ -36,39 +42,27 @@
 
   /* Close */
   &__close {
-    background-color: transparent;
-    border: 0;
-    padding: 0;
-    outline: 0;
-    all: unset;
+    flex-shrink: 0;
 
-    @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
+    &-button {
+      background-color: transparent;
+      border: 0;
+      padding: 0;
+      outline: 0;
+      all: unset;
 
-    flex: 0 0 auto;
-    margin-left: 1em;
-    cursor: pointer;
+      @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
 
-    svg {
-      font-size: t-modular-scale(1);
-      vertical-align: middle;
-    }
-  }
+      cursor: pointer;
 
-  /** Active **/
-  &.is--visible {
-    display: flex;
-    animation: alert-is-visible-animation 0.3s ease-out both;
-
-    /*** Animation ***/
-    @keyframes alert-is-visible-animation {
-      from {
-        opacity: 0;
-        transform: translateY(2em);
+      svg {
+        font-size: t-modular-scale(1);
+        vertical-align: middle;
       }
     }
   }
 
-  /** States **/
+  /* Variants */
   &--success {
     border-color: $s-color-success;
   }
@@ -106,6 +100,29 @@
   &--danger & {
     &__icon {
       color: $s-color-danger;
+    }
+  }
+
+  &--closable & {
+    &__content {
+      padding-right: 0;
+    }
+  }
+
+  &--fixed-bottom,
+  &--fixed-bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 0;
+    box-shadow: t-shadow(md);
+    z-index: t-layer(alert);
+  }
+
+  &--fixed-bottom-right {
+    @media (min-width: t-breakpoint(sm)) {
+      max-width: t-breakpoint(sm);
+      margin-right: $grid-gutter;
     }
   }
 }

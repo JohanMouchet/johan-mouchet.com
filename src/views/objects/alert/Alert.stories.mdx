@@ -9,13 +9,18 @@ import Alert from ".";
 <Preview>
   <Story name="default">
     <Alert
-      hidden={boolean("hidden", false)}
+      isOpen={boolean("isOpen", true)}
       closable={boolean("closable", true)}
       variant={select("variant", {
         info: "info",
         success: "success",
         warning: "warning",
         danger: "danger",
+      })}
+      position={select("position", {
+        "": null,
+        "fixed-bottom": "fixed-bottom",
+        "fixed-bottom-right": "fixed-bottom-right",
       })}
     >
       {text("children", "children")}
