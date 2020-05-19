@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Layout /> without crashing 1`] = `
+<label
+  className="o-form__label o-form__label--block"
+>
+  &nbsp;
+</label>
+`;

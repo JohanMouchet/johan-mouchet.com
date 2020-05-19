@@ -3,5 +3,5 @@ import { shallow } from "enzyme";
 import List from ".";
 
 it("Renders <List /> without crashing", () => {
-  shallow(<List />);
+  expect(shallow(<List />)).toMatchSnapshot();
 });

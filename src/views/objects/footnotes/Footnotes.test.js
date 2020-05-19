@@ -3,9 +3,9 @@ import { shallow } from "enzyme";
 import { FootnotesReference, FootnotesNotes } from ".";
 
 it("Renders <FootnotesReference /> without crashing", () => {
-  shallow(<FootnotesReference />);
+  expect(shallow(<FootnotesReference />)).toMatchSnapshot();
 });
 
 it("Renders <FootnotesNotes /> without crashing", () => {
-  shallow(<FootnotesNotes />);
+  expect(shallow(<FootnotesNotes />)).toMatchSnapshot();
 });

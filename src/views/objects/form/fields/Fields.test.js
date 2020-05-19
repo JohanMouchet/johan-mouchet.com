@@ -3,13 +3,13 @@ import { shallow } from "enzyme";
 import { Field, Select, Textarea } from ".";
 
 it("Renders <Field /> without crashing", () => {
-  shallow(<Field />);
+  expect(shallow(<Field />)).toMatchSnapshot();
 });
 
 it("Renders <Select /> without crashing", () => {
-  shallow(<Select />);
+  expect(shallow(<Select />)).toMatchSnapshot();
 });
 
 it("Renders <Textarea /> without crashing", () => {
-  shallow(<Textarea />);
+  expect(shallow(<Textarea />)).toMatchSnapshot();
 });

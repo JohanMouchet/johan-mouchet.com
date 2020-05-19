@@ -3,5 +3,5 @@ import { shallow } from "enzyme";
 import PersonalWorks from ".";
 
 it("Renders <PersonalWorks /> without crashing", () => {
-  shallow(<PersonalWorks />);
+  expect(shallow(<PersonalWorks />)).toMatchSnapshot();
 });

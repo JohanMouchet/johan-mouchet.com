@@ -3,5 +3,5 @@ import { shallow } from "enzyme";
 import AcademicQualification from ".";
 
 it("Renders <AcademicQualification /> without crashing", () => {
-  shallow(<AcademicQualification />);
+  expect(shallow(<AcademicQualification />)).toMatchSnapshot();
 });

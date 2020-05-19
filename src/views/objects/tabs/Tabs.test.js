@@ -3,5 +3,5 @@ import { shallow } from "enzyme";
 import Tabs from ".";
 
 it("Renders <Tabs /> without crashing", () => {
-  shallow(<Tabs />);
+  expect(shallow(<Tabs />)).toMatchSnapshot();
 });

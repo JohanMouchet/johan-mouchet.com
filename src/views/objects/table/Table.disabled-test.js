@@ -3,5 +3,5 @@ import { shallow } from "enzyme";
 import Table from ".";
 
 it("Renders <Table /> without crashing", () => {
-  shallow(<Table />);
+  expect(shallow(<Table />)).toMatchSnapshot();
 });

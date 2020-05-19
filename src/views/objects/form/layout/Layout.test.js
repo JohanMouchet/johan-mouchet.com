@@ -3,5 +3,5 @@ import { shallow } from "enzyme";
 import Layout from ".";
 
 it("Renders <Layout /> without crashing", () => {
-  shallow(<Layout />);
+  expect(shallow(<Layout />)).toMatchSnapshot();
 });

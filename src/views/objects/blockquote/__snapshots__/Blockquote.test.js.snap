@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Blockquote /> without crashing 1`] = `
+<blockquote
+  className="o-blockquote wow"
+>
+  <div
+    className="o-blockquote__quotes"
+  />
+</blockquote>
+`;

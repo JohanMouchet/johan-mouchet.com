@@ -3,9 +3,9 @@ import { shallow } from "enzyme";
 import { Checkbox, Radio } from ".";
 
 it("Renders <Checkbox /> without crashing", () => {
-  shallow(<Checkbox />);
+  expect(shallow(<Checkbox />)).toMatchSnapshot();
 });
 
 it("Renders <Radio /> without crashing", () => {
-  shallow(<Radio />);
+  expect(shallow(<Radio />)).toMatchSnapshot();
 });

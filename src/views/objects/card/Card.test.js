@@ -3,5 +3,5 @@ import { shallow } from "enzyme";
 import Card from ".";
 
 it("Renders <Card /> without crashing", () => {
-  shallow(<Card />);
+  expect(shallow(<Card />)).toMatchSnapshot();
 });

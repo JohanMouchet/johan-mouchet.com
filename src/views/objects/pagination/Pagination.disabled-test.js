@@ -3,5 +3,5 @@ import { shallow } from "enzyme";
 import Pagination from ".";
 
 it("Renders <Pagination /> without crashing", () => {
-  shallow(<Pagination />);
+  expect(shallow(<Pagination />)).toMatchSnapshot();
 });
