@@ -4,18 +4,19 @@
 
 - Storybook
   - Add tokens
-  - Add faker
+  - Capitalize Knobs
   - Add components: List, Code, Table
   - Expose to a new page .com/Storybook
 - Replace wow.js
-- Add Jest snapshots
-- Fix Tabs, Alert, Table Numerical column
+- Fix Tabs, Table Numerical column
 - Convert `js-`
 - Add id to body `<body id={`page-\${metadata.id}`}>`
-- Remove `.html` legacy files
-- Keep Sass prefix `t-`, explore `@use`?
+- Remove `src/views/**/*.html` legacy files
 - Address all `// TODO`
-- Convert to CSS Modules / Emotion?
+- Add Strapi
+
+- ? Remove Sass prefixes `t-`, explore `@use`
+- ? Convert to CSS Modules / Emotion
 
 ## Design
 
@@ -25,4 +26,4 @@
 
 ## Content
 
-- Open Source: GitHub, Codepen?
+- ? Open Source: GitHub, Codepen
