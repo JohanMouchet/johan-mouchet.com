@@ -12,26 +12,25 @@ import Projects from ".";
       projects={[
         {
           highlight: boolean("highlight", true),
-          name: text("name", "name"),
-          tagline: text("tagline", "tagline"),
-          url: text("url", "url"),
-          lede: text("lede", "lede"),
-          thumbnailSrc: text("thumbnailSrc", "thumbnailSrc"),
+          name: text("name", "Name"),
+          tagline: text("tagline", "Tagline"),
+          url: text("url", "#"),
+          lede: text("lede", "Lede"),
+          thumbnailSrc: text(
+            "thumbnailSrc",
+            "https://via.placeholder.com/400x225"
+          ),
           achievements: array("achievements", [
-            "achievements",
-            "achievements",
-            "achievements",
+            "Achievement",
+            "Achievement",
+            "Achievement",
           ]),
           architecture: array("architecture", [
-            "architecture",
-            "architecture",
-            "architecture",
+            "Architecture",
+            "Architecture",
+            "Architecture",
           ]),
-          libraries: array("libraries", [
-            "libraries",
-            "libraries",
-            "libraries",
-          ]),
+          libraries: array("libraries", ["Librarie", "Librarie", "Librarie"]),
         },
       ]}
     />

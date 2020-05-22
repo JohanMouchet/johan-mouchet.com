@@ -1,5 +1,6 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
+import { IconTwitter } from "views/objects";
 import SocialMedia from ".";
 
 <Meta title="Components/SocialMedia" component={SocialMedia} />
@@ -11,9 +12,9 @@ import SocialMedia from ".";
     <SocialMedia
       medias={[
         {
-          name: text("name", "name"),
-          url: text("url", "url"),
-          icon: text("icon", "icon"),
+          name: text("name", "Name"),
+          url: text("url", "#"),
+          icon: <IconTwitter />,
         },
       ]}
     />

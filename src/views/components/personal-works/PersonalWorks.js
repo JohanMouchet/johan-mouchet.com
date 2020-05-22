@@ -6,7 +6,6 @@ import "./PersonalWorks.scss";
 type Props = {
   works: [
     {
-      video?: boolean,
       url: string,
       thumbnailSrc: string,
       sourceIcon: React.Node,

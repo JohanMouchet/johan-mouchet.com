@@ -85,7 +85,7 @@ const Home = () => (
           <div className="l-cell--gray-lighter cell cell--12-@xs cell--3-@md">
             <article className="p-skills">
               <div className="u-vr--top-2-@xs"></div>
-              <Anchor tag="h2" id="skills">
+              <Anchor as="h2" id="skills">
                 Skills
               </Anchor>
 
@@ -123,7 +123,7 @@ const Home = () => (
             <hr />
 
             <article className="p-tools">
-              <Anchor tag="h2" id="tools">
+              <Anchor as="h2" id="tools">
                 Tools
               </Anchor>
               <p>
@@ -137,7 +137,7 @@ const Home = () => (
             <hr />
 
             <article className="p-profile">
-              <Anchor tag="h2" id="profile">
+              <Anchor as="h2" id="profile">
                 Profile
               </Anchor>
               <p>Creative, Learning Enthusiast, Motivated, Knowledge Sharer</p>
@@ -146,7 +146,7 @@ const Home = () => (
             <hr />
 
             <article className="p-language">
-              <Anchor tag="h2" id="languages">
+              <Anchor as="h2" id="languages">
                 Languages
               </Anchor>
               <ul className="o-list--unstyled">
@@ -158,7 +158,7 @@ const Home = () => (
             <hr />
 
             <article className="p-academic-qualifications">
-              <Anchor tag="h2" id="academic-qualifications">
+              <Anchor as="h2" id="academic-qualifications">
                 Academic Qualifications
               </Anchor>
 
@@ -189,7 +189,7 @@ const Home = () => (
             <hr />
 
             <article className="p-interests">
-              <Anchor tag="h2" id="interests">
+              <Anchor as="h2" id="interests">
                 Interests
               </Anchor>
               <p>
@@ -203,7 +203,7 @@ const Home = () => (
             <hr />
 
             <article className="p-social-medias">
-              <Anchor tag="h2" id="social-media">
+              <Anchor as="h2" id="social-media">
                 Social Media
               </Anchor>
 
@@ -268,7 +268,7 @@ const Home = () => (
           <div className="cell cell--12-@xs cell--9-@md">
             <article className="p-career-experiences">
               <div className="u-vr--top-2-@xs"></div>
-              <Anchor tag="h2" id="career-experiences">
+              <Anchor as="h2" id="career-experiences">
                 Career Experiences
               </Anchor>
 
@@ -618,7 +618,7 @@ const Home = () => (
             <hr />
 
             <article className="p-personal-works">
-              <Anchor tag="h2" id="personal-works">
+              <Anchor as="h2" id="personal-works">
                 Personal Works
               </Anchor>
 
@@ -666,7 +666,7 @@ const Home = () => (
             <hr />
 
             <article className="p-contact" id="p-contact">
-              <Anchor tag="h2" id="get-in-touch">
+              <Anchor as="h2" id="get-in-touch">
                 Get In Touch
               </Anchor>
 

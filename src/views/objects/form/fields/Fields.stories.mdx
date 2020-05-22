@@ -10,9 +10,9 @@ import { Field } from ".";
   <Story name="default">
     <Field
       id={text("id", "id")}
-      type={text("type", "type")}
+      type={select("type", { text: "text", search: "search" })}
       name={text("name", "name")}
-      value={text("value", "value")}
+      value={text("value", "")}
     />
   </Story>
 </Preview>

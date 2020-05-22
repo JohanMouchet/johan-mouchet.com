@@ -12,13 +12,12 @@ import { IconUnsplash, IconYoutube } from "views/objects";
     <PersonalWorks
       works={[
         {
-          video: boolean("video", true),
-          url: text("url", "url"),
-          thumbnailSrc: text("thumbnailSrc", "thumbnailSrc"),
-          sourceIcon: select("sourceIcon", {
-            Unsplash: <IconUnsplash />,
-            Youtube: <IconYoutube />,
-          }),
+          url: text("url", "#"),
+          thumbnailSrc: text(
+            "thumbnailSrc",
+            "https://via.placeholder.com/200x200"
+          ),
+          sourceIcon: <IconUnsplash />,
         },
       ]}
     />

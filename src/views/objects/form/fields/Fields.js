@@ -76,7 +76,7 @@ type TextareaProps = {
   name: string,
   className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
-  children?: Node,
+  children?: string,
 };
 
 const Textarea = ({

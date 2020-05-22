@@ -4,7 +4,6 @@
 
 - Storybook
   - Add tokens
-  - Capitalize Knobs
   - Add components: List, Code, Table
   - Expose to a new page .com/Storybook
 - Replace wow.js
@@ -16,7 +15,8 @@
 - Add Strapi
 
 - ? Remove Sass prefixes `t-`, explore `@use`
-- ? Convert to CSS Modules / Emotion
+- ? Convert to CSS Modules
+  - Look into PowerRename: https://github.com/microsoft/PowerToys/tree/master/src/modules/powerrename
 
 ## Design
 

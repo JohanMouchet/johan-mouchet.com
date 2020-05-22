@@ -8,26 +8,30 @@ import Card from ".";
 
 <Preview>
   <Story name="default">
-    <Card
-      banner={boolean("banner", true)}
-      bannerUrl={text("bannerUrl", "bannerUrl")}
-      header={text("header", "header")}
-      body={text("body", "body")}
-      footer={text("footer", "footer")}
-      variant={select("variant", {
-        "": null,
-        secondary: "secondary",
-        primary: "primary",
-        hover: "hover",
-        forward: "forward",
-        active: "active",
-        "banner-gradient": "banner-gradient",
-      })}
-      size={select("size", {
-        "": null,
-        sm: "sm",
-        lg: "lg",
-      })}
-    />
+    <div className="grid">
+      <div className="cell cell--4-@xs">
+        <Card
+          banner={boolean("banner", true)}
+          bannerUrl={text("bannerUrl", "https://via.placeholder.com/400x168")}
+          header={text("header", "Header")}
+          body={text("body", "Body")}
+          footer={text("footer", "Footer")}
+          variant={select("variant", {
+            "": null,
+            secondary: "secondary",
+            primary: "primary",
+            hover: "hover",
+            forward: "forward",
+            active: "active",
+            "banner-gradient": "banner-gradient",
+          })}
+          size={select("size", {
+            "": null,
+            sm: "sm",
+            lg: "lg",
+          })}
+        />
+      </div>
+    </div>
   </Story>
 </Preview>
