@@ -9,7 +9,6 @@ type FieldProps = {
   type: string,
   name: string,
   value?: string,
-  variant?: "no-corner-left" | "no-corner-right",
   className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
 };
@@ -19,16 +18,10 @@ const Field = ({
   type,
   name,
   value,
-  variant,
   className,
   attributes,
 }: FieldProps) => {
-  const classNames = cx(
-    "o-form__field",
-    `o-form__field--${type}`,
-    variant && `o-form__field--${variant}`,
-    className
-  );
+  const classNames = cx("o-form__field", `o-form__field--${type}`, className);
 
   return (
     <input
@@ -83,7 +76,7 @@ type TextareaProps = {
   name: string,
   className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
-  children?: Node,
+  children?: string,
 };
 
 const Textarea = ({

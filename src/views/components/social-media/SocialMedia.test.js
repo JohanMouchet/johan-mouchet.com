@@ -3,5 +3,5 @@ import { shallow } from "enzyme";
 import SocialMedia from ".";
 
 it("Renders <SocialMedia /> without crashing", () => {
-  shallow(<SocialMedia />);
+  expect(shallow(<SocialMedia />)).toMatchSnapshot();
 });

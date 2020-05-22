@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { text } from "@storybook/addon-knobs";
+import { text, boolean, array } from "@storybook/addon-knobs";
 import Projects from ".";
 
 <Meta title="Components/Projects" component={Projects} />
@@ -8,6 +8,31 @@ import Projects from ".";
 
 <Preview>
   <Story name="default">
-    <Projects propName={text("propName", "default value")} />
+    <Projects
+      projects={[
+        {
+          highlight: boolean("highlight", true),
+          name: text("name", "Name"),
+          tagline: text("tagline", "Tagline"),
+          url: text("url", "#"),
+          lede: text("lede", "Lede"),
+          thumbnailSrc: text(
+            "thumbnailSrc",
+            "https://via.placeholder.com/400x225"
+          ),
+          achievements: array("achievements", [
+            "Achievement",
+            "Achievement",
+            "Achievement",
+          ]),
+          architecture: array("architecture", [
+            "Architecture",
+            "Architecture",
+            "Architecture",
+          ]),
+          libraries: array("libraries", ["Librarie", "Librarie", "Librarie"]),
+        },
+      ]}
+    />
   </Story>
 </Preview>

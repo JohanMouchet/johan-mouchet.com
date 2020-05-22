@@ -1,53 +1,78 @@
 // @flow
 
 import * as React from "react";
+import { useState } from "react";
 import cx from "classnames";
+import {
+  IconCheckCircle,
+  IconExclamationCircle,
+  IconExclamationTriangle,
+  IconInfoCircle,
+  IconX,
+} from "views/objects";
 import "./Alert.scss";
 
 type Props = {
-  hidden: boolean,
+  isOpen?: boolean,
   closable?: boolean,
   variant?: "info" | "success" | "warning" | "danger",
+  position?: "fixed-bottom" | "fixed-bottom-right",
   className?: string | Array<string> | Object,
   children: Node,
 };
 
 const Alert = ({
-  hidden,
+  isOpen = true,
   closable,
   variant = "info",
+  position,
   className,
   children,
 }: Props) => {
+  const [open, setOpenState] = useState(isOpen);
+
   const classNames = cx(
     "o-alert",
+    closable && "o-alert--closable",
     variant && `o-alert--${variant}`,
-    !hidden && "is--visible",
-    closable && "js-alert",
+    position && `o-alert--${position}`,
+    "container",
     "wow",
     className
   );
 
   const getIcon = (variant) => {
     if (variant === "info") {
-      return "info";
+      return <IconInfoCircle />;
     } else if (variant === "success") {
-      return "check_circle";
+      return <IconCheckCircle />;
     } else if (variant === "warning") {
-      return "warning";
+      return <IconExclamationTriangle />;
     } else if (variant === "danger") {
-      return "error";
+      return <IconExclamationCircle />;
     }
   };
 
   return (
-    <div className={classNames}>
-      <i className="o-alert__icon material-icons">{getIcon(variant)}</i>
-      <div className="o-alert__content">{children}</div>
-      {closable && (
-        <button className="o-alert__close js-alert-close">&#x2716;</button>
-      )}
-    </div>
+    open && (
+      <div className={classNames}>
+        <div className="grid grid--noWrap-@xs">
+          <div className="o-alert__icon cell">{getIcon(variant)}</div>
+          <div className="o-alert__content cell cell--@xs">{children}</div>
+          {closable && (
+            <div className="o-alert__close cell">
+              <button
+                className="o-alert__close-button"
+                aria-label="Close"
+                onClick={() => setOpenState(!open)}
+              >
+                <IconX />
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    )
   );
 };
 

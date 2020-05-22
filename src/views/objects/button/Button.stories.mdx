@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { text } from "@storybook/addon-knobs";
+import { text, select } from "@storybook/addon-knobs";
 import { Button } from ".";
 
 <Meta title="Objects/Button" component={Button} />
@@ -8,6 +8,32 @@ import { Button } from ".";
 
 <Preview>
   <Story name="default">
-    <Button propName={text("propName", "default value")} />
+    <Button
+      type={select("type", {
+        anchor: "anchor",
+        button: "button",
+        submit: "submit",
+        reset: "reset",
+      })}
+      url={text("url", "#")}
+      variant={select("variant", {
+        "": null,
+        primary: "primary",
+        secondary: "secondary",
+      })}
+      size={select("size", {
+        "": null,
+        sm: "sm",
+        lg: "lg",
+      })}
+      block={select("block", {
+        "": null,
+        true: true,
+        "@sm": "@sm",
+        "@md": "@md",
+      })}
+    >
+      {text("children", "children")}
+    </Button>
   </Story>
 </Preview>

@@ -1,6 +1,19 @@
 import * as React from "react";
+import { PROFILE } from "constants/profile";
 import { Default } from "views/layouts";
-import { Anchor } from "views/objects";
+import {
+  Anchor,
+  Icon500px,
+  IconCodepen,
+  IconDribbble,
+  IconGithub,
+  IconInstagram,
+  IconLinkedIn,
+  IconSpotify,
+  IconTwitter,
+  IconUnsplash,
+  IconYoutube,
+} from "views/objects";
 import {
   Skills,
   AcademicQualification,
@@ -8,22 +21,13 @@ import {
   Experiences,
   PersonalWorks,
 } from "views/components";
-import { ReactComponent as Icon500px } from "assets/images/icons/simple-icons/500px.svg";
-import { ReactComponent as IconCodepen } from "assets/images/icons/simple-icons/codepen.svg";
-import { ReactComponent as IconDribbble } from "assets/images/icons/simple-icons/dribbble.svg";
-import { ReactComponent as IconGithub } from "assets/images/icons/simple-icons/github.svg";
-import { ReactComponent as IconInstagram } from "assets/images/icons/simple-icons/instagram.svg";
-import { ReactComponent as IconLinkedIn } from "assets/images/icons/simple-icons/linkedin.svg";
-import { ReactComponent as IconSpotify } from "assets/images/icons/simple-icons/spotify.svg";
-import { ReactComponent as IconTwitter } from "assets/images/icons/simple-icons/twitter.svg";
-import { ReactComponent as IconUnsplash } from "assets/images/icons/simple-icons/unsplash.svg";
-import { ReactComponent as IconYoutube } from "assets/images/icons/simple-icons/youtube.svg";
+import "./Home.scss";
 
 const Home = () => (
   <Default
     metadata={{
       id: /*html*/ `home`,
-      title: /*html*/ `Johan Mouchet`,
+      title: /*html*/ `${PROFILE.firstName} ${PROFILE.lastName}`,
       description: /*html*/ `Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.`,
     }}
   >
@@ -49,9 +53,11 @@ const Home = () => (
                 <div className="cell">
                   <img
                     className="c-about__portrait"
-                    src={require("assets/images/views/johan-mouchet.jpg")}
-                    srcSet={`${require("assets/images/views/johan-mouchet.jpg")}, ${require("assets/images/views/johan-mouchet@x2.jpg")} 1.25x`}
-                    alt="Johan Mouchet"
+                    src={PROFILE.image.x1}
+                    srcSet={
+                      /*html*/ `${PROFILE.image.x1}, ${PROFILE.image.x2} 1.25x`
+                    }
+                    alt={/*html*/ `${PROFILE.firstName} ${PROFILE.lastName}`}
                     loading="auto"
                   />
                 </div>
@@ -79,14 +85,14 @@ const Home = () => (
           <div className="l-cell--gray-lighter cell cell--12-@xs cell--3-@md">
             <article className="p-skills">
               <div className="u-vr--top-2-@xs"></div>
-              <Anchor tag="h2" id="skills">
+              <Anchor as="h2" id="skills">
                 Skills
               </Anchor>
 
               <Skills
                 skills={[
                   {
-                    label: /*html*/ `React & Redux`,
+                    label: /*html*/ `React`,
                     filling: 80,
                     tooltip: /*html*/ `8/10`,
                   },
@@ -117,21 +123,21 @@ const Home = () => (
             <hr />
 
             <article className="p-tools">
-              <Anchor tag="h2" id="tools">
+              <Anchor as="h2" id="tools">
                 Tools
               </Anchor>
               <p>
-                JAMstack, Headless CMS, Storybook, Jest, Enzyme, APIs, npm,
-                Webpack / Gulp, Git, CI / CD, ESlint, Stylelint, Prettier,
-                Zeplin, Responsive design, Performance, Accessibility, Web
-                Standards, SEO, Analytics, Atlassian suite, Agile, Open source
+                JAMstack, Storybook, Jest, Enzyme, Flow, Redux, CSS Modules,
+                Webpack / Gulp, npm, Headless CMS, APIs, Git, CI / CD, Linters,
+                Prettier, Zeplin, Responsive design, Accessibility, Performance,
+                SEO, Analytics, Atlassian suite, Agile, Open source
               </p>
             </article>
 
             <hr />
 
             <article className="p-profile">
-              <Anchor tag="h2" id="profile">
+              <Anchor as="h2" id="profile">
                 Profile
               </Anchor>
               <p>Creative, Learning Enthusiast, Motivated, Knowledge Sharer</p>
@@ -140,7 +146,7 @@ const Home = () => (
             <hr />
 
             <article className="p-language">
-              <Anchor tag="h2" id="languages">
+              <Anchor as="h2" id="languages">
                 Languages
               </Anchor>
               <ul className="o-list--unstyled">
@@ -152,7 +158,7 @@ const Home = () => (
             <hr />
 
             <article className="p-academic-qualifications">
-              <Anchor tag="h2" id="academic-qualifications">
+              <Anchor as="h2" id="academic-qualifications">
                 Academic Qualifications
               </Anchor>
 
@@ -183,7 +189,7 @@ const Home = () => (
             <hr />
 
             <article className="p-interests">
-              <Anchor tag="h2" id="interests">
+              <Anchor as="h2" id="interests">
                 Interests
               </Anchor>
               <p>
@@ -197,7 +203,7 @@ const Home = () => (
             <hr />
 
             <article className="p-social-medias">
-              <Anchor tag="h2" id="social-media">
+              <Anchor as="h2" id="social-media">
                 Social Media
               </Anchor>
 
@@ -205,52 +211,52 @@ const Home = () => (
                 medias={[
                   {
                     name: /*html*/ `LinkedIn`,
-                    url: /*html*/ `https://www.linkedin.com/in/johanmouchet`,
+                    url: PROFILE.socialNetworks.linkedIn,
                     icon: <IconLinkedIn />,
                   },
                   {
                     name: /*html*/ `Twitter`,
-                    url: /*html*/ `https://twitter.com/JohanMouchet`,
+                    url: PROFILE.socialNetworks.twitter,
                     icon: <IconTwitter />,
                   },
                   {
                     name: /*html*/ `CodePen`,
-                    url: /*html*/ `http://codepen.io/johanmouchet/`,
+                    url: PROFILE.socialNetworks.codePen,
                     icon: <IconCodepen />,
                   },
                   {
                     name: /*html*/ `GitHub`,
-                    url: /*html*/ `https://github.com/JohanMouchet`,
+                    url: PROFILE.socialNetworks.gitHub,
                     icon: <IconGithub />,
                   },
                   {
                     name: /*html*/ `Dribbble`,
-                    url: /*html*/ `https://dribbble.com/JohanMouchet/likes`,
+                    url: PROFILE.socialNetworks.dribbble,
                     icon: <IconDribbble />,
                   },
                   {
                     name: /*html*/ `Unsplash`,
-                    url: /*html*/ `https://unsplash.com/@johanmouchet/`,
+                    url: PROFILE.socialNetworks.unsplash,
                     icon: <IconUnsplash />,
                   },
                   {
                     name: /*html*/ `500px`,
-                    url: /*html*/ `https://500px.com/johanmouchet/`,
+                    url: PROFILE.socialNetworks.fiveHundredPx,
                     icon: <Icon500px />,
                   },
                   {
                     name: /*html*/ `Instagram`,
-                    url: /*html*/ `https://instagram.com/johanmouchet/`,
+                    url: PROFILE.socialNetworks.instagram,
                     icon: <IconInstagram />,
                   },
                   {
                     name: /*html*/ `YouTube`,
-                    url: /*html*/ `https://www.youtube.com/c/JohanMouchet`,
+                    url: PROFILE.socialNetworks.youTube,
                     icon: <IconYoutube />,
                   },
                   {
                     name: /*html*/ `Spotify`,
-                    url: /*html*/ `https://open.spotify.com/user/1126411547`,
+                    url: PROFILE.socialNetworks.spotify,
                     icon: <IconSpotify />,
                   },
                 ]}
@@ -262,7 +268,7 @@ const Home = () => (
           <div className="cell cell--12-@xs cell--9-@md">
             <article className="p-career-experiences">
               <div className="u-vr--top-2-@xs"></div>
-              <Anchor tag="h2" id="career-experiences">
+              <Anchor as="h2" id="career-experiences">
                 Career Experiences
               </Anchor>
 
@@ -275,8 +281,8 @@ const Home = () => (
                     },
                     location: /*html*/ `Melbourne`,
                     jobTitle: /*html*/ `Front-end developer`,
-                    startDate: new Date("2017/11/11"),
-                    endDate: new Date("2020/04/27"),
+                    startDate: new Date("2017-11-11"),
+                    endDate: new Date("2020-04-27"),
                     lede: /*html*/ `Global agency that delivers digital transformation powered by creativity, who believe in <em>Ideas Without Limits</em>, pushing the boundaries of technology and creativity.`,
                     projects: [
                       {
@@ -284,9 +290,9 @@ const Home = () => (
                         name: /*html*/ `Jetstar`,
                         url: /*html*/ `https://www.jetstar.com/au/en/home`,
                         lede: /*html*/ `Modernisation, development of new features and upkeep of Jetstar's international website in an Agile environment.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/jetstar.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/jetstar.jpg"),
                         achievements: [
-                          /*html*/ `Participated in the migration of the <a href="https://www.jetstar.com/au/en/flights"><em>Flight Search</em></a> experience to React & Redux for faster and extensive results: increased conversion by 1.3% on the <em>Cheap Flights</em> pages.`,
+                          /*html*/ `Took part in the migration of the <a href="https://www.jetstar.com/au/en/flights"><em>Flight Search</em></a> experience to React & Redux for faster and extensive results: increased conversion by 1.3% on the <em>Cheap Flights</em> pages.`,
                           /*html*/ `Contributed to the creation of a landing page to promote Jetstar <a href="https://www.jetstar.com/au/en/creditcards"><em>Credit Cards</em></a>: surpassed the conversion target by 230% in the first month of launch.`,
                           /*html*/ `Integrated a responsive utility-based Sass grid I built and open sourced: <a href="https://github.com/JohanMouchet/fluxgrid">Fluxgrid</a>.`,
                           /*html*/ `Advocated for performance tracking and optimisations: slowed down the <span data-tooltip="First Meaningful Paint" data-tooltip-indicator>FMP</span> trend, decreased the <span data-tooltip="Time To Interactive" data-tooltip-indicator>TTI</span> by ~9.5% and the bundle size by ~15%.`,
@@ -315,7 +321,7 @@ const Home = () => (
                         tagline: /*html*/ `CatVR: Safe Cat, Safe Wildlife`,
                         url: /*html*/ `http://www.safecat.org.au`,
                         lede: /*html*/ `Joint <em>RSPCA</em> campaign website to help cat owners give their pet the safest and happiest life while ensuring they have no link to loss of wildlife.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/zoos-victoria.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/zoos-victoria.jpg"),
                         achievements: [
                           /*html*/ `Developed a community submissible forms with client side validation.`,
                           /*html*/ `Integrated social media sharing.`,
@@ -339,7 +345,7 @@ const Home = () => (
                         name: /*html*/ `Klip Studio`,
                         url: /*html*/ `https://www.klipdesk.co`,
                         lede: /*html*/ `Web application dedicated to the sport rights holders industry. Allows to edit live or recorded streams to produce highlights shareable on social media.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/klip-studio.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/klip-studio.jpg"),
                         achievements: [
                           /*html*/ `Developed content tagging, filtering and sorting features.`,
                           /*html*/ `Integrated audience engagement tracking through social media APIs.`,
@@ -362,7 +368,7 @@ const Home = () => (
                         tagline: /*html*/ `Asia`,
                         url: /*html*/ `https://www.pearson.com/asia/`,
                         lede: /*html*/ `Websites creation related to education for Pearson’s launch in three new markets through Asia.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/pearson.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/pearson.jpg"),
                         achievements: [
                           /*html*/ `Participated to content authoring.`,
                           /*html*/ `Modified components to suit market.`,
@@ -381,8 +387,8 @@ const Home = () => (
                     },
                     location: /*html*/ `London`,
                     jobTitle: /*html*/ `Front-end developer`,
-                    startDate: new Date("2016/11/14"),
-                    endDate: new Date("2017/10/19"),
+                    startDate: new Date("2016-11-14"),
+                    endDate: new Date("2017-10-19"),
                     lede: /*html*/ `Leading digital marketing, technology and commerce consultancy which delivers at a UK, pan-European and global level.`,
                     projects: [
                       {
@@ -391,7 +397,7 @@ const Home = () => (
                         tagline: /*html*/ `v11`,
                         url: /*html*/ `https://www.lexus.eu/en/`,
                         lede: /*html*/ `Website redesign to embody the new brand direction focused on a premium and lifestyle experience. Deployed into 35 countries of the European market and translated into 27 languages.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/lexus.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/lexus.jpg"),
                         achievements: [
                           /*html*/ `Developed multiple responsive components following AAA accessibility standard.`,
                           /*html*/ `Contributed to develop a <a href="https://www.lexus.co.uk/forms/find-a-centre">module</a> that uses the browser Geolocation and Google Maps' APIs to locate the nearest Lexus dealer.`,
@@ -421,7 +427,7 @@ const Home = () => (
                         tagline: /*html*/ `Safety System Plus`,
                         url: /*html*/ `https://www.lexus.eu/discover-lexus/technology/lexus-safety-system/`,
                         lede: /*html*/ `Microsite creation to showcase <em>Lexus' Safety System Plus</em> technology.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/lexus-safety-system-plus.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/lexus-safety-system-plus.jpg"),
                         achievements: [
                           /*html*/ `Integrated fullPage.js for a single-page design.`,
                           /*html*/ `Created advanced multi layers CSS animations.`,
@@ -441,7 +447,7 @@ const Home = () => (
                         tagline: /*html*/ `Lowrance`,
                         url: /*html*/ `https://www.lowrance.com/`,
                         lede: /*html*/ `Delivery within a short turnaround of a global eCommerce website for a manufacturer of consumer marine electronics.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/lowrance.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/lowrance.jpg"),
                         achievements: [
                           /*html*/ `Developed multiple responsive components following AAA accessibility standard.`,
                         ],
@@ -466,8 +472,8 @@ const Home = () => (
                     },
                     location: /*html*/ `London`,
                     jobTitle: /*html*/ `Designer & Front-end developer & Marketing strategist`,
-                    startDate: new Date("2016/05/04"),
-                    endDate: new Date("2016/11/13"),
+                    startDate: new Date("2016-05-04"),
+                    endDate: new Date("2016-11-13"),
                     contractType: /*html*/ `Contractor`,
                     lede: /*html*/ `French leader in the training of marine and offshore personnel on safety at sea.`,
                     projects: [
@@ -476,7 +482,7 @@ const Home = () => (
                         name: /*html*/ `Survie Mer Formation`,
                         url: /*html*/ `https://www.surviemerformation.com/`,
                         lede: /*html*/ `Redesign, development and marketing strategy aimed at increasing acquisition and conversion rate.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/survie-mer-formation.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/survie-mer-formation.jpg"),
                         achievements: [
                           /*html*/ `Designed a Growth Hacking strategy following the AARRR model: increased conversion by 12.6%.`,
                           /*html*/ `Refreshed the UI with a new brand identity, responsive design and cross-browser compatibility.`,
@@ -508,8 +514,8 @@ const Home = () => (
                     },
                     location: /*html*/ `London`,
                     jobTitle: /*html*/ `Front-end developer`,
-                    startDate: new Date("2015/12/07"),
-                    endDate: new Date("2016/05/03"),
+                    startDate: new Date("2015-12-07"),
+                    endDate: new Date("2016-05-03"),
                     lede: /*html*/ `Award winning marketing agency which helps some of the world's most respected brands to strategically develop and implement marketing communications.`,
                     projects: [
                       {
@@ -517,7 +523,7 @@ const Home = () => (
                         tagline: /*html*/ `Discontinued`,
                         url: /*html*/ `http://www.businessbankinginsight.co.uk`,
                         lede: /*html*/ `Analysis website of business banking providers, supported by the <em>HR Treasury</em>.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/business-banking-insight.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/business-banking-insight.jpg"),
                         achievements: [
                           /*html*/ `Developed tables with filtering and sorting capabilities.`,
                           /*html*/ `Created dynamic graphics with amCharts.`,
@@ -536,7 +542,7 @@ const Home = () => (
                         tagline: /*html*/ `#partofPT campaign (Over)`,
                         url: /*html*/ `https://partofpt.princes-trust.org.uk/part-of-pt/`,
                         lede: /*html*/ `Crowdsourced event listing microsite for the <em>Prince's Trust</em> 40th anniversary celebration.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/princes-trust.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/princes-trust.jpg"),
                         achievements: [
                           /*html*/ `Developed multiple UI components.`,
                           /*html*/ `Integrated Hashtagd APIs to create a wall of social media content.`,
@@ -556,7 +562,7 @@ const Home = () => (
                         tagline: /*html*/ `#Skipathon campaign (Over)`,
                         url: /*html*/ `https://www.youtube.com/watch?v=3PyZVDrO_aI`,
                         lede: /*html*/ `Mobile web browser game based on rope skipping.`,
-                        thumbnailPath: require("assets/images/views/career-experiences/sport-relief-skipathon.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/sport-relief-skipathon.jpg"),
                         achievements: [
                           /*html*/ `Created HTML5 canvas and CSS3 animations: <a href="https://codepen.io/johanmouchet/pen/OMgwMg">PoC</a>`,
                           /*html*/ `Ensured iOS and Android default browser support`,
@@ -579,29 +585,29 @@ const Home = () => (
                     },
                     location: /*html*/ `London`,
                     jobTitle: /*html*/ `Web designer & developer`,
-                    startDate: new Date("2014/07/09"),
-                    endDate: new Date("2015/10/01"),
+                    startDate: new Date("2014-07-09"),
+                    endDate: new Date("2015-10-01"),
                     lede: /*html*/ `Independent web marketing agency focused on Growth Hacking.<br /><br />Here are few of the websites I've designed and built using WordPress:`,
                     projects: [
                       {
                         name: /*html*/ `Weholite`,
                         url: /*html*/ `http://www.weholite.co.uk/`,
-                        thumbnailPath: require("assets/images/views/career-experiences/weholite.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/weholite.jpg"),
                       },
                       {
                         name: /*html*/ `Hiremech`,
                         url: /*html*/ `http://www.hiremech.co.uk/`,
-                        thumbnailPath: require("assets/images/views/career-experiences/hiremech.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/hiremech.jpg"),
                       },
                       {
                         name: /*html*/ `Global Materials Handling`,
                         url: /*html*/ `http://globalforktrucks.com/`,
-                        thumbnailPath: require("assets/images/views/career-experiences/global-materials-handling.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/global-materials-handling.jpg"),
                       },
                       {
                         name: /*html*/ `Proton Motor`,
                         url: /*html*/ `http://www.proton-motor.com/`,
-                        thumbnailPath: require("assets/images/views/career-experiences/proton-motor.jpg"),
+                        thumbnailSrc: require("assets/images/views/career-experiences/proton-motor.jpg"),
                       },
                     ],
                   },
@@ -612,7 +618,7 @@ const Home = () => (
             <hr />
 
             <article className="p-personal-works">
-              <Anchor tag="h2" id="personal-works">
+              <Anchor as="h2" id="personal-works">
                 Personal Works
               </Anchor>
 
@@ -624,32 +630,32 @@ const Home = () => (
               <PersonalWorks
                 works={[
                   {
-                    thumbnailPath: /*html*/ `https://source.unsplash.com/6Y23pU8xyHU/200x200`,
+                    thumbnailSrc: /*html*/ `https://source.unsplash.com/6Y23pU8xyHU/200x200`,
                     url: /*html*/ `https://unsplash.com/photos/6Y23pU8xyHU`,
                     sourceIcon: <IconUnsplash />,
                   },
                   {
-                    thumbnailPath: /*html*/ `https://source.unsplash.com/m9VIwiyzGSc/200x200`,
+                    thumbnailSrc: /*html*/ `https://source.unsplash.com/m9VIwiyzGSc/200x200`,
                     url: /*html*/ `https://unsplash.com/photos/m9VIwiyzGSc`,
                     sourceIcon: <IconUnsplash />,
                   },
                   {
-                    thumbnailPath: /*html*/ `https://source.unsplash.com/hLXsjf0dGgo/200x200`,
+                    thumbnailSrc: /*html*/ `https://source.unsplash.com/hLXsjf0dGgo/200x200`,
                     url: /*html*/ `https://unsplash.com/photos/hLXsjf0dGgo`,
                     sourceIcon: <IconUnsplash />,
                   },
                   {
-                    thumbnailPath: /*html*/ `https://source.unsplash.com/JjEZKXTGPio/200x200`,
+                    thumbnailSrc: /*html*/ `https://source.unsplash.com/JjEZKXTGPio/200x200`,
                     url: /*html*/ `https://unsplash.com/photos/JjEZKXTGPio`,
                     sourceIcon: <IconUnsplash />,
                   },
                   {
-                    thumbnailPath: /*html*/ `https://source.unsplash.com/sTBdWFQKDHE/200x200`,
+                    thumbnailSrc: /*html*/ `https://source.unsplash.com/sTBdWFQKDHE/200x200`,
                     url: /*html*/ `https://unsplash.com/photos/sTBdWFQKDHE`,
                     sourceIcon: <IconUnsplash />,
                   },
                   {
-                    thumbnailPath: require("assets/images/views/personal-works/south-cost-of-england.jpg"),
+                    thumbnailSrc: require("assets/images/views/personal-works/south-cost-of-england.jpg"),
                     url: /*html*/ `https://youtu.be/NAsS1T_V8-k`,
                     sourceIcon: <IconYoutube />,
                   },
@@ -660,16 +666,14 @@ const Home = () => (
             <hr />
 
             <article className="p-contact" id="p-contact">
-              <Anchor tag="h2" id="get-in-touch">
+              <Anchor as="h2" id="get-in-touch">
                 Get In Touch
               </Anchor>
 
               <p>
-                <a href="mailto:mouchet.johan@gmail.com">
-                  mouchet.johan[at]gmail.com
-                </a>
+                <a href={`mailto:${PROFILE.email}`}>{PROFILE.email}</a>
                 <br />
-                <a href="https://www.linkedin.com/in/johanmouchet">LinkedIn</a>
+                <a href={PROFILE.socialNetworks.linkedIn}>LinkedIn</a>
               </p>
             </article>
             <div className="u-vr--top-2-@xs"></div>

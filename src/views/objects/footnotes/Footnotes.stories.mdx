@@ -1,6 +1,6 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
-import { FootnotesReference } from ".";
+import { FootnotesReference, FootnotesNotes } from ".";
 
 <Meta title="Objects/Footnotes" component={FootnotesReference} />
 
@@ -8,6 +8,25 @@ import { FootnotesReference } from ".";
 
 <Preview>
   <Story name="default">
-    <FootnotesReference propName={text("propName", "default value")} />
+    <div>
+      <p>
+        Reference
+        <FootnotesReference
+          id={text("id", "id-1", "Reference")}
+          prefix={text("prefix", "", "Reference")}
+          text={text("text", "1", "Reference")}
+        />
+      </p>
+      <FootnotesNotes
+        notes={[
+          {
+            id: text("id", "id-1", "Notes"),
+            prefix: text("prefix", "", "Notes"),
+            text: text("text", "Note", "Notes"),
+            url: text("url", "#", "Notes"),
+          },
+        ]}
+      />
+    </div>
   </Story>
 </Preview>

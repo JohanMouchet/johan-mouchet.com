@@ -3,7 +3,7 @@
 
 .p-mast-footer {
   padding: t-vertical-rhythm(1.2) 0;
-  background: t-ui(pattern, dots),
+  background: t-background(dots),
     url("#{t-path(theme)}/footer.jpg") right center/cover no-repeat
       $s-color-primary;
   letter-spacing: 0.1em;
@@ -100,13 +100,15 @@
     display: inline-block;
     transform: rotate(180deg);
     line-height: 0;
-    padding: 2px;
+    padding: 0.3em;
     border: 2px solid $s-color-white;
     transition: opacity 0.2s ease-out;
 
     @include t-wekkit-hdpi-small-dimension("border-width", 2);
 
     svg {
+      height: t-modular-scale(2);
+      width: t-modular-scale(2);
       fill: $s-color-white;
     }
 

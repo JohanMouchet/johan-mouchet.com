@@ -9,6 +9,18 @@ import AcademicQualification from ".";
 
 <Preview>
   <Story name="default">
-    <AcademicQualification propName={text("propName", "default value")} />
+    <AcademicQualification
+      qualifications={[
+        {
+          establishment: {
+            name: text("name", "Name"),
+            url: text("url", "#"),
+          },
+          location: text("location", "Location"),
+          graduationYear: new Date().getFullYear(),
+          title: text("title", "Title"),
+        },
+      ]}
+    />
   </Story>
 </Preview>

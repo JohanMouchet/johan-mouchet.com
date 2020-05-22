@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <ProgressBar /> without crashing 1`] = `
+<div
+  className="o-progress-bar"
+>
+  <div
+    className="o-progress-bar__container"
+  >
+    <div
+      className="o-progress-bar__filling wow"
+      style={
+        Object {
+          "width": "0%",
+        }
+      }
+    />
+  </div>
+</div>
+`;

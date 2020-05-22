@@ -3,5 +3,5 @@ import { shallow } from "enzyme";
 import Badge from "./";
 
 it("Renders <Badge /> without crashing", () => {
-  shallow(<Badge>+1</Badge>);
+  expect(shallow(<Badge>+1</Badge>)).toMatchSnapshot();
 });

@@ -19,16 +19,6 @@
 
   @include t-wekkit-hdpi-small-dimension;
 
-  &--no-corner-left {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  &--no-corner-right {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
   /* Placeholder */
   &::placeholder {
     color: $s-color-gray-darker;
@@ -50,22 +40,25 @@
   /** Icons **/
   &--search,
   &--select:not([multiple]) {
-    padding-right: 2em;
+    $icon-space: 2em;
+    $icon-size: t-modular-scale(1);
+
+    padding-right: $icon-space;
     background-repeat: no-repeat;
-    background-position: right 0.25em center;
-    background-size: 1.5em;
+    background-position: right ($icon-space - $icon-size) / 2 center;
+    background-size: $icon-size;
   }
 
   /*** Search ***/
   &--search {
-    background-image: url("#{t-path(icons)}/search.svg");
+    background-image: url("#{t-path(icons)}/ui/search.svg");
   }
 
   /*** Select ***/
   /* stylelint-disable-next-line no-descending-specificity */
   &--select {
     &:not([multiple]) {
-      background-image: url("#{t-path(icons)}/arrow-down.svg");
+      background-image: url("#{t-path(icons)}/ui/chevron-down.svg");
     }
 
     &[multiple] {

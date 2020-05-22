@@ -3,5 +3,5 @@ import { shallow } from "enzyme";
 import Anchor from ".";
 
 it("Renders <Anchor /> without crashing", () => {
-  shallow(<Anchor />);
+  expect(shallow(<Anchor />)).toMatchSnapshot();
 });

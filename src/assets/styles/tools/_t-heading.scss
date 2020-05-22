@@ -31,3 +31,71 @@
 
   @content;
 }
+
+// These types are also available as utilities: .u-heading--*
+@mixin t-heading--xl {
+  @include t-heading(6, 2, 2) {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+@mixin t-heading--lg {
+  @include t-heading(5, 2, 2) {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+@mixin t-heading--1 {
+  @include t-heading(4, 2, 2) {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+@mixin t-heading--2 {
+  @include t-heading(3, 2, 2) {
+    font-weight: 700;
+  }
+}
+
+@mixin t-heading--3 {
+  @include t-heading(2, 2, 1) {
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+
+@mixin t-heading--4 {
+  @include t-heading(1, 1, 1) {
+    font-weight: 400;
+  }
+}
+
+@mixin t-heading--5 {
+  @include t-heading(0, 1, 1) {
+    font-weight: 400;
+  }
+}
+
+@mixin t-heading--6 {
+  @include t-heading(-1, 1, 1) {
+    font-weight: 400;
+  }
+}
+
+@mixin t-heading--sm {
+  @include t-heading(-2, 1, 1) {
+    font-weight: 400;
+  }
+}
+
+@mixin t-heading--xs {
+  @include t-heading(-3, 1, 1) {
+    font-weight: 400;
+  }
+}

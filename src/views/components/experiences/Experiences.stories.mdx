@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { text } from "@storybook/addon-knobs";
+import { text, date } from "@storybook/addon-knobs";
 import Experiences from ".";
 
 <Meta title="Components/Experiences" component={Experiences} />
@@ -8,6 +8,20 @@ import Experiences from ".";
 
 <Preview>
   <Story name="default">
-    <Experiences propName={text("propName", "default value")} />
+    <Experiences
+      experiences={[
+        {
+          company: {
+            url: text("url", "#"),
+            name: text("name", "Name"),
+          },
+          location: text("location", "Location"),
+          jobTitle: text("jobTitle", "Job Title"),
+          startDate: text("startDate", new Date()),
+          endDate: text("endDate", new Date()),
+          lede: text("lede", "Lede"),
+        },
+      ]}
+    />
   </Story>
 </Preview>

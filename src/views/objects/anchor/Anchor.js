@@ -4,7 +4,7 @@ import * as React from "react";
 import cx from "classnames";
 
 type Props = {
-  tag: string,
+  as: string,
   id: string,
   marker: string,
   className?: string | Array<string> | Object,
@@ -13,7 +13,7 @@ type Props = {
 };
 
 const Anchor = ({
-  tag = "span",
+  as = "span",
   id,
   marker = "#",
   className,
@@ -22,7 +22,7 @@ const Anchor = ({
 }: Props) => {
   const classNames = cx("u-anchor", className);
 
-  const Tag = tag;
+  const Tag = as;
 
   return (
     id && (

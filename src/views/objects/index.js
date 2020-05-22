@@ -10,11 +10,31 @@ export { default as Code } from "./code";
 export { default as Details } from "./details";
 export { default as Figure } from "./figure";
 export { default as File } from "./form/file/File";
+export {
+  Icon500px,
+  IconCodepen,
+  IconDribbble,
+  IconGithub,
+  IconInstagram,
+  IconLinkedIn,
+  IconSpotify,
+  IconTwitter,
+  IconUnsplash,
+  IconYoutube,
+  IconArrowReturn,
+  IconCheckCircle,
+  IconChevronDown,
+  IconCloudUpload,
+  IconExclamationCircle,
+  IconExclamationTriangle,
+  IconInfoCircle,
+  IconSearch,
+  IconX,
+} from "./icons";
 export { default as Label } from "./form/layout/Layout";
 export { default as List } from "./list";
 export { default as Loader } from "./loader";
 export { default as Menu } from "./menu";
-export { default as Notice } from "./notice";
 export { default as Pagination } from "./pagination";
 export { default as ProgressBar } from "./progress-bar";
 export { default as Range } from "./form/range/Range";

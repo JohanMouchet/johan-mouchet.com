@@ -1,11 +1,10 @@
 // @flow
 
 import * as React from "react";
-import { differenceInCalendarMonths } from "date-fns";
-import "./Experiences.scss";
-import { Projects } from "views/components";
-import pluralize from "utils/pluralize";
+import duration from "utils/duration";
 import parse from "utils/parse";
+import { Projects } from "views/components";
+import "./Experiences.scss";
 
 type Props = {
   experiences: [
@@ -16,34 +15,16 @@ type Props = {
       },
       location: string,
       jobTitle: string,
-      startDate: string,
-      endDate: string,
+      startDate: Date,
+      endDate: Date,
       lede: string,
       projects: Projects,
     }
   ],
 };
 
-const Experiences = ({ experiences }: Props) => {
-  const today = new Date();
-
-  const duration = (endDate, startDate) => {
-    const durationInMonths = differenceInCalendarMonths(endDate, startDate);
-    const years = Math.floor(durationInMonths / 12);
-    const months = durationInMonths % 12;
-    const yearsFormated = years >= 1 ? pluralize(`${years} yr`, years) : "";
-    const monthsFormated = months >= 1 ? pluralize(`${months} mo`, months) : "";
-    const monthsFormatedMin =
-      !yearsFormated && !monthsFormated ? "1 mo" : monthsFormated;
-
-    return (
-      yearsFormated +
-      (yearsFormated && monthsFormatedMin && " ") +
-      monthsFormatedMin
-    );
-  };
-
-  return !experiences ? null : (
+const Experiences = ({ experiences }: Props) =>
+  !experiences ? null : (
     <div className="c-experiences">
       {experiences.map((experience) => (
         <section
@@ -68,7 +49,7 @@ const Experiences = ({ experiences }: Props) => {
                 month: "short",
               })} ${experience.startDate.getFullYear()}`}
 
-              {experience.endDate.toDateString() === today.toDateString()
+              {experience.endDate.toDateString() === new Date().toDateString()
                 ? " – Present"
                 : [
                     (experience.endDate.getFullYear() >
@@ -85,7 +66,7 @@ const Experiences = ({ experiences }: Props) => {
             </span>
             <span className="c-experience__duration">
               {" "}
-              ({duration(experience.endDate, experience.startDate)})
+              ({duration(experience.startDate, experience.endDate, "1 mo")})
             </span>
             {experience.contractType && (
               <span className="c-experience__type">
@@ -102,6 +83,5 @@ const Experiences = ({ experiences }: Props) => {
       ))}
     </div>
   );
-};
 
 export default Experiences;

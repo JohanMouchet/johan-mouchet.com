@@ -36,12 +36,23 @@
 }
 
 /**
- * User Interface
+ * Shadow
  *
- * @param {string} property-name
+ * @param {string} shadow-name
  *
- * @example border-radius: t-ui(property-name);
+ * @example box-shadow: t-shadow(shadow-name);
  */
-@function t-ui($property...) {
-  @return t-map-deep-get($s-ui, $property...);
+@function t-shadow($shadow-name) {
+  @return map-get($s-shadows, $shadow-name);
+}
+
+/**
+ * Background
+ *
+ * @param {string} background-name
+ *
+ * @example background: t-background(background-name);
+ */
+@function t-background($background-name) {
+  @return map-get($s-backgrounds, $background-name);
 }

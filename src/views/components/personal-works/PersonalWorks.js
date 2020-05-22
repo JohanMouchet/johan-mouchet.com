@@ -6,10 +6,9 @@ import "./PersonalWorks.scss";
 type Props = {
   works: [
     {
-      video?: boolean,
       url: string,
-      thumbnailPath: string,
-      sourceIcon: Array<mixed>,
+      thumbnailSrc: string,
+      sourceIcon: React.Node,
     }
   ],
 };
@@ -21,13 +20,13 @@ const PersonalWorks = ({ works }: Props) =>
         {works.map((work) => (
           <div
             className="cell cell--6-@xs cell--4-@sm cell--2-@md u-vr--bottom-1-@xs u-vr--bottom-0-@md"
-            key={work.thumbnailPath}
+            key={work.thumbnailSrc}
           >
             <section className="c-personal-work">
               <a className="c-personal-work__overlay" href={work.url}>
                 <img
                   className="c-personal-work__thumbnail"
-                  src={work.thumbnailPath}
+                  src={work.thumbnailSrc}
                   alt="Personal work"
                   loading="lazy"
                 />

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { PROFILE } from "constants/profile";
 import { Default } from "views/layouts";
 import {
   Blockquote,
@@ -26,21 +27,20 @@ import {
   FootnotesNotes,
   Loader,
   Notice,
+  IconFacebook,
+  IconGooglePlus,
+  IconLinkedIn,
+  IconPinterest,
+  IconTwitter,
 } from "views/objects";
-import { ReactComponent as IconFacebook } from "assets/images/icons/simple-icons/facebook.svg";
-import { ReactComponent as IconGooglePlus } from "assets/images/icons/simple-icons/googleplus.svg";
-import { ReactComponent as IconLinkedIn } from "assets/images/icons/simple-icons/linkedin.svg";
-import { ReactComponent as IconPinterest } from "assets/images/icons/simple-icons/pinterest.svg";
-import { ReactComponent as IconTwitter } from "assets/images/icons/simple-icons/twitter.svg";
 import "./StyleGuide.scss";
 
 const StyleGuide = () => (
   <Default
     metadata={{
-      id: "styleguide",
-      title: "Johan Mouchet - Styleguide",
-      description:
-        "Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.",
+      id: /*html*/ `styleguide`,
+      title: /*html*/ `${PROFILE.firstName} ${PROFILE.lastName} - Styleguide`,
+      description: /*html*/ `Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.`,
     }}
   >
     <>
@@ -1978,9 +1978,6 @@ const StyleGuide = () => (
               <p>
                 <code>.o-alert</code>. To show with{" "}
                 <code>&amp;.is--visible</code>
-              </p>
-              <p>
-                <em>Optional:</em> <code>&gt; .material-icons</code>
               </p>
 
               <h3>

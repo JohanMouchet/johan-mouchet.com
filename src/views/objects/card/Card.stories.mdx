@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { text } from "@storybook/addon-knobs";
+import { text, boolean, select } from "@storybook/addon-knobs";
 import Card from ".";
 
 <Meta title="Objects/Card" component={Card} />
@@ -8,6 +8,30 @@ import Card from ".";
 
 <Preview>
   <Story name="default">
-    <Card propName={text("propName", "default value")} />
+    <div className="grid">
+      <div className="cell cell--4-@xs">
+        <Card
+          banner={boolean("banner", true)}
+          bannerUrl={text("bannerUrl", "https://via.placeholder.com/400x168")}
+          header={text("header", "Header")}
+          body={text("body", "Body")}
+          footer={text("footer", "Footer")}
+          variant={select("variant", {
+            "": null,
+            secondary: "secondary",
+            primary: "primary",
+            hover: "hover",
+            forward: "forward",
+            active: "active",
+            "banner-gradient": "banner-gradient",
+          })}
+          size={select("size", {
+            "": null,
+            sm: "sm",
+            lg: "lg",
+          })}
+        />
+      </div>
+    </div>
   </Story>
 </Preview>

@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { text } from "@storybook/addon-knobs";
+import { text, boolean } from "@storybook/addon-knobs";
 import Figure from ".";
 
 <Meta title="Objects/Figure" component={Figure} />
@@ -8,6 +8,13 @@ import Figure from ".";
 
 <Preview>
   <Story name="default">
-    <Figure propName={text("propName", "default value")} />
+    <Figure
+      src={text("src", "https://via.placeholder.com/500x250")}
+      alt={text("alt", "Alt")}
+      title={text("title", "Title")}
+      centered={boolean("centered", true)}
+    >
+      {text("children", "children")}
+    </Figure>
   </Story>
 </Preview>

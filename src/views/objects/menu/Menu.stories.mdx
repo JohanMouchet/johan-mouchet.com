@@ -8,6 +8,22 @@ import Menu from ".";
 
 <Preview>
   <Story name="default">
-    <Menu propName={text("propName", "default value")} />
+    <Menu
+      menu={[
+        {
+          text: text("text", "Text", "Item 1"),
+          url: text("url", "#", "Item 1"),
+        },
+        {
+          text: text("text", "Text", "Item 2"),
+          menu: [
+            {
+              text: text("text", "Text", "Item 2 - Submenu 1"),
+              url: text("url", "#", "Item 2 - Submenu 1"),
+            },
+          ],
+        },
+      ]}
+    />
   </Story>
 </Preview>

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import cx from "classnames";
+import { IconArrowReturn } from "views/objects";
 import "./Footnotes.scss";
 
 type ReferenceProps = {
@@ -47,14 +48,14 @@ const FootnotesNotes = ({ notes, className }: NotesProps) => {
           className="o-footnotes__note"
           key={note.id}
         >
-          {note.text}
+          {note.text}{" "}
           <a
             href={`#footnote-ref:${note.prefix ? note.prefix + "-" : ""}${
               note.id
             }`}
             className="o-footnotes__backref"
           >
-            &#x21a9;
+            <IconArrowReturn />
           </a>
         </li>
       ))}

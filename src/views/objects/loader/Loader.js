@@ -5,7 +5,7 @@ import cx from "classnames";
 import "./Loader.scss";
 
 type Props = {
-  size: "sm",
+  size?: "sm",
   className?: string | Array<string> | Object,
 };
 

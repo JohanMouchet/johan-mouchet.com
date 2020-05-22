@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Alert /> without crashing 1`] = `
+<div
+  className="o-alert o-alert--info container wow"
+>
+  <div
+    className="grid grid--noWrap-@xs"
+  >
+    <div
+      className="o-alert__icon cell"
+    >
+      <ForwardRef(SvgInfoCircle) />
+    </div>
+    <div
+      className="o-alert__content cell cell--@xs"
+    />
+  </div>
+</div>
+`;

@@ -6,6 +6,7 @@ import "./Badge.scss";
 
 type Props = {
   className?: string | Array<string> | Object,
+  children: Node,
 };
 
 const Badge = ({ className, children }: Props) => {

@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { text } from "@storybook/addon-knobs";
+import { text, number, boolean } from "@storybook/addon-knobs";
 import ProgressBar from ".";
 
 <Meta title="Objects/ProgressBar" component={ProgressBar} />
@@ -8,6 +8,16 @@ import ProgressBar from ".";
 
 <Preview>
   <Story name="default">
-    <ProgressBar propName={text("propName", "default value")} />
+    <ProgressBar
+      label={text("label", "Label")}
+      total={text("total", "Total")}
+      filling={number("filling", 50, {
+        range: true,
+        min: 0,
+        max: 100,
+      })}
+      tooltip={text("tooltip", "Tooltip")}
+      tooltipOnHover={boolean("tooltipOnHover", true)}
+    />
   </Story>
 </Preview>

@@ -3,5 +3,5 @@ import { shallow } from "enzyme";
 import Menu from ".";
 
 it("Renders <Menu /> without crashing", () => {
-  shallow(<Menu />);
+  expect(shallow(<Menu />)).toMatchSnapshot();
 });

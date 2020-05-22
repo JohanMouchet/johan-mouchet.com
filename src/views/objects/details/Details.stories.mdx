@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { text } from "@storybook/addon-knobs";
+import { text, select } from "@storybook/addon-knobs";
 import Details from ".";
 
 <Meta title="Objects/Details" component={Details} />
@@ -8,6 +8,11 @@ import Details from ".";
 
 <Preview>
   <Story name="default">
-    <Details propName={text("propName", "default value")} />
+    <Details
+      summary={text("summary", "Summary")}
+      variant={select("variant", { "": null, compact: "compact" })}
+    >
+      {text("children", "children")}
+    </Details>
   </Story>
 </Preview>

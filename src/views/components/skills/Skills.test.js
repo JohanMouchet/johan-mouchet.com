@@ -3,5 +3,5 @@ import { shallow } from "enzyme";
 import Experience from ".";
 
 it("Renders <Experience /> without crashing", () => {
-  shallow(<Experience />);
+  expect(shallow(<Experience />)).toMatchSnapshot();
 });

@@ -3,36 +3,27 @@
 ## Tech
 
 - Storybook
-  - Add addons: Source, Docs, a11y https://storybook.js.org/addons/
-  - Add all views
+  - Add tokens
+  - Add components: List, Code, Table
   - Expose to a new page .com/Storybook
-- Add Jest snapshots
-- Fix Tabs, Alert, Table Numerical column
+- Replace wow.js
+- Fix Tabs, Table Numerical column
 - Convert `js-`
 - Add id to body `<body id={`page-\${metadata.id}`}>`
-- Remove `.html` legacy files
-- Keep Sass prefix `t-`, explore `@use`?
+- Remove `src/views/**/*.html` legacy files
 - Address all `// TODO`
+- Add Strapi
+
+- ? Remove Sass prefixes `t-`, explore `@use`
+- ? Convert to CSS Modules
+  - Look into PowerRename: https://github.com/microsoft/PowerToys/tree/master/src/modules/powerrename
 
 ## Design
 
 - ? Improve Print
 - ? Sticky nav: header background, J/M logo, 'MENU' + burger menu to Anchors
-- ? dark mode:
-
-```css
-@media (prefers-color-scheme: dark) {
-  body {
-    color: white;
-  }
-}
-@media (prefers-color-scheme: light) {
-  body {
-    color: black;
-  }
-}
-```
+- ? Photo viewer with Unsplash API: https://www.instagram.com/p/B_-e1zrjN7S/
 
 ## Content
 
-- Open Source: GitHub, Codepen?
+- ? Open Source: GitHub, Codepen

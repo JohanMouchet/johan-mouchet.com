@@ -1,6 +1,7 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { text } from "@storybook/addon-knobs";
+import { text, boolean, select } from "@storybook/addon-knobs";
 import PersonalWorks from ".";
+import { IconUnsplash, IconYoutube } from "views/objects";
 
 <Meta title="Components/PersonalWorks" component={PersonalWorks} />
 
@@ -8,6 +9,17 @@ import PersonalWorks from ".";
 
 <Preview>
   <Story name="default">
-    <PersonalWorks propName={text("propName", "default value")} />
+    <PersonalWorks
+      works={[
+        {
+          url: text("url", "#"),
+          thumbnailSrc: text(
+            "thumbnailSrc",
+            "https://via.placeholder.com/200x200"
+          ),
+          sourceIcon: <IconUnsplash />,
+        },
+      ]}
+    />
   </Story>
 </Preview>

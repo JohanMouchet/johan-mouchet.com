@@ -1,7 +1,11 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Toggles from ".";
+import { Checkbox, Radio } from ".";
 
-it("Renders <Toggles /> without crashing", () => {
-  shallow(<Toggles />);
+it("Renders <Checkbox /> without crashing", () => {
+  expect(shallow(<Checkbox />)).toMatchSnapshot();
+});
+
+it("Renders <Radio /> without crashing", () => {
+  expect(shallow(<Radio />)).toMatchSnapshot();
 });
