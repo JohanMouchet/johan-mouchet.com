@@ -292,7 +292,7 @@ const Home = () => (
                         lede: /*html*/ `Modernisation, development of new features and upkeep of Jetstar's international website in an Agile environment.`,
                         thumbnailSrc: require("assets/images/views/career-experiences/jetstar.jpg"),
                         achievements: [
-                          /*html*/ `Participated in the migration of the <a href="https://www.jetstar.com/au/en/flights"><em>Flight Search</em></a> experience to React & Redux for faster and extensive results: increased conversion by 1.3% on the <em>Cheap Flights</em> pages.`,
+                          /*html*/ `Took part in the migration of the <a href="https://www.jetstar.com/au/en/flights"><em>Flight Search</em></a> experience to React & Redux for faster and extensive results: increased conversion by 1.3% on the <em>Cheap Flights</em> pages.`,
                           /*html*/ `Contributed to the creation of a landing page to promote Jetstar <a href="https://www.jetstar.com/au/en/creditcards"><em>Credit Cards</em></a>: surpassed the conversion target by 230% in the first month of launch.`,
                           /*html*/ `Integrated a responsive utility-based Sass grid I built and open sourced: <a href="https://github.com/JohanMouchet/fluxgrid">Fluxgrid</a>.`,
                           /*html*/ `Advocated for performance tracking and optimisations: slowed down the <span data-tooltip="First Meaningful Paint" data-tooltip-indicator>FMP</span> trend, decreased the <span data-tooltip="Time To Interactive" data-tooltip-indicator>TTI</span> by ~9.5% and the bundle size by ~15%.`,
