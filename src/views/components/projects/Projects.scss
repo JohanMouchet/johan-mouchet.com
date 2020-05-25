@@ -89,15 +89,27 @@
     font-size: t-modular-scale(-1);
   }
 
-  &__details-heading {
-    font-size: t-modular-scale(-2);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: 700;
-  }
+  &__detail {
+    $root-detail: &;
 
-  &__details-list {
-    margin-top: 0;
+    &s {
+      #{$root-detail}:last-child {
+        #{$root-detail}-list:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-heading {
+      font-size: t-modular-scale(-2);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+    }
+
+    &-list {
+      margin-top: 0;
+    }
   }
 
   &--highlighted {
