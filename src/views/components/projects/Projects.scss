@@ -112,12 +112,18 @@
     }
   }
 
+  &__success {
+    color: $s-color-success;
+  }
+
+  &__award {
+    color: $s-color-info;
+  }
+
   &--highlighted {
     margin-bottom: t-vertical-rhythm(1);
-    padding: t-vertical-rhythm(1) t-vertical-rhythm(1) 0;
-    border: 1.99px solid $s-color-secondary-lighter;
+    padding: t-vertical-rhythm(1) $grid-gutter 0;
+    background-color: $s-color-gray-lighter;
     border-radius: 6px;
-
-    @include t-wekkit-hdpi-small-dimension;
   }
 }
