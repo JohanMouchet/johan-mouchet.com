@@ -80,7 +80,7 @@ const Home = () => (
         </div>
       </section>
 
-      <div className="container container--noGutter-lgGrid">
+      <section className="container container--noGutter-lgGrid">
         <div className="grid grid--lgGutter-@xs">
           <div className="l-cell--gray-lighter cell cell--12-@xs cell--3-@md">
             <article className="p-skills">
@@ -292,10 +292,10 @@ const Home = () => (
                         lede: /*html*/ `Modernisation, development of new features and upkeep of Jetstar's international website in an Agile environment.`,
                         thumbnailSrc: require("assets/images/views/career-experiences/jetstar.jpg"),
                         achievements: [
-                          /*html*/ `Took part in the migration of the <a href="https://www.jetstar.com/au/en/flights"><em>Flight Search</em></a> experience to React & Redux for faster and extensive results: increased conversion by 1.3% on the <em>Cheap Flights</em> pages.`,
-                          /*html*/ `Contributed to the creation of a landing page to promote Jetstar <a href="https://www.jetstar.com/au/en/creditcards"><em>Credit Cards</em></a>: surpassed the conversion target by 230% in the first month of launch.`,
+                          /*html*/ `Took part in the migration of the <a href="https://www.jetstar.com/au/en/flights"><em>Flight Search</em></a> experience to React & Redux for faster and extensive results: <span class="c-project__success">&#9206;1.3%</span> conversion on the <em>Cheap Flights</em> pages.`,
+                          /*html*/ `Contributed to the creation of a landing page to promote Jetstar <a href="https://www.jetstar.com/au/en/creditcards"><em>Credit Cards</em></a>: surpassed the conversion target by <span class="c-project__success">230%</span> in the first month of launch.`,
                           /*html*/ `Integrated a responsive utility-based Sass grid I built and open sourced: <a href="https://github.com/JohanMouchet/fluxgrid">Fluxgrid</a>.`,
-                          /*html*/ `Advocated for performance tracking and optimisations: slowed down the <span data-tooltip="First Meaningful Paint" data-tooltip-indicator>FMP</span> trend, decreased the <span data-tooltip="Time To Interactive" data-tooltip-indicator>TTI</span> by ~9.5% and the bundle size by ~15%.`,
+                          /*html*/ `Advocated for performance tracking and optimisations: slowed down the <span data-tooltip="First Meaningful Paint" data-tooltip-indicator>FMP</span> trend, <span class="c-project__success">&#9207;~9.5%</span> <span data-tooltip="Time To Interactive" data-tooltip-indicator>TTI</span> and <span class="c-project__success">&#9207;~15%</span> bundle size.`,
                         ],
                         architecture: [
                           /*html*/ `Sitecore CMS`,
@@ -325,7 +325,7 @@ const Home = () => (
                         achievements: [
                           /*html*/ `Developed a community submissible forms with client side validation.`,
                           /*html*/ `Integrated social media sharing.`,
-                          /*html*/ `Awarded<ul><li><span data-tooltip="Melbourne Advertising and Design Club" data-tooltip-indicator>MADC</span> 2018: <a href="https://twitter.com/isobarAU/status/1058125158752313344?s=20">Best PR experience</a></li><li>One Show Awards shortlist: <a href="https://www.oneshow.org/viewentries/?id=51888">Media Relations</a></li></ul>`,
+                          /*html*/ `Awarded<ul><li><span class="c-project__award">&#9733;</span> <span data-tooltip="Melbourne Advertising and Design Club" data-tooltip-indicator>MADC</span> 2018: <a href="https://twitter.com/isobarAU/status/1058125158752313344?s=20">Best PR experience</a></li><li><span class="c-project__award">&#9733;</span> One Show Awards shortlist: <a href="https://www.oneshow.org/viewentries/?id=51888">Media Relations</a></li></ul>`,
                         ],
                         architecture: [
                           /*html*/ `<a href="https://www.contentful.com/">Contentful</a>`,
@@ -370,7 +370,7 @@ const Home = () => (
                         lede: /*html*/ `Websites creation related to education for Pearson’s launch in three new markets through Asia.`,
                         thumbnailSrc: require("assets/images/views/career-experiences/pearson.jpg"),
                         achievements: [
-                          /*html*/ `Participated to content authoring.`,
+                          /*html*/ `Contributed to content authoring.`,
                           /*html*/ `Modified components to suit market.`,
                           /*html*/ `Developed registration forms.`,
                         ],
@@ -484,13 +484,13 @@ const Home = () => (
                         lede: /*html*/ `Redesign, development and marketing strategy aimed at increasing acquisition and conversion rate.`,
                         thumbnailSrc: require("assets/images/views/career-experiences/survie-mer-formation.jpg"),
                         achievements: [
-                          /*html*/ `Designed a Growth Hacking strategy following the AARRR model: increased conversion by 12.6%.`,
+                          /*html*/ `Designed a Growth Hacking strategy following the AARRR model: <span class="c-project__success">&#9206;12.6%</span> conversion.`,
+                          /*html*/ `Single-handedly architected and built the front-end.`,
                           /*html*/ `Refreshed the UI with a new brand identity, responsive design and cross-browser compatibility.`,
                           /*html*/ `Revamped the UX with a focus on user conversion, web performance and accessibility.`,
                           /*html*/ `Optimised SEO with the use of Open Graph protocol and JSON-LD microdata.`,
-                          /*html*/ `Created a tailored AdWords campaign: increased Clics by 10.1%, decreased <span data-tooltip="Cost Per Click" data-tooltip-indicator>CPC</span> by 6.6% YoY.`,
+                          /*html*/ `Created a tailored AdWords campaign: <span class="c-project__success">&#9206;10.1%</span> Clics, <span class="c-project__success">&#9207;6.6%</span> <span data-tooltip="Cost Per Click" data-tooltip-indicator>CPC</span> YoY.`,
                           /*html*/ `Implemented Google Analytics custom events and goals tracking.`,
-                          /*html*/ `Setup the architecture and built the front-end.`,
                         ],
                         architecture: [
                           /*html*/ `Twig templating - component oriented`,
@@ -503,6 +503,7 @@ const Home = () => (
                         libraries: [
                           /*html*/ `<a href="https://github.com/kenwheeler/slick/">Slick</a> carousel`,
                           /*html*/ `<a href="https://github.com/graingert/WOW/">WOW.js</a> animation`,
+                          /*html*/ `<a href="https://heml.io/">HEML</a> transactional email`,
                         ],
                       },
                     ],
@@ -565,10 +566,11 @@ const Home = () => (
                         thumbnailSrc: require("assets/images/views/career-experiences/sport-relief-skipathon.jpg"),
                         achievements: [
                           /*html*/ `Created HTML5 canvas and CSS3 animations: <a href="https://codepen.io/johanmouchet/pen/OMgwMg">PoC</a>`,
-                          /*html*/ `Ensured iOS and Android default browser support`,
+                          /*html*/ `Ensured iOS and Android default browser support.`,
                           /*html*/ `Used <a href="https://developers.google.com/web/fundamentals/native-hardware/device-orientation">Device Orientation & Motion</a> APIs`,
                           /*html*/ `Integrated OAuth authentication.`,
                           /*html*/ `Integrated social media sharing.`,
+                          /*html*/ `Reached target of <span class="c-project__success">1 million</span> <em>Skips</em>.`,
                         ],
                         architecture: [
                           /*html*/ `React`,
@@ -679,7 +681,7 @@ const Home = () => (
             <div className="u-vr--top-2-@xs"></div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   </Default>
 );

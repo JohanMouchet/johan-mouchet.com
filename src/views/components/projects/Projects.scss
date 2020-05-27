@@ -89,23 +89,41 @@
     font-size: t-modular-scale(-1);
   }
 
-  &__details-heading {
-    font-size: t-modular-scale(-2);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: 700;
+  &__detail {
+    $root-detail: &;
+
+    &s {
+      #{$root-detail}:last-child {
+        #{$root-detail}-list:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-heading {
+      font-size: t-modular-scale(-2);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+    }
+
+    &-list {
+      margin-top: 0;
+    }
   }
 
-  &__details-list {
-    margin-top: 0;
+  &__success {
+    color: $s-color-success;
+  }
+
+  &__award {
+    color: $s-color-info;
   }
 
   &--highlighted {
     margin-bottom: t-vertical-rhythm(1);
-    padding: t-vertical-rhythm(1) t-vertical-rhythm(1) 0;
-    border: 1.99px solid $s-color-secondary-lighter;
+    padding: t-vertical-rhythm(1) $grid-gutter 0;
+    background-color: $s-color-gray-lighter;
     border-radius: 6px;
-
-    @include t-wekkit-hdpi-small-dimension;
   }
 }

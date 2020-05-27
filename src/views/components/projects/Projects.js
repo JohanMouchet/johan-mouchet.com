@@ -49,11 +49,11 @@ const Projects = ({ projects }: Props) => {
   const renderContent = (project) => (
     <>
       {project.achievements && (
-        <div className="c-project__details">
-          <b className="c-project__details-heading">
+        <div className="c-project__detail">
+          <b className="c-project__detail-heading">
             Key {pluralize("Achievement", project.achievements.length)}
           </b>
-          <ul className="c-project__details-list">
+          <ul className="c-project__detail-list">
             {project?.achievements?.map((detail) => (
               <li className="c-project__detail" key={parse(detail)}>
                 {parse(detail)}
@@ -64,20 +64,20 @@ const Projects = ({ projects }: Props) => {
       )}
 
       {project.architecture && (
-        <div className="c-project__details">
-          <b className="c-project__details-heading">Architecture</b>
-          <p className="c-project__details-list">
+        <div className="c-project__detail">
+          <b className="c-project__detail-heading">Architecture</b>
+          <p className="c-project__detail-list">
             {parse(project.architecture.join(", "))}
           </p>
         </div>
       )}
 
       {project.libraries && (
-        <div className="c-project__details">
-          <b className="c-project__details-heading">
+        <div className="c-project__detail">
+          <b className="c-project__detail-heading">
             {pluralize("Library", project.libraries.length)}
           </b>
-          <p className="c-project__details-list">
+          <p className="c-project__detail-list">
             {parse(project.libraries.join(", "))}
           </p>
         </div>
@@ -119,7 +119,9 @@ const Projects = ({ projects }: Props) => {
                   project.architecture ||
                   project.libraries) && (
                   <Details summary="Details" variant="compact">
-                    {renderContent(project)}
+                    <div className="c-project__details">
+                      {renderContent(project)}
+                    </div>
                   </Details>
                 )}
               </div>

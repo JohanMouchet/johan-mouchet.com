@@ -6,7 +6,8 @@
   - Add tokens
   - Add components: List, Code, Table
   - Expose to a new page .com/Storybook
-- Replace wow.js
+- Replace wow.js by react-animate-on-scroll
+- Import normalize.css from devDep
 - Fix Tabs, Table Numerical column
 - Convert `js-`
 - Add id to body `<body id={`page-\${metadata.id}`}>`
