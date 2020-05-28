@@ -40,7 +40,7 @@ const MastFooter = ({
             <a
               className="p-mast-footer__page-top"
               href="#page-top"
-              title={topButtonTitle}
+              aria-label={topButtonTitle}
             >
               <IconChevronDown />
             </a>

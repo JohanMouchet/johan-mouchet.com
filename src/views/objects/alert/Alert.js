@@ -57,7 +57,9 @@ const Alert = ({
     open && (
       <div className={classNames}>
         <div className="grid grid--noWrap-@xs">
-          <div className="o-alert__icon cell">{getIcon(variant)}</div>
+          <div className="o-alert__icon cell" aria-label={variant}>
+            {getIcon(variant)}
+          </div>
           <div className="o-alert__content cell cell--@xs">{children}</div>
           {closable && (
             <div className="o-alert__close cell">

@@ -9,6 +9,7 @@ type Props = {
   id?: string,
   name: string,
   multipleCaption?: string,
+  label?: string,
   className?: string | Array<string> | Object,
   attributes?: { [key: string]: any },
   children?: Node,
@@ -18,6 +19,7 @@ const File = ({
   id,
   name,
   multipleCaption,
+  label = "Upload",
   className,
   attributes,
   children,
@@ -36,7 +38,7 @@ const File = ({
         }
         {...attributes}
       />
-      <span className="o-form__file-icon">
+      <span className="o-form__file-icon" aria-label={label}>
         <IconCloudUpload />
       </span>
       {children && <span className="o-form__file-text">{children}</span>}

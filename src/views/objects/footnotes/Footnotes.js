@@ -9,14 +9,21 @@ type ReferenceProps = {
   id: string,
   prefix?: string,
   text: string,
+  label?: string,
 };
 
-const FootnotesReference = ({ id, prefix = "", text }: ReferenceProps) => (
+const FootnotesReference = ({
+  id,
+  prefix = "",
+  text,
+  label = "See note",
+}: ReferenceProps) => (
   <sup>
     <a
       id={`footnote-ref:${prefix && prefix + "-"}${id}`}
       className="o-footnote-ref"
       href={`#footnote:${prefix && prefix + "-"}${id}`}
+      aria-label={label}
     >
       {text}
     </a>
@@ -31,6 +38,7 @@ type NotesProps = {
       id: string,
       prefix?: string,
       text: string,
+      label?: string,
       url?: string,
     }
   ],
@@ -54,6 +62,7 @@ const FootnotesNotes = ({ notes, className }: NotesProps) => {
               note.id
             }`}
             className="o-footnotes__backref"
+            aria-label={note.label || "Jump back to reference"}
           >
             <IconArrowReturn />
           </a>
