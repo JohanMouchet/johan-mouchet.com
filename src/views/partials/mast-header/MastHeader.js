@@ -14,7 +14,7 @@ type Props = {
 const MastHeader = ({
   firstName = /*html*/ PROFILE.firstName,
   lastName = /*html*/ PROFILE.lastName,
-  tagline = /*html*/ `Never stop exploring, <br className="p-mast-header__tagline-breaker" /> never stop creating`,
+  tagline = /*html*/ `Never stop exploring,<br class="p-mast-header__tagline-breaker" /> never stop creating`,
 }: Props) => (
   <header className="p-mast-header">
     <div className="p-mast-header__inner">
