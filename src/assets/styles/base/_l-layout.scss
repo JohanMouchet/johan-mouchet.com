@@ -153,19 +153,3 @@
       map-get($l-article, scale-factor);
   }
 }
-
-.l-cell {
-  &--gray {
-    background: $s-color-gray;
-  }
-
-  &--gray-lighter {
-    background: $s-color-gray-lighter;
-  }
-}
-
-.l-grid {
-  &--full-height {
-    height: 100%;
-  }
-}

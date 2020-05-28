@@ -32,13 +32,13 @@ const Home = () => (
     }}
   >
     <main className="l-main l-main--no-margin">
-      <section className="c-about">
+      <section className="home-about">
         <div className="container container--noGutter-lgGrid">
           <div className="grid grid--lgGutter-@xs">
             <div className="cell cell--12-@xs cell--6-@sm">
-              <h2 className="c-about__heading">About me</h2>
+              <h2 className="home-about__heading">About me</h2>
 
-              <p className="c-about__paragraph">
+              <p className="home-about__paragraph">
                 Originally from Marseille, France, I moved to London in 2013
                 where I graduated from a master degree in IT and started my
                 career as a <b>front-end developer</b>. In 2017, I relocated to{" "}
@@ -46,13 +46,13 @@ const Home = () => (
               </p>
             </div>
 
-            <div className="l-cell--gray-lighter cell cell--0-@xs cell--6-@sm"></div>
+            <div className="home-cell--gray-lighter cell cell--0-@xs cell--6-@sm"></div>
 
-            <div className="l-cell--gray cell cell--12-@xs cell--6-@sm cell--3-@md">
-              <div className="l-grid--full-height grid grid--xCenter-@xs grid--yCenter-@xs">
+            <div className="home-cell--gray cell cell--12-@xs cell--6-@sm cell--3-@md">
+              <div className="home-grid--full-height grid grid--xCenter-@xs grid--yCenter-@xs">
                 <div className="cell">
                   <img
-                    className="c-about__portrait"
+                    className="home-about__portrait"
                     src={PROFILE.image.x1}
                     srcSet={
                       /*html*/ `${PROFILE.image.x1}, ${PROFILE.image.x2} 1.25x`
@@ -64,12 +64,12 @@ const Home = () => (
               </div>
             </div>
 
-            <div className="l-cell--gray-lighter cell cell--hidden-@xs cell--visible-@md cell--3-@md"></div>
+            <div className="home-cell--gray-lighter cell cell--hidden-@xs cell--visible-@md cell--3-@md"></div>
 
             <div className="cell cell--12-@xs cell--6-@sm cell--yCenter-@sm">
-              <h2 className="c-about__heading">Today,</h2>
+              <h2 className="home-about__heading">Today,</h2>
 
-              <p className="c-about__paragraph">
+              <p className="home-about__paragraph">
                 I'm driven by my appreciation for design, enthusiasm for new
                 technologies and desire to collaborate. I'm committed and ready
                 to work within a fast paced environment on innovative and
@@ -82,7 +82,7 @@ const Home = () => (
 
       <section className="container container--noGutter-lgGrid">
         <div className="grid grid--lgGutter-@xs">
-          <div className="l-cell--gray-lighter cell cell--12-@xs cell--3-@md">
+          <div className="home-cell--gray-lighter cell cell--12-@xs cell--3-@md">
             <article className="p-skills">
               <div className="u-vr--top-2-@xs"></div>
               <Anchor as="h2" id="skills">

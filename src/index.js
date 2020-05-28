@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Switch, Route } from "wouter";
-import Home from "views/pages/Home";
-import NotFound from "views/pages/NotFound";
+import { Home, NotFound } from "views/pages";
 import * as serviceWorker from "serviceWorker";
 
 ReactDOM.render(
