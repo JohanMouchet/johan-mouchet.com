@@ -10,7 +10,8 @@
     position: relative;
     overflow: hidden;
 
-    &:hover {
+    &:hover,
+    &:focus {
       #{$root}__thumbnail {
         filter: grayscale(0);
       }

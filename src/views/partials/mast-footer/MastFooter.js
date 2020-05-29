@@ -33,7 +33,9 @@ const MastFooter = ({
               {year} &copy; {copyright}{" "}
               <span className="p-mast-footer__copyright-separator">|</span>
               <br /> Made in{" "}
-              <span className="p-mast-footer__cocorico">France</span>
+              <span className="p-mast-footer__cocorico" tabIndex="0">
+                France
+              </span>
             </p>
           </div>
           <div className="cell cell--0-@xs">

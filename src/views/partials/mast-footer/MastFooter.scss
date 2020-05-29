@@ -57,6 +57,7 @@
     position: relative;
     background-color: $s-color-white;
     text-shadow: none;
+    outline: 0;
     transition: background-color 0.2s ease-out, text-shadow 0.2s ease-out;
 
     &::before,
@@ -80,7 +81,8 @@
       right: 0;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: transparent;
       text-shadow: inherit;
 
@@ -112,7 +114,8 @@
       fill: $s-color-white;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: 0.5;
     }
   }

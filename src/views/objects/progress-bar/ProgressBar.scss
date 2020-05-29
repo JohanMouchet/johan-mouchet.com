@@ -6,6 +6,8 @@
 
   /** Tooltip on hover **/
   &--tooltip-hover {
+    outline: 0;
+
     [data-progress-bar-tooltip] {
       &::before,
       &::after {
@@ -18,7 +20,8 @@
     }
   }
 
-  &--tooltip-hover:hover {
+  &--tooltip-hover:hover,
+  &--tooltip-hover:focus {
     [data-progress-bar-tooltip] {
       &::before,
       &::after {

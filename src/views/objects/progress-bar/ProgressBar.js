@@ -28,7 +28,7 @@ const ProgressBar = ({
   );
 
   return (
-    <div className={classNames}>
+    <div className={classNames} tabindex={tooltip && tooltipOnHover && "0"}>
       {label && <span className="o-progress-bar__label">{label}</span>}
       {total && <span className="o-progress-bar__total">{total}</span>}
       <div className="o-progress-bar__container">
