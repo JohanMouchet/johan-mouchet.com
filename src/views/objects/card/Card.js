@@ -8,7 +8,6 @@ type Props = {
   banner?: boolean | Node,
   bannerUrl?: string,
   header?: Node,
-  body?: Node,
   footer?: Node,
   variant?:
     | "secondary"
@@ -19,13 +18,14 @@ type Props = {
     | "banner-gradient",
   size?: "sm" | "lg",
   className?: string | Array<string> | Object,
+  children?: Node,
 };
 
 const Card = ({
   banner,
   bannerUrl,
   header,
-  body,
+  children,
   footer,
   variant,
   size,
@@ -51,7 +51,7 @@ const Card = ({
         </Tag>
       )}
       {header && <header className="o-card__header">{header}</header>}
-      {body && <div className="o-card__body">{body}</div>}
+      {children && <div className="o-card__body">{children}</div>}
       {footer && <footer className="o-card__footer">{footer}</footer>}
     </section>
   );
