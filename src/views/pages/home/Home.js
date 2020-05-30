@@ -72,7 +72,7 @@ const Home = () => (
               <p className="home-about__paragraph">
                 I'm driven by my appreciation for design, enthusiasm for new
                 technologies and desire to collaborate. I'm committed and ready
-                to work within a fast paced environment on innovative and
+                to work within a fast-paced environment on innovative and
                 impactful ideas.
               </p>
             </div>
@@ -130,7 +130,7 @@ const Home = () => (
                 JAMstack, Storybook, Jest, Enzyme, Flow, Redux, CSS Modules,
                 Webpack / Gulp, npm, Headless CMS, APIs, Git, CI / CD, Linters,
                 Prettier, Zeplin, Responsive design, Accessibility, Performance,
-                SEO, Analytics, Atlassian suite, Agile, Open source
+                SEO, Analytics, Atlassian suite, Agile, Open-source
               </p>
             </article>
 
@@ -294,7 +294,7 @@ const Home = () => (
                         achievements: [
                           /*html*/ `Took part in the migration of the <a href="https://www.jetstar.com/au/en/flights"><em>Flight Search</em></a> experience to React & Redux for faster and extensive results: <span class="c-project__success">&#9206;1.3%</span> conversion on the <em>Cheap Flights</em> pages.`,
                           /*html*/ `Contributed to the creation of a landing page to promote Jetstar <a href="https://www.jetstar.com/au/en/creditcards"><em>Credit Cards</em></a>: surpassed the conversion target by <span class="c-project__success">230%</span> in the first month of launch.`,
-                          /*html*/ `Integrated a responsive utility-based Sass grid I built and open sourced: <a href="https://github.com/JohanMouchet/fluxgrid">Fluxgrid</a>.`,
+                          /*html*/ `Integrated a responsive utility-based Sass grid I built and open-sourced: <a href="https://github.com/JohanMouchet/fluxgrid">Fluxgrid</a>.`,
                           /*html*/ `Advocated for performance tracking and optimisations: slowed down the <span data-tooltip="First Meaningful Paint" data-tooltip-indicator>FMP</span> trend, <span class="c-project__success">&#9207;~9.5%</span> <span data-tooltip="Time To Interactive" data-tooltip-indicator>TTI</span> and <span class="c-project__success">&#9207;~15%</span> bundle size.`,
                         ],
                         architecture: [
@@ -323,13 +323,13 @@ const Home = () => (
                         lede: /*html*/ `Joint <em>RSPCA</em> campaign website to help cat owners give their pet the safest and happiest life while ensuring they have no link to loss of wildlife.`,
                         thumbnailSrc: require("assets/images/views/career-experiences/zoos-victoria.jpg"),
                         achievements: [
-                          /*html*/ `Developed a community submissible forms with client side validation.`,
+                          /*html*/ `Developed a community submissible forms with client-side validation.`,
                           /*html*/ `Integrated social media sharing.`,
                           /*html*/ `Awarded<ul><li><span class="c-project__award">&#9733;</span> <span data-tooltip="Melbourne Advertising and Design Club" data-tooltip-indicator>MADC</span> 2018: <a href="https://twitter.com/isobarAU/status/1058125158752313344?s=20">Best PR experience</a></li><li><span class="c-project__award">&#9733;</span> One Show Awards shortlist: <a href="https://www.oneshow.org/viewentries/?id=51888">Media Relations</a></li></ul>`,
                         ],
                         architecture: [
                           /*html*/ `<a href="https://www.contentful.com/">Contentful</a>`,
-                          /*html*/ `Handlebars templating - component oriented`,
+                          /*html*/ `Handlebars templating - component-oriented`,
                           /*html*/ `Bootstrap 4`,
                           /*html*/ `Sass`,
                           /*html*/ `BEM naming scheme`,
@@ -344,7 +344,7 @@ const Home = () => (
                       {
                         name: /*html*/ `Klip Studio`,
                         url: /*html*/ `https://www.klipdesk.co`,
-                        lede: /*html*/ `Web application dedicated to the sport rights holders industry. Allows to edit live or recorded streams to produce highlights shareable on social media.`,
+                        lede: /*html*/ `Web application dedicated to the sport rights holders industry. Allows editing of live or recorded streams to produce highlights shareable on social media.`,
                         thumbnailSrc: require("assets/images/views/career-experiences/klip-studio.jpg"),
                         achievements: [
                           /*html*/ `Developed content tagging, filtering and sorting features.`,
@@ -371,7 +371,7 @@ const Home = () => (
                         thumbnailSrc: require("assets/images/views/career-experiences/pearson.jpg"),
                         achievements: [
                           /*html*/ `Contributed to content authoring.`,
-                          /*html*/ `Modified components to suit market.`,
+                          /*html*/ `Modified components to suit the market.`,
                           /*html*/ `Developed registration forms.`,
                         ],
                         architecture: [
@@ -389,7 +389,7 @@ const Home = () => (
                     jobTitle: /*html*/ `Front-end developer`,
                     startDate: new Date("2016-11-14"),
                     endDate: new Date("2017-10-19"),
-                    lede: /*html*/ `Leading digital marketing, technology and commerce consultancy which delivers at a UK, pan-European and global level.`,
+                    lede: /*html*/ `Leading digital marketing, technology and commerce consultancy which delivers at the UK, pan-European and global level.`,
                     projects: [
                       {
                         highlight: true,
@@ -406,7 +406,7 @@ const Home = () => (
                         ],
                         architecture: [
                           /*html*/ `<a href="http://www.sdl.com/software-and-services/tridion-dx/tridion-sites.html">SDL Tridion Sites</a> - headless CMS`,
-                          /*html*/ `Nunjucks templating - component oriented`,
+                          /*html*/ `Nunjucks templating - component-oriented`,
                           /*html*/ `MongoDB database`,
                           /*html*/ `Sass`,
                           /*html*/ `<a href="https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> CSS architecture`,
@@ -453,7 +453,7 @@ const Home = () => (
                         ],
                         architecture: [
                           /*html*/ `<a href="http://www.episerver.com/">EPIServer</a> CMS`,
-                          /*html*/ `Handlebars / Razor templating - component oriented`,
+                          /*html*/ `Handlebars / Razor templating - component-oriented`,
                           /*html*/ `Sass`,
                           /*html*/ `<a href="https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> CSS architecture`,
                           /*html*/ `jQuery`,
@@ -493,7 +493,7 @@ const Home = () => (
                           /*html*/ `Implemented Google Analytics custom events and goals tracking.`,
                         ],
                         architecture: [
-                          /*html*/ `Twig templating - component oriented`,
+                          /*html*/ `Twig templating - component-oriented`,
                           /*html*/ `MySQL database`,
                           /*html*/ `Sass`,
                           /*html*/ `<a href="https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> CSS architecture`,
@@ -517,7 +517,7 @@ const Home = () => (
                     jobTitle: /*html*/ `Front-end developer`,
                     startDate: new Date("2015-12-07"),
                     endDate: new Date("2016-05-03"),
-                    lede: /*html*/ `Award winning marketing agency which helps some of the world's most respected brands to strategically develop and implement marketing communications.`,
+                    lede: /*html*/ `Award-winning marketing agency which helps some of the world's most respected brands to strategically develop and implement marketing communications.`,
                     projects: [
                       {
                         name: /*html*/ `Business Banking Insight`,
@@ -589,7 +589,7 @@ const Home = () => (
                     jobTitle: /*html*/ `Web designer & developer`,
                     startDate: new Date("2014-07-09"),
                     endDate: new Date("2015-10-01"),
-                    lede: /*html*/ `Independent web marketing agency focused on Growth Hacking.<br /><br />Here are few of the websites I've designed and built using WordPress:`,
+                    lede: /*html*/ `Independent web marketing agency focused on Growth Hacking.<br /><br />Here are a few of the websites I've designed and built using WordPress:`,
                     projects: [
                       {
                         name: /*html*/ `Weholite`,
