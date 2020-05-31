@@ -1,0 +1,67 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import "assets/styles/settings/_settings.scss";
+
+<Meta title="Settings/Colors" />
+
+# Colors
+
+<Preview>
+  <Story name="default">
+    <div>Colors</div>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="text">
+    <table className="o-table">
+      <thead>
+        <tr>
+          <th>Preview</th>
+          <th>Sass Utility</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span className="u-color--dimmed">Dimmed text</span>
+          </td>
+          <td>
+            <code className="u-select--all">.u-color--dimmed</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span className="u-color--success">Success text</span>
+          </td>
+          <td>
+            <code className="u-select--all">.u-color--success</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span className="u-color--info">Info text</span>
+          </td>
+          <td>
+            <code className="u-select--all">.u-color--info</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span className="u-color--warning">Warning text</span>
+          </td>
+          <td>
+            <code className="u-select--all">.u-color--warning</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span className="u-color--danger">Danger text</span>
+          </td>
+          <td>
+            <code className="u-select--all">.u-color--danger</code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </Story>
+</Preview>

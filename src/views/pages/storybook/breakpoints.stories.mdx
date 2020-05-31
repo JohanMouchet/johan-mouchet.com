@@ -1,0 +1,41 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { BREAKPOINTS } from "constants/breakpoints";
+
+<Meta title="Settings/Breakpoints" />
+
+# Breakpoints
+
+<Preview>
+  <Story name="default">
+    <table className="o-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>xs</td>
+          <td>{BREAKPOINTS.xs}</td>
+        </tr>
+        <tr>
+          <td>sm</td>
+          <td>{BREAKPOINTS.sm}</td>
+        </tr>
+        <tr>
+          <td>md</td>
+          <td>{BREAKPOINTS.md}</td>
+        </tr>
+        <tr>
+          <td>lg</td>
+          <td>{BREAKPOINTS.lg}</td>
+        </tr>
+        <tr>
+          <td>xl</td>
+          <td>{BREAKPOINTS.xl}</td>
+        </tr>
+      </tbody>
+    </table>
+  </Story>
+</Preview>

@@ -14,7 +14,6 @@ import Card from ".";
           banner={boolean("banner", true)}
           bannerUrl={text("bannerUrl", "https://via.placeholder.com/400x168")}
           header={text("header", "Header")}
-          body={text("body", "Body")}
           footer={text("footer", "Footer")}
           variant={select("variant", {
             "": null,
@@ -30,7 +29,9 @@ import Card from ".";
             sm: "sm",
             lg: "lg",
           })}
-        />
+        >
+          {text("children", "children")}
+        </Card>
       </div>
     </div>
   </Story>
