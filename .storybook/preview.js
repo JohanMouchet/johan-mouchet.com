@@ -8,41 +8,41 @@ addParameters({
   viewport: {
     viewports: {
       xs: {
-        name: "xs",
+        name: BREAKPOINTS.XS.NAME,
         styles: {
-          width: BREAKPOINTS.xs,
+          width: BREAKPOINTS.XS.SIZE,
           height: "100%",
         },
         type: "mobile",
       },
       sm: {
-        name: "sm",
+        name: BREAKPOINTS.SM.NAME,
         styles: {
-          width: BREAKPOINTS.sm,
+          width: BREAKPOINTS.SM.SIZE,
           height: "100%",
         },
         type: "tablet",
       },
       md: {
-        name: "md",
+        name: BREAKPOINTS.MD.NAME,
         styles: {
-          width: BREAKPOINTS.md,
+          width: BREAKPOINTS.MD.SIZE,
           height: "100%",
         },
         type: "desktop",
       },
       lg: {
-        name: "lg",
+        name: BREAKPOINTS.LG.NAME,
         styles: {
-          width: BREAKPOINTS.lg,
+          width: BREAKPOINTS.LG.SIZE,
           height: "100%",
         },
         type: "desktop",
       },
       xl: {
-        name: "xl",
+        name: BREAKPOINTS.XL.NAME,
         styles: {
-          width: BREAKPOINTS.xl,
+          width: BREAKPOINTS.XL.SIZE,
           height: "100%",
         },
         type: "desktop",
