@@ -15,7 +15,7 @@ html {
   }
 
   line-height: $s-line-height-base;
-  font-family: $s-font-family-primary;
+  font-family: $s-font-family-sans;
   color: $s-color-text;
   font-feature-settings: "liga", "clig";
 }
@@ -28,7 +28,7 @@ h4,
 h5,
 h6 {
   line-height: $s-line-height-base / 1.2;
-  font-family: $s-font-family-secondary;
+  font-family: $s-font-family-serif;
   color: $s-color-heading;
   margin-top: 0;
 
@@ -118,4 +118,15 @@ abbr[title] {
 b,
 strong {
   font-weight: 500;
+}
+
+mark {
+  color: $s-color-text;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: $s-font-family-mono;
 }

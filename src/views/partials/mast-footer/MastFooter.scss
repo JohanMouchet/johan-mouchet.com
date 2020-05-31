@@ -7,7 +7,8 @@
     url("#{t-path(theme)}/footer.jpg") right center/cover no-repeat
       $s-color-primary;
   letter-spacing: 0.1em;
-  font-family: $s-font-family-quaternary;
+  font-family: $s-font-family-mono;
+  font-size: t-modular-scale(-1);
   text-shadow: 1px 1px 1px rgba($s-color-black, 0.3);
   color: $s-color-white;
   position: relative;
@@ -100,15 +101,15 @@
 
   &__page-top {
     display: inline-block;
-    transform: rotate(180deg);
     line-height: 0;
     padding: 0.3em;
     border: 2px solid $s-color-white;
-    transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out, transform 0.1s ease-out;
 
     @include t-wekkit-hdpi-small-dimension("border-width", 2);
 
     svg {
+      transform: rotate(180deg);
       height: t-modular-scale(2);
       width: t-modular-scale(2);
       fill: $s-color-white;
@@ -117,6 +118,10 @@
     &:hover,
     &:focus {
       opacity: 0.5;
+    }
+
+    &:active {
+      transform: translateY(2px);
     }
   }
 }

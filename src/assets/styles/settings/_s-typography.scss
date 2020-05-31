@@ -9,10 +9,12 @@ $s-font-size-mobile: $s-font-size-base * 0.9333; // Comment if unwanted
 $s-line-height-base: 1.6;
 $s-modular-scale-ratio: 1.2;
 
-$s-font-family-primary: system-ui, helvetica, arial, serif;
-$s-font-family-secondary: "Times New Roman", times, serif;
-$s-font-family-tertiary: "Abril Fatface", $s-font-family-secondary;
-$s-font-family-quaternary: monospace;
+$s-font-family-sans: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI",
+  helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+$s-font-family-serif: "Times New Roman", times, serif;
+$s-font-family-display: "Abril Fatface", $s-font-family-serif;
+$s-font-family-mono: sfmono-regular, consolas, "Liberation Mono", menlo,
+  monospace;
 
 $s-color-heading: #273042;
 $s-color-text: #657388;
@@ -26,3 +28,11 @@ $s-color-link-active: $s-color-secondary-darker;
 /* Selection */
 $s-color-selection-text: $s-color-white;
 $s-color-selection-bg: $s-color-secondary;
+
+/* stylelint-disable selector-pseudo-class-no-unknown, property-no-unknown */
+:export {
+  s_typography_sans: $s-font-family-sans;
+  s_typography_serif: $s-font-family-serif;
+  s_typography_display: $s-font-family-display;
+  s_typography_mono: $s-font-family-mono;
+}

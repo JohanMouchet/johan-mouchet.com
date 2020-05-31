@@ -45,7 +45,7 @@
     width: 100%;
     margin-bottom: 0;
     color: $s-color-white;
-    font-family: $s-font-family-tertiary;
+    font-family: $s-font-family-display;
     font-size: t-modular-scale(4);
     font-weight: 400;
     text-transform: uppercase;
@@ -154,8 +154,8 @@
     width: 100%;
     margin: t-vertical-rhythm(2) t-vertical-rhythm(1) t-vertical-rhythm(1);
     text-align: center;
-    font-family: $s-font-family-quaternary;
-    font-size: t-modular-scale(0);
+    font-family: $s-font-family-mono;
+    font-size: t-modular-scale(-1);
     letter-spacing: 0.4em;
     text-transform: uppercase;
     font-weight: 400;

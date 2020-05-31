@@ -113,19 +113,19 @@
     }
 
     &--font-primary {
-      @include typography(#{$s-font-family-primary});
+      @include typography(#{$s-font-family-sans});
     }
 
     &--font-secondary {
-      @include typography(#{$s-font-family-secondary});
+      @include typography(#{$s-font-family-serif});
     }
 
     &--font-tertiary {
-      @include typography(#{$s-font-family-tertiary});
+      @include typography(#{$s-font-family-display});
     }
 
     &--font-quaternary {
-      @include typography(#{$s-font-family-quaternary});
+      @include typography(#{$s-font-family-mono});
     }
   }
 }
