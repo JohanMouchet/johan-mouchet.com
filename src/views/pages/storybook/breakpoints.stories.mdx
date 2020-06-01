@@ -12,29 +12,42 @@ import { BREAKPOINTS } from "constants/breakpoints";
         <tr>
           <th>Name</th>
           <th>Size</th>
+          <th>Sass Setting</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>xs</td>
-          <td>{BREAKPOINTS.XS}</td>
-        </tr>
-        <tr>
-          <td>sm</td>
-          <td>{BREAKPOINTS.SM}</td>
-        </tr>
-        <tr>
-          <td>md</td>
-          <td>{BREAKPOINTS.MD}</td>
-        </tr>
-        <tr>
-          <td>lg</td>
-          <td>{BREAKPOINTS.LG}</td>
-        </tr>
-        <tr>
-          <td>xl</td>
-          <td>{BREAKPOINTS.XL}</td>
-        </tr>
+        {[
+          {
+            name: "xs",
+            size: BREAKPOINTS.XS,
+          },
+          {
+            name: "sm",
+            size: BREAKPOINTS.SM,
+          },
+          {
+            name: "md",
+            size: BREAKPOINTS.MD,
+          },
+          {
+            name: "lg",
+            size: BREAKPOINTS.LG,
+          },
+          {
+            name: "xl",
+            size: BREAKPOINTS.XL,
+          },
+        ].map((breakpoint) => (
+          <tr>
+            <th>{breakpoint.name}</th>
+            <td>{breakpoint.size}</td>
+            <td>
+              <code className="u-select--all">
+                map-get($s-breakpoints, {breakpoint.name})
+              </code>
+            </td>
+          </tr>
+        ))}
       </tbody>
     </table>
   </Story>
