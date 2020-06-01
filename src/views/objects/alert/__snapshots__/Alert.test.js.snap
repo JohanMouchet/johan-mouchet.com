@@ -8,6 +8,7 @@ exports[`Renders <Alert /> without crashing 1`] = `
     className="grid grid--noWrap-@xs"
   >
     <div
+      aria-label="info"
       className="o-alert__icon cell"
     >
       <ForwardRef(SvgInfoCircle) />

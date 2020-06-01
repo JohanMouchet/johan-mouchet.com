@@ -10,6 +10,7 @@ exports[`Renders <File /> without crashing 1`] = `
     type="file"
   />
   <span
+    aria-label="Upload"
     className="o-form__file-icon"
   >
     <ForwardRef(SvgCloudUpload) />

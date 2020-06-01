@@ -43,8 +43,9 @@ exports[`Renders <MastHeader /> without crashing 1`] = `
     <h2
       className="p-mast-header__tagline"
     >
-      Never stop exploring, 
+      Never stop exploring,
       <br
+        className="p-mast-header__tagline-breaker"
         key="1"
       />
        never stop creating

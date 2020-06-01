@@ -39,6 +39,7 @@ exports[`Renders <MastFooter /> without crashing 1`] = `
            
           <span
             className="p-mast-footer__cocorico"
+            tabIndex="0"
           >
             France
           </span>
@@ -48,9 +49,9 @@ exports[`Renders <MastFooter /> without crashing 1`] = `
         className="cell cell--0-@xs"
       >
         <a
+          aria-label="Get to the top"
           className="p-mast-footer__page-top"
           href="#page-top"
-          title="Get to the top"
         >
           <ForwardRef(SvgChevronDown) />
         </a>
