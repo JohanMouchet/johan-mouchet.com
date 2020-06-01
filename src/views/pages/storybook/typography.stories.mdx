@@ -23,18 +23,39 @@ import { TYPOGRAPHY } from "constants/typography";
             </tr>
           </thead>
           <tbody>
-            {Object.values(TYPOGRAPHY).map((typeface) => (
+            {[
+              {
+                name: "Sans-serif",
+                stack: TYPOGRAPHY.SANS,
+                sassSetting: "$s-font-family-sans",
+              },
+              {
+                name: "Serif",
+                stack: TYPOGRAPHY.SERIF,
+                sassSetting: "$s-font-family-serif",
+              },
+              {
+                name: "Display",
+                stack: TYPOGRAPHY.DISPLAY,
+                sassSetting: "$s-font-family-display",
+              },
+              {
+                name: "Monospace",
+                stack: TYPOGRAPHY.MONO,
+                sassSetting: "$s-font-family-mono",
+              },
+            ].map((typeface) => (
               <tr>
-                <th>{typeface.NAME}</th>
+                <th>{typeface.name}</th>
                 <td>
-                  <span style={{ fontFamily: typeface.STACK, fontSize: "2em" }}>
+                  <span style={{ fontFamily: typeface.stack, fontSize: "2em" }}>
                     {input}
                   </span>
                   <br />
-                  <span className="u-color--dimmed">{typeface.STACK}</span>
+                  <span className="u-color--dimmed">{typeface.stack}</span>
                 </td>
                 <td>
-                  <code className="u-select--all">{typeface.SASS_SETTING}</code>
+                  <code className="u-select--all">{typeface.sassSetting}</code>
                 </td>
               </tr>
             ))}
