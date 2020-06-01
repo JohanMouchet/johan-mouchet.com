@@ -3,6 +3,7 @@
 import * as React from "react";
 import { MastHeader, MastFooter } from "views/partials";
 import "assets/styles/_styles.scss";
+import "./Default.scss";
 
 const Default = ({ children }: Node) => (
   <div className="l-layout">

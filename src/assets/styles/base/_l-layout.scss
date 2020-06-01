@@ -2,64 +2,6 @@
  * Layout
  */
 
-.l-layout {
-  min-height: 100vh;
-  min-height: stretch;
-  max-width: t-breakpoint(xxl);
-  display: flex;
-  margin: 0 auto;
-  padding: t-vertical-rhythm(0.5) t-vertical-rhythm(0.25);
-  box-sizing: content-box;
-
-  @media (min-width: t-breakpoint(sm)) {
-    padding: t-vertical-rhythm(0.5) t-vertical-rhythm(1);
-  }
-
-  @media (min-width: t-breakpoint(md)) {
-    padding: t-vertical-rhythm(1) t-vertical-rhythm(2);
-  }
-
-  &__background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-    }
-
-    &::before {
-      background: url("#{t-path(theme)}/layout-background.jpg") $s-color-primary;
-      filter: blur(6px);
-      transform: scale(3.5);
-    }
-
-    &::after {
-      background: url("#{t-path(theme)}/layout-grain.png");
-    }
-  }
-
-  &__inner {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    box-shadow: 0 10px 15px -3px rgba($s-color-black, 0.4),
-      0 4px 6px -2px rgba($s-color-black, 0.4);
-    background-color: $s-color-white;
-    border-radius: 8px;
-  }
-}
-
 /* Main */
 .l-main {
   flex-grow: 1;
