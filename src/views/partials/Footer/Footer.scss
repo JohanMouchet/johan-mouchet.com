@@ -1,7 +1,7 @@
 @import "assets/styles/settings/_settings";
 @import "assets/styles/tools/_tools";
 
-.p-mast-footer {
+.p-footer {
   padding: t-vertical-rhythm(1.2) 0;
   background: t-background(dots),
     url("#{t-path(theme)}/footer.jpg") right center/cover no-repeat

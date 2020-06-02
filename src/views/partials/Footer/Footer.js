@@ -4,7 +4,7 @@ import * as React from "react";
 import { VERSIONS } from "constants/versions";
 import { PROFILE } from "constants/profile";
 import { IconChevronDown } from "views/objects";
-import "./MastFooter.scss";
+import "./Footer.scss";
 
 type Props = {
   version: string,
@@ -12,7 +12,7 @@ type Props = {
   topButtonTitle: string,
 };
 
-const MastFooter = ({
+const Footer = ({
   version = VERSIONS.site,
   copyright = /* html*/ `${
     PROFILE.firstName
@@ -22,25 +22,25 @@ const MastFooter = ({
   const year = new Date().getFullYear();
 
   return (
-    <footer className="p-mast-footer">
+    <footer className="p-footer">
       <div className="container">
         <div className="grid grid--yCenter-@xs grid--noWrap-@xs">
           <div className="cell cell--0-@xs">
-            <span className="p-mast-footer__version">{version}</span>
+            <span className="p-footer__version">{version}</span>
           </div>
           <div className="cell cell--@xs">
-            <p className="p-mast-footer__copyright">
+            <p className="p-footer__copyright">
               {year} &copy; {copyright}{" "}
-              <span className="p-mast-footer__copyright-separator">|</span>
+              <span className="p-footer__copyright-separator">|</span>
               <br /> Made in{" "}
-              <span className="p-mast-footer__cocorico" tabIndex="0">
+              <span className="p-footer__cocorico" tabIndex="0">
                 France
               </span>
             </p>
           </div>
           <div className="cell cell--0-@xs">
             <a
-              className="p-mast-footer__page-top"
+              className="p-footer__page-top"
               href="#page-top"
               aria-label={topButtonTitle}
             >
@@ -53,4 +53,4 @@ const MastFooter = ({
   );
 };
 
-export default MastFooter;
+export default Footer;

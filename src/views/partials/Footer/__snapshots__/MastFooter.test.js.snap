@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders <MastFooter /> without crashing 1`] = `
+exports[`Renders <Footer /> without crashing 1`] = `
 <footer
   className="p-mast-footer"
 >

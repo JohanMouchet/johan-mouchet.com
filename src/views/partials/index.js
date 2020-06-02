@@ -1,2 +1,2 @@
-export { default as MastFooter } from "./mast-footer";
-export { default as MastHeader } from "./mast-header";
+export { default as Footer } from "./Footer";
+export { default as Header } from "./Header";
