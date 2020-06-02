@@ -1,5 +1,5 @@
-import React from "views/partials/Footer/node_modules/react";
-import { shallow } from "views/partials/Footer/node_modules/enzyme";
+import React from "react";
+import { shallow } from "enzyme";
 import Footer from ".";
 
 it("Renders <Footer /> without crashing", () => {

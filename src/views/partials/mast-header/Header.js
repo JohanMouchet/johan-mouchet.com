@@ -1,8 +1,8 @@
 // @flow
 
 import * as React from "react";
-import { PROFILE } from "./node_modules/constants/profile";
-import parse from "./node_modules/utils/parse";
+import { PROFILE } from "constants/profile";
+import parse from "utils/parse";
 import "./Header.scss";
 
 type Props = {
