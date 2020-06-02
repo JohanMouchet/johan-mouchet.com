@@ -1,1 +1,1 @@
-export { FootnotesReference, FootnotesNotes } from "./Footnotes.js";
+export { FootnotesReference, FootnotesNotes } from "./Footnotes";

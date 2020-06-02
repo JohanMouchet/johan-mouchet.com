@@ -439,7 +439,7 @@ const Home = () => (
                           /*html*/ `Three.js 3D graphics designed by the talented <a href="http://danielbrowns.com/">Daniel Brown</a>`,
                         ],
                         libraries: [
-                          /*html*/ `<a href="https://github.com/alvarotrigo/fullPage.js">fullPage.js</a>`,
+                          /*html*/ `<a href="https://github.com/alvarotrigo/fullPage">fullPage.js</a>`,
                         ],
                       },
                       {

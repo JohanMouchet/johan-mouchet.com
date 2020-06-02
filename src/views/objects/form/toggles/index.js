@@ -1,1 +1,1 @@
-export { Checkbox, Radio } from "./Toggles.js";
+export { Checkbox, Radio } from "./Toggles";

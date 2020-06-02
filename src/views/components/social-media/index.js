@@ -1,1 +1,1 @@
-export { default } from "./SocialMedia.js";
+export { default } from "./SocialMedia";

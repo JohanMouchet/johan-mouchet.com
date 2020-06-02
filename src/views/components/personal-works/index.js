@@ -1,1 +1,1 @@
-export { default } from "./PersonalWorks.js";
+export { default } from "./PersonalWorks";

@@ -1,1 +1,1 @@
-export { Field, Select, Textarea } from "./Fields.js";
+export { Field, Select, Textarea } from "./Fields";
