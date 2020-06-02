@@ -21,6 +21,7 @@ import {
   Experiences,
   PersonalWorks,
 } from "views/components";
+import { Main, Article } from "views/partials";
 import "./Home.scss";
 
 const Home = () => (
@@ -31,7 +32,7 @@ const Home = () => (
       description: /*html*/ `Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.`,
     }}
   >
-    <main className="l-main l-main--no-margin">
+    <Main margin="no-margin">
       <section className="home-about">
         <div className="container container--noGutter-lgGrid">
           <div className="grid grid--lgGutter-@xs">
@@ -83,8 +84,7 @@ const Home = () => (
       <section className="container container--noGutter-lgGrid">
         <div className="grid grid--lgGutter-@xs">
           <div className="home-cell--gray-lighter cell cell--12-@xs cell--3-@md">
-            <article className="p-skills">
-              <div className="u-vr--top-2-@xs"></div>
+            <Article>
               <Anchor as="h2" id="skills">
                 Skills
               </Anchor>
@@ -118,11 +118,11 @@ const Home = () => (
                   },
                 ]}
               />
-            </article>
+            </Article>
 
             <hr />
 
-            <article className="p-tools">
+            <Article>
               <Anchor as="h2" id="tools">
                 Tools
               </Anchor>
@@ -132,20 +132,20 @@ const Home = () => (
                 Prettier, Zeplin, Responsive design, Accessibility, Performance,
                 SEO, Analytics, Atlassian suite, Agile, Open-source
               </p>
-            </article>
+            </Article>
 
             <hr />
 
-            <article className="p-profile">
+            <Article>
               <Anchor as="h2" id="profile">
                 Profile
               </Anchor>
               <p>Creative, Learning Enthusiast, Motivated, Knowledge Sharer</p>
-            </article>
+            </Article>
 
             <hr />
 
-            <article className="p-language">
+            <Article>
               <Anchor as="h2" id="languages">
                 Languages
               </Anchor>
@@ -153,11 +153,11 @@ const Home = () => (
                 <li>English: C1 Advanced</li>
                 <li>French: Native</li>
               </ul>
-            </article>
+            </Article>
 
             <hr />
 
-            <article className="p-academic-qualifications">
+            <Article>
               <Anchor as="h2" id="academic-qualifications">
                 Academic Qualifications
               </Anchor>
@@ -184,11 +184,11 @@ const Home = () => (
                   },
                 ]}
               />
-            </article>
+            </Article>
 
             <hr />
 
-            <article className="p-interests">
+            <Article>
               <Anchor as="h2" id="interests">
                 Interests
               </Anchor>
@@ -198,11 +198,11 @@ const Home = () => (
                 Volunteer{" "}
                 <a href="https://youngcodersau.com/">@YoungCodersAU</a>
               </p>
-            </article>
+            </Article>
 
             <hr />
 
-            <article className="p-social-medias">
+            <Article>
               <Anchor as="h2" id="social-media">
                 Social Media
               </Anchor>
@@ -261,13 +261,12 @@ const Home = () => (
                   },
                 ]}
               />
-            </article>
+            </Article>
             <div className="u-vr--top-2-@xs"></div>
           </div>
 
           <div className="cell cell--12-@xs cell--9-@md">
-            <article className="p-career-experiences">
-              <div className="u-vr--top-2-@xs"></div>
+            <Article>
               <Anchor as="h2" id="career-experiences">
                 Career Experiences
               </Anchor>
@@ -615,11 +614,11 @@ const Home = () => (
                   },
                 ]}
               />
-            </article>
+            </Article>
 
             <hr />
 
-            <article className="p-personal-works">
+            <Article>
               <Anchor as="h2" id="personal-works">
                 Personal Works
               </Anchor>
@@ -663,11 +662,11 @@ const Home = () => (
                   },
                 ]}
               />
-            </article>
+            </Article>
 
             <hr />
 
-            <article className="p-contact" id="p-contact">
+            <Article>
               <Anchor as="h2" id="get-in-touch">
                 Get In Touch
               </Anchor>
@@ -677,12 +676,11 @@ const Home = () => (
                 <br />
                 <a href={PROFILE.socialNetworks.linkedIn}>LinkedIn</a>
               </p>
-            </article>
-            <div className="u-vr--top-2-@xs"></div>
+            </Article>
           </div>
         </div>
       </section>
-    </main>
+    </Main>
   </Default>
 );
 

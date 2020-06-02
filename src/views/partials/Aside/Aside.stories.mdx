@@ -1,0 +1,21 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text, select } from "@storybook/addon-knobs";
+import Aside from ".";
+
+<Meta title="Partials/Aside" component={Aside} />
+
+# Aside
+
+<Preview>
+  <Story name="default">
+    <div style={{ outline: "1px dotted" }}>
+      <Aside
+        margin={select("margin", {
+          "": null,
+          "no-margin": "no-margin",
+        })}
+        children={text("children", "children")}
+      />
+    </div>
+  </Story>
+</Preview>

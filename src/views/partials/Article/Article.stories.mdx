@@ -1,0 +1,25 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text, select } from "@storybook/addon-knobs";
+import Article from ".";
+
+<Meta title="Partials/Article" component={Article} />
+
+# Article
+
+<Preview>
+  <Story name="default">
+    <div style={{ outline: "1px dotted" }}>
+      <Article
+        size={select("size", { "": null, sm: "sm", lg: "lg" })}
+        margin={select("margin", {
+          "": null,
+          "no-margin": "no-margin",
+          "no-top-margin": "no-top-margin",
+          "no-bottom-margin": "no-bottom-margin",
+        })}
+        variant={select("variant", { "": null, secondary: "secondary" })}
+        children={text("children", "children")}
+      />
+    </div>
+  </Story>
+</Preview>

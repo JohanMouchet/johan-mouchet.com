@@ -2,6 +2,7 @@ import * as React from "react";
 import { PROFILE } from "constants/profile";
 import { Link } from "wouter";
 import { Default } from "views/layouts";
+import { Main } from "views/partials";
 
 const NotFound = () => (
   <Default
@@ -11,7 +12,7 @@ const NotFound = () => (
       description: /*html*/ `Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.`,
     }}
   >
-    <main className="l-main">
+    <Main>
       <div className="container u-full--height">
         <div className="grid grid--xCenter-@xs grid--yCenter-@xs u-full--height">
           <div className="cell u-align--center">
@@ -28,7 +29,7 @@ const NotFound = () => (
           </div>
         </div>
       </div>
-    </main>
+    </Main>
   </Default>
 );
 
