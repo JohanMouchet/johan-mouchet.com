@@ -10,8 +10,8 @@ exports[`Renders <Default /> without crashing 1`] = `
   <div
     className="l-layout__inner"
   >
-    <MastHeader />
-    <MastFooter />
+    <Header />
+    <Footer />
   </div>
 </div>
 `;

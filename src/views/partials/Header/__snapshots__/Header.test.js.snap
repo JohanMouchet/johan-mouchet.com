@@ -2,38 +2,38 @@
 
 exports[`Renders <Header /> without crashing 1`] = `
 <header
-  className="p-mast-header"
+  className="p-header"
 >
   <div
-    className="p-mast-header__inner"
+    className="p-header__inner"
   >
     <h1
-      className="p-mast-header__heading"
+      className="p-header__heading"
     >
       <span
-        className="p-mast-header__half p-mast-header__half--left"
+        className="p-header__half p-header__half--left"
       >
         <span
-          className="p-mast-header__text-wrapper"
+          className="p-header__text-wrapper"
         >
           <span
-            className="p-mast-header__text"
+            className="p-header__text"
           >
             Johan
           </span>
         </span>
       </span>
       <span
-        className="p-mast-header__line"
+        className="p-header__line"
       />
       <span
-        className="p-mast-header__half p-mast-header__half--right"
+        className="p-header__half p-header__half--right"
       >
         <span
-          className="p-mast-header__text-wrapper"
+          className="p-header__text-wrapper"
         >
           <span
-            className="p-mast-header__text"
+            className="p-header__text"
           >
             Mouchet
           </span>
@@ -41,11 +41,11 @@ exports[`Renders <Header /> without crashing 1`] = `
       </span>
     </h1>
     <h2
-      className="p-mast-header__tagline"
+      className="p-header__tagline"
     >
       Never stop exploring,
       <br
-        className="p-mast-header__tagline-breaker"
+        className="p-header__tagline-breaker"
         key="1"
       />
        never stop creating
