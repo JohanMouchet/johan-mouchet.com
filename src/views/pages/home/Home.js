@@ -13,6 +13,7 @@ import {
   IconTwitter,
   IconUnsplash,
   IconYoutube,
+  List,
 } from "views/objects";
 import {
   Skills,
@@ -149,10 +150,10 @@ const Home = () => (
               <Anchor as="h2" id="languages">
                 Languages
               </Anchor>
-              <ul className="o-list--unstyled">
+              <List unstyled>
                 <li>English: C1 Advanced</li>
                 <li>French: Native</li>
-              </ul>
+              </List>
             </Article>
 
             <hr />

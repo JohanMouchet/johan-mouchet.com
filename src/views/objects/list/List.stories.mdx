@@ -1,0 +1,54 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { select, boolean } from "@storybook/addon-knobs";
+import List from ".";
+
+<Meta title="Objects/List" component={List} />
+
+# List
+
+<Preview>
+  <Story name="default">
+    {() => {
+      const As = select("as", { ul: "ul", ol: "ol" }, "ul", "Parent");
+      return (
+        <List
+          as={As}
+          unstyled={boolean("unstyled", false, "Parent")}
+          inline={boolean("inline", false, "Parent")}
+          striped={select(
+            "striped",
+            {
+              "": null,
+              horizontal: "horizontal",
+              vertical: "vertical",
+            },
+            null,
+            "Parent"
+          )}
+          size={select("size", { "": null, lg: "lg" }, null, "Parent")}
+          linkBlock={boolean("linkBlock", false, "Parent")}
+        >
+          <li>Parent 1</li>
+          <li>Parent 2</li>
+          <li>
+            Parent 3
+            <As>
+              <li>Child 1</li>
+              <li>Child 2</li>
+              <li>
+                Child 3
+                <As>
+                  <li>Grandchild 1</li>
+                  <li>Grandchild 2</li>
+                  <li>
+                    <a href="!#">Grandchild 3</a>
+                  </li>
+                </As>
+              </li>
+            </As>
+          </li>
+        </List>
+      );
+    }}
+  </Story>
+</Preview>

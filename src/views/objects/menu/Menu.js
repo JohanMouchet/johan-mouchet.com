@@ -23,32 +23,31 @@ const Menu = ({ menu }: Props) => {
 
     return !menu ? null : (
       <ul className={classNames}>
-        {menu &&
-          menu.map((item) => (
-            <li
-              className={cx(
-                "o-menu__item",
-                item.menu && "o-menu__item--has-children",
-                item.className
-              )}
-            >
-              {(item.text && (
-                <a
-                  className={cx(
-                    "o-menu__link",
-                    item.menu && "o-menu__submenu-heading"
-                  )}
-                  href={item.url}
-                  tabIndex={!item.url && "0"}
-                >
-                  {item.text}
-                </a>
-              )) ||
-                (item.button && <Button {...item.button} />) ||
-                (item.menu && renderMenu(menu, true))}
-              {/* TODO: Pass children to Button */}
-            </li>
-          ))}
+        {menu.map((item) => (
+          <li
+            className={cx(
+              "o-menu__item",
+              item.menu && "o-menu__item--has-children",
+              item.className
+            )}
+          >
+            {(item.text && (
+              <a
+                className={cx(
+                  "o-menu__link",
+                  item.menu && "o-menu__submenu-heading"
+                )}
+                href={item.url}
+                tabIndex={!item.url && "0"}
+              >
+                {item.text}
+              </a>
+            )) ||
+              (item.button && <Button {...item.button} />) ||
+              (item.menu && renderMenu(menu, true))}
+            {/* TODO: Pass children to Button */}
+          </li>
+        ))}
       </ul>
     );
   };

@@ -1,1 +1,1 @@
-export { default } from "./List.scss";
+export { default } from "./List";

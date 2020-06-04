@@ -59,3 +59,35 @@ button {
   font-family: inherit;
   font-size: t-modular-scale(0);
 }
+
+/* Unordered & ordered list */
+/* stylelint-disable selector-max-type, selector-no-qualifying-type, no-descending-specificity */
+ul,
+ol {
+  margin: t-vertical-rhythm(1) 0;
+  padding-left: 1.5em;
+
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+ul {
+  list-style-type: disc;
+
+  ul {
+    list-style-type: circle;
+  }
+}
+/* stylelint-enable selector-max-type, selector-no-qualifying-type, no-descending-specificity */
+
+/* Description list */
+dt {
+  font-weight: 500;
+}
+
+dd {
+  margin-left: 1.5em;
+}
