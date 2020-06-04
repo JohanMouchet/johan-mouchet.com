@@ -6,7 +6,6 @@ export { default as Badge } from "./badge";
 export { default as Blockquote } from "./blockquote";
 export { default as Breadcrumb } from "./breadcrumb";
 export { default as Card } from "./card";
-export { default as Code } from "./code";
 export { default as Details } from "./details";
 export { default as Figure } from "./figure";
 export { default as File } from "./form/file/File";
