@@ -44,31 +44,3 @@ const List = ({
 };
 
 export default List;
-
-// TODO: check if empty
-// TODO: key
-
-// const items = [
-//   {
-//     unstyled: true,
-//     as: "ul",
-//     items: [
-//       "li 1",
-//       "li 2",
-//       "li 3",
-//       {
-//         unstyled: true,
-//         as: "ul",
-//         items: [
-//           "child 1",
-//           "child 2",
-//           "child 3",
-//           {
-//             as: "ul",
-//             items: ["grandchild 1", "grandchild 2", "grandchild 3"],
-//           },
-//         ],
-//       },
-//     ],
-//   },
-// ];
