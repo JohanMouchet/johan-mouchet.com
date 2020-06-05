@@ -8,7 +8,6 @@
 - remove Sass getters
 - Replace wow.js by react-animate-on-scroll
 - Fix Tabs, Pagination
-- Add id to body `<body id={`page-\${metadata.id}`}>`
 - Remove `src/views/**/*.html` legacy files
 - Address all `// TODO`
 - Add Strapi

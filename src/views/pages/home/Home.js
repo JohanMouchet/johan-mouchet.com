@@ -26,13 +26,7 @@ import { Main, Article } from "views/partials";
 import "./Home.scss";
 
 const Home = () => (
-  <Default
-    metadata={{
-      id: /*html*/ `home`,
-      title: /*html*/ `${PROFILE.firstName} ${PROFILE.lastName}`,
-      description: /*html*/ `Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.`,
-    }}
-  >
+  <Default>
     <Main margin="no-margin">
       <section className="home-about">
         <div className="container container--noGutter-lgGrid">

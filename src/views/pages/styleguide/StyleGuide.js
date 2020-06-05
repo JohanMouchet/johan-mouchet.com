@@ -1,5 +1,4 @@
 import * as React from "react";
-import { PROFILE } from "constants/profile";
 import { Default } from "views/layouts";
 import {
   Blockquote,
@@ -32,13 +31,7 @@ import {
 import "./StyleGuide.scss";
 
 const StyleGuide = () => (
-  <Default
-    metadata={{
-      id: /*html*/ `styleguide`,
-      title: /*html*/ `${PROFILE.firstName} ${PROFILE.lastName} - Styleguide`,
-      description: /*html*/ `Front-end developer based in Melbourne, I’m excited about developing creative and intuitive web applications.`,
-    }}
-  >
+  <Default>
     <div className="container" id="styleGuide">
       <div className="grid">
         <aside className="l-aside cell cell--12-@xs cell--2-@md">
