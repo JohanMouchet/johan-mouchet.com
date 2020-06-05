@@ -3,13 +3,11 @@
 ## Tech
 
 - Storybook
-  - Add tokens
-  - Add components: List, Code, Table
   - Expose to a new page .com/Storybook
-- Replace wow.js by react-animate-on-scroll
 - Import normalize.css from devDep
-- Fix Tabs, Table Numerical column
-- Convert `js-`
+- remove Sass getters
+- Replace wow.js by react-animate-on-scroll
+- Fix Tabs, Pagination
 - Add id to body `<body id={`page-\${metadata.id}`}>`
 - Remove `src/views/**/*.html` legacy files
 - Address all `// TODO`
