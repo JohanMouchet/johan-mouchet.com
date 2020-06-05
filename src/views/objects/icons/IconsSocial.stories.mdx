@@ -18,7 +18,6 @@ import {
 
 <Preview>
   <Story name="Social">
-    <div>
     {() => {
       const icons = [
         <Icon500px />,
@@ -32,18 +31,15 @@ import {
         <IconUnsplash />,
         <IconYoutube />,
       ];
-
       return (
-        <div className="grid">
+        <div className="grid u-align--center">
           {icons.map((icon) => (
             <div className="cell cell--3-@xs cell--2-@sm cell--1-@md">
               {icon}
             </div>
           ))}
         </div>
-      )
+      );
     }}
-    </div>
-
   </Story>
 </Preview>

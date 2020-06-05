@@ -15,14 +15,14 @@ type Props = {
 };
 
 const Tabs = ({ tabs, className }: Props) => {
-  const classNames = cx("o-tabs", className, "js-tabs");
+  const classNames = cx("o-tabs", className);
 
   return !tabs ? null : (
     <div className={classNames}>
       <ul className="o-tabs__thumbs">
         {tabs.map((tab, index) => (
           <li
-            className="o-tabs__thumb js-tabs-thumb wow fadeInUp"
+            className="o-tabs__thumb wow fadeInUp"
             data-wow-delay={index > 0 && index * 0.15 + "s"}
             key={tab.thumb}
           >
@@ -32,7 +32,7 @@ const Tabs = ({ tabs, className }: Props) => {
       </ul>
       <ul className="o-tabs__panels">
         {tabs.map((tab, index) => (
-          <li className="o-tabs__panel js-tabs-panel" key={index}>
+          <li className="o-tabs__panel" key={index}>
             {tab.panel}
           </li>
         ))}
