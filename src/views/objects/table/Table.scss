@@ -2,11 +2,6 @@
 @import "assets/styles/tools/_tools";
 
 /* stylelint-disable selector-max-type, no-descending-specificity */
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
 .o-table {
   $root: &;
   $v-padding: t-vertical-rhythm(0.375) !default;
@@ -46,7 +41,7 @@ table {
   /** Align **/
 
   /*** Top ***/
-  &--a-top {
+  &--align-top {
     thead,
     tbody,
     tfoot {
@@ -55,7 +50,7 @@ table {
   }
 
   /*** Bottom ***/
-  &--a-bottom {
+  &--align-bottom {
     thead,
     tbody,
     tfoot {
@@ -63,8 +58,8 @@ table {
     }
   }
 
-  /** Fixed **/
-  &--fixed {
+  /** Fixed Columns **/
+  &--fixed-columns {
     table-layout: fixed;
   }
 
@@ -95,6 +90,26 @@ table {
         background-color: $s-color-gray-lighter;
       }
     }
+
+    // And vertical
+    &#{$root}--vertical {
+      tbody {
+        /* stylelint-disable max-nesting-depth */
+        tr:nth-child(even) {
+          background-color: transparent;
+        }
+
+        td:nth-child(2n) {
+          background-color: $s-color-gray-lighter;
+        }
+
+        th:not(:last-child),
+        td:not(:last-child) {
+          border-right: 0;
+        }
+        /* stylelint-enable max-nesting-depth */
+      }
+    }
   }
 
   /** Hover **/
@@ -113,7 +128,7 @@ table {
 
   /** Small spacing **/
 
-  /*** Vertical ***/
+  /* stylelint-disable max-nesting-depth */
   &--sm {
     thead,
     tfoot {
@@ -130,25 +145,25 @@ table {
         padding: $v-padding / $scale-factor $h-padding / $scale-factor;
       }
     }
-  }
 
-  /*** Vertical ***/
-  &--v-sm {
-    tbody {
-      th,
-      td {
-        padding-top: $v-padding / $scale-factor;
-        padding-bottom: $v-padding / $scale-factor;
+    /*** Vertical ***/
+    &-vertical {
+      tbody {
+        th,
+        td {
+          padding-top: $v-padding / $scale-factor;
+          padding-bottom: $v-padding / $scale-factor;
+        }
       }
     }
-  }
 
-  /*** Horizontal ***/
-  &--h-sm {
-    th,
-    td {
-      padding-left: $h-padding / $scale-factor;
-      padding-right: $h-padding / $scale-factor;
+    /*** Horizontal ***/
+    &-horizontal {
+      th,
+      td {
+        padding-left: $h-padding / $scale-factor;
+        padding-right: $h-padding / $scale-factor;
+      }
     }
   }
 
@@ -169,104 +184,48 @@ table {
         padding: $v-padding * $scale-factor $h-padding * $scale-factor;
       }
     }
-  }
 
-  /*** Vertical ***/
-  &--v-lg {
-    tbody {
-      th,
-      td {
-        padding-top: $v-padding * $scale-factor;
-        padding-bottom: $v-padding * $scale-factor;
-      }
-    }
-  }
-
-  /*** Horizontal ***/
-  &--h-lg {
-    thead,
-    tfoot {
-      th,
-      td {
-        padding-left: $h-padding * $scale-factor;
-        padding-right: $h-padding * $scale-factor;
+    /*** Vertical ***/
+    &-vertical {
+      tbody {
+        th,
+        td {
+          padding-top: $v-padding * $scale-factor;
+          padding-bottom: $v-padding * $scale-factor;
+        }
       }
     }
 
-    tbody {
-      th,
-      td {
-        padding-left: $h-padding * $scale-factor;
-        padding-right: $h-padding * $scale-factor;
+    /*** Horizontal ***/
+    &-horizontal {
+      thead,
+      tfoot {
+        th,
+        td {
+          padding-left: $h-padding * $scale-factor;
+          padding-right: $h-padding * $scale-factor;
+        }
+      }
+
+      tbody {
+        th,
+        td {
+          padding-left: $h-padding * $scale-factor;
+          padding-right: $h-padding * $scale-factor;
+        }
       }
     }
   }
-
-  /** Numerical column **/
-  /* stylelint-disable no-duplicate-selectors, selector-no-qualifying-type */
-  th,
-  td {
-    &.js-table-numerical-col,
-    &.js-table-numerical-cell {
-      text-align: right;
-    }
-  }
+  /* stylelint-enable max-nesting-depth */
 
   /** Responsive **/
   @media screen and (max-width: t-breakpoint(md)) {
-    &--responsive {
+    &--responsive-\@md {
       display: inline-block;
       max-width: 100%;
       overflow-x: auto;
       white-space: nowrap;
       -webkit-overflow-scrolling: touch;
-
-      /**
-			 * Shadow
-			 * (Not compatible with .o-table--striped and .o-table--hover)
-			 */
-      &#{$root}--responsive-shadow:not(#{$root}--striped):not(#{$root}--hover) {
-        background: radial-gradient(
-              ellipse at left,
-              rgba($s-color-black, 0.2),
-              transparent 75%
-            )
-            center left,
-          radial-gradient(
-              ellipse at right,
-              rgba($s-color-black, 0.2),
-              transparent 75%
-            )
-            center right;
-        background-size: 0.5rem 100%, 0.5rem 100%;
-        background-attachment: scroll, scroll;
-        background-repeat: no-repeat;
-
-        /* stylelint-disable selector-max-pseudo-class, max-nesting-depth */
-        th:first-child,
-        td:first-child {
-          background: linear-gradient(
-            to right,
-            rgba($s-color-white, 1) 50%,
-            transparent
-          );
-          background-repeat: no-repeat;
-          background-size: 1rem 100%;
-        }
-
-        th:last-child,
-        td:last-child {
-          background: linear-gradient(
-            to left,
-            rgba($s-color-white, 1) 50%,
-            transparent
-          );
-          background-repeat: no-repeat;
-          background-size: 1rem 100%;
-          background-position-x: 100%;
-        }
-        /* stylelint-enable selector-max-pseudo-class, max-nesting-depth */
-      }
     }
   }
 }
