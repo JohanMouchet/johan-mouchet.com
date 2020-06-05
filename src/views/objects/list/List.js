@@ -12,7 +12,7 @@ type Props = {
   size?: "lg",
   linkBlock?: boolean,
   className?: string | Array<string> | Object,
-  attributes?: { [key: string]: any },
+  attributes?: boolean | number | string,
   children: Node,
 };
 
@@ -24,8 +24,8 @@ const List = ({
   size,
   linkBlock,
   className,
-  attributes,
   children,
+  ...attributes
 }: Props) => {
   const classNames = cx(
     "o-list",

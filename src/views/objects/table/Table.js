@@ -18,8 +18,7 @@ type Props = {
     | "lg-vertical"
     | "lg-horizontal",
   responsive?: boolean,
-  className?: string | Array<string> | Object,
-  attributes?: { [key: string]: any },
+  attributes?: boolean | number | string,
   children: Node,
 };
 
@@ -32,8 +31,8 @@ const Table = ({
   size,
   responsive,
   className,
-  attributes,
   children,
+  ...attributes
 }: Props) => {
   const classNames = cx(
     "o-table",

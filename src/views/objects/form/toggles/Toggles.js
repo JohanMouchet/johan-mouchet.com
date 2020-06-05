@@ -12,7 +12,7 @@ type Props = {
   value?: string,
   checked?: boolean,
   className?: string | Array<string> | Object,
-  attributes?: { [key: string]: any },
+  attributes?: boolean | number | string,
   children?: Node,
 };
 
@@ -25,8 +25,8 @@ const Toggle = ({
   value,
   checked,
   className,
-  attributes,
   children,
+  ...attributes
 }: Props) => {
   const [check] = useState(checked);
 

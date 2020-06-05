@@ -10,7 +10,7 @@ type Props = {
   title?: string,
   centered?: boolean,
   className?: string | Array<string> | Object,
-  attributes?: { [key: string]: any },
+  attributes?: boolean | number | string,
   children?: Node,
 };
 
@@ -20,8 +20,8 @@ const Figure = ({
   title,
   centered,
   className,
-  attributes,
   children,
+  ...attributes
 }: Props) => {
   const classNames = cx(
     "o-figure",

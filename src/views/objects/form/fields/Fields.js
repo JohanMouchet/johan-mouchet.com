@@ -10,7 +10,7 @@ type FieldProps = {
   name: string,
   value?: string,
   className?: string | Array<string> | Object,
-  attributes?: { [key: string]: any },
+  attributes?: boolean | number | string,
 };
 
 const Field = ({
@@ -19,7 +19,7 @@ const Field = ({
   name,
   value,
   className,
-  attributes,
+  ...attributes
 }: FieldProps) => {
   const classNames = cx("o-form__field", `o-form__field--${type}`, className);
 
@@ -48,7 +48,7 @@ type SelectProps = {
     }
   ],
   className?: string | Array<string> | Object,
-  attributes?: { [key: string]: any },
+  attributes?: boolean | number | string,
 };
 
 const Select = ({ id, name, options, className, attributes }: SelectProps) => {
@@ -75,7 +75,7 @@ type TextareaProps = {
   id?: string,
   name: string,
   className?: string | Array<string> | Object,
-  attributes?: { [key: string]: any },
+  attributes?: boolean | number | string,
   children?: string,
 };
 
@@ -83,8 +83,8 @@ const Textarea = ({
   id,
   name,
   className,
-  attributes,
   children,
+  ...attributes
 }: TextareaProps) => {
   const classNames = cx("o-form__field", "o-form__field--textarea", className);
 

@@ -11,7 +11,7 @@ type Props = {
   multipleCaption?: string,
   label?: string,
   className?: string | Array<string> | Object,
-  attributes?: { [key: string]: any },
+  attributes?: boolean | number | string,
   children?: Node,
 };
 
@@ -21,8 +21,8 @@ const File = ({
   multipleCaption,
   label = "Upload",
   className,
-  attributes,
   children,
+  ...attributes
 }: Props) => {
   const classNames = cx("o-form__file", "o-button", className);
 

@@ -8,7 +8,7 @@ type Props = {
   id: string,
   marker: string,
   className?: string | Array<string> | Object,
-  attributes?: { [key: string]: any },
+  attributes?: boolean | number | string,
   children?: Node,
 };
 
@@ -17,8 +17,8 @@ const Anchor = ({
   id,
   marker = "#",
   className,
-  attributes,
   children,
+  ...attributes
 }: Props) => {
   const classNames = cx("u-anchor", className);
 
