@@ -52,7 +52,7 @@
   &--pulled {
     float: left;
 
-    @media (min-width: t-breakpoint(md)) {
+    @media (min-width: map-get($s-breakpoints, md)) {
       width: 30%;
     }
   }

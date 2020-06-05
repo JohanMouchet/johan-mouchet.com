@@ -3,8 +3,8 @@
 
 .p-footer {
   padding: t-vertical-rhythm(1.2) 0;
-  background: t-background(dots),
-    url("#{t-path(theme)}/footer.jpg") right center/cover no-repeat
+  background: map-get($s-backgrounds, dots),
+    url("#{map-get($s-paths, theme)}/footer.jpg") right center/cover no-repeat
       $s-color-primary;
   letter-spacing: 0.1em;
   font-family: $s-font-family-mono;
@@ -38,7 +38,7 @@
       display: none;
     }
 
-    @media (min-width: t-breakpoint(sm)) {
+    @media (min-width: map-get($s-breakpoints, sm)) {
       &-separator {
         display: inline-block;
       }

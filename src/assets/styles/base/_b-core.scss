@@ -34,7 +34,7 @@ hr {
   max-width: 100%;
   margin: t-vertical-rhythm(2) 0;
   border: 0;
-  background: 0 center repeat-x t-background(zigzag);
+  background: 0 center repeat-x map-get($s-backgrounds, zigzag);
 }
 
 /**

@@ -141,13 +141,13 @@
     width: 100%;
   }
 
-  @media (max-width: t-breakpoint(sm)) {
+  @media (max-width: map-get($s-breakpoints, sm)) {
     &--block-\@sm {
       width: 100%;
     }
   }
 
-  @media (max-width: t-breakpoint(md)) {
+  @media (max-width: map-get($s-breakpoints, md)) {
     &--block-\@md {
       width: 100%;
     }

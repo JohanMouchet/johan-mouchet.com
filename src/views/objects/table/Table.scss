@@ -219,7 +219,7 @@
   /* stylelint-enable max-nesting-depth */
 
   /** Responsive **/
-  @media screen and (max-width: t-breakpoint(md)) {
+  @media screen and (max-width: map-get($s-breakpoints, md)) {
     &--responsive-\@md {
       display: inline-block;
       max-width: 100%;

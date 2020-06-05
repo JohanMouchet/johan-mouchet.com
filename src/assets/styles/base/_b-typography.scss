@@ -7,7 +7,7 @@ html {
   @if $s-font-size-mobile {
     font-size: $s-font-size-mobile * 1em;
 
-    @media (min-width: t-breakpoint(sm)) {
+    @media (min-width: map-get($s-breakpoints, sm)) {
       font-size: $s-font-size-base * 1em;
     }
   } @else {

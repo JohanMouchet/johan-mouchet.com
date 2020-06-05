@@ -63,7 +63,7 @@
     * {
       color: $s-color-white;
       text-shadow: -1px 1px 1px rgba($s-color-black, 0.3);
-      z-index: t-layer(card-banner);
+      z-index: map-get($s-layers, card-banner);
     }
   }
 
@@ -121,7 +121,7 @@
       padding: $v-padding $h-padding;
     }
 
-    @media (min-width: t-breakpoint(sm)) {
+    @media (min-width: map-get($s-breakpoints, sm)) {
       &__banner,
       &__header,
       &__body,

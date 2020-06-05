@@ -18,7 +18,7 @@
       min-height: t-vertical-rhythm(2);
       transition: min-height 0.3s;
 
-      @media (min-width: t-breakpoint(sm)) {
+      @media (min-width: map-get($s-breakpoints, sm)) {
         min-height: t-vertical-rhythm(4);
       }
     }

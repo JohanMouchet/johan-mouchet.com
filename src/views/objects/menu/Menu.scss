@@ -53,7 +53,7 @@
   }
 
   /* Above mobile */
-  @media (min-width: t-breakpoint(md)) {
+  @media (min-width: map-get($s-breakpoints, md)) {
     flex-direction: row;
 
     & > &__item {

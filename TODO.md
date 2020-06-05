@@ -5,7 +5,6 @@
 - Storybook
   - Expose to a new page .com/Storybook
 - Import normalize.css from devDep
-- remove Sass getters
 - Replace wow.js by react-animate-on-scroll
 - Fix Tabs, Pagination
 - Remove `src/views/**/*.html` legacy files

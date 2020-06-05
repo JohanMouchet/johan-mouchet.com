@@ -4,17 +4,17 @@
 .l-layout {
   min-height: 100vh;
   min-height: stretch;
-  max-width: t-breakpoint(xxl);
+  max-width: map-get($s-breakpoints, xxl);
   display: flex;
   margin: 0 auto;
   padding: t-vertical-rhythm(0.5) t-vertical-rhythm(0.25);
   box-sizing: content-box;
 
-  @media (min-width: t-breakpoint(sm)) {
+  @media (min-width: map-get($s-breakpoints, sm)) {
     padding: t-vertical-rhythm(0.5) t-vertical-rhythm(1);
   }
 
-  @media (min-width: t-breakpoint(md)) {
+  @media (min-width: map-get($s-breakpoints, md)) {
     padding: t-vertical-rhythm(1) t-vertical-rhythm(2);
   }
 
@@ -36,13 +36,14 @@
     }
 
     &::before {
-      background: url("#{t-path(theme)}/layout-background.jpg") $s-color-primary;
+      background: url("#{map-get($s-paths, theme)}/layout-background.jpg")
+        $s-color-primary;
       filter: blur(6px);
       transform: scale(3.5);
     }
 
     &::after {
-      background: url("#{t-path(theme)}/layout-grain.png");
+      background: url("#{map-get($s-paths, theme)}/layout-grain.png");
     }
   }
 

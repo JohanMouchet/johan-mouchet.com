@@ -115,13 +115,13 @@
     bottom: 0;
     right: 0;
     margin-bottom: 0;
-    box-shadow: t-shadow(md);
-    z-index: t-layer(alert);
+    box-shadow: map-get($s-shadows, md);
+    z-index: map-get($s-layers, "alert");
   }
 
   &--fixed-bottom-right {
-    @media (min-width: t-breakpoint(sm)) {
-      max-width: t-breakpoint(sm);
+    @media (min-width: map-get($s-breakpoints, sm)) {
+      max-width: map-get($s-breakpoints, sm);
       margin-right: $grid-gutter;
     }
   }

@@ -21,7 +21,7 @@ $u-tooltip-slide-distance: 0.5rem !default;
     font-weight: 400;
     font-style: normal;
     pointer-events: none;
-    z-index: t-layer("tooltip");
+    z-index: map-get($s-layers, "tooltip");
     opacity: 0;
     transition: transform 0.2s ease-out, opacity 0.2s ease-out;
 

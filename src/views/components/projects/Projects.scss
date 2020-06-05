@@ -57,7 +57,7 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background-image: t-background(dots),
+      background-image: map-get($s-backgrounds, dots),
         linear-gradient(
           rgba($s-color-primary-lighter, 0.7),
           rgba($s-color-primary-darker, 0.9)
