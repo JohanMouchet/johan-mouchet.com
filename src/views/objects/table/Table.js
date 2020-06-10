@@ -6,7 +6,7 @@ import "./Table.scss";
 
 type Props = {
   align?: "top" | "bottom",
-  fixedColumns?: boolean,
+  equalColumns?: boolean,
   vertical?: boolean,
   variant?: "striped",
   hover?: boolean,
@@ -18,13 +18,14 @@ type Props = {
     | "lg-vertical"
     | "lg-horizontal",
   responsive?: boolean,
+  className?: string | Array<string> | Object,
   attributes?: boolean | number | string,
   children: Node,
 };
 
 const Table = ({
   align,
-  fixedColumns,
+  equalColumns,
   vertical,
   variant,
   hover,
@@ -37,7 +38,7 @@ const Table = ({
   const classNames = cx(
     "o-table",
     align && `o-table--align-${align}`,
-    fixedColumns && "o-table--fixed-columns",
+    equalColumns && "o-table--equal-columns",
     vertical && "o-table--vertical",
     variant && `o-table--${variant}`,
     hover && !vertical && "o-table--hover",
