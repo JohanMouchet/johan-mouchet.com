@@ -15,7 +15,7 @@
   font-size: t-modular-scale(0);
   color: $s-color-text;
   text-overflow: ellipsis;
-  transition: color 0.2s, background 0.2s, border 0.2s;
+  transition: color 0.2s, background-color 0.2s, border 0.2s;
 
   @include t-wekkit-hdpi-small-dimension;
 

@@ -1,21 +1,37 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { text, boolean } from "@storybook/addon-knobs";
 import { Radio } from ".";
+import Label from "../layout";
 
-<Meta title="Objects/Form/Toggles/Radio" component={Radio} />
+<Meta title="Objects/Form/Toggles" component={Radio} />
 
 # Radio
 
 <Preview>
-  <Story name="default">
-    <Radio
-      id={text("id", "id")}
-      type="radio"
-      name={text("name", "name")}
-      value={text("value", "value")}
-      checked={boolean("checked", true)}
-    >
-      {text("children", "children")}
-    </Radio>
+  <Story name="Radio">
+    {() => {
+      const id = text("id", "id");
+      const name = text("name", "name");
+      const value = text("value", "value");
+      const children = text("children", "Radio");
+      return (
+        <div>
+          <Label id={id} block>
+            Radio
+          </Label>
+          <Radio
+            id={id}
+            name={name}
+            value={`${value}-1`}
+            checked={boolean("checked", true)}
+          >
+            {`${children} 1`}
+          </Radio>
+          <Radio name={name} value={`${value}-2`}>
+            {`${children} 2`}
+          </Radio>
+        </div>
+      );
+    }}
   </Story>
 </Preview>

@@ -1,26 +1,37 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
 import { Select } from ".";
+import Label from "../layout";
 
-<Meta title="Objects/Form/Fields/Select" component={Select} />
+<Meta title="Objects/Form/Fields" component={Select} />
 
 # Select
 
 <Preview>
-  <Story name="default">
-    <Select
-      id={text("id", "id")}
-      name={text("name", "name")}
-      options={[
-        {
-          text: text("option", "Option 1", "Option 1"),
-          value: text("value", "value-1", "Option 1"),
-        },
-        {
-          text: text("option", "Option 2", "Option 2"),
-          value: text("value", "value-2", "Option 2"),
-        },
-      ]}
-    />
+  <Story name="Select">
+    {() => {
+      const id = text("id", "id");
+      return (
+        <div>
+          <Label id={id} block>
+            Select
+          </Label>
+          <Select
+            id={text("id", "id")}
+            name={text("name", "name")}
+            options={[
+              {
+                text: text("option", "Option 1", "Option 1"),
+                value: text("value", "value-1", "Option 1"),
+              },
+              {
+                text: text("option", "Option 2", "Option 2"),
+                value: text("value", "value-2", "Option 2"),
+              },
+            ]}
+          />
+        </div>
+      );
+    }}
   </Story>
 </Preview>

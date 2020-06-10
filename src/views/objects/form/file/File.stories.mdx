@@ -1,6 +1,7 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
 import File from ".";
+import Label from "../layout";
 
 <Meta title="Objects/Form/File" component={File} />
 
@@ -8,13 +9,23 @@ import File from ".";
 
 <Preview>
   <Story name="default">
-    <File
-      id={text("id", "id")}
-      name={text("name", "name")}
-      multipleCaption={text("multipleCaption", "Multiple Caption")}
-      label={text("label", "")}
-    >
-      {text("children", "Choose file")}
-    </File>
+    {() => {
+      const id = text("id", "id");
+      return (
+        <div>
+          <Label id={id} block>
+            File
+          </Label>
+          <File
+            id={id}
+            name={text("name", "name")}
+            multipleCaption={text("multipleCaption", "Multiple Caption")}
+            label={text("label", "")}
+          >
+            {text("children", "Choose file")}
+          </File>
+        </div>
+      );
+    }}
   </Story>
 </Preview>

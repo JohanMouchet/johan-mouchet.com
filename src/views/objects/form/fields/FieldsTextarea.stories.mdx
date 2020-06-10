@@ -1,15 +1,26 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
 import { Textarea } from ".";
+import Label from "../layout";
 
-<Meta title="Objects/Form/Fields/Textarea" component={Textarea} />
+<Meta title="Objects/Form/Fields" component={Textarea} />
 
 # Textarea
 
 <Preview>
-  <Story name="default">
-    <Textarea id={text("id", "id")} name={text("name", "name")}>
-      {text("Text", "text")}
-    </Textarea>
+  <Story name="Textarea">
+    {() => {
+      const id = text("id", "id");
+      return (
+        <div>
+          <Label id={id} block>
+            Textarea
+          </Label>
+          <Textarea id={text("id", "id")} name={text("name", "name")}>
+            {text("children", "children")}
+          </Textarea>
+        </div>
+      );
+    }}
   </Story>
 </Preview>
