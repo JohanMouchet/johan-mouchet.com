@@ -6,7 +6,7 @@
   - Expose to a new page .com/Storybook
 - Import normalize.css from devDep
 - Replace wow.js by react-animate-on-scroll
-- Fix Tabs, Pagination
+- Fix Toggle, Tabs, Pagination
 - Remove `src/views/**/*.html` legacy files
 - Address all `// TODO`
 - Add Strapi
