@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
 import { FootnotesReference, FootnotesNotes } from ".";
@@ -8,7 +9,7 @@ import { FootnotesReference, FootnotesNotes } from ".";
 
 <Preview>
   <Story name="default">
-    <div>
+    <Fragment>
       <p>
         Reference
         <FootnotesReference
@@ -29,6 +30,6 @@ import { FootnotesReference, FootnotesNotes } from ".";
           },
         ]}
       />
-    </div>
+    </Fragment>
   </Story>
 </Preview>

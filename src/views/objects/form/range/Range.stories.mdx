@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
 import Range from ".";
@@ -12,12 +13,12 @@ import { Label } from "../layout";
     {() => {
       const id = text("id", "id");
       return (
-        <div>
+        <Fragment>
           <Label id={id} block>
             Range
           </Label>
           <Range id={id} name={text("name", "name")} />
-        </div>
+        </Fragment>
       );
     }}
   </Story>

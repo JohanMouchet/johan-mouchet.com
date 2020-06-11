@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { text, boolean } from "@storybook/addon-knobs";
 import { Checkbox } from ".";
@@ -12,7 +13,7 @@ import { Label } from "../layout";
     {() => {
       const id = text("id", "id");
       return (
-        <div>
+        <Fragment>
           <Label id={id} block>
             Checkbox
           </Label>
@@ -24,7 +25,7 @@ import { Label } from "../layout";
           >
             {text("children", "children")}
           </Checkbox>
-        </div>
+        </Fragment>
       );
     }}
   </Story>

@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
 import File from ".";
@@ -12,7 +13,7 @@ import { Label } from "../layout";
     {() => {
       const id = text("id", "id");
       return (
-        <div>
+        <Fragment>
           <Label id={id} block>
             File
           </Label>
@@ -24,7 +25,7 @@ import { Label } from "../layout";
           >
             {text("children", "Choose file")}
           </File>
-        </div>
+        </Fragment>
       );
     }}
   </Story>

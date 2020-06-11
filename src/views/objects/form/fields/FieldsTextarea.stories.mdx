@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
 import { Textarea } from ".";
@@ -12,14 +13,14 @@ import { Label } from "../layout";
     {() => {
       const id = text("id", "id");
       return (
-        <div>
+        <Fragment>
           <Label id={id} block>
             Textarea
           </Label>
           <Textarea id={text("id", "id")} name={text("name", "name")}>
             {text("children", "children")}
           </Textarea>
-        </div>
+        </Fragment>
       );
     }}
   </Story>

@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { text, boolean } from "@storybook/addon-knobs";
 import { Radio } from ".";
@@ -15,7 +16,7 @@ import { Label } from "../layout";
       const value = text("value", "value");
       const children = text("children", "Radio");
       return (
-        <div>
+        <Fragment>
           <Label id={id} block>
             Radio
           </Label>
@@ -30,7 +31,7 @@ import { Label } from "../layout";
           <Radio name={name} value={`${value}-2`}>
             {`${children} 2`}
           </Radio>
-        </div>
+        </Fragment>
       );
     }}
   </Story>
