@@ -1,5 +1,6 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { BREAKPOINTS } from "constants/breakpoints";
+import { Table } from "views/objects";
 
 <Meta title="Settings|Breakpoints" />
 
@@ -7,7 +8,7 @@ import { BREAKPOINTS } from "constants/breakpoints";
 
 <Preview>
   <Story name="default">
-    <table className="o-table">
+    <Table>
       <thead>
         <tr>
           <th>Name</th>
@@ -49,6 +50,6 @@ import { BREAKPOINTS } from "constants/breakpoints";
           </tr>
         ))}
       </tbody>
-    </table>
+    </Table>
   </Story>
 </Preview>

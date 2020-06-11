@@ -1,6 +1,7 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
 import { TYPOGRAPHY } from "constants/typography";
+import { Table } from "views/objects";
 
 <Meta title="Settings|Typography" />
 
@@ -14,7 +15,7 @@ import { TYPOGRAPHY } from "constants/typography";
         "The quick brown fox jumps over the lazy dog."
       );
       return (
-        <table className="o-table o-table--v-lg">
+        <Table size="lg-vertical">
           <thead>
             <tr>
               <th>Type</th>
@@ -60,7 +61,7 @@ import { TYPOGRAPHY } from "constants/typography";
               </tr>
             ))}
           </tbody>
-        </table>
+        </Table>
       );
     }}
   </Story>
@@ -71,7 +72,7 @@ import { TYPOGRAPHY } from "constants/typography";
     {() => {
       const input = text("Heading Text", "Heading");
       return (
-        <table className="o-table">
+        <Table>
           <thead>
             <tr>
               <th>Level</th>
@@ -96,7 +97,7 @@ import { TYPOGRAPHY } from "constants/typography";
               )
             )}
           </tbody>
-        </table>
+        </Table>
       );
     }}
   </Story>
@@ -107,7 +108,7 @@ import { TYPOGRAPHY } from "constants/typography";
     {() => {
       const input = text("Tag Text", "");
       return (
-        <table className="o-table">
+        <Table>
           <thead>
             <tr>
               <th>Tag</th>
@@ -189,7 +190,7 @@ import { TYPOGRAPHY } from "constants/typography";
               </tr>
             ))}
           </tbody>
-        </table>
+        </Table>
       );
     }}
   </Story>
