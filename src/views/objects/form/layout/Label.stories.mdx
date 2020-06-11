@@ -1,13 +1,13 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { text, boolean } from "@storybook/addon-knobs";
-import Label from ".";
+import { Label } from ".";
 
 <Meta title="Objects/Form/Layout" component={Label} />
 
 # Label
 
 <Preview>
-  <Story name="default">
+  <Story name="Label">
     <Label id={text("id", "id")} block={boolean("block", true)}>
       {text("children", "Label")}
     </Label>

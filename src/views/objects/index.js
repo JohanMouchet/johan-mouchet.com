@@ -30,7 +30,6 @@ export {
   IconSearch,
   IconX,
 } from "./icons";
-export { default as Label } from "./form/layout/Layout";
 export { default as List } from "./list";
 export { default as Loader } from "./loader";
 export { default as Menu } from "./menu";
@@ -41,3 +40,4 @@ export { default as Table } from "./table";
 export { default as Tabs } from "./tabs";
 export { Field, Select, Textarea } from "./form/fields/Fields";
 export { FootnotesReference, FootnotesNotes } from "./footnotes";
+export { Fieldset, FormGroup, Label } from "./form/layout/Layout";
