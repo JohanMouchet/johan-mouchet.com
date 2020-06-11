@@ -67,24 +67,19 @@
   "lint-staged": {
     "[disabled]src/**/*.js": [
       "eslint --fix",
-      "npm run test -- --bail --findRelatedTests",
-      "git add"
+      "npm run test -- --bail --findRelatedTests"
     ],
     "src/**/*.js": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ],
     "src/**/*.{json,mdx}": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ],
     "src/**/*.scss": [
-      "stylelint --fix",
-      "git add"
+      "stylelint --fix"
     ],
     "src/**/*.md": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "devDependencies": {
