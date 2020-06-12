@@ -1,0 +1,11 @@
+@import "assets/styles/settings/_settings";
+@import "assets/styles/tools/_tools";
+
+.storybook {
+  &-swatch {
+    display: inline-block;
+    height: t-vertical-rhythm(2);
+    width: t-vertical-rhythm(2);
+    border: 1px solid $s-color-gray;
+  }
+}

@@ -29,11 +29,21 @@ $s-color-info: #63b3ed;
 $s-color-warning: #f6ad55;
 $s-color-danger: #fc8181;
 
-/* Other */
-
-/** 3rd party brand colors - find more at brandcolors.net **/
-$s-color-twitter: #55acee;
-$s-color-facebook: #3b5998;
-$s-color-googleplus: #dd4b39;
-$s-color-linkedin: #0077b5;
-$s-color-pinterest: #bd081c;
+/* stylelint-disable selector-pseudo-class-no-unknown, property-no-unknown */
+:export {
+  s_color_primary: $s-color-primary;
+  s_color_primary_lighter: $s-color-primary-lighter;
+  s_color_primary_darker: $s-color-primary-darker;
+  s_color_secondary: $s-color-secondary;
+  s_color_secondary_lighter: $s-color-secondary-lighter;
+  s_color_secondary_darker: $s-color-secondary-darker;
+  s_color_white: $s-color-white;
+  s_color_gray: $s-color-gray;
+  s_color_gray_lighter: $s-color-gray-lighter;
+  s_color_gray_darker: $s-color-gray-darker;
+  s_color_black: $s-color-black;
+  s_color_success: $s-color-success;
+  s_color_info: $s-color-info;
+  s_color_warning: $s-color-warning;
+  s_color_danger: $s-color-danger;
+}

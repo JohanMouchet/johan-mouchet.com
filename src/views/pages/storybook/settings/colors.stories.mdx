@@ -1,6 +1,8 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { COLORS } from "constants/colors";
 import { Table } from "views/objects";
 import "assets/styles/settings/_settings.scss";
+import "../storybook.scss";
 
 <Meta title="Settings|Colors" />
 
@@ -8,7 +10,92 @@ import "assets/styles/settings/_settings.scss";
 
 <Preview>
   <Story name="default">
-    <div>Colors</div>
+    <Table>
+      <thead>
+        <tr>
+          <th>Preview</th>
+          <th>Color Code</th>
+          <th>Sass Setting</th>
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          {
+            code: COLORS.PRIMARY_LIGHTER,
+            sassSetting: "$s-color-primary-lighter",
+          },
+          {
+            code: COLORS.PRIMARY,
+            sassSetting: "$s-color-primary",
+          },
+          {
+            code: COLORS.PRIMARY_DARKER,
+            sassSetting: "$s-color-primary-darker",
+          },
+          {
+            code: COLORS.SECONDARY_LIGHTER,
+            sassSetting: "$s-color-secondary-lighter",
+          },
+          {
+            code: COLORS.SECONDARY,
+            sassSetting: "$s-color-secondary",
+          },
+          {
+            code: COLORS.SECONDARY_DARKER,
+            sassSetting: "$s-color-secondary-darker",
+          },
+          {
+            code: COLORS.WHITE,
+            sassSetting: "$s-color-white",
+          },
+          {
+            code: COLORS.GRAY_LIGHTER,
+            sassSetting: "$s-color-gray-lighter",
+          },
+          {
+            code: COLORS.GRAY,
+            sassSetting: "$s-color-gray",
+          },
+          {
+            code: COLORS.GRAY_DARKER,
+            sassSetting: "$s-color-gray-darker",
+          },
+          {
+            code: COLORS.BLACK,
+            sassSetting: "$s-color-black",
+          },
+          {
+            code: COLORS.SUCCESS,
+            sassSetting: "$s-color-success",
+          },
+          {
+            code: COLORS.INFO,
+            sassSetting: "$s-color-info",
+          },
+          {
+            code: COLORS.WARNING,
+            sassSetting: "$s-color-warning",
+          },
+          {
+            code: COLORS.DANGER,
+            sassSetting: "$s-color-danger",
+          },
+        ].map((color) => (
+          <tr>
+            <td>
+              <span
+                className="storybook-swatch"
+                style={{ backgroundColor: color.code }}
+              ></span>
+            </td>
+            <td>{color.code}</td>
+            <td>
+              <code className="u-select--all">{color.sassSetting}</code>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </Table>
   </Story>
 </Preview>
 
