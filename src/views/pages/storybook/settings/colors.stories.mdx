@@ -13,6 +13,7 @@ import "../storybook.scss";
     <Table>
       <thead>
         <tr>
+          <th>Name</th>
           <th>Preview</th>
           <th>Color Code</th>
           <th>Sass Setting</th>
@@ -21,67 +22,83 @@ import "../storybook.scss";
       <tbody>
         {[
           {
+            name: "Primary Lighter",
             code: COLORS.PRIMARY_LIGHTER,
             sassSetting: "$s-color-primary-lighter",
           },
           {
+            name: "Primary",
             code: COLORS.PRIMARY,
             sassSetting: "$s-color-primary",
           },
           {
+            name: "Primary Darker",
             code: COLORS.PRIMARY_DARKER,
             sassSetting: "$s-color-primary-darker",
           },
           {
+            name: "Secondary Lighter",
             code: COLORS.SECONDARY_LIGHTER,
             sassSetting: "$s-color-secondary-lighter",
           },
           {
+            name: "Secondary",
             code: COLORS.SECONDARY,
             sassSetting: "$s-color-secondary",
           },
           {
+            name: "Secondary Darker",
             code: COLORS.SECONDARY_DARKER,
             sassSetting: "$s-color-secondary-darker",
           },
           {
+            name: "White",
             code: COLORS.WHITE,
             sassSetting: "$s-color-white",
           },
           {
+            name: "Gray Lighter",
             code: COLORS.GRAY_LIGHTER,
             sassSetting: "$s-color-gray-lighter",
           },
           {
+            name: "Gray",
             code: COLORS.GRAY,
             sassSetting: "$s-color-gray",
           },
           {
+            name: "Gray Darker",
             code: COLORS.GRAY_DARKER,
             sassSetting: "$s-color-gray-darker",
           },
           {
+            name: "Black",
             code: COLORS.BLACK,
             sassSetting: "$s-color-black",
           },
           {
+            name: "Success",
             code: COLORS.SUCCESS,
             sassSetting: "$s-color-success",
           },
           {
+            name: "Info",
             code: COLORS.INFO,
             sassSetting: "$s-color-info",
           },
           {
+            name: "Warning",
             code: COLORS.WARNING,
             sassSetting: "$s-color-warning",
           },
           {
+            name: "Danger",
             code: COLORS.DANGER,
             sassSetting: "$s-color-danger",
           },
         ].map((color) => (
           <tr>
+            <th>{color.name}</th>
             <td>
               <span
                 className="storybook-swatch"
