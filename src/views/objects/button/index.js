@@ -1,1 +1,1 @@
-export { Button, ButtonSocial, ButtonSocialBadge } from "./Button";
+export { default } from "./Button";

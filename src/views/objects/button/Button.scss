@@ -2,7 +2,6 @@
 @import "assets/styles/tools/_tools";
 
 .o-button {
-  $root: &;
   $height: t-vertical-rhythm(1.75) !default;
   $border-width: 2px !default;
   $h-padding: $height / 1.75;
@@ -151,98 +150,5 @@
     &--block-\@md {
       width: 100%;
     }
-  }
-
-  /* Hover spacer */
-  > #{$root}__spacer {
-    display: inline-block;
-    width: 0.5em;
-    transition: width 0.2s ease-out;
-  }
-
-  &:hover > #{$root}__spacer {
-    width: 1em;
-  }
-
-  /** Social **/
-  &--social {
-    *:not(:first-child) {
-      margin-left: 0.5em;
-    }
-  }
-
-  /*** Icon ***/
-  &__icon {
-    svg {
-      height: t-modular-scale(1);
-      width: t-modular-scale(1);
-      vertical-align: text-top;
-    }
-
-    path {
-      fill: currentColor;
-    }
-  }
-
-  /*** Text ***/
-  // &__text {}
-
-  /*** Counter ***/
-  &__counter {
-    font-weight: 500;
-
-    &:empty {
-      display: none;
-    }
-  }
-
-  /** Badge **/
-  &--social-badge {
-    line-height: 1;
-    padding: t-vertical-rhythm(0.4);
-  }
-
-  /** Branded color **/
-  @mixin btn-social-color($s-color-brand) {
-    color: $s-color-brand;
-    border-color: $s-color-brand;
-
-    &:hover,
-    &:focus {
-      color: $s-color-white;
-      background: $s-color-brand;
-      border-color: $s-color-brand;
-    }
-
-    &:active {
-      color: $s-color-white;
-      background: darken($s-color-brand, 10%);
-      border-color: darken($s-color-brand, 10%);
-    }
-  }
-
-  // Twitter
-  &--social-twitter {
-    @include btn-social-color($s-color-twitter);
-  }
-
-  // Facebook
-  &--social-facebook {
-    @include btn-social-color($s-color-facebook);
-  }
-
-  // Google+
-  &--social-googleplus {
-    @include btn-social-color($s-color-googleplus);
-  }
-
-  // LinkedIn
-  &--social-linkedin {
-    @include btn-social-color($s-color-linkedin);
-  }
-
-  // Pinterest
-  &--social-pinterest {
-    @include btn-social-color($s-color-pinterest);
   }
 }

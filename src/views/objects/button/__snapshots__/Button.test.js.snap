@@ -6,28 +6,3 @@ exports[`Renders <Button /> without crashing 1`] = `
   type="button"
 />
 `;
-
-exports[`Renders <ButtonSocial /> without crashing 1`] = `
-<a
-  className="o-button o-button--social"
->
-  <span
-    className="o-button__icon"
-  />
-  <span
-    className="o-button__text"
-  />
-</a>
-`;
-
-exports[`Renders <ButtonSocialBadge /> without crashing 1`] = `
-<a
-  className="o-button o-button--social o-button--social-badge"
-  rel="noopener noreferrer"
-  target="_blank"
->
-  <span
-    className="o-button__icon"
-  />
-</a>
-`;

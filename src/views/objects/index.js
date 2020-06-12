@@ -1,10 +1,10 @@
-export { Button, ButtonSocial, ButtonSocialBadge } from "./button";
 export { Checkbox, Radio } from "./form/toggles/Toggles";
 export { default as Alert } from "./alert";
 export { default as Anchor } from "./anchor";
 export { default as Badge } from "./badge";
 export { default as Blockquote } from "./blockquote";
 export { default as Breadcrumb } from "./breadcrumb";
+export { default as Button } from "./button";
 export { default as Card } from "./card";
 export { default as Details } from "./details";
 export { default as Figure } from "./figure";
