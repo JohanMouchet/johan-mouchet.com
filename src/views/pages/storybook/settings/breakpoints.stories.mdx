@@ -39,7 +39,7 @@ import { Table } from "views/objects";
             size: BREAKPOINTS.XL,
           },
         ].map((breakpoint) => (
-          <tr>
+          <tr key={breakpoint.size}>
             <th>{breakpoint.name}</th>
             <td>{breakpoint.size}</td>
             <td>

@@ -5,7 +5,7 @@ exports[`Renders <Fieldset /> without crashing 1`] = `
   className="o-form__fieldset"
 >
   <legend
-    class="o-form__legend"
+    className="o-form__legend"
   />
 </fieldset>
 `;

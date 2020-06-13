@@ -15,7 +15,7 @@ const Fieldset = ({ legend, className, children }: FieldsetProps) => {
 
   return (
     <fieldset className={classNames}>
-      <legend class="o-form__legend">{legend}</legend>
+      <legend className="o-form__legend">{legend}</legend>
       {children}
     </fieldset>
   );

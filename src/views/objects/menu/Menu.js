@@ -30,6 +30,7 @@ const Menu = ({ menu }: Props) => {
               item.menu && "o-menu__item--has-children",
               item.className
             )}
+            key={item.text || item.button.children}
           >
             {(item.text && (
               <a
@@ -38,7 +39,7 @@ const Menu = ({ menu }: Props) => {
                   item.menu && "o-menu__submenu-heading"
                 )}
                 href={item.url}
-                tabIndex={!item.url && "0"}
+                tabIndex={!item.url ? "0" : undefined}
               >
                 {item.text}
               </a>

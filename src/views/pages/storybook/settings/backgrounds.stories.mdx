@@ -29,7 +29,7 @@ import { Table } from "views/objects";
             sassSetting: "zigzag",
           },
         ].map((background) => (
-          <tr>
+          <tr key={background.source}>
             <th>{background.name}</th>
             <td>
               <span

@@ -96,7 +96,7 @@ import "../storybook.scss";
             sassSetting: "$s-color-danger",
           },
         ].map((color) => (
-          <tr>
+          <tr key={color.code}>
             <th>{color.name}</th>
             <td>
               <span

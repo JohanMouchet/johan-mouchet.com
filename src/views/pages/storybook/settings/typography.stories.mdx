@@ -46,7 +46,7 @@ import { Table } from "views/objects";
                 sassSetting: "$s-font-family-mono",
               },
             ].map((typeface) => (
-              <tr>
+              <tr key={typeface.stack}>
                 <th>{typeface.name}</th>
                 <td>
                   <span style={{ fontFamily: typeface.stack, fontSize: "2em" }}>
