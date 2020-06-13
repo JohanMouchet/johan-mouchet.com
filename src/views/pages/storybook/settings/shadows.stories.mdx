@@ -1,4 +1,6 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { SHADOWS } from "constants/shadows";
+import { Table } from "views/objects";
 
 <Meta title="Settings|Shadows" />
 
@@ -6,6 +8,45 @@ import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 
 <Preview>
   <Story name="default">
-    <div>Shadows</div>
+    <Table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Preview</th>
+          <th>Sass Setting</th>
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          {
+            name: "sm",
+            source: SHADOWS.SM,
+          },
+          {
+            name: "md",
+            source: SHADOWS.MD,
+          },
+          {
+            name: "lg",
+            source: SHADOWS.LG,
+          },
+        ].map((shadow) => (
+          <tr>
+            <th>{shadow.name}</th>
+            <td>
+              <span
+                className="storybook-swatch storybook-swatch--lg"
+                style={{ boxShadow: shadow.source }}
+              ></span>
+            </td>
+            <td>
+              <code className="u-select--all">
+                map-get($s-shadows, {shadow.name})
+              </code>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </Table>
   </Story>
 </Preview>
