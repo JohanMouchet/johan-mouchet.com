@@ -9,10 +9,8 @@ $s-breakpoints: (
     md: 768px + 1,
   // Medium devices (desktops): 768px and up
     lg: 1024px + 1,
-  // Large devices (large desktops): 1024px and up
-    xl: 1366px + 1,
-  // Extra large devices (extra large desktops): 1280px and up
-    xxl: 1920px + 1
+  // Large devices (large desktops): 1366px and up
+    xl: 1366px + 1
 );
 
 /* stylelint-disable selector-pseudo-class-no-unknown, property-no-unknown */
