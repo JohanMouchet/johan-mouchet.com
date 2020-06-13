@@ -7,5 +7,10 @@
     height: t-vertical-rhythm(2);
     width: t-vertical-rhythm(2);
     border: 1px solid $s-color-gray;
+
+    &--lg {
+      height: t-vertical-rhythm(4);
+      width: t-vertical-rhythm(4);
+    }
   }
 }

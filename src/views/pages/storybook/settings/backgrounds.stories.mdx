@@ -1,4 +1,6 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { BACKGROUNDS } from "constants/backgrounds";
+import { Table } from "views/objects";
 
 <Meta title="Settings|Backgrounds" />
 
@@ -6,6 +8,43 @@ import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 
 <Preview>
   <Story name="default">
-    <div>Backgrounds</div>
+    <Table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Preview</th>
+          <th>Sass Setting</th>
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          {
+            name: "Dots",
+            source: BACKGROUNDS.DOTS,
+            sassSetting: "dots",
+          },
+          {
+            name: "Zigzag",
+            source: BACKGROUNDS.ZIGZAG,
+            sassSetting: "zigzag",
+          },
+        ].map((background) => (
+          <tr>
+            <th>{background.name}</th>
+            <td>
+              <span
+                className="storybook-swatch storybook-swatch--lg"
+                style={{ backgroundImage: background.source }}
+              ></span>
+            </td>
+            <td>
+              <code className="u-select--all">
+                map-get($s-backgrounds, {background.sassSetting})
+              </code>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </Table>
   </Story>
 </Preview>
