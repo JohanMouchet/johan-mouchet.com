@@ -65,9 +65,8 @@
     }
   },
   "lint-staged": {
-    "[disabled]src/**/*.js": [
-      "eslint --fix",
-      "npm run test -- --bail --findRelatedTests"
+    "[disabled]src/**/*.test.js": [
+      "npm run test"
     ],
     "src/**/*.{js,json,mdx}": [
       "eslint --fix"
