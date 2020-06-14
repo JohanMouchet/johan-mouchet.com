@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7fdfd6f4-e67a-4460-b69d-98bd88e189f8/deploy-status)](https://app.netlify.com/sites/johan-mouchet/deploys) ![Twitter Follow](https://img.shields.io/twitter/follow/JohanMouchet?style=social)
+
+# [johan-mouchet.com](https://www.johan-mouchet.com/)
+
+Johan Mouchet's portfolio, open sourced.
+
+This website was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and deployed with Netlify.
 
 ## Available Scripts
 
@@ -9,60 +15,33 @@ In the project directory, you can run:
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the Jest test runner in the interactive watch mode.<br>
 
-### `npm run build`
+### `npm run build:all`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app and Storybook for production to the respective folders: `build` and `storybook-static`.<br>
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Individual scripts are also available as `build` and `build:storybook`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `flow`
 
-### `npm run eject`
+Runs [Flow](https://flow.org/), _a static type checker for JavaScript_.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `lint:js`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Runs the [ESLint](https://eslint.org/) linter, _a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs_.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### `lint:css`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Runs the [stylelint](https://stylelint.io/) linter, _a mighty, modern linter that helps you avoid errors and enforce conventions in your styles_.
 
-## Learn More
+### `format`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Runs ESLint and stylelint with the `--fix` option, as well as [Prettier](https://prettier.io/) with the `--write` option to automatically fix problems.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `storybook`
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Runs [Storybook](https://storybook.js.org/), _an open source tool for developing UI components in isolation_.<br>
+Open [http://localhost:9009/](http://localhost:9009/) to view it in the browser.
