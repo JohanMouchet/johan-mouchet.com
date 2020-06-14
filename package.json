@@ -22,7 +22,7 @@
     "flow": "flow",
     "lint:js": "eslint src/**/*.{js,json,mdx}",
     "lint:css": "stylelint src/**/*.scss",
-    "format": "eslint --fix src/**/*.{js,json,mdx} && stylelint --fix src/**/*.scss && prettier --write src/**/*.md",
+    "format": "npm run lint:js -- --fix && npm run lint:css -- --fix && prettier --write src/**/*.md",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },
@@ -69,10 +69,7 @@
       "eslint --fix",
       "npm run test -- --bail --findRelatedTests"
     ],
-    "src/**/*.js": [
-      "eslint --fix"
-    ],
-    "src/**/*.{json,mdx}": [
+    "src/**/*.{js,json,mdx}": [
       "eslint --fix"
     ],
     "src/**/*.scss": [
