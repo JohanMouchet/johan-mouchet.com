@@ -11,8 +11,8 @@ import Card from ".";
     <div className="grid">
       <div className="cell cell--4-@xs">
         <Card
-          banner={boolean("banner", true)}
           bannerUrl={text("bannerUrl", "https://via.placeholder.com/400x168")}
+          bannerGradient={boolean("bannerGradient", true)}
           header={text("header", "Header")}
           footer={text("footer", "Footer")}
           variant={select("variant", {
@@ -20,9 +20,8 @@ import Card from ".";
             secondary: "secondary",
             primary: "primary",
             hover: "hover",
+            "hover-active": "hover-active",
             forward: "forward",
-            active: "active",
-            "banner-gradient": "banner-gradient",
           })}
           size={select("size", {
             "": null,

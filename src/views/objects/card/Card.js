@@ -5,25 +5,19 @@ import cx from "classnames";
 import "./Card.scss";
 
 type Props = {
-  banner?: boolean | Node,
   bannerUrl?: string,
+  bannerGradient?: boolean,
   header?: Node,
   footer?: Node,
-  variant?:
-    | "secondary"
-    | "primary"
-    | "hover"
-    | "forward"
-    | "active"
-    | "banner-gradient",
+  variant?: "secondary" | "primary" | "hover" | "hover-active" | "forward",
   size?: "sm" | "lg",
   className?: string | Array<string> | Object,
   children?: Node,
 };
 
 const Card = ({
-  banner,
   bannerUrl,
+  bannerGradient,
   header,
   children,
   footer,
@@ -33,22 +27,19 @@ const Card = ({
 }: Props) => {
   const classNames = cx(
     "o-card",
+    bannerGradient && `o-card--banner-gradient`,
     variant && `o-card--${variant}`,
     size && `o-card--${size}`,
     className
   );
 
-  const Tag = !header ? "header" : "div";
-
   return (
     <section className={classNames}>
-      {(banner || bannerUrl) && (
-        <Tag
+      {bannerUrl && (
+        <div
           className="o-card__banner"
           style={bannerUrl && { backgroundImage: `url(${bannerUrl})` }}
-        >
-          {banner}
-        </Tag>
+        ></div>
       )}
       {header && <header className="o-card__header">{header}</header>}
       {children && <div className="o-card__body">{children}</div>}

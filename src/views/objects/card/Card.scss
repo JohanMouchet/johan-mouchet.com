@@ -90,12 +90,15 @@
   /** Hover / Forward **/
   &--hover:hover,
   &--hover:focus,
+  &--hover-active:hover,
+  &--hover-active:focus,
   &--forward {
+    box-shadow: map-get($s-shadows, md);
     transform: translate(-4px, -4px);
   }
 
   /** Active **/
-  &--active:active {
+  &--hover-active:active {
     box-shadow: none;
     transform: none;
   }
