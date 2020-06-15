@@ -1,4 +1,4 @@
-export { Checkbox, Radio } from "./form/toggles/Toggles";
+export { Checkbox, Radio } from "./form/toggles";
 export { default as Alert } from "./alert";
 export { default as Anchor } from "./anchor";
 export { default as Badge } from "./badge";
@@ -8,7 +8,7 @@ export { default as Button } from "./button";
 export { default as Card } from "./card";
 export { default as Details } from "./details";
 export { default as Figure } from "./figure";
-export { default as File } from "./form/file/File";
+export { default as File } from "./form/file";
 export {
   Icon500px,
   IconCodepen,
@@ -34,9 +34,9 @@ export { default as List } from "./list";
 export { default as Loader } from "./loader";
 export { default as Menu } from "./menu";
 export { default as ProgressBar } from "./progress-bar";
-export { default as Range } from "./form/range/Range";
+export { default as Range } from "./form/range";
 export { default as Table } from "./table";
 export { default as Tabs } from "./tabs";
-export { Field, Select, Textarea } from "./form/fields/Fields";
+export { Field, Select, Textarea } from "./form/fields";
 export { FootnotesReference, FootnotesNotes } from "./footnotes";
-export { Fieldset, FormGroup, Label } from "./form/layout/Layout";
+export { Fieldset, FormGroup, Label } from "./form/layout";
