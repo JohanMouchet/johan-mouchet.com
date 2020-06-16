@@ -7,8 +7,8 @@ import * as serviceWorker from "serviceWorker";
 ReactDOM.render(
   <Switch>
     <Route path="/">{Home}</Route>
-    <Route path="/storybook/">
-      <Redirect to="storybook/" />
+    <Route path="/storybook">
+      <Redirect to="/?path=/story/" />
     </Route>
     <Route path="/:rest*">{NotFound}</Route>
   </Switch>,
