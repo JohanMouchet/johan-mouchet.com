@@ -8,7 +8,7 @@ ReactDOM.render(
   <Switch>
     <Route path="/">{Home}</Route>
     <Route path="/storybook">
-      <Redirect to="/storybook/index.html?path=/story/" />
+      <Redirect to="/storybook/index.html" />
     </Route>
     <Route path="/:rest*">{NotFound}</Route>
   </Switch>,
