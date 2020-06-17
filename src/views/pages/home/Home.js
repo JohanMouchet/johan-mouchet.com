@@ -361,7 +361,7 @@ const Home = () => (
                         name: /*html*/ `Pearson`,
                         tagline: /*html*/ `Asia`,
                         url: /*html*/ `https://www.pearson.com/asia/`,
-                        lede: /*html*/ `Websites creation related to education for Pearson’s launch in three new markets through Asia.`,
+                        lede: /*html*/ `Websites creation related to education for Pearson's launch in three new markets through Asia.`,
                         thumbnailSrc: require("assets/images/views/career-experiences/pearson.jpg"),
                         achievements: [
                           /*html*/ `Contributed to content authoring.`,
