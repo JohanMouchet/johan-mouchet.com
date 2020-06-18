@@ -1,11 +1,10 @@
 # TODO
 
 - Import normalize.css from devDep
-- Remove `src/views/**/*.html` legacy files
-- Fix Toggles, Tabs
+- Fix Menu, Toggles, Tabs
+  - Remove `src/views/**/*.html` legacy files
 - Replace wow.js by react-animate-on-scroll
-- Address all `// TODO`
-- Open source
+- Address all `TODO`
 - Add Strapi
 
 # Consider
