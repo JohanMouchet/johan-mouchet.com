@@ -8,19 +8,19 @@ type Props = {
   src: string,
   alt?: string,
   title?: string,
+  caption?: string,
   centered?: boolean,
   className?: string | Array<string> | Object,
   attributes?: boolean | number | string,
-  children?: Node,
 };
 
 const Figure = ({
   src,
   alt,
   title,
+  caption,
   centered,
   className,
-  children,
   ...attributes
 }: Props) => {
   const classNames = cx(
@@ -34,13 +34,13 @@ const Figure = ({
       <img
         className="o-figure__img"
         src={src}
-        alt={alt}
+        alt={alt || caption}
         title={title}
         loading="lazy"
         {...attributes}
       />
-      {children && (
-        <figcaption className="o-figure__caption">{children}</figcaption>
+      {caption && (
+        <figcaption className="o-figure__caption">{caption}</figcaption>
       )}
     </figure>
   );
