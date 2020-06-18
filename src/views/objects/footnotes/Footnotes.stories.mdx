@@ -14,7 +14,6 @@ import { FootnotesReference, FootnotesNotes } from ".";
         Reference
         <FootnotesReference
           id={text("id", "id-1", "Reference")}
-          prefix={text("prefix", "", "Reference")}
           text={text("text", "1", "Reference")}
           label={text("label", "", "Reference")}
         />
@@ -23,10 +22,8 @@ import { FootnotesReference, FootnotesNotes } from ".";
         notes={[
           {
             id: text("id", "id-1", "Notes"),
-            prefix: text("prefix", "", "Notes"),
             text: text("text", "Note", "Notes"),
             label: text("label", "", "Notes"),
-            url: text("url", "#", "Notes"),
           },
         ]}
       />
