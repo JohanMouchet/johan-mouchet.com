@@ -1,7 +1,5 @@
 # TODO
 
-- Storybook
-  - Expose to a new page .com/Storybook
 - Import normalize.css from devDep
 - Remove `src/views/**/*.html` legacy files
 - Fix Toggles, Tabs
