@@ -671,12 +671,6 @@ const Home = () => (
                 <br />
                 <a href={PROFILE.socialNetworks.linkedIn}>LinkedIn</a>
               </p>
-
-              <p style={{ display: "none" }}>
-                <a href="https://www.johan-mouchet.com/storybook/">Absolute</a>
-                <br />
-                <a href="/storybook/">Relative</a>
-              </p>
             </Article>
           </div>
         </div>
