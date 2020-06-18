@@ -1,6 +1,5 @@
 # TODO
 
-- Import normalize.css from devDep
 - Fix Menu, Toggles, Tabs
   - Remove `src/views/**/*.html` legacy files
 - Replace wow.js by react-animate-on-scroll

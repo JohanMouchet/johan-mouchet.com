@@ -11,7 +11,7 @@
   padding: 0 t-vertical-rhythm(0.5);
   border: 2px solid $s-color-gray;
   background-color: transparent;
-  font-family: inherit;
+  font-family: $s-font-family-sans;
   font-size: t-modular-scale(0);
   color: $s-color-text;
   text-overflow: ellipsis;
@@ -27,8 +27,8 @@
   /** Textarea **/
   &--textarea {
     height: auto;
-    padding-top: t-vertical-rhythm(0.5);
-    padding-bottom: t-vertical-rhythm(0.5);
+    padding-top: t-vertical-rhythm(0.25);
+    padding-bottom: t-vertical-rhythm(0.25);
     resize: vertical;
   }
 
