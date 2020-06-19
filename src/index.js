@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "assets/styles/_styles.scss";
 import { Switch, Route } from "wouter";
 import { Home, NotFound } from "views/pages";
 import * as serviceWorker from "serviceWorker";

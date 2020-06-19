@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { Header, Footer } from "views/partials";
-import "assets/styles/_styles.scss";
 import "./Default.scss";
 
 const Default = ({ children }: Node) => (
