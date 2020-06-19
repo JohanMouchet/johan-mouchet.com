@@ -111,6 +111,29 @@
     }
   }
 
+  /** LinkedIn **/
+  &--linkedIn {
+    /* stylelint-disable-next-line color-no-hex */
+    $color-linkedin: #0077b5;
+
+    color: $s-color-white;
+    background-color: $color-linkedin;
+    border-color: $color-linkedin;
+
+    &:hover,
+    &:focus {
+      color: $color-linkedin;
+      background-color: transparent;
+      border-color: $color-linkedin;
+    }
+
+    &:active {
+      color: scale-color($color-linkedin, $lightness: -15%);
+      background-color: transparent;
+      border-color: scale-color($color-linkedin, $lightness: -15%);
+    }
+  }
+
   /** Disabled **/
   &[disabled] {
     cursor: default;

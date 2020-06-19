@@ -7,7 +7,7 @@ import "./Button.scss";
 type Props = {
   type: "anchor" | "button" | "submit" | "reset",
   url?: string,
-  variant?: "primary" | "secondary",
+  variant?: "primary" | "secondary" | "linkedIn",
   size?: "sm" | "lg",
   block?: boolean | "@sm" | "@md",
   className?: string | Array<string> | Object,
