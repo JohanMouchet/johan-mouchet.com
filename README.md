@@ -2,11 +2,25 @@
 
 # [johan-mouchet.com](https://www.johan-mouchet.com/)
 
-Johan Mouchet's portfolio, open sourced.
+Johan Mouchet's portfolio, open sourced on [GitHub](https://github.com/JohanMouchet/johan-mouchet.com).
 
-This website was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and deployed with Netlify.
+## About This Website
 
-## Available Scripts
+This website,
+
+- is bootstrapped with Create React App
+  - including React, webpack, Babel and more
+  - published as an offline-first Progressive Web App
+- uses client side routing with [wouter](https://github.com/molefrog/wouter)
+- maintains a design system with [Storybook](https://www.johan-mouchet.com/storybook/index.html)
+- is unit and snapshot tested with Jest and Enzyme
+- uses Sass and CSS post-processing
+- is type-checked with Flow
+- linted and formated with ESlint stylelint and Prettier,
+- enforced by Husky and lint-staged
+- is deployed, pre-rendered, with Netlify
+
+## npm Scripts
 
 In the project directory, you can run:
 

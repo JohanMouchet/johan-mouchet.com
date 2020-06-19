@@ -3,6 +3,7 @@ import { PROFILE } from "constants/profile";
 import { Default } from "views/layouts";
 import {
   Anchor,
+  Button,
   Icon500px,
   IconCodepen,
   IconDribbble,
@@ -122,10 +123,10 @@ const Home = () => (
                 Tools
               </Anchor>
               <p>
-                JAMstack, Storybook, Jest, Enzyme, Flow, Redux, CSS Modules,
-                Webpack / Gulp, npm, Headless CMS, APIs, Git, CI / CD, Linters,
-                Prettier, Zeplin, Responsive design, Accessibility, Performance,
-                SEO, Analytics, Atlassian suite, Agile, Open-source
+                JAMstack, Storybook, Jest, Flow, Redux, CSS Modules, Webpack /
+                Gulp, npm, Headless CMS, APIs, Git, CI / CD, Linters, Prettier,
+                Zeplin, Responsive design, Accessibility, Performance, SEO,
+                Analytics, Atlassian suite, Agile, Open-source
               </p>
             </Article>
 
@@ -662,15 +663,79 @@ const Home = () => (
             <hr />
 
             <Article>
-              <Anchor as="h2" id="get-in-touch">
-                Get In Touch
-              </Anchor>
+              <div className="grid">
+                <div className="cell cell--12-@xs cell--6-@md">
+                  <Anchor as="h2" id="about-this-website">
+                    About This Website
+                  </Anchor>
 
-              <p>
-                <a href={`mailto:${PROFILE.email}`}>{PROFILE.email}</a>
-                <br />
-                <a href={PROFILE.socialNetworks.linkedIn}>LinkedIn</a>
-              </p>
+                  <p>
+                    This website is open-sourced on{" "}
+                    <a href="https://github.com/JohanMouchet/johan-mouchet.com">
+                      GitHub
+                    </a>
+                    , it
+                  </p>
+                  <List
+                    className={["u-vr--bottom-2-@xs", "u-vr--bottom-1-@md"]}
+                  >
+                    <li>
+                      is bootstrapped with Create React App
+                      <ul>
+                        <li>including React, webpack, Babel and more</li>
+                        <li>
+                          published as an offline-first Progressive Web App
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      uses client side routing with{" "}
+                      <a href="https://github.com/molefrog/wouter">wouter</a>
+                    </li>
+                    <li>
+                      maintains a design system with{" "}
+                      <a href="/storybook/index.html">Storybook</a>
+                    </li>
+                    <li>is unit and snapshot tested with Jest and Enzyme</li>
+                    <li>uses Sass and CSS post-processing</li>
+                    <li>is type-checked with Flow</li>
+                    <li>
+                      linted and formated with ESlint stylelint and Prettier,
+                      <br />
+                      enforced by Husky and lint-staged
+                    </li>
+                    <li>is deployed, pre-rendered, with Netlify</li>
+                  </List>
+                </div>
+                <div className="cell cell--12-@xs cell--6-@md">
+                  <Anchor as="h2" id="get-in-touch">
+                    Get In Touch
+                  </Anchor>
+
+                  <div className="grid">
+                    <div className="cell cell--12-@xs cell--0-@md">
+                      <Button
+                        type="anchor"
+                        url={`mailto:${PROFILE.email}`}
+                        block="@md"
+                        className={"u-vr--bottom-1-@xs"}
+                      >
+                        {PROFILE.email}
+                      </Button>
+                    </div>
+                    <div className="cell cell--12-@xs cell--0-@md">
+                      <Button
+                        type="anchor"
+                        url={PROFILE.socialNetworks.linkedIn}
+                        variant="linkedIn"
+                        block="@md"
+                      >
+                        LinkedIn
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </Article>
           </div>
         </div>
