@@ -660,11 +660,11 @@ const Home = () => (
               />
             </Article>
 
-            <hr />
+            <hr className="u-vr--bottom-0-@xs" />
 
-            <Article>
-              <div className="grid">
-                <div className="cell cell--12-@xs cell--6-@md">
+            <div className="grid">
+              <div className="cell cell--12-@xs cell--6-@lg">
+                <Article>
                   <Anchor as="h2" id="about-this-website">
                     About This Website
                   </Anchor>
@@ -676,9 +676,7 @@ const Home = () => (
                     </a>
                     , it
                   </p>
-                  <List
-                    className={["u-vr--bottom-2-@xs", "u-vr--bottom-1-@md"]}
-                  >
+                  <List>
                     <li>
                       is bootstrapped with Create React App
                       <ul>
@@ -706,37 +704,41 @@ const Home = () => (
                     </li>
                     <li>is deployed, pre-rendered, with Netlify</li>
                   </List>
-                </div>
-                <div className="cell cell--12-@xs cell--6-@md">
+                </Article>
+              </div>
+
+              <div className="cell cell--12-@xs cell--hidden-@lg">
+                <hr className="u-vr--top-0-@xs u-vr--bottom-0-@xs" />
+              </div>
+
+              <div className="cell cell--12-@xs cell--6-@lg">
+                <Article>
                   <Anchor as="h2" id="get-in-touch">
                     Get In Touch
                   </Anchor>
 
-                  <div className="grid">
-                    <div className="cell cell--12-@xs cell--0-@md">
-                      <Button
-                        type="anchor"
-                        url={`mailto:${PROFILE.email}`}
-                        block="@md"
-                        className={"u-vr--bottom-1-@xs"}
-                      >
-                        {PROFILE.email}
-                      </Button>
-                    </div>
-                    <div className="cell cell--12-@xs cell--0-@md">
-                      <Button
-                        type="anchor"
-                        url={PROFILE.socialNetworks.linkedIn}
-                        variant="linkedIn"
-                        block="@md"
-                      >
-                        LinkedIn
-                      </Button>
-                    </div>
-                  </div>
-                </div>
+                  <Button
+                    type="anchor"
+                    url={`mailto:${PROFILE.email}`}
+                    block="@sm"
+                  >
+                    {PROFILE.email}
+                  </Button>
+
+                  <br />
+                  <br />
+
+                  <Button
+                    type="anchor"
+                    url={PROFILE.socialNetworks.linkedIn}
+                    variant="linkedIn"
+                    block="@sm"
+                  >
+                    LinkedIn
+                  </Button>
+                </Article>
               </div>
-            </Article>
+            </div>
           </div>
         </div>
       </section>
