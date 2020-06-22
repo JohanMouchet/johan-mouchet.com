@@ -123,10 +123,10 @@ const Home = () => (
                 Tools
               </Anchor>
               <p>
-                JAMstack, Storybook, Jest, Flow, Redux, CSS Modules, Webpack /
-                Gulp, npm, Headless CMS, APIs, Git, CI / CD, Linters, Prettier,
-                Zeplin, Responsive design, Accessibility, Performance, SEO,
-                Analytics, Atlassian suite, Agile, Open-source
+                JAMstack, Jest, Flow, Redux, CSS-in-JS, Webpack, Storybook,
+                Gulp, npm, Headless CMS, APIs, Git, Linters &amp; Prettier,
+                Responsive design, Accessibility, Performance, Design handoff
+                Apps, DevOps, SEO, Analytics, Agile, Open-source
               </p>
             </Article>
 
