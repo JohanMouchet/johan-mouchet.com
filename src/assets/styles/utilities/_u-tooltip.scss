@@ -23,7 +23,9 @@ $u-tooltip-slide-distance: 0.5rem !default;
     pointer-events: none;
     z-index: map-get($s-layers, "tooltip");
     opacity: 0;
-    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+    visibility: hidden;
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out,
+      visibility 0.2s ease-out;
 
     @include t-wekkit-hdpi-small-dimension;
   }
@@ -31,6 +33,7 @@ $u-tooltip-slide-distance: 0.5rem !default;
   &:hover::after,
   &:focus::after {
     opacity: 1;
+    visibility: visible;
   }
 
   &:focus {

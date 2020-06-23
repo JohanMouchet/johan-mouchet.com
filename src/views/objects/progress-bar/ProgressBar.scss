@@ -12,10 +12,12 @@
       &::before,
       &::after {
         opacity: 0;
+        visibility: hidden;
         transform: translateY(
           t-vertical-rhythm(0.25, "em", t-modular-scale(-1))
         );
-        transition: opacity 0.2s, transform 0.2s;
+        transition: opacity 0.2s ease-out, transform 0.2s ease-out,
+          visibility 0.2s ease-out;
       }
     }
   }
@@ -26,6 +28,7 @@
       &::before,
       &::after {
         opacity: 1;
+        visibility: visible;
         transform: none;
       }
     }
