@@ -497,7 +497,7 @@ const Home = () => (
                         ],
                         libraries: [
                           /*html*/ `<a href="https://github.com/kenwheeler/slick/">Slick</a> carousel`,
-                          /*html*/ `<a href="https://github.com/graingert/WOW/">WOW.js</a> animation`,
+                          /*html*/ `<a href="https://github.com/graingert/WOW/">wow.js</a> animation`,
                           /*html*/ `<a href="https://heml.io/">HEML</a> transactional email`,
                         ],
                       },

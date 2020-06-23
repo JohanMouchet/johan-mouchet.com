@@ -19,8 +19,8 @@
 
   /** Animation **/
   @keyframes loader-spin-animation {
-    to {
-      transform: rotate(360deg);
+    from {
+      transform: rotate(-360deg);
     }
   }
 }

@@ -37,7 +37,6 @@ const Alert = ({
     variant && `o-alert--${variant}`,
     position && `o-alert--${position}`,
     "container",
-    "wow",
     className
   );
 

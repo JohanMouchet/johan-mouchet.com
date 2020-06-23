@@ -15,7 +15,6 @@ const Blockquote = ({ quote, cite, pulled, className }: Props) => {
   const classNames = cx(
     "o-blockquote",
     className,
-    "wow",
     pulled && "o-blockquote--pulled"
   );
 

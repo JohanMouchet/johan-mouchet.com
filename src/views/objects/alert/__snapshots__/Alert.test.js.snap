@@ -2,7 +2,7 @@
 
 exports[`Renders <Alert /> without crashing 1`] = `
 <div
-  className="o-alert o-alert--info container wow"
+  className="o-alert o-alert--info container"
 >
   <div
     className="grid grid--noWrap-@xs"

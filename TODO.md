@@ -2,7 +2,6 @@
 
 - Fix Menu, Toggles, Tabs
   - Remove `src/views/**/*.html` legacy files
-- Replace wow.js by react-animate-on-scroll
 - Address all `TODO`
 - Add Strapi
 

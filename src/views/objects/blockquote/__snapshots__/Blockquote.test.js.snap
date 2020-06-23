@@ -2,7 +2,7 @@
 
 exports[`Renders <Blockquote /> without crashing 1`] = `
 <blockquote
-  className="o-blockquote wow"
+  className="o-blockquote"
 >
   <div
     className="o-blockquote__quotes"

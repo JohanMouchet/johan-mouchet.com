@@ -23,8 +23,8 @@ const Breadcrumb = ({ levels, className }: Props) => {
       <ol className={classNames}>
         {levels.map((level, index) => (
           <li
-            className="o-breadcrumb__level wow fadeInUp"
-            data-wow-delay={index > 0 && index * 0.15 + "s"}
+            className="o-breadcrumb__level u-animation u-animation--fade-in-up"
+            style={{ animationDelay: index > 0 && index * 0.15 + "s" }}
             key={level.url}
           >
             <a

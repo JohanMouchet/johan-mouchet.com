@@ -1,0 +1,91 @@
+/**
+ * Animation
+ */
+
+.u-animation {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+/* Fade in */
+.u-animation--fade-in {
+  @keyframes u-animation--fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  animation-name: u-animation--fade-in;
+}
+
+/* Fade in up */
+.u-animation--fade-in-up {
+  @keyframes u-animation--fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  animation-name: u-animation--fade-in-up;
+}
+
+/* Fade in down */
+.u-animation--fade-in-down {
+  @keyframes u-animation--fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  animation-name: u-animation--fade-in-down;
+}
+
+/* Fade in left */
+.u-animation--fade-in-left {
+  @keyframes u-animation--fade-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  animation-name: u-animation--fade-in-left;
+}
+
+/* Fade in right */
+.u-animation--fade-in-right {
+  @keyframes u-animation--fade-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  animation-name: u-animation--fade-in-right;
+}

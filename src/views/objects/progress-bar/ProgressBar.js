@@ -33,7 +33,7 @@ const ProgressBar = ({
       {total && <span className="o-progress-bar__total">{total}</span>}
       <div className="o-progress-bar__container">
         <div
-          className="o-progress-bar__filling wow"
+          className="o-progress-bar__filling"
           style={{ width: filling + "%" }}
           data-progress-bar-tooltip={tooltip}
         ></div>

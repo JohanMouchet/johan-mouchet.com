@@ -8,7 +8,7 @@ exports[`Renders <ProgressBar /> without crashing 1`] = `
     className="o-progress-bar__container"
   >
     <div
-      className="o-progress-bar__filling wow"
+      className="o-progress-bar__filling"
       style={
         Object {
           "width": "0%",

@@ -77,26 +77,20 @@
   }
 
   /** Animation **/
-  &.animated {
-    &::before {
-      transform-origin: 50% 0;
-      animation: blockquote-animation 0.5s ease-out both;
-    }
 
-    > * {
-      animation: blockquote-quote-animation 0.25s 0.25s ease-out both;
-    }
+  ::before {
+    transform-origin: 50% 0;
+    animation: blockquote-animation 0.5s ease-out both;
+  }
+
+  > * {
+    animation: 0.25s 0.25s ease-out both;
+    animation-name: u-animation--fade-in;
   }
 
   @keyframes blockquote-animation {
     from {
       transform: scaleY(0);
-    }
-  }
-
-  @keyframes blockquote-quote-animation {
-    from {
-      opacity: 0;
     }
   }
 }
