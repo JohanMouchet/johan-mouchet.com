@@ -7,15 +7,7 @@
   padding: t-vertical-rhythm(0.75) ($grid-gutter / 2);
   border-left: 2px solid;
   background-color: $s-color-gray-lighter;
-  animation: 0.3s ease-out both;
-  animation-name: u-animation--fade-in, alert-animation;
-
-  /* Animation */
-  @keyframes alert-animation {
-    from {
-      transform: translateY(t-vertical-rhythm(1));
-    }
-  }
+  animation-duration: 0.3s;
 
   /* Icon */
   &__icon {

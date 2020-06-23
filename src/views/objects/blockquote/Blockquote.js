@@ -20,8 +20,14 @@ const Blockquote = ({ quote, cite, pulled, className }: Props) => {
 
   return (
     <blockquote className={classNames}>
-      <div className="o-blockquote__quotes">{quote}</div>
-      {cite && <cite className="o-blockquote__cite">{cite}</cite>}
+      <div className="o-blockquote__quotes u-animation u-animation--fade-in">
+        {quote}
+      </div>
+      {cite && (
+        <cite className="o-blockquote__cite u-animation u-animation--fade-in">
+          {cite}
+        </cite>
+      )}
     </blockquote>
   );
 };

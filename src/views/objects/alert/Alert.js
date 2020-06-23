@@ -37,6 +37,8 @@ const Alert = ({
     variant && `o-alert--${variant}`,
     position && `o-alert--${position}`,
     "container",
+    "u-animation",
+    "u-animation--fade-in-up",
     className
   );
 

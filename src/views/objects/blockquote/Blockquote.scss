@@ -28,15 +28,11 @@
     }
   }
 
-  > * {
-    animation: 0.25s 0.25s ease-out both;
-    animation-name: u-animation--fade-in;
-  }
-
   &__quotes {
     margin: 0;
     text-align: inherit;
     quotes: "\201c""\201d";
+    animation-delay: 0.25s;
 
     &::before,
     &::after {
@@ -76,6 +72,7 @@
     margin-top: t-vertical-rhythm(0.5);
     font-size: t-modular-scale(-2);
     color: $s-color-text-dimmed;
+    animation-delay: 0.25s;
 
     /* stylelint-disable-next-line no-descending-specificity */
     [href] {
