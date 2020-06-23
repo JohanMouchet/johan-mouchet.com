@@ -16,8 +16,21 @@
     background: $s-color-gray;
     position: absolute;
     left: 0;
+    transform-origin: 50% 0;
+    animation: blockquote-animation 0.5s ease-out both;
 
     @include t-wekkit-hdpi-small-dimension("width");
+
+    @keyframes blockquote-animation {
+      from {
+        transform: scaleY(0);
+      }
+    }
+  }
+
+  > * {
+    animation: 0.25s 0.25s ease-out both;
+    animation-name: u-animation--fade-in;
   }
 
   &__quotes {
@@ -73,24 +86,6 @@
       color: inherit;
       content: "\2014";
       margin-right: 0.5rem;
-    }
-  }
-
-  /** Animation **/
-
-  ::before {
-    transform-origin: 50% 0;
-    animation: blockquote-animation 0.5s ease-out both;
-  }
-
-  > * {
-    animation: 0.25s 0.25s ease-out both;
-    animation-name: u-animation--fade-in;
-  }
-
-  @keyframes blockquote-animation {
-    from {
-      transform: scaleY(0);
     }
   }
 }
