@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import cx from "classnames";
+import "./Anchor.scss";
 
 type Props = {
   as: string,
@@ -20,14 +21,14 @@ const Anchor = ({
   children,
   ...attributes
 }: Props) => {
-  const classNames = cx("u-anchor", className);
+  const classNames = cx("o-anchor", className);
 
   const Tag = as;
 
   return (
     id && (
       <Tag id={id} className={classNames} {...attributes}>
-        <a href={`#${id}`} className="u-anchor__link">
+        <a href={`#${id}`} className="o-anchor__link">
           {marker}
         </a>
         {children}
