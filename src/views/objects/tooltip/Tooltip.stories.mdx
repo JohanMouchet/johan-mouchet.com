@@ -1,0 +1,27 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text, select, boolean } from "@storybook/addon-knobs";
+import Tooltip from ".";
+
+<Meta title="Objects|Tooltip" component={Tooltip} />
+
+# Tooltip
+
+<Preview>
+  <Story name="default">
+    <Tooltip
+      as={text("as", "span")}
+      content={text("content", "Content")}
+      position={select("position", {
+        "": null,
+        top: "top",
+        right: "right",
+        bottom: "bottom",
+        left: "left",
+      })}
+      indicator={boolean("indicator")}
+      multiLines={boolean("multiLines")}
+    >
+      {text("children", "children (hover)")}
+    </Tooltip>
+  </Story>
+</Preview>

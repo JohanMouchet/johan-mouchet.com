@@ -37,6 +37,7 @@ export { default as ProgressBar } from "./progress-bar";
 export { default as Range } from "./form/range";
 export { default as Table } from "./table";
 export { default as Tabs } from "./tabs";
+export { default as Tooltip } from "./tooltip";
 export { Field, Select, Textarea } from "./form/fields";
 export { FootnotesReference, FootnotesNotes } from "./footnotes";
 export { Fieldset, FormGroup, Label } from "./form/layout";

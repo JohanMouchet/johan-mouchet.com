@@ -1,0 +1,125 @@
+@import "assets/styles/settings/_settings";
+@import "assets/styles/tools/_tools";
+
+.o-tooltip {
+  $root: &;
+  $slide-distance: 0.5rem !default;
+
+  position: relative;
+  cursor: help;
+  text-decoration: underline wavy $s-color-info;
+  text-underline-position: under;
+
+  &:hover,
+  &:focus {
+    #{$root}__content {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &__content {
+    position: absolute;
+    padding: 0.5rem;
+    background-color: $s-color-white;
+    border: 2px solid;
+    color: $s-color-text;
+    line-height: $s-line-height-base;
+    white-space: nowrap;
+    font-size: t-modular-scale(-1, "rem");
+    font-weight: 400;
+    font-style: normal;
+    z-index: map-get($s-layers, "tooltip");
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out,
+      visibility 0.2s ease-out;
+
+    @include t-wekkit-hdpi-small-dimension;
+  }
+
+  /* Position */
+
+  /** Top (default) **/
+  &--top {
+    #{$root}__content {
+      bottom: 100%;
+      left: 50%;
+      transform: translate(-50%, $slide-distance);
+    }
+
+    &:hover,
+    &:focus {
+      #{$root}__content {
+        transform: translate(-50%, -$slide-distance);
+      }
+    }
+  }
+
+  /** Right **/
+  &--right {
+    #{$root}__content {
+      top: 50%;
+      left: 100%;
+      transform: translate(-$slide-distance, -50%);
+    }
+
+    &:hover,
+    &:focus {
+      #{$root}__content {
+        transform: translate($slide-distance, -50%);
+      }
+    }
+  }
+
+  /** Bottom **/
+  &--bottom {
+    #{$root}__content {
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -$slide-distance);
+    }
+
+    &:hover,
+    &:focus {
+      #{$root}__content {
+        transform: translate(-50%, $slide-distance);
+      }
+    }
+  }
+
+  /** Left **/
+  &--left {
+    #{$root}__content {
+      top: 50%;
+      right: 100%;
+      transform: translate($slide-distance, -50%);
+    }
+
+    &:hover,
+    &:focus {
+      #{$root}__content {
+        transform: translate(-$slide-distance, -50%);
+      }
+    }
+  }
+
+  /** Indicator **/
+  &--no-indicator {
+    text-decoration: none;
+  }
+
+  /** Multilines **/
+  &--multi-lines {
+    #{$root}__content {
+      white-space: normal;
+      word-wrap: break-word;
+      min-width: t-vertical-rhythm(10, "rem");
+      text-align: center;
+    }
+  }
+}
