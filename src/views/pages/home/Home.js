@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "wouter";
 import { PROFILE } from "constants/profile";
 import { Default } from "views/layouts";
 import {
@@ -692,7 +693,9 @@ const Home = () => (
                     </li>
                     <li>
                       maintains a design system with{" "}
-                      <a href="/storybook/">Storybook</a>
+                      <Link href="/storybook/?path=/docs/about-getting-started--page">
+                        Storybook
+                      </Link>
                     </li>
                     <li>is unit and snapshot tested with Jest and Enzyme</li>
                     <li>uses Sass and CSS post-processing</li>

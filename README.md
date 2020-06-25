@@ -12,7 +12,7 @@ This website,
   - including React, webpack, Babel and more
   - published as an offline-first Progressive Web App
 - uses client side routing with [wouter](https://github.com/molefrog/wouter)
-- maintains a design system with [Storybook](https://www.johan-mouchet.com/storybook/)
+- maintains a design system with [Storybook](https://www.johan-mouchet.com/storybook/?path=/docs/about-getting-started--page)
 - is unit and snapshot tested with Jest and Enzyme
 - uses Sass and CSS post-processing
 - is type-checked with Flow
