@@ -36,7 +36,7 @@ const Tooltip = ({
   const Tag = as;
 
   return (
-    <Tag className={classNames} {...attributes}>
+    <Tag className={classNames} tabIndex="0" {...attributes}>
       {children}
       <span className="o-tooltip__content">{content}</span>
     </Tag>
