@@ -2,59 +2,37 @@
 @import "assets/styles/tools/_tools";
 
 .o-progress-bar {
+  $root: &;
+
   margin: t-vertical-rhythm(1) 0;
+  outline: 0;
 
-  /** Tooltip on hover **/
-  &--tooltip-hover {
-    outline: 0;
-
-    [data-progress-bar-tooltip] {
-      &::before,
-      &::after {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(
-          t-vertical-rhythm(0.25, "em", t-modular-scale(-1))
-        );
-        transition: opacity 0.2s ease-out, transform 0.2s ease-out,
-          visibility 0.2s ease-out;
-      }
-    }
+  /* Labels */
+  &__labels {
+    margin-bottom: t-vertical-rhythm(0.25);
+    display: flex;
   }
 
-  &--tooltip-hover:hover,
-  &--tooltip-hover:focus {
-    [data-progress-bar-tooltip] {
-      &::before,
-      &::after {
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-      }
-    }
+  &__label {
+    margin-right: auto;
+    letter-spacing: 0.02em;
   }
 
-  /* Label and Total */
-  &__label,
+  &__details {
+    margin-left: t-vertical-rhythm(0.25);
+  }
+
+  &__progress,
   &__total {
-    display: inline-block;
-    line-height: t-vertical-rhythm(1.25);
-  }
-
-  &__total {
-    float: right;
     color: $s-color-text-dimmed;
   }
 
-  /* Outer */
+  /* Container */
   &__container {
-    $progress-bar-height: 12px;
-
-    height: $progress-bar-height;
+    height: 12px;
     width: 100%;
     padding: 2px;
     border: 2px solid $s-color-gray;
-    clear: both;
     position: relative;
 
     @include t-wekkit-hdpi-small-dimension;
@@ -69,43 +47,20 @@
     background-color: $s-color-secondary;
     border-radius: inherit;
     transition: width 0.5s ease-out;
-    animation: progress-bar-filling-animation 0.5s ease-out both;
   }
 
-  /** Tooltip **/
-  /* stylelint-disable no-descending-specificity */
-  [data-progress-bar-tooltip] {
-    &::before,
-    &::after {
-      position: absolute;
-      top: 100%;
-      right: 0;
+  /* Details on Hover */
+  &--details-on-hover {
+    #{$root}__details {
+      opacity: 0;
+      transition: opacity 0.2s ease-out;
     }
 
-    &::after {
-      content: attr(data-progress-bar-tooltip);
-      margin-top: 0.4em;
-      padding: 0.3em 0.5em;
-      border: 2px solid $s-color-text;
-      background-color: $s-color-white;
-      font-size: t-modular-scale(-1);
-      white-space: nowrap;
-
-      @include t-wekkit-hdpi-small-dimension;
-    }
-
-    &::before {
-      content: "";
-
-      @include t-arrow(bottom-right, currentColor, 0.4em);
-    }
-  }
-  /* stylelint-enable no-descending-specificity */
-
-  /*** Animation ***/
-  @keyframes progress-bar-filling-animation {
-    from {
-      width: 0;
+    &:hover,
+    &:focus {
+      #{$root}__details {
+        opacity: 1;
+      }
     }
   }
 }

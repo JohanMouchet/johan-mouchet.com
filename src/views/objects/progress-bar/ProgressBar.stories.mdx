@@ -10,14 +10,15 @@ import ProgressBar from ".";
   <Story name="default">
     <ProgressBar
       label={text("label", "Label")}
+      progress={text("progress", "Progress")}
+      progressPct={boolean("progressPct")}
       total={text("total", "Total")}
+      detailsOnHover={boolean("detailsOnHover")}
       filling={number("filling", 50, {
         range: true,
         min: 0,
         max: 100,
       })}
-      tooltip={text("tooltip", "Tooltip")}
-      tooltipOnHover={boolean("tooltipOnHover", true)}
     />
   </Story>
 </Preview>

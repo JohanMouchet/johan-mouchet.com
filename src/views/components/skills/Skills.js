@@ -15,8 +15,9 @@ const Skills = ({ skills }: Props) =>
           <ProgressBar
             label={skill.label}
             filling={skill.filling}
-            tooltip={skill.tooltip}
-            tooltipOnHover
+            progress={skill.progress}
+            total="10"
+            detailsOnHover
           />
         </li>
       ))}

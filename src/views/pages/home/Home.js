@@ -90,27 +90,27 @@ const Home = () => (
                   {
                     label: /*html*/ `React`,
                     filling: 80,
-                    tooltip: /*html*/ `8/10`,
+                    progress: /*html*/ `8`,
                   },
                   {
                     label: /*html*/ `HTML5`,
                     filling: 100,
-                    tooltip: /*html*/ `10/10`,
+                    progress: /*html*/ `10`,
                   },
                   {
                     label: /*html*/ `CSS3 & Sass`,
                     filling: 100,
-                    tooltip: /*html*/ `10/10`,
+                    progress: /*html*/ `10`,
                   },
                   {
                     label: /*html*/ `JavaScript ⁠— ES2019`,
                     filling: 80,
-                    tooltip: /*html*/ `8/10`,
+                    progress: /*html*/ `8`,
                   },
                   {
                     label: /*html*/ `UI & UX`,
                     filling: 90,
-                    tooltip: /*html*/ `9/10`,
+                    progress: /*html*/ `9`,
                   },
                 ]}
               />

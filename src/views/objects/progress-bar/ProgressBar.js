@@ -6,36 +6,57 @@ import "./ProgressBar.scss";
 
 type Props = {
   label?: string,
+  progress?: string,
+  progressPct?: boolean,
   total?: string,
+  detailsOnHover?: boolean,
   filling: number,
-  tooltip?: string,
-  tooltipOnHover?: boolean,
   className?: string | Array<string> | Object,
 };
 
 const ProgressBar = ({
   label,
+  progress,
+  progressPct,
   total,
+  detailsOnHover,
   filling = 0,
-  tooltip,
-  tooltipOnHover,
   className,
 }: Props) => {
   const classNames = cx(
     "o-progress-bar",
     className,
-    tooltipOnHover && "o-progress-bar--tooltip-hover"
+    detailsOnHover && "o-progress-bar--details-on-hover"
   );
 
+  const clampedFilling = Math.min(Math.max(0, parseInt(filling)), 100);
+
   return (
-    <div className={classNames} tabIndex={tooltip && tooltipOnHover && "0"}>
-      {label && <span className="o-progress-bar__label">{label}</span>}
-      {total && <span className="o-progress-bar__total">{total}</span>}
+    <div className={classNames} tabIndex={detailsOnHover && "0"}>
+      {(label || progress || total) && (
+        <span className="o-progress-bar__labels">
+          {label && <span className="o-progress-bar__label">{label}</span>}
+
+          {(progress || total) && (
+            <span className="o-progress-bar__details">
+              {progress && (
+                <span className="o-progress-bar__progress">
+                  {progressPct ? `${clampedFilling}%` : progress}
+                </span>
+              )}
+
+              {progress && total && <>&nbsp;/&nbsp;</>}
+
+              {total && <span className="o-progress-bar__total">{total}</span>}
+            </span>
+          )}
+        </span>
+      )}
+
       <div className="o-progress-bar__container">
         <div
           className="o-progress-bar__filling"
-          style={{ width: filling + "%" }}
-          data-progress-bar-tooltip={tooltip}
+          style={{ width: `${clampedFilling}%` }}
         ></div>
       </div>
     </div>
