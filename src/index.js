@@ -9,7 +9,7 @@ ReactDOM.render(
   <Switch>
     <Route path="/">{Home}</Route>
     <Route path="/storybook/:rest*">
-      <Redirect to="/storybook/:rest*" />
+      {(params) => <Redirect to={`/storybook/${params.rest}`} />}
     </Route>
     <Route path="/:rest*">{NotFound}</Route>
   </Switch>,
