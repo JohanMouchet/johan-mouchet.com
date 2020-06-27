@@ -692,7 +692,9 @@ const Home = () => (
                     </li>
                     <li>
                       maintains a design system with{" "}
-                      <a href="/storybook/index.html">Storybook</a>
+                      <a href="/storybook/?path=/docs/about-getting-started--page">
+                        Storybook
+                      </a>
                     </li>
                     <li>is unit and snapshot tested with Jest and Enzyme</li>
                     <li>uses Sass and CSS post-processing</li>

@@ -47,7 +47,14 @@ export function register(config) {
           );
         });
       } else {
-        // Is not localhost. Just register service worker
+        // Is not localhost. Just register service worker, excluding storybook
+        if (window.location.pathname.startsWith("/storybook/")) {
+          console.log("Unregistering service worker for the storybook route");
+          unregister();
+          window.location.reload();
+          return false;
+        }
+
         registerValidSW(swUrl, config);
       }
     });
