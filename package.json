@@ -20,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer build/static/js/*.js",
-    "lint:js": "eslint src/**/*.{js,json,mdx}",
+    "lint:js": "eslint src/**/*.{ts,tsx,js,json,mdx}",
     "lint:css": "stylelint src/**/*.scss",
     "format": "npm run lint:js -- --fix && npm run lint:css -- --fix && prettier --write src/**/*.md",
     "storybook": "start-storybook -p 9009 -s public",
@@ -70,10 +70,10 @@
     }
   },
   "lint-staged": {
-    "[disabled]src/**/*.test.js": [
+    "[disabled]src/**/*.test.{ts,tsx,js}": [
       "npm run test"
     ],
-    "src/**/*.{js,json,mdx}": [
+    "src/**/*.{ts,tsx,js,json,mdx}": [
       "eslint --fix"
     ],
     "src/**/*.scss": [
