@@ -93,19 +93,19 @@ const Home = () => (
                     progress: /*html*/ `8`,
                   },
                   {
-                    label: /*html*/ `HTML5`,
-                    filling: 100,
-                    progress: /*html*/ `10`,
-                  },
-                  {
-                    label: /*html*/ `CSS3 & Sass`,
-                    filling: 100,
-                    progress: /*html*/ `10`,
-                  },
-                  {
-                    label: /*html*/ `JavaScript ⁠— ES2019`,
+                    label: /*html*/ `JavaScript ⁠— Typescript`,
                     filling: 80,
                     progress: /*html*/ `8`,
+                  },
+                  {
+                    label: /*html*/ `HTML`,
+                    filling: 100,
+                    progress: /*html*/ `10`,
+                  },
+                  {
+                    label: /*html*/ `CSS ⁠— Sass`,
+                    filling: 100,
+                    progress: /*html*/ `10`,
                   },
                   {
                     label: /*html*/ `UI & UX`,
@@ -123,10 +123,10 @@ const Home = () => (
                 Tools
               </Anchor>
               <p>
-                JAMstack, Jest, Flow, Redux, CSS-in-JS, Webpack, Storybook,
-                Gulp, npm, Headless CMS, APIs, Git, Linters &amp; Prettier,
-                Responsive design, Accessibility, Performance, Design handoff
-                Apps, DevOps, SEO, Analytics, Agile, Open-source
+                JAMstack, Jest, Redux, CSS-in-JS, Webpack, Storybook, Gulp, npm,
+                Headless CMS, APIs, Git, Linters &amp; Prettier, Responsive
+                design, Accessibility, Performance, Design handoff Apps, DevOps,
+                SEO, Analytics, Agile, Open-source
               </p>
             </Article>
 
@@ -560,7 +560,7 @@ const Home = () => (
                         lede: /*html*/ `Mobile web browser game based on rope skipping.`,
                         thumbnailSrc: require("assets/images/views/career-experiences/sport-relief-skipathon.jpg"),
                         achievements: [
-                          /*html*/ `Created HTML5 canvas and CSS3 animations: <a href="https://codepen.io/johanmouchet/pen/OMgwMg">PoC</a>`,
+                          /*html*/ `Created  canvas and CSS animations: <a href="https://codepen.io/johanmouchet/pen/OMgwMg">PoC</a>`,
                           /*html*/ `Ensured iOS and Android default browser support.`,
                           /*html*/ `Used <a href="https://developers.google.com/web/fundamentals/native-hardware/device-orientation">Device Orientation & Motion</a> APIs`,
                           /*html*/ `Integrated OAuth authentication.`,
@@ -687,22 +687,22 @@ const Home = () => (
                       </ul>
                     </li>
                     <li>
-                      uses client side routing with{" "}
-                      <a href="https://github.com/molefrog/wouter">wouter</a>
-                    </li>
-                    <li>
                       maintains a design system with{" "}
                       <a href="/storybook/?path=/docs/about-getting-started--page">
                         Storybook
                       </a>
                     </li>
+                    <li>is type-checked with Typescript</li>
                     <li>is unit and snapshot tested with Jest and Enzyme</li>
                     <li>uses Sass and CSS post-processing</li>
-                    <li>is type-checked with Flow</li>
                     <li>
-                      linted and formated with ESlint stylelint and Prettier,
+                      is linted and formated with ESlint stylelint and Prettier,
                       <br />
                       enforced by Husky and lint-staged
+                    </li>
+                    <li>
+                      uses client side routing with{" "}
+                      <a href="https://github.com/molefrog/wouter">wouter</a>
                     </li>
                     <li>is deployed, pre-rendered, with Netlify</li>
                   </List>

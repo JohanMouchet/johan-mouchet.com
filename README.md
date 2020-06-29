@@ -11,13 +11,12 @@ This website,
 - is bootstrapped with Create React App
   - including React, webpack, Babel and more
   - published as an offline-first Progressive Web App
-- uses client side routing with [wouter](https://github.com/molefrog/wouter)
 - maintains a design system with [Storybook](https://www.johan-mouchet.com/storybook/?path=/docs/about-getting-started--page)
+- is type-checked with Typescript
 - is unit and snapshot tested with Jest and Enzyme
 - uses Sass and CSS post-processing
-- is type-checked with Flow
-- linted and formated with ESlint stylelint and Prettier,
-- enforced by Husky and lint-staged
+- is linted and formated with ESlint stylelint and Prettier, enforced by Husky and lint-staged
+- uses client side routing with [wouter](https://github.com/molefrog/wouter)
 - is deployed, pre-rendered, with Netlify
 
 ## npm Scripts
@@ -38,10 +37,6 @@ Launches the Jest test runner in the interactive watch mode.<br>
 Builds the app and Storybook for production to the respective folders: `build` and `storybook-static`.<br>
 
 Individual scripts are also available as `build` and `build:storybook`.
-
-### `flow`
-
-Runs [Flow](https://flow.org/), _a static type checker for JavaScript_.
 
 ### `lint:js`
 
