@@ -3,12 +3,12 @@ import cx from "classnames";
 import "./Anchor.scss";
 
 type Props = {
-  as: string;
+  as: keyof JSX.IntrinsicElements;
   id: string;
-  marker: string;
-  className?: string | Array<string> | Object;
+  marker?: string;
+  className?: string | string[] | { [key: string]: boolean };
   attributes?: boolean | number | string;
-  children?: Node;
+  children?: React.ReactNode;
 };
 
 const Anchor = ({
@@ -23,15 +23,13 @@ const Anchor = ({
 
   const Tag = as;
 
-  return (
-    id && (
-      <Tag id={id} className={classNames} {...attributes}>
-        <a href={`#${id}`} className="o-anchor__link">
-          {marker}
-        </a>
-        {children}
-      </Tag>
-    )
+  return !id ? null : (
+    <Tag id={id} className={classNames} {...attributes}>
+      <a href={`#${id}`} className="o-anchor__link">
+        {marker}
+      </a>
+      {children}
+    </Tag>
   );
 };
 

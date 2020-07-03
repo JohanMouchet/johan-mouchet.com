@@ -5,17 +5,17 @@ import { IconChevronDown } from "views/objects";
 import "./Footer.scss";
 
 type Props = {
-  version: string;
-  copyright: string;
-  topButtonTitle: string;
+  version?: string;
+  copyright?: string;
+  topButtonTitle?: string;
 };
 
 const Footer = ({
   version = VERSIONS.site,
-  /* html*/
-  copyright = `${PROFILE.firstName} ${PROFILE.lastName.toUpperCase()}`,
-  /* html*/
-  topButtonTitle = `Get to the top`,
+  copyright = /* html*/ `${
+    PROFILE.firstName
+  } ${PROFILE.lastName.toUpperCase()}`,
+  topButtonTitle = /* html*/ `Get to the top`,
 }: Props) => {
   const year = new Date().getFullYear();
 
@@ -31,7 +31,7 @@ const Footer = ({
               {year} &copy; {copyright}{" "}
               <span className="p-footer__copyright-separator">|</span>
               <br /> Made in{" "}
-              <span className="p-footer__cocorico" tabIndex="0">
+              <span className="p-footer__cocorico" tabIndex={0}>
                 France
               </span>
             </p>

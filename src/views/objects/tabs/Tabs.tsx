@@ -3,13 +3,11 @@ import cx from "classnames";
 import "./Tabs.scss";
 
 type Props = {
-  tabs: [
-    {
-      thumb: string;
-      panel: string;
-    }
-  ];
-  className?: string | Array<string> | Object;
+  tabs: Array<{
+    thumb: string;
+    panel: string;
+  }>;
+  className?: string | string[] | { [key: string]: boolean };
 };
 
 const Tabs = ({ tabs, className }: Props) => {
@@ -21,7 +19,9 @@ const Tabs = ({ tabs, className }: Props) => {
         {tabs.map((tab, index) => (
           <li
             className="o-tabs__thumb u-animation u-animation--fade-in-up"
-            style={{ animationDelay: index > 0 && index * 0.15 + "s" }}
+            style={{
+              animationDelay: index > 0 ? index * 0.15 + "s" : undefined,
+            }}
             key={tab.thumb}
           >
             <button className="o-tabs__button">{tab.thumb}</button>

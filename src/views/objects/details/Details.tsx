@@ -5,9 +5,9 @@ import "./Details.scss";
 type Props = {
   summary?: string;
   variant?: "compact";
-  className?: string | Array<string> | Object;
+  className?: string | string[] | { [key: string]: boolean };
   attributes?: boolean | number | string;
-  children: Node;
+  children: React.ReactNode;
 };
 
 const Details = ({

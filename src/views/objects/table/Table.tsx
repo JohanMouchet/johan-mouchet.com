@@ -16,9 +16,9 @@ type Props = {
     | "lg-vertical"
     | "lg-horizontal";
   responsive?: boolean;
-  className?: string | Array<string> | Object;
+  className?: string | string[] | { [key: string]: boolean };
   attributes?: boolean | number | string;
-  children: Node;
+  children: React.ReactNode;
 };
 
 const Table = ({

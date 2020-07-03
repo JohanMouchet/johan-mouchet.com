@@ -2,7 +2,11 @@ import * as React from "react";
 import { Header, Footer } from "views/partials";
 import "./Default.scss";
 
-const Default = ({ children }: Node) => (
+type Props = {
+  children: React.ReactNode;
+};
+
+const Default = ({ children }: Props) => (
   <div className="l-layout">
     <div className="l-layout__background"></div>
     <div className="l-layout__inner">

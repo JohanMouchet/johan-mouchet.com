@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import * as React from "react";
 import cx from "classnames";
 import "./Menu.scss";
@@ -6,17 +8,17 @@ import { Button } from "views/objects";
 type MenuItem = {
   text: string;
   url?: string;
-  button?: Button;
-  className?: string | Array<string> | Object;
-  menu?: [MenuItem];
+  button?: typeof Button;
+  className?: string | string[] | { [key: string]: boolean };
+  menu?: MenuItem[];
 };
 
 type Props = {
-  menu: [MenuItem];
+  menu: MenuItem[];
 };
 
 const Menu = ({ menu }: Props) => {
-  const renderMenu = (menu, isSubmenu) => {
+  const renderMenu = (menu: MenuItem, isSubmenu: boolean) => {
     const classNames = cx(isSubmenu ? "o-menu__submenu" : "o-menu");
 
     return !menu ? null : (
@@ -37,7 +39,7 @@ const Menu = ({ menu }: Props) => {
                   item.menu && "o-menu__submenu-heading"
                 )}
                 href={item.url}
-                tabIndex={!item.url ? "0" : undefined}
+                tabIndex={!item.url ? 0 : undefined}
               >
                 {item.text}
               </a>

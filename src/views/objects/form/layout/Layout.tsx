@@ -4,8 +4,8 @@ import "./Layout.scss";
 
 type FieldsetProps = {
   legend?: string;
-  className?: string | Array<string> | Object;
-  children?: Node;
+  className?: string | string[] | { [key: string]: boolean };
+  children?: React.ReactNode;
 };
 
 const Fieldset = ({ legend, className, children }: FieldsetProps) => {
@@ -24,7 +24,7 @@ export { Fieldset };
 type FormGroupProps = {
   variant?: "success" | "error" | "warning";
   detail?: string;
-  children?: Node;
+  children?: React.ReactNode;
 };
 
 const FormGroup = ({ variant, detail, children }: FormGroupProps) => {
@@ -46,8 +46,8 @@ export { FormGroup };
 type LabelProps = {
   id?: string;
   block: boolean;
-  className?: string | Array<string> | Object;
-  children?: Node;
+  className?: string | string[] | { [key: string]: boolean };
+  children?: React.ReactNode;
 };
 
 const Label = ({ id, block, className, children }: LabelProps) => {

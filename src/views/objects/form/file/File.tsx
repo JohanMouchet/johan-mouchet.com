@@ -8,9 +8,9 @@ type Props = {
   name: string;
   multipleCaption?: string;
   label?: string;
-  className?: string | Array<string> | Object;
+  className?: string | string[] | { [key: string]: boolean };
   attributes?: boolean | number | string;
-  children?: Node;
+  children?: React.ReactNode;
 };
 
 const File = ({

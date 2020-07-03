@@ -29,14 +29,12 @@ const FootnotesReference = ({
 export { FootnotesReference };
 
 type NotesProps = {
-  notes: [
-    {
-      id: string;
-      text: string;
-      label?: string;
-    }
-  ];
-  className?: string | Array<string> | Object;
+  notes: Array<{
+    id: string;
+    text: string;
+    label?: string;
+  }>;
+  className?: string | string[] | { [key: string]: boolean };
 };
 
 const FootnotesNotes = ({ notes, className }: NotesProps) => {

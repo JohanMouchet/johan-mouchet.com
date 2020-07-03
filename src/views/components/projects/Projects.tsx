@@ -5,24 +5,27 @@ import { Details } from "views/objects";
 import pluralize from "utils/pluralize";
 import parse from "utils/parse";
 
+type Thumbnail = {
+  name: string;
+  tagline?: string;
+  url: string;
+  lede: string;
+  thumbnailSrc: string;
+};
+
+type Content = {
+  highlight?: boolean;
+  achievements?: string[];
+  architecture?: string[];
+  libraries?: string[];
+};
+
 type Props = {
-  projects: [
-    {
-      highlight?: boolean;
-      name: string;
-      tagline?: string;
-      url: string;
-      lede: string;
-      thumbnailSrc: string;
-      achievements?: Array<string>;
-      architecture?: Array<string>;
-      libraries?: Array<string>;
-    }
-  ];
+  projects: (Thumbnail & Content)[];
 };
 
 const Projects = ({ projects }: Props) => {
-  const renderThumbnail = (project) => (
+  const renderThumbnail = (project: Thumbnail) => (
     <>
       <a href={project.url} className="c-project__link">
         <img
@@ -31,20 +34,20 @@ const Projects = ({ projects }: Props) => {
           alt={project.name}
           loading="lazy"
         />
-        <div href={project.url} className="c-project__overlay">
+        <a href={project.url} className="c-project__overlay">
           <h4 className="c-project__title">{project.name}</h4>
           <span className="c-project__line"></span>
           {project.tagline && (
             <span className="c-project__tagline">{project.tagline}</span>
           )}
-        </div>
+        </a>
       </a>
 
       {project.lede && <p className="c-project__lede">{parse(project.lede)}</p>}
     </>
   );
 
-  const renderContent = (project) => (
+  const renderContent = (project: Content) => (
     <>
       {project.achievements && (
         <div className="c-project__detail">
@@ -52,10 +55,8 @@ const Projects = ({ projects }: Props) => {
             Key {pluralize("Achievement", project.achievements.length)}
           </b>
           <ul className="c-project__detail-list">
-            {project?.achievements?.map((detail) => (
-              <li className="c-project__detail" key={parse(detail)}>
-                {parse(detail)}
-              </li>
+            {project.achievements.map((detail) => (
+              <li key={String(parse(detail))}>{parse(detail)}</li>
             ))}
           </ul>
         </div>

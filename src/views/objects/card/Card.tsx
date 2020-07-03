@@ -5,12 +5,12 @@ import "./Card.scss";
 type Props = {
   bannerUrl?: string;
   bannerGradient?: boolean;
-  header?: Node;
-  footer?: Node;
+  header?: React.ReactNode;
+  footer?: React.ReactNode;
   variant?: "secondary" | "primary" | "hover" | "hover-active" | "forward";
   size?: "sm" | "lg";
-  className?: string | Array<string> | Object;
-  children?: Node;
+  className?: string | string[] | { [key: string]: boolean };
+  children?: React.ReactNode;
 };
 
 const Card = ({
@@ -36,7 +36,9 @@ const Card = ({
       {bannerUrl && (
         <div
           className="o-card__banner"
-          style={bannerUrl && { backgroundImage: `url(${bannerUrl})` }}
+          style={
+            bannerUrl ? { backgroundImage: `url(${bannerUrl})` } : undefined
+          }
         ></div>
       )}
       {header && <header className="o-card__header">{header}</header>}

@@ -3,8 +3,8 @@ import cx from "classnames";
 import "./Badge.scss";
 
 type Props = {
-  className?: string | Array<string> | Object;
-  children: Node;
+  className?: string | string[] | { [key: string]: boolean };
+  children: React.ReactNode;
 };
 
 const Badge = ({ className, children }: Props) => {

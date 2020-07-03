@@ -3,10 +3,10 @@ import cx from "classnames";
 import "./Blockquote.scss";
 
 type Props = {
-  quote: Node;
+  quote: React.ReactNode;
   cite?: string;
   pulled?: boolean;
-  className?: string | Array<string> | Object;
+  className?: string | string[] | { [key: string]: boolean };
 };
 
 const Blockquote = ({ quote, cite, pulled, className }: Props) => {

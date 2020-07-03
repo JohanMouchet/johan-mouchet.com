@@ -9,9 +9,9 @@ const parse = (
   DOMPurifyConfig?: {
     [key: string]: any;
   }
-) =>
+): React.ReactNode =>
   HTMLReactParser(
-    DOMPurify.sanitize(html, DOMPurifyConfig),
+    DOMPurify.sanitize(html, DOMPurifyConfig || {}),
     HTMLReactParserOptions
   );
 

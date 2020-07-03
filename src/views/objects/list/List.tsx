@@ -9,9 +9,9 @@ type Props = {
   striped?: "horizontal" | "vertical";
   size?: "lg";
   linkBlock?: boolean;
-  className?: string | Array<string> | Object;
+  className?: string | string[] | { [key: string]: boolean };
   attributes?: boolean | number | string;
-  children: Node;
+  children: React.ReactNode;
 };
 
 const List = ({

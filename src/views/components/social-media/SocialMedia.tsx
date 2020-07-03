@@ -2,13 +2,11 @@ import * as React from "react";
 import "./SocialMedia.scss";
 
 type Props = {
-  medias: [
-    {
-      name: string;
-      url: string;
-      icon: string;
-    }
-  ];
+  medias: Array<{
+    name: string;
+    url: string;
+    icon: string;
+  }>;
 };
 
 const SocialMedia = ({ medias }: Props) =>

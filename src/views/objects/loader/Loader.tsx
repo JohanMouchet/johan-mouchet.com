@@ -4,7 +4,7 @@ import "./Loader.scss";
 
 type Props = {
   size?: "sm";
-  className?: string | Array<string> | Object;
+  className?: string | string[] | { [key: string]: boolean };
 };
 
 const Loader = ({ size, className }: Props) => {

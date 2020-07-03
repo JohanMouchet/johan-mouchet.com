@@ -4,18 +4,15 @@ import parse from "utils/parse";
 import "./Header.scss";
 
 type Props = {
-  firstName: string;
-  lastName: string;
-  tagline: string;
+  firstName?: string;
+  lastName?: string;
+  tagline?: string;
 };
 
 const Header = ({
-  /*html*/
   firstName = PROFILE.firstName,
-  /*html*/
   lastName = PROFILE.lastName,
-  /*html*/
-  tagline = `Never stop exploring,<br class="p-header__tagline-breaker" /> never stop creating`,
+  tagline = /*html*/ `Never stop exploring,<br class="p-header__tagline-breaker" /> never stop creating`,
 }: Props) => (
   <header className="p-header">
     <div className="p-header__inner">

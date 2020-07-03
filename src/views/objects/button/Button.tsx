@@ -8,9 +8,9 @@ type Props = {
   variant?: "primary" | "secondary" | "linkedIn";
   size?: "sm" | "lg";
   block?: boolean | "@sm" | "@md";
-  className?: string | Array<string> | Object;
+  className?: string | string[] | { [key: string]: boolean };
   attributes?: boolean | number | string;
-  children?: Node;
+  children?: React.ReactNode;
 };
 
 const Button = ({

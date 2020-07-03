@@ -4,8 +4,8 @@ import "./Aside.scss";
 
 type Props = {
   margin?: "no-margin";
-  className?: string | Array<string> | Object;
-  children: Node;
+  className?: string | string[] | { [key: string]: boolean };
+  children: React.ReactNode;
 };
 
 const Aside = ({ margin, className, children }: Props) => {

@@ -15,8 +15,8 @@ type Props = {
   closable?: boolean;
   variant?: "info" | "success" | "warning" | "danger";
   position?: "fixed-bottom" | "fixed-bottom-right";
-  className?: string | Array<string> | Object;
-  children: Node;
+  className?: string | string[] | { [key: string]: boolean };
+  children: React.ReactNode;
 };
 
 const Alert = ({
@@ -40,7 +40,7 @@ const Alert = ({
     className
   );
 
-  const getIcon = (variant) => {
+  const getIcon = (variant: string) => {
     if (variant === "info") {
       return <IconInfoCircle />;
     } else if (variant === "success") {

@@ -59,7 +59,6 @@ const Home = () => (
                       /*html*/
                       `${PROFILE.firstName} ${PROFILE.lastName}`
                     }
-                    loading="auto"
                   />
                 </div>
               </div>

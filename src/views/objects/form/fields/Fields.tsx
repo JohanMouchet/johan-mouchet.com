@@ -7,7 +7,7 @@ type FieldProps = {
   type: string;
   name: string;
   value?: string;
-  className?: string | Array<string> | Object;
+  className?: string | string[] | { [key: string]: boolean };
   attributes?: boolean | number | string;
 };
 
@@ -38,14 +38,12 @@ export { Field };
 type SelectProps = {
   id?: string;
   name: string;
-  options: [
-    {
-      text: string;
-      value: string;
-      attributes: Array<string>;
-    }
-  ];
-  className?: string | Array<string> | Object;
+  options: Array<{
+    text: string;
+    value: string;
+    attributes: string[];
+  }>;
+  className?: string | string[] | { [key: string]: boolean };
   attributes?: boolean | number | string;
 };
 
@@ -72,7 +70,7 @@ export { Select };
 type TextareaProps = {
   id?: string;
   name: string;
-  className?: string | Array<string> | Object;
+  className?: string | string[] | { [key: string]: boolean };
   attributes?: boolean | number | string;
   children?: string;
 };

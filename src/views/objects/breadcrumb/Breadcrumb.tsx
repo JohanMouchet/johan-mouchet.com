@@ -3,13 +3,11 @@ import cx from "classnames";
 import "./Breadcrumb.scss";
 
 type Props = {
-  levels: [
-    {
-      title: string;
-      url: string;
-    }
-  ];
-  className?: string | Array<string> | Object;
+  levels: Array<{
+    title: string;
+    url: string;
+  }>;
+  className?: string | string[] | { [key: string]: boolean };
 };
 
 const Breadcrumb = ({ levels, className }: Props) => {
@@ -22,12 +20,14 @@ const Breadcrumb = ({ levels, className }: Props) => {
         {levels.map((level, index) => (
           <li
             className="o-breadcrumb__level u-animation u-animation--fade-in-up"
-            style={{ animationDelay: index > 0 && index * 0.15 + "s" }}
+            style={{
+              animationDelay: index > 0 ? index * 0.15 + "s" : undefined,
+            }}
             key={level.url}
           >
             <a
               className="o-breadcrumb__link"
-              href={index !== lastLevel && level.url}
+              href={index !== lastLevel ? level.url : undefined}
             >
               {level.title}
             </a>

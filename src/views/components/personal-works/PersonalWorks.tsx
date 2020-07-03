@@ -2,13 +2,11 @@ import * as React from "react";
 import "./PersonalWorks.scss";
 
 type Props = {
-  works: [
-    {
-      url: string;
-      thumbnailSrc: string;
-      sourceIcon: React.ReactNode;
-    }
-  ];
+  works: Array<{
+    url: string;
+    thumbnailSrc: string;
+    sourceIcon: React.ReactNode;
+  }>;
 };
 
 const PersonalWorks = ({ works }: Props) =>

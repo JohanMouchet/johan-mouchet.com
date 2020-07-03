@@ -5,7 +5,7 @@ import "./Range.scss";
 type Props = {
   id?: string;
   name: string;
-  className?: string | Array<string> | Object;
+  className?: string | string[] | { [key: string]: boolean };
   attributes?: boolean | number | string;
 };
 

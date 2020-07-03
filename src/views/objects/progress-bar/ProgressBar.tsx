@@ -9,10 +9,10 @@ type Props = {
   total?: string;
   detailsOnHover?: boolean;
   filling: number;
-  className?: string | Array<string> | Object;
+  className?: string | string[] | { [key: string]: boolean };
 };
 
-const ProgressBar = ({
+const ProgressBar: React.FunctionComponent<Props> = ({
   label,
   progress,
   progressPct,
@@ -27,10 +27,10 @@ const ProgressBar = ({
     detailsOnHover && "o-progress-bar--details-on-hover"
   );
 
-  const clampedFilling = Math.min(Math.max(0, parseInt(filling)), 100);
+  const clampedFilling = Math.min(Math.max(0, filling), 100);
 
   return (
-    <div className={classNames} tabIndex={detailsOnHover && "0"}>
+    <div className={classNames} tabIndex={detailsOnHover ? 0 : undefined}>
       {(label || progress || total) && (
         <span className="o-progress-bar__labels">
           {label && <span className="o-progress-bar__label">{label}</span>}

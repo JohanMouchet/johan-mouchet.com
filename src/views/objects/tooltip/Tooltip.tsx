@@ -3,14 +3,14 @@ import cx from "classnames";
 import "./Tooltip.scss";
 
 type Props = {
-  as: string;
+  as: keyof JSX.IntrinsicElements;
   content: string;
   position: "top" | "right" | "bottom" | "left";
   indicator: boolean;
   multiLines: boolean;
-  className?: string | Array<string> | Object;
+  className?: string | string[] | { [key: string]: boolean };
   attributes?: boolean | number | string;
-  children: Node;
+  children: React.ReactNode;
 };
 
 const Tooltip = ({
@@ -34,7 +34,7 @@ const Tooltip = ({
   const Tag = as;
 
   return (
-    <Tag className={classNames} tabIndex="0" {...attributes}>
+    <Tag className={classNames} tabIndex={0} {...attributes}>
       {children}
       <span className="o-tooltip__content">{content}</span>
     </Tag>

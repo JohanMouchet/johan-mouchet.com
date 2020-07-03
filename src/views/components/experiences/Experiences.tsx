@@ -5,20 +5,19 @@ import { Projects } from "views/components";
 import "./Experiences.scss";
 
 type Props = {
-  experiences: [
-    {
-      company: {
-        url: string;
-        name: string;
-      };
-      location: string;
-      jobTitle: string;
-      startDate: Date;
-      endDate: Date;
-      lede: string;
-      projects: Projects;
-    }
-  ];
+  experiences: Array<{
+    company: {
+      url: string;
+      name: string;
+    };
+    location: string;
+    jobTitle: string;
+    startDate: Date;
+    endDate: Date;
+    contractType: string;
+    lede: string;
+    projects: typeof Projects;
+  }>;
 };
 
 const Experiences = ({ experiences }: Props) =>
@@ -40,7 +39,6 @@ const Experiences = ({ experiences }: Props) =>
             </a>
             , {experience.location} ⁠— {experience.jobTitle}
           </h3>
-
           <p className="c-experience__subheading">
             <span className="c-experience__date">
               {`${experience.startDate.toLocaleString("en-GB", {
@@ -73,9 +71,8 @@ const Experiences = ({ experiences }: Props) =>
               </span>
             )}
           </p>
-
           <p className="c-experience__lede">{parse(experience.lede)}</p>
-
+          {/* @ts-ignore */}
           {experience.projects && <Projects projects={experience.projects} />}
         </section>
       ))}

@@ -6,8 +6,8 @@ type Props = {
   size?: "sm" | "lg";
   margin?: "no-margin" | "no-top-margin" | "no-bottom-margin";
   variant?: "secondary";
-  className?: string | Array<string> | Object;
-  children: Node;
+  className?: string | string[] | { [key: string]: boolean };
+  children: React.ReactNode;
 };
 
 const Article = ({ size, margin, variant, className, children }: Props) => {

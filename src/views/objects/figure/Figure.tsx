@@ -8,7 +8,7 @@ type Props = {
   title?: string;
   caption?: string;
   centered?: boolean;
-  className?: string | Array<string> | Object;
+  className?: string | string[] | { [key: string]: boolean };
   attributes?: boolean | number | string;
 };
 

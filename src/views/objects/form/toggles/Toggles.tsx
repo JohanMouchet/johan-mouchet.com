@@ -9,9 +9,9 @@ type Props = {
   name?: string;
   value?: string;
   checked?: boolean;
-  className?: string | Array<string> | Object;
+  className?: string | string[] | { [key: string]: boolean };
   attributes?: boolean | number | string;
-  children?: Node;
+  children?: React.ReactNode;
 };
 
 // TODO: fix checked state
@@ -26,9 +26,7 @@ const Toggle = ({
   children,
   ...attributes
 }: Props) => {
-  const [check] = useState(checked);
-
-  const handleChange = (check) => (check = !check);
+  const [check, handleChange] = useState(checked);
 
   const classNames = cx("o-form__toggle", `o-form__toggle--${type}`, className);
 
@@ -41,8 +39,9 @@ const Toggle = ({
         defaultValue={value}
         className="o-form__toggle-input"
         defaultChecked={checked}
+        checked={check}
+        onChange={() => handleChange((check) => !check)}
         {...attributes}
-        onChange={() => handleChange(check)}
       />
       <span className="o-form__toggle-icon"></span>
       {children && <span className="o-form__toggle-text">{children}</span>}

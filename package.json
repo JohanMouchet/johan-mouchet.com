@@ -5,7 +5,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "date-fns": "^2.11.1",
-    "dompurify": "^2.0.8",
+    "dompurify": "^2.0.12",
     "html-react-parser": "^0.10.3",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
@@ -92,6 +92,8 @@
     "@storybook/addons": "^5.3.19",
     "@storybook/preset-create-react-app": "^3.0.0",
     "@storybook/react": "^5.3.19",
+    "@types/classnames": "^2.2.10",
+    "@types/dompurify": "^2.0.2",
     "@types/jest": "^26.0.3",
     "@types/node": "^14.0.14",
     "@types/node-sass": "^4.11.1",
