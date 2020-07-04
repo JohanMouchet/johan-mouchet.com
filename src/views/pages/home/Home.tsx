@@ -15,6 +15,7 @@ import {
   IconUnsplash,
   IconYoutube,
   List,
+  Tooltip,
 } from "views/objects";
 import {
   Skills,
@@ -369,7 +370,13 @@ const Home = () => (
                           /*html*/
                           `Integrated a responsive utility-based Sass grid I built and open-sourced: <a href="https://github.com/JohanMouchet/fluxgrid">Fluxgrid</a>.`,
                           /*html*/
-                          `Advocated for performance tracking and optimisations: slowed down the <span data-tooltip="First Meaningful Paint" data-tooltip-indicator>FMP</span> trend, <span class="c-project__success">&#9207;~9.5%</span> <span data-tooltip="Time To Interactive" data-tooltip-indicator>TTI</span> and <span class="c-project__success">&#9207;~15%</span> bundle size.`,
+                          `Advocated for performance tracking and optimisations: slowed down the ${(
+                            <Tooltip content="First Meaningful Paint">
+                              FMP
+                            </Tooltip>
+                          )} trend, <span class="c-project__success">&#9207;~9.5%</span> ${(
+                            <Tooltip content="Time To Interactive">TTI</Tooltip>
+                          )} and <span class="c-project__success">&#9207;~15%</span> bundle size.`,
                         ],
                         architecture: [
                           /*html*/
@@ -424,7 +431,11 @@ const Home = () => (
                           /*html*/
                           `Integrated social media sharing.`,
                           /*html*/
-                          `Awarded<ul><li><span class="c-project__award">&#9733;</span> <span data-tooltip="Melbourne Advertising and Design Club" data-tooltip-indicator>MADC</span> 2018: <a href="https://twitter.com/isobarAU/status/1058125158752313344?s=20">Best PR experience</a></li><li><span class="c-project__award">&#9733;</span> One Show Awards shortlist: <a href="https://www.oneshow.org/viewentries/?id=51888">Media Relations</a></li></ul>`,
+                          `Awarded<ul><li><span class="c-project__award">&#9733;</span> ${(
+                            <Tooltip content="Melbourne Advertising and Design Club">
+                              MADC
+                            </Tooltip>
+                          )} 2018: <a href="https://twitter.com/isobarAU/status/1058125158752313344?s=20">Best PR experience</a></li><li><span class="c-project__award">&#9733;</span> One Show Awards shortlist: <a href="https://www.oneshow.org/viewentries/?id=51888">Media Relations</a></li></ul>`,
                         ],
                         architecture: [
                           /*html*/
@@ -715,7 +726,9 @@ const Home = () => (
                           /*html*/
                           `Optimised SEO with the use of Open Graph protocol and JSON-LD microdata.`,
                           /*html*/
-                          `Created a tailored AdWords campaign: <span class="c-project__success">&#9206;10.1%</span> Clics, <span class="c-project__success">&#9207;6.6%</span> <span data-tooltip="Cost Per Click" data-tooltip-indicator>CPC</span> YoY.`,
+                          `Created a tailored AdWords campaign: <span class="c-project__success">&#9206;10.1%</span> Clics, <span class="c-project__success">&#9207;6.6%</span> ${(
+                            <Tooltip content="Cost Per Click">CPC</Tooltip>
+                          )} YoY.`,
                           /*html*/
                           `Implemented Google Analytics custom events and goals tracking.`,
                         ],
