@@ -1,7 +1,11 @@
 import { differenceInCalendarMonths } from "date-fns";
 import pluralize from "utils/pluralize";
 
-const duration = (startDate: Date, endDate: Date, minimumLabel?: string) => {
+const duration = (
+  startDate: Date,
+  endDate: Date,
+  minimumLabel?: string
+): string => {
   if (startDate <= endDate) {
     const durationInMonths = differenceInCalendarMonths(endDate, startDate);
     const years = Math.floor(durationInMonths / 12);

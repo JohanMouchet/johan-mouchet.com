@@ -1,4 +1,4 @@
-const pluralize = (word: string, quantity: number) => {
+const pluralize = (word: string, quantity: number): string => {
   const vowels = ["a", "e", "i", "o", "u"];
 
   if (quantity > 1) {
