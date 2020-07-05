@@ -16,7 +16,9 @@ type Props = {
     endDate: Date;
     contractType?: string;
     lede: string;
-    projects: any;
+    // TODO: projects should be of type Projects
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    projects: any[];
   }>;
 };
 
