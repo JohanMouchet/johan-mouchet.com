@@ -34,8 +34,8 @@
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
     "plugins": [
-      "@typescript-eslint",
-      "jest"
+      "jest",
+      "@typescript-eslint"
     ],
     "extends": [
       "react-app",
