@@ -39,7 +39,7 @@ exports[`Renders <Footer /> without crashing 1`] = `
            
           <span
             className="p-footer__cocorico"
-            tabIndex="0"
+            tabIndex={0}
           >
             France
           </span>

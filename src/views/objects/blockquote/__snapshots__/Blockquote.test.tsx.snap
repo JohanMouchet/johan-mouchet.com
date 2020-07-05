@@ -5,7 +5,7 @@ exports[`Renders <Blockquote /> without crashing 1`] = `
   className="o-blockquote"
 >
   <div
-    className="o-blockquote__quotes"
+    className="o-blockquote__quotes u-animation u-animation--fade-in"
   />
 </blockquote>
 `;

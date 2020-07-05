@@ -2,7 +2,7 @@
 
 exports[`Renders <Alert /> without crashing 1`] = `
 <div
-  className="o-alert o-alert--info container"
+  className="o-alert o-alert--info container u-animation u-animation--fade-in-up"
 >
   <div
     className="grid grid--noWrap-@xs"
