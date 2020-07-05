@@ -27,7 +27,7 @@ import {
 import { Main, Article } from "views/partials";
 import "./Home.scss";
 
-const Home = () => (
+const Home: React.FC = () => (
   <Default>
     <Main margin="no-margin">
       <section className="home-about">

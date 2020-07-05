@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { Default } from "views/layouts";
 import { Main } from "views/partials";
 
-const NotFound = () => (
+const NotFound: React.FC = () => (
   <Default>
     <Main>
       <div className="container u-full--height">
