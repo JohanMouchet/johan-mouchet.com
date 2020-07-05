@@ -9,11 +9,11 @@ type Props = {
   tagline?: string;
 };
 
-const Header = ({
+const Header: React.FC<Props> = ({
   firstName = PROFILE.firstName,
   lastName = PROFILE.lastName,
   tagline = /*html*/ `Never stop exploring,<br class="p-header__tagline-breaker" /> never stop creating`,
-}: Props) => (
+}) => (
   <header className="p-header">
     <div className="p-header__inner">
       <h1 className="p-header__heading">

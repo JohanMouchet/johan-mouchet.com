@@ -12,7 +12,7 @@ type Props = {
   className?: string | string[] | { [key: string]: boolean };
 };
 
-const ProgressBar = ({
+const ProgressBar: React.FC<Props> = ({
   label,
   progress,
   progressPct,
@@ -20,7 +20,7 @@ const ProgressBar = ({
   detailsOnHover,
   filling = 0,
   className,
-}: Props) => {
+}) => {
   const classNames = cx(
     "o-progress-bar",
     className,

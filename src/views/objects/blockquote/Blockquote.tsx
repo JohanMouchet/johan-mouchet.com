@@ -9,7 +9,7 @@ type Props = {
   className?: string | string[] | { [key: string]: boolean };
 };
 
-const Blockquote = ({ quote, cite, pulled, className }: Props) => {
+const Blockquote: React.FC<Props> = ({ quote, cite, pulled, className }) => {
   const classNames = cx(
     "o-blockquote",
     className,

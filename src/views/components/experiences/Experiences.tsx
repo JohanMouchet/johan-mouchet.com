@@ -20,7 +20,7 @@ type Props = {
   }>;
 };
 
-const Experiences = ({ experiences }: Props) =>
+const Experiences: React.FC<Props> = ({ experiences }) =>
   !experiences ? null : (
     <div className="c-experiences">
       {experiences.map((experience) => (

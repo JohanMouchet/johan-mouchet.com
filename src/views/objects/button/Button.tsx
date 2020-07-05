@@ -13,7 +13,7 @@ type Props = {
   children?: React.ReactNode;
 };
 
-const Button = ({
+const Button: React.FC<Props> = ({
   type = "button",
   url,
   variant,
@@ -22,7 +22,7 @@ const Button = ({
   className,
   children,
   ...attributes
-}: Props) => {
+}) => {
   const classNames = cx(
     "o-button",
     size && `o-button--${size}`,

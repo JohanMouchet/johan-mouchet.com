@@ -14,7 +14,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const List = ({
+const List: React.FC<Props> = ({
   as = "ul",
   unstyled,
   inline,
@@ -24,7 +24,7 @@ const List = ({
   className,
   children,
   ...attributes
-}: Props) => {
+}) => {
   const classNames = cx(
     "o-list",
     unstyled && `o-list--unstyled`,

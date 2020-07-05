@@ -9,7 +9,7 @@ type Props = {
   }>;
 };
 
-const PersonalWorks = ({ works }: Props) =>
+const PersonalWorks: React.FC<Props> = ({ works }) =>
   !works ? null : (
     <div className="c-personal-works">
       <div className="grid">

@@ -19,14 +19,14 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Alert = ({
+const Alert: React.FC<Props> = ({
   isOpen = true,
   closable,
   variant = "info",
   position,
   className,
   children,
-}: Props) => {
+}) => {
   const [open, setOpenState] = useState(isOpen);
 
   const classNames = cx(
@@ -52,28 +52,26 @@ const Alert = ({
     }
   };
 
-  return (
-    open && (
-      <div className={classNames}>
-        <div className="grid grid--noWrap-@xs">
-          <div className="o-alert__icon cell" aria-label={variant}>
-            {getIcon(variant)}
-          </div>
-          <div className="o-alert__content cell cell--@xs">{children}</div>
-          {closable && (
-            <div className="o-alert__close cell">
-              <button
-                className="o-alert__close-button"
-                aria-label="Close"
-                onClick={() => setOpenState(!open)}
-              >
-                <IconX />
-              </button>
-            </div>
-          )}
+  return !open ? null : (
+    <div className={classNames}>
+      <div className="grid grid--noWrap-@xs">
+        <div className="o-alert__icon cell" aria-label={variant}>
+          {getIcon(variant)}
         </div>
+        <div className="o-alert__content cell cell--@xs">{children}</div>
+        {closable && (
+          <div className="o-alert__close cell">
+            <button
+              className="o-alert__close-button"
+              aria-label="Close"
+              onClick={() => setOpenState(!open)}
+            >
+              <IconX />
+            </button>
+          </div>
+        )}
       </div>
-    )
+    </div>
   );
 };
 

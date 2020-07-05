@@ -13,7 +13,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Tooltip = ({
+const Tooltip: React.FC<Props> = ({
   as = "span",
   content,
   position = "top",
@@ -22,7 +22,7 @@ const Tooltip = ({
   className,
   children,
   ...attributes
-}: Props) => {
+}) => {
   const classNames = cx(
     "o-tooltip",
     position && `o-tooltip--${position}`,

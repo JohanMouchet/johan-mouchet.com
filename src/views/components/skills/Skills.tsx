@@ -5,7 +5,7 @@ type Props = {
   skills: React.ComponentProps<typeof ProgressBar>[];
 };
 
-const Skills = ({ skills }: Props) =>
+const Skills: React.FC<Props> = ({ skills }) =>
   !skills ? null : (
     <ul className="c-skills o-list--unstyled">
       {skills.map((skill) => (

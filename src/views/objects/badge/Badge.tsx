@@ -7,7 +7,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Badge = ({ className, children }: Props) => {
+const Badge: React.FC<Props> = ({ className, children }) => {
   const classNames = cx("o-badge", className);
 
   return <span className={classNames}>{children}</span>;

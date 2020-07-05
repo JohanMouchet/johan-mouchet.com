@@ -11,14 +11,14 @@ type FieldProps = {
   attributes?: boolean | number | string;
 };
 
-const Field = ({
+const Field: React.FC<FieldProps> = ({
   id,
   type,
   name,
   value,
   className,
   ...attributes
-}: FieldProps) => {
+}) => {
   const classNames = cx("o-form__field", `o-form__field--${type}`, className);
 
   return (
@@ -47,7 +47,13 @@ type SelectProps = {
   attributes?: boolean | number | string;
 };
 
-const Select = ({ id, name, options, className, attributes }: SelectProps) => {
+const Select: React.FC<SelectProps> = ({
+  id,
+  name,
+  options,
+  className,
+  attributes,
+}) => {
   const classNames = cx("o-form__field", "o-form__field--select", className);
 
   return !options ? null : (
@@ -75,13 +81,13 @@ type TextareaProps = {
   children?: string;
 };
 
-const Textarea = ({
+const Textarea: React.FC<TextareaProps> = ({
   id,
   name,
   className,
   children,
   ...attributes
-}: TextareaProps) => {
+}) => {
   const classNames = cx("o-form__field", "o-form__field--textarea", className);
 
   return (

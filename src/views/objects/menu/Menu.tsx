@@ -17,7 +17,7 @@ type Props = {
   menu: MenuItem[];
 };
 
-const Menu = ({ menu }: Props) => {
+const Menu: React.FC<Props> = ({ menu }) => {
   const renderMenu = (menu: MenuItem, isSubmenu: boolean) => {
     const classNames = cx(isSubmenu ? "o-menu__submenu" : "o-menu");
 

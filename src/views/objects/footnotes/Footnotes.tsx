@@ -9,11 +9,11 @@ type ReferenceProps = {
   label?: string;
 };
 
-const FootnotesReference = ({
+const FootnotesReference: React.FC<ReferenceProps> = ({
   id,
   text,
   label = "See note",
-}: ReferenceProps) => (
+}) => (
   <sup>
     <a
       id={`footnote-ref:${id}`}
@@ -37,7 +37,7 @@ type NotesProps = {
   className?: string | string[] | { [key: string]: boolean };
 };
 
-const FootnotesNotes = ({ notes, className }: NotesProps) => {
+const FootnotesNotes: React.FC<NotesProps> = ({ notes, className }) => {
   const classNames = cx("o-footnotes", className);
 
   return !notes ? null : (

@@ -8,7 +8,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Aside = ({ margin, className, children }: Props) => {
+const Aside: React.FC<Props> = ({ margin, className, children }) => {
   const classNames = cx("p-aside", margin && `p-main--${margin}`, className);
 
   return <aside className={classNames}>{children}</aside>;

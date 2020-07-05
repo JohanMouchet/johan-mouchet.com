@@ -13,7 +13,7 @@ type Props = {
   }>;
 };
 
-const AcademicQualification = ({ qualifications }: Props) =>
+const AcademicQualification: React.FC<Props> = ({ qualifications }) =>
   !qualifications ? null : (
     <>
       {qualifications.map((qualification) => (

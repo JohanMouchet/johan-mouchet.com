@@ -10,7 +10,7 @@ type Props = {
   className?: string | string[] | { [key: string]: boolean };
 };
 
-const Tabs = ({ tabs, className }: Props) => {
+const Tabs: React.FC<Props> = ({ tabs, className }) => {
   const classNames = cx("o-tabs", className);
 
   return !tabs ? null : (

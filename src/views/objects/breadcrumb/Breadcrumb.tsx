@@ -10,7 +10,7 @@ type Props = {
   className?: string | string[] | { [key: string]: boolean };
 };
 
-const Breadcrumb = ({ levels, className }: Props) => {
+const Breadcrumb: React.FC<Props> = ({ levels, className }) => {
   const classNames = cx("o-breadcrumb", className);
   const lastLevel = levels?.length - 1;
 

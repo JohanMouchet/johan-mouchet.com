@@ -13,7 +13,7 @@ type Props = {
   children?: React.ReactNode;
 };
 
-const Card = ({
+const Card: React.FC<Props> = ({
   bannerUrl,
   bannerGradient,
   header,
@@ -22,7 +22,7 @@ const Card = ({
   variant,
   size,
   className,
-}: Props) => {
+}) => {
   const classNames = cx(
     "o-card",
     bannerGradient && `o-card--banner-gradient`,

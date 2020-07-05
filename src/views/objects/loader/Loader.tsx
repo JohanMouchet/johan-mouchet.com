@@ -7,7 +7,7 @@ type Props = {
   className?: string | string[] | { [key: string]: boolean };
 };
 
-const Loader = ({ size, className }: Props) => {
+const Loader: React.FC<Props> = ({ size, className }) => {
   const classNames = cx("o-loader", size && `o-loader--${size}`, className);
 
   return <div className={classNames}></div>;

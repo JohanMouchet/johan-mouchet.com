@@ -9,7 +9,7 @@ type Props = {
   attributes?: boolean | number | string;
 };
 
-const Range = ({ id, name, className, attributes }: Props) => {
+const Range: React.FC<Props> = ({ id, name, className, attributes }) => {
   const classNames = cx("o-form__range", className);
 
   return (

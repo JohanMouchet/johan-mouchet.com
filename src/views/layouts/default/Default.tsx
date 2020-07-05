@@ -6,7 +6,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Default = ({ children }: Props) => (
+const Default: React.FC<Props> = ({ children }) => (
   <div className="l-layout">
     <div className="l-layout__background"></div>
     <div className="l-layout__inner">

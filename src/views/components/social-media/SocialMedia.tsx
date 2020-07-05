@@ -9,7 +9,7 @@ type Props = {
   }>;
 };
 
-const SocialMedia = ({ medias }: Props) =>
+const SocialMedia: React.FC<Props> = ({ medias }) =>
   !medias ? null : (
     <div className="grid">
       {medias.map((media) => (

@@ -24,7 +24,7 @@ type Props = {
   projects: (Thumbnail & Content)[];
 };
 
-const Projects = ({ projects }: Props) => {
+const Projects: React.FC<Props> = ({ projects }) => {
   const renderThumbnail = (project: Thumbnail) => (
     <>
       <a href={project.url} className="c-project__link">

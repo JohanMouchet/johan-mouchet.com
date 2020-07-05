@@ -12,7 +12,7 @@ type Props = {
   attributes?: boolean | number | string;
 };
 
-const Figure = ({
+const Figure: React.FC<Props> = ({
   src,
   alt,
   title,
@@ -20,7 +20,7 @@ const Figure = ({
   centered,
   className,
   ...attributes
-}: Props) => {
+}) => {
   const classNames = cx(
     "o-figure",
     centered && `o-figure--centered`,

@@ -13,7 +13,7 @@ type Props = {
   children?: React.ReactNode;
 };
 
-const File = ({
+const File: React.FC<Props> = ({
   id,
   name,
   multipleCaption,
@@ -21,7 +21,7 @@ const File = ({
   className,
   children,
   ...attributes
-}: Props) => {
+}) => {
   const classNames = cx("o-form__file", "o-button", className);
 
   return (

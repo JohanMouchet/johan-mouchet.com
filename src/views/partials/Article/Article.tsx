@@ -10,7 +10,13 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Article = ({ size, margin, variant, className, children }: Props) => {
+const Article: React.FC<Props> = ({
+  size,
+  margin,
+  variant,
+  className,
+  children,
+}) => {
   const classNames = cx(
     "p-article",
     size && `p-article--${size}`,

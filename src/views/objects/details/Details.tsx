@@ -10,13 +10,13 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Details = ({
+const Details: React.FC<Props> = ({
   summary = "Details",
   variant,
   className,
   children,
   ...attributes
-}: Props) => {
+}) => {
   const classNames = cx(
     "o-details",
     variant && `o-details--${variant}`,

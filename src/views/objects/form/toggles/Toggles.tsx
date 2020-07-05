@@ -16,7 +16,7 @@ type Props = {
 
 // TODO: fix checked state
 
-const Toggle = ({
+const Toggle: React.FC<Props> = ({
   id,
   type,
   name,
@@ -25,7 +25,7 @@ const Toggle = ({
   className,
   children,
   ...attributes
-}: Props) => {
+}) => {
   const [check, handleChange] = useState(checked);
 
   const classNames = cx("o-form__toggle", `o-form__toggle--${type}`, className);
@@ -49,8 +49,10 @@ const Toggle = ({
   );
 };
 
-const Checkbox = (props: Props) => Toggle({ ...props, type: "checkbox" });
+const Checkbox: React.FC<Props> = (props: Props) =>
+  Toggle({ ...props, type: "checkbox" });
 
-const Radio = (props: Props) => Toggle({ ...props, type: "radio" });
+const Radio: React.FC<Props> = (props: Props) =>
+  Toggle({ ...props, type: "radio" });
 
 export { Checkbox, Radio };

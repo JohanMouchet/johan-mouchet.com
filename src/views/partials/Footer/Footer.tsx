@@ -10,13 +10,13 @@ type Props = {
   topButtonTitle?: string;
 };
 
-const Footer = ({
+const Footer: React.FC<Props> = ({
   version = VERSIONS.site,
   copyright = /* html*/ `${
     PROFILE.firstName
   } ${PROFILE.lastName.toUpperCase()}`,
   topButtonTitle = /* html*/ `Get to the top`,
-}: Props) => {
+}) => {
   const year = new Date().getFullYear();
 
   return (

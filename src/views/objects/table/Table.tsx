@@ -21,7 +21,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Table = ({
+const Table: React.FC<Props> = ({
   align,
   equalColumns,
   vertical,
@@ -32,7 +32,7 @@ const Table = ({
   className,
   children,
   ...attributes
-}: Props) => {
+}) => {
   const classNames = cx(
     "o-table",
     align && `o-table--align-${align}`,

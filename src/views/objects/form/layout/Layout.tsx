@@ -8,7 +8,7 @@ type FieldsetProps = {
   children?: React.ReactNode;
 };
 
-const Fieldset = ({ legend, className, children }: FieldsetProps) => {
+const Fieldset: React.FC<FieldsetProps> = ({ legend, className, children }) => {
   const classNames = cx("o-form__fieldset", className);
 
   return (
@@ -27,7 +27,7 @@ type FormGroupProps = {
   children?: React.ReactNode;
 };
 
-const FormGroup = ({ variant, detail, children }: FormGroupProps) => {
+const FormGroup: React.FC<FormGroupProps> = ({ variant, detail, children }) => {
   const classNames = cx(
     "o-form__group",
     variant && `o-form__group--${variant}`
@@ -50,7 +50,7 @@ type LabelProps = {
   children?: React.ReactNode;
 };
 
-const Label = ({ id, block, className, children }: LabelProps) => {
+const Label: React.FC<LabelProps> = ({ id, block, className, children }) => {
   const classNames = cx(
     "o-form__label",
     (block || !children) && "o-form__label--block",

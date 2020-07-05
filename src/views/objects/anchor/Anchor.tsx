@@ -11,14 +11,14 @@ type Props = {
   children?: React.ReactNode;
 };
 
-const Anchor = ({
+const Anchor: React.FC<Props> = ({
   as = "span",
   id,
   marker = "#",
   className,
   children,
   ...attributes
-}: Props) => {
+}) => {
   const classNames = cx("o-anchor", className);
 
   const Tag = as;
