@@ -34,13 +34,13 @@ const Projects: React.FC<Props> = ({ projects }) => {
           alt={project.name}
           loading="lazy"
         />
-        <a href={project.url} className="c-project__overlay">
+        <div className="c-project__overlay">
           <h4 className="c-project__title">{project.name}</h4>
           <span className="c-project__line"></span>
           {project.tagline && (
             <span className="c-project__tagline">{project.tagline}</span>
           )}
-        </a>
+        </div>
       </a>
 
       {project.lede && <p className="c-project__lede">{parse(project.lede)}</p>}
