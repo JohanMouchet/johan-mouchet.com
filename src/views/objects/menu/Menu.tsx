@@ -8,7 +8,7 @@ import { Button } from "views/objects";
 type MenuItem = {
   text: string;
   url?: string;
-  button?: typeof Button;
+  button?: React.ComponentProps<typeof Button>;
   className?: string | string[] | { [key: string]: boolean };
   menu?: MenuItem[];
 };

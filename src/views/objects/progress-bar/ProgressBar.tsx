@@ -12,7 +12,7 @@ type Props = {
   className?: string | string[] | { [key: string]: boolean };
 };
 
-const ProgressBar: React.FunctionComponent<Props> = ({
+const ProgressBar = ({
   label,
   progress,
   progressPct,

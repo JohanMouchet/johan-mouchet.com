@@ -14,9 +14,9 @@ type Props = {
 };
 
 const AcademicQualification = ({ qualifications }: Props) =>
-  !qualifications
-    ? null
-    : qualifications.map((qualification) => (
+  !qualifications ? null : (
+    <>
+      {qualifications.map((qualification) => (
         <section className="c-academic-qualification" key={qualification.title}>
           <h3 className="c-academic-qualification__heading">
             <a
@@ -34,6 +34,8 @@ const AcademicQualification = ({ qualifications }: Props) =>
             {qualification.title}
           </p>
         </section>
-      ));
+      ))}
+    </>
+  );
 
 export default AcademicQualification;

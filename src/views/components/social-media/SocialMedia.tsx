@@ -5,7 +5,7 @@ type Props = {
   medias: Array<{
     name: string;
     url: string;
-    icon: string;
+    icon: React.ReactNode;
   }>;
 };
 

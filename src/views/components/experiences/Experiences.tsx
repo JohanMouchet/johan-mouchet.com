@@ -14,9 +14,9 @@ type Props = {
     jobTitle: string;
     startDate: Date;
     endDate: Date;
-    contractType: string;
+    contractType?: string;
     lede: string;
-    projects: typeof Projects;
+    projects: any;
   }>;
 };
 
@@ -72,7 +72,6 @@ const Experiences = ({ experiences }: Props) =>
             )}
           </p>
           <p className="c-experience__lede">{parse(experience.lede)}</p>
-          {/* @ts-ignore */}
           {experience.projects && <Projects projects={experience.projects} />}
         </section>
       ))}
