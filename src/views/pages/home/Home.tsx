@@ -15,7 +15,6 @@ import {
   IconUnsplash,
   IconYoutube,
   List,
-  Tooltip,
 } from "views/objects";
 import {
   Skills,
@@ -370,13 +369,7 @@ const Home: React.FC = () => (
                           /*html*/
                           `Integrated a responsive utility-based Sass grid I built and open-sourced: <a href="https://github.com/JohanMouchet/fluxgrid">Fluxgrid</a>.`,
                           /*html*/
-                          `Advocated for performance tracking and optimisations: slowed down the ${(
-                            <Tooltip content="First Meaningful Paint">
-                              FMP
-                            </Tooltip>
-                          )} trend, <span class="c-project__success">&#9207;~9.5%</span> ${(
-                            <Tooltip content="Time To Interactive">TTI</Tooltip>
-                          )} and <span class="c-project__success">&#9207;~15%</span> bundle size.`,
+                          `Advocated for performance tracking and optimisations: slowed down the <span class="o-tooltip o-tooltip--top" tabindex="0">FMP<span class="o-tooltip__content">First Meaningful Paint</span></span> trend, <span class="c-project__success">&#9207;~9.5%</span> <span class="o-tooltip o-tooltip--top" tabindex="0">TTI<span class="o-tooltip__content">Time To Interactive</span></span> and <span class="c-project__success">&#9207;~15%</span> bundle size.`,
                         ],
                         architecture: [
                           /*html*/
@@ -431,11 +424,7 @@ const Home: React.FC = () => (
                           /*html*/
                           `Integrated social media sharing.`,
                           /*html*/
-                          `Awarded<ul><li><span class="c-project__award">&#9733;</span> ${(
-                            <Tooltip content="Melbourne Advertising and Design Club">
-                              MADC
-                            </Tooltip>
-                          )} 2018: <a href="https://twitter.com/isobarAU/status/1058125158752313344?s=20">Best PR experience</a></li><li><span class="c-project__award">&#9733;</span> One Show Awards shortlist: <a href="https://www.oneshow.org/viewentries/?id=51888">Media Relations</a></li></ul>`,
+                          `Awarded<ul><li><span class="c-project__award">&#9733;</span> <span class="o-tooltip o-tooltip--top" tabindex="0">MADC<span class="o-tooltip__content">Melbourne Advertising and Design Club</span></span> 2018: <a href="https://twitter.com/isobarAU/status/1058125158752313344?s=20">Best PR experience</a></li><li><span class="c-project__award">&#9733;</span> One Show Awards shortlist: <a href="https://www.oneshow.org/viewentries/?id=51888">Media Relations</a></li></ul>`,
                         ],
                         architecture: [
                           /*html*/
@@ -726,9 +715,7 @@ const Home: React.FC = () => (
                           /*html*/
                           `Optimised SEO with the use of Open Graph protocol and JSON-LD microdata.`,
                           /*html*/
-                          `Created a tailored AdWords campaign: <span class="c-project__success">&#9206;10.1%</span> Clics, <span class="c-project__success">&#9207;6.6%</span> ${(
-                            <Tooltip content="Cost Per Click">CPC</Tooltip>
-                          )} YoY.`,
+                          `Created a tailored AdWords campaign: <span class="c-project__success">&#9206;10.1%</span> Clics, <span class="c-project__success">&#9207;6.6%</span> <span class="o-tooltip o-tooltip--top" tabindex="0">CPC<span class="o-tooltip__content">Cost Per Click</span></span> YoY.`,
                           /*html*/
                           `Implemented Google Analytics custom events and goals tracking.`,
                         ],
