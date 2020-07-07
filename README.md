@@ -6,18 +6,18 @@ Johan Mouchet's portfolio, open sourced on [GitHub](https://github.com/JohanMouc
 
 ## About This Website
 
-This website,
+This website is,
 
-- is bootstrapped with Create React App
+- bootstrapped with Create React App
   - including React, webpack, Babel and more
   - published as an offline-first Progressive Web App
-- maintains a design system with [Storybook](https://www.johan-mouchet.com/storybook/?path=/docs/about-getting-started--page)
-- is type-checked with Typescript
-- is unit and snapshot tested with Jest and Enzyme
-- uses Sass and CSS post-processing
-- is linted and formated with ESlint stylelint and Prettier, enforced by Husky and lint-staged
-- uses client side routing with [wouter](https://github.com/molefrog/wouter)
-- is deployed, pre-rendered, with Netlify
+- maintaining a design system with [Storybook](https://www.johan-mouchet.com/storybook/?path=/docs/about-getting-started--page)
+- type-checked with Typescript
+- unit and snapshot tested with Jest and Enzyme
+- using Sass and CSS post-processing
+- linted and formated with ESlint stylelint and Prettier, enforced by Husky and lint-staged
+- using client side routing with [wouter](https://github.com/molefrog/wouter)
+- deployed, pre-rendered, with Netlify
 
 ## npm Scripts
 

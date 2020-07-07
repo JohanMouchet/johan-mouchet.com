@@ -1021,11 +1021,11 @@ const Home: React.FC = () => (
                     <a href="https://github.com/JohanMouchet/johan-mouchet.com">
                       GitHub
                     </a>
-                    , it
+                    , it is
                   </p>
                   <List>
                     <li>
-                      is bootstrapped with Create React App
+                      bootstrapped with Create React App
                       <ul>
                         <li>including React, webpack, Babel and more</li>
                         <li>
@@ -1034,24 +1034,24 @@ const Home: React.FC = () => (
                       </ul>
                     </li>
                     <li>
-                      maintains a design system with{" "}
+                      maintaining a design system with{" "}
                       <a href="/storybook/?path=/docs/about-getting-started--page">
                         Storybook
                       </a>
                     </li>
-                    <li>is type-checked with Typescript</li>
-                    <li>is unit and snapshot tested with Jest and Enzyme</li>
-                    <li>uses Sass and CSS post-processing</li>
+                    <li>type-checked with Typescript</li>
+                    <li>unit and snapshot tested with Jest and Enzyme</li>
+                    <li>using Sass and CSS post-processing</li>
                     <li>
-                      is linted and formated with ESlint stylelint and Prettier,
+                      linted and formated with ESlint stylelint and Prettier,
                       <br />
                       enforced by Husky and lint-staged
                     </li>
                     <li>
-                      uses client side routing with{" "}
+                      using client side routing with{" "}
                       <a href="https://github.com/molefrog/wouter">wouter</a>
                     </li>
-                    <li>is deployed, pre-rendered, with Netlify</li>
+                    <li>deployed, pre-rendered, with Netlify</li>
                   </List>
                 </Article>
               </div>
