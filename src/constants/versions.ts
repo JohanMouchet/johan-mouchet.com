@@ -1,3 +1,3 @@
 export const VERSIONS = {
-  site: "5.1.0",
+  site: "5.2.0",
 };
