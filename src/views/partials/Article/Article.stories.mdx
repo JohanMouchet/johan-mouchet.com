@@ -18,8 +18,9 @@ import Article from ".";
           "no-bottom-margin": "no-bottom-margin",
         })}
         variant={select("variant", { "": null, secondary: "secondary" })}
-        children={text("children", "children")}
-      />
+      >
+        {text("children", "children")}
+      </Article>
     </div>
   </Story>
 </Preview>

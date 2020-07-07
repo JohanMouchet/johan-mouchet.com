@@ -3,9 +3,21 @@ import { shallow } from "enzyme";
 import { Checkbox, Radio } from ".";
 
 it("Renders <Checkbox /> without crashing", () => {
-  expect(shallow(<Checkbox />)).toMatchSnapshot();
+  expect(
+    shallow(
+      <Checkbox name="name" value="value" checked>
+        children
+      </Checkbox>
+    )
+  ).toMatchSnapshot();
 });
 
 it("Renders <Radio /> without crashing", () => {
-  expect(shallow(<Radio />)).toMatchSnapshot();
+  expect(
+    shallow(
+      <Radio name="name" value="value" checked>
+        children
+      </Radio>
+    )
+  ).toMatchSnapshot();
 });

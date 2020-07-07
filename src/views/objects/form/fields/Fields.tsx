@@ -41,7 +41,7 @@ type SelectProps = {
   options: Array<{
     text: string;
     value: string;
-    attributes: string[];
+    attributes?: string[];
   }>;
   className?: string | string[] | { [key: string]: boolean };
   attributes?: boolean | number | string;

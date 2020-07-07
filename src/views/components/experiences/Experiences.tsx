@@ -18,7 +18,7 @@ type Props = {
     lede: string;
     // TODO: projects should be of type Projects
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    projects: any[];
+    projects?: any[];
   }>;
 };
 

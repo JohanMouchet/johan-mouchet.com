@@ -14,8 +14,6 @@ type Props = {
   children?: React.ReactNode;
 };
 
-// TODO: fix checked state
-
 const Toggle: React.FC<Props> = ({
   id,
   type,
@@ -48,10 +46,16 @@ const Toggle: React.FC<Props> = ({
   );
 };
 
-const Checkbox: React.FC<Props> = (props: Props) =>
-  Toggle({ ...props, type: "checkbox" });
+type CheckboxProps = Omit<Props, "type">;
 
-const Radio: React.FC<Props> = (props: Props) =>
-  Toggle({ ...props, type: "radio" });
+const Checkbox: React.FC<CheckboxProps> = (props) => (
+  <Toggle {...props} type="checkbox" />
+);
+
+type RadioProps = Omit<Props, "type">;
+
+const Radio: React.FC<RadioProps> = (props) => (
+  <Toggle {...props} type="radio" />
+);
 
 export { Checkbox, Radio };

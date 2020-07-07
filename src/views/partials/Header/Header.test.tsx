@@ -3,5 +3,9 @@ import { shallow } from "enzyme";
 import Header from ".";
 
 it("Renders <Header /> without crashing", () => {
-  expect(shallow(<Header />)).toMatchSnapshot();
+  expect(
+    shallow(
+      <Header firstName="Firstname" lastName="Lastname" tagline="Tagline" />
+    )
+  ).toMatchSnapshot();
 });

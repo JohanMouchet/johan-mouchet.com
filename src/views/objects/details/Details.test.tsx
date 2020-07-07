@@ -1,7 +1,13 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Detail from ".";
+import Details from ".";
 
-it("Renders <Detail /> without crashing", () => {
-  expect(shallow(<Detail />)).toMatchSnapshot();
+it("Renders <Details /> without crashing", () => {
+  expect(
+    shallow(
+      <Details summary="Summary" variant="compact">
+        children
+      </Details>
+    )
+  ).toMatchSnapshot();
 });

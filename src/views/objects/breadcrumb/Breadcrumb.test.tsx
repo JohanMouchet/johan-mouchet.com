@@ -3,5 +3,16 @@ import { shallow } from "enzyme";
 import Breadcrumb from ".";
 
 it("Renders <Breadcrumb /> without crashing", () => {
-  expect(shallow(<Breadcrumb />)).toMatchSnapshot();
+  expect(
+    shallow(
+      <Breadcrumb
+        levels={[
+          {
+            title: "Title",
+            url: "#",
+          },
+        ]}
+      />
+    )
+  ).toMatchSnapshot();
 });

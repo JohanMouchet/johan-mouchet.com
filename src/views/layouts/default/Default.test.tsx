@@ -3,5 +3,5 @@ import { shallow } from "enzyme";
 import Default from ".";
 
 it("Renders <Default /> without crashing", () => {
-  expect(shallow(<Default />)).toMatchSnapshot();
+  expect(shallow(<Default>children</Default>)).toMatchSnapshot();
 });
