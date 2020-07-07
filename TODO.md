@@ -1,6 +1,6 @@
 # TODO
 
-- Fix Menu, Toggles, Tabs
+- Fix Toggles, Tabs
   - Remove `src/views/**/*.html` legacy files
 - Address all `TODO`
 - Add Strapi

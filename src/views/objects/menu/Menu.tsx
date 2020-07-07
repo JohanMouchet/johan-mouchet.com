@@ -1,25 +1,32 @@
-// @ts-nocheck
-
 import * as React from "react";
 import cx from "classnames";
 import "./Menu.scss";
-import { Button } from "views/objects";
+import { IconChevronDown } from "views/objects";
+
+type Submenu = {
+  text: string;
+  menu?: Menu;
+};
 
 type MenuItem = {
   text: string;
   url?: string;
-  button?: React.ComponentProps<typeof Button>;
-  className?: string | string[] | { [key: string]: boolean };
-  menu?: MenuItem[];
 };
+
+type Menu = (MenuItem & Submenu)[];
 
 type Props = {
-  menu: MenuItem[];
+  menu: Menu;
+  className?: string | string[] | { [key: string]: boolean };
 };
 
-const Menu: React.FC<Props> = ({ menu }) => {
-  const renderMenu = (menu: MenuItem, isSubmenu: boolean) => {
-    const classNames = cx(isSubmenu ? "o-menu__submenu" : "o-menu");
+const Menu: React.FC<Props> = ({ menu, className }) => {
+  const renderMenu = (
+    menu: Menu,
+    isSubmenu?: boolean,
+    className?: string | string[] | { [key: string]: boolean }
+  ) => {
+    const classNames = cx(isSubmenu ? "o-menu__submenu" : "o-menu", className);
 
     return !menu ? null : (
       <ul className={classNames}>
@@ -27,33 +34,30 @@ const Menu: React.FC<Props> = ({ menu }) => {
           <li
             className={cx(
               "o-menu__item",
-              item.menu && "o-menu__item--has-children",
-              item.className
+              item.menu && "o-menu__item--has-children"
             )}
-            key={item.text || item.button.children}
+            key={item.text}
           >
-            {(item.text && (
-              <a
-                className={cx(
-                  "o-menu__link",
-                  item.menu && "o-menu__submenu-heading"
-                )}
-                href={item.url}
-                tabIndex={!item.url ? 0 : undefined}
-              >
-                {item.text}
-              </a>
-            )) ||
-              (item.button && <Button {...item.button} />) ||
-              (item.menu && renderMenu(menu, true))}
-            {/* TODO: Pass children to Button */}
+            <a
+              className={cx(
+                "o-menu__link",
+                item.menu && "o-menu__submenu-heading"
+              )}
+              href={item.url}
+              tabIndex={!item.url ? 0 : undefined}
+            >
+              {item.text}
+              {item.menu && <IconChevronDown />}
+            </a>
+
+            {item.menu && renderMenu(item.menu, true)}
           </li>
         ))}
       </ul>
     );
   };
 
-  return renderMenu(menu);
+  return renderMenu(menu, false, className);
 };
 
 export default Menu;
