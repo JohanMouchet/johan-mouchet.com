@@ -11,7 +11,7 @@ const NotFound: React.FC = () => (
           <div className="cell u-align--center">
             <h1>
               Error 404
-              <i className="heading-underline heading-underline--c"></i>
+              <span className="heading-underline heading-underline--c"></span>
             </h1>
             <p>
               Woops. Looks like this page doesn't exist.
