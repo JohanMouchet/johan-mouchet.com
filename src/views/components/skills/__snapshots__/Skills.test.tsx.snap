@@ -1,3 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders <Experience /> without crashing 1`] = `""`;
+exports[`Renders <Experience /> without crashing 1`] = `
+<ul
+  className="c-skills o-list--unstyled"
+>
+  <li
+    className="c-skill"
+    key="Label"
+  >
+    <ProgressBar
+      detailsOnHover={true}
+      filling={50}
+      label="Label"
+      progress="Progress"
+      total="10"
+    />
+  </li>
+</ul>
+`;

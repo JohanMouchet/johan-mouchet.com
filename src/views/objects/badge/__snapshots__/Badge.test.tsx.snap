@@ -4,6 +4,6 @@ exports[`Renders <Badge /> without crashing 1`] = `
 <span
   className="o-badge"
 >
-  +1
+  children
 </span>
 `;

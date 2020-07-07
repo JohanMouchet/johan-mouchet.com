@@ -6,14 +6,20 @@ exports[`Renders <File /> without crashing 1`] = `
 >
   <input
     className="o-form__file-input"
-    data-multiple-caption="{count} files selected"
+    data-multiple-caption="Multiple Caption"
+    name="name"
     type="file"
   />
   <span
-    aria-label="Upload"
+    aria-label=""
     className="o-form__file-icon"
   >
     <ForwardRef(SvgCloudUpload) />
+  </span>
+  <span
+    className="o-form__file-text"
+  >
+    Choose file
   </span>
 </label>
 `;

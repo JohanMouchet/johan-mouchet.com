@@ -16,7 +16,7 @@ exports[`Renders <Footer /> without crashing 1`] = `
         <span
           className="p-footer__version"
         >
-          5.1.0
+          Version
         </span>
       </div>
       <div
@@ -27,7 +27,7 @@ exports[`Renders <Footer /> without crashing 1`] = `
         >
           2020
            © 
-          Johan MOUCHET
+          Copyright
            
           <span
             className="p-footer__copyright-separator"
@@ -49,7 +49,7 @@ exports[`Renders <Footer /> without crashing 1`] = `
         className="cell cell--0-@xs"
       >
         <a
-          aria-label="Get to the top"
+          aria-label="Top Button Title"
           className="p-footer__page-top"
           href="#page-top"
         >

@@ -2,6 +2,6 @@
 
 exports[`Renders <Loader /> without crashing 1`] = `
 <div
-  className="o-loader"
+  className="o-loader o-loader--sm"
 />
 `;

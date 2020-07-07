@@ -2,8 +2,33 @@
 
 exports[`Renders <ProgressBar /> without crashing 1`] = `
 <div
-  className="o-progress-bar"
+  className="o-progress-bar o-progress-bar--details-on-hover"
+  tabIndex={0}
 >
+  <span
+    className="o-progress-bar__labels"
+  >
+    <span
+      className="o-progress-bar__label"
+    >
+      Label
+    </span>
+    <span
+      className="o-progress-bar__details"
+    >
+      <span
+        className="o-progress-bar__progress"
+      >
+        Progress
+      </span>
+       / 
+      <span
+        className="o-progress-bar__total"
+      >
+        Total
+      </span>
+    </span>
+  </span>
   <div
     className="o-progress-bar__container"
   >
@@ -11,7 +36,7 @@ exports[`Renders <ProgressBar /> without crashing 1`] = `
       className="o-progress-bar__filling"
       style={
         Object {
-          "width": "0%",
+          "width": "50%",
         }
       }
     />

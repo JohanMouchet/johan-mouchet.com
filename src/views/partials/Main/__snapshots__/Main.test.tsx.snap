@@ -3,5 +3,7 @@
 exports[`Renders <Main /> without crashing 1`] = `
 <main
   className="p-main"
-/>
+>
+  children
+</main>
 `;

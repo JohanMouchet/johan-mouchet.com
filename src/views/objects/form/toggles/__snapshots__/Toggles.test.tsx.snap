@@ -1,31 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders <Checkbox /> without crashing 1`] = `
-<label
-  className="o-form__toggle o-form__toggle--checkbox"
+<Toggle
+  checked={true}
+  name="name"
+  type="checkbox"
+  value="value"
 >
-  <input
-    className="o-form__toggle-input"
-    onChange={[Function]}
-    type="checkbox"
-  />
-  <span
-    className="o-form__toggle-icon"
-  />
-</label>
+  children
+</Toggle>
 `;
 
 exports[`Renders <Radio /> without crashing 1`] = `
-<label
-  className="o-form__toggle o-form__toggle--radio"
+<Toggle
+  checked={true}
+  name="name"
+  type="radio"
+  value="value"
 >
-  <input
-    className="o-form__toggle-input"
-    onChange={[Function]}
-    type="radio"
-  />
-  <span
-    className="o-form__toggle-icon"
-  />
-</label>
+  children
+</Toggle>
 `;

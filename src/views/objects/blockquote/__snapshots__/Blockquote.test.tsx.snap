@@ -2,10 +2,17 @@
 
 exports[`Renders <Blockquote /> without crashing 1`] = `
 <blockquote
-  className="o-blockquote"
+  className="o-blockquote o-blockquote--pulled"
 >
   <div
     className="o-blockquote__quotes u-animation u-animation--fade-in"
-  />
+  >
+    Quote
+  </div>
+  <cite
+    className="o-blockquote__cite u-animation u-animation--fade-in"
+  >
+    Cite
+  </cite>
 </blockquote>
 `;

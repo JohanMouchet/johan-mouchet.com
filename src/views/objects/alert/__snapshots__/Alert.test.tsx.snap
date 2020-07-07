@@ -2,7 +2,7 @@
 
 exports[`Renders <Alert /> without crashing 1`] = `
 <div
-  className="o-alert o-alert--info container u-animation u-animation--fade-in-up"
+  className="o-alert o-alert--closable o-alert--info o-alert--fixed-bottom container u-animation u-animation--fade-in-up"
 >
   <div
     className="grid grid--noWrap-@xs"
@@ -15,7 +15,20 @@ exports[`Renders <Alert /> without crashing 1`] = `
     </div>
     <div
       className="o-alert__content cell cell--@xs"
-    />
+    >
+      children
+    </div>
+    <div
+      className="o-alert__close cell"
+    >
+      <button
+        aria-label="Close"
+        className="o-alert__close-button"
+        onClick={[Function]}
+      >
+        <ForwardRef(SvgX) />
+      </button>
+    </div>
   </div>
 </div>
 `;

@@ -2,6 +2,28 @@
 
 exports[`Renders <Table /> without crashing 1`] = `
 <table
-  className="o-table"
-/>
+  className="o-table o-table--align-top o-table--striped o-table--sm"
+>
+  <thead>
+    <tr>
+      <th>
+        Header
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        Cell
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>
+        Footer
+      </td>
+    </tr>
+  </tfoot>
+</table>
 `;

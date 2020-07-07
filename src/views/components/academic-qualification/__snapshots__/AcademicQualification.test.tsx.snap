@@ -1,3 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders <AcademicQualification /> without crashing 1`] = `""`;
+exports[`Renders <AcademicQualification /> without crashing 1`] = `
+<Fragment>
+  <section
+    className="c-academic-qualification"
+    key="Title"
+  >
+    <h3
+      className="c-academic-qualification__heading"
+    >
+      <a
+        className="c-academic-qualification__establishment"
+        href="#"
+      >
+        Name
+      </a>
+      , 
+      Location
+    </h3>
+    <span
+      className="c-academic-qualification__graduation-year"
+    >
+      2020
+    </span>
+    <p
+      className="c-academic-qualification__title"
+    >
+      Title
+    </p>
+  </section>
+</Fragment>
+`;

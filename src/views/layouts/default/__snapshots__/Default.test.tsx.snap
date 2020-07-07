@@ -11,6 +11,7 @@ exports[`Renders <Default /> without crashing 1`] = `
     className="l-layout__inner"
   >
     <Header />
+    children
     <Footer />
   </div>
 </div>

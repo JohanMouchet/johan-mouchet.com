@@ -1,3 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders <Menu /> without crashing 1`] = `""`;
+exports[`Renders <Menu /> without crashing 1`] = `
+<ul
+  className="o-menu"
+>
+  <li
+    className="o-menu__item o-menu__item--has-children"
+    key="Menu"
+  >
+    <a
+      className="o-menu__link o-menu__submenu-heading"
+      tabIndex={0}
+    >
+      Menu
+      <ForwardRef(SvgChevronDown) />
+    </a>
+    <ul
+      className="o-menu__submenu"
+    >
+      <li
+        className="o-menu__item"
+        key="Submenu"
+      >
+        <a
+          className="o-menu__link"
+          href="#"
+        >
+          Submenu
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+`;

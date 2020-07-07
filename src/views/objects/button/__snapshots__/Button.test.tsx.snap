@@ -1,8 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders <Button /> without crashing 1`] = `
-<button
-  className="o-button"
-  type="button"
-/>
+<a
+  className="o-button o-button--sm o-button--primary o-button--block-@sm"
+  href="#"
+>
+  children
+</a>
 `;

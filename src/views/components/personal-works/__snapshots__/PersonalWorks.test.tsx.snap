@@ -1,3 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders <PersonalWorks /> without crashing 1`] = `""`;
+exports[`Renders <PersonalWorks /> without crashing 1`] = `
+<div
+  className="c-personal-works"
+>
+  <div
+    className="grid"
+  >
+    <div
+      className="cell cell--6-@xs cell--4-@sm cell--2-@md u-vr--bottom-1-@xs u-vr--bottom-0-@md"
+      key="https://via.placeholder.com/200x200"
+    >
+      <section
+        className="c-personal-work"
+      >
+        <a
+          className="c-personal-work__overlay"
+          href="#"
+        >
+          <img
+            alt="Personal work"
+            className="c-personal-work__thumbnail"
+            loading="lazy"
+            src="https://via.placeholder.com/200x200"
+          />
+          <span
+            className="c-personal-work__source"
+          >
+            <div />
+          </span>
+        </a>
+      </section>
+    </div>
+  </div>
+</div>
+`;

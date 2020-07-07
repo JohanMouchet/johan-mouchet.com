@@ -19,7 +19,7 @@ exports[`Renders <Header /> without crashing 1`] = `
           <span
             className="p-header__text"
           >
-            Johan
+            Firstname
           </span>
         </span>
       </span>
@@ -35,7 +35,7 @@ exports[`Renders <Header /> without crashing 1`] = `
           <span
             className="p-header__text"
           >
-            Mouchet
+            Lastname
           </span>
         </span>
       </span>
@@ -43,12 +43,7 @@ exports[`Renders <Header /> without crashing 1`] = `
     <h2
       className="p-header__tagline"
     >
-      Never stop exploring,
-      <br
-        className="p-header__tagline-breaker"
-        key="1"
-      />
-       never stop creating
+      Tagline
     </h2>
   </div>
 </header>
