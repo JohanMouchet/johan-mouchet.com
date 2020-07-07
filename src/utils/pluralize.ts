@@ -1,3 +1,10 @@
+/**
+ * Pluralize a word
+ *
+ * @param word The word to pluralized
+ * @param quantity Used to determine if the word needs to be pluralized
+ */
+
 const pluralize = (word: string, quantity: number): string => {
   const vowels = ["a", "e", "i", "o", "u"];
 

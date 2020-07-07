@@ -1,6 +1,14 @@
 import { differenceInCalendarMonths } from "date-fns";
 import pluralize from "utils/pluralize";
 
+/**
+ * Returns the time duration between two dates as a string in the "X yr(s) X mo(s)" format
+ *
+ * @param startDate Must be anterior to endDate
+ * @param endDate Must be posterior to startDate
+ * @param minimumLabel Text returned if the duration is shorter than one month
+ */
+
 const duration = (
   startDate: Date,
   endDate: Date,
