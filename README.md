@@ -15,7 +15,7 @@ This website is,
 - type-checked with Typescript
 - unit and snapshot tested with Jest and Enzyme
 - using Sass and CSS post-processing
-- linted and formated with ESlint stylelint and Prettier, enforced by Husky and lint-staged
+- linted and formated with ESlint, stylelint and Prettier, enforced by Husky and lint-staged
 - using client side routing with [wouter](https://github.com/molefrog/wouter)
 - deployed, pre-rendered, with Netlify
 

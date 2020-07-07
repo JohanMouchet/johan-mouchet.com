@@ -1043,7 +1043,7 @@ const Home: React.FC = () => (
                     <li>unit and snapshot tested with Jest and Enzyme</li>
                     <li>using Sass and CSS post-processing</li>
                     <li>
-                      linted and formated with ESlint stylelint and Prettier,
+                      linted and formated with ESlint, stylelint and Prettier,
                       <br />
                       enforced by Husky and lint-staged
                     </li>
