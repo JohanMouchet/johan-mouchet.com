@@ -2,7 +2,10 @@ import * as React from "react";
 import { ProgressBar } from "views/objects";
 
 type Props = {
-  skills: React.ComponentProps<typeof ProgressBar>[];
+  skills: Pick<
+    React.ComponentProps<typeof ProgressBar>,
+    "label" | "filling" | "progress"
+  >[];
 };
 
 const Skills: React.FC<Props> = ({ skills }) =>
