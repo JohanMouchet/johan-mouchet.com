@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Tabs /> without crashing 1`] = `
+<div
+  className="o-tabs"
+>
+  <ul
+    className="o-tabs__thumbs"
+  >
+    <li
+      className="o-tabs__thumb u-animation u-animation--fade-in-up"
+      key="Thumb"
+      style={
+        Object {
+          "animationDelay": undefined,
+        }
+      }
+    >
+      <button
+        className="o-tabs__button"
+      >
+        Thumb
+      </button>
+    </li>
+  </ul>
+  <ul
+    className="o-tabs__panels"
+  >
+    <li
+      className="o-tabs__panel"
+      key="0"
+    >
+      Panel
+    </li>
+  </ul>
+</div>
+`;

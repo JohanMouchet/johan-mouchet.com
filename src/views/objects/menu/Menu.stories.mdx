@@ -15,13 +15,21 @@ import Menu from ".";
           url: text("url", "#", "Item 1"),
         },
         {
-          text: text("text", "Item 2", "Item 2"),
+          text: "Item 2",
           menu: [
             {
-              text: text("text", "Item 2 - Submenu 1", "Item 2 - Submenu 1"),
-              url: text("url", "#", "Item 2 - Submenu 1"),
+              text: "Item 2 - Submenu 1",
+              url: "#",
+            },
+            {
+              text: "Item 2 - Submenu 2",
+              url: "#",
             },
           ],
+        },
+        {
+          text: "Item 3",
+          url: "#",
         },
       ]}
     />

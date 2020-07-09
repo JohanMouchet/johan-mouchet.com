@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Details /> without crashing 1`] = `
+<details
+  className="o-details o-details--compact"
+>
+  <summary
+    className="o-details__summary"
+  >
+    Summary
+  </summary>
+  <div
+    className="o-details__panel"
+  >
+    children
+  </div>
+</details>
+`;

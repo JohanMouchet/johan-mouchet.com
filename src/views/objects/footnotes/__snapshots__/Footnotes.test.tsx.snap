@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <FootnotesNotes /> without crashing 1`] = `
+<ol
+  className="o-footnotes"
+>
+  <li
+    className="o-footnotes__note"
+    id="footnote:id-1"
+    key="id-1"
+  >
+    Note
+     
+    <a
+      aria-label="Jump back to reference"
+      className="o-footnotes__backref"
+      href="#footnote-ref:id-1"
+    >
+      <ForwardRef(SvgArrowReturnLeft) />
+    </a>
+  </li>
+</ol>
+`;
+
+exports[`Renders <FootnotesReference /> without crashing 1`] = `
+<sup>
+  <a
+    aria-label=""
+    className="o-footnote-ref"
+    href="#footnote:id-1"
+    id="footnote-ref:id-1"
+  >
+    1
+  </a>
+</sup>
+`;
