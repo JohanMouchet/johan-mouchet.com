@@ -40,7 +40,7 @@ Individual scripts are also available as `build` and `build:storybook`.
 
 ### `type-check`
 
-Runs STypeScript](https://wwwStypescriptlang.org/), as a static type checker.
+Runs [TypeScript](https://www.typescriptlang.org/), as a static type checker.
 
 ### `lint:js`
 
