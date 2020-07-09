@@ -12,7 +12,7 @@ This website is,
   - including React, webpack, Babel and more
   - published as an offline-first Progressive Web App
 - maintaining a design system with [Storybook](https://www.johan-mouchet.com/storybook/?path=/docs/about-getting-started--page)
-- type-checked with Typescript
+- type-checked with TypeScript
 - unit and snapshot tested with Jest and Enzyme
 - using Sass and CSS post-processing
 - linted and formated with ESlint, stylelint and Prettier, enforced by Husky and lint-staged
@@ -37,6 +37,10 @@ Launches the Jest test runner in the interactive watch mode.<br>
 Builds the app and Storybook for production to the respective folders: `build` and `storybook-static`.<br>
 
 Individual scripts are also available as `build` and `build:storybook`.
+
+### `type-check`
+
+Runs STypeScript](https://wwwStypescriptlang.org/), as a static type checker.
 
 ### `lint:js`
 
