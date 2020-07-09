@@ -102,7 +102,7 @@ const Home: React.FC = () => (
                   {
                     label:
                       /*html*/
-                      `JavaScript ⁠— Typescript`,
+                      `JavaScript ⁠— TypeScript`,
                     filling: 80,
                     progress:
                       /*html*/
@@ -1039,7 +1039,7 @@ const Home: React.FC = () => (
                         Storybook
                       </a>
                     </li>
-                    <li>type-checked with Typescript</li>
+                    <li>type-checked with TypeScript</li>
                     <li>unit and snapshot tested with Jest and Enzyme</li>
                     <li>using Sass and CSS post-processing</li>
                     <li>
