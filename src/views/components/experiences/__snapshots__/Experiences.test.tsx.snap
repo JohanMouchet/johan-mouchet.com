@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Experiences /> without crashing 1`] = `
+<div
+  className="c-experiences"
+>
+  <section
+    className="c-experience"
+    key="Name - Tue Jul 07 2020 19:31:58 GMT+1000 (Australian Eastern Standard Time)"
+  >
+    <h3
+      className="c-experience__heading"
+    >
+      <a
+        className="c-experience__company"
+        href="#"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Name
+      </a>
+      , 
+      Location
+       ⁠— 
+      Job Title
+    </h3>
+    <p
+      className="c-experience__subheading"
+    >
+      <span
+        className="c-experience__date"
+      >
+        Jul 2020
+         – Present
+      </span>
+      <span
+        className="c-experience__duration"
+      >
+         
+        (
+        1 mo
+        )
+      </span>
+    </p>
+    <p
+      className="c-experience__lede"
+    >
+      Lede
+    </p>
+    <Projects
+      projects={Array []}
+    />
+  </section>
+</div>
+`;

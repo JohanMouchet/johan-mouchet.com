@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Figure /> without crashing 1`] = `
+<figure
+  className="o-figure o-figure--centered"
+>
+  <img
+    alt="Alt"
+    className="o-figure__img"
+    loading="lazy"
+    src="https://via.placeholder.com/500x250"
+    title="Title"
+  />
+  <figcaption
+    className="o-figure__caption"
+  >
+    Caption
+  </figcaption>
+</figure>
+`;

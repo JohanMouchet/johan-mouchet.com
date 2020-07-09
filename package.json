@@ -1,11 +1,11 @@
 {
   "name": "johan-mouchet-react",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
     "date-fns": "^2.11.1",
-    "dompurify": "^2.0.8",
+    "dompurify": "^2.0.12",
     "html-react-parser": "^0.10.3",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
@@ -20,8 +20,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer build/static/js/*.js",
-    "flow": "flow",
-    "lint:js": "eslint src/**/*.{js,json,mdx}",
+    "type-check": "tsc --noEmit",
+    "lint:js": "eslint src/**/*.{ts,tsx,js,json,mdx}",
     "lint:css": "stylelint src/**/*.scss",
     "format": "npm run lint:js -- --fix && npm run lint:css -- --fix && prettier --write src/**/*.md",
     "storybook": "start-storybook -p 9009 -s public",
@@ -30,22 +30,6 @@
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "plugin:prettier/recommended"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "*.mdx"
-        ],
-        "extends": [
-          "plugin:mdx/recommended"
-        ]
-      }
     ]
   },
   "browserslist": {
@@ -66,10 +50,10 @@
     }
   },
   "lint-staged": {
-    "[disabled]src/**/*.test.js": [
+    "[disabled]src/**/*.test.{ts,tsx,js}": [
       "npm run test"
     ],
-    "src/**/*.{js,json,mdx}": [
+    "src/**/*.{ts,tsx,js,json,mdx}": [
       "eslint --fix"
     ],
     "src/**/*.scss": [
@@ -88,14 +72,24 @@
     "@storybook/addons": "^5.3.19",
     "@storybook/preset-create-react-app": "^3.0.0",
     "@storybook/react": "^5.3.19",
+    "@types/classnames": "^2.2.10",
+    "@types/dompurify": "^2.0.2",
+    "@types/enzyme": "^3.10.5",
+    "@types/jest": "^26.0.3",
+    "@types/node": "^14.0.14",
+    "@types/node-sass": "^4.11.1",
+    "@types/react": "^16.9.41",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
     "babel-loader": "^8.1.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
     "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jest": "^23.17.1",
     "eslint-plugin-mdx": "^1.6.9",
     "eslint-plugin-prettier": "^3.1.3",
-    "flow-bin": "^0.124.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.4",
     "prettier": "^2.0.5",
@@ -106,6 +100,7 @@
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-prettier": "^1.1.2",
-    "stylelint-scss": "^3.17.2"
+    "stylelint-scss": "^3.17.2",
+    "typescript": "^3.9.5"
   }
 }

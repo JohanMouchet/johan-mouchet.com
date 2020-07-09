@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Tooltip /> without crashing 1`] = `
+<span
+  className="o-tooltip o-tooltip--top"
+  tabIndex={0}
+>
+  children
+  <span
+    className="o-tooltip__content"
+  >
+    Content
+  </span>
+</span>
+`;

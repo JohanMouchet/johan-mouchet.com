@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Checkbox /> without crashing 1`] = `
+<Toggle
+  checked={true}
+  name="name"
+  type="checkbox"
+  value="value"
+>
+  children
+</Toggle>
+`;
+
+exports[`Renders <Radio /> without crashing 1`] = `
+<Toggle
+  checked={true}
+  name="name"
+  type="radio"
+  value="value"
+>
+  children
+</Toggle>
+`;

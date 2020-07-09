@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Fieldset /> without crashing 1`] = `
+<fieldset
+  className="o-form__fieldset"
+>
+  <legend
+    className="o-form__legend"
+  >
+    legend
+  </legend>
+  children
+</fieldset>
+`;
+
+exports[`Renders <FormGroup /> without crashing 1`] = `
+<div
+  className="o-form__group o-form__group--success"
+>
+  children
+  <span
+    className="o-form__group-detail"
+  >
+    Detail
+  </span>
+</div>
+`;
+
+exports[`Renders <Label /> without crashing 1`] = `
+<label
+  className="o-form__label o-form__label--block"
+>
+  Label
+</label>
+`;

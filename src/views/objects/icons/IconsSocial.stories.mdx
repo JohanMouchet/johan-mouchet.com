@@ -33,8 +33,11 @@ import {
       ];
       return (
         <div className="grid u-align--center">
-          {icons.map((icon) => (
-            <div className="cell cell--3-@xs cell--2-@sm cell--1-@md">
+          {icons.map((icon, index) => (
+            <div
+              className="cell cell--3-@xs cell--2-@sm cell--1-@md"
+              key={index}
+            >
               {icon}
             </div>
           ))}

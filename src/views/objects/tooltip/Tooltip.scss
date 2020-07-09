@@ -7,7 +7,7 @@
 
   position: relative;
   cursor: help;
-  text-decoration: underline wavy $s-color-info;
+  text-decoration: underline dashed $s-color-info;
   text-underline-position: under;
 
   &:hover,
@@ -108,7 +108,7 @@
     }
   }
 
-  /** Indicator **/
+  /** No Indicator **/
   &--no-indicator {
     cursor: default;
     text-decoration: none;

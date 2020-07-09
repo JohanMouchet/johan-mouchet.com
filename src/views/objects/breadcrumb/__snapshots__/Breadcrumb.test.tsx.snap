@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Breadcrumb /> without crashing 1`] = `
+<Fragment>
+  <ol
+    className="o-breadcrumb"
+  >
+    <li
+      className="o-breadcrumb__level u-animation u-animation--fade-in-up"
+      key="#"
+      style={
+        Object {
+          "animationDelay": undefined,
+        }
+      }
+    >
+      <a
+        className="o-breadcrumb__link"
+      >
+        Title
+      </a>
+    </li>
+  </ol>
+</Fragment>
+`;

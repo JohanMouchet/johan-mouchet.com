@@ -83,7 +83,7 @@ import { Table } from "views/objects";
           <tbody>
             {["xl", "lg", "1", "2", "3", "4", "5", "6", "sm", "xs"].map(
               (level) => (
-                <tr>
+                <tr key={level}>
                   <th>{level}</th>
                   <td>
                     <h1 className={`u-heading--${level} u-vr--bottom-0-@xs`}>
@@ -182,7 +182,7 @@ import { Table } from "views/objects";
                 preview: <hr style={{ marginTop: "0", marginBottom: "0" }} />,
               },
             ].map((tag) => (
-              <tr>
+              <tr key={tag.tag}>
                 <td>
                   <code className="u-select--all">{tag.tag}</code>
                 </td>
