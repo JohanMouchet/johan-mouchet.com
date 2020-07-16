@@ -360,7 +360,7 @@ const Home: React.FC = () => (
                         lede:
                           /*html*/
                           `Modernisation, development of new features and upkeep of Jetstar's international website in an Agile environment.`,
-                        thumbnailSrc: require("assets/images/views/career-experiences/jetstar.jpg"),
+                        thumbnailSrc: require("images/views/career-experiences/jetstar.jpg"),
                         achievements: [
                           /*html*/
                           `Took part in the migration of the <a href="https://www.jetstar.com/au/en/flights"><em>Flight Search</em></a> experience to React & Redux for faster and extensive results: <span class="c-project__success">&#9206;1.3%</span> conversion on the <em>Cheap Flights</em> pages.`,
@@ -417,7 +417,7 @@ const Home: React.FC = () => (
                         lede:
                           /*html*/
                           `Joint <em>RSPCA</em> campaign website to help cat owners give their pet the safest and happiest life while ensuring they have no link to loss of wildlife.`,
-                        thumbnailSrc: require("assets/images/views/career-experiences/zoos-victoria.jpg"),
+                        thumbnailSrc: require("images/views/career-experiences/zoos-victoria.jpg"),
                         achievements: [
                           /*html*/
                           `Developed a community submissible forms with client-side validation.`,
@@ -459,7 +459,7 @@ const Home: React.FC = () => (
                         lede:
                           /*html*/
                           `Web application dedicated to the sport rights holders industry. Allows editing of live or recorded streams to produce highlights shareable on social media.`,
-                        thumbnailSrc: require("assets/images/views/career-experiences/klip-studio.jpg"),
+                        thumbnailSrc: require("images/views/career-experiences/klip-studio.jpg"),
                         achievements: [
                           /*html*/
                           `Developed content tagging, filtering and sorting features.`,
@@ -500,7 +500,7 @@ const Home: React.FC = () => (
                         lede:
                           /*html*/
                           `Websites creation related to education for Pearson's launch in three new markets through Asia.`,
-                        thumbnailSrc: require("assets/images/views/career-experiences/pearson.jpg"),
+                        thumbnailSrc: require("images/views/career-experiences/pearson.jpg"),
                         achievements: [
                           /*html*/
                           `Contributed to content authoring.`,
@@ -551,7 +551,7 @@ const Home: React.FC = () => (
                         lede:
                           /*html*/
                           `Website redesign to embody the new brand direction focused on a premium and lifestyle experience. Deployed into 35 countries of the European market and translated into 27 languages.`,
-                        thumbnailSrc: require("assets/images/views/career-experiences/lexus.jpg"),
+                        thumbnailSrc: require("images/views/career-experiences/lexus.jpg"),
                         achievements: [
                           /*html*/
                           `Developed multiple responsive components following AAA accessibility standard.`,
@@ -606,7 +606,7 @@ const Home: React.FC = () => (
                         lede:
                           /*html*/
                           `Microsite creation to showcase <em>Lexus' Safety System Plus</em> technology.`,
-                        thumbnailSrc: require("assets/images/views/career-experiences/lexus-safety-system-plus.jpg"),
+                        thumbnailSrc: require("images/views/career-experiences/lexus-safety-system-plus.jpg"),
                         achievements: [
                           /*html*/
                           `Integrated fullPage.js for a single-page design.`,
@@ -641,7 +641,7 @@ const Home: React.FC = () => (
                         lede:
                           /*html*/
                           `Delivery within a short turnaround of a global eCommerce website for a manufacturer of consumer marine electronics.`,
-                        thumbnailSrc: require("assets/images/views/career-experiences/lowrance.jpg"),
+                        thumbnailSrc: require("images/views/career-experiences/lowrance.jpg"),
                         achievements: [
                           /*html*/
                           `Developed multiple responsive components following AAA accessibility standard.`,
@@ -702,7 +702,7 @@ const Home: React.FC = () => (
                         lede:
                           /*html*/
                           `Redesign, development and marketing strategy aimed at increasing acquisition and conversion rate.`,
-                        thumbnailSrc: require("assets/images/views/career-experiences/survie-mer-formation.jpg"),
+                        thumbnailSrc: require("images/views/career-experiences/survie-mer-formation.jpg"),
                         achievements: [
                           /*html*/
                           `Designed a Growth Hacking strategy following the AARRR model: <span class="c-project__success">&#9206;12.6%</span> conversion.`,
@@ -778,7 +778,7 @@ const Home: React.FC = () => (
                         lede:
                           /*html*/
                           `Analysis website of business banking providers, supported by the <em>HR Treasury</em>.`,
-                        thumbnailSrc: require("assets/images/views/career-experiences/business-banking-insight.jpg"),
+                        thumbnailSrc: require("images/views/career-experiences/business-banking-insight.jpg"),
                         achievements: [
                           /*html*/
                           `Developed tables with filtering and sorting capabilities.`,
@@ -811,7 +811,7 @@ const Home: React.FC = () => (
                         lede:
                           /*html*/
                           `Crowdsourced event listing microsite for the <em>Prince's Trust</em> 40th anniversary celebration.`,
-                        thumbnailSrc: require("assets/images/views/career-experiences/princes-trust.jpg"),
+                        thumbnailSrc: require("images/views/career-experiences/princes-trust.jpg"),
                         achievements: [
                           /*html*/
                           `Developed multiple UI components.`,
@@ -846,7 +846,7 @@ const Home: React.FC = () => (
                         lede:
                           /*html*/
                           `Mobile web browser game based on rope skipping.`,
-                        thumbnailSrc: require("assets/images/views/career-experiences/sport-relief-skipathon.jpg"),
+                        thumbnailSrc: require("images/views/career-experiences/sport-relief-skipathon.jpg"),
                         achievements: [
                           /*html*/
                           `Created  canvas and CSS animations: <a href="https://codepen.io/johanmouchet/pen/OMgwMg">PoC</a>`,
@@ -902,7 +902,7 @@ const Home: React.FC = () => (
                         url:
                           /*html*/
                           `http://www.weholite.co.uk/`,
-                        thumbnailSrc: require("assets/images/views/career-experiences/weholite.jpg"),
+                        thumbnailSrc: require("images/views/career-experiences/weholite.jpg"),
                       },
                       {
                         name:
@@ -911,7 +911,7 @@ const Home: React.FC = () => (
                         url:
                           /*html*/
                           `http://www.hiremech.co.uk/`,
-                        thumbnailSrc: require("assets/images/views/career-experiences/hiremech.jpg"),
+                        thumbnailSrc: require("images/views/career-experiences/hiremech.jpg"),
                       },
                       {
                         name:
@@ -920,7 +920,7 @@ const Home: React.FC = () => (
                         url:
                           /*html*/
                           `http://globalforktrucks.com/`,
-                        thumbnailSrc: require("assets/images/views/career-experiences/global-materials-handling.jpg"),
+                        thumbnailSrc: require("images/views/career-experiences/global-materials-handling.jpg"),
                       },
                       {
                         name:
@@ -929,7 +929,7 @@ const Home: React.FC = () => (
                         url:
                           /*html*/
                           `http://www.proton-motor.com/`,
-                        thumbnailSrc: require("assets/images/views/career-experiences/proton-motor.jpg"),
+                        thumbnailSrc: require("images/views/career-experiences/proton-motor.jpg"),
                       },
                     ],
                   },
@@ -997,7 +997,7 @@ const Home: React.FC = () => (
                     sourceIcon: <IconUnsplash />,
                   },
                   {
-                    thumbnailSrc: require("assets/images/views/personal-works/south-cost-of-england.jpg"),
+                    thumbnailSrc: require("images/views/personal-works/south-cost-of-england.jpg"),
                     url:
                       /*html*/
                       `https://youtu.be/NAsS1T_V8-k`,
@@ -1046,10 +1046,6 @@ const Home: React.FC = () => (
                       linted and formated with ESlint, stylelint and Prettier,
                       <br />
                       enforced by Husky and lint-staged
-                    </li>
-                    <li>
-                      using client side routing with{" "}
-                      <a href="https://github.com/molefrog/wouter">wouter</a>
                     </li>
                     <li>deployed, pre-rendered, with Netlify</li>
                   </List>

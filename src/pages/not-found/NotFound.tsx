@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "wouter";
+import { Link } from "gatsby";
 import { Default } from "views/layouts";
 import { Main } from "views/partials";
 
@@ -16,7 +16,7 @@ const NotFound: React.FC = () => (
             <p>
               Woops. Looks like this page doesn't exist.
               <br />
-              Please get back to the <Link href="/">homepage</Link>.<br />
+              Please get back to the <Link to="/">homepage</Link>.<br />
               <code>'[⁰﹏⁰]'</code>
             </p>
           </div>

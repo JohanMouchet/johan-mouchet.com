@@ -1,5 +1,5 @@
-import profileImageX1 from "assets/images/views/johan-mouchet.jpg";
-import profileImageX2 from "assets/images/views/johan-mouchet@x2.jpg";
+import profileImageX1 from "images/views/johan-mouchet.jpg";
+import profileImageX2 from "images/views/johan-mouchet@x2.jpg";
 
 export const PROFILE = {
   firstName: "Johan",

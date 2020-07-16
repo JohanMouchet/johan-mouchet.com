@@ -1,4 +1,4 @@
-import settings from "assets/styles/settings/_settings.scss";
+import settings from "styles/settings/_settings.scss";
 
 export const BACKGROUNDS = {
   DOTS: settings.s_backgrounds_dots,

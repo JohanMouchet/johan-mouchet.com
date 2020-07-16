@@ -86,5 +86,5 @@
     "selector-no-vendor-prefix": true,
     "value-no-vendor-prefix": true
   },
-  "ignoreFiles": "src/assets/styles/vendors/*"
+  "ignoreFiles": "src/styles/vendors/*"
 }

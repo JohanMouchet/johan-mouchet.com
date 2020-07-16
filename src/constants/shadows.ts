@@ -1,4 +1,4 @@
-import settings from "assets/styles/settings/_settings.scss";
+import settings from "styles/settings/_settings.scss";
 
 export const SHADOWS = {
   SM: settings.s_shadows_sm,

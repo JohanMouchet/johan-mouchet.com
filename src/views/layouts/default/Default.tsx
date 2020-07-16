@@ -7,7 +7,7 @@ type Props = {
 };
 
 const Default: React.FC<Props> = ({ children }) => (
-  <div className="l-layout">
+  <div className="l-layout" id="page-top">
     <div className="l-layout__background"></div>
     <div className="l-layout__inner">
       <Header />
