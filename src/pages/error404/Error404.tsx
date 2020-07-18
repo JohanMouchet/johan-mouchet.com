@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { Default } from "views/layouts";
 import { Main } from "views/partials";
 
-const NotFound: React.FC = () => (
+const Error404: React.FC = () => (
   <Default>
     <Main>
       <div className="container u-full--height">
@@ -26,4 +26,4 @@ const NotFound: React.FC = () => (
   </Default>
 );
 
-export default NotFound;
+export default Error404;
