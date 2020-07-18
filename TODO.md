@@ -2,7 +2,7 @@
 
 ## Gatsby Migration
 
-- Linting / TS at dev time
+- TS at dev time
 - Check:
   - Jest: https://gatsby.dev/unit-testing
   - StoryBook: https://www.gatsbyjs.org/docs/visual-testing-with-storybook/

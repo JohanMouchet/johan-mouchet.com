@@ -45,7 +45,11 @@ const Table: React.FC<Props> = ({
     className
   );
 
-  return <table className={classNames}>{children}</table>;
+  return (
+    <table className={classNames} {...attributes}>
+      {children}
+    </table>
+  );
 };
 
 export default Table;

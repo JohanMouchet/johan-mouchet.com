@@ -30,8 +30,21 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-eslint`,
+      options: {
+        test: /\.ts$|\.tsx$|\.js$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: [`develop`],
+        options: {
+          fix: true,
+          emitWarning: true,
+          failOnError: true,
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

@@ -38,7 +38,11 @@ const List: React.FC<Props> = ({
 
   const Tag = as;
 
-  return <Tag className={classNames}>{children}</Tag>;
+  return (
+    <Tag className={classNames} {...attributes}>
+      {children}
+    </Tag>
+  );
 };
 
 export default List;
