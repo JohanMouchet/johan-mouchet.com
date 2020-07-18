@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-typescript-checker`,
     `gatsby-plugin-svgr`,
     `gatsby-plugin-react-helmet`,
     {
