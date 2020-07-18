@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Home } from "./home";
 
-const Index: React.FC = () => <Home />;
+const HomePage: React.FC = () => <Home />;
 
-export default Index;
+export default HomePage;
