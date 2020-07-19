@@ -2,11 +2,9 @@
 
 ## Gatsby Migration
 
-- TS at dev time
 - Check:
   - Jest: https://gatsby.dev/unit-testing
   - StoryBook: https://www.gatsbyjs.org/docs/visual-testing-with-storybook/
-  - Typescript
 - Custom Favicon
 - Offline https://gatsby.dev/offline
 - gatsby-image
