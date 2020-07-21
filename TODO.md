@@ -3,20 +3,20 @@
 ## Gatsby Migration
 
 - Check:
-  - Jest: https://gatsby.dev/unit-testing
   - StoryBook: https://www.gatsbyjs.org/docs/visual-testing-with-storybook/
-- Custom Favicon
-- Offline https://gatsby.dev/offline
-- gatsby-image
-- gatsby-plugin-react-helmet
-- NotFound route
-- README doc
+  - Jest: https://gatsby.dev/unit-testing
+  - Pre-commit hooks
+- Investigate:
+  - offline https://gatsby.dev/offline
+  - gatsby-image
+  - gatsby-plugin-react-helmet
+- Use custom SVG Favicon instead of generated jpg
+- Update Home#about-this-website and README to reflect the new architecture
 
 ## Other
 
 - Fix Toggles, Tabs
 - Address all `TODO`
-- Add Strapi
 
 # Consider
 

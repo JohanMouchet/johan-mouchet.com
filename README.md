@@ -1,5 +1,8 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7fdfd6f4-e67a-4460-b69d-98bd88e189f8/deploy-status)](https://app.netlify.com/sites/johan-mouchet/deploys) ![Twitter Follow](https://img.shields.io/twitter/follow/JohanMouchet?style=social)
 
+⚠ This branch is an attempt at migrating from Create React App to Gatsby.
+Unfortunately, as of today, there is no adequate solution to integrate Gatsby with Storybook.
+
 # [johan-mouchet.com](https://www.johan-mouchet.com/)
 
 Johan Mouchet's portfolio, open sourced on [GitHub](https://github.com/JohanMouchet/johan-mouchet.com).
