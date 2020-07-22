@@ -11,6 +11,8 @@
   border-radius: 50%;
   animation: loader-spin-animation 1s infinite ease;
 
+  @include t-wekkit-hdpi-small-dimension;
+
   /** Small **/
   &--sm {
     height: t-vertical-rhythm(0.75, "rem");

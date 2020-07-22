@@ -3,6 +3,8 @@
   "version": "5.2.0",
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.0.2",
+    "apollo-link-prismic": "^1.0.7",
     "classnames": "^2.2.6",
     "date-fns": "^2.11.1",
     "dompurify": "^2.0.12",
