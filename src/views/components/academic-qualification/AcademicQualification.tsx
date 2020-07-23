@@ -2,7 +2,7 @@ import * as React from "react";
 import "./AcademicQualification.scss";
 
 type Props = {
-  qualifications: Array<{
+  degrees: Array<{
     establishment: {
       name: string;
       url: string;
@@ -13,10 +13,10 @@ type Props = {
   }>;
 };
 
-const AcademicQualification: React.FC<Props> = ({ qualifications }) =>
-  !qualifications ? null : (
+const AcademicQualification: React.FC<Props> = ({ degrees }) =>
+  !degrees ? null : (
     <>
-      {qualifications.map((qualification) => (
+      {degrees.map((qualification) => (
         <section className="c-academic-qualification" key={qualification.title}>
           <h3 className="c-academic-qualification__heading">
             <a

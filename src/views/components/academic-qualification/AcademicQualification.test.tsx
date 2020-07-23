@@ -6,7 +6,7 @@ it("Renders <AcademicQualification /> without crashing", () => {
   expect(
     shallow(
       <AcademicQualification
-        qualifications={[
+        degrees={[
           {
             establishment: {
               name: "Name",
