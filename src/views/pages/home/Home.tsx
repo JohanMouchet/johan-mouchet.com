@@ -31,13 +31,16 @@ import "./Home.scss";
 const Home: React.FC = () => {
   const query = gql`
     {
-      _allDocuments {
-        edges {
-          node {
-            _meta {
-              uid
-            }
-          }
+      skills(uid: "skills", lang: "en-au") {
+        skills {
+          label
+          filling
+          progress
+        }
+      }
+      home(uid: "home", lang: "en-au") {
+        _meta {
+          id
         }
       }
     }
@@ -65,7 +68,7 @@ const Home: React.FC = () => {
             {/* GQL start */}
             DATA:
             {/* eslint-disable-next-line */}
-            {data._allDocuments.edges.map((item: any) => item.node._meta.uid)}
+            {data.skills.skills.map((skill: any) => JSON.stringify(skill) )}
             {/* GQL end */}
             <div className="container container--noGutter-lgGrid">
               <div className="grid grid--lgGutter-@xs">
