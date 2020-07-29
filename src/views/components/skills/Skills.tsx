@@ -9,7 +9,7 @@ type Props = {
 };
 
 const Skills: React.FC<Props> = ({ skills }) =>
-  !skills ? null : (
+  !skills?.length ? null : (
     <ul className="c-skills o-list--unstyled">
       {skills.map((skill) => (
         <li className="c-skill" key={skill.label}>

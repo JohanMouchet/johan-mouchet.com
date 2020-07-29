@@ -14,7 +14,7 @@ const Breadcrumb: React.FC<Props> = ({ levels, className }) => {
   const classNames = cx("o-breadcrumb", className);
   const lastLevel = levels?.length - 1;
 
-  return !levels ? null : (
+  return !levels?.length ? null : (
     <>
       <ol className={classNames}>
         {levels.map((level, index) => (

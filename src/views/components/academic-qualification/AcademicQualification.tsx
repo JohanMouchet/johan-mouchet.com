@@ -14,7 +14,7 @@ type Props = {
 };
 
 const AcademicQualification: React.FC<Props> = ({ qualifications }) =>
-  !qualifications ? null : (
+  !qualifications?.length ? null : (
     <>
       {qualifications.map((qualification) => (
         <section className="c-academic-qualification" key={qualification.title}>

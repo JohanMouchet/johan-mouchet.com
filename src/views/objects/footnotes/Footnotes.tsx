@@ -40,7 +40,7 @@ type NotesProps = {
 const FootnotesNotes: React.FC<NotesProps> = ({ notes, className }) => {
   const classNames = cx("o-footnotes", className);
 
-  return !notes ? null : (
+  return !notes?.length ? null : (
     <ol className={classNames}>
       {notes.map((note) => (
         <li

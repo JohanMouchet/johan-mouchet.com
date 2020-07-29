@@ -10,7 +10,7 @@ type Props = {
 };
 
 const PersonalWorks: React.FC<Props> = ({ works }) =>
-  !works ? null : (
+  !works?.length ? null : (
     <div className="c-personal-works">
       <div className="grid">
         {works.map((work) => (
