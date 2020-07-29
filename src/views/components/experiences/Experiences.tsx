@@ -23,7 +23,7 @@ type Props = {
 };
 
 const Experiences: React.FC<Props> = ({ experiences }) =>
-  !experiences ? null : (
+  !experiences?.length ? null : (
     <div className="c-experiences">
       {experiences.map((experience) => (
         <section
