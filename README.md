@@ -21,14 +21,14 @@ This website is,
 
 ## npm Scripts
 
-In the project directory, you can run:
+In the project directory, you can `npm run`:
 
-- `npm start` Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-- `npm test` Launches the Jest test runner in the interactive watch mode. 
-- `npm run build:all` Builds the app and Storybook for production to the respective folders: `build` and `storybook-static`. 
+- `start`: Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- `test`: Launches the Jest test runner in the interactive watch mode. 
+- `build:all`: Builds the app and Storybook for production to the respective folders: `build` and `storybook-static`. 
 Individual scripts are also available as `build` and `build:storybook`.
-- `type-check` Runs [TypeScript](https://www.typescriptlang.org/), as a static type checker.
-- `lint:js` Runs the [ESLint](https://eslint.org/) linter, _a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs_.
-- `lint:css` Runs the [stylelint](https://stylelint.io/) linter, _a mighty, modern linter that helps you avoid errors and enforce conventions in your styles_.
-- `format` Runs ESLint and stylelint with the `--fix` option, as well as [Prettier](https://prettier.io/) with the `--write` option to automatically fix problems.
-- `storybook` Runs [Storybook](https://storybook.js.org/), _an open source tool for developing UI components in isolation_. Open [http://localhost:9009/](http://localhost:9009/) to view it in the browser.
+- `type-check`: Runs [TypeScript](https://www.typescriptlang.org/), as a static type checker.
+- `lint:js`: Runs the [ESLint](https://eslint.org/) linter, _a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs_.
+- `lint:css`: Runs the [stylelint](https://stylelint.io/) linter, _a mighty, modern linter that helps you avoid errors and enforce conventions in your styles_.
+- `format`: Runs ESLint and stylelint with the `--fix` option, as well as [Prettier](https://prettier.io/) with the `--write` option to automatically fix problems.
+- `storybook`: Runs [Storybook](https://storybook.js.org/), _an open source tool for developing UI components in isolation_. Open [http://localhost:9009/](http://localhost:9009/) to view it in the browser.
