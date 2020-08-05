@@ -1,4 +1,4 @@
-![Netlify](https://img.shields.io/netlify/7fdfd6f4-e67a-4460-b69d-98bd88e189f8?style=flat-square) ![Twitter Follow](https://img.shields.io/twitter/follow/JohanMouchet?color=%231DA1F2&style=flat-square)
+![Website](https://img.shields.io/website?style=flat-square&url=http%3A%2F%2Fjohan-mouchet.com) ![Netlify](https://img.shields.io/netlify/7fdfd6f4-e67a-4460-b69d-98bd88e189f8?style=flat-square) ![Twitter Follow](https://img.shields.io/twitter/follow/JohanMouchet?color=%231DA1F2&style=flat-square)
 
 # [johan-mouchet.com](https://www.johan-mouchet.com/)
 
