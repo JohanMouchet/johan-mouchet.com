@@ -2,9 +2,9 @@
 
 - Layout should be full height
 - Import GFonts to Storybook
+- Add Prismic
 - Fix Toggles, Tabs
 - Address all `TODO`
-- Add Strapi
 
 # Consider
 
