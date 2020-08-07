@@ -3,7 +3,6 @@ import cx from "classnames";
 import "./Tooltip.scss";
 
 type Props = {
-  as?: keyof JSX.IntrinsicElements;
   content: string;
   position?: "top" | "right" | "bottom" | "left";
   indicator?: boolean;
@@ -14,7 +13,6 @@ type Props = {
 };
 
 const Tooltip: React.FC<Props> = ({
-  as = "span",
   content,
   position = "top",
   indicator = true,
@@ -31,13 +29,11 @@ const Tooltip: React.FC<Props> = ({
     className
   );
 
-  const Tag = as;
-
   return (
-    <Tag className={classNames} tabIndex={0} {...attributes}>
+    <span className={classNames} tabIndex={0} {...attributes}>
       {children}
       <span className="o-tooltip__content">{content}</span>
-    </Tag>
+    </span>
   );
 };
 
