@@ -1,9 +1,8 @@
 # TODO
 
+- Layout should be full height
+- Import GFonts to Storybook
 - Add Prismic
-- Add a Storybook page for sizes
-  - Rename section SETTINGS / TOOLS
-  - `t-vertical-rhythm(1)`
 - Fix Toggles, Tabs
 - Address all `TODO`
 
