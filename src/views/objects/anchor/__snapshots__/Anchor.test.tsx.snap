@@ -1,16 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders <Anchor /> without crashing 1`] = `
-<h2
-  className="o-anchor"
-  id="id"
->
-  <a
-    className="o-anchor__link"
-    href="#id"
-  >
-    #
-  </a>
-  children
+<h2>
+  <Anchor
+    id="id"
+    marker="#"
+  />
+  Text
 </h2>
 `;
