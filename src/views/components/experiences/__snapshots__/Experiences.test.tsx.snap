@@ -31,7 +31,7 @@ exports[`Renders <Experiences /> without crashing 1`] = `
         className="c-experience__date"
       >
         Jan 2018
-         –  Jan
+         – Jan
          2019
       </span>
       <span
