@@ -84,7 +84,7 @@ const Projects: React.FC<Props> = ({ projects }) => {
     </>
   );
 
-  return !projects ? null : (
+  return !projects?.length ? null : (
     <div className="c-projects">
       <div className="grid">
         {projects.map((project) =>

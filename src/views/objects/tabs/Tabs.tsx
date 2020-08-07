@@ -13,7 +13,7 @@ type Props = {
 const Tabs: React.FC<Props> = ({ tabs, className }) => {
   const classNames = cx("o-tabs", className);
 
-  return !tabs ? null : (
+  return !tabs?.length ? null : (
     <div className={classNames}>
       <ul className="o-tabs__thumbs">
         {tabs.map((tab, index) => (

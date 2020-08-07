@@ -28,7 +28,7 @@ const Menu: React.FC<Props> = ({ menu, className }) => {
   ) => {
     const classNames = cx(isSubmenu ? "o-menu__submenu" : "o-menu", className);
 
-    return !menu ? null : (
+    return !menu?.length ? null : (
       <ul className={classNames}>
         {menu.map((item) => (
           <li

@@ -56,7 +56,7 @@ const Select: React.FC<SelectProps> = ({
 }) => {
   const classNames = cx("o-form__field", "o-form__field--select", className);
 
-  return !options ? null : (
+  return !options?.length ? null : (
     <select id={id} name={name} className={classNames} {...attributes}>
       {options.map((option) => (
         <option
