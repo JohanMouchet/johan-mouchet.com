@@ -1,6 +1,11 @@
 @import "assets/styles/settings/_settings";
+@import "assets/styles/tools/_tools";
 
 .c-academic-qualification {
+  &:not(:last-child) {
+    margin-bottom: t-vertical-rhythm(1);
+  }
+
   &__heading {
     margin-bottom: 0;
   }

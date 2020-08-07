@@ -15,7 +15,7 @@ type Props = {
 
 const AcademicQualification: React.FC<Props> = ({ qualifications }) =>
   !qualifications?.length ? null : (
-    <>
+    <div className="c-academic-qualifications">
       {qualifications.map((qualification) => (
         <section className="c-academic-qualification" key={qualification.title}>
           <h3 className="c-academic-qualification__heading">
@@ -25,17 +25,17 @@ const AcademicQualification: React.FC<Props> = ({ qualifications }) =>
             >
               {qualification.establishment.name}
             </a>
-            , {qualification.location}
+            , {qualification.location} ⁠—{" "}
+            <span className="c-academic-qualification__title">
+              {qualification.title}
+            </span>
           </h3>
           <span className="c-academic-qualification__graduation-year">
             {qualification.graduationYear}
           </span>
-          <p className="c-academic-qualification__title">
-            {qualification.title}
-          </p>
         </section>
       ))}
-    </>
+    </div>
   );
 
 export default AcademicQualification;

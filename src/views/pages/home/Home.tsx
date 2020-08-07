@@ -165,6 +165,53 @@ const Home: React.FC = () => (
             <hr />
 
             <Article>
+              <Anchor as="h2" id="academic-qualifications">
+                Academic Qualifications
+              </Anchor>
+
+              <AcademicQualification
+                qualifications={[
+                  {
+                    establishment: {
+                      name:
+                        /*html*/
+                        `SUPINFO`,
+                      url:
+                        /*html*/
+                        `https://www.supinfo.com/`,
+                    },
+                    location:
+                      /*html*/
+                      `London`,
+                    graduationYear: 2015,
+                    title:
+                      /*html*/
+                      `Master degree in Computer Science`,
+                  },
+                  {
+                    establishment: {
+                      name:
+                        /*html*/
+                        `SUPINFO`,
+                      url:
+                        /*html*/
+                        `https://www.supinfo.com/`,
+                    },
+                    location:
+                      /*html*/
+                      `Marseille`,
+                    graduationYear: 2013,
+                    title:
+                      /*html*/
+                      `Bachelor degree in Computer Science`,
+                  },
+                ]}
+              />
+            </Article>
+
+            <hr />
+
+            <Article>
               <Anchor as="h2" id="languages">
                 Languages
               </Anchor>
@@ -177,60 +224,12 @@ const Home: React.FC = () => (
             <hr />
 
             <Article>
-              <Anchor as="h2" id="academic-qualifications">
-                Academic Qualifications
-              </Anchor>
-
-              <AcademicQualification
-                qualifications={[
-                  {
-                    establishment: {
-                      name:
-                        /*html*/
-                        `SUPINFO International University`,
-                      url:
-                        /*html*/
-                        `https://www.supinfo.com/`,
-                    },
-                    location:
-                      /*html*/
-                      `London`,
-                    graduationYear: 2015,
-                    title:
-                      /*html*/
-                      `Master degree in IT and computer science`,
-                  },
-                  {
-                    establishment: {
-                      name:
-                        /*html*/
-                        `SUPINFO International University`,
-                      url:
-                        /*html*/
-                        `https://www.supinfo.com/`,
-                    },
-                    location:
-                      /*html*/
-                      `Marseille`,
-                    graduationYear: 2013,
-                    title:
-                      /*html*/
-                      `Bachelor degree in IT and computer science`,
-                  },
-                ]}
-              />
-            </Article>
-
-            <hr />
-
-            <Article>
               <Anchor as="h2" id="interests">
                 Interests
               </Anchor>
               <p>
-                Web &amp; Graphic design, Development, Photography, Video
-                Editing, Drawing, Travelling, Cycling, Running, Fitness,
-                Volunteer{" "}
+                Developing, Designing, Photography, Travelling, Cycling,
+                Running, Fitness, Cooking, Volunteering{" "}
                 <a href="https://youngcodersau.com/">@YoungCodersAU</a>
               </p>
             </Article>
@@ -332,6 +331,27 @@ const Home: React.FC = () => (
                     company: {
                       url:
                         /*html*/
+                        `https://theworkingparty.com.au/`,
+                      name:
+                        /*html*/
+                        `The Working Party`,
+                    },
+                    location:
+                      /*html*/
+                      `Melbourne`,
+                    jobTitle:
+                      /*html*/
+                      `Senior Front-end developer`,
+                    startDate: new Date("2020-07-27"),
+                    endDate: new Date(),
+                    lede:
+                      /*html*/
+                      `Independent agency that design and build best-in-class eCommerce websites on Shopify Plus for retailers with complex technical requirements, who value brand and seek rapid growth through innovation.`,
+                  },
+                  {
+                    company: {
+                      url:
+                        /*html*/
                         `https://isobar.com/au/en/`,
                       name:
                         /*html*/
@@ -344,7 +364,7 @@ const Home: React.FC = () => (
                       /*html*/
                       `Front-end developer`,
                     startDate: new Date("2017-11-11"),
-                    endDate: new Date("2020-04-27"),
+                    endDate: new Date("2020-08-24"),
                     lede:
                       /*html*/
                       `Global agency that delivers digital transformation powered by creativity, who believe in <em>Ideas Without Limits</em>, pushing the boundaries of technology and creativity.`,
@@ -365,7 +385,7 @@ const Home: React.FC = () => (
                           /*html*/
                           `Took part in the migration of the <a href="https://www.jetstar.com/au/en/flights"><em>Flight Search</em></a> experience to React & Redux for faster and extensive results: <span class="c-project__success">&#9206;1.3%</span> conversion on the <em>Cheap Flights</em> pages.`,
                           /*html*/
-                          `Contributed to the creation of a landing page to promote Jetstar <a href="https://www.jetstar.com/au/en/creditcards"><em>Credit Cards</em></a>: surpassed the conversion target by <span class="c-project__success">230%</span> in the first month of launch.`,
+                          `Contributed to creating a landing page to promote Jetstar <a href="https://www.jetstar.com/au/en/creditcards"><em>Credit Cards</em></a>: surpassed the conversion target by <span class="c-project__success">230%</span> in the first month of launch.`,
                           /*html*/
                           `Integrated a responsive utility-based Sass grid I built and open-sourced: <a href="https://github.com/JohanMouchet/fluxgrid">Fluxgrid</a>.`,
                           /*html*/
@@ -556,7 +576,7 @@ const Home: React.FC = () => (
                           /*html*/
                           `Developed multiple responsive components following AAA accessibility standard.`,
                           /*html*/
-                          `Contributed to develop a <a href="https://www.lexus.co.uk/forms/find-a-centre">module</a> that uses the browser Geolocation and Google Maps' APIs to locate the nearest Lexus dealer.`,
+                          `Contributed to developing a <a href="https://www.lexus.co.uk/forms/find-a-centre">module</a> that uses the browser Geolocation and Google Maps' APIs to locate the nearest Lexus dealer.`,
                           /*html*/
                           `Built a hero carousel with background video using Slick.`,
                           /*html*/
