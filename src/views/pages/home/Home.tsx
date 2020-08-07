@@ -170,7 +170,7 @@ const Home: React.FC = () => (
               </Anchor>
 
               <AcademicQualification
-                qualifications={[
+                degrees={[
                   {
                     establishment: {
                       name:
