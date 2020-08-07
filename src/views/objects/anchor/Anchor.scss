@@ -1,25 +1,14 @@
 .o-anchor {
-  position: relative;
+  position: absolute;
+  right: 100%;
+  padding-right: 0.25em;
+  font-weight: 400;
+  font-style: normal;
+  opacity: 0;
 
-  /** Link **/
-  &__link {
-    position: absolute;
-    right: 100%;
-    padding-right: 0.25em;
-    font-weight: 400;
-    font-style: normal;
-    opacity: 0;
-
-    &:focus {
-      opacity: 1;
-      text-decoration: none;
-    }
-  }
-
-  &:hover & {
-    &__link {
-      opacity: 1;
-      text-decoration: none;
-    }
+  *:hover > &,
+  &:focus {
+    opacity: 1;
+    text-decoration: none;
   }
 }

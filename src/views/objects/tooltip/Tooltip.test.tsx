@@ -5,13 +5,7 @@ import Tooltip from ".";
 it("Renders <Tooltip /> without crashing", () => {
   expect(
     shallow(
-      <Tooltip
-        as="span"
-        content="Content"
-        position="top"
-        indicator
-        multiLines={false}
-      >
+      <Tooltip content="Content" position="top" indicator multiLines={false}>
         children
       </Tooltip>
     )
