@@ -1,5 +1,7 @@
 # TODO
 
+- Layout should be full height
+- Import GFonts to Storybook
 - Fix Toggles, Tabs
 - Address all `TODO`
 - Add Strapi
