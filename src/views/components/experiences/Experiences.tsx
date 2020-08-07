@@ -54,7 +54,7 @@ const Experiences: React.FC<Props> = ({ experiences }) =>
                       experience.startDate.getFullYear() ||
                       experience.endDate.getMonth() >
                         experience.startDate.getMonth()) &&
-                      ` –  ${experience.endDate.toLocaleString("en-GB", {
+                      ` – ${experience.endDate.toLocaleString("en-GB", {
                         month: "short",
                       })}`,
                     experience.endDate.getFullYear() >

@@ -2,7 +2,7 @@ import * as React from "react";
 import "./AcademicQualification.scss";
 
 type Props = {
-  degrees: Array<{
+  qualifications: Array<{
     establishment: {
       name: string;
       url: string;
@@ -13,27 +13,29 @@ type Props = {
   }>;
 };
 
-const AcademicQualification: React.FC<Props> = ({ degrees }) =>
-  !degrees?.length ? null : (
-    <>
-      {degrees.map((degree) => (
-        <section className="c-academic-qualification" key={degree.title}>
+const AcademicQualification: React.FC<Props> = ({ qualifications }) =>
+  !qualifications?.length ? null : (
+    <div className="c-academic-qualifications">
+      {qualifications.map((qualification) => (
+        <section className="c-academic-qualification" key={qualification.title}>
           <h3 className="c-academic-qualification__heading">
             <a
               className="c-academic-qualification__establishment"
-              href={degree.establishment.url}
+              href={qualification.establishment.url}
             >
-              {degree.establishment.name}
+              {qualification.establishment.name}
             </a>
-            , {degree.location}
+            , {qualification.location} ⁠—{" "}
+            <span className="c-academic-qualification__title">
+              {qualification.title}
+            </span>
           </h3>
           <span className="c-academic-qualification__graduation-year">
-            {degree.graduationYear}
+            {qualification.graduationYear}
           </span>
-          <p className="c-academic-qualification__title">{degree.title}</p>
         </section>
       ))}
-    </>
+    </div>
   );
 
 export default AcademicQualification;
