@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders <AcademicQualification /> without crashing 1`] = `
-<Fragment>
+<div
+  className="c-academic-qualifications"
+>
   <section
     className="c-academic-qualification"
     key="Title"
@@ -17,17 +19,19 @@ exports[`Renders <AcademicQualification /> without crashing 1`] = `
       </a>
       , 
       Location
+       ⁠—
+       
+      <span
+        className="c-academic-qualification__title"
+      >
+        Title
+      </span>
     </h3>
     <span
       className="c-academic-qualification__graduation-year"
     >
       2020
     </span>
-    <p
-      className="c-academic-qualification__title"
-    >
-      Title
-    </p>
   </section>
-</Fragment>
+</div>
 `;
