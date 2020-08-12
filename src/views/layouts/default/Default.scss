@@ -3,12 +3,10 @@
 
 .l-layout {
   min-height: 100vh;
-  min-height: stretch;
   max-width: 1920px;
   display: flex;
   margin: 0 auto;
   padding: t-vertical-rhythm(0.5) t-vertical-rhythm(0.25);
-  box-sizing: content-box;
 
   @media (min-width: map-get($s-breakpoints, sm)) {
     padding: t-vertical-rhythm(0.5) t-vertical-rhythm(1);

@@ -1,6 +1,5 @@
 # TODO
 
-- Layout should be full height
 - Add a Storybook page for sizes
   - Rename section SETTINGS / TOOLS
   - `t-vertical-rhythm(1)`
