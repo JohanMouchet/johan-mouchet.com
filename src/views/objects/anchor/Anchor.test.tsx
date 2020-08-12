@@ -5,10 +5,9 @@ import Anchor from ".";
 it("Renders <Anchor /> without crashing", () => {
   expect(
     shallow(
-      <h2>
-        <Anchor id="id" marker="#" />
-        Text
-      </h2>
+      <Anchor as="h2" id="id" marker="#">
+        children
+      </Anchor>
     )
   ).toMatchSnapshot();
 });
