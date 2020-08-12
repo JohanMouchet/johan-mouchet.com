@@ -84,10 +84,9 @@ const Home: React.FC = () => (
         <div className="grid grid--lgGutter-@xs">
           <div className="home-cell--gray-lighter cell cell--12-@xs cell--3-@md">
             <Article>
-              <h2>
-                <Anchor id="skills" />
+              <Anchor as="h2" id="skills">
                 Skills
-              </h2>
+              </Anchor>
 
               <Skills
                 skills={[
@@ -143,10 +142,9 @@ const Home: React.FC = () => (
             <hr />
 
             <Article>
-              <h2>
-                <Anchor id="tools" />
+              <Anchor as="h2" id="tools">
                 Tools
-              </h2>
+              </Anchor>
               <p>
                 JAMstack, Jest, Redux, CSS-in-JS, Webpack, Storybook, Gulp, npm,
                 Headless CMS, APIs, Git, Linters &amp; Prettier, Responsive
@@ -158,20 +156,18 @@ const Home: React.FC = () => (
             <hr />
 
             <Article>
-              <h2>
-                <Anchor id="profile" />
+              <Anchor as="h2" id="profile">
                 Profile
-              </h2>
+              </Anchor>
               <p>Creative, Learning Enthusiast, Motivated, Knowledge Sharer</p>
             </Article>
 
             <hr />
 
             <Article>
-              <h2>
-                <Anchor id="academic-qualifications" />
+              <Anchor as="h2" id="academic-qualifications">
                 Academic Qualifications
-              </h2>
+              </Anchor>
 
               <AcademicQualification
                 degrees={[
@@ -216,10 +212,9 @@ const Home: React.FC = () => (
             <hr />
 
             <Article>
-              <h2>
-                <Anchor id="languages" />
+              <Anchor as="h2" id="languages">
                 Languages
-              </h2>
+              </Anchor>
               <List unstyled>
                 <li>English: C1 Advanced</li>
                 <li>French: Native</li>
@@ -229,10 +224,9 @@ const Home: React.FC = () => (
             <hr />
 
             <Article>
-              <h2>
-                <Anchor id="interests" />
+              <Anchor as="h2" id="interests">
                 Interests
-              </h2>
+              </Anchor>
               <p>
                 Developing, Designing, Photography, Travelling, Cycling,
                 Running, Fitness, Cooking, Volunteering{" "}
@@ -243,10 +237,9 @@ const Home: React.FC = () => (
             <hr />
 
             <Article>
-              <h2>
-                <Anchor id="social-media" />
+              <Anchor as="h2" id="social-media">
                 Social Media
-              </h2>
+              </Anchor>
 
               <SocialMedia
                 medias={[
@@ -328,10 +321,9 @@ const Home: React.FC = () => (
 
           <div className="cell cell--12-@xs cell--9-@md">
             <Article>
-              <h2>
-                <Anchor id="career-experiences" />
+              <Anchor as="h2" id="career-experiences">
                 Career Experiences
-              </h2>
+              </Anchor>
 
               <Experiences
                 experiences={[
@@ -968,10 +960,9 @@ const Home: React.FC = () => (
             <hr />
 
             <Article>
-              <h2>
-                <Anchor id="personal-works" />
+              <Anchor as="h2" id="personal-works">
                 Personal Works
-              </h2>
+              </Anchor>
 
               <p>
                 When I'm not developing websites I like to take pictures, create
@@ -1041,10 +1032,9 @@ const Home: React.FC = () => (
             <div className="grid">
               <div className="cell cell--12-@xs cell--6-@lg">
                 <Article>
-                  <h2>
-                    <Anchor id="about-this-website" />
+                  <Anchor as="h2" id="about-this-website">
                     About This Website
-                  </h2>
+                  </Anchor>
 
                   <p>
                     This website is open-sourced on{" "}
@@ -1092,10 +1082,9 @@ const Home: React.FC = () => (
 
               <div className="cell cell--12-@xs cell--6-@lg">
                 <Article>
-                  <h2>
-                    <Anchor id="get-in-touch" />
+                  <Anchor as="h2" id="get-in-touch">
                     Get In Touch
-                  </h2>
+                  </Anchor>
 
                   <Button
                     type="anchor"
