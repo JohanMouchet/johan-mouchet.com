@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { Link } from "wouter";
 import { Default } from "views/layouts";
 import { Main } from "views/partials";

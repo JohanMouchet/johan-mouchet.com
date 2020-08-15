@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { PROFILE } from "constants/profile";
 import { Default } from "views/layouts";
 import {

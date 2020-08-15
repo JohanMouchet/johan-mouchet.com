@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { VERSIONS } from "constants/versions";
 import { PROFILE } from "constants/profile";
 import { IconChevronDown } from "views/objects";
