@@ -87,15 +87,3 @@
     font-weight: 400;
   }
 }
-
-@mixin t-heading--sm {
-  @include t-heading(-2, 1, 1) {
-    font-weight: 400;
-  }
-}
-
-@mixin t-heading--xs {
-  @include t-heading(-3, 1, 1) {
-    font-weight: 400;
-  }
-}
