@@ -4,7 +4,8 @@
   ],
   "extends": [
     "stylelint-config-standard",
-    "stylelint-prettier/recommended"
+    "stylelint-prettier/recommended",
+    "stylelint-config-recess-order"
   ],
   "rules": {
     "at-rule-no-unknown": null,

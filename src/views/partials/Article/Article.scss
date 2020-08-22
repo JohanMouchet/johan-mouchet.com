@@ -7,9 +7,9 @@
     scale-factor: 2,
   );
 
+  position: relative;
   margin-top: map-get($p-article, v-padding);
   margin-bottom: map-get($p-article, v-padding);
-  position: relative;
 
   /** Margin **/
   &--sm {

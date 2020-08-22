@@ -134,8 +134,8 @@
     tfoot {
       th,
       td {
-        padding-left: $h-padding / $scale-factor;
         padding-right: $h-padding / $scale-factor;
+        padding-left: $h-padding / $scale-factor;
       }
     }
 
@@ -161,8 +161,8 @@
     &-horizontal {
       th,
       td {
-        padding-left: $h-padding / $scale-factor;
         padding-right: $h-padding / $scale-factor;
+        padding-left: $h-padding / $scale-factor;
       }
     }
   }
@@ -173,8 +173,8 @@
     tfoot {
       th,
       td {
-        padding-left: $h-padding * $scale-factor;
         padding-right: $h-padding * $scale-factor;
+        padding-left: $h-padding * $scale-factor;
       }
     }
 
@@ -202,16 +202,16 @@
       tfoot {
         th,
         td {
-          padding-left: $h-padding * $scale-factor;
           padding-right: $h-padding * $scale-factor;
+          padding-left: $h-padding * $scale-factor;
         }
       }
 
       tbody {
         th,
         td {
-          padding-left: $h-padding * $scale-factor;
           padding-right: $h-padding * $scale-factor;
+          padding-left: $h-padding * $scale-factor;
         }
       }
     }

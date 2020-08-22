@@ -3,10 +3,10 @@
 
 .o-alert {
   align-items: flex-start;
-  margin: t-vertical-rhythm(1) 0;
   padding: t-vertical-rhythm(0.75) ($grid-gutter / 2);
-  border-left: 2px solid;
+  margin: t-vertical-rhythm(1) 0;
   background-color: $s-color-gray-lighter;
+  border-left: 2px solid;
   animation-duration: 0.3s;
 
   /* Icon */
@@ -37,15 +37,14 @@
     flex-shrink: 0;
 
     &-button {
+      all: unset;
+      padding: 0;
+      cursor: pointer;
       background-color: transparent;
       border: 0;
-      padding: 0;
       outline: 0;
-      all: unset;
 
       @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
-
-      cursor: pointer;
 
       svg {
         font-size: t-modular-scale(1);
@@ -104,11 +103,11 @@
   &--fixed-bottom,
   &--fixed-bottom-right {
     position: fixed;
-    bottom: 0;
     right: 0;
+    bottom: 0;
+    z-index: map-get($s-layers, "alert");
     margin-bottom: 0;
     box-shadow: map-get($s-shadows, md);
-    z-index: map-get($s-layers, "alert");
   }
 
   &--fixed-bottom-right {

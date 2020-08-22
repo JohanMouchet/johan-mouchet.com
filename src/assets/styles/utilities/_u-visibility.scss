@@ -14,24 +14,24 @@
 
 // Hide only visually, but have it available for screenreaders
 .u-is--visuallyHidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
   position: absolute;
   width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
 
   // Allow the element to be focusable when navigated to via the keyboard
   &.u-is--focusable:active,
   &.u-is--focusable:focus {
-    clip: auto;
+    position: static;
+    width: auto;
     height: auto;
     margin: 0;
     overflow: visible;
-    position: static;
-    width: auto;
+    clip: auto;
   }
 }
 

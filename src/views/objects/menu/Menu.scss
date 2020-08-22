@@ -5,11 +5,11 @@
 .o-menu {
   $root: &;
 
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   display: flex;
   flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 
   /** Menu item **/
   &__item {
@@ -29,19 +29,19 @@
 
   /*** Item has children ***/
   &__item--has-children > &__link svg {
+    margin-left: 0.5em;
     vertical-align: middle;
     fill: $s-color-secondary;
-    margin-left: 0.5em;
   }
 
   /*** Submenu ***/
   &__submenu {
-    margin: 0;
-    padding-left: 1rem;
-    border-top: 1px solid $s-color-gray;
-    list-style-type: none;
     display: flex;
     flex-direction: column;
+    padding-left: 1rem;
+    margin: 0;
+    list-style-type: none;
+    border-top: 1px solid $s-color-gray;
 
     #{$root}__item {
       flex: 0 1 auto;

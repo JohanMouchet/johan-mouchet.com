@@ -49,7 +49,9 @@ import { Table } from "views/objects";
               <tr key={typeface.stack}>
                 <th>{typeface.name}</th>
                 <td>
-                  <span style={{ fontFamily: typeface.stack, fontSize: "2em" }}>
+                  <span
+                    style={{ fontFamily: typeface.stack, fontSize: "1.44em" }}
+                  >
                     {input}
                   </span>
                   <br />
@@ -81,21 +83,22 @@ import { Table } from "views/objects";
             </tr>
           </thead>
           <tbody>
-            {["xl", "lg", "1", "2", "3", "4", "5", "6", "sm", "xs"].map(
-              (level) => (
+            {["xl", "lg", 1, 2, 3, 4, 5, 6].map((level) => {
+              const Tag = typeof level === "number" ? `h${level}` : `h1`;
+              return (
                 <tr key={level}>
                   <th>{level}</th>
                   <td>
-                    <h1 className={`u-heading--${level} u-vr--bottom-0-@xs`}>
+                    <Tag className={`u-heading--${level} u-vr--bottom-0-@xs`}>
                       {input}
-                    </h1>
+                    </Tag>
                   </td>
                   <td>
                     <code className="u-select--all">.u-heading--{level}</code>
                   </td>
                 </tr>
-              )
-            )}
+              );
+            })}
           </tbody>
         </Table>
       );

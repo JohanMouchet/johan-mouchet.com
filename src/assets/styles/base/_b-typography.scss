@@ -14,8 +14,8 @@ html {
     font-size: $s-font-size-base * 1em;
   }
 
-  line-height: $s-line-height-base;
   font-family: $s-font-family-sans;
+  line-height: $s-line-height-base;
   color: $s-color-text;
   font-feature-settings: "liga", "clig";
 }
@@ -27,24 +27,24 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: $s-line-height-base / 1.2;
-  font-family: $s-font-family-serif;
-  color: $s-color-heading;
   margin-top: 0;
+  font-family: $s-font-family-serif;
+  line-height: $s-line-height-base / 1.2;
+  color: $s-color-heading;
 
   /** Underline **/
   .heading-underline {
     display: block;
-    height: 0.1em;
     width: 2.5em;
+    height: 0.1em;
     margin-top: 0.5em;
     background-color: $s-color-secondary;
     transform-origin: left;
     animation: heading-underline-animation 0.3s ease-out both;
 
     &--c {
-      margin-left: auto;
       margin-right: auto;
+      margin-left: auto;
     }
 
     &--r {
