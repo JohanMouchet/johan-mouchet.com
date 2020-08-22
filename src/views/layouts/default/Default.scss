@@ -2,11 +2,11 @@
 @import "assets/styles/tools/_tools";
 
 .l-layout {
-  min-height: 100vh;
-  max-width: 1920px;
   display: flex;
-  margin: 0 auto;
+  max-width: 1920px;
+  min-height: 100vh;
   padding: t-vertical-rhythm(0.5) t-vertical-rhythm(0.25);
+  margin: 0 auto;
 
   @media (min-width: map-get($s-breakpoints, sm)) {
     padding: t-vertical-rhythm(0.5) t-vertical-rhythm(1);
@@ -20,17 +20,17 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
+    height: 100%;
 
     &::before,
     &::after {
-      content: "";
       position: absolute;
       top: 0;
       left: 0;
-      height: 100%;
       width: 100%;
+      height: 100%;
+      content: "";
     }
 
     &::before {
@@ -46,14 +46,14 @@
   }
 
   &__inner {
+    position: relative;
     display: flex;
     flex-direction: column;
-    position: relative;
-    overflow: hidden;
     width: 100%;
-    box-shadow: 0 10px 15px -3px rgba($s-color-black, 0.4),
-      0 4px 6px -2px rgba($s-color-black, 0.4);
+    overflow: hidden;
     background-color: $s-color-white;
     border-radius: 8px;
+    box-shadow: 0 10px 15px -3px rgba($s-color-black, 0.4),
+      0 4px 6px -2px rgba($s-color-black, 0.4);
   }
 }

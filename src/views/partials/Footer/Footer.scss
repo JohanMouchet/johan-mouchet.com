@@ -2,25 +2,25 @@
 @import "assets/styles/tools/_tools";
 
 .p-footer {
-  margin-top: auto;
+  position: relative;
   padding: t-vertical-rhythm(1.2) 0;
+  margin-top: auto;
+  font-family: $s-font-family-mono;
+  font-size: t-modular-scale(-1);
+  color: $s-color-white;
+  text-shadow: 1px 1px 1px rgba($s-color-black, 0.3);
+  letter-spacing: 0.1em;
   background: map-get($s-backgrounds, dots),
     url("#{map-get($s-paths, theme)}/footer.jpg") right center/cover no-repeat
       $s-color-primary;
-  letter-spacing: 0.1em;
-  font-family: $s-font-family-mono;
-  font-size: t-modular-scale(-1);
-  text-shadow: 1px 1px 1px rgba($s-color-black, 0.3);
-  color: $s-color-white;
-  position: relative;
 
   &::before {
-    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    content: "";
     background-image: linear-gradient(
       rgba($s-color-primary-darker, 0.9),
       transparent
@@ -57,63 +57,63 @@
     /* stylelint-enable color-no-hex */
 
     position: relative;
-    background-color: $s-color-white;
     text-shadow: none;
+    background-color: $s-color-white;
     outline: 0;
     transition: background-color 0.2s ease-out, text-shadow 0.2s ease-out;
 
     &::before,
     &::after {
-      content: "";
       position: absolute;
       top: 0;
-      height: 100%;
       width: 33%;
+      height: 100%;
+      content: "";
       transition: background-color 0.2s ease-out, left 0.2s ease-out,
         right 0.2s ease-out;
     }
 
     &::before {
-      background: $s-color-bleu;
       left: 0;
+      background: $s-color-bleu;
     }
 
     &::after {
-      background: $s-color-rouge;
       right: 0;
+      background: $s-color-rouge;
     }
 
     &:hover,
     &:focus {
-      background-color: transparent;
       text-shadow: inherit;
+      background-color: transparent;
 
       &::before {
-        background-color: transparent;
         left: -33%;
+        background-color: transparent;
       }
 
       &::after {
-        background-color: transparent;
         right: -33%;
+        background-color: transparent;
       }
     }
   }
 
   &__page-top {
     display: inline-block;
-    line-height: 0;
     padding: 0.3em;
+    line-height: 0;
     border: 2px solid $s-color-white;
     transition: opacity 0.2s ease-out, transform 0.1s ease-out;
 
     @include t-wekkit-hdpi-small-dimension("border-width", 2);
 
     svg {
-      transform: rotate(180deg);
-      height: t-modular-scale(2);
       width: t-modular-scale(2);
+      height: t-modular-scale(2);
       fill: $s-color-white;
+      transform: rotate(180deg);
     }
 
     &:hover,

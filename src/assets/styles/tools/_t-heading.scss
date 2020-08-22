@@ -14,12 +14,12 @@
   $top-vertical-rhythm-factor: 1,
   $bottom-vertical-rhythm-factor: 1
 ) {
-  font-size: t-modular-scale($modular-scale-factor);
   margin-bottom: t-vertical-rhythm(
     $bottom-vertical-rhythm-factor,
     "em",
     t-modular-scale($modular-scale-factor)
   );
+  font-size: t-modular-scale($modular-scale-factor);
 
   * + & {
     margin-top: t-vertical-rhythm(

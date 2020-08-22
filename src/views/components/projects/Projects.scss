@@ -5,9 +5,9 @@
   $root: &;
 
   &__link {
+    position: relative;
     display: block;
     margin-bottom: t-vertical-rhythm(1);
-    position: relative;
     overflow: hidden;
 
     &:hover,
@@ -31,8 +31,8 @@
   &__thumbnail {
     display: block;
     width: 100%;
-    border: 1px solid $s-color-gray;
     filter: grayscale(1);
+    border: 1px solid $s-color-gray;
     transition: filter 0.2s ease-out;
   }
 
@@ -40,31 +40,31 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
-    padding: t-vertical-rhythm(0.25);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: t-vertical-rhythm(0.25);
     color: $s-color-white;
     text-align: center;
     transition: opacity 0.2s ease-out;
 
     &::before {
-      content: "";
       position: absolute;
       top: 0;
       left: 0;
-      height: 100%;
       width: 100%;
+      height: 100%;
+      content: "";
       background-image: map-get($s-backgrounds, dots),
         linear-gradient(
           rgba($s-color-primary-lighter, 0.7),
           rgba($s-color-primary-darker, 0.9)
         );
-      transform-origin: 100% 50%;
       transition: transform 0.2s ease-out;
+      transform-origin: 100% 50%;
     }
 
     > * {
@@ -80,9 +80,9 @@
 
   &__line {
     width: 30%;
-    border-bottom: 1px solid;
     margin-top: t-vertical-rhythm(0.3);
     margin-bottom: t-vertical-rhythm(0.3);
+    border-bottom: 1px solid;
   }
 
   &__tagline {
@@ -103,9 +103,9 @@
 
     &-heading {
       font-size: t-modular-scale(-2);
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      font-weight: 700;
     }
 
     &-list {
@@ -122,8 +122,8 @@
   }
 
   &--highlighted {
-    margin-bottom: t-vertical-rhythm(1);
     padding: t-vertical-rhythm(1) $grid-gutter 0;
+    margin-bottom: t-vertical-rhythm(1);
     background-color: $s-color-gray-lighter;
     border-radius: 6px;
   }

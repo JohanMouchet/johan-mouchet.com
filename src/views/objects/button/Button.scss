@@ -37,17 +37,17 @@
   @include btn-padding();
 
   display: inline-block;
-  line-height: $s-line-height-base;
-  vertical-align: middle;
-  border: $border-width solid $s-color-link;
-  border-radius: 0;
-  background: none;
-  color: $s-color-link;
   font-family: $s-font-family-sans;
   font-size: t-modular-scale(0);
+  line-height: $s-line-height-base;
+  color: $s-color-link;
   text-align: center;
   text-decoration: none;
+  vertical-align: middle;
   cursor: pointer;
+  background: none;
+  border: $border-width solid $s-color-link;
+  border-radius: 0;
   transition: color 0.2s, background 0.2s, border-color 0.2s,
     transform 0.1s ease-out;
 
@@ -56,9 +56,9 @@
   &:hover,
   &:focus {
     color: $s-color-white;
+    text-decoration: none;
     background-color: $s-color-link;
     border-color: $s-color-link;
-    text-decoration: none;
   }
 
   &:active {
@@ -136,10 +136,10 @@
 
   /** Disabled **/
   &[disabled] {
-    cursor: default;
-    pointer-events: none;
-    user-select: none;
     color: $s-color-gray-darker;
+    pointer-events: none;
+    cursor: default;
+    user-select: none;
     background-color: $s-color-gray-lighter;
     border-color: currentColor;
 

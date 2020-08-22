@@ -5,8 +5,8 @@
   $loader-speed: 1.5s;
 
   display: inline-block;
-  height: t-vertical-rhythm(1.5, "rem");
   width: t-vertical-rhythm(1.5, "rem");
+  height: t-vertical-rhythm(1.5, "rem");
   outline: 2px solid $s-color-secondary;
   animation: loader-spin-animation $loader-speed infinite ease;
 
@@ -22,10 +22,10 @@
   }
 
   &::after {
-    content: "";
     display: block;
-    height: inherit;
     width: inherit;
+    height: inherit;
+    content: "";
     outline: inherit;
     animation: inherit;
     animation-name: loader-spin-animation-asynchronous;
@@ -42,7 +42,7 @@
 
   /** Small **/
   &--sm {
-    height: t-vertical-rhythm(0.75, "rem");
     width: t-vertical-rhythm(0.75, "rem");
+    height: t-vertical-rhythm(0.75, "rem");
   }
 }

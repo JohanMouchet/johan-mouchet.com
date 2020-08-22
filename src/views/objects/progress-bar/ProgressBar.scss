@@ -9,8 +9,8 @@
 
   /* Labels */
   &__labels {
-    margin-bottom: t-vertical-rhythm(0.25);
     display: flex;
+    margin-bottom: t-vertical-rhythm(0.25);
   }
 
   &__label {
@@ -29,11 +29,11 @@
 
   /* Container */
   &__container {
-    height: 12px;
+    position: relative;
     width: 100%;
+    height: 12px;
     padding: 2px;
     border: 2px solid $s-color-gray;
-    position: relative;
 
     @include t-wekkit-hdpi-small-dimension;
   }
@@ -41,9 +41,9 @@
   /* Filling */
   &__filling {
     position: relative;
-    height: 100%;
     width: 0;
     max-width: 100%;
+    height: 100%;
     background-color: $s-color-secondary;
     border-radius: inherit;
     transition: width 0.5s ease-out;
