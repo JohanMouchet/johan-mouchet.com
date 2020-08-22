@@ -13,17 +13,17 @@
 }
 
 .u-clear {
-  clear: both;
   float: none;
+  clear: both;
 }
 
 /* Clearfix */
 .u-clearfix {
   &::before,
   &::after {
-    content: "";
     display: table;
     clear: both;
+    content: "";
   }
 }
 

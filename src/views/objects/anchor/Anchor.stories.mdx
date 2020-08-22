@@ -8,9 +8,12 @@ import Anchor from ".";
 
 <Preview>
   <Story name="default">
-    <h2>
-      <Anchor id={text("id", "id")} marker={text("marker", "#")} />
-      Text (hover)
-    </h2>
+    <Anchor
+      as={text("as", "h2")}
+      id={text("id", "id")}
+      marker={text("marker", "#")}
+    >
+      {text("children", "Anchor (hover)")}
+    </Anchor>
   </Story>
 </Preview>

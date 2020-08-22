@@ -6,15 +6,15 @@
   $slide-distance: 0.5rem !default;
 
   position: relative;
-  cursor: help;
   text-decoration: underline dashed $s-color-info;
+  cursor: help;
   text-underline-position: under;
 
   &:hover,
   &:focus {
     #{$root}__content {
-      opacity: 1;
       visibility: visible;
+      opacity: 1;
     }
   }
 
@@ -24,18 +24,18 @@
 
   &__content {
     position: absolute;
+    z-index: map-get($s-layers, "tooltip");
     padding: 0.5rem;
+    font-size: t-modular-scale(-1, "rem");
+    font-style: normal;
+    font-weight: 400;
+    line-height: $s-line-height-base;
+    color: $s-color-text;
+    white-space: nowrap;
+    visibility: hidden;
     background-color: $s-color-white;
     border: 2px solid;
-    color: $s-color-text;
-    line-height: $s-line-height-base;
-    white-space: nowrap;
-    font-size: t-modular-scale(-1, "rem");
-    font-weight: 400;
-    font-style: normal;
-    z-index: map-get($s-layers, "tooltip");
     opacity: 0;
-    visibility: hidden;
     transition: transform 0.2s ease-out, opacity 0.2s ease-out,
       visibility 0.2s ease-out;
 
@@ -110,17 +110,17 @@
 
   /** No Indicator **/
   &--no-indicator {
-    cursor: default;
     text-decoration: none;
+    cursor: default;
   }
 
   /** Multilines **/
   &--multi-lines {
     #{$root}__content {
-      white-space: normal;
-      word-wrap: break-word;
       min-width: t-vertical-rhythm(10, "rem");
       text-align: center;
+      word-wrap: break-word;
+      white-space: normal;
     }
   }
 }

@@ -8,8 +8,8 @@
   /* Index */
   @for $i from 1 through 6 {
     &__index-#{$i} {
-      counter-increment: index-#{$i};
       counter-reset: index-#{$i + 1};
+      counter-increment: index-#{$i};
 
       &::before {
         $k: "";

@@ -5,22 +5,22 @@
   $root: &;
   $skew-angle: 5deg;
 
-  min-height: 400px;
+  position: relative;
   width: 100%;
+  min-height: 400px;
+  overflow: hidden;
+  text-shadow: 1px 1px 1px rgba($s-color-black, 0.3);
   background: map-get($s-backgrounds, dots),
     url("#{map-get($s-paths, theme)}/header.jpg") left center/cover no-repeat
       $s-color-primary;
-  text-shadow: 1px 1px 1px rgba($s-color-black, 0.3);
-  overflow: hidden;
-  position: relative;
 
   &::before {
-    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    content: "";
     background-image: linear-gradient(
       transparent,
       rgba($s-color-primary-darker, 0.9) 90%
@@ -32,10 +32,10 @@
   }
 
   &__inner {
-    min-height: inherit;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    min-height: inherit;
   }
 
   /* Heading */
@@ -44,10 +44,10 @@
     align-items: center;
     width: 100%;
     margin-bottom: 0;
-    color: $s-color-white;
     font-family: $s-font-family-display;
     font-size: t-modular-scale(4);
     font-weight: 400;
+    color: $s-color-white;
     text-transform: uppercase;
     transition: font-size 0.5s;
     transform: skew(-$skew-angle);
@@ -63,10 +63,10 @@
 
   /* Line */
   &__line {
-    height: 2.5em;
     width: 2px;
-    margin-left: 3px;
+    height: 2.5em;
     margin-right: 3px;
+    margin-left: 3px;
     background: currentColor;
     animation: line-animation 0.5s ease-out both;
 
@@ -85,8 +85,8 @@
   }
 
   &__half--left {
-    margin-bottom: 0.65em;
     padding-right: 0.2em;
+    margin-bottom: 0.65em;
     text-align: right;
 
     #{$root}__text {
@@ -94,8 +94,8 @@
       /* stylelint-disable max-nesting-depth */
       @keyframes left-slide-animation {
         0% {
-          transform: translateX(100%);
           opacity: 0;
+          transform: translateX(100%);
         }
 
         50% {
@@ -111,16 +111,16 @@
   }
 
   &__half--right {
-    margin-top: 0.65em;
     padding-left: 0.2em;
+    margin-top: 0.65em;
 
     #{$root}__text {
       animation: right-slide-animation 0.5s 0.5s ease-out both;
       /* stylelint-disable max-nesting-depth */
       @keyframes right-slide-animation {
         0% {
-          transform: translateX(-100%);
           opacity: 0;
+          transform: translateX(-100%);
         }
 
         50% {
@@ -149,19 +149,19 @@
   &__tagline {
     width: 100%;
     margin: t-vertical-rhythm(2) t-vertical-rhythm(1) t-vertical-rhythm(1);
-    text-align: center;
     font-family: $s-font-family-mono;
     font-size: t-modular-scale(-1);
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
     font-weight: 400;
     color: $s-color-secondary;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
     animation: tagline-animation 0.4s 1s ease-out both;
 
     @keyframes tagline-animation {
       0% {
-        transform: translateY(100%);
         opacity: 0;
+        transform: translateY(100%);
       }
 
       50% {

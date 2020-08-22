@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import duration from "utils/duration";
 import parse from "utils/parse";
 import { Projects } from "views/components";

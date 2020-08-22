@@ -33,13 +33,13 @@
   }
 
   &-icon {
+    position: relative;
     display: inline-block;
     width: t-vertical-rhythm(0.8, "rem");
     height: t-vertical-rhythm(0.8, "rem");
+    vertical-align: text-top;
     background: none;
     border: 2px solid $s-color-gray;
-    vertical-align: text-top;
-    position: relative;
     transition: background-color 0.2s, border 0.2s;
 
     @include t-wekkit-hdpi-small-dimension;
@@ -55,12 +55,12 @@
     }
 
     &::before {
-      content: "";
       position: absolute;
       top: 2px;
       right: 2px;
       bottom: 2px;
       left: 2px;
+      content: "";
       transition: background-color 0.2s;
     }
   }

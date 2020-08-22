@@ -3,8 +3,8 @@
 
 .c-experience {
   &:not(:first-child) {
-    border-top: 1px solid $s-color-gray;
     padding-top: t-vertical-rhythm(1);
+    border-top: 1px solid $s-color-gray;
   }
 
   &__heading {

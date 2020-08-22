@@ -35,14 +35,6 @@
   &--6 {
     @include t-heading--6;
   }
-
-  &--sm {
-    @include t-heading--sm;
-  }
-
-  &--xs {
-    @include t-heading--xs;
-  }
 }
 
 /* Secondary link */

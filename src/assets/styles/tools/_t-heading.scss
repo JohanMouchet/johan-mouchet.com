@@ -14,12 +14,12 @@
   $top-vertical-rhythm-factor: 1,
   $bottom-vertical-rhythm-factor: 1
 ) {
-  font-size: t-modular-scale($modular-scale-factor);
   margin-bottom: t-vertical-rhythm(
     $bottom-vertical-rhythm-factor,
     "em",
     t-modular-scale($modular-scale-factor)
   );
+  font-size: t-modular-scale($modular-scale-factor);
 
   * + & {
     margin-top: t-vertical-rhythm(
@@ -84,18 +84,6 @@
 
 @mixin t-heading--6 {
   @include t-heading(-1, 1, 1) {
-    font-weight: 400;
-  }
-}
-
-@mixin t-heading--sm {
-  @include t-heading(-2, 1, 1) {
-    font-weight: 400;
-  }
-}
-
-@mixin t-heading--xs {
-  @include t-heading(-3, 1, 1) {
     font-weight: 400;
   }
 }

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import cx from "classnames";
 import "./Projects.scss";
 import { Details } from "views/objects";
