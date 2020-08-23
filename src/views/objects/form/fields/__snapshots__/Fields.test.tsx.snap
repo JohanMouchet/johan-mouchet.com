@@ -2,22 +2,19 @@
 
 exports[`Renders <Field /> without crashing 1`] = `
 <input
-  className="o-form__field o-form__field--text"
-  defaultValue="Value"
+  class="o-form__field o-form__field--text"
   name="name"
   type="text"
+  value="Value"
 />
 `;
 
 exports[`Renders <Select /> without crashing 1`] = `
 <select
-  className="o-form__field o-form__field--select"
+  class="o-form__field o-form__field--select"
   name="name"
 >
-  <option
-    defaultValue="Option 1"
-    key="Option 1"
-  >
+  <option>
     Option 1
   </option>
 </select>
@@ -25,7 +22,7 @@ exports[`Renders <Select /> without crashing 1`] = `
 
 exports[`Renders <Textarea /> without crashing 1`] = `
 <textarea
-  className="o-form__field o-form__field--textarea"
+  class="o-form__field o-form__field--textarea"
   name="name"
 >
   children

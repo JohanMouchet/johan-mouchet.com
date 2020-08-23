@@ -2,35 +2,35 @@
 
 exports[`Renders <Footer /> without crashing 1`] = `
 <footer
-  className="p-footer"
+  class="p-footer"
 >
   <div
-    className="container"
+    class="container"
   >
     <div
-      className="grid grid--yCenter-@xs grid--noWrap-@xs"
+      class="grid grid--yCenter-@xs grid--noWrap-@xs"
     >
       <div
-        className="cell cell--0-@xs"
+        class="cell cell--0-@xs"
       >
         <span
-          className="p-footer__version"
+          class="p-footer__version"
         >
           Version
         </span>
       </div>
       <div
-        className="cell cell--@xs"
+        class="cell cell--@xs"
       >
         <p
-          className="p-footer__copyright"
+          class="p-footer__copyright"
         >
           2020
            © 
           Copyright
            
           <span
-            className="p-footer__copyright-separator"
+            class="p-footer__copyright-separator"
           >
             |
           </span>
@@ -38,22 +38,24 @@ exports[`Renders <Footer /> without crashing 1`] = `
            Made in
            
           <span
-            className="p-footer__cocorico"
-            tabIndex={0}
+            class="p-footer__cocorico"
+            tabindex="0"
           >
             France
           </span>
         </p>
       </div>
       <div
-        className="cell cell--0-@xs"
+        class="cell cell--0-@xs"
       >
         <a
           aria-label="Top Button Title"
-          className="p-footer__page-top"
+          class="p-footer__page-top"
           href="#page-top"
         >
-          <ForwardRef(SvgChevronDown) />
+          <svg>
+            chevron-down.svg
+          </svg>
         </a>
       </div>
     </div>

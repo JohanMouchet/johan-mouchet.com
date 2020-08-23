@@ -1,7 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Loader from ".";
 
 it("Renders <Loader /> without crashing", () => {
-  expect(shallow(<Loader size="sm" />)).toMatchSnapshot();
+  expect(render(<Loader size="sm" />).container.firstChild).toMatchSnapshot();
 });

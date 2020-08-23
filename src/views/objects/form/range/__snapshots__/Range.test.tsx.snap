@@ -2,7 +2,7 @@
 
 exports[`Renders <Range /> without crashing 1`] = `
 <input
-  className="o-form__range"
+  class="o-form__range"
   name="name"
   type="range"
 />

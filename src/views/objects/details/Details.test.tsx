@@ -1,13 +1,13 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Details from ".";
 
 it("Renders <Details /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <Details summary="Summary" variant="compact">
         children
       </Details>
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });

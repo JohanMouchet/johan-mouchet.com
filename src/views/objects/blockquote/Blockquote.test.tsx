@@ -1,9 +1,9 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Blockquote from ".";
 
 it("Renders <Blockquote /> without crashing", () => {
   expect(
-    shallow(<Blockquote quote="Quote" cite="Cite" pulled />)
+    render(<Blockquote quote="Quote" cite="Cite" pulled />).container.firstChild
   ).toMatchSnapshot();
 });

@@ -1060,7 +1060,10 @@ const Home: React.FC = () => (
                       </a>
                     </li>
                     <li>type-checked with TypeScript</li>
-                    <li>unit and snapshot tested with Jest and Enzyme</li>
+                    <li>
+                      unit and snapshot tested with Jest and React Testing
+                      Library
+                    </li>
                     <li>using Sass and CSS post-processing</li>
                     <li>
                       linted and formated with ESlint, stylelint and Prettier,

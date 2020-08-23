@@ -2,104 +2,101 @@
 
 exports[`Renders <Projects /> without crashing 1`] = `
 <div
-  className="c-projects"
+  class="c-projects"
 >
   <div
-    className="grid"
+    class="grid"
   >
     <div
-      className="cell cell--12-@xs"
-      key="NameTagline"
+      class="cell cell--12-@xs"
     >
       <div
-        className="c-project c-project--highlighted"
+        class="c-project c-project--highlighted"
       >
         <div
-          className="grid"
+          class="grid"
         >
           <div
-            className="cell cell--12-@xs cell--6-@sm cell--4-@lg"
+            class="cell cell--12-@xs cell--6-@sm cell--4-@lg"
           >
             <a
-              className="c-project__link"
+              class="c-project__link"
               href="#"
             >
               <img
                 alt="Name"
-                className="c-project__thumbnail"
+                class="c-project__thumbnail"
                 loading="lazy"
                 src="https://via.placeholder.com/400x225"
               />
               <div
-                className="c-project__overlay"
+                class="c-project__overlay"
               >
                 <h4
-                  className="c-project__title"
+                  class="c-project__title"
                 >
                   Name
                 </h4>
                 <span
-                  className="c-project__line"
+                  class="c-project__line"
                 />
                 <span
-                  className="c-project__tagline"
+                  class="c-project__tagline"
                 >
                   Tagline
                 </span>
               </div>
             </a>
             <p
-              className="c-project__lede"
+              class="c-project__lede"
             >
               Lede
             </p>
           </div>
           <div
-            className="cell cell--12-@xs cell--6-@sm cell--8-@lg"
+            class="cell cell--12-@xs cell--6-@sm cell--8-@lg"
           >
             <div
-              className="c-project__detail"
+              class="c-project__detail"
             >
               <b
-                className="c-project__detail-heading"
+                class="c-project__detail-heading"
               >
                 Key 
                 Achievement
               </b>
               <ul
-                className="c-project__detail-list"
+                class="c-project__detail-list"
               >
-                <li
-                  key="Achievement"
-                >
+                <li>
                   Achievement
                 </li>
               </ul>
             </div>
             <div
-              className="c-project__detail"
+              class="c-project__detail"
             >
               <b
-                className="c-project__detail-heading"
+                class="c-project__detail-heading"
               >
                 Architecture
               </b>
               <p
-                className="c-project__detail-list"
+                class="c-project__detail-list"
               >
                 Architecture
               </p>
             </div>
             <div
-              className="c-project__detail"
+              class="c-project__detail"
             >
               <b
-                className="c-project__detail-heading"
+                class="c-project__detail-heading"
               >
                 Library
               </b>
               <p
-                className="c-project__detail-list"
+                class="c-project__detail-list"
               >
                 Librarie
               </p>
