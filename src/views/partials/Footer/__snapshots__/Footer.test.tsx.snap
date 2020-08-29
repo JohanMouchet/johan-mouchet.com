@@ -49,7 +49,7 @@ exports[`Renders <Footer /> without crashing 1`] = `
         class="cell cell--0-@xs"
       >
         <a
-          aria-label="Top Button Title"
+          aria-label="Top Button Label"
           class="p-footer__page-top"
           href="#page-top"
         >

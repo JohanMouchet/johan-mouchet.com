@@ -8,7 +8,7 @@ it("Renders <Footer /> without crashing", () => {
       <Footer
         version="Version"
         copyright="Copyright"
-        topButtonTitle="Top Button Title"
+        topButtonLabel="Top Button Label"
       />
     ).container.firstChild
   ).toMatchSnapshot();
