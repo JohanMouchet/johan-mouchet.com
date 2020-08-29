@@ -12,6 +12,7 @@ exports[`Renders <Tabs /> without crashing 1`] = `
     >
       <button
         class="o-tabs__button"
+        type="button"
       >
         Thumb
       </button>

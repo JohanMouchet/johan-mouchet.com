@@ -26,6 +26,7 @@ exports[`Renders <Alert /> without crashing 1`] = `
       <button
         aria-label="Close"
         class="o-alert__close-button"
+        type="button"
       >
         <svg>
           x.svg

@@ -24,7 +24,9 @@ const Tabs: React.FC<Props> = ({ tabs, className }) => {
             }}
             key={tab.thumb}
           >
-            <button className="o-tabs__button">{tab.thumb}</button>
+            <button className="o-tabs__button" type="button">
+              {tab.thumb}
+            </button>
           </li>
         ))}
       </ul>
