@@ -24,6 +24,9 @@ const Modal: React.FC<Props> = ({
 }) => {
   const [open, setOpen] = useState(isOpen);
 
+  const toggleScrollLock = () =>
+    document.querySelector("html")?.classList.toggle("u-scroll-lock");
+
   const openModal = () => {
     setOpen(true);
     toggleScrollLock();
@@ -39,9 +42,6 @@ const Modal: React.FC<Props> = ({
 
   const handleOutsideClick = (event: React.MouseEvent) =>
     event.target === event.currentTarget && closeModal();
-
-  const toggleScrollLock = () =>
-    document.querySelector("html")?.classList.toggle("u-scroll-lock");
 
   return (
     <>
