@@ -34,17 +34,14 @@ const Modal: React.FC<Props> = ({
     toggleScrollLock();
   };
 
-  const handleEscKey = (event: React.KeyboardEvent) => {
+  const handleEscKey = (event: React.KeyboardEvent) =>
     event.keyCode === 27 && closeModal();
-  };
 
-  const handleOutsideClick = (event: React.MouseEvent) => {
+  const handleOutsideClick = (event: React.MouseEvent) =>
     event.target === event.currentTarget && closeModal();
-  };
 
-  const toggleScrollLock = () => {
+  const toggleScrollLock = () =>
     document.querySelector("html")?.classList.toggle("u-scroll-lock");
-  };
 
   return (
     <>
