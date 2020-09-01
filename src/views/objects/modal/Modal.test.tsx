@@ -8,7 +8,7 @@ it("Renders <Modal /> without crashing", () => {
       <Modal
         isOpen={false}
         size="sm"
-        trigerLabel="Open Modal"
+        triggerLabel="Open Modal"
         closeLabel="Close Modal"
       >
         children
