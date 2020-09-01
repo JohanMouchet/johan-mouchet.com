@@ -8,9 +8,10 @@ import "./Modal.scss";
 type Props = {
   isOpen?: boolean;
   size?: "sm" | "md";
-  triggerLabel: string;
+  triggerLabel: React.ReactNode;
   closeLabel?: string;
   className?: string | string[] | { [key: string]: boolean };
+  attributes?: boolean | number | string;
   children: React.ReactNode;
 };
 
@@ -21,6 +22,7 @@ const Modal: React.FC<Props> = ({
   closeLabel = "Close Modal",
   className,
   children,
+  ...attributes
 }) => {
   const [open, setOpen] = useState(isOpen);
 
@@ -49,6 +51,7 @@ const Modal: React.FC<Props> = ({
         onClick={openModal}
         className={cx("o-modal__trigger", className)}
         type="button"
+        {...attributes}
       >
         {triggerLabel}
       </button>
