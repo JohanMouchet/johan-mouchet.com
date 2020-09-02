@@ -2,27 +2,27 @@
 @import "assets/styles/tools/_tools";
 
 .o-modal {
-  position: relative;
-  padding-top: t-vertical-rhythm(1);
-  padding-bottom: t-vertical-rhythm(1);
-  background: $s-color-white;
-  border-radius: 6px;
-  box-shadow: map-get($s-shadows, lg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: map-get($s-layers, modal);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: t-vertical-rhythm(0.5) t-vertical-rhythm(0.25);
+  overflow-y: auto;
+  background-color: rgba($s-color-black, 0.6);
 
-  /* Cover */
-  &__cover {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: map-get($s-layers, modal);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: t-vertical-rhythm(0.5) t-vertical-rhythm(0.25);
-    overflow-y: auto;
-    background-color: rgba($s-color-black, 0.6);
+  /* Dialog */
+  &__dialog {
+    position: relative;
+    padding-top: t-vertical-rhythm(1);
+    padding-bottom: t-vertical-rhythm(1);
+    margin-top: auto;
+    margin-bottom: auto;
+    background: $s-color-white;
+    border-radius: 6px;
+    box-shadow: map-get($s-shadows, lg);
   }
 
   /* Close */

@@ -61,16 +61,16 @@ const Modal: React.FC<Props> = ({
         : createPortal(
             <FocusTrap>
               <div
+                className="o-modal u-animation u-animation--fast u-animation--fade-in"
                 role="dialog"
                 tabIndex={-1}
                 aria-modal="true"
-                className="o-modal__cover u-animation u-animation--fast u-animation--fade-in"
                 onClick={handleOutsideClick}
                 onKeyDown={handleEscKey}
               >
                 <div
                   className={cx(
-                    "o-modal",
+                    "o-modal__dialog",
                     "container",
                     size && `container--${size}`
                   )}
