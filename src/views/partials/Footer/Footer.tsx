@@ -7,7 +7,7 @@ import "./Footer.scss";
 type Props = {
   version?: string;
   copyright?: string;
-  topButtonTitle?: string;
+  topButtonLabel?: string;
 };
 
 const Footer: React.FC<Props> = ({
@@ -15,7 +15,7 @@ const Footer: React.FC<Props> = ({
   copyright = /* html*/ `${
     PROFILE.firstName
   } ${PROFILE.lastName.toUpperCase()}`,
-  topButtonTitle = /* html*/ `Get to the top`,
+  topButtonLabel = /* html*/ `Get to the top`,
 }) => {
   const year = new Date().getFullYear();
 
@@ -40,7 +40,7 @@ const Footer: React.FC<Props> = ({
             <a
               className="p-footer__page-top"
               href="#page-top"
-              aria-label={topButtonTitle}
+              aria-label={topButtonLabel}
             >
               <IconChevronDown />
             </a>

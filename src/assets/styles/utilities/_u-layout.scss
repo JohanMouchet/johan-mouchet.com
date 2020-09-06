@@ -98,3 +98,7 @@
     @include vertical-rhythm-spacers($bp-short);
   }
 }
+
+.u-scroll-lock {
+  overflow: hidden;
+}

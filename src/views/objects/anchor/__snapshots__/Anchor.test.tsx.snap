@@ -2,10 +2,10 @@
 
 exports[`Renders <Anchor /> without crashing 1`] = `
 <h2
-  className="o-anchor"
+  class="o-anchor"
 >
   <a
-    className="o-anchor__link"
+    class="o-anchor__link"
     href="#id"
     id="id"
   >

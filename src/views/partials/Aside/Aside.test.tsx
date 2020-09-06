@@ -1,7 +1,9 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Aside from ".";
 
 it("Renders <Aside /> without crashing", () => {
-  expect(shallow(<Aside margin="no-margin">children</Aside>)).toMatchSnapshot();
+  expect(
+    render(<Aside margin="no-margin">children</Aside>).container.firstChild
+  ).toMatchSnapshot();
 });

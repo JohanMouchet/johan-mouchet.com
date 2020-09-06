@@ -2,33 +2,27 @@
 
 exports[`Renders <Tabs /> without crashing 1`] = `
 <div
-  className="o-tabs"
+  class="o-tabs"
 >
   <ul
-    className="o-tabs__thumbs"
+    class="o-tabs__thumbs"
   >
     <li
-      className="o-tabs__thumb u-animation u-animation--fade-in-up"
-      key="Thumb"
-      style={
-        Object {
-          "animationDelay": undefined,
-        }
-      }
+      class="o-tabs__thumb u-animation u-animation--fade-in-up"
     >
       <button
-        className="o-tabs__button"
+        class="o-tabs__button"
+        type="button"
       >
         Thumb
       </button>
     </li>
   </ul>
   <ul
-    className="o-tabs__panels"
+    class="o-tabs__panels"
   >
     <li
-      className="o-tabs__panel"
-      key="0"
+      class="o-tabs__panel"
     >
       Panel
     </li>

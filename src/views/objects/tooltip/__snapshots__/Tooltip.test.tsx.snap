@@ -2,12 +2,12 @@
 
 exports[`Renders <Tooltip /> without crashing 1`] = `
 <span
-  className="o-tooltip o-tooltip--top"
-  tabIndex={0}
+  class="o-tooltip o-tooltip--top"
+  tabindex="0"
 >
   children
   <span
-    className="o-tooltip__content"
+    class="o-tooltip__content"
   >
     Content
   </span>

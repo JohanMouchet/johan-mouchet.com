@@ -1,23 +1,25 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import { Fieldset, FormGroup, Label } from ".";
 
 it("Renders <Fieldset /> without crashing", () => {
   expect(
-    shallow(<Fieldset legend="legend">children</Fieldset>)
+    render(<Fieldset legend="legend">children</Fieldset>).container.firstChild
   ).toMatchSnapshot();
 });
 
 it("Renders <FormGroup /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <FormGroup variant="success" detail="Detail">
         children
       </FormGroup>
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });
 
 it("Renders <Label /> without crashing", () => {
-  expect(shallow(<Label block>Label</Label>)).toMatchSnapshot();
+  expect(
+    render(<Label block>Label</Label>).container.firstChild
+  ).toMatchSnapshot();
 });

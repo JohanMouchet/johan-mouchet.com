@@ -1,10 +1,10 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Table from ".";
 
 it("Renders <Table /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <Table
         align="top"
         equalColumns={false}
@@ -30,6 +30,6 @@ it("Renders <Table /> without crashing", () => {
           </tr>
         </tfoot>
       </Table>
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });

@@ -2,17 +2,125 @@
 
 exports[`Renders <Default /> without crashing 1`] = `
 <div
-  className="l-layout"
+  class="l-layout"
 >
   <div
-    className="l-layout__background"
+    class="l-layout__background"
   />
   <div
-    className="l-layout__inner"
+    class="l-layout__inner"
   >
-    <Header />
+    <header
+      class="p-header"
+    >
+      <div
+        class="p-header__inner"
+      >
+        <h1
+          class="p-header__heading"
+        >
+          <span
+            class="p-header__half p-header__half--left"
+          >
+            <span
+              class="p-header__text-wrapper"
+            >
+              <span
+                class="p-header__text"
+              >
+                Johan
+              </span>
+            </span>
+          </span>
+          <span
+            class="p-header__line"
+          />
+          <span
+            class="p-header__half p-header__half--right"
+          >
+            <span
+              class="p-header__text-wrapper"
+            >
+              <span
+                class="p-header__text"
+              >
+                Mouchet
+              </span>
+            </span>
+          </span>
+        </h1>
+        <h2
+          class="p-header__tagline"
+        >
+          Never stop exploring,
+          <br
+            class="p-header__tagline-breaker"
+          />
+           never stop creating
+        </h2>
+      </div>
+    </header>
     children
-    <Footer />
+    <footer
+      class="p-footer"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="grid grid--yCenter-@xs grid--noWrap-@xs"
+        >
+          <div
+            class="cell cell--0-@xs"
+          >
+            <span
+              class="p-footer__version"
+            >
+              5.2.0
+            </span>
+          </div>
+          <div
+            class="cell cell--@xs"
+          >
+            <p
+              class="p-footer__copyright"
+            >
+              2020
+               © 
+              Johan MOUCHET
+               
+              <span
+                class="p-footer__copyright-separator"
+              >
+                |
+              </span>
+              <br />
+               Made in
+               
+              <span
+                class="p-footer__cocorico"
+                tabindex="0"
+              >
+                France
+              </span>
+            </p>
+          </div>
+          <div
+            class="cell cell--0-@xs"
+          >
+            <a
+              aria-label="Get to the top"
+              class="p-footer__page-top"
+              href="#page-top"
+            >
+              <svg>
+                chevron-down.svg
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </div>
 `;

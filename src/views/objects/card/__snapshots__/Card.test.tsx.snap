@@ -2,28 +2,24 @@
 
 exports[`Renders <Card /> without crashing 1`] = `
 <section
-  className="o-card o-card--banner-gradient o-card--secondary o-card--sm"
+  class="o-card o-card--banner-gradient o-card--secondary o-card--sm"
 >
   <div
-    className="o-card__banner"
-    style={
-      Object {
-        "backgroundImage": "url(https://via.placeholder.com/400x168)",
-      }
-    }
+    class="o-card__banner"
+    style="background-image: url(https://via.placeholder.com/400x168);"
   />
   <header
-    className="o-card__header"
+    class="o-card__header"
   >
     Header
   </header>
   <div
-    className="o-card__body"
+    class="o-card__body"
   >
     children
   </div>
   <footer
-    className="o-card__footer"
+    class="o-card__footer"
   >
     Footer
   </footer>

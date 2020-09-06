@@ -1,10 +1,10 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Figure from ".";
 
 it("Renders <Figure /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <Figure
         src="https://via.placeholder.com/500x250"
         alt="Alt"
@@ -12,6 +12,6 @@ it("Renders <Figure /> without crashing", () => {
         caption="Caption"
         centered
       />
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });

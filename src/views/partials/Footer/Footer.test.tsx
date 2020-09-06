@@ -1,15 +1,15 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Footer from ".";
 
 it("Renders <Footer /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <Footer
         version="Version"
         copyright="Copyright"
-        topButtonTitle="Top Button Title"
+        topButtonLabel="Top Button Label"
       />
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });

@@ -1,10 +1,10 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Menu from ".";
 
 it("Renders <Menu /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <Menu
         menu={[
           {
@@ -18,6 +18,6 @@ it("Renders <Menu /> without crashing", () => {
           },
         ]}
       />
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });

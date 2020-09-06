@@ -1,10 +1,10 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import ProgressBar from ".";
 
 it("Renders <ProgressBar /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <ProgressBar
         label="Label"
         progress="Progress"
@@ -13,6 +13,6 @@ it("Renders <ProgressBar /> without crashing", () => {
         detailsOnHover
         filling={50}
       />
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });

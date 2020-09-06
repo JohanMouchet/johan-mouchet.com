@@ -133,10 +133,10 @@ const Home: React.FC = () => {
                         label:
                           /*html*/
                           `React`,
-                        filling: 80,
+                        filling: 100,
                         progress:
                           /*html*/
-                          `8`,
+                          `10`,
                       },
                       {
                         label:

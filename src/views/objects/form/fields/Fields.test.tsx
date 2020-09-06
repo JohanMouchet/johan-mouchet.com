@@ -1,16 +1,16 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import { Field, Select, Textarea } from ".";
 
 it("Renders <Field /> without crashing", () => {
   expect(
-    shallow(<Field type="text" name="name" value="Value" />)
+    render(<Field type="text" name="name" value="Value" />).container.firstChild
   ).toMatchSnapshot();
 });
 
 it("Renders <Select /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <Select
         name="name"
         options={[
@@ -20,10 +20,12 @@ it("Renders <Select /> without crashing", () => {
           },
         ]}
       />
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });
 
 it("Renders <Textarea /> without crashing", () => {
-  expect(shallow(<Textarea name="name">children</Textarea>)).toMatchSnapshot();
+  expect(
+    render(<Textarea name="name">children</Textarea>).container.firstChild
+  ).toMatchSnapshot();
 });

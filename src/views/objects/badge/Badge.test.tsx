@@ -1,7 +1,9 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Badge from "./";
 
 it("Renders <Badge /> without crashing", () => {
-  expect(shallow(<Badge>children</Badge>)).toMatchSnapshot();
+  expect(
+    render(<Badge>children</Badge>).container.firstChild
+  ).toMatchSnapshot();
 });

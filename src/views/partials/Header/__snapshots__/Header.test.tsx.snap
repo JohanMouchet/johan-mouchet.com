@@ -2,38 +2,38 @@
 
 exports[`Renders <Header /> without crashing 1`] = `
 <header
-  className="p-header"
+  class="p-header"
 >
   <div
-    className="p-header__inner"
+    class="p-header__inner"
   >
     <h1
-      className="p-header__heading"
+      class="p-header__heading"
     >
       <span
-        className="p-header__half p-header__half--left"
+        class="p-header__half p-header__half--left"
       >
         <span
-          className="p-header__text-wrapper"
+          class="p-header__text-wrapper"
         >
           <span
-            className="p-header__text"
+            class="p-header__text"
           >
             Firstname
           </span>
         </span>
       </span>
       <span
-        className="p-header__line"
+        class="p-header__line"
       />
       <span
-        className="p-header__half p-header__half--right"
+        class="p-header__half p-header__half--right"
       >
         <span
-          className="p-header__text-wrapper"
+          class="p-header__text-wrapper"
         >
           <span
-            className="p-header__text"
+            class="p-header__text"
           >
             Lastname
           </span>
@@ -41,7 +41,7 @@ exports[`Renders <Header /> without crashing 1`] = `
       </span>
     </h1>
     <h2
-      className="p-header__tagline"
+      class="p-header__tagline"
     >
       Tagline
     </h2>

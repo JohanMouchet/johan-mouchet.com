@@ -1,10 +1,10 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import PersonalWorks from ".";
 
 it("Renders <PersonalWorks /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <PersonalWorks
         works={[
           {
@@ -14,6 +14,6 @@ it("Renders <PersonalWorks /> without crashing", () => {
           },
         ]}
       />
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });

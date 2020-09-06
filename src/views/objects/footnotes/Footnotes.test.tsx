@@ -1,16 +1,17 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import { FootnotesReference, FootnotesNotes } from ".";
 
 it("Renders <FootnotesReference /> without crashing", () => {
   expect(
-    shallow(<FootnotesReference id="id-1" text="1" label="" />)
+    render(<FootnotesReference id="id-1" text="1" label="" />).container
+      .firstChild
   ).toMatchSnapshot();
 });
 
 it("Renders <FootnotesNotes /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <FootnotesNotes
         notes={[
           {
@@ -20,6 +21,6 @@ it("Renders <FootnotesNotes /> without crashing", () => {
           },
         ]}
       />
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });

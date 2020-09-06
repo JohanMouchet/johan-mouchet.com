@@ -1,10 +1,10 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Skills from ".";
 
 it("Renders <Experience /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <Skills
         skills={[
           {
@@ -14,6 +14,6 @@ it("Renders <Experience /> without crashing", () => {
           },
         ]}
       />
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });

@@ -33,6 +33,7 @@ export {
 export { default as List } from "./list";
 export { default as Loader } from "./loader";
 export { default as Menu } from "./menu";
+export { default as Modal } from "./modal";
 export { default as ProgressBar } from "./progress-bar";
 export { default as Range } from "./form/range";
 export { default as Table } from "./table";

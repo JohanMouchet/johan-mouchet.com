@@ -2,7 +2,7 @@
 
 exports[`Renders <List /> without crashing 1`] = `
 <ul
-  className="o-list o-list--hStriped o-list--unstyled o-list--lg"
+  class="o-list o-list--hStriped o-list--unstyled o-list--lg"
 >
   <li />
 </ul>

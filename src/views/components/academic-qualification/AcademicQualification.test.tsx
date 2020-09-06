@@ -1,10 +1,10 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import AcademicQualification from ".";
 
 it("Renders <AcademicQualification /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <AcademicQualification
         degrees={[
           {
@@ -18,6 +18,6 @@ it("Renders <AcademicQualification /> without crashing", () => {
           },
         ]}
       />
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });
