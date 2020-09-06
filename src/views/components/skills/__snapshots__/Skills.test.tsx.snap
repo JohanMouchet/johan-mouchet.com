@@ -2,19 +2,48 @@
 
 exports[`Renders <Experience /> without crashing 1`] = `
 <ul
-  className="c-skills o-list--unstyled"
+  class="c-skills o-list--unstyled"
 >
   <li
-    className="c-skill"
-    key="Label"
+    class="c-skill"
   >
-    <ProgressBar
-      detailsOnHover={true}
-      filling={50}
-      label="Label"
-      progress="Progress"
-      total="10"
-    />
+    <div
+      class="o-progress-bar o-progress-bar--details-on-hover"
+      tabindex="0"
+    >
+      <span
+        class="o-progress-bar__labels"
+      >
+        <span
+          class="o-progress-bar__label"
+        >
+          Label
+        </span>
+        <span
+          class="o-progress-bar__details"
+        >
+          <span
+            class="o-progress-bar__progress"
+          >
+            Progress
+          </span>
+           / 
+          <span
+            class="o-progress-bar__total"
+          >
+            10
+          </span>
+        </span>
+      </span>
+      <div
+        class="o-progress-bar__container"
+      >
+        <div
+          class="o-progress-bar__filling"
+          style="width: 50%;"
+        />
+      </div>
+    </div>
   </li>
 </ul>
 `;

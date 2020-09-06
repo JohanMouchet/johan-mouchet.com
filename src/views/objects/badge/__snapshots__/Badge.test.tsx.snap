@@ -2,7 +2,7 @@
 
 exports[`Renders <Badge /> without crashing 1`] = `
 <span
-  className="o-badge"
+  class="o-badge"
 >
   children
 </span>

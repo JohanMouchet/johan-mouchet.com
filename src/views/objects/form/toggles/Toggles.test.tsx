@@ -1,23 +1,23 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import { Checkbox, Radio } from ".";
 
 it("Renders <Checkbox /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <Checkbox name="name" value="value" checked>
         children
       </Checkbox>
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });
 
 it("Renders <Radio /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <Radio name="name" value="value" checked>
         children
       </Radio>
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });

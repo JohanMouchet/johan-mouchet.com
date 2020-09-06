@@ -2,17 +2,16 @@
 
 exports[`Renders <Experiences /> without crashing 1`] = `
 <div
-  className="c-experiences"
+  class="c-experiences"
 >
   <section
-    className="c-experience"
-    key="Name - Mon Jan 01 2018 11:00:00 GMT+1100 (Australian Eastern Daylight Time)"
+    class="c-experience"
   >
     <h3
-      className="c-experience__heading"
+      class="c-experience__heading"
     >
       <a
-        className="c-experience__company"
+        class="c-experience__company"
         href="#"
         rel="noopener noreferrer"
         target="_blank"
@@ -25,17 +24,17 @@ exports[`Renders <Experiences /> without crashing 1`] = `
       Job Title
     </h3>
     <p
-      className="c-experience__subheading"
+      class="c-experience__subheading"
     >
       <span
-        className="c-experience__date"
+        class="c-experience__date"
       >
         Jan 2018
          – Jan
          2019
       </span>
       <span
-        className="c-experience__duration"
+        class="c-experience__duration"
       >
          
         (
@@ -44,13 +43,10 @@ exports[`Renders <Experiences /> without crashing 1`] = `
       </span>
     </p>
     <p
-      className="c-experience__lede"
+      class="c-experience__lede"
     >
       Lede
     </p>
-    <Projects
-      projects={Array []}
-    />
   </section>
 </div>
 `;

@@ -2,17 +2,16 @@
 
 exports[`Renders <AcademicQualification /> without crashing 1`] = `
 <div
-  className="c-academic-qualifications"
+  class="c-academic-qualifications"
 >
   <section
-    className="c-academic-qualification"
-    key="Title"
+    class="c-academic-qualification"
   >
     <h3
-      className="c-academic-qualification__heading"
+      class="c-academic-qualification__heading"
     >
       <a
-        className="c-academic-qualification__establishment"
+        class="c-academic-qualification__establishment"
         href="#"
       >
         Name
@@ -22,13 +21,13 @@ exports[`Renders <AcademicQualification /> without crashing 1`] = `
        ⁠—
        
       <span
-        className="c-academic-qualification__title"
+        class="c-academic-qualification__title"
       >
         Title
       </span>
     </h3>
     <span
-      className="c-academic-qualification__graduation-year"
+      class="c-academic-qualification__graduation-year"
     >
       2020
     </span>

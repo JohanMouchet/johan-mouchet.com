@@ -16,7 +16,7 @@
 
   &-input {
     // TODO: find a way to import single utility
-    // @extend .u-is--visuallyHidden;
+    // @extend .u-is-visually-hidden;
 
     &:not(:disabled) ~ #{$root}-icon,
     &:not(:disabled) ~ #{$root}-text {

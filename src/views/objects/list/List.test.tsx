@@ -1,10 +1,10 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import List from ".";
 
 it("Renders <List /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <List
         as="ul"
         unstyled={false}
@@ -15,6 +15,6 @@ it("Renders <List /> without crashing", () => {
       >
         <li></li>
       </List>
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });

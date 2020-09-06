@@ -1,10 +1,10 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Card from ".";
 
 it("Renders <Card /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <Card
         bannerUrl="https://via.placeholder.com/400x168"
         bannerGradient
@@ -15,6 +15,6 @@ it("Renders <Card /> without crashing", () => {
       >
         children
       </Card>
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });

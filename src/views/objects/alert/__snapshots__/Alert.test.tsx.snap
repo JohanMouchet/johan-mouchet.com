@@ -2,31 +2,35 @@
 
 exports[`Renders <Alert /> without crashing 1`] = `
 <div
-  className="o-alert o-alert--closable o-alert--info o-alert--fixed-bottom container u-animation u-animation--fade-in-up"
+  class="o-alert o-alert--closable o-alert--info o-alert--fixed-bottom container u-animation u-animation--fade-in-up"
 >
   <div
-    className="grid grid--noWrap-@xs"
+    class="grid grid--noWrap-@xs"
   >
     <div
       aria-label="info"
-      className="o-alert__icon cell"
+      class="o-alert__icon cell"
     >
-      <ForwardRef(SvgInfoCircle) />
+      <svg>
+        info-circle.svg
+      </svg>
     </div>
     <div
-      className="o-alert__content cell cell--@xs"
+      class="o-alert__content cell cell--@xs"
     >
       children
     </div>
     <div
-      className="o-alert__close cell"
+      class="o-alert__close cell"
     >
       <button
         aria-label="Close"
-        className="o-alert__close-button"
-        onClick={[Function]}
+        class="o-alert__close-button"
+        type="button"
       >
-        <ForwardRef(SvgX) />
+        <svg>
+          x.svg
+        </svg>
       </button>
     </div>
   </div>

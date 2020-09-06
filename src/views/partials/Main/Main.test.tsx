@@ -1,7 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Main from ".";
 
 it("Renders <Main /> without crashing", () => {
-  expect(shallow(<Main>children</Main>)).toMatchSnapshot();
+  expect(render(<Main>children</Main>).container.firstChild).toMatchSnapshot();
 });

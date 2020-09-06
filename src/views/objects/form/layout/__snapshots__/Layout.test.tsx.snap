@@ -2,10 +2,10 @@
 
 exports[`Renders <Fieldset /> without crashing 1`] = `
 <fieldset
-  className="o-form__fieldset"
+  class="o-form__fieldset"
 >
   <legend
-    className="o-form__legend"
+    class="o-form__legend"
   >
     legend
   </legend>
@@ -15,11 +15,11 @@ exports[`Renders <Fieldset /> without crashing 1`] = `
 
 exports[`Renders <FormGroup /> without crashing 1`] = `
 <div
-  className="o-form__group o-form__group--success"
+  class="o-form__group o-form__group--success"
 >
   children
   <span
-    className="o-form__group-detail"
+    class="o-form__group-detail"
   >
     Detail
   </span>
@@ -28,7 +28,7 @@ exports[`Renders <FormGroup /> without crashing 1`] = `
 
 exports[`Renders <Label /> without crashing 1`] = `
 <label
-  className="o-form__label o-form__label--block"
+  class="o-form__label o-form__label--block"
 >
   Label
 </label>

@@ -1,13 +1,13 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Button from ".";
 
 it("Renders <Button /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <Button type="anchor" url="#" variant="primary" size="sm" block="@sm">
         children
       </Button>
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });

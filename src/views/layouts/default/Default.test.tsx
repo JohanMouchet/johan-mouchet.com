@@ -1,7 +1,9 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Default from ".";
 
 it("Renders <Default /> without crashing", () => {
-  expect(shallow(<Default>children</Default>)).toMatchSnapshot();
+  expect(
+    render(<Default>children</Default>).container.firstChild
+  ).toMatchSnapshot();
 });

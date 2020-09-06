@@ -1,10 +1,10 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Experiences from ".";
 
 it("Renders <Experiences /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <Experiences
         experiences={[
           {
@@ -21,6 +21,6 @@ it("Renders <Experiences /> without crashing", () => {
           },
         ]}
       />
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });

@@ -1,13 +1,13 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Article from ".";
 
 it("Renders <Article /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <Article size="sm" margin="no-margin" variant="secondary">
         children
       </Article>
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });

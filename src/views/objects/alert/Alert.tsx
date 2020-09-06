@@ -65,6 +65,7 @@ const Alert: React.FC<Props> = ({
               className="o-alert__close-button"
               aria-label="Close"
               onClick={() => setOpenState(!open)}
+              type="button"
             >
               <IconX />
             </button>

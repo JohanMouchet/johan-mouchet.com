@@ -1,13 +1,13 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Anchor from ".";
 
 it("Renders <Anchor /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <Anchor as="h2" id="id" marker="#">
         children
       </Anchor>
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });

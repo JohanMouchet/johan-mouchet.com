@@ -1,0 +1,24 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { text, select, boolean } from "@storybook/addon-knobs";
+import Modal from ".";
+
+<Meta title="Objects|Modal" component={Modal} />
+
+# Modal
+
+<Preview>
+  <Story name="default">
+    <Modal
+      isOpen={boolean("isOpen", true)}
+      size={select("size", {
+        "": null,
+        sm: "sm",
+        md: "md",
+      })}
+      triggerLabel={text("triggerLabel", "Open Modal")}
+      closeLabel={text("closeLabel", "Close Modal")}
+    >
+      {text("children", "children")}
+    </Modal>
+  </Story>
+</Preview>

@@ -1,10 +1,10 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Breadcrumb from ".";
 
 it("Renders <Breadcrumb /> without crashing", () => {
   expect(
-    shallow(
+    render(
       <Breadcrumb
         levels={[
           {
@@ -13,6 +13,6 @@ it("Renders <Breadcrumb /> without crashing", () => {
           },
         ]}
       />
-    )
+    ).container.firstChild
   ).toMatchSnapshot();
 });

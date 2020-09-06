@@ -13,7 +13,7 @@ This website is,
   - published as an offline-first Progressive Web App
 - maintaining a design system with [Storybook](https://www.johan-mouchet.com/storybook/?path=/docs/about-getting-started--page)
 - type-checked with TypeScript
-- unit and snapshot tested with Jest and Enzyme
+- unit and snapshot tested with Jest and React Testing Library
 - using Sass and CSS post-processing
 - linted and formated with ESlint, stylelint and Prettier, enforced by Husky and lint-staged
 - using client side routing with [wouter](https://github.com/molefrog/wouter)

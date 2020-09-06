@@ -2,21 +2,22 @@
 
 exports[`Renders <FootnotesNotes /> without crashing 1`] = `
 <ol
-  className="o-footnotes"
+  class="o-footnotes"
 >
   <li
-    className="o-footnotes__note"
+    class="o-footnotes__note"
     id="footnote:id-1"
-    key="id-1"
   >
     Note
      
     <a
       aria-label="Jump back to reference"
-      className="o-footnotes__backref"
+      class="o-footnotes__backref"
       href="#footnote-ref:id-1"
     >
-      <ForwardRef(SvgArrowReturnLeft) />
+      <svg>
+        arrow-return-left.svg
+      </svg>
     </a>
   </li>
 </ol>
@@ -26,7 +27,7 @@ exports[`Renders <FootnotesReference /> without crashing 1`] = `
 <sup>
   <a
     aria-label=""
-    className="o-footnote-ref"
+    class="o-footnote-ref"
     href="#footnote:id-1"
     id="footnote-ref:id-1"
   >
