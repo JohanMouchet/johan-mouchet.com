@@ -32,6 +32,9 @@ const Home: React.FC = () => {
   const query = gql`
     {
       skills(uid: "skills", lang: "en-au") {
+        _meta {
+          uid
+        }
         skills {
           label
           filling
@@ -43,6 +46,10 @@ const Home: React.FC = () => {
           id
         }
       }
+      about_this_website(uid: "about-this-website", lang: "en-au") {
+        section_title
+        paragraph
+      }
     }
   `;
 
@@ -52,14 +59,20 @@ const Home: React.FC = () => {
     <Default>
       {loading ? (
         <Main>
-          <div className="container u-align--center">
-            <Loader />
+          <div className="container u-align--center u-full--height">
+            <div className="grid grid--xCenter-@xs grid--yCenter-@xs u-full--height">
+              <div className="cell">
+                <Loader />
+              </div>
+            </div>
           </div>
         </Main>
       ) : error ? (
         <Main>
-          <div className="container u-align--center">
-            Error, please reload the page.
+          <div className="container u-align--center u-full--height">
+            <div className="grid grid--xCenter-@xs grid--yCenter-@xs u-full--height">
+              <div className="cell">Error, please reload the page.</div>
+            </div>
           </div>
         </Main>
       ) : (
@@ -69,6 +82,9 @@ const Home: React.FC = () => {
             DATA:
             {/* eslint-disable-next-line */}
             {data.skills.skills.map((skill: any) => JSON.stringify(skill))}
+            {/* Consider using prismic-dom */}
+            {/* Data log */}
+            {console.log("data", data)}
             {/* GQL end */}
             <div className="container container--noGutter-lgGrid">
               <div className="grid grid--lgGutter-@xs">
