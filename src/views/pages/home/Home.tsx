@@ -242,7 +242,7 @@ const Home: React.FC = () => (
               </Anchor>
 
               <SocialMedia
-                medias={[
+                media={[
                   {
                     name:
                       /*html*/

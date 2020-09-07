@@ -6,7 +6,7 @@ it("Renders <SocialMedia /> without crashing", () => {
   expect(
     render(
       <SocialMedia
-        medias={[
+        media={[
           {
             name: "Name",
             url: "#",
