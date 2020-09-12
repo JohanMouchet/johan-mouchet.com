@@ -1,9 +1,9 @@
 import React from "react";
 import cx from "classnames";
-import "./Projects.scss";
-import { Details } from "views/objects";
-import pluralize from "utils/pluralize";
 import parse from "utils/parse";
+import pluralize from "utils/pluralize";
+import { Details } from "views/objects";
+import "./Projects.scss";
 
 type Thumbnail = {
   name: string;

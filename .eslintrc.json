@@ -1,6 +1,7 @@
 {
   "parser": "@typescript-eslint/parser",
   "plugins": [
+    "simple-import-sort",
     "jest",
     "@typescript-eslint"
   ],
@@ -19,5 +20,22 @@
         "plugin:mdx/recommended"
       ]
     }
-  ]
+  ],
+  "rules": {
+    "simple-import-sort/sort": [
+      "error",
+      {
+        "groups": [
+          [
+            "^react",
+            "^\\u0000",
+            "^@?\\w",
+            "^[^.]",
+            "^\\.",
+            "^.+\\.scss$"
+          ]
+        ]
+      }
+    ]
+  }
 }

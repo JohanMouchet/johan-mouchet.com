@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "wouter";
 import { Default } from "views/layouts";
 import { Main } from "views/partials";
+import { Link } from "wouter";
 
 const NotFound: React.FC = () => (
   <Default>
