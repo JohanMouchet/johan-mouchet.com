@@ -1,7 +1,7 @@
 import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
-import { COLORS } from "constants/colors";
 import { Table } from "views/objects";
-import "../storybook.scss";
+import "../../storybook.scss";
+import settings from "./colors.scss";
 
 <Meta title="Settings|Colors" />
 
@@ -22,77 +22,77 @@ import "../storybook.scss";
         {[
           {
             name: "Primary Lighter",
-            code: COLORS.PRIMARY_LIGHTER,
+            code: settings.COLOR_PRIMARY_LIGHTER,
             sassSetting: "$s-color-primary-lighter",
           },
           {
             name: "Primary",
-            code: COLORS.PRIMARY,
+            code: settings.COLOR_PRIMARY,
             sassSetting: "$s-color-primary",
           },
           {
             name: "Primary Darker",
-            code: COLORS.PRIMARY_DARKER,
+            code: settings.COLOR_PRIMARY_DARKER,
             sassSetting: "$s-color-primary-darker",
           },
           {
             name: "Secondary Lighter",
-            code: COLORS.SECONDARY_LIGHTER,
+            code: settings.COLOR_SECONDARY_LIGHTER,
             sassSetting: "$s-color-secondary-lighter",
           },
           {
             name: "Secondary",
-            code: COLORS.SECONDARY,
+            code: settings.COLOR_SECONDARY,
             sassSetting: "$s-color-secondary",
           },
           {
             name: "Secondary Darker",
-            code: COLORS.SECONDARY_DARKER,
+            code: settings.COLOR_SECONDARY_DARKER,
             sassSetting: "$s-color-secondary-darker",
           },
           {
             name: "White",
-            code: COLORS.WHITE,
+            code: settings.COLOR_WHITE,
             sassSetting: "$s-color-white",
           },
           {
             name: "Gray Lighter",
-            code: COLORS.GRAY_LIGHTER,
+            code: settings.COLOR_GRAY_LIGHTER,
             sassSetting: "$s-color-gray-lighter",
           },
           {
             name: "Gray",
-            code: COLORS.GRAY,
+            code: settings.COLOR_GRAY,
             sassSetting: "$s-color-gray",
           },
           {
             name: "Gray Darker",
-            code: COLORS.GRAY_DARKER,
+            code: settings.COLOR_GRAY_DARKER,
             sassSetting: "$s-color-gray-darker",
           },
           {
             name: "Black",
-            code: COLORS.BLACK,
+            code: settings.COLOR_BLACK,
             sassSetting: "$s-color-black",
           },
           {
             name: "Success",
-            code: COLORS.SUCCESS,
+            code: settings.COLOR_SUCCESS,
             sassSetting: "$s-color-success",
           },
           {
             name: "Info",
-            code: COLORS.INFO,
+            code: settings.COLOR_INFO,
             sassSetting: "$s-color-info",
           },
           {
             name: "Warning",
-            code: COLORS.WARNING,
+            code: settings.COLOR_WARNING,
             sassSetting: "$s-color-warning",
           },
           {
             name: "Danger",
-            code: COLORS.DANGER,
+            code: settings.COLOR_DANGER,
             sassSetting: "$s-color-danger",
           },
         ].map((color) => (

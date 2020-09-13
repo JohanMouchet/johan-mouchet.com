@@ -1,7 +1,7 @@
 import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
-import { TYPOGRAPHY } from "constants/typography";
 import { Table } from "views/objects";
+import settings from "./typography.scss";
 
 <Meta title="Settings|Typography" />
 
@@ -27,22 +27,22 @@ import { Table } from "views/objects";
             {[
               {
                 name: "Sans-serif",
-                stack: TYPOGRAPHY.SANS,
+                stack: settings.TYPOGRAPHY_SANS,
                 sassSetting: "$s-font-family-sans",
               },
               {
                 name: "Serif",
-                stack: TYPOGRAPHY.SERIF,
+                stack: settings.TYPOGRAPHY_SERIF,
                 sassSetting: "$s-font-family-serif",
               },
               {
                 name: "Display",
-                stack: TYPOGRAPHY.DISPLAY,
+                stack: settings.TYPOGRAPHY_DISPLAY,
                 sassSetting: "$s-font-family-display",
               },
               {
                 name: "Monospace",
-                stack: TYPOGRAPHY.MONO,
+                stack: settings.TYPOGRAPHY_MONO,
                 sassSetting: "$s-font-family-mono",
               },
             ].map((typeface) => (

@@ -16,10 +16,3 @@ $s-shadows: (
     0 4px 6px -2px rgba($s-color-black, 0.1),
   ),
 );
-
-/* stylelint-disable selector-pseudo-class-no-unknown, property-no-unknown */
-:export {
-  s_shadows_sm: map-get($s-shadows, sm);
-  s_shadows_md: map-get($s-shadows, md);
-  s_shadows_lg: map-get($s-shadows, lg);
-}

@@ -1,7 +1,5 @@
 # TODO
 
-- Abstract Sass `:export` to avoid duplication
-  - Consider converting to CSS custom property
 - Add Storybook pages
   - Rename section SETTINGS / TOOLS / UTILITY
   - Font sizes `t-modular-scale(0)`
