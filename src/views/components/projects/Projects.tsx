@@ -1,7 +1,7 @@
 import React from "react";
 import cx from "classnames";
-import parse from "utils/parse";
-import pluralize from "utils/pluralize";
+import { parse } from "utils/parse";
+import { pluralize } from "utils/pluralize";
 import { Details } from "views/objects";
 import "./Projects.scss";
 
