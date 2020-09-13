@@ -1,6 +1,6 @@
-import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { BACKGROUNDS } from "constants/backgrounds";
+import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
 import { Table } from "views/objects";
+import settings from "./backgrounds.scss";
 
 <Meta title="Settings|Backgrounds" />
 
@@ -20,12 +20,12 @@ import { Table } from "views/objects";
         {[
           {
             name: "Dots",
-            source: BACKGROUNDS.DOTS,
+            source: settings.BACKGROUNDS_DOTS,
             sassSetting: "dots",
           },
           {
             name: "Zigzag",
-            source: BACKGROUNDS.ZIGZAG,
+            source: settings.BACKGROUNDS_ZIGZAG,
             sassSetting: "zigzag",
           },
         ].map((background) => (

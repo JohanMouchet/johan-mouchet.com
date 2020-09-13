@@ -1,6 +1,6 @@
 import React from "react";
 import { PROFILE } from "constants/profile";
-import parse from "utils/parse";
+import { parse } from "utils/parse";
 import "./Header.scss";
 
 type Props = {

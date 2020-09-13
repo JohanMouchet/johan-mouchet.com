@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.0.2",
-    "apollo-link-prismic": "^1.0.7",
+    "apollo-link-prismic": "^1.0.8",
     "classnames": "^2.2.6",
     "date-fns": "^2.15.0",
     "dompurify": "^2.0.12",
@@ -87,6 +87,7 @@
     "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-mdx": "^1.8.1",
     "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-simple-import-sort": "^5.0.3",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",

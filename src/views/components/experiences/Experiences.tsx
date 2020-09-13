@@ -1,6 +1,6 @@
 import React from "react";
-import duration from "utils/duration";
-import parse from "utils/parse";
+import { duration } from "utils/duration";
+import { parse } from "utils/parse";
 import { Projects } from "views/components";
 import "./Experiences.scss";
 

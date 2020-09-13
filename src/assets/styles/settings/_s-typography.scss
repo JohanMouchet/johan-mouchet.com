@@ -28,11 +28,3 @@ $s-color-link-active: $s-color-secondary-darker;
 /* Selection */
 $s-color-selection-text: $s-color-white;
 $s-color-selection-bg: $s-color-secondary;
-
-/* stylelint-disable selector-pseudo-class-no-unknown, property-no-unknown */
-:export {
-  s_typography_sans: $s-font-family-sans;
-  s_typography_serif: $s-font-family-serif;
-  s_typography_display: $s-font-family-display;
-  s_typography_mono: $s-font-family-mono;
-}

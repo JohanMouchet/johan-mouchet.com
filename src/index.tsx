@@ -1,13 +1,14 @@
+/* eslint-disable */
 import React from "react";
 import ReactDOM from "react-dom";
-// eslint-disable-next-line
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 // @ts-ignore
 import { PrismicLink } from "apollo-link-prismic";
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
-import { Switch, Route } from "wouter";
-import "assets/styles/_styles.scss";
-import { Home, NotFound } from "views/pages";
 import * as serviceWorker from "serviceWorker";
+import { Home, NotFound } from "views/pages";
+import { Route, Switch } from "wouter";
+import "assets/styles/_styles.scss";
+/* eslint-enable */
 
 const client = new ApolloClient({
   link: PrismicLink({
