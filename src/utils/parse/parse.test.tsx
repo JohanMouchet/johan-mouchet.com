@@ -1,5 +1,5 @@
 import React from "react";
-import parse from "./parse";
+import { parse } from ".";
 
 it("Converts an HTML string to JSX (through html-react-parser)", () =>
   expect(

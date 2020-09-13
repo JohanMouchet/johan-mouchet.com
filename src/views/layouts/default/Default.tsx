@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Footer } from "views/partials";
+import { Footer, Header } from "views/partials";
 import "./Default.scss";
 
 type Props = {

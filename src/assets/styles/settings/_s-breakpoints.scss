@@ -12,12 +12,3 @@ $s-breakpoints: (
   // Large devices (large desktops): 1366px and up
     xl: 1366px + 1
 );
-
-/* stylelint-disable selector-pseudo-class-no-unknown, property-no-unknown */
-:export {
-  s_breakpoints_xs: map-get($s-breakpoints, sm) - 2;
-
-  @each $bp-name, $bp-size in $s-breakpoints {
-    s_breakpoints_#{unquote($bp-name)}: $bp-size - 1;
-  }
-}

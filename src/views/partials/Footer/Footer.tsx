@@ -1,6 +1,6 @@
 import React from "react";
-import { VERSIONS } from "constants/versions";
 import { PROFILE } from "constants/profile";
+import { VERSIONS } from "constants/versions";
 import { IconChevronDown } from "views/objects";
 import "./Footer.scss";
 

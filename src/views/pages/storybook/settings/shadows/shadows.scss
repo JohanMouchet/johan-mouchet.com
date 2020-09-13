@@ -1,0 +1,8 @@
+@import "assets/styles/settings/_settings";
+
+/* stylelint-disable selector-pseudo-class-no-unknown, property-no-unknown */
+:export {
+  SHADOWS_SM: map-get($s-shadows, sm);
+  SHADOWS_MD: map-get($s-shadows, md);
+  SHADOWS_LG: map-get($s-shadows, lg);
+}

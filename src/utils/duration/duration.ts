@@ -1,5 +1,5 @@
 import { differenceInCalendarMonths } from "date-fns";
-import pluralize from "utils/pluralize";
+import { pluralize } from "utils/pluralize";
 
 /**
  * Returns the time duration between two dates as a string in the "X yr(s) X mo(s)" format

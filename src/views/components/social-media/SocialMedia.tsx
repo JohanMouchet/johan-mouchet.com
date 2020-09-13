@@ -2,17 +2,17 @@ import React from "react";
 import "./SocialMedia.scss";
 
 type Props = {
-  medias: Array<{
+  media: Array<{
     name: string;
     url: string;
     icon: React.ReactNode;
   }>;
 };
 
-const SocialMedia: React.FC<Props> = ({ medias }) =>
-  !medias?.length ? null : (
+const SocialMedia: React.FC<Props> = ({ media }) =>
+  !media?.length ? null : (
     <div className="grid">
-      {medias.map((media) => (
+      {media.map((media) => (
         <div
           className="c-social-media cell cell--6-@xs cell--4-@sm cell--12-@md"
           key={media.url}

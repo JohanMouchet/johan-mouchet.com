@@ -1,5 +1,12 @@
 import React from "react";
 import { PROFILE } from "constants/profile";
+import {
+  AcademicQualification,
+  Experiences,
+  PersonalWorks,
+  Skills,
+  SocialMedia,
+} from "views/components";
 import { Default } from "views/layouts";
 import {
   Anchor,
@@ -16,14 +23,7 @@ import {
   IconYoutube,
   List,
 } from "views/objects";
-import {
-  Skills,
-  AcademicQualification,
-  SocialMedia,
-  Experiences,
-  PersonalWorks,
-} from "views/components";
-import { Main, Article } from "views/partials";
+import { Article, Main } from "views/partials";
 import "./Home.scss";
 
 const Home: React.FC = () => (
@@ -242,7 +242,7 @@ const Home: React.FC = () => (
               </Anchor>
 
               <SocialMedia
-                medias={[
+                media={[
                   {
                     name:
                       /*html*/

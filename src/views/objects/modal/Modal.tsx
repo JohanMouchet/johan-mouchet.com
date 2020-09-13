@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { createPortal } from "react-dom";
-import FocusTrap from "focus-trap-react";
 import cx from "classnames";
+import FocusTrap from "focus-trap-react";
 import { IconX } from "views/objects";
 import "./Modal.scss";
 

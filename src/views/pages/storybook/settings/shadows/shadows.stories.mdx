@@ -1,6 +1,6 @@
-import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { SHADOWS } from "constants/shadows";
+import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
 import { Table } from "views/objects";
+import settings from "./shadows.scss";
 
 <Meta title="Settings|Shadows" />
 
@@ -20,15 +20,15 @@ import { Table } from "views/objects";
         {[
           {
             name: "sm",
-            source: SHADOWS.SM,
+            source: settings.SHADOWS_SM,
           },
           {
             name: "md",
-            source: SHADOWS.MD,
+            source: settings.SHADOWS_MD,
           },
           {
             name: "lg",
-            source: SHADOWS.LG,
+            source: settings.SHADOWS_LG,
           },
         ].map((shadow) => (
           <tr key={shadow.source}>

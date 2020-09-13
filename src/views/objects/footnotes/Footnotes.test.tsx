@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { FootnotesReference, FootnotesNotes } from ".";
+import { FootnotesNotes, FootnotesReference } from ".";
 
 it("Renders <FootnotesReference /> without crashing", () => {
   expect(
