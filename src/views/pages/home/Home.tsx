@@ -166,6 +166,15 @@ const Home: React.FC = () => {
                       {
                         label:
                           /*html*/
+                          `GraphQL`,
+                        filling: 60,
+                        progress:
+                          /*html*/
+                          `6`,
+                      },
+                      {
+                        label:
+                          /*html*/
                           `HTML`,
                         filling: 100,
                         progress:
@@ -532,7 +541,7 @@ const Home: React.FC = () => {
                               `Klip Studio`,
                             url:
                               /*html*/
-                              `https://www.klipdesk.co`,
+                              `https://www.isobar.com/en-au/case-studies/australia/2019/september/klip-sports`,
                             lede:
                               /*html*/
                               `Web application dedicated to the sport rights holders industry. Allows editing of live or recorded streams to produce highlights shareable on social media.`,
@@ -597,10 +606,10 @@ const Home: React.FC = () => {
                         company: {
                           url:
                             /*html*/
-                            `https://www.amaze.com/`,
+                            `https://www.amazerealise.com/`,
                           name:
                             /*html*/
-                            `Amaze`,
+                            `AmazeRealise`,
                         },
                         location:
                           /*html*/
@@ -1017,6 +1026,102 @@ const Home: React.FC = () => {
                 <hr />
 
                 <Article>
+                  <Anchor as="h2" id="open-source">
+                    Open-Source
+                  </Anchor>
+
+                  <div className="grid">
+                    <div className="cell cell--12-@xs cell--6-@sm cell--4-@lg">
+                      <h3>
+                        <a
+                          href="https://www.johan-mouchet.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          johan-mouchet.com
+                        </a>
+                      </h3>
+
+                      <p>
+                        <i>My portfolio.</i>
+                      </p>
+
+                      <List>
+                        <li>
+                          bootstrapped with Create React App
+                          <ul>
+                            <li>including React, webpack, Babel and more</li>
+                            <li>
+                              published as an offline-first Progressive Web App
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          maintaining a design system with{" "}
+                          <a href="/storybook/?path=/docs/about-getting-started--page">
+                            Storybook
+                          </a>
+                        </li>
+                        <li>type-checked with TypeScript</li>
+                        <li>
+                          unit and snapshot tested with Jest and React Testing
+                          Library
+                        </li>
+                        <li>using Sass and CSS post-processing</li>
+                        <li>
+                          linted and formated with ESlint, stylelint and
+                          Prettier,
+                          <br />
+                          enforced by Husky and lint-staged
+                        </li>
+                        <li>
+                          using client side routing with{" "}
+                          <a href="https://github.com/molefrog/wouter">
+                            wouter
+                          </a>
+                        </li>
+                        <li>deployed, pre-rendered, with Netlify</li>
+                      </List>
+                    </div>
+                    <div className="cell cell--12-@xs cell--6-@sm cell--4-@lg">
+                      <h3>
+                        <a
+                          href="https://github.com/JohanMouchet/fluxgrid"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Fluxgrid
+                        </a>
+                      </h3>
+
+                      <p>
+                        <i>
+                          Yet another responsive utility-based CSS grid
+                          customisable with Sass.
+                        </i>
+                      </p>
+
+                      <List>
+                        <li>Bundled with Parcel.js</li>
+                        <li>Built with Sass, postcss</li>
+                        <li>
+                          Distributed on{" "}
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.npmjs.com/package/fluxgrid"
+                          >
+                            npm
+                          </a>
+                        </li>
+                      </List>
+                    </div>
+                  </div>
+                </Article>
+
+                <hr />
+
+                <Article>
                   <Anchor as="h2" id="personal-works">
                     Personal Works
                   </Anchor>
@@ -1084,68 +1189,15 @@ const Home: React.FC = () => {
                   />
                 </Article>
 
-                <hr className="u-vr--bottom-0-@xs" />
+                <hr />
 
-                <div className="grid">
-                  <div className="cell cell--12-@xs cell--6-@lg">
-                    <Article>
-                      <Anchor as="h2" id="about-this-website">
-                        About This Website
-                      </Anchor>
+                <Article>
+                  <Anchor as="h2" id="get-in-touch">
+                    Get In Touch
+                  </Anchor>
 
-                      <p>
-                        This website is open-sourced on{" "}
-                        <a href="https://github.com/JohanMouchet/johan-mouchet.com">
-                          GitHub
-                        </a>
-                        , it is
-                      </p>
-                      <List>
-                        <li>
-                          bootstrapped with Create React App
-                          <ul>
-                            <li>including React, webpack, Babel and more</li>
-                            <li>
-                              published as an offline-first Progressive Web App
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          maintaining a design system with{" "}
-                          <a href="/storybook/?path=/docs/about-getting-started--page">
-                            Storybook
-                          </a>
-                        </li>
-                        <li>type-checked with TypeScript</li>
-                        <li>unit and snapshot tested with Jest and Enzyme</li>
-                        <li>using Sass and CSS post-processing</li>
-                        <li>
-                          linted and formated with ESlint, stylelint and
-                          Prettier,
-                          <br />
-                          enforced by Husky and lint-staged
-                        </li>
-                        <li>
-                          using client side routing with{" "}
-                          <a href="https://github.com/molefrog/wouter">
-                            wouter
-                          </a>
-                        </li>
-                        <li>deployed, pre-rendered, with Netlify</li>
-                      </List>
-                    </Article>
-                  </div>
-
-                  <div className="cell cell--12-@xs cell--hidden-@lg">
-                    <hr className="u-vr--top-0-@xs u-vr--bottom-0-@xs" />
-                  </div>
-
-                  <div className="cell cell--12-@xs cell--6-@lg">
-                    <Article>
-                      <Anchor as="h2" id="get-in-touch">
-                        Get In Touch
-                      </Anchor>
-
+                  <div className="grid">
+                    <div className="cell cell--12-@xs cell cell--4-@md">
                       <Button
                         type="anchor"
                         url={`mailto:${PROFILE.email}`}
@@ -1165,9 +1217,9 @@ const Home: React.FC = () => {
                       >
                         LinkedIn
                       </Button>
-                    </Article>
+                    </div>
                   </div>
-                </div>
+                </Article>
               </div>
             </div>
           </section>

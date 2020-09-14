@@ -2,12 +2,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import "assets/styles/_styles.scss";
 // @ts-ignore
 import { PrismicLink } from "apollo-link-prismic";
 import * as serviceWorker from "serviceWorker";
 import { Home, NotFound } from "views/pages";
 import { Route, Switch } from "wouter";
-import "assets/styles/_styles.scss";
 /* eslint-enable */
 
 const client = new ApolloClient({
