@@ -969,7 +969,7 @@ const Home: React.FC = () => (
             <hr />
 
             <Article>
-              <Anchor as="h2" id="about-this-website">
+              <Anchor as="h2" id="open-source">
                 Open-Source
               </Anchor>
 
