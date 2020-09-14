@@ -475,7 +475,7 @@ const Home: React.FC = () => (
                           `Klip Studio`,
                         url:
                           /*html*/
-                          `https://www.klipdesk.co`,
+                          `https://www.isobar.com/en-au/case-studies/australia/2019/september/klip-sports`,
                         lede:
                           /*html*/
                           `Web application dedicated to the sport rights holders industry. Allows editing of live or recorded streams to produce highlights shareable on social media.`,
@@ -540,10 +540,10 @@ const Home: React.FC = () => (
                     company: {
                       url:
                         /*html*/
-                        `https://www.amaze.com/`,
+                        `https://www.amazerealise.com/`,
                       name:
                         /*html*/
-                        `Amaze`,
+                        `AmazeRealise`,
                     },
                     location:
                       /*html*/
