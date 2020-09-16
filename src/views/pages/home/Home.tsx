@@ -32,11 +32,11 @@ const Home: React.FC = () => {
   const query = gql`
     {
       profile(uid: "profile", lang: "en-au") {
-        first_name
-        last_name
+        firstName: first_name
+        lastName: last_name
         image
         email
-        social_networks {
+        socialNetworks: social_networks {
           name
           url {
             _linkType
@@ -46,13 +46,13 @@ const Home: React.FC = () => {
         traits
       }
       home(uid: "home", lang: "en-au") {
-        title_1
-        paragraph_1
-        title_2
-        paragraph_2
+        title1: title_1
+        paragraph1: paragraph_1
+        title2: title_2
+        paragraph2: paragraph_2
       }
       skills(uid: "skills", lang: "en-au") {
-        section_title
+        sectionTitle: section_title
         skills {
           label
           filling
@@ -60,62 +60,68 @@ const Home: React.FC = () => {
         }
       }
       tools(uid: "tools", lang: "en-au") {
-        section_title
+        sectionTitle: section_title
         tools
       }
-      academic_qualifications(uid: "academic-qualifications", lang: "en-au") {
-        section_title
+      academicQualifications: academic_qualifications(
+        uid: "academic-qualifications"
+        lang: "en-au"
+      ) {
+        sectionTitle: section_title
         degrees {
-          establishment_name
-          establishment_url {
+          establishmentName: establishment_name
+          establishmentUrl: establishment_url {
             _linkType
           }
           location
-          graduation_year
+          graduationYear: graduation_year
           title
         }
       }
       languages(uid: "languages", lang: "en-au") {
-        section_title
+        sectionTitle: section_title
         languages
       }
       interests(uid: "interests", lang: "en-au") {
-        section_title
+        sectionTitle: section_title
         interests
       }
-      career_experiences(uid: "career-experiences", lang: "en-au") {
-        section_title
+      careerExperiences: career_experiences(
+        uid: "career-experiences"
+        lang: "en-au"
+      ) {
+        sectionTitle: section_title
         experiences {
-          company_url {
+          companyUrl: company_url {
             _linkType
           }
-          company_name
+          companyName: company_name
           location
-          job_title
-          start_date
+          jobTitle: job_title
+          startDate: start_date
           present
-          end_date
-          contract_type
+          endDate: end_date
+          contractType: contract_type
           lede
           projects {
             _linkType
           }
         }
       }
-      personal_works(uid: "personal-works", lang: "en-au") {
-        section_title
+      personalWorks: personal_works(uid: "personal-works", lang: "en-au") {
+        sectionTitle: section_title
         paragraph
         works {
           url {
             _linkType
           }
-          thumbnail_src {
+          thumbnailSrc: thumbnail_src {
             _linkType
           }
-          thumbnail_external_src {
+          thumbnailExternalSrc: thumbnail_external_src {
             _linkType
           }
-          source_icon
+          sourceIcon: source_icon
         }
       }
     }
