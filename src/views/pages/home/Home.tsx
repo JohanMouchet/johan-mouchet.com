@@ -39,7 +39,9 @@ const Home: React.FC = () => {
         socialNetworks: social_networks {
           name
           url {
-            _linkType
+            ... on _ExternalLink {
+              url
+            }
           }
           icon
         }
@@ -71,7 +73,9 @@ const Home: React.FC = () => {
         degrees {
           establishmentName: establishment_name
           establishmentUrl: establishment_url {
-            _linkType
+            ... on _ExternalLink {
+              url
+            }
           }
           location
           graduationYear: graduation_year
@@ -93,7 +97,9 @@ const Home: React.FC = () => {
         sectionTitle: section_title
         experiences {
           companyUrl: company_url {
-            _linkType
+            ... on _ExternalLink {
+              url
+            }
           }
           companyName: company_name
           location
@@ -113,13 +119,19 @@ const Home: React.FC = () => {
         paragraph
         works {
           url {
-            _linkType
+            ... on _ExternalLink {
+              url
+            }
           }
           thumbnailSrc: thumbnail_src {
-            _linkType
+            ... on _FileLink {
+              url
+            }
           }
           thumbnailExternalSrc: thumbnail_external_src {
-            _linkType
+            ... on _ExternalLink {
+              url
+            }
           }
           sourceIcon: source_icon
         }
