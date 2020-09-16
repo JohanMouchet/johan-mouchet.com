@@ -31,24 +31,92 @@ import "./Home.scss";
 const Home: React.FC = () => {
   const query = gql`
     {
-      skills(uid: "skills", lang: "en-au") {
-        _meta {
-          uid
+      profile(uid: "profile", lang: "en-au") {
+        first_name
+        last_name
+        image
+        email
+        social_networks {
+          name
+          url {
+            _linkType
+          }
+          icon
         }
+        traits
+      }
+      home(uid: "home", lang: "en-au") {
+        title_1
+        paragraph_1
+        title_2
+        paragraph_2
+      }
+      skills(uid: "skills", lang: "en-au") {
+        section_title
         skills {
           label
           filling
           progress
         }
       }
-      home(uid: "home", lang: "en-au") {
-        _meta {
-          id
+      tools(uid: "tools", lang: "en-au") {
+        section_title
+        tools
+      }
+      academic_qualifications(uid: "academic-qualifications", lang: "en-au") {
+        section_title
+        degrees {
+          establishment_name
+          establishment_url {
+            _linkType
+          }
+          location
+          graduation_year
+          title
         }
       }
-      about_this_website(uid: "about-this-website", lang: "en-au") {
+      languages(uid: "languages", lang: "en-au") {
+        section_title
+        languages
+      }
+      interests(uid: "interests", lang: "en-au") {
+        section_title
+        interests
+      }
+      career_experiences(uid: "career-experiences", lang: "en-au") {
+        section_title
+        experiences {
+          company_url {
+            _linkType
+          }
+          company_name
+          location
+          job_title
+          start_date
+          present
+          end_date
+          contract_type
+          lede
+          projects {
+            _linkType
+          }
+        }
+      }
+      personal_works(uid: "personal-works", lang: "en-au") {
         section_title
         paragraph
+        works {
+          url {
+            _linkType
+          }
+          thumbnail_src {
+            _linkType
+          }
+          thumbnail_external_src {
+            _linkType
+          }
+          source_icon
+        }
       }
     }
   `;
