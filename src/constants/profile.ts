@@ -8,7 +8,6 @@ export const PROFILE = {
     x1: profileImageX1,
     x2: profileImageX2,
   },
-  email: "mouchet.johan@gmail.com",
   socialNetworks: {
     linkedIn: `https://www.linkedin.com/in/johanmouchet`,
     twitter: `https://twitter.com/JohanMouchet`,

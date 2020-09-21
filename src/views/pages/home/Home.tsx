@@ -1,6 +1,7 @@
 import React from "react";
 import { gql, useQuery } from "@apollo/client";
 import { PROFILE } from "constants/profile";
+import { RichText } from "prismic-reactjs";
 import {
   AcademicQualification,
   Experiences,
@@ -165,24 +166,16 @@ const Home: React.FC = () => {
         <Main margin="no-margin">
           <section className="home-about">
             {/* GQL start */}
-            DATA:
-            {/* eslint-disable-next-line */}
-            {data.skills.skills.map((skill: any) => JSON.stringify(skill))}
-            {/* Consider using prismic-dom */}
-            {/* Data log */}
             {console.log("data", data)}
             {/* GQL end */}
             <div className="container container--noGutter-lgGrid">
               <div className="grid grid--lgGutter-@xs">
                 <div className="cell cell--12-@xs cell--6-@sm">
-                  <h2 className="home-about__heading">About me</h2>
+                  <h2 className="home-about__heading">{data.home.title1}</h2>
 
-                  <p className="home-about__paragraph">
-                    Originally from Marseille, France, I moved to London in 2013
-                    where I graduated from a master degree in IT and started my
-                    career as a <b>front-end developer</b>. In 2017, I relocated
-                    to <b>Melbourne</b> looking for new opportunities.
-                  </p>
+                  <div className="home-about__paragraph">
+                    <RichText render={data.home.paragraph1} />
+                  </div>
                 </div>
 
                 <div className="home-cell--gray-lighter cell cell--0-@xs cell--6-@sm"></div>
@@ -192,15 +185,9 @@ const Home: React.FC = () => {
                     <div className="cell">
                       <img
                         className="home-about__portrait"
-                        src={PROFILE.image.x1}
-                        srcSet={
-                          /*html*/
-                          `${PROFILE.image.x1}, ${PROFILE.image.x2} 1.25x`
-                        }
-                        alt={
-                          /*html*/
-                          `${PROFILE.firstName} ${PROFILE.lastName}`
-                        }
+                        src={`${data.profile.image.url}&q=100`}
+                        srcSet={`${data.profile.image.url}&q=100, ${data.profile.image.x2.url}&q=100 1.25x`}
+                        alt={data.profile.image.alt}
                       />
                     </div>
                   </div>
@@ -209,14 +196,11 @@ const Home: React.FC = () => {
                 <div className="home-cell--gray-lighter cell cell--hidden-@xs cell--visible-@md cell--3-@md"></div>
 
                 <div className="cell cell--12-@xs cell--6-@sm cell--yCenter-@sm">
-                  <h2 className="home-about__heading">Today,</h2>
+                  <h2 className="home-about__heading">{data.home.title2}</h2>
 
-                  <p className="home-about__paragraph">
-                    I'm driven by my appreciation for design, enthusiasm for new
-                    technologies and desire to collaborate. I'm committed and
-                    ready to work within a fast-paced environment on innovative
-                    and impactful ideas.
-                  </p>
+                  <div className="home-about__paragraph">
+                    <RichText render={data.home.paragraph2} />
+                  </div>
                 </div>
               </div>
             </div>
@@ -226,81 +210,19 @@ const Home: React.FC = () => {
               <div className="home-cell--gray-lighter cell cell--12-@xs cell--3-@md">
                 <Article>
                   <Anchor as="h2" id="skills">
-                    Skills
+                    {data.skills.sectionTitle}
                   </Anchor>
 
-                  <Skills
-                    skills={[
-                      {
-                        label:
-                          /*html*/
-                          `React`,
-                        filling: 100,
-                        progress:
-                          /*html*/
-                          `10`,
-                      },
-                      {
-                        label:
-                          /*html*/
-                          `JavaScript ⁠— TypeScript`,
-                        filling: 80,
-                        progress:
-                          /*html*/
-                          `8`,
-                      },
-                      {
-                        label:
-                          /*html*/
-                          `GraphQL`,
-                        filling: 60,
-                        progress:
-                          /*html*/
-                          `6`,
-                      },
-                      {
-                        label:
-                          /*html*/
-                          `HTML`,
-                        filling: 100,
-                        progress:
-                          /*html*/
-                          `10`,
-                      },
-                      {
-                        label:
-                          /*html*/
-                          `CSS ⁠— Sass`,
-                        filling: 100,
-                        progress:
-                          /*html*/
-                          `10`,
-                      },
-                      {
-                        label:
-                          /*html*/
-                          `UI & UX`,
-                        filling: 90,
-                        progress:
-                          /*html*/
-                          `9`,
-                      },
-                    ]}
-                  />
+                  <Skills skills={data.skills.skills} />
                 </Article>
 
                 <hr />
 
                 <Article>
                   <Anchor as="h2" id="tools">
-                    Tools
+                    {data.tools.sectionTitle}
                   </Anchor>
-                  <p>
-                    JAMstack, Jest, Redux, CSS-in-JS, Webpack, Storybook, Gulp,
-                    npm, Headless CMS, APIs, Git, Linters &amp; Prettier,
-                    Responsive design, Accessibility, Performance, Design
-                    handoff Apps, DevOps, SEO, Analytics, Agile, Open-source
-                  </p>
+                  <RichText render={data.tools.tools} />
                 </Article>
 
                 <hr />
@@ -309,19 +231,18 @@ const Home: React.FC = () => {
                   <Anchor as="h2" id="profile">
                     Profile
                   </Anchor>
-                  <p>
-                    Creative, Learning Enthusiast, Motivated, Knowledge Sharer
-                  </p>
+                  <p>{data.profile.traits}</p>
                 </Article>
 
                 <hr />
 
                 <Article>
                   <Anchor as="h2" id="academic-qualifications">
-                    Academic Qualifications
+                    {data.academicQualifications.sectionTitle}
                   </Anchor>
 
                   <AcademicQualification
+                    // degrees={data.academicQualifications.degrees}
                     degrees={[
                       {
                         establishment: {
@@ -1364,10 +1285,10 @@ const Home: React.FC = () => {
                     <div className="cell cell--12-@xs cell cell--4-@md">
                       <Button
                         type="anchor"
-                        url={`mailto:${PROFILE.email}`}
+                        url={`mailto:${data.profile.email}`}
                         block="@sm"
                       >
-                        {PROFILE.email}
+                        {data.profile.email}
                       </Button>
 
                       <br />
