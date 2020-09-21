@@ -8,7 +8,9 @@ import "./Projects.scss";
 type Thumbnail = {
   name: string;
   tagline?: string;
-  url: string;
+  link: {
+    url: string;
+  };
   lede: string;
   thumbnailSrc: string;
 };
@@ -27,7 +29,7 @@ type Props = {
 const Projects: React.FC<Props> = ({ projects }) => {
   const renderThumbnail = (project: Thumbnail) => (
     <>
-      <a href={project.url} className="c-project__link">
+      <a href={project.link.url} className="c-project__link">
         <img
           className="c-project__thumbnail"
           src={project.thumbnailSrc}

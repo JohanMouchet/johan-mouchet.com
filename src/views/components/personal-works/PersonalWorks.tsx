@@ -3,7 +3,9 @@ import "./PersonalWorks.scss";
 
 type Props = {
   works: Array<{
-    url: string;
+    link: {
+      url: string;
+    };
     thumbnailSrc: string;
     sourceIcon: React.ReactNode;
   }>;
@@ -19,7 +21,7 @@ const PersonalWorks: React.FC<Props> = ({ works }) =>
             key={work.thumbnailSrc}
           >
             <section className="c-personal-work">
-              <a className="c-personal-work__overlay" href={work.url}>
+              <a className="c-personal-work__overlay" href={work.link.url}>
                 <img
                   className="c-personal-work__thumbnail"
                   src={work.thumbnailSrc}

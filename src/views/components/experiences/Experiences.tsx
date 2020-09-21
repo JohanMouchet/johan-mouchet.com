@@ -7,7 +7,9 @@ import "./Experiences.scss";
 type Props = {
   experiences: Array<{
     company: {
-      url: string;
+      link: {
+        url: string;
+      };
       name: string;
     };
     location: string;
@@ -32,9 +34,9 @@ const Experiences: React.FC<Props> = ({ experiences }) =>
         >
           <h3 className="c-experience__heading">
             <a
-              href={experience.company.url && experience.company.url}
-              target={experience.company.url && "_blank"}
-              rel={experience.company.url && "noopener noreferrer"}
+              href={experience.company.link.url && experience.company.link.url}
+              target={experience.company.link.url && "_blank"}
+              rel={experience.company.link.url && "noopener noreferrer"}
               className="c-experience__company"
             >
               {experience.company.name}

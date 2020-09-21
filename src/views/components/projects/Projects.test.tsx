@@ -11,7 +11,9 @@ it("Renders <Projects /> without crashing", () => {
             highlight: true,
             name: "Name",
             tagline: "Tagline",
-            url: "#",
+            link: {
+              url: "#",
+            },
             lede: "Lede",
             thumbnailSrc: "https://via.placeholder.com/400x225",
             achievements: ["Achievement"],

@@ -14,7 +14,9 @@ import Projects from ".";
           highlight: boolean("highlight", true),
           name: text("name", "Name"),
           tagline: text("tagline", "Tagline"),
-          url: text("url", "#"),
+          link: {
+            url: text("url", "#"),
+          },
           lede: text("lede", "Lede"),
           thumbnailSrc: text(
             "thumbnailSrc",

@@ -12,7 +12,9 @@ import PersonalWorks from ".";
     <PersonalWorks
       works={[
         {
-          url: text("url", "#"),
+          link: {
+            url: text("url", "#"),
+          },
           thumbnailSrc: text(
             "thumbnailSrc",
             "https://via.placeholder.com/200x200"

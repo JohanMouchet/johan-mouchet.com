@@ -38,7 +38,7 @@ const Home: React.FC = () => {
         email
         socialNetworks: social_networks {
           name
-          url {
+          link {
             ... on _ExternalLink {
               url
             }
@@ -72,7 +72,7 @@ const Home: React.FC = () => {
         sectionTitle: section_title
         degrees {
           establishmentName: establishment_name
-          establishmentUrl: establishment_url {
+          establishmentLink: establishment_link {
             ... on _ExternalLink {
               url
             }
@@ -96,7 +96,7 @@ const Home: React.FC = () => {
       ) {
         sectionTitle: section_title
         experiences {
-          companyUrl: company_url {
+          companyLink: company_link {
             ... on _ExternalLink {
               url
             }
@@ -118,7 +118,7 @@ const Home: React.FC = () => {
         sectionTitle: section_title
         paragraph
         works {
-          url {
+          link {
             ... on _ExternalLink {
               url
             }
@@ -328,9 +328,11 @@ const Home: React.FC = () => {
                           name:
                             /*html*/
                             `SUPINFO`,
-                          url:
-                            /*html*/
-                            `https://www.supinfo.com/`,
+                          link: {
+                            url:
+                              /*html*/
+                              `https://www.supinfo.com/`,
+                          },
                         },
                         location:
                           /*html*/
@@ -345,9 +347,11 @@ const Home: React.FC = () => {
                           name:
                             /*html*/
                             `SUPINFO`,
-                          url:
-                            /*html*/
-                            `https://www.supinfo.com/`,
+                          link: {
+                            url:
+                              /*html*/
+                              `https://www.supinfo.com/`,
+                          },
                         },
                         location:
                           /*html*/
@@ -399,70 +403,90 @@ const Home: React.FC = () => {
                         name:
                           /*html*/
                           `LinkedIn`,
-                        url: PROFILE.socialNetworks.linkedIn,
+                        link: {
+                          url: PROFILE.socialNetworks.linkedIn,
+                        },
                         icon: <IconLinkedIn />,
                       },
                       {
                         name:
                           /*html*/
                           `Twitter`,
-                        url: PROFILE.socialNetworks.twitter,
+                        link: {
+                          url: PROFILE.socialNetworks.twitter,
+                        },
                         icon: <IconTwitter />,
                       },
                       {
                         name:
                           /*html*/
                           `CodePen`,
-                        url: PROFILE.socialNetworks.codePen,
+                        link: {
+                          url: PROFILE.socialNetworks.codePen,
+                        },
                         icon: <IconCodepen />,
                       },
                       {
                         name:
                           /*html*/
                           `GitHub`,
-                        url: PROFILE.socialNetworks.gitHub,
+                        link: {
+                          url: PROFILE.socialNetworks.gitHub,
+                        },
                         icon: <IconGithub />,
                       },
                       {
                         name:
                           /*html*/
                           `Dribbble`,
-                        url: PROFILE.socialNetworks.dribbble,
+                        link: {
+                          url: PROFILE.socialNetworks.dribbble,
+                        },
                         icon: <IconDribbble />,
                       },
                       {
                         name:
                           /*html*/
                           `Unsplash`,
-                        url: PROFILE.socialNetworks.unsplash,
+                        link: {
+                          url: PROFILE.socialNetworks.unsplash,
+                        },
                         icon: <IconUnsplash />,
                       },
                       {
                         name:
                           /*html*/
                           `500px`,
-                        url: PROFILE.socialNetworks.fiveHundredPx,
+                        link: {
+                          url: PROFILE.socialNetworks.fiveHundredPx,
+                        },
                         icon: <Icon500px />,
                       },
                       {
                         name:
                           /*html*/
                           `Instagram`,
-                        url: PROFILE.socialNetworks.instagram,
+                        link: {
+                          url: PROFILE.socialNetworks.instagram,
+                        },
                         icon: <IconInstagram />,
                       },
                       {
                         name:
                           /*html*/
                           `YouTube`,
-                        url: PROFILE.socialNetworks.youTube,
+                        link: {
+                          url: PROFILE.socialNetworks.youTube,
+                        },
                         icon: <IconYoutube />,
                       },
                       {
                         name:
                           /*html*/
                           `Spotify`,
-                        url: PROFILE.socialNetworks.spotify,
+                        link: {
+                          url: PROFILE.socialNetworks.spotify,
+                        },
                         icon: <IconSpotify />,
                       },
                     ]}
@@ -481,9 +505,11 @@ const Home: React.FC = () => {
                     experiences={[
                       {
                         company: {
-                          url:
-                            /*html*/
-                            `https://theworkingparty.com.au/`,
+                          link: {
+                            url:
+                              /*html*/
+                              `https://theworkingparty.com.au/`,
+                          },
                           name:
                             /*html*/
                             `The Working Party`,
@@ -502,9 +528,11 @@ const Home: React.FC = () => {
                       },
                       {
                         company: {
-                          url:
-                            /*html*/
-                            `https://isobar.com/au/en/`,
+                          link: {
+                            url:
+                              /*html*/
+                              `https://isobar.com/au/en/`,
+                          },
                           name:
                             /*html*/
                             `Isobar`,
@@ -526,9 +554,11 @@ const Home: React.FC = () => {
                             name:
                               /*html*/
                               `Jetstar`,
-                            url:
-                              /*html*/
-                              `https://www.jetstar.com/au/en/home`,
+                            link: {
+                              url:
+                                /*html*/
+                                `https://www.jetstar.com/au/en/home`,
+                            },
                             lede:
                               /*html*/
                               `Modernisation, development of new features and upkeep of Jetstar's international website in an Agile environment.`,
@@ -583,9 +613,11 @@ const Home: React.FC = () => {
                             tagline:
                               /*html*/
                               `CatVR: Safe Cat, Safe Wildlife`,
-                            url:
-                              /*html*/
-                              `http://www.safecat.org.au`,
+                            link: {
+                              url:
+                                /*html*/
+                                `http://www.safecat.org.au`,
+                            },
                             lede:
                               /*html*/
                               `Joint <em>RSPCA</em> campaign website to help cat owners give their pet the safest and happiest life while ensuring they have no link to loss of wildlife.`,
@@ -625,9 +657,11 @@ const Home: React.FC = () => {
                             name:
                               /*html*/
                               `Klip Studio`,
-                            url:
-                              /*html*/
-                              `https://www.isobar.com/en-au/case-studies/australia/2019/september/klip-sports`,
+                            link: {
+                              url:
+                                /*html*/
+                                `https://www.isobar.com/en-au/case-studies/australia/2019/september/klip-sports`,
+                            },
                             lede:
                               /*html*/
                               `Web application dedicated to the sport rights holders industry. Allows editing of live or recorded streams to produce highlights shareable on social media.`,
@@ -666,9 +700,11 @@ const Home: React.FC = () => {
                             tagline:
                               /*html*/
                               `Asia`,
-                            url:
-                              /*html*/
-                              `https://www.pearson.com/asia/`,
+                            link: {
+                              url:
+                                /*html*/
+                                `https://www.pearson.com/asia/`,
+                            },
                             lede:
                               /*html*/
                               `Websites creation related to education for Pearson's launch in three new markets through Asia.`,
@@ -690,9 +726,11 @@ const Home: React.FC = () => {
                       },
                       {
                         company: {
-                          url:
-                            /*html*/
-                            `https://www.amazerealise.com/`,
+                          link: {
+                            url:
+                              /*html*/
+                              `https://www.amazerealise.com/`,
+                          },
                           name:
                             /*html*/
                             `AmazeRealise`,
@@ -717,9 +755,11 @@ const Home: React.FC = () => {
                             tagline:
                               /*html*/
                               `v11`,
-                            url:
-                              /*html*/
-                              `https://www.lexus.eu/en/`,
+                            link: {
+                              url:
+                                /*html*/
+                                `https://www.lexus.eu/en/`,
+                            },
                             lede:
                               /*html*/
                               `Website redesign to embody the new brand direction focused on a premium and lifestyle experience. Deployed into 35 countries of the European market and translated into 27 languages.`,
@@ -772,9 +812,11 @@ const Home: React.FC = () => {
                             tagline:
                               /*html*/
                               `Safety System Plus`,
-                            url:
-                              /*html*/
-                              `https://www.lexus.eu/discover-lexus/technology/lexus-safety-system/`,
+                            link: {
+                              url:
+                                /*html*/
+                                `https://www.lexus.eu/discover-lexus/technology/lexus-safety-system/`,
+                            },
                             lede:
                               /*html*/
                               `Microsite creation to showcase <em>Lexus' Safety System Plus</em> technology.`,
@@ -807,9 +849,11 @@ const Home: React.FC = () => {
                             tagline:
                               /*html*/
                               `Lowrance`,
-                            url:
-                              /*html*/
-                              `https://www.lowrance.com/`,
+                            link: {
+                              url:
+                                /*html*/
+                                `https://www.lowrance.com/`,
+                            },
                             lede:
                               /*html*/
                               `Delivery within a short turnaround of a global eCommerce website for a manufacturer of consumer marine electronics.`,
@@ -841,9 +885,11 @@ const Home: React.FC = () => {
                       },
                       {
                         company: {
-                          url:
-                            /*html*/
-                            `https://www.surviemerformation.com/`,
+                          link: {
+                            url:
+                              /*html*/
+                              `https://www.surviemerformation.com/`,
+                          },
                           name:
                             /*html*/
                             `Survie Mer Formation`,
@@ -868,9 +914,11 @@ const Home: React.FC = () => {
                             name:
                               /*html*/
                               `Survie Mer Formation`,
-                            url:
-                              /*html*/
-                              `https://www.surviemerformation.com/`,
+                            link: {
+                              url:
+                                /*html*/
+                                `https://www.surviemerformation.com/`,
+                            },
                             lede:
                               /*html*/
                               `Redesign, development and marketing strategy aimed at increasing acquisition and conversion rate.`,
@@ -918,9 +966,11 @@ const Home: React.FC = () => {
                       },
                       {
                         company: {
-                          url:
-                            /*html*/
-                            `http://www.tmwunlimited.com/`,
+                          link: {
+                            url:
+                              /*html*/
+                              `http://www.tmwunlimited.com/`,
+                          },
                           name:
                             /*html*/
                             `TMW Unlimited`,
@@ -944,9 +994,11 @@ const Home: React.FC = () => {
                             tagline:
                               /*html*/
                               `Discontinued`,
-                            url:
-                              /*html*/
-                              `http://www.businessbankinginsight.co.uk`,
+                            link: {
+                              url:
+                                /*html*/
+                                `http://www.businessbankinginsight.co.uk`,
+                            },
                             lede:
                               /*html*/
                               `Analysis website of business banking providers, supported by the <em>HR Treasury</em>.`,
@@ -977,9 +1029,11 @@ const Home: React.FC = () => {
                             tagline:
                               /*html*/
                               `#partofPT campaign (Over)`,
-                            url:
-                              /*html*/
-                              `https://partofpt.princes-trust.org.uk/part-of-pt/`,
+                            link: {
+                              url:
+                                /*html*/
+                                `https://partofpt.princes-trust.org.uk/part-of-pt/`,
+                            },
                             lede:
                               /*html*/
                               `Crowdsourced event listing microsite for the <em>Prince's Trust</em> 40th anniversary celebration.`,
@@ -1012,9 +1066,11 @@ const Home: React.FC = () => {
                             tagline:
                               /*html*/
                               `#Skipathon campaign (Over)`,
-                            url:
-                              /*html*/
-                              `https://www.youtube.com/watch?v=3PyZVDrO_aI`,
+                            link: {
+                              url:
+                                /*html*/
+                                `https://www.youtube.com/watch?v=3PyZVDrO_aI`,
+                            },
                             lede:
                               /*html*/
                               `Mobile web browser game based on rope skipping.`,
@@ -1051,9 +1107,11 @@ const Home: React.FC = () => {
                           name:
                             /*html*/
                             `MOVE digital`,
-                          url:
-                            /*html*/
-                            `http://www.movedigital.co.uk/`,
+                          link: {
+                            url:
+                              /*html*/
+                              `http://www.movedigital.co.uk/`,
+                          },
                         },
                         location:
                           /*html*/
@@ -1071,36 +1129,44 @@ const Home: React.FC = () => {
                             name:
                               /*html*/
                               `Weholite`,
-                            url:
-                              /*html*/
-                              `http://www.weholite.co.uk/`,
+                            link: {
+                              url:
+                                /*html*/
+                                `http://www.weholite.co.uk/`,
+                            },
                             thumbnailSrc: require("assets/images/views/career-experiences/weholite.jpg"),
                           },
                           {
                             name:
                               /*html*/
                               `Hiremech`,
-                            url:
-                              /*html*/
-                              `http://www.hiremech.co.uk/`,
+                            link: {
+                              url:
+                                /*html*/
+                                `http://www.hiremech.co.uk/`,
+                            },
                             thumbnailSrc: require("assets/images/views/career-experiences/hiremech.jpg"),
                           },
                           {
                             name:
                               /*html*/
                               `Global Materials Handling`,
-                            url:
-                              /*html*/
-                              `http://globalforktrucks.com/`,
+                            link: {
+                              url:
+                                /*html*/
+                                `http://globalforktrucks.com/`,
+                            },
                             thumbnailSrc: require("assets/images/views/career-experiences/global-materials-handling.jpg"),
                           },
                           {
                             name:
                               /*html*/
                               `Proton Motor`,
-                            url:
-                              /*html*/
-                              `http://www.proton-motor.com/`,
+                            link: {
+                              url:
+                                /*html*/
+                                `http://www.proton-motor.com/`,
+                            },
                             thumbnailSrc: require("assets/images/views/career-experiences/proton-motor.jpg"),
                           },
                         ],
@@ -1223,52 +1289,64 @@ const Home: React.FC = () => {
                         thumbnailSrc:
                           /*html*/
                           `https://source.unsplash.com/6Y23pU8xyHU/200x200`,
-                        url:
-                          /*html*/
-                          `https://unsplash.com/photos/6Y23pU8xyHU`,
+                        link: {
+                          url:
+                            /*html*/
+                            `https://unsplash.com/photos/6Y23pU8xyHU`,
+                        },
                         sourceIcon: <IconUnsplash />,
                       },
                       {
                         thumbnailSrc:
                           /*html*/
                           `https://source.unsplash.com/m9VIwiyzGSc/200x200`,
-                        url:
-                          /*html*/
-                          `https://unsplash.com/photos/m9VIwiyzGSc`,
+                        link: {
+                          url:
+                            /*html*/
+                            `https://unsplash.com/photos/m9VIwiyzGSc`,
+                        },
                         sourceIcon: <IconUnsplash />,
                       },
                       {
                         thumbnailSrc:
                           /*html*/
                           `https://source.unsplash.com/hLXsjf0dGgo/200x200`,
-                        url:
-                          /*html*/
-                          `https://unsplash.com/photos/hLXsjf0dGgo`,
+                        link: {
+                          url:
+                            /*html*/
+                            `https://unsplash.com/photos/hLXsjf0dGgo`,
+                        },
                         sourceIcon: <IconUnsplash />,
                       },
                       {
                         thumbnailSrc:
                           /*html*/
                           `https://source.unsplash.com/JjEZKXTGPio/200x200`,
-                        url:
-                          /*html*/
-                          `https://unsplash.com/photos/JjEZKXTGPio`,
+                        link: {
+                          url:
+                            /*html*/
+                            `https://unsplash.com/photos/JjEZKXTGPio`,
+                        },
                         sourceIcon: <IconUnsplash />,
                       },
                       {
                         thumbnailSrc:
                           /*html*/
                           `https://source.unsplash.com/sTBdWFQKDHE/200x200`,
-                        url:
-                          /*html*/
-                          `https://unsplash.com/photos/sTBdWFQKDHE`,
+                        link: {
+                          url:
+                            /*html*/
+                            `https://unsplash.com/photos/sTBdWFQKDHE`,
+                        },
                         sourceIcon: <IconUnsplash />,
                       },
                       {
                         thumbnailSrc: require("assets/images/views/personal-works/south-cost-of-england.jpg"),
-                        url:
-                          /*html*/
-                          `https://youtu.be/NAsS1T_V8-k`,
+                        link: {
+                          url:
+                            /*html*/
+                            `https://youtu.be/NAsS1T_V8-k`,
+                        },
                         sourceIcon: <IconYoutube />,
                       },
                     ]}

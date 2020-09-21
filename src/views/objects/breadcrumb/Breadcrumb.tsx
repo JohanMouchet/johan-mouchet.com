@@ -5,7 +5,9 @@ import "./Breadcrumb.scss";
 type Props = {
   levels: Array<{
     title: string;
-    url: string;
+    link: {
+      url: string;
+    };
   }>;
   className?: string | string[] | { [key: string]: boolean };
 };
@@ -23,11 +25,11 @@ const Breadcrumb: React.FC<Props> = ({ levels, className }) => {
             style={{
               animationDelay: index > 0 ? index * 0.15 + "s" : undefined,
             }}
-            key={level.url}
+            key={level.link.url}
           >
             <a
               className="o-breadcrumb__link"
-              href={index !== lastLevel ? level.url : undefined}
+              href={index !== lastLevel ? level.link.url : undefined}
             >
               {level.title}
             </a>
@@ -48,7 +50,7 @@ const Breadcrumb: React.FC<Props> = ({ levels, className }) => {
              position: index,
              item: {
                "@type": "Thing",
-               "@id": level.url,
+               "@id": level.link.url,
                name: level.title
              }
            }(index !== lastLevel) && ",")

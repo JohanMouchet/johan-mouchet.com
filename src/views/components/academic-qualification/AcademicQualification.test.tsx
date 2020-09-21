@@ -10,7 +10,9 @@ it("Renders <AcademicQualification /> without crashing", () => {
           {
             establishment: {
               name: "Name",
-              url: "#",
+              link: {
+                url: "#",
+              },
             },
             location: "Location",
             graduationYear: new Date().getFullYear(),

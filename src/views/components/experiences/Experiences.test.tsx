@@ -9,7 +9,9 @@ it("Renders <Experiences /> without crashing", () => {
         experiences={[
           {
             company: {
-              url: "#",
+              link: {
+                url: "#",
+              },
               name: "Name",
             },
             location: "Location",

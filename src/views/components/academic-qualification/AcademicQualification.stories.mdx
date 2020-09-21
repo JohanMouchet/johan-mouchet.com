@@ -14,7 +14,9 @@ import AcademicQualification from ".";
         {
           establishment: {
             name: text("name", "Name"),
-            url: text("url", "#"),
+            link: {
+              url: text("url", "#"),
+            },
           },
           location: text("location", "Location"),
           graduationYear: new Date().getFullYear(),

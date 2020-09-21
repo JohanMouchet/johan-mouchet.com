@@ -8,7 +8,9 @@ it("Renders <PersonalWorks /> without crashing", () => {
       <PersonalWorks
         works={[
           {
-            url: "#",
+            link: {
+              url: "#",
+            },
             thumbnailSrc: "https://via.placeholder.com/200x200",
             sourceIcon: <div />,
           },

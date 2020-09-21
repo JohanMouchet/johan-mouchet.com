@@ -5,7 +5,9 @@ type Props = {
   degrees: Array<{
     establishment: {
       name: string;
-      url: string;
+      link: {
+        url: string;
+      };
     };
     location: string;
     graduationYear: number;
@@ -21,7 +23,7 @@ const AcademicQualification: React.FC<Props> = ({ degrees }) =>
           <h3 className="c-academic-qualification__heading">
             <a
               className="c-academic-qualification__establishment"
-              href={degree.establishment.url}
+              href={degree.establishment.link.url}
             >
               {degree.establishment.name}
             </a>
