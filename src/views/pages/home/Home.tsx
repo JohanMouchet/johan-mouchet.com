@@ -1,7 +1,7 @@
 import React from "react";
 import { gql, useQuery } from "@apollo/client";
 import { STATIC } from "constants/static";
-import { RichText } from "prismic-reactjs";
+import { RichText, RichTextBlock } from "prismic-reactjs";
 import {
   AcademicQualification,
   Experiences,
@@ -961,42 +961,36 @@ const Home: React.FC = () => {
                     {data.home.openSourceSectionTitle}
                   </Anchor>
 
-                  <div className="grid">
-                    <div className="cell cell--12-@xs cell--6-@sm cell--4-@lg">
-                      <h3>
-                        <a
-                          href={data.openSource.projects[0].link.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {data.openSource.projects[0].name}
-                        </a>
-                      </h3>
+                  {!data.openSource.projects?.length ? null : (
+                    <div className="grid">
+                      {data.openSource.projects.map(
+                        (project: {
+                          link: {
+                            url: string;
+                          };
+                          name: string;
+                          lede: RichTextBlock[];
+                          description: RichTextBlock[];
+                        }) => (
+                          <div className="cell cell--12-@xs cell--6-@sm cell--4-@lg">
+                            <h3>
+                              <a
+                                href={project.link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {project.name}
+                              </a>
+                            </h3>
 
-                      <RichText render={data.openSource.projects[0].lede} />
+                            <RichText render={project.lede} />
 
-                      <RichText
-                        render={data.openSource.projects[0].description}
-                      />
+                            <RichText render={project.description} />
+                          </div>
+                        )
+                      )}
                     </div>
-                    <div className="cell cell--12-@xs cell--6-@sm cell--4-@lg">
-                      <h3>
-                        <a
-                          href={data.openSource.projects[1].link.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {data.openSource.projects[1].name}
-                        </a>
-                      </h3>
-
-                      <RichText render={data.openSource.projects[1].lede} />
-
-                      <RichText
-                        render={data.openSource.projects[1].description}
-                      />
-                    </div>
-                  </div>
+                  )}
                 </Article>
 
                 <hr />
