@@ -6,7 +6,6 @@
   - Distance sizes `t-vertical-rhythm(1)`
 - Import Fluxgrid, modify naming scheme
   - replace any other `\@`
-- Add Prismic
 - Fix Toggles, Tabs
 - Address all `TODO`
 
