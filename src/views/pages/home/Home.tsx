@@ -38,9 +38,19 @@ const Home: React.FC = () => {
         paragraph1: paragraph_1
         title2: title_2
         paragraph2: paragraph_2
+        skillsSectionTitle: skills_section_title
+        toolsSectionTitle: tools_section_title
+        profileSectionTitle: profile_section_title
+        academicQualificationsSectionTitle: academic_qualifications_section_title
+        languagesSectionTitle: languages_section_title
+        interestsSectionTitle: interests_section_title
+        socialMediaSectionTitle: social_media_section_title
+        careerExperiencesSectionTitle: career_experiences_section_title
+        openSourceSectionTitle: open_source_section_title
+        personalWorksSectionTitle: personal_works_section_title
+        getInTouchSectionTitle: get_in_touch_section_title
       }
       skills(uid: "skills", lang: "en-au") {
-        sectionTitle: section_title
         skills {
           label
           filling
@@ -48,14 +58,12 @@ const Home: React.FC = () => {
         }
       }
       tools(uid: "tools", lang: "en-au") {
-        sectionTitle: section_title
         tools
       }
       academicQualifications: academic_qualifications(
         uid: "academic-qualifications"
         lang: "en-au"
       ) {
-        sectionTitle: section_title
         degrees {
           establishmentName: establishment_name
           establishmentLink: establishment_link {
@@ -69,18 +77,15 @@ const Home: React.FC = () => {
         }
       }
       languages(uid: "languages", lang: "en-au") {
-        sectionTitle: section_title
         languages
       }
       interests(uid: "interests", lang: "en-au") {
-        sectionTitle: section_title
         interests
       }
       careerExperiences: career_experiences(
         uid: "career-experiences"
         lang: "en-au"
       ) {
-        sectionTitle: section_title
         experiences {
           companyLink: company_link {
             ... on _ExternalLink {
@@ -101,7 +106,6 @@ const Home: React.FC = () => {
         }
       }
       openSource: open_source(uid: "open-source", lang: "en-au") {
-        sectionTitle: section_title
         projects {
           name
           link {
@@ -114,7 +118,6 @@ const Home: React.FC = () => {
         }
       }
       personalWorks: personal_works(uid: "personal-works", lang: "en-au") {
-        sectionTitle: section_title
         paragraph
         works {
           link {
@@ -159,9 +162,6 @@ const Home: React.FC = () => {
       ) : (
         <Main margin="no-margin">
           <section className="home-about">
-            {/* GQL start */}
-            {console.log("data", data)}
-            {/* GQL end */}
             <div className="container container--noGutter-lgGrid">
               <div className="grid grid--lgGutter-@xs">
                 <div className="cell cell--12-@xs cell--6-@sm">
@@ -204,7 +204,7 @@ const Home: React.FC = () => {
               <div className="home-cell--gray-lighter cell cell--12-@xs cell--3-@md">
                 <Article>
                   <Anchor as="h2" id="skills">
-                    {data.skills.sectionTitle}
+                    {data.home.skillsSectionTitle}
                   </Anchor>
 
                   <Skills skills={data.skills.skills} />
@@ -214,7 +214,7 @@ const Home: React.FC = () => {
 
                 <Article>
                   <Anchor as="h2" id="tools">
-                    {data.tools.sectionTitle}
+                    {data.home.toolsSectionTitle}
                   </Anchor>
 
                   <RichText render={data.tools.tools} />
@@ -224,7 +224,7 @@ const Home: React.FC = () => {
 
                 <Article>
                   <Anchor as="h2" id="profile">
-                    Profile
+                    {data.home.profileSectionTitle}
                   </Anchor>
 
                   <p>{data.profile.traits}</p>
@@ -234,7 +234,7 @@ const Home: React.FC = () => {
 
                 <Article>
                   <Anchor as="h2" id="academic-qualifications">
-                    {data.academicQualifications.sectionTitle}
+                    {data.home.academicQualificationsSectionTitle}
                   </Anchor>
 
                   <AcademicQualification
@@ -246,7 +246,7 @@ const Home: React.FC = () => {
 
                 <Article>
                   <Anchor as="h2" id="languages">
-                    {data.languages.sectionTitle}
+                    {data.home.languagesSectionTitle}
                   </Anchor>
 
                   <RichText render={data.languages.languages} />
@@ -256,7 +256,7 @@ const Home: React.FC = () => {
 
                 <Article>
                   <Anchor as="h2" id="interests">
-                    {data.interests.sectionTitle}
+                    {data.home.interestsSectionTitle}
                   </Anchor>
 
                   <RichText render={data.interests.interests} />
@@ -266,7 +266,7 @@ const Home: React.FC = () => {
 
                 <Article>
                   <Anchor as="h2" id="social-media">
-                    Social Media
+                    {data.home.socialMediaSectionTitle}
                   </Anchor>
 
                   <SocialMedia media={data.profile.socialNetworks} />
@@ -277,7 +277,7 @@ const Home: React.FC = () => {
               <div className="cell cell--12-@xs cell--9-@md">
                 <Article>
                   <Anchor as="h2" id="career-experiences">
-                    {data.careerExperiences.sectionTitle}
+                    {data.home.careerExperiencesSectionTitle}
                   </Anchor>
 
                   <Experiences
@@ -958,7 +958,7 @@ const Home: React.FC = () => {
 
                 <Article>
                   <Anchor as="h2" id="open-source">
-                    {data.openSource.sectionTitle}
+                    {data.home.openSourceSectionTitle}
                   </Anchor>
 
                   <div className="grid">
@@ -1003,7 +1003,7 @@ const Home: React.FC = () => {
 
                 <Article>
                   <Anchor as="h2" id="personal-works">
-                    {data.personalWorks.sectionTitle}
+                    {data.home.personalWorksSectionTitle}
                   </Anchor>
 
                   <RichText render={data.personalWorks.paragraph} />
@@ -1015,7 +1015,7 @@ const Home: React.FC = () => {
 
                 <Article>
                   <Anchor as="h2" id="get-in-touch">
-                    Get In Touch
+                    {data.home.getInTouchSectionTitle}
                   </Anchor>
 
                   <div className="grid">
