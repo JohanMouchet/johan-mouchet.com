@@ -1,5 +1,5 @@
 import React from "react";
-import { PROFILE } from "constants/profile";
+import { STATIC } from "constants/static";
 import { parse } from "utils/parse";
 import "./Header.scss";
 
@@ -10,9 +10,9 @@ type Props = {
 };
 
 const Header: React.FC<Props> = ({
-  firstName = PROFILE.firstName,
-  lastName = PROFILE.lastName,
-  tagline = /*html*/ `Never stop exploring,<br class="p-header__tagline-breaker" /> never stop creating`,
+  firstName = STATIC.profile.firstName,
+  lastName = STATIC.profile.lastName,
+  tagline = STATIC.profile.tagline,
 }) => (
   <header className="p-header">
     <div className="p-header__inner">

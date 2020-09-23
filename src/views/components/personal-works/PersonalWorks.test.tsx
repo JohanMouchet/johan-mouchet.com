@@ -11,8 +11,13 @@ it("Renders <PersonalWorks /> without crashing", () => {
             link: {
               url: "#",
             },
-            thumbnailSrc: "https://via.placeholder.com/200x200",
-            sourceIcon: <div />,
+            thumbnailSrc: {
+              url: "https://via.placeholder.com/200x200",
+            },
+            thumbnailExternalSrc: {
+              url: "https://via.placeholder.com/200x200",
+            },
+            icon: "unsplash",
           },
         ]}
       />

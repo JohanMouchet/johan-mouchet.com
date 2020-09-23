@@ -1,6 +1,5 @@
 import React from "react";
-import { PROFILE } from "constants/profile";
-import { VERSIONS } from "constants/versions";
+import { STATIC } from "constants/static";
 import { IconChevronDown } from "views/objects";
 import "./Footer.scss";
 
@@ -11,10 +10,10 @@ type Props = {
 };
 
 const Footer: React.FC<Props> = ({
-  version = VERSIONS.site,
+  version = STATIC.version,
   copyright = /* html*/ `${
-    PROFILE.firstName
-  } ${PROFILE.lastName.toUpperCase()}`,
+    STATIC.profile.firstName
+  } ${STATIC.profile.lastName.toUpperCase()}`,
   topButtonLabel = /* html*/ `Get to the top`,
 }) => {
   const year = new Date().getFullYear();

@@ -1,6 +1,6 @@
 import React from "react";
 import { gql, useQuery } from "@apollo/client";
-import { PROFILE } from "constants/profile";
+import { STATIC } from "constants/static";
 import { RichText } from "prismic-reactjs";
 import {
   AcademicQualification,
@@ -10,22 +10,7 @@ import {
   SocialMedia,
 } from "views/components";
 import { Default } from "views/layouts";
-import {
-  Anchor,
-  Button,
-  Icon500px,
-  IconCodepen,
-  IconDribbble,
-  IconGithub,
-  IconInstagram,
-  IconLinkedIn,
-  IconSpotify,
-  IconTwitter,
-  IconUnsplash,
-  IconYoutube,
-  List,
-  Loader,
-} from "views/objects";
+import { Anchor, Button, Loader } from "views/objects";
 import { Article, Main } from "views/partials";
 import "./Home.scss";
 
@@ -115,6 +100,19 @@ const Home: React.FC = () => {
           }
         }
       }
+      openSource: open_source(uid: "open-source", lang: "en-au") {
+        sectionTitle: section_title
+        projects {
+          name
+          link {
+            ... on _ExternalLink {
+              url
+            }
+          }
+          lede
+          description
+        }
+      }
       personalWorks: personal_works(uid: "personal-works", lang: "en-au") {
         sectionTitle: section_title
         paragraph
@@ -124,17 +122,13 @@ const Home: React.FC = () => {
               url
             }
           }
-          thumbnailSrc: thumbnail_src {
-            ... on _FileLink {
-              url
-            }
-          }
+          thumbnailSrc: thumbnail_src
           thumbnailExternalSrc: thumbnail_external_src {
             ... on _ExternalLink {
               url
             }
           }
-          sourceIcon: source_icon
+          icon
         }
       }
     }
@@ -222,6 +216,7 @@ const Home: React.FC = () => {
                   <Anchor as="h2" id="tools">
                     {data.tools.sectionTitle}
                   </Anchor>
+
                   <RichText render={data.tools.tools} />
                 </Article>
 
@@ -231,6 +226,7 @@ const Home: React.FC = () => {
                   <Anchor as="h2" id="profile">
                     Profile
                   </Anchor>
+
                   <p>{data.profile.traits}</p>
                 </Article>
 
@@ -242,47 +238,7 @@ const Home: React.FC = () => {
                   </Anchor>
 
                   <AcademicQualification
-                    // degrees={data.academicQualifications.degrees}
-                    degrees={[
-                      {
-                        establishment: {
-                          name:
-                            /*html*/
-                            `SUPINFO`,
-                          link: {
-                            url:
-                              /*html*/
-                              `https://www.supinfo.com/`,
-                          },
-                        },
-                        location:
-                          /*html*/
-                          `London`,
-                        graduationYear: 2015,
-                        title:
-                          /*html*/
-                          `Master degree in Computer Science`,
-                      },
-                      {
-                        establishment: {
-                          name:
-                            /*html*/
-                            `SUPINFO`,
-                          link: {
-                            url:
-                              /*html*/
-                              `https://www.supinfo.com/`,
-                          },
-                        },
-                        location:
-                          /*html*/
-                          `Marseille`,
-                        graduationYear: 2013,
-                        title:
-                          /*html*/
-                          `Bachelor degree in Computer Science`,
-                      },
-                    ]}
+                    degrees={data.academicQualifications.degrees}
                   />
                 </Article>
 
@@ -290,25 +246,20 @@ const Home: React.FC = () => {
 
                 <Article>
                   <Anchor as="h2" id="languages">
-                    Languages
+                    {data.languages.sectionTitle}
                   </Anchor>
-                  <List unstyled>
-                    <li>English: C1 Advanced</li>
-                    <li>French: Native</li>
-                  </List>
+
+                  <RichText render={data.languages.languages} />
                 </Article>
 
                 <hr />
 
                 <Article>
                   <Anchor as="h2" id="interests">
-                    Interests
+                    {data.interests.sectionTitle}
                   </Anchor>
-                  <p>
-                    Developing, Designing, Photography, Travelling, Cycling,
-                    Running, Fitness, Cooking, Volunteering{" "}
-                    <a href="https://youngcodersau.com/">@YoungCodersAU</a>
-                  </p>
+
+                  <RichText render={data.interests.interests} />
                 </Article>
 
                 <hr />
@@ -318,100 +269,7 @@ const Home: React.FC = () => {
                     Social Media
                   </Anchor>
 
-                  <SocialMedia
-                    media={[
-                      {
-                        name:
-                          /*html*/
-                          `LinkedIn`,
-                        link: {
-                          url: PROFILE.socialNetworks.linkedIn,
-                        },
-                        icon: <IconLinkedIn />,
-                      },
-                      {
-                        name:
-                          /*html*/
-                          `Twitter`,
-                        link: {
-                          url: PROFILE.socialNetworks.twitter,
-                        },
-                        icon: <IconTwitter />,
-                      },
-                      {
-                        name:
-                          /*html*/
-                          `CodePen`,
-                        link: {
-                          url: PROFILE.socialNetworks.codePen,
-                        },
-                        icon: <IconCodepen />,
-                      },
-                      {
-                        name:
-                          /*html*/
-                          `GitHub`,
-                        link: {
-                          url: PROFILE.socialNetworks.gitHub,
-                        },
-                        icon: <IconGithub />,
-                      },
-                      {
-                        name:
-                          /*html*/
-                          `Dribbble`,
-                        link: {
-                          url: PROFILE.socialNetworks.dribbble,
-                        },
-                        icon: <IconDribbble />,
-                      },
-                      {
-                        name:
-                          /*html*/
-                          `Unsplash`,
-                        link: {
-                          url: PROFILE.socialNetworks.unsplash,
-                        },
-                        icon: <IconUnsplash />,
-                      },
-                      {
-                        name:
-                          /*html*/
-                          `500px`,
-                        link: {
-                          url: PROFILE.socialNetworks.fiveHundredPx,
-                        },
-                        icon: <Icon500px />,
-                      },
-                      {
-                        name:
-                          /*html*/
-                          `Instagram`,
-                        link: {
-                          url: PROFILE.socialNetworks.instagram,
-                        },
-                        icon: <IconInstagram />,
-                      },
-                      {
-                        name:
-                          /*html*/
-                          `YouTube`,
-                        link: {
-                          url: PROFILE.socialNetworks.youTube,
-                        },
-                        icon: <IconYoutube />,
-                      },
-                      {
-                        name:
-                          /*html*/
-                          `Spotify`,
-                        link: {
-                          url: PROFILE.socialNetworks.spotify,
-                        },
-                        icon: <IconSpotify />,
-                      },
-                    ]}
-                  />
+                  <SocialMedia media={data.profile.socialNetworks} />
                 </Article>
                 <div className="u-vr--top-2-@xs"></div>
               </div>
@@ -419,7 +277,7 @@ const Home: React.FC = () => {
               <div className="cell cell--12-@xs cell--9-@md">
                 <Article>
                   <Anchor as="h2" id="career-experiences">
-                    Career Experiences
+                    {data.careerExperiences.sectionTitle}
                   </Anchor>
 
                   <Experiences
@@ -1100,94 +958,43 @@ const Home: React.FC = () => {
 
                 <Article>
                   <Anchor as="h2" id="open-source">
-                    Open-Source
+                    {data.openSource.sectionTitle}
                   </Anchor>
 
                   <div className="grid">
                     <div className="cell cell--12-@xs cell--6-@sm cell--4-@lg">
                       <h3>
                         <a
-                          href="https://www.johan-mouchet.com"
+                          href={data.openSource.projects[0].link.url}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          johan-mouchet.com
+                          {data.openSource.projects[0].name}
                         </a>
                       </h3>
 
-                      <p>
-                        <i>My portfolio.</i>
-                      </p>
+                      <RichText render={data.openSource.projects[0].lede} />
 
-                      <List>
-                        <li>
-                          bootstrapped with Create React App
-                          <ul>
-                            <li>including React, webpack, Babel and more</li>
-                            <li>
-                              published as an offline-first Progressive Web App
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          maintaining a design system with{" "}
-                          <a href="/storybook/?path=/docs/about-getting-started--page">
-                            Storybook
-                          </a>
-                        </li>
-                        <li>type-checked with TypeScript</li>
-                        <li>
-                          unit and snapshot tested with Jest and React Testing
-                          Library
-                        </li>
-                        <li>using Sass and CSS post-processing</li>
-                        <li>
-                          linted and formated with ESlint, stylelint and
-                          Prettier,
-                          <br />
-                          enforced by Husky and lint-staged
-                        </li>
-                        <li>
-                          using client side routing with{" "}
-                          <a href="https://github.com/molefrog/wouter">
-                            wouter
-                          </a>
-                        </li>
-                        <li>deployed, pre-rendered, with Netlify</li>
-                      </List>
+                      <RichText
+                        render={data.openSource.projects[0].description}
+                      />
                     </div>
                     <div className="cell cell--12-@xs cell--6-@sm cell--4-@lg">
                       <h3>
                         <a
-                          href="https://github.com/JohanMouchet/fluxgrid"
+                          href={data.openSource.projects[1].link.url}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Fluxgrid
+                          {data.openSource.projects[1].name}
                         </a>
                       </h3>
 
-                      <p>
-                        <i>
-                          Yet another responsive utility-based CSS grid
-                          customisable with Sass.
-                        </i>
-                      </p>
+                      <RichText render={data.openSource.projects[1].lede} />
 
-                      <List>
-                        <li>Bundled with Parcel.js</li>
-                        <li>Built with Sass, postcss</li>
-                        <li>
-                          Distributed on{" "}
-                          <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href="https://www.npmjs.com/package/fluxgrid"
-                          >
-                            npm
-                          </a>
-                        </li>
-                      </List>
+                      <RichText
+                        render={data.openSource.projects[1].description}
+                      />
                     </div>
                   </div>
                 </Article>
@@ -1196,82 +1003,12 @@ const Home: React.FC = () => {
 
                 <Article>
                   <Anchor as="h2" id="personal-works">
-                    Personal Works
+                    {data.personalWorks.sectionTitle}
                   </Anchor>
 
-                  <p>
-                    When I'm not developing websites I like to take pictures,
-                    create infographics, doodle and make short films.
-                  </p>
+                  <RichText render={data.personalWorks.paragraph} />
 
-                  <PersonalWorks
-                    works={[
-                      {
-                        thumbnailSrc:
-                          /*html*/
-                          `https://source.unsplash.com/6Y23pU8xyHU/200x200`,
-                        link: {
-                          url:
-                            /*html*/
-                            `https://unsplash.com/photos/6Y23pU8xyHU`,
-                        },
-                        sourceIcon: <IconUnsplash />,
-                      },
-                      {
-                        thumbnailSrc:
-                          /*html*/
-                          `https://source.unsplash.com/m9VIwiyzGSc/200x200`,
-                        link: {
-                          url:
-                            /*html*/
-                            `https://unsplash.com/photos/m9VIwiyzGSc`,
-                        },
-                        sourceIcon: <IconUnsplash />,
-                      },
-                      {
-                        thumbnailSrc:
-                          /*html*/
-                          `https://source.unsplash.com/hLXsjf0dGgo/200x200`,
-                        link: {
-                          url:
-                            /*html*/
-                            `https://unsplash.com/photos/hLXsjf0dGgo`,
-                        },
-                        sourceIcon: <IconUnsplash />,
-                      },
-                      {
-                        thumbnailSrc:
-                          /*html*/
-                          `https://source.unsplash.com/JjEZKXTGPio/200x200`,
-                        link: {
-                          url:
-                            /*html*/
-                            `https://unsplash.com/photos/JjEZKXTGPio`,
-                        },
-                        sourceIcon: <IconUnsplash />,
-                      },
-                      {
-                        thumbnailSrc:
-                          /*html*/
-                          `https://source.unsplash.com/sTBdWFQKDHE/200x200`,
-                        link: {
-                          url:
-                            /*html*/
-                            `https://unsplash.com/photos/sTBdWFQKDHE`,
-                        },
-                        sourceIcon: <IconUnsplash />,
-                      },
-                      {
-                        thumbnailSrc: require("assets/images/views/personal-works/south-cost-of-england.jpg"),
-                        link: {
-                          url:
-                            /*html*/
-                            `https://youtu.be/NAsS1T_V8-k`,
-                        },
-                        sourceIcon: <IconYoutube />,
-                      },
-                    ]}
-                  />
+                  <PersonalWorks works={data.personalWorks.works} />
                 </Article>
 
                 <hr />
@@ -1296,7 +1033,7 @@ const Home: React.FC = () => {
 
                       <Button
                         type="anchor"
-                        url={PROFILE.socialNetworks.linkedIn}
+                        url={STATIC.profile.socialNetworks.linkedIn}
                         variant="linkedIn"
                         block="@sm"
                       >

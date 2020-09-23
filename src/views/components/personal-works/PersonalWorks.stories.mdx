@@ -15,10 +15,18 @@ import PersonalWorks from ".";
           link: {
             url: text("url", "#"),
           },
-          thumbnailSrc: text(
-            "thumbnailSrc",
-            "https://via.placeholder.com/200x200"
-          ),
+          thumbnailSrc: {
+            url: text(
+              "thumbnailSrc",
+              "https://via.placeholder.com/200x200"
+            )
+          },
+          thumbnailExternalSrc: {
+            url: text(
+              "thumbnailExternalSrc",
+              "https://via.placeholder.com/200x200"
+            )
+          },
           sourceIcon: <IconUnsplash />,
         },
       ]}

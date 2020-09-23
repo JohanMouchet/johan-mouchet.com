@@ -12,7 +12,7 @@ it("Renders <SocialMedia /> without crashing", () => {
             link: {
               url: "#",
             },
-            icon: <div />,
+            icon: "500px",
           },
         ]}
       />

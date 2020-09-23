@@ -8,11 +8,9 @@ it("Renders <AcademicQualification /> without crashing", () => {
       <AcademicQualification
         degrees={[
           {
-            establishment: {
-              name: "Name",
-              link: {
-                url: "#",
-              },
+            establishmentName: "Name",
+            establishmentLink: {
+              url: "#",
             },
             location: "Location",
             graduationYear: new Date().getFullYear(),

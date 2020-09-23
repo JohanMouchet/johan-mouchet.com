@@ -76,7 +76,7 @@ exports[`Renders <Default /> without crashing 1`] = `
             <span
               class="p-footer__version"
             >
-              5.2.0
+              5.3.0
             </span>
           </div>
           <div
