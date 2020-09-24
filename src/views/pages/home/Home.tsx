@@ -1,6 +1,5 @@
 import React from "react";
 import { gql, useQuery } from "@apollo/client";
-import { STATIC } from "constants/static";
 import { RichText, RichTextBlock } from "prismic-reactjs";
 import {
   AcademicQualification,
@@ -972,7 +971,10 @@ const Home: React.FC = () => {
                           lede: RichTextBlock[];
                           description: RichTextBlock[];
                         }) => (
-                          <div className="cell cell--12-@xs cell--6-@sm cell--4-@lg">
+                          <div
+                            className="cell cell--12-@xs cell--6-@sm cell--4-@lg"
+                            key={project.name}
+                          >
                             <h3>
                               <a
                                 href={project.link.url}
@@ -1013,7 +1015,7 @@ const Home: React.FC = () => {
                   </Anchor>
 
                   <div className="grid">
-                    <div className="cell cell--12-@xs cell cell--4-@md">
+                    <div className="cell cell--12-@xs">
                       <Button
                         type="anchor"
                         url={`mailto:${data.profile.email}`}
@@ -1021,13 +1023,19 @@ const Home: React.FC = () => {
                       >
                         {data.profile.email}
                       </Button>
+                    </div>
 
-                      <br />
-                      <br />
+                    <div className="cell cell--12-@xs">&nbsp;</div>
 
+                    <div className="cell cell--12-@xs">
                       <Button
                         type="anchor"
-                        url={STATIC.profile.socialNetworks.linkedIn}
+                        url={
+                          data.profile.socialNetworks.find(
+                            (socialNetwork: { name: string }) =>
+                              socialNetwork.name === "LinkedIn"
+                          )?.link?.url
+                        }
                         variant="linkedIn"
                         block="@sm"
                       >
