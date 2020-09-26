@@ -14,11 +14,37 @@ it("Renders <Projects /> without crashing", () => {
             link: {
               url: "#",
             },
-            lede: "Lede",
-            thumbnailSrc: "https://via.placeholder.com/400x225",
-            achievements: ["Achievement"],
-            architecture: ["Architecture"],
-            libraries: ["Librarie"],
+            lede: [
+              {
+                type: "paragraph",
+                text: "Lede",
+                spans: [],
+              },
+            ],
+            thumbnailSrc: {
+              url: "https://via.placeholder.com/400x225",
+            },
+            achievements: [
+              {
+                type: "paragraph",
+                text: "<li>Achievement</li>",
+                spans: [],
+              },
+            ],
+            architecture: [
+              {
+                type: "paragraph",
+                text: "Architecture",
+                spans: [],
+              },
+            ],
+            libraries: [
+              {
+                type: "paragraph",
+                text: "Library",
+                spans: [],
+              },
+            ],
           },
         ]}
       />

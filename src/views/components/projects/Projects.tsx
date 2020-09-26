@@ -1,5 +1,6 @@
 import React from "react";
 import cx from "classnames";
+import { RichText, RichTextBlock } from "prismic-reactjs";
 import { parse } from "utils/parse";
 import { pluralize } from "utils/pluralize";
 import { Details } from "views/objects";
@@ -11,15 +12,17 @@ type Thumbnail = {
   link: {
     url: string;
   };
-  lede: string;
-  thumbnailSrc: string;
+  lede: RichTextBlock[];
+  thumbnailSrc: {
+    url: string;
+  };
 };
 
 type Content = {
   highlight?: boolean;
-  achievements?: string[];
-  architecture?: string[];
-  libraries?: string[];
+  achievements?: RichTextBlock[];
+  architecture?: RichTextBlock[];
+  libraries?: RichTextBlock[];
 };
 
 type Props = {
@@ -32,7 +35,7 @@ const Projects: React.FC<Props> = ({ projects }) => {
       <a href={project.link.url} className="c-project__link">
         <img
           className="c-project__thumbnail"
-          src={project.thumbnailSrc}
+          src={project.thumbnailSrc.url}
           alt={project.name}
           loading="lazy"
         />
@@ -45,7 +48,11 @@ const Projects: React.FC<Props> = ({ projects }) => {
         </div>
       </a>
 
-      {project.lede && <p className="c-project__lede">{parse(project.lede)}</p>}
+      {project.lede && (
+        <div className="c-project__lede">
+          <RichText render={project.lede} />
+        </div>
+      )}
     </>
   );
 
@@ -54,12 +61,15 @@ const Projects: React.FC<Props> = ({ projects }) => {
       {project.achievements && (
         <div className="c-project__detail">
           <b className="c-project__detail-heading">
-            Key {pluralize("Achievement", project.achievements.length)}
+            Key{" "}
+            {pluralize(
+              "Achievement",
+              project.achievements[0].text.split("</li>").length - 1
+            )}
           </b>
+
           <ul className="c-project__detail-list">
-            {project.achievements.map((detail) => (
-              <li key={String(parse(detail))}>{parse(detail)}</li>
-            ))}
+            {parse(project.achievements[0].text)}
           </ul>
         </div>
       )}
@@ -67,20 +77,20 @@ const Projects: React.FC<Props> = ({ projects }) => {
       {project.architecture && (
         <div className="c-project__detail">
           <b className="c-project__detail-heading">Architecture</b>
-          <p className="c-project__detail-list">
-            {parse(project.architecture.join(", "))}
-          </p>
+          <div className="c-project__detail-list">
+            <RichText render={project.architecture} />
+          </div>
         </div>
       )}
 
       {project.libraries && (
         <div className="c-project__detail">
           <b className="c-project__detail-heading">
-            {pluralize("Library", project.libraries.length)}
+            {pluralize("Library", project.libraries[0].text.split(", ").length)}
           </b>
-          <p className="c-project__detail-list">
-            {parse(project.libraries.join(", "))}
-          </p>
+          <div className="c-project__detail-list">
+            <RichText render={project.libraries} />
+          </div>
         </div>
       )}
     </>

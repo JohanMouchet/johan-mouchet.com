@@ -1,84 +1,94 @@
 import React from "react";
+import { RichText, RichTextBlock } from "prismic-reactjs";
 import { duration } from "utils/duration";
-import { parse } from "utils/parse";
 import { Projects } from "views/components";
 import "./Experiences.scss";
 
 type Props = {
   experiences: Array<{
-    company: {
-      link: {
-        url: string;
-      };
-      name: string;
+    companyLink: {
+      url: string;
     };
+    companyName: string;
     location: string;
     jobTitle: string;
-    startDate: Date;
-    endDate: Date;
+    startDate: Date | string;
+    present: boolean;
+    endDate: Date | string;
     contractType?: string;
-    lede: string;
-    // TODO: projects should be of type Projects
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    projects?: any[];
+    lede: RichTextBlock[];
+    projects?: React.ComponentProps<typeof Projects>;
   }>;
 };
 
 const Experiences: React.FC<Props> = ({ experiences }) =>
   !experiences?.length ? null : (
     <div className="c-experiences">
-      {experiences.map((experience) => (
-        <section
-          className="c-experience"
-          key={experience.company.name + " - " + experience.startDate}
-        >
-          <h3 className="c-experience__heading">
-            <a
-              href={experience.company.link.url && experience.company.link.url}
-              target={experience.company.link.url && "_blank"}
-              rel={experience.company.link.url && "noopener noreferrer"}
-              className="c-experience__company"
-            >
-              {experience.company.name}
-            </a>
-            , {experience.location} ⁠— {experience.jobTitle}
-          </h3>
-          <p className="c-experience__subheading">
-            <span className="c-experience__date">
-              {`${experience.startDate.toLocaleString("en-GB", {
-                month: "short",
-              })} ${experience.startDate.getFullYear()}`}
+      {experiences.map((experience) => {
+        const startDate =
+          typeof experience.startDate === "string"
+            ? new Date(experience.startDate)
+            : experience.startDate;
+        const endDate = experience.present
+          ? new Date()
+          : typeof experience.endDate === "string"
+          ? new Date(experience.endDate)
+          : experience.endDate;
 
-              {experience.endDate.toDateString() === new Date().toDateString()
-                ? " – Present"
-                : [
-                    (experience.endDate.getFullYear() >
-                      experience.startDate.getFullYear() ||
-                      experience.endDate.getMonth() >
-                        experience.startDate.getMonth()) &&
-                      ` – ${experience.endDate.toLocaleString("en-GB", {
-                        month: "short",
-                      })}`,
-                    experience.endDate.getFullYear() >
-                      experience.startDate.getFullYear() &&
-                      ` ${experience.endDate.getFullYear()}`,
-                  ]}
-            </span>
-            <span className="c-experience__duration">
-              {" "}
-              ({duration(experience.startDate, experience.endDate, "1 mo")})
-            </span>
-            {experience.contractType && (
-              <span className="c-experience__type">
-                {" "}
-                / {experience.contractType}
+        return (
+          <section
+            className="c-experience"
+            key={experience.companyName + " - " + startDate}
+          >
+            <h3 className="c-experience__heading">
+              <a
+                href={experience.companyLink.url && experience.companyLink.url}
+                target={experience.companyLink.url && "_blank"}
+                rel={experience.companyLink.url && "noopener noreferrer"}
+                className="c-experience__company"
+              >
+                {experience.companyName}
+              </a>
+              , {experience.location} ⁠— {experience.jobTitle}
+            </h3>
+            <p className="c-experience__subheading">
+              <span className="c-experience__date">
+                {`${startDate.toLocaleString("en-GB", {
+                  month: "short",
+                })} ${startDate.getFullYear()}`}
+
+                {experience.present
+                  ? " – Present"
+                  : [
+                      (endDate.getFullYear() > startDate.getFullYear() ||
+                        endDate.getMonth() > startDate.getMonth()) &&
+                        ` – ${endDate.toLocaleString("en-GB", {
+                          month: "short",
+                        })}`,
+                      endDate.getFullYear() > startDate.getFullYear() &&
+                        ` ${endDate.getFullYear()}`,
+                    ]}
               </span>
+              <span className="c-experience__duration">
+                {" "}
+                ({duration(startDate, endDate, "1 mo")})
+              </span>
+              {experience.contractType && (
+                <span className="c-experience__type">
+                  {" "}
+                  / {experience.contractType}
+                </span>
+              )}
+            </p>
+            <div className="c-experience__lede">
+              <RichText render={experience.lede} />
+            </div>
+            {experience.projects?.projects && (
+              <Projects projects={experience.projects.projects} />
             )}
-          </p>
-          <p className="c-experience__lede">{parse(experience.lede)}</p>
-          {experience.projects && <Projects projects={experience.projects} />}
-        </section>
-      ))}
+          </section>
+        );
+      })}
     </div>
   );
 

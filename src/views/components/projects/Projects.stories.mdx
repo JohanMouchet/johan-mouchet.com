@@ -1,5 +1,5 @@
 import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
-import { array, boolean, text } from "@storybook/addon-knobs";
+import { boolean, text } from "@storybook/addon-knobs";
 import Projects from ".";
 
 <Meta title="Components|Projects" component={Projects} />
@@ -17,26 +17,43 @@ import Projects from ".";
           link: {
             url: text("url", "#"),
           },
-          lede: text("lede", "Lede"),
-          thumbnailSrc: text(
-            "thumbnailSrc",
-            "https://via.placeholder.com/400x225"
-          ),
-          achievements: array("achievements", [
-            "Achievement 1",
-            "Achievement 2",
-            "Achievement 3",
-          ]),
-          architecture: array("architecture", [
-            "Architecture 1",
-            "Architecture 2",
-            "Architecture 3",
-          ]),
-          libraries: array("libraries", [
-            "Librarie 1",
-            "Librarie 2",
-            "Librarie 3",
-          ]),
+          lede: [
+            {
+              type: "paragraph",
+              text: text("lede", "Lede"),
+              spans: [],
+            },
+          ],
+          thumbnailSrc: {
+            url: text("thumbnailSrc", "https://via.placeholder.com/400x225"),
+          },
+          achievements: [
+            {
+              type: "paragraph",
+              text: text(
+                "achievements",
+                "<li>Achievement 1</li> <li>Achievement 2</li> <li>Achievement 3</li>"
+              ),
+              spans: [],
+            },
+          ],
+          architecture: [
+            {
+              type: "paragraph",
+              text: text(
+                "architecture",
+                "Architecture 1, Architecture 2, Architecture 3"
+              ),
+              spans: [],
+            },
+          ],
+          libraries: [
+            {
+              type: "paragraph",
+              text: text("libraries", "Library 1, Library 2, Library 3"),
+              spans: [],
+            },
+          ],
         },
       ]}
     />

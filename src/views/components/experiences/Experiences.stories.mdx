@@ -1,5 +1,5 @@
 import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
-import { text } from "@storybook/addon-knobs";
+import { boolean, text } from "@storybook/addon-knobs";
 import Experiences from ".";
 
 <Meta title="Components|Experiences" component={Experiences} />
@@ -11,17 +11,23 @@ import Experiences from ".";
     <Experiences
       experiences={[
         {
-          company: {
-            link: {
-              url: text("url", "#"),
-            },
-            name: text("name", "Name"),
+          companyLink: {
+            url: text("companyLink", "#"),
           },
+          companyName: text("companyName", "Name"),
           location: text("location", "Location"),
           jobTitle: text("jobTitle", "Job Title"),
           startDate: text("startDate", new Date()),
+          present: boolean("present", false),
           endDate: text("endDate", new Date()),
-          lede: text("lede", "Lede"),
+          contractType: text("contractType", "Contract Type"),
+          lede: [
+            {
+              type: "paragraph",
+              text: text("lede", "Lede"),
+              spans: [],
+            },
+          ],
         },
       ]}
     />

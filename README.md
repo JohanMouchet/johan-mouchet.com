@@ -17,7 +17,7 @@ This website is,
 - unit and snapshot tested with Jest and React Testing Library
 - using Sass and CSS post-processing
 - linted and formated with ESlint, stylelint and Prettier, enforced by Husky and lint-staged
-- using client side routing with [wouter](https://github.com/molefrog/wouter)
+- using client-side routing with [wouter](https://github.com/molefrog/wouter)
 - deployed, pre-rendered, with Netlify
 
 ## npm Scripts

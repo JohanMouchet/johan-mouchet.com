@@ -8,18 +8,24 @@ it("Renders <Experiences /> without crashing", () => {
       <Experiences
         experiences={[
           {
-            company: {
-              link: {
-                url: "#",
-              },
-              name: "Name",
+            companyLink: {
+              url: "#",
             },
+            companyName: "Name",
             location: "Location",
             jobTitle: "Job Title",
             startDate: new Date("2018-01-01"),
+            present: false,
             endDate: new Date("2019-01-01"),
-            lede: "Lede",
-            projects: [],
+            contractType: "Contract Type",
+            lede: [
+              {
+                type: "paragraph",
+                text: "Lede",
+                spans: [],
+              },
+            ],
+            projects: { projects: [] },
           },
         ]}
       />

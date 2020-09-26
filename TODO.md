@@ -1,5 +1,7 @@
 # TODO
 
+- // TODO: find a way to import single utility
+  - set u-utility in the markup
 - Add Storybook pages
   - Rename section SETTINGS / TOOLS / UTILITY
   - Font sizes `t-modular-scale(0)`
