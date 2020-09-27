@@ -10,13 +10,14 @@ This website is,
 
 - bootstrapped with Create React App
   - including React, webpack, Babel and more
-  - published as an offline-first Progressive Web App
+- pulling data from Prismic with [GraphQL](https://johan-mouchet.prismic.io/graphql)
+- published as an offline-first Progressive Web App
 - maintaining a design system with [Storybook](https://www.johan-mouchet.com/storybook/?path=/docs/about-getting-started--page)
 - type-checked with TypeScript
 - unit and snapshot tested with Jest and React Testing Library
 - using Sass and CSS post-processing
 - linted and formated with ESlint, stylelint and Prettier, enforced by Husky and lint-staged
-- using client side routing with [wouter](https://github.com/molefrog/wouter)
+- using client-side routing with [wouter](https://github.com/molefrog/wouter)
 - deployed, pre-rendered, with Netlify
 
 ## npm Scripts

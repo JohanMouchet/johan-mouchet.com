@@ -1,18 +1,17 @@
 import React from "react";
-import { PROFILE } from "constants/profile";
-import { parse } from "utils/parse";
+import { STATIC } from "constants/static";
 import "./Header.scss";
 
 type Props = {
   firstName?: string;
   lastName?: string;
-  tagline?: string;
+  tagline?: string | React.ReactNode;
 };
 
 const Header: React.FC<Props> = ({
-  firstName = PROFILE.firstName,
-  lastName = PROFILE.lastName,
-  tagline = /*html*/ `Never stop exploring,<br class="p-header__tagline-breaker" /> never stop creating`,
+  firstName = STATIC.profile.firstName,
+  lastName = STATIC.profile.lastName,
+  tagline = STATIC.profile.tagline,
 }) => (
   <header className="p-header">
     <div className="p-header__inner">
@@ -32,7 +31,7 @@ const Header: React.FC<Props> = ({
         </span>
       </h1>
 
-      <h2 className="p-header__tagline">{parse(tagline)}</h2>
+      <h2 className="p-header__tagline">{tagline}</h2>
     </div>
   </header>
 );

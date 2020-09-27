@@ -18,7 +18,10 @@
       ],
       "extends": [
         "plugin:mdx/recommended"
-      ]
+      ],
+      "rules": {
+        "simple-import-sort/sort": "off"
+      }
     }
   ],
   "rules": {

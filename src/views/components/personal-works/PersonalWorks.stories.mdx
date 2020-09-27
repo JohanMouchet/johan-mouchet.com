@@ -12,11 +12,18 @@ import PersonalWorks from ".";
     <PersonalWorks
       works={[
         {
-          url: text("url", "#"),
-          thumbnailSrc: text(
-            "thumbnailSrc",
-            "https://via.placeholder.com/200x200"
-          ),
+          link: {
+            url: text("url", "#"),
+          },
+          thumbnailSrc: {
+            url: text("thumbnailSrc", "https://via.placeholder.com/200x200"),
+          },
+          thumbnailExternalSrc: {
+            url: text(
+              "thumbnailExternalSrc",
+              "https://via.placeholder.com/200x200"
+            ),
+          },
           sourceIcon: <IconUnsplash />,
         },
       ]}

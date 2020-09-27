@@ -3,8 +3,8 @@ import "./AcademicQualification.scss";
 
 type Props = {
   degrees: Array<{
-    establishment: {
-      name: string;
+    establishmentName: string;
+    establishmentLink: {
       url: string;
     };
     location: string;
@@ -21,9 +21,9 @@ const AcademicQualification: React.FC<Props> = ({ degrees }) =>
           <h3 className="c-academic-qualification__heading">
             <a
               className="c-academic-qualification__establishment"
-              href={degree.establishment.url}
+              href={degree.establishmentLink.url}
             >
-              {degree.establishment.name}
+              {degree.establishmentName}
             </a>
             , {degree.location} ⁠—{" "}
             <span className="c-academic-qualification__title">

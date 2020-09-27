@@ -41,12 +41,21 @@ exports[`Renders <Experiences /> without crashing 1`] = `
         1 yr
         )
       </span>
+      <span
+        class="c-experience__type"
+      >
+         
+        / 
+        Contract Type
+      </span>
     </p>
-    <p
+    <div
       class="c-experience__lede"
     >
-      Lede
-    </p>
+      <p>
+        Lede
+      </p>
+    </div>
   </section>
 </div>
 `;

@@ -1,6 +1,5 @@
 import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
-import { text } from "@storybook/addon-knobs";
-import { IconTwitter } from "views/objects";
+import { select, text } from "@storybook/addon-knobs";
 import SocialMedia from ".";
 
 <Meta title="Components|SocialMedia" component={SocialMedia} />
@@ -13,8 +12,22 @@ import SocialMedia from ".";
       media={[
         {
           name: text("name", "Name"),
-          url: text("url", "#"),
-          icon: <IconTwitter />,
+          link: {
+            url: text("url", "#"),
+          },
+          icon: select("icon", {
+            "": null,
+            "500px": "500px",
+            codepen: "codepen",
+            dribbble: "dribbble",
+            github: "github",
+            instagram: "instagram",
+            linkedin: "linkedin",
+            spotify: "spotify",
+            twitter: "twitter",
+            unsplash: "unsplash",
+            youtube: "youtube",
+          }),
         },
       ]}
     />
