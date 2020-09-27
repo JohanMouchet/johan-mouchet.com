@@ -64,8 +64,7 @@ exports[`Renders <Projects /> without crashing 1`] = `
               <b
                 class="c-project__detail-heading"
               >
-                Key
-                 
+                Key 
                 Achievement
               </b>
               <ul

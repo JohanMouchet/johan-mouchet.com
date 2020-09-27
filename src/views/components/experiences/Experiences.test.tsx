@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
+import { Elements } from "prismic-reactjs";
 import Experiences from ".";
 
 it("Renders <Experiences /> without crashing", () => {
@@ -20,7 +21,7 @@ it("Renders <Experiences /> without crashing", () => {
             contractType: "Contract Type",
             lede: [
               {
-                type: "paragraph",
+                type: Elements.paragraph,
                 text: "Lede",
                 spans: [],
               },

@@ -1,6 +1,11 @@
 import React from "react";
 import cx from "classnames";
-import { RichText, RichTextBlock } from "prismic-reactjs";
+import {
+  Elements,
+  RichText,
+  RichTextBlock,
+  RichTextSpan,
+} from "prismic-reactjs";
 import { parse } from "utils/parse";
 import { pluralize } from "utils/pluralize";
 import { Details } from "views/objects";
@@ -20,7 +25,11 @@ type Thumbnail = {
 
 type Content = {
   highlight?: boolean;
-  achievements?: RichTextBlock[];
+  achievements?: {
+    type: Elements.paragraph | Elements.preformatted;
+    text: string;
+    spans: RichTextSpan[];
+  }[];
   architecture?: RichTextBlock[];
   libraries?: RichTextBlock[];
 };
@@ -56,45 +65,58 @@ const Projects: React.FC<Props> = ({ projects }) => {
     </>
   );
 
-  const renderContent = (project: Content) => (
-    <>
-      {project.achievements && (
-        <div className="c-project__detail">
-          <b className="c-project__detail-heading">
-            Key{" "}
-            {pluralize(
-              "Achievement",
-              project.achievements[0].text.split("</li>").length - 1
+  const renderContent = (project: Content) => {
+    const achievementPreformatted =
+      project.achievements?.[0].type === Elements.preformatted;
+    const achievementQuantity = achievementPreformatted
+      ? project.achievements?.[0].text.match(/<li>/g)?.length
+      : project.achievements?.length;
+
+    return (
+      <>
+        {project.achievements && (
+          <div className="c-project__detail">
+            <b className="c-project__detail-heading">
+              Key {pluralize("Achievement", achievementQuantity || 0)}
+            </b>
+
+            {achievementPreformatted ? (
+              <ul className="c-project__detail-list">
+                {parse(project.achievements[0].text)}
+              </ul>
+            ) : (
+              <div className="c-project__detail-list">
+                <RichText render={project.achievements} />
+              </div>
             )}
-          </b>
-
-          <ul className="c-project__detail-list">
-            {parse(project.achievements[0].text)}
-          </ul>
-        </div>
-      )}
-
-      {project.architecture && (
-        <div className="c-project__detail">
-          <b className="c-project__detail-heading">Architecture</b>
-          <div className="c-project__detail-list">
-            <RichText render={project.architecture} />
           </div>
-        </div>
-      )}
+        )}
 
-      {project.libraries && (
-        <div className="c-project__detail">
-          <b className="c-project__detail-heading">
-            {pluralize("Library", project.libraries[0].text.split(", ").length)}
-          </b>
-          <div className="c-project__detail-list">
-            <RichText render={project.libraries} />
+        {project.architecture && (
+          <div className="c-project__detail">
+            <b className="c-project__detail-heading">Architecture</b>
+            <div className="c-project__detail-list">
+              <RichText render={project.architecture} />
+            </div>
           </div>
-        </div>
-      )}
-    </>
-  );
+        )}
+
+        {project.libraries && (
+          <div className="c-project__detail">
+            <b className="c-project__detail-heading">
+              {pluralize(
+                "Library",
+                project.libraries[0].text.split(", ").length
+              )}
+            </b>
+            <div className="c-project__detail-list">
+              <RichText render={project.libraries} />
+            </div>
+          </div>
+        )}
+      </>
+    );
+  };
 
   return !projects?.length ? null : (
     <div className="c-projects">

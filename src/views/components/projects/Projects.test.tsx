@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
+import { Elements } from "prismic-reactjs";
 import Projects from ".";
 
 it("Renders <Projects /> without crashing", () => {
@@ -16,7 +17,7 @@ it("Renders <Projects /> without crashing", () => {
             },
             lede: [
               {
-                type: "paragraph",
+                type: Elements.paragraph,
                 text: "Lede",
                 spans: [],
               },
@@ -26,21 +27,21 @@ it("Renders <Projects /> without crashing", () => {
             },
             achievements: [
               {
-                type: "paragraph",
+                type: Elements.preformatted,
                 text: "<li>Achievement</li>",
                 spans: [],
               },
             ],
             architecture: [
               {
-                type: "paragraph",
+                type: Elements.paragraph,
                 text: "Architecture",
                 spans: [],
               },
             ],
             libraries: [
               {
-                type: "paragraph",
+                type: Elements.paragraph,
                 text: "Library",
                 spans: [],
               },

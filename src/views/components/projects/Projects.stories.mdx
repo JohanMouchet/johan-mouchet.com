@@ -1,5 +1,6 @@
 import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
 import { boolean, text } from "@storybook/addon-knobs";
+import { Elements } from "prismic-reactjs";
 import Projects from ".";
 
 <Meta title="Components|Projects" component={Projects} />
@@ -19,7 +20,7 @@ import Projects from ".";
           },
           lede: [
             {
-              type: "paragraph",
+              type: Elements.paragraph,
               text: text("lede", "Lede"),
               spans: [],
             },
@@ -29,17 +30,14 @@ import Projects from ".";
           },
           achievements: [
             {
-              type: "paragraph",
-              text: text(
-                "achievements",
-                "<li>Achievement 1</li> <li>Achievement 2</li> <li>Achievement 3</li>"
-              ),
+              type: Elements.listItem,
+              text: text("achievements", "Achievement"),
               spans: [],
             },
           ],
           architecture: [
             {
-              type: "paragraph",
+              type: Elements.paragraph,
               text: text(
                 "architecture",
                 "Architecture 1, Architecture 2, Architecture 3"
@@ -49,7 +47,7 @@ import Projects from ".";
           ],
           libraries: [
             {
-              type: "paragraph",
+              type: Elements.paragraph,
               text: text("libraries", "Library 1, Library 2, Library 3"),
               spans: [],
             },
