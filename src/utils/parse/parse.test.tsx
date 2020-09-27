@@ -4,7 +4,7 @@ import { parse } from ".";
 it("Converts an HTML string to JSX (through html-react-parser)", () =>
   expect(
     parse(
-      /*html*/
+      /* html */
       `<p>string</p>`
     )
   ).toStrictEqual(<p>string</p>));
@@ -12,7 +12,7 @@ it("Converts an HTML string to JSX (through html-react-parser)", () =>
 it("Strips out dangerous HTML (through dompurify)", () =>
   expect(
     parse(
-      /*html*/
+      /* html */
       `<p><script>alert("unsafe")</script>safe</p>`
     )
   ).toStrictEqual(<p>safe</p>));

@@ -1,5 +1,6 @@
 import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
-import { array, boolean, text } from "@storybook/addon-knobs";
+import { boolean, text } from "@storybook/addon-knobs";
+import { Elements } from "prismic-reactjs";
 import Projects from ".";
 
 <Meta title="Components|Projects" component={Projects} />
@@ -14,27 +15,43 @@ import Projects from ".";
           highlight: boolean("highlight", true),
           name: text("name", "Name"),
           tagline: text("tagline", "Tagline"),
-          url: text("url", "#"),
-          lede: text("lede", "Lede"),
-          thumbnailSrc: text(
-            "thumbnailSrc",
-            "https://via.placeholder.com/400x225"
-          ),
-          achievements: array("achievements", [
-            "Achievement 1",
-            "Achievement 2",
-            "Achievement 3",
-          ]),
-          architecture: array("architecture", [
-            "Architecture 1",
-            "Architecture 2",
-            "Architecture 3",
-          ]),
-          libraries: array("libraries", [
-            "Librarie 1",
-            "Librarie 2",
-            "Librarie 3",
-          ]),
+          link: {
+            url: text("url", "#"),
+          },
+          lede: [
+            {
+              type: Elements.paragraph,
+              text: text("lede", "Lede"),
+              spans: [],
+            },
+          ],
+          thumbnailSrc: {
+            url: text("thumbnailSrc", "https://via.placeholder.com/400x225"),
+          },
+          achievements: [
+            {
+              type: Elements.listItem,
+              text: text("achievements", "Achievement"),
+              spans: [],
+            },
+          ],
+          architecture: [
+            {
+              type: Elements.paragraph,
+              text: text(
+                "architecture",
+                "Architecture 1, Architecture 2, Architecture 3"
+              ),
+              spans: [],
+            },
+          ],
+          libraries: [
+            {
+              type: Elements.paragraph,
+              text: text("libraries", "Library 1, Library 2, Library 3"),
+              spans: [],
+            },
+          ],
         },
       ]}
     />

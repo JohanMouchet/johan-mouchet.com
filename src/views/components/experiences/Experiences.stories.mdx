@@ -1,5 +1,6 @@
 import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
-import { text } from "@storybook/addon-knobs";
+import { boolean, date, text } from "@storybook/addon-knobs";
+import { Elements } from "prismic-reactjs";
 import Experiences from ".";
 
 <Meta title="Components|Experiences" component={Experiences} />
@@ -11,15 +12,23 @@ import Experiences from ".";
     <Experiences
       experiences={[
         {
-          company: {
-            url: text("url", "#"),
-            name: text("name", "Name"),
+          companyLink: {
+            url: text("companyLink", "#"),
           },
+          companyName: text("companyName", "Name"),
           location: text("location", "Location"),
           jobTitle: text("jobTitle", "Job Title"),
-          startDate: text("startDate", new Date()),
-          endDate: text("endDate", new Date()),
-          lede: text("lede", "Lede"),
+          startDate: new Date(date("startDate", new Date())),
+          present: boolean("present", false),
+          endDate: new Date(date("endDate", new Date())),
+          contractType: text("contractType", "Contract Type"),
+          lede: [
+            {
+              type: Elements.paragraph,
+              text: text("lede", "Lede"),
+              spans: [],
+            },
+          ],
         },
       ]}
     />

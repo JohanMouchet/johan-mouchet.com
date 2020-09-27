@@ -97,6 +97,11 @@
       #{$root-detail}:last-child {
         #{$root-detail}-list:last-child {
           margin-bottom: 0;
+
+          /* stylelint-disable-next-line max-nesting-depth, selector-max-combinators, selector-max-compound-selectors */
+          > * {
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -110,15 +115,11 @@
 
     &-list {
       margin-top: 0;
+
+      > * {
+        margin-top: 0;
+      }
     }
-  }
-
-  &__success {
-    color: $s-color-success;
-  }
-
-  &__award {
-    color: $s-color-info;
   }
 
   &--highlighted {

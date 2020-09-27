@@ -47,11 +47,13 @@ exports[`Renders <Projects /> without crashing 1`] = `
                 </span>
               </div>
             </a>
-            <p
+            <div
               class="c-project__lede"
             >
-              Lede
-            </p>
+              <p>
+                Lede
+              </p>
+            </div>
           </div>
           <div
             class="cell cell--12-@xs cell--6-@sm cell--8-@lg"
@@ -81,11 +83,13 @@ exports[`Renders <Projects /> without crashing 1`] = `
               >
                 Architecture
               </b>
-              <p
+              <div
                 class="c-project__detail-list"
               >
-                Architecture
-              </p>
+                <p>
+                  Architecture
+                </p>
+              </div>
             </div>
             <div
               class="c-project__detail"
@@ -95,11 +99,13 @@ exports[`Renders <Projects /> without crashing 1`] = `
               >
                 Library
               </b>
-              <p
+              <div
                 class="c-project__detail-list"
               >
-                Librarie
-              </p>
+                <p>
+                  Library
+                </p>
+              </div>
             </div>
           </div>
         </div>

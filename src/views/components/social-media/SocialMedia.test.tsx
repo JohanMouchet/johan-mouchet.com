@@ -9,8 +9,10 @@ it("Renders <SocialMedia /> without crashing", () => {
         media={[
           {
             name: "Name",
-            url: "#",
-            icon: <div />,
+            link: {
+              url: "#",
+            },
+            icon: "500px",
           },
         ]}
       />

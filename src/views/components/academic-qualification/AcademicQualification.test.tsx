@@ -8,8 +8,8 @@ it("Renders <AcademicQualification /> without crashing", () => {
       <AcademicQualification
         degrees={[
           {
-            establishment: {
-              name: "Name",
+            establishmentName: "Name",
+            establishmentLink: {
               url: "#",
             },
             location: "Location",

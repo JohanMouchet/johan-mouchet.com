@@ -9,7 +9,9 @@ it("Renders <Breadcrumb /> without crashing", () => {
         levels={[
           {
             title: "Title",
-            url: "#",
+            link: {
+              url: "#",
+            },
           },
         ]}
       />
