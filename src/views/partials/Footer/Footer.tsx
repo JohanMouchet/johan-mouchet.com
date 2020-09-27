@@ -11,10 +11,10 @@ type Props = {
 
 const Footer: React.FC<Props> = ({
   version = STATIC.version,
-  copyright = /* html*/ `${
+  copyright = `${
     STATIC.profile.firstName
   } ${STATIC.profile.lastName.toUpperCase()}`,
-  topButtonLabel = /* html*/ `Get to the top`,
+  topButtonLabel = "Get to the top",
 }) => {
   const year = new Date().getFullYear();
 

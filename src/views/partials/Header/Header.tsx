@@ -1,12 +1,11 @@
 import React from "react";
 import { STATIC } from "constants/static";
-import { parse } from "utils/parse";
 import "./Header.scss";
 
 type Props = {
   firstName?: string;
   lastName?: string;
-  tagline?: string;
+  tagline?: string | React.ReactNode;
 };
 
 const Header: React.FC<Props> = ({
@@ -32,7 +31,7 @@ const Header: React.FC<Props> = ({
         </span>
       </h1>
 
-      <h2 className="p-header__tagline">{parse(tagline)}</h2>
+      <h2 className="p-header__tagline">{tagline}</h2>
     </div>
   </header>
 );
