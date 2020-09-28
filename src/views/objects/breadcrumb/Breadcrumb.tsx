@@ -36,29 +36,26 @@ const Breadcrumb: React.FC<Props> = ({ levels, className }) => {
           </li>
         ))}
       </ol>
-      {/* TODO: check if work? */}
-      {/* <pre> */}
-      {/* <script type="application/ld+json">
-       {`
-      "@context": "http://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-      ${levels.map(
-         (level, index) =>
-           ({
-             "@type": "ListItem",
-             position: index,
-             item: {
-               "@type": "Thing",
-               "@id": level.link.url,
-               name: level.title
-             }
-           }(index !== lastLevel) && ",")
-       )}
-      ]
-      `}
-      </script> */}
-      {/* </pre> */}
+
+      <script type="application/ld+json">
+        {`{
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+        ${levels.map(
+          (level, index) => `{
+          "@type": "ListItem",
+          "position": ${index + 1},
+          "item": {
+            "@type": "Thing",
+            "@id": "${level.link.url}",
+            "name": "${level.title}"
+          }
+        }`
+        )}
+        ]
+      }`}
+      </script>
     </>
   );
 };

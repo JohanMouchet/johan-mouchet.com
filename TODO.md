@@ -1,15 +1,12 @@
 # TODO
 
-- // TODO: find a way to import single utility
-  - set u-utility in the markup
 - Add Storybook pages
   - Rename section SETTINGS / TOOLS / UTILITY
   - Font sizes `t-modular-scale(0)`
   - Distance sizes `t-vertical-rhythm(1)`
 - Import Fluxgrid, modify naming scheme
   - replace any other `\@`
-- Fix Toggles, Tabs
-- Address all `TODO`
+- Fix Tabs
 
 # Consider
 

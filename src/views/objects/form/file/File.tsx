@@ -30,7 +30,7 @@ const File: React.FC<Props> = ({
         id={id}
         type="file"
         name={name}
-        className="o-form__file-input"
+        className="o-form__file-input u-is-visually-hidden"
         data-multiple-caption={
           multipleCaption ? multipleCaption : "{count} files selected"
         }
