@@ -1,12 +1,12 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { number, text } from "@storybook/addon-knobs";
 import Skills from ".";
 
-<Meta title="Components|Skills" component={Skills} />
+<Meta title="Components/Skills" component={Skills} />
 
 # Skills
 
-<Preview>
+<Canvas>
   <Story name="default">
     <Skills
       skills={[
@@ -22,4 +22,4 @@ import Skills from ".";
       ]}
     />
   </Story>
-</Preview>
+</Canvas>

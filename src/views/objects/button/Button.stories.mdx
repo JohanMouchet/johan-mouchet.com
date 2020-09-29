@@ -1,12 +1,12 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { select, text } from "@storybook/addon-knobs";
 import Button from ".";
 
-<Meta title="Objects|Button" component={Button} />
+<Meta title="Objects/Button" component={Button} />
 
 # Button
 
-<Preview>
+<Canvas>
   <Story name="default">
     <Button
       type={select("type", {
@@ -37,4 +37,4 @@ import Button from ".";
       {text("children", "children")}
     </Button>
   </Story>
-</Preview>
+</Canvas>

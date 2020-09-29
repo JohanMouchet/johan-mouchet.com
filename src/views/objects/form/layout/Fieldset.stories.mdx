@@ -1,15 +1,15 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
 import { Fieldset } from ".";
 
-<Meta title="Objects|Form/Layout" component={Fieldset} />
+<Meta title="Objects/Form/Layout/Fieldset" component={Fieldset} />
 
 # Fieldset
 
-<Preview>
-  <Story name="Fieldset">
+<Canvas>
+  <Story name="default">
     <Fieldset legend={text("legend", "legend")}>
       {text("children", "children")}
     </Fieldset>
   </Story>
-</Preview>
+</Canvas>

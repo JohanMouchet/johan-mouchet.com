@@ -1,13 +1,13 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
 import Default from ".";
 
-<Meta title="Layouts|Default" component={Default} />
+<Meta title="Layouts/Default" component={Default} />
 
 # Default
 
-<Preview>
+<Canvas>
   <Story name="default">
     <Default>{text("children", "children")}</Default>
   </Story>
-</Preview>
+</Canvas>

@@ -1,12 +1,12 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
 import Anchor from ".";
 
-<Meta title="Objects|Anchor" component={Anchor} />
+<Meta title="Objects/Anchor" component={Anchor} />
 
 # Anchor
 
-<Preview>
+<Canvas>
   <Story name="default">
     <Anchor
       as={text("as", "h2")}
@@ -16,4 +16,4 @@ import Anchor from ".";
       {text("children", "Anchor (hover)")}
     </Anchor>
   </Story>
-</Preview>
+</Canvas>

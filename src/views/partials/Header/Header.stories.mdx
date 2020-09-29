@@ -1,12 +1,12 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
 import Header from ".";
 
-<Meta title="Partials|Header" component={Header} />
+<Meta title="Partials/Header" component={Header} />
 
 # Header
 
-<Preview>
+<Canvas>
   <Story name="default">
     <Header
       firstName={text("firstName")}
@@ -14,4 +14,4 @@ import Header from ".";
       tagline={text("tagline")}
     />
   </Story>
-</Preview>
+</Canvas>

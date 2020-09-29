@@ -1,12 +1,12 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { boolean, text } from "@storybook/addon-knobs";
 import Blockquote from ".";
 
-<Meta title="Objects|Blockquote" component={Blockquote} />
+<Meta title="Objects/Blockquote" component={Blockquote} />
 
 # Blockquote
 
-<Preview>
+<Canvas>
   <Story name="default">
     <Blockquote
       quote={text("quote", "Quote")}
@@ -14,4 +14,4 @@ import Blockquote from ".";
       pulled={boolean("pulled", false)}
     />
   </Story>
-</Preview>
+</Canvas>

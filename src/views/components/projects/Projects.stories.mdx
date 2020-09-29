@@ -1,13 +1,13 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { boolean, text } from "@storybook/addon-knobs";
 import { Elements } from "prismic-reactjs";
 import Projects from ".";
 
-<Meta title="Components|Projects" component={Projects} />
+<Meta title="Components/Projects" component={Projects} />
 
 # Projects
 
-<Preview>
+<Canvas>
   <Story name="default">
     <Projects
       projects={[
@@ -56,4 +56,4 @@ import Projects from ".";
       ]}
     />
   </Story>
-</Preview>
+</Canvas>

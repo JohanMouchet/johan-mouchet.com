@@ -1,12 +1,12 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { select, text } from "@storybook/addon-knobs";
 import Article from ".";
 
-<Meta title="Partials|Article" component={Article} />
+<Meta title="Partials/Article" component={Article} />
 
 # Article
 
-<Preview>
+<Canvas>
   <Story name="default">
     <div style={{ outline: "1px dotted" }}>
       <Article
@@ -23,4 +23,4 @@ import Article from ".";
       </Article>
     </div>
   </Story>
-</Preview>
+</Canvas>

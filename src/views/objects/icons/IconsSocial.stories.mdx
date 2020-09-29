@@ -1,4 +1,4 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import {
   Icon500px,
   IconCodepen,
@@ -12,12 +12,12 @@ import {
   IconYoutube,
 } from ".";
 
-<Meta title="Objects|Icons" component={Icon500px} />
+<Meta title="Objects/Icons/Social" component={Icon500px} />
 
 # Icons - Social
 
-<Preview>
-  <Story name="Social">
+<Canvas>
+  <Story name="default">
     {() => {
       const icons = [
         <Icon500px />,
@@ -45,4 +45,4 @@ import {
       );
     }}
   </Story>
-</Preview>
+</Canvas>

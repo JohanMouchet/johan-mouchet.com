@@ -1,13 +1,13 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
 import { Table } from "views/objects";
 import settings from "./typography.scss";
 
-<Meta title="Settings|Typography" />
+<Meta title="Settings/Typography" />
 
 # Typography
 
-<Preview>
+<Canvas>
   <Story name="Typefaces">
     {() => {
       const input = text(
@@ -67,9 +67,9 @@ import settings from "./typography.scss";
       );
     }}
   </Story>
-</Preview>
+</Canvas>
 
-<Preview>
+<Canvas>
   <Story name="Headings">
     {() => {
       const input = text("Heading Text", "Heading");
@@ -104,9 +104,9 @@ import settings from "./typography.scss";
       );
     }}
   </Story>
-</Preview>
+</Canvas>
 
-<Preview>
+<Canvas>
   <Story name="Formatting">
     {() => {
       const input = text("Tag Text", "");
@@ -197,4 +197,4 @@ import settings from "./typography.scss";
       );
     }}
   </Story>
-</Preview>
+</Canvas>
