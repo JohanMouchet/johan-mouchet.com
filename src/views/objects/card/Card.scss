@@ -10,11 +10,6 @@
   /* Group */
   &-group {
     margin-bottom: $grid-gutter;
-
-    .grid--lgGutter-\@xs > & {
-      // TODO: find a way to import single vendor
-      // margin-bottom: $grid-gutter-lg;
-    }
   }
 
   display: flex;

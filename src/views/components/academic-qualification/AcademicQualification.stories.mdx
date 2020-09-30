@@ -1,13 +1,13 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
 import AcademicQualification from ".";
 
 <Meta
-  title="Components|AcademicQualification"
+  title="Components/AcademicQualification"
   component={AcademicQualification}
 />
 
-<Preview>
+<Canvas>
   <Story name="default">
     <AcademicQualification
       degrees={[
@@ -23,4 +23,4 @@ import AcademicQualification from ".";
       ]}
     />
   </Story>
-</Preview>
+</Canvas>

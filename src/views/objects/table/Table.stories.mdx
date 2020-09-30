@@ -1,12 +1,12 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { boolean, select } from "@storybook/addon-knobs";
 import Table from ".";
 
-<Meta title="Objects|Table" component={Table} />
+<Meta title="Objects/Table" component={Table} />
 
 # Table
 
-<Preview>
+<Canvas>
   <Story name="default">
     <Table
       align={select("align", {
@@ -80,4 +80,4 @@ import Table from ".";
       </tfoot>
     </Table>
   </Story>
-</Preview>
+</Canvas>

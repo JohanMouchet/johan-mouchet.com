@@ -1,12 +1,12 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { boolean, select, text } from "@storybook/addon-knobs";
 import Tooltip from ".";
 
-<Meta title="Objects|Tooltip" component={Tooltip} />
+<Meta title="Objects/Tooltip" component={Tooltip} />
 
 # Tooltip
 
-<Preview>
+<Canvas>
   <Story name="default">
     <Tooltip
       content={text("content", "Content")}
@@ -23,4 +23,4 @@ import Tooltip from ".";
       {text("children", "children (hover)")}
     </Tooltip>
   </Story>
-</Preview>
+</Canvas>

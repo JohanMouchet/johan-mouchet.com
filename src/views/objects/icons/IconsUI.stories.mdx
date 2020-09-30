@@ -1,12 +1,12 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { IconChevronDown, IconSearch } from ".";
 
-<Meta title="Objects|Icons" component={IconChevronDown} />
+<Meta title="Objects/Icons/UI" component={IconChevronDown} />
 
 # Icons - UI
 
-<Preview>
-  <Story name="UI">
+<Canvas>
+  <Story name="default">
     {() => {
       const icons = [<IconChevronDown />, <IconSearch />];
       return (
@@ -23,4 +23,4 @@ import { IconChevronDown, IconSearch } from ".";
       );
     }}
   </Story>
-</Preview>
+</Canvas>

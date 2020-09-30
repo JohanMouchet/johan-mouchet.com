@@ -1,12 +1,12 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { select, text } from "@storybook/addon-knobs";
 import Details from ".";
 
-<Meta title="Objects|Details" component={Details} />
+<Meta title="Objects/Details" component={Details} />
 
 # Details
 
-<Preview>
+<Canvas>
   <Story name="default">
     <Details
       summary={text("summary", "Summary")}
@@ -15,4 +15,4 @@ import Details from ".";
       {text("children", "children")}
     </Details>
   </Story>
-</Preview>
+</Canvas>

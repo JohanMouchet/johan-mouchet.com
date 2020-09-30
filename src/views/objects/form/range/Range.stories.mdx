@@ -1,14 +1,14 @@
 import { Fragment } from "react";
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
 import { Label } from "views/objects";
 import Range from ".";
 
-<Meta title="Objects|Form/Range" component={Range} />
+<Meta title="Objects/Form/Range" component={Range} />
 
 # Range
 
-<Preview>
+<Canvas>
   <Story name="default">
     {() => {
       const id = text("id", "id");
@@ -22,4 +22,4 @@ import Range from ".";
       );
     }}
   </Story>
-</Preview>
+</Canvas>

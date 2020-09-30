@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import cx from "classnames";
 import "./Fields.scss";
 
@@ -88,12 +88,22 @@ const Textarea: React.FC<TextareaProps> = ({
   children,
   ...attributes
 }) => {
+  const [value, setValue] = useState(children);
   const classNames = cx("o-form__field", "o-form__field--textarea", className);
 
+  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setValue(event.target.value);
+  };
+
   return (
-    <textarea id={id} name={name} className={classNames} {...attributes}>
-      {children}
-    </textarea>
+    <textarea
+      id={id}
+      name={name}
+      className={classNames}
+      value={value}
+      onChange={handleChange}
+      {...attributes}
+    />
   );
 };
 

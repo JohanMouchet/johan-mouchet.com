@@ -1,12 +1,12 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { boolean, number, text } from "@storybook/addon-knobs";
 import ProgressBar from ".";
 
-<Meta title="Objects|ProgressBar" component={ProgressBar} />
+<Meta title="Objects/ProgressBar" component={ProgressBar} />
 
 # ProgressBar
 
-<Preview>
+<Canvas>
   <Story name="default">
     <ProgressBar
       label={text("label", "Label")}
@@ -21,4 +21,4 @@ import ProgressBar from ".";
       })}
     />
   </Story>
-</Preview>
+</Canvas>

@@ -1,12 +1,12 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { boolean, select, text } from "@storybook/addon-knobs";
 import Modal from ".";
 
-<Meta title="Objects|Modal" component={Modal} />
+<Meta title="Objects/Modal" component={Modal} />
 
 # Modal
 
-<Preview>
+<Canvas>
   <Story name="default">
     <Modal
       isOpen={boolean("isOpen", true)}
@@ -21,4 +21,4 @@ import Modal from ".";
       {text("children", "children")}
     </Modal>
   </Story>
-</Preview>
+</Canvas>

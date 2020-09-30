@@ -1,12 +1,12 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { boolean, select, text } from "@storybook/addon-knobs";
 import Alert from ".";
 
-<Meta title="Objects|Alert" component={Alert} />
+<Meta title="Objects/Alert" component={Alert} />
 
 # Alert
 
-<Preview>
+<Canvas>
   <Story name="default">
     <Alert
       isOpen={boolean("isOpen", true)}
@@ -26,4 +26,4 @@ import Alert from ".";
       {text("children", "children")}
     </Alert>
   </Story>
-</Preview>
+</Canvas>

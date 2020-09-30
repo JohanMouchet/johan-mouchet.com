@@ -1,12 +1,12 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { boolean, select, text } from "@storybook/addon-knobs";
 import Card from ".";
 
-<Meta title="Objects|Card" component={Card} />
+<Meta title="Objects/Card" component={Card} />
 
 # Card
 
-<Preview>
+<Canvas>
   <Story name="default">
     <div className="grid">
       <div className="cell cell--4-@xs">
@@ -34,4 +34,4 @@ import Card from ".";
       </div>
     </div>
   </Story>
-</Preview>
+</Canvas>

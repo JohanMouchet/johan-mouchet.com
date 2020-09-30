@@ -35,7 +35,7 @@ const Toggle: React.FC<Props> = ({
         type={type}
         name={name}
         defaultValue={value}
-        className="o-form__toggle-input"
+        className="o-form__toggle-input u-is-visually-hidden"
         defaultChecked={check}
         onChange={() => handleChange((check) => !check)}
         {...attributes}

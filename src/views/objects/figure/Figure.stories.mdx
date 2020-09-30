@@ -1,12 +1,12 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { boolean, text } from "@storybook/addon-knobs";
 import Figure from ".";
 
-<Meta title="Objects|Figure" component={Figure} />
+<Meta title="Objects/Figure" component={Figure} />
 
 # Figure
 
-<Preview>
+<Canvas>
   <Story name="default">
     <Figure
       src={text("src", "https://via.placeholder.com/500x250")}
@@ -16,4 +16,4 @@ import Figure from ".";
       centered={boolean("centered", true)}
     />
   </Story>
-</Preview>
+</Canvas>
