@@ -6,7 +6,7 @@ exports[`Renders <Checkbox /> without crashing 1`] = `
 >
   <input
     checked=""
-    class="o-form__toggle-input"
+    class="o-form__toggle-input u-is-visually-hidden"
     name="name"
     type="checkbox"
     value="value"
@@ -28,7 +28,7 @@ exports[`Renders <Radio /> without crashing 1`] = `
 >
   <input
     checked=""
-    class="o-form__toggle-input"
+    class="o-form__toggle-input u-is-visually-hidden"
     name="name"
     type="radio"
     value="value"
