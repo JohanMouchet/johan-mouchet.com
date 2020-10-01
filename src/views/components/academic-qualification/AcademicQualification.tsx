@@ -30,9 +30,12 @@ const AcademicQualification: React.FC<Props> = ({ degrees }) =>
               {degree.title}
             </span>
           </h3>
-          <span className="c-academic-qualification__graduation-year">
+          <time
+            className="c-academic-qualification__graduation-year"
+            dateTime={`${degree.graduationYear}`}
+          >
             {degree.graduationYear}
-          </span>
+          </time>
         </section>
       ))}
     </div>

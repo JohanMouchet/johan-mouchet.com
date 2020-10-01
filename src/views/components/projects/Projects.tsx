@@ -125,7 +125,7 @@ const Projects: React.FC<Props> = ({ projects }) => {
           project.highlight ? (
             <div
               className="cell cell--12-@xs"
-              key={project.name + (project.tagline || "")}
+              key={`${project.name}${project.tagline || ""}`}
             >
               <div className="c-project c-project--highlighted">
                 <div className="grid">
@@ -144,7 +144,7 @@ const Projects: React.FC<Props> = ({ projects }) => {
                 "cell--4-@lg": project.lede,
                 "cell--3-@lg": !project.lede,
               })}
-              key={project.name + (project.tagline || "")}
+              key={`${project.name}${project.tagline || ""}`}
             >
               <div className="c-project">
                 {renderThumbnail(project)}

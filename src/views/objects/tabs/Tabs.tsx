@@ -20,7 +20,7 @@ const Tabs: React.FC<Props> = ({ tabs, className }) => {
           <li
             className="o-tabs__thumb u-animation u-animation--fade-in-up"
             style={{
-              animationDelay: index > 0 ? index * 0.15 + "s" : undefined,
+              animationDelay: index > 0 ? `${index * 0.15}s` : undefined,
             }}
             key={tab.thumb}
           >

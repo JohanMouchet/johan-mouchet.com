@@ -27,9 +27,10 @@ const Button: React.FC<Props> = ({
     "o-button",
     size && `o-button--${size}`,
     variant && `o-button--${variant}`,
-    typeof block === "string"
-      ? `o-button--block${"-" + block}`
-      : block === true && "o-button--block",
+    block &&
+      `o-button--block${
+        typeof block === "string" ? `-${block}` : block === true && ""
+      }`,
     className
   );
 

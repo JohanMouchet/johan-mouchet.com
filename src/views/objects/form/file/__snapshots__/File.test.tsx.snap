@@ -5,7 +5,7 @@ exports[`Renders <File /> without crashing 1`] = `
   class="o-form__file o-button"
 >
   <input
-    class="o-form__file-input"
+    class="o-form__file-input u-is-visually-hidden"
     data-multiple-caption="Multiple Caption"
     name="name"
     type="file"

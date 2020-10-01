@@ -12,23 +12,33 @@ import { pluralize } from "utils/pluralize";
 const duration = (
   startDate: Date,
   endDate: Date,
-  minimumLabel?: string
+  format: "short" | "iso8601" = "short",
+  minimumLabel = ""
 ): string => {
   if (startDate <= endDate) {
     const durationInMonths = differenceInCalendarMonths(endDate, startDate);
     const years = Math.floor(durationInMonths / 12);
     const months = durationInMonths % 12;
-    const yearsFormated = years >= 1 ? pluralize(`${years} yr`, years) : "";
-    const monthsFormated =
-      months >= 1
-        ? pluralize(`${months} mo`, months)
-        : !yearsFormated && minimumLabel
-        ? minimumLabel
-        : "";
+    const displayMinimumLabel = years + months <= 0;
 
-    return (
-      yearsFormated + (yearsFormated && monthsFormated && " ") + monthsFormated
-    );
+    if (format === "short") {
+      const yearsFormated = years >= 1 ? pluralize(`${years} yr`, years) : "";
+      const monthsFormated =
+        months >= 1 ? pluralize(`${months} mo`, months) : "";
+
+      return !displayMinimumLabel
+        ? `${yearsFormated}${
+            yearsFormated && monthsFormated && " "
+          }${monthsFormated}`
+        : minimumLabel;
+    } else {
+      const yearsFormated = years >= 1 ? `${years}Y` : "";
+      const monthsFormated = months >= 1 ? `${months}M` : "";
+
+      return !displayMinimumLabel
+        ? `P${yearsFormated}${monthsFormated}`
+        : minimumLabel;
+    }
   } else {
     throw new Error("startDate must be anterior to endDate");
   }
