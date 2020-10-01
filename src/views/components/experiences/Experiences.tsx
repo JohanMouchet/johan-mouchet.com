@@ -53,25 +53,32 @@ const Experiences: React.FC<Props> = ({ experiences }) =>
             </h3>
             <p className="c-experience__subheading">
               <span className="c-experience__date">
-                {`${startDate.toLocaleString("en-GB", {
-                  month: "short",
-                })} ${startDate.getFullYear()}`}
+                <time dateTime={startDate.toISOString().substring(0, 7)}>
+                  {`${startDate.toLocaleString("en-GB", {
+                    month: "short",
+                  })} ${startDate.getFullYear()}`}
+                </time>
 
-                {experience.present
-                  ? " – Present"
-                  : [
-                      (endDate.getFullYear() > startDate.getFullYear() ||
-                        endDate.getMonth() > startDate.getMonth()) &&
-                        ` – ${endDate.toLocaleString("en-GB", {
-                          month: "short",
-                        })}`,
-                      endDate.getFullYear() > startDate.getFullYear() &&
-                        ` ${endDate.getFullYear()}`,
-                    ]}
-              </span>
+                {experience.present ? (
+                  " – Present"
+                ) : (
+                  <>
+                    {" "}
+                    –{" "}
+                    <time dateTime={endDate.toISOString().substring(0, 7)}>
+                      {`${endDate.toLocaleString("en-GB", {
+                        month: "short",
+                      })} ${endDate.getFullYear()}`}
+                    </time>
+                  </>
+                )}
+              </span>{" "}
               <span className="c-experience__duration">
-                {" "}
-                ({duration(startDate, endDate, "1 mo")})
+                (
+                <time dateTime={duration(startDate, endDate, "iso8601", "1M")}>
+                  {duration(startDate, endDate, "short", "1 mo")}
+                </time>
+                )
               </span>
               {experience.contractType && (
                 <span className="c-experience__type">
