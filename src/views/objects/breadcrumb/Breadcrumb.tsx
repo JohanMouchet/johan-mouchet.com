@@ -23,7 +23,7 @@ const Breadcrumb: React.FC<Props> = ({ levels, className }) => {
           <li
             className="o-breadcrumb__level u-animation u-animation--fade-in-up"
             style={{
-              animationDelay: index > 0 ? index * 0.15 + "s" : undefined,
+              animationDelay: index > 0 ? `${index * 0.15}s` : undefined,
             }}
             key={level.link.url}
           >

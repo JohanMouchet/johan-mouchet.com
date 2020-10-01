@@ -38,7 +38,7 @@ const Experiences: React.FC<Props> = ({ experiences }) =>
         return (
           <section
             className="c-experience"
-            key={experience.companyName + " - " + startDate}
+            key={`${experience.companyName}-${startDate}`}
           >
             <h3 className="c-experience__heading">
               <a

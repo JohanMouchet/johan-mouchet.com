@@ -26,9 +26,9 @@ const duration = (
         ? minimumLabel
         : "";
 
-    return (
-      yearsFormated + (yearsFormated && monthsFormated && " ") + monthsFormated
-    );
+    return `${yearsFormated}${
+      yearsFormated && monthsFormated && " "
+    }${monthsFormated}`;
   } else {
     throw new Error("startDate must be anterior to endDate");
   }
