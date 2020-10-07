@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <OpenSource /> without crashing 1`] = `
+<div
+  class="c-open-sources"
+>
+  <div
+    class="grid"
+  >
+    <div
+      class="cell cell--12-@xs cell--6-@sm cell--4-@lg"
+    >
+      <h3
+        class="c-open-source__title"
+      >
+        <a
+          href="#"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Name
+        </a>
+      </h3>
+      <div
+        class="c-open-source__lede"
+      >
+        <p>
+          Lede
+        </p>
+      </div>
+      <div
+        class="c-open-source__description"
+      >
+        <ul>
+          <li>
+            Description
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;

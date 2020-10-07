@@ -1,9 +1,10 @@
 import React from "react";
 import { gql, useQuery } from "@apollo/client";
-import { RichText, RichTextBlock } from "prismic-reactjs";
+import { RichText } from "prismic-reactjs";
 import {
   AcademicQualification,
   Experiences,
+  OpenSource,
   PersonalWorks,
   Skills,
   SocialMedia,
@@ -307,39 +308,7 @@ const Home: React.FC = () => {
                     {data.home.openSourceSectionTitle}
                   </Anchor>
 
-                  {!data.openSource.projects?.length ? null : (
-                    <div className="grid">
-                      {data.openSource.projects.map(
-                        (project: {
-                          link: {
-                            url: string;
-                          };
-                          name: string;
-                          lede: RichTextBlock[];
-                          description: RichTextBlock[];
-                        }) => (
-                          <div
-                            className="cell cell--12-@xs cell--6-@sm cell--4-@lg"
-                            key={project.name}
-                          >
-                            <h3>
-                              <a
-                                href={project.link.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                {project.name}
-                              </a>
-                            </h3>
-
-                            <RichText render={project.lede} />
-
-                            <RichText render={project.description} />
-                          </div>
-                        )
-                      )}
-                    </div>
-                  )}
+                  <OpenSource projects={data.openSource.projects} />
                 </Article>
 
                 <hr />
