@@ -1,10 +1,10 @@
 import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
+import { BREAKPOINTS } from "constants/breakpoints";
 import { Table } from "views/objects";
-import settings from "./shadows.scss";
 
-<Meta title="Settings/Shadows" />
+<Meta title="Styles/Breakpoints" />
 
-# Shadows
+# Breakpoints
 
 <Canvas>
   <Story name="default">
@@ -12,36 +12,39 @@ import settings from "./shadows.scss";
       <thead>
         <tr>
           <th>Name</th>
-          <th>Preview</th>
+          <th>Size</th>
           <th>Sass Setting</th>
         </tr>
       </thead>
       <tbody>
         {[
           {
+            name: "xs",
+            size: BREAKPOINTS.XS,
+          },
+          {
             name: "sm",
-            source: settings.SHADOWS_SM,
+            size: BREAKPOINTS.SM,
           },
           {
             name: "md",
-            source: settings.SHADOWS_MD,
+            size: BREAKPOINTS.MD,
           },
           {
             name: "lg",
-            source: settings.SHADOWS_LG,
+            size: BREAKPOINTS.LG,
           },
-        ].map((shadow) => (
-          <tr key={shadow.source}>
-            <th>{shadow.name}</th>
-            <td>
-              <span
-                className="storybook-swatch storybook-swatch--lg"
-                style={{ boxShadow: shadow.source }}
-              ></span>
-            </td>
+          {
+            name: "xl",
+            size: BREAKPOINTS.XL,
+          },
+        ].map((breakpoint) => (
+          <tr key={breakpoint.size}>
+            <th>{breakpoint.name}</th>
+            <td>{breakpoint.size}</td>
             <td>
               <code className="u-select--all">
-                map-get($s-shadows, {shadow.name})
+                map-get($s-breakpoints, {breakpoint.name})
               </code>
             </td>
           </tr>

@@ -1,9 +1,8 @@
 # TODO
 
 - Add Storybook pages
-  - Rename section SETTINGS / TOOLS / UTILITY
   - Font sizes `t-modular-scale(0)`
-  - Distance sizes `t-vertical-rhythm(1)`
+  - Spacing `t-vertical-rhythm(1)`
 - Import Fluxgrid, modify naming scheme
   - replace any other `\@`
 - Fix Tabs
