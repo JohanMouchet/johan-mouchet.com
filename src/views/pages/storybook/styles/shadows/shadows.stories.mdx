@@ -1,10 +1,10 @@
 import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { Table } from "views/objects";
-import settings from "./backgrounds.scss";
+import settings from "./shadows.scss";
 
-<Meta title="Settings/Backgrounds" />
+<Meta title="Styles/Shadows" />
 
-# Backgrounds
+# Shadows
 
 <Canvas>
   <Story name="default">
@@ -19,27 +19,29 @@ import settings from "./backgrounds.scss";
       <tbody>
         {[
           {
-            name: "Dots",
-            source: settings.BACKGROUNDS_DOTS,
-            sassSetting: "dots",
+            name: "sm",
+            source: settings.SHADOWS_SM,
           },
           {
-            name: "Zigzag",
-            source: settings.BACKGROUNDS_ZIGZAG,
-            sassSetting: "zigzag",
+            name: "md",
+            source: settings.SHADOWS_MD,
           },
-        ].map((background) => (
-          <tr key={background.source}>
-            <th>{background.name}</th>
+          {
+            name: "lg",
+            source: settings.SHADOWS_LG,
+          },
+        ].map((shadow) => (
+          <tr key={shadow.source}>
+            <th>{shadow.name}</th>
             <td>
               <span
                 className="storybook-swatch storybook-swatch--lg"
-                style={{ backgroundImage: background.source }}
+                style={{ boxShadow: shadow.source }}
               ></span>
             </td>
             <td>
               <code className="u-select--all">
-                map-get($s-backgrounds, {background.sassSetting})
+                map-get($s-shadows, {shadow.name})
               </code>
             </td>
           </tr>

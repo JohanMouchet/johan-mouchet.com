@@ -2,10 +2,13 @@ import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 import { text } from "@storybook/addon-knobs";
 import { Table } from "views/objects";
 import settings from "./typography.scss";
+import "./typography.scss";
 
-<Meta title="Settings/Typography" />
+<Meta title="Styles/Typography" />
 
 # Typography
+
+## Typefaces
 
 <Canvas>
   <Story name="Typefaces">
@@ -69,6 +72,96 @@ import settings from "./typography.scss";
   </Story>
 </Canvas>
 
+## Sizes
+
+<Canvas>
+  <Story name="Sizes">
+    {() => {
+      const input = text(
+        "Sizes Text",
+        "The quick brown fox jumps over the lazy dog."
+      );
+      return (
+        <>
+          <h3>Settings</h3>
+          <Table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Value</th>
+                <th>Sass Setting</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                {
+                  name: "Font size base",
+                  value: settings.FONT_SIZE_BASE,
+                  sassSetting: "$s-font-size-base",
+                },
+                {
+                  name: "Font size mobile",
+                  value: settings.FONT_SIZE_MOBILE,
+                  sassSetting: "$s-font-size-mobile",
+                },
+                {
+                  name: "Line height base",
+                  value: settings.LINE_HEIGHT_BASE,
+                  sassSetting: "$s-line-height-base",
+                },
+                {
+                  name: "Modular scale ratio",
+                  value: settings.MODULAR_SCALE_RATIO,
+                  sassSetting: "$s-modular-scale-ratio",
+                },
+              ].map((setting) => (
+                <tr key={setting.sassSetting}>
+                  <th>{setting.name}</th>
+                  <td>
+                    <code>{setting.value}</code>
+                  </td>
+                  <td>
+                    <code className="u-select--all">{setting.sassSetting}</code>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+          <h3>Modular Scale</h3>
+          <Table>
+            <thead>
+              <tr>
+                <th>Level</th>
+                <th>Preview</th>
+                <th>Sass Tool</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[2, 1, 0, -1, -2].map((size) => (
+                <tr key={size}>
+                  <th>{size}</th>
+                  <td>
+                    <span className={`storybook-size--${size.toString()}`}>
+                      {input}
+                    </span>
+                  </td>
+                  <td>
+                    <code className="u-select--all">
+                      t-modular-scale({size})
+                    </code>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+## Headings
+
 <Canvas>
   <Story name="Headings">
     {() => {
@@ -105,6 +198,8 @@ import settings from "./typography.scss";
     }}
   </Story>
 </Canvas>
+
+## Formatting
 
 <Canvas>
   <Story name="Formatting">

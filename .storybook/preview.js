@@ -56,3 +56,11 @@ addParameters({
 });
 
 addDecorator((storyFn) => <div className="container">{storyFn()}</div>);
+
+export const parameters = {
+  options: {
+    storySort: {
+      order: ['About', 'Styles', 'Objects', 'Components', 'Partials', 'Layout'], 
+    },
+  },
+};

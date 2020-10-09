@@ -1,9 +1,0 @@
-@import "assets/styles/settings/_settings";
-
-/* stylelint-disable selector-pseudo-class-no-unknown, property-no-unknown */
-:export {
-  TYPOGRAPHY_SANS: $s-font-family-sans;
-  TYPOGRAPHY_SERIF: $s-font-family-serif;
-  TYPOGRAPHY_DISPLAY: $s-font-family-display;
-  TYPOGRAPHY_MONO: $s-font-family-mono;
-}
