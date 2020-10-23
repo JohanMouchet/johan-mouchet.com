@@ -57,6 +57,8 @@
     /* stylelint-enable color-no-hex */
 
     position: relative;
+    display: inline-block;
+    line-height: 1.2;
     text-shadow: none;
     background-color: $s-color-white;
     outline: 0;
