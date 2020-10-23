@@ -45,7 +45,7 @@ const Projects: React.FC<Props> = ({ projects }) => {
         <img
           className="c-project__thumbnail"
           src={project.thumbnailSrc.url}
-          alt={project.name}
+          alt=""
           loading="lazy"
         />
         <div className="c-project__overlay">

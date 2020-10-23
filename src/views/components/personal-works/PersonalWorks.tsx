@@ -39,11 +39,11 @@ const PersonalWorks: React.FC<Props> = ({ works }) => {
                 <img
                   className="c-personal-work__thumbnail"
                   src={work.thumbnailSrc?.url || work.thumbnailExternalSrc?.url}
-                  alt="Personal work"
+                  alt={`Personal work on ${work.icon}`}
                   loading="lazy"
                 />
                 {work.icon && (
-                  <span className="c-personal-work__source">
+                  <span className="c-personal-work__source" aria-hidden>
                     {getIcon(work.icon)}
                   </span>
                 )}

@@ -25,8 +25,13 @@ const Anchor: React.FC<Props> = ({
 
   return !id ? null : (
     <Tag className={classNames} {...attributes}>
-      <a href={`#${id}`} id={id} className="o-anchor__link">
-        {marker}
+      <a
+        href={`#${id}`}
+        id={id}
+        className="o-anchor__link"
+        aria-label={`Permalink for ${children}`}
+      >
+        <span aria-hidden>{marker}</span>
       </a>
       {children}
     </Tag>
