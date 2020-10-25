@@ -18,12 +18,13 @@ exports[`Renders <PersonalWorks /> without crashing 1`] = `
           href="#"
         >
           <img
-            alt="Personal work"
+            alt="Personal work on unsplash"
             class="c-personal-work__thumbnail"
             loading="lazy"
             src="https://via.placeholder.com/200x200"
           />
           <span
+            aria-hidden="true"
             class="c-personal-work__source"
           >
             <svg>

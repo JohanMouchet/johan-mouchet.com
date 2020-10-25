@@ -5,11 +5,16 @@ exports[`Renders <Anchor /> without crashing 1`] = `
   class="o-anchor"
 >
   <a
+    aria-label="Permalink for children"
     class="o-anchor__link"
     href="#id"
     id="id"
   >
-    #
+    <span
+      aria-hidden="true"
+    >
+      #
+    </span>
   </a>
   children
 </h2>
