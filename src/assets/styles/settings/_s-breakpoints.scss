@@ -4,11 +4,11 @@
 
 $s-breakpoints: (
   // (xs : Extra small devices (phones): 0 and up)
-    sm: 425px + 1,
+  sm: 425px + 1,
   // Small devices (tablets): 425px and up
-    md: 768px + 1,
+  md: 768px + 1,
   // Medium devices (desktops): 768px and up
-    lg: 1024px + 1,
+  lg: 1024px + 1,
   // Large devices (large desktops): 1366px and up
-    xl: 1366px + 1
+  xl: 1366px + 1
 );
