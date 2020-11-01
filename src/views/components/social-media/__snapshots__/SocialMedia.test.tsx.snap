@@ -12,9 +12,13 @@ exports[`Renders <SocialMedia /> without crashing 1`] = `
       href="#"
       title="Follow me on Name"
     >
-      <svg>
-        500px.svg
-      </svg>
+      <span
+        aria-hidden="true"
+      >
+        <svg>
+          500px.svg
+        </svg>
+      </span>
       Name
     </a>
   </div>

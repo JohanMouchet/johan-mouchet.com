@@ -106,7 +106,7 @@ const Projects: React.FC<Props> = ({ projects }) => {
             <b className="c-project__detail-heading">
               {pluralize(
                 "Library",
-                project.libraries[0].text.split(", ").length
+                project.libraries[0].text?.split(", ").length || 1
               )}
             </b>
             <div className="c-project__detail-list">

@@ -24,7 +24,7 @@ exports[`Renders <Projects /> without crashing 1`] = `
               href="#"
             >
               <img
-                alt="Name"
+                alt=""
                 class="c-project__thumbnail"
                 loading="lazy"
                 src="https://via.placeholder.com/400x225"
