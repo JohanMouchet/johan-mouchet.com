@@ -1,7 +1,7 @@
 import React from "react";
 import { addParameters, addDecorator } from "@storybook/react";
 import { BREAKPOINTS } from "constants/breakpoints";
-import { DocsPage, DocsContainer } from "@storybook/addon-docs/blocks";
+import { DocsPage, DocsContainer } from "@storybook/addon-docs";
 import "assets/styles/_styles.scss";
 
 addParameters({
