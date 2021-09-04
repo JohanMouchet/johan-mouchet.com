@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./List.scss";
+import styles from "./List.module.scss";
 
 type Props = {
   as?: "ul" | "ol";

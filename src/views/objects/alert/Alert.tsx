@@ -8,7 +8,7 @@ import {
   IconInfoCircle,
   IconX,
 } from "views/objects";
-import "./Alert.scss";
+import styles from "./Alert.module.scss";
 
 type Props = {
   isOpen?: boolean;
@@ -30,10 +30,10 @@ const Alert: React.FC<Props> = ({
   const [open, setOpenState] = useState(isOpen);
 
   const classNames = cx(
-    "o-alert",
-    closable && "o-alert--closable",
-    variant && `o-alert--${variant}`,
-    position && `o-alert--${position}`,
+    styles["alert"],
+    closable && styles["alert--closable"],
+    variant && styles[`alert--${variant}`],
+    position && styles[`alert--${position}`],
     "container",
     "u-animation",
     "u-animation--fade-in-up",
@@ -55,14 +55,14 @@ const Alert: React.FC<Props> = ({
   return !open ? null : (
     <div className={classNames}>
       <div className="grid grid--noWrap-@xs">
-        <div className="o-alert__icon cell" aria-label={variant}>
+        <div className={`${styles.icon} cell`} aria-label={variant}>
           {getIcon(variant)}
         </div>
-        <div className="o-alert__content cell cell--@xs">{children}</div>
+        <div className={`${styles.content} cell cell--@xs`}>{children}</div>
         {closable && (
-          <div className="o-alert__close cell">
+          <div className={`${styles.close} cell`}>
             <button
-              className="o-alert__close-button"
+              className={styles["close-button"]}
               aria-label="Close"
               onClick={() => setOpenState(!open)}
               type="button"

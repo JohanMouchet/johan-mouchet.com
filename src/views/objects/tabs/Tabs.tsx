@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Tabs.scss";
+import styles from "./Tabs.module.scss";
 
 type Props = {
   tabs: Array<{

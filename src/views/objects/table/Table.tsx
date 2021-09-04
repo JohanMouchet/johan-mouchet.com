@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Table.scss";
+import styles from "./Table.module.scss";
 
 type Props = {
   align?: "top" | "bottom";

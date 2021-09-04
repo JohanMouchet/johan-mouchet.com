@@ -1,6 +1,6 @@
 import React from "react";
 import { Footer, Header } from "views/partials";
-import "./Default.scss";
+import styles from "./Default.module.scss";
 
 type Props = {
   children: React.ReactNode;

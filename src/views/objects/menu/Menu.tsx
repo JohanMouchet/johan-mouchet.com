@@ -1,7 +1,7 @@
 import React from "react";
 import cx from "classnames";
 import { IconChevronDown } from "views/objects";
-import "./Menu.scss";
+import styles from "./Menu.module.scss";
 
 type Submenu = {
   text: string;

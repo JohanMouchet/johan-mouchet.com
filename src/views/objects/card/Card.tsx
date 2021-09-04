@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Card.scss";
+import styles from "./Card.module.scss";
 
 type Props = {
   bannerUrl?: string;

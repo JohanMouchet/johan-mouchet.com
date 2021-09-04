@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import cx from "classnames";
-import "./Fields.scss";
+import styles from "./Fields.module.scss";
 
 type FieldProps = {
   id?: string;

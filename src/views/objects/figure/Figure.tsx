@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Figure.scss";
+import styles from "./Figure.module.scss";
 
 type Props = {
   src: string;

@@ -9,7 +9,7 @@ import {
 import { parse } from "utils/parse";
 import { pluralize } from "utils/pluralize";
 import { Details } from "views/objects";
-import "./Projects.scss";
+import styles from "./Projects.module.scss";
 
 type Thumbnail = {
   name: string;

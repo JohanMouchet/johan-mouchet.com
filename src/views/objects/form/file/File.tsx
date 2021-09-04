@@ -1,7 +1,7 @@
 import React from "react";
 import cx from "classnames";
 import { IconCloudUpload } from "views/objects";
-import "./File.scss";
+import styles from "./File.module.scss";
 
 type Props = {
   id?: string;

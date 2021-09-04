@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Tooltip.scss";
+import styles from "./Tooltip.module.scss";
 
 type Props = {
   content: string;

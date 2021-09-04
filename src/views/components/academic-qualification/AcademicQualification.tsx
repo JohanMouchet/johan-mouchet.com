@@ -1,5 +1,5 @@
 import React from "react";
-import "./AcademicQualification.scss";
+import styles from "./AcademicQualification.module.scss";
 
 type Props = {
   degrees: Array<{

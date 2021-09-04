@@ -11,7 +11,7 @@ import {
   IconUnsplash,
   IconYoutube,
 } from "views/objects";
-import "./SocialMedia.scss";
+import styles from "./SocialMedia.module.scss";
 
 type Props = {
   media: Array<{

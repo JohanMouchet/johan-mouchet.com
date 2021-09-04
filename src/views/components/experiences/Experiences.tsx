@@ -2,7 +2,7 @@ import React from "react";
 import { RichText, RichTextBlock } from "prismic-reactjs";
 import { duration } from "utils/duration";
 import { Projects } from "views/components";
-import "./Experiences.scss";
+import styles from "./Experiences.module.scss";
 
 type Props = {
   experiences: Array<{

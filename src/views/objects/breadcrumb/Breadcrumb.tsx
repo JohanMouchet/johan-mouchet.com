@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Breadcrumb.scss";
+import styles from "./Breadcrumb.module.scss";
 
 type Props = {
   levels: Array<{

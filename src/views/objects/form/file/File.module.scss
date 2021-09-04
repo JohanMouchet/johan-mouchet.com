@@ -1,0 +1,16 @@
+@import "assets/styles/settings/_settings.module";
+@import "assets/styles/tools/_tools.module";
+// @import "assets/styles/utilities/_utilities";
+
+.o-form__file {
+  &-icon {
+    svg {
+      font-size: t-modular-scale(1);
+      vertical-align: middle;
+    }
+  }
+
+  &-text {
+    margin-left: 0.5em;
+  }
+}

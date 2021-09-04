@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Aside.scss";
+import styles from "./Aside.module.scss";
 
 type Props = {
   margin?: "no-margin";

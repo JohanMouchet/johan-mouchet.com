@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Layout.scss";
+import styles from "./Layout.module.scss";
 
 type FieldsetProps = {
   legend?: string;

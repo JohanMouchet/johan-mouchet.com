@@ -6,7 +6,7 @@ import {
   RichTextSpan,
 } from "prismic-reactjs";
 import { parse } from "utils/parse";
-import "./OpenSource.scss";
+import styles from "./OpenSource.module.scss";
 
 type Props = {
   projects: {

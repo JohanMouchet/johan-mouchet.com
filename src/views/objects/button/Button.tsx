@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Button.scss";
+import styles from "./Button.module.scss";
 
 type Props = {
   type: "anchor" | "button" | "submit" | "reset";

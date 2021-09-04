@@ -12,7 +12,7 @@ import {
 import { Default } from "views/layouts";
 import { Anchor, Button, Loader } from "views/objects";
 import { Article, Main } from "views/partials";
-import "./Home.scss";
+import styles from "./Home.module.scss";
 
 const Home: React.FC = () => {
   const query = gql`

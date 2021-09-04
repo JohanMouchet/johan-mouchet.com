@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Blockquote.scss";
+import styles from "./Blockquote.module.scss";
 
 type Props = {
   quote: React.ReactNode;

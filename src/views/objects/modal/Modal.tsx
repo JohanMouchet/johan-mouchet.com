@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import cx from "classnames";
 import FocusTrap from "focus-trap-react";
 import { IconX } from "views/objects";
-import "./Modal.scss";
+import styles from "./Modal.module.scss";
 
 type Props = {
   isOpen?: boolean;

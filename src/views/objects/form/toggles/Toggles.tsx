@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import cx from "classnames";
-import "./Toggles.scss";
+import styles from "./Toggles.module.scss";
 
 type Props = {
   id?: string;

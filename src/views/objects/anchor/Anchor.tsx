@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Anchor.scss";
+import styles from "./Anchor.module.scss";
 
 type Props = {
   as: keyof JSX.IntrinsicElements;

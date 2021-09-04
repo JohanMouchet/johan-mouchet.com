@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./ProgressBar.scss";
+import styles from "./ProgressBar.module.scss";
 
 type Props = {
   label?: string;

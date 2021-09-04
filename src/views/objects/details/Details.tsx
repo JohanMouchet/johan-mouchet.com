@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Details.scss";
+import styles from "./Details.module.scss";
 
 type Props = {
   summary?: string;

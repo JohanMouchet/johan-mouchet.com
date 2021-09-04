@@ -1,7 +1,7 @@
 import React from "react";
 import cx from "classnames";
 import { IconArrowReturn } from "views/objects";
-import "./Footnotes.scss";
+import styles from "./Footnotes.module.scss";
 
 type ReferenceProps = {
   id: string;

@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Loader.scss";
+import styles from "./Loader.module.scss";
 
 type Props = {
   size?: "sm";

@@ -1,6 +1,6 @@
 import React from "react";
 import { STATIC } from "constants/static";
-import "./Header.scss";
+import styles from "./Header.module.scss";
 
 type Props = {
   firstName?: string;

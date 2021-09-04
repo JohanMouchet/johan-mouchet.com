@@ -1,7 +1,7 @@
 import React from "react";
 import { STATIC } from "constants/static";
 import { IconChevronDown } from "views/objects";
-import "./Footer.scss";
+import styles from "./Footer.module.scss";
 
 type Props = {
   version?: string;

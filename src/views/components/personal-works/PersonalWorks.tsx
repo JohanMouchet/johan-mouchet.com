@@ -1,6 +1,6 @@
 import React from "react";
 import { IconUnsplash, IconYoutube } from "views/objects";
-import "./PersonalWorks.scss";
+import styles from "./PersonalWorks.module.scss";
 
 type Props = {
   works: Array<{

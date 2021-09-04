@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Badge.scss";
+import styles from "./Badge.module.scss";
 
 type Props = {
   className?: string | string[] | { [key: string]: boolean };
