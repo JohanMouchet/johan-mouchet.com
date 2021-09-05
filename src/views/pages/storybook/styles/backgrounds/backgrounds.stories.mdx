@@ -1,6 +1,9 @@
+import cx from "classnames";
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { Table } from "views/objects";
-import settings from "./backgrounds.scss";
+import settings from "./backgrounds.module.scss";
+import styles from "../../storybook.module.scss";
+
 
 <Meta title="Styles/Backgrounds" />
 
@@ -33,7 +36,7 @@ import settings from "./backgrounds.scss";
             <th>{background.name}</th>
             <td>
               <span
-                className="storybook-swatch storybook-swatch--lg"
+                className={cx(styles["storybook-swatch"], styles["storybook-swatch--lg"])}
                 style={{ backgroundImage: background.source }}
               ></span>
             </td>

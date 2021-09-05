@@ -1,6 +1,8 @@
+import cx from "classnames";
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { Table } from "views/objects";
-import settings from "./shadows.scss";
+import settings from "./shadows.module.scss";
+import styles from "../../storybook.module.scss";
 
 <Meta title="Styles/Shadows" />
 
@@ -35,7 +37,7 @@ import settings from "./shadows.scss";
             <th>{shadow.name}</th>
             <td>
               <span
-                className="storybook-swatch storybook-swatch--lg"
+                className={cx(styles["storybook-swatch"], styles["storybook-swatch--lg"])}
                 style={{ boxShadow: shadow.source }}
               ></span>
             </td>

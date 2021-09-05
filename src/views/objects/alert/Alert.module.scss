@@ -1,7 +1,7 @@
 @import "assets/styles/settings/_settings.module";
 @import "assets/styles/tools/_tools.module";
 
-.alert {
+.o-alert {
   align-items: flex-start;
   padding: t-vertical-rhythm(0.75) ($grid-gutter / 2);
   margin: t-vertical-rhythm(1) 0;
@@ -9,41 +9,94 @@
   border-left: 2px solid;
   animation-duration: 0.3s;
 
+  /* Icon */
+  &__icon {
+    flex-shrink: 0;
+
+    svg {
+      font-size: t-modular-scale(1);
+      vertical-align: middle;
+    }
+  }
+
+  /* Content */
+  &__content {
+    padding-left: 0;
+
+    *:first-child {
+      margin-top: 0;
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  /* Close */
+  &__close {
+    flex-shrink: 0;
+
+    &-button {
+      all: unset;
+      padding: 0;
+      line-height: 1;
+      cursor: pointer;
+      background-color: transparent;
+      border: 0;
+      outline: 0;
+
+      @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
+
+      svg {
+        font-size: t-modular-scale(1);
+        vertical-align: middle;
+      }
+    }
+  }
+
   /* Variants */
   &--success {
     border-color: $s-color-success;
+  }
 
-    .icon {
+  &--success & {
+    &__icon {
       color: $s-color-success;
     }
   }
 
   &--info {
     border-color: $s-color-info;
+  }
 
-    .icon {
+  &--info & {
+    &__icon {
       color: $s-color-info;
     }
   }
 
   &--warning {
     border-color: $s-color-warning;
+  }
 
-    .icon {
+  &--warning & {
+    &__icon {
       color: $s-color-warning;
     }
   }
 
   &--danger {
     border-color: $s-color-danger;
+  }
 
-    .icon {
+  &--danger & {
+    &__icon {
       color: $s-color-danger;
     }
   }
 
-  &--closable {
-    .content {
+  &--closable & {
+    &__content {
       padding-right: 0;
     }
   }
@@ -62,51 +115,6 @@
     @media (min-width: map-get($s-breakpoints, sm)) {
       max-width: map-get($s-breakpoints, sm);
       margin-right: $grid-gutter;
-    }
-  }
-}
-
-/* Icon */
-.icon {
-  flex-shrink: 0;
-
-  svg {
-    font-size: t-modular-scale(1);
-    vertical-align: middle;
-  }
-}
-
-/* Content */
-.content {
-  padding-left: 0;
-
-  *:first-child {
-    margin-top: 0;
-  }
-
-  *:last-child {
-    margin-bottom: 0;
-  }
-}
-
-/* Close */
-.close {
-  flex-shrink: 0;
-
-  &-button {
-    all: unset;
-    padding: 0;
-    line-height: 1;
-    cursor: pointer;
-    background-color: transparent;
-    border: 0;
-    outline: 0;
-
-    @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
-
-    svg {
-      font-size: t-modular-scale(1);
-      vertical-align: middle;
     }
   }
 }

@@ -10,7 +10,7 @@ type Props = {
 };
 
 const Range: React.FC<Props> = ({ id, name, className, attributes }) => {
-  const classNames = cx("o-form__range", className);
+  const classNames = cx(styles["o-form__range"], className);
 
   return (
     <input

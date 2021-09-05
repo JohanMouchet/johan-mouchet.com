@@ -8,7 +8,7 @@ type Props = {
 };
 
 const Badge: React.FC<Props> = ({ className, children }) => {
-  const classNames = cx("o-badge", className);
+  const classNames = cx(styles["o-badge"], className);
 
   return <span className={classNames}>{children}</span>;
 };

@@ -7,9 +7,9 @@ type Props = {
 };
 
 const Default: React.FC<Props> = ({ children }) => (
-  <div className="l-layout">
-    <div className="l-layout__background"></div>
-    <div className="l-layout__inner">
+  <div className={styles["l-layout"]}>
+    <div className={styles["l-layout__background"]}></div>
+    <div className={styles["l-layout__inner"]}>
       <Header />
       {children}
       <Footer />

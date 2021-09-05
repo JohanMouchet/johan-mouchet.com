@@ -30,10 +30,10 @@ const Alert: React.FC<Props> = ({
   const [open, setOpenState] = useState(isOpen);
 
   const classNames = cx(
-    styles["alert"],
-    closable && styles["alert--closable"],
-    variant && styles[`alert--${variant}`],
-    position && styles[`alert--${position}`],
+    styles["o-alert"],
+    closable && styles["o-alert--closable"],
+    variant && styles[`o-alert--${variant}`],
+    position && styles[`o-alert--${position}`],
     "container",
     "u-animation",
     "u-animation--fade-in-up",
@@ -55,14 +55,19 @@ const Alert: React.FC<Props> = ({
   return !open ? null : (
     <div className={classNames}>
       <div className="grid grid--noWrap-@xs">
-        <div className={`${styles.icon} cell`} aria-label={variant}>
+        <div
+          className={cx(styles["o-alert__icon"], "cell")}
+          aria-label={variant}
+        >
           {getIcon(variant)}
         </div>
-        <div className={`${styles.content} cell cell--@xs`}>{children}</div>
+        <div className={cx(styles["o-alert__content"], "cell", "cell--@xs")}>
+          {children}
+        </div>
         {closable && (
-          <div className={`${styles.close} cell`}>
+          <div className={cx(styles["o-alert__close"], "cell")}>
             <button
-              className={styles["close-button"]}
+              className={styles["o-alert__close-button"]}
               aria-label="Close"
               onClick={() => setOpenState(!open)}
               type="button"

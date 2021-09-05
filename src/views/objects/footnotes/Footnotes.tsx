@@ -17,7 +17,7 @@ const FootnotesReference: React.FC<ReferenceProps> = ({
   <sup>
     <a
       id={`footnote-ref:${id}`}
-      className="o-footnote-ref"
+      className={styles["o-footnote-ref"]}
       href={`#footnote:${id}`}
       aria-label={label}
     >
@@ -38,20 +38,20 @@ type NotesProps = {
 };
 
 const FootnotesNotes: React.FC<NotesProps> = ({ notes, className }) => {
-  const classNames = cx("o-footnotes", className);
+  const classNames = cx(styles["o-footnotes"], className);
 
   return !notes?.length ? null : (
     <ol className={classNames}>
       {notes.map((note) => (
         <li
           id={`footnote:${note.id}`}
-          className="o-footnotes__note"
+          className={styles["o-footnotes__note"]}
           key={note.id}
         >
           {note.text}{" "}
           <a
             href={`#footnote-ref:${note.id}`}
-            className="o-footnotes__backref"
+            className={styles["o-footnotes__backref"]}
             aria-label={note.label || "Jump back to reference"}
           >
             <IconArrowReturn />

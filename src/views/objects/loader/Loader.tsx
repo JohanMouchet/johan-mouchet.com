@@ -8,7 +8,11 @@ type Props = {
 };
 
 const Loader: React.FC<Props> = ({ size, className }) => {
-  const classNames = cx("o-loader", size && `o-loader--${size}`, className);
+  const classNames = cx(
+    styles["o-loader"],
+    size && styles[`o-loader--${size}`],
+    className
+  );
 
   return <div className={classNames}></div>;
 };

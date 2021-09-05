@@ -11,18 +11,30 @@ type Props = {
 
 const Blockquote: React.FC<Props> = ({ quote, cite, pulled, className }) => {
   const classNames = cx(
-    "o-blockquote",
-    className,
-    pulled && "o-blockquote--pulled"
+    styles["o-blockquote"],
+    pulled && styles["o-blockquote--pulled"],
+    className
   );
 
   return (
     <blockquote className={classNames}>
-      <div className="o-blockquote__quotes u-animation u-animation--fade-in">
+      <div
+        className={cx(
+          styles["o-blockquote__quotes"],
+          "u-animation",
+          "u-animation--fade-in"
+        )}
+      >
         {quote}
       </div>
       {cite && (
-        <cite className="o-blockquote__cite u-animation u-animation--fade-in">
+        <cite
+          className={cx(
+            styles["o-blockquote__cite"],
+            "u-animation",
+            "u-animation--fade-in"
+          )}
+        >
           {cite}
         </cite>
       )}

@@ -18,11 +18,11 @@ const Article: React.FC<Props> = ({
   children,
 }) => {
   const classNames = cx(
-    "p-article",
-    size && `p-article--${size}`,
-    margin && `p-article--${margin}`,
-    variant && `p-article--${variant}`,
-    variant && size && `p-article--${variant}-${size}`,
+    styles["p-article"],
+    size && styles[`p-article--${size}`],
+    margin && styles[`p-article--${margin}`],
+    variant && styles[`p-article--${variant}`],
+    variant && size && styles[`p-article--${variant}-${size}`],
     className
   );
 

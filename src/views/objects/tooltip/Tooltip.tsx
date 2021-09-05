@@ -22,17 +22,17 @@ const Tooltip: React.FC<Props> = ({
   ...attributes
 }) => {
   const classNames = cx(
-    "o-tooltip",
-    position && `o-tooltip--${position}`,
-    !indicator && "o-tooltip--no-indicator",
-    multiLines && "o-tooltip--multi-lines",
+    styles["o-tooltip"],
+    position && styles[`o-tooltip--${position}`],
+    !indicator && styles["o-tooltip--no-indicator"],
+    multiLines && styles["o-tooltip--multi-lines"],
     className
   );
 
   return (
     <span className={classNames} tabIndex={0} {...attributes}>
       {children}
-      <span className="o-tooltip__content">{content}</span>
+      <span className={styles["o-tooltip__content"]}>{content}</span>
     </span>
   );
 };

@@ -1,7 +1,7 @@
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { Table } from "views/objects";
-import "../../storybook.module.scss";
-import settings from "./colors.scss";
+import styles from "../../storybook.module.scss";
+import settings from "./colors.module.scss";
 
 <Meta title="Styles/Colors" />
 
@@ -102,7 +102,7 @@ import settings from "./colors.scss";
             <th>{color.name}</th>
             <td>
               <span
-                className="storybook-swatch"
+                className={styles["storybook-swatch"]}
                 style={{ backgroundColor: color.code }}
               ></span>
             </td>

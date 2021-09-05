@@ -9,11 +9,11 @@ type FieldsetProps = {
 };
 
 const Fieldset: React.FC<FieldsetProps> = ({ legend, className, children }) => {
-  const classNames = cx("o-form__fieldset", className);
+  const classNames = cx(styles["o-form__fieldset"], className);
 
   return (
     <fieldset className={classNames}>
-      <legend className="o-form__legend">{legend}</legend>
+      <legend className={styles["o-form__legend"]}>{legend}</legend>
       {children}
     </fieldset>
   );
@@ -29,14 +29,14 @@ type FormGroupProps = {
 
 const FormGroup: React.FC<FormGroupProps> = ({ variant, detail, children }) => {
   const classNames = cx(
-    "o-form__group",
-    variant && `o-form__group--${variant}`
+    styles["o-form__group"],
+    variant && styles[`o-form__group--${variant}`]
   );
 
   return (
     <div className={classNames}>
       {children}
-      <span className="o-form__group-detail">{detail}</span>
+      <span className={styles["o-form__group-detail"]}>{detail}</span>
     </div>
   );
 };
@@ -52,8 +52,8 @@ type LabelProps = {
 
 const Label: React.FC<LabelProps> = ({ id, block, className, children }) => {
   const classNames = cx(
-    "o-form__label",
-    (block || !children) && "o-form__label--block",
+    styles["o-form__label"],
+    (block || !children) && styles["o-form__label--block"],
     className
   );
 

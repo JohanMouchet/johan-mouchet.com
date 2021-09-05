@@ -11,11 +11,11 @@ type Props = {
 };
 
 const Tabs: React.FC<Props> = ({ tabs, className }) => {
-  const classNames = cx("o-tabs", className);
+  const classNames = cx(styles["o-tabs"], className);
 
   return !tabs?.length ? null : (
     <div className={classNames}>
-      <ul className="o-tabs__thumbs">
+      <ul className={styles["o-tabs__thumbs"]}>
         {tabs.map((tab, index) => (
           <li
             className="o-tabs__thumb u-animation u-animation--fade-in-up"
@@ -24,15 +24,15 @@ const Tabs: React.FC<Props> = ({ tabs, className }) => {
             }}
             key={tab.thumb}
           >
-            <button className="o-tabs__button" type="button">
+            <button className={styles["o-tabs__button"]} type="button">
               {tab.thumb}
             </button>
           </li>
         ))}
       </ul>
-      <ul className="o-tabs__panels">
+      <ul className={styles["o-tabs__panels"]}>
         {tabs.map((tab, index) => (
-          <li className="o-tabs__panel" key={index}>
+          <li className={styles["o-tabs__panel"]} key={index}>
             {tab.panel}
           </li>
         ))}

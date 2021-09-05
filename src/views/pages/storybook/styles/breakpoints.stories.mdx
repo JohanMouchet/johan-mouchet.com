@@ -1,5 +1,5 @@
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { BREAKPOINTS } from "constants/breakpoints";
+import settings from "constants/breakpoints/breakpoints.module.scss";
 import { Table } from "views/objects";
 
 <Meta title="Styles/Breakpoints" />
@@ -20,23 +20,23 @@ import { Table } from "views/objects";
         {[
           {
             name: "xs",
-            size: BREAKPOINTS.XS,
+            size: settings.BREAKPOINTS_XS,
           },
           {
             name: "sm",
-            size: BREAKPOINTS.SM,
+            size: settings.BREAKPOINTS_SM,
           },
           {
             name: "md",
-            size: BREAKPOINTS.MD,
+            size: settings.BREAKPOINTS_MD,
           },
           {
             name: "lg",
-            size: BREAKPOINTS.LG,
+            size: settings.BREAKPOINTS_LG,
           },
           {
             name: "xl",
-            size: BREAKPOINTS.XL,
+            size: settings.BREAKPOINTS_XL,
           },
         ].map((breakpoint) => (
           <tr key={breakpoint.size}>

@@ -1,5 +1,6 @@
 import React from "react";
 import { ProgressBar } from "views/objects";
+import styles from "views/objects/list/List.module.scss";
 
 type Props = {
   skills: Pick<
@@ -10,9 +11,9 @@ type Props = {
 
 const Skills: React.FC<Props> = ({ skills }) =>
   !skills?.length ? null : (
-    <ul className="c-skills o-list--unstyled">
+    <ul className={styles["o-list--unstyled"]}>
       {skills.map((skill) => (
-        <li className="c-skill" key={skill.label}>
+        <li key={skill.label}>
           <ProgressBar
             label={skill.label}
             filling={skill.filling}

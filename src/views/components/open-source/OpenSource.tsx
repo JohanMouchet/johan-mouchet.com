@@ -25,7 +25,7 @@ type Props = {
 
 const OpenSource: React.FC<Props> = ({ projects }) =>
   !projects?.length ? null : (
-    <div className="c-open-sources">
+    <div className={styles["c-open-sources"]}>
       <div className="grid">
         {projects.map((project) => {
           const descriptionPreformatted =
@@ -36,7 +36,7 @@ const OpenSource: React.FC<Props> = ({ projects }) =>
               className="cell cell--12-@xs cell--6-@sm cell--4-@lg"
               key={project.name}
             >
-              <h3 className="c-open-source__title">
+              <h3 className={styles["c-open-source__title"]}>
                 <a
                   href={project.link.url}
                   target="_blank"
@@ -46,11 +46,11 @@ const OpenSource: React.FC<Props> = ({ projects }) =>
                 </a>
               </h3>
 
-              <div className="c-open-source__lede">
+              <div className={styles["c-open-source__lede"]}>
                 <RichText render={project.lede} />
               </div>
 
-              <div className="c-open-source__description">
+              <div className={styles["c-open-source__description"]}>
                 {descriptionPreformatted ? (
                   parse(project.description[0].text)
                 ) : (

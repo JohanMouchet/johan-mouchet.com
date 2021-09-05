@@ -22,7 +22,7 @@ const File: React.FC<Props> = ({
   children,
   ...attributes
 }) => {
-  const classNames = cx("o-form__file", "o-button", className);
+  const classNames = cx(styles["o-form__file"], styles["o-button"], className);
 
   return (
     <label className={classNames}>
@@ -36,10 +36,12 @@ const File: React.FC<Props> = ({
         }
         {...attributes}
       />
-      <span className="o-form__file-icon" aria-label={label}>
+      <span className={styles["o-form__file-icon"]} aria-label={label}>
         <IconCloudUpload />
       </span>
-      {children && <span className="o-form__file-text">{children}</span>}
+      {children && (
+        <span className={styles["o-form__file-text"]}>{children}</span>
+      )}
     </label>
   );
 };

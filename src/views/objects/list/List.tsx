@@ -26,13 +26,15 @@ const List: React.FC<Props> = ({
   ...attributes
 }) => {
   const classNames = cx(
-    "o-list",
-    unstyled && `o-list--unstyled`,
-    inline && `o-list--inline`,
+    styles["o-list"],
+    unstyled && styles[`o-list--unstyled`],
+    inline && styles[`o-list--inline`],
     striped &&
-      `o-list--${striped === "horizontal" ? "h" : "v"}Striped o-list--unstyled`,
-    size && `o-list--${size}`,
-    linkBlock && `o-list--linkBlock`,
+      `${styles[`o-list--${striped === "horizontal" ? "h" : "v"}Striped`]} ${
+        styles["o-list--unstyled"]
+      }`,
+    size && styles[`o-list--${size}`],
+    linkBlock && styles[`o-list--linkBlock`],
     className
   );
 

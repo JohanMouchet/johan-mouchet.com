@@ -1,3 +1,4 @@
+import cx from "classnames";
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import {
   IconArrowReturn,
@@ -10,7 +11,7 @@ import {
   IconSearch,
   IconX,
 } from ".";
-import styles from "./Icons.stories.module.scss";
+import styles from "./IconsStories.module.scss";
 
 <Meta title="Objects/Icons/UI" component={IconChevronDown} />
 
@@ -33,7 +34,7 @@ import styles from "./Icons.stories.module.scss";
       return (
         <div className="grid u-align--center grid--noGutter-@xs">
           {icons.map((icon, index) => (
-            <div className="cell storybook-icon" key={index}>
+            <div className={cx(styles["storybook-icon"], "cell")} key={index}>
               {icon}
             </div>
           ))}

@@ -2,6 +2,8 @@
  * Typography
  */
 
+// :global {
+
 /* Headings */
 .u-heading {
   &--xl {
@@ -41,3 +43,4 @@
 .u-link--secondary {
   @include t-link($s-color-text-dimmed, $hover-decoration: "none");
 }
+// }

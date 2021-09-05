@@ -1,4 +1,5 @@
 import { parse } from "utils/parse";
+import styles from "views/partials/Header/Header.module.scss";
 
 export const STATIC = {
   profile: {
@@ -6,7 +7,7 @@ export const STATIC = {
     lastName: "Mouchet",
     tagline: parse(
       /* html */
-      `Never stop exploring,<br class='p-header__tagline-breaker' /> never stop creating`
+      `Never stop exploring,<br class=${styles["p-header__tagline-breaker"]} /> never stop creating`
     ),
   },
   version: "5.3.0",
