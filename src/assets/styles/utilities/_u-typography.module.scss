@@ -2,10 +2,8 @@
  * Typography
  */
 
-// :global {
-
 /* Headings */
-.u-heading {
+:global(.u-heading) {
   &--xl {
     @include t-heading--xl;
   }
@@ -40,7 +38,6 @@
 }
 
 /* Secondary link */
-.u-link--secondary {
+:global(.u-link--secondary) {
   @include t-link($s-color-text-dimmed, $hover-decoration: "none");
 }
-// }
