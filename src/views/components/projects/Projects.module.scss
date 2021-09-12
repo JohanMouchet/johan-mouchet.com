@@ -4,10 +4,6 @@
 .c-project {
   $root: &;
 
-  &__test {
-    color: red;
-  }
-
   &__link {
     position: relative;
     display: block;

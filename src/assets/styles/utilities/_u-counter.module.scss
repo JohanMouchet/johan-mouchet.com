@@ -12,6 +12,7 @@
         counter-reset: index-#{$i + 1};
         counter-increment: index-#{$i};
 
+        /* stylelint-disable-next-line max-nesting-depth */
         &::before {
           $k: "";
 

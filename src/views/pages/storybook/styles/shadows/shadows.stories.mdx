@@ -37,7 +37,10 @@ import styles from "../../storybook.module.scss";
             <th>{shadow.name}</th>
             <td>
               <span
-                className={cx(styles["storybook-swatch"], styles["storybook-swatch--lg"])}
+                className={cx(
+                  styles["storybook-swatch"],
+                  styles["storybook-swatch--lg"]
+                )}
                 style={{ boxShadow: shadow.source }}
               ></span>
             </td>

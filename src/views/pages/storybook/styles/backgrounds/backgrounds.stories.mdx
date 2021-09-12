@@ -4,7 +4,6 @@ import { Table } from "views/objects";
 import settings from "./backgrounds.module.scss";
 import styles from "../../storybook.module.scss";
 
-
 <Meta title="Styles/Backgrounds" />
 
 # Backgrounds
@@ -36,7 +35,10 @@ import styles from "../../storybook.module.scss";
             <th>{background.name}</th>
             <td>
               <span
-                className={cx(styles["storybook-swatch"], styles["storybook-swatch--lg"])}
+                className={cx(
+                  styles["storybook-swatch"],
+                  styles["storybook-swatch--lg"]
+                )}
                 style={{ backgroundImage: background.source }}
               ></span>
             </td>

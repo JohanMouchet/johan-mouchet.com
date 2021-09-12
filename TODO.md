@@ -10,7 +10,6 @@
   + Rename scss files
   + Add ext to imports
   - Enable :global for t-typography
-  - Run format
   - Run tests
 - ? Improve Print
 - ? Sticky nav: header background, J/M logo, 'MENU' + burger menu to Anchors

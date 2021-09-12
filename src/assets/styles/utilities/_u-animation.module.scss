@@ -13,6 +13,8 @@
       animation-duration: $animation-duration / 2;
     }
 
+    /* stylelint-disable max-nesting-depth */
+
     /* Fade in */
     &--fade-in {
       @keyframes u-animation--fade-in {
@@ -105,5 +107,6 @@
         animation-name: u-animation--fade-in-right;
       }
     }
+    /* stylelint-enable max-nesting-depth */
   }
 }

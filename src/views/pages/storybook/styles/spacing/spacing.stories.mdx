@@ -23,7 +23,10 @@ import styles from "./spacing.module.scss";
             <th>{spacing}</th>
             <td>
               <div
-                className={cx(styles["storybook-spacing"], styles[`storybook-spacing--${spacing.toString()}`])}
+                className={cx(
+                  styles["storybook-spacing"],
+                  styles[`storybook-spacing--${spacing.toString()}`]
+                )}
               ></div>
             </td>
             <td>
