@@ -1,5 +1,6 @@
 # TODO
 
+- add :global to `_u-typography.module`
 - Import Fluxgrid, modify naming scheme
   - replace any other `\@`
 - Fix Tabs
