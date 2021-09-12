@@ -3,7 +3,8 @@
  */
 
 /* Headings */
-:global(.u-heading) {
+// :global {
+.u-heading {
   &--xl {
     @include t-heading--xl;
   }
@@ -38,6 +39,7 @@
 }
 
 /* Secondary link */
-:global(.u-link--secondary) {
+.u-link--secondary {
   @include t-link($s-color-text-dimmed, $hover-decoration: "none");
 }
+// }
