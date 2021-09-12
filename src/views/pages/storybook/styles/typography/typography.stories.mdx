@@ -279,7 +279,9 @@ import styles from "./typography.module.scss";
               },
               {
                 tag: '[title="Title"]',
-                preview: <span title="Title">title</span>,
+                preview: (
+                  <span title={input || "Title"}>{input || "Title"}</span>
+                ),
               },
               {
                 tag: "<hr>",

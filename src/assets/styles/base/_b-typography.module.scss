@@ -100,4 +100,10 @@
   samp {
     font-family: $s-font-family-mono;
   }
+
+  [title] {
+    text-decoration: underline dashed $s-color-info;
+    cursor: help;
+    text-underline-position: under;
+  }
 }
