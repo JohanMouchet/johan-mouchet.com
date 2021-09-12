@@ -141,7 +141,9 @@ import styles from "./typography.module.scss";
                 <tr key={size}>
                   <th>{size}</th>
                   <td>
-                    <span className={styles[`storybook-size--${size.toString()}`]}>
+                    <span
+                      className={styles[`storybook-size--${size.toString()}`]}
+                    >
                       {input}
                     </span>
                   </td>
@@ -274,6 +276,10 @@ import styles from "./typography.module.scss";
                     {input || "The quick brown fox jumps over the lazy dog."}
                   </p>
                 ),
+              },
+              {
+                tag: '[title="Title"]',
+                preview: <span title="Title">title</span>,
               },
               {
                 tag: "<hr>",
