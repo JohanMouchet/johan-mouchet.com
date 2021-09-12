@@ -72,11 +72,7 @@ const SocialMedia: React.FC<Props> = ({ media }) => {
           )}
           key={media.link.url}
         >
-          <a
-            className={styles["c-social-media__link"]}
-            href={media.link.url}
-            title={`Follow me on ${media.name}`}
-          >
+          <a className={styles["c-social-media__link"]} href={media.link.url}>
             <span aria-hidden>{getIcon(media.icon)}</span>
             {media.name}
           </a>
