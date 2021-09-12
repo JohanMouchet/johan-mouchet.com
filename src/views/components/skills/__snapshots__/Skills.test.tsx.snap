@@ -2,11 +2,9 @@
 
 exports[`Renders <Experience /> without crashing 1`] = `
 <ul
-  class="c-skills o-list--unstyled"
+  class="o-list--unstyled"
 >
-  <li
-    class="c-skill"
-  >
+  <li>
     <div
       class="o-progress-bar o-progress-bar--details-on-hover"
       tabindex="0"
