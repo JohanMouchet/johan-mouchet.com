@@ -10,8 +10,6 @@
   + Rename scss files
   + Add ext to imports
   - Enable :global for t-typography
-  - Fix CMS tooltip (Home, TTI)
-  - Add CSS modules to Stylelint
   - Run format
   - Run tests
 - ? Improve Print
