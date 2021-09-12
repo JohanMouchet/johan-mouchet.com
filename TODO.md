@@ -10,7 +10,6 @@
   + Rename scss files
   + Add ext to imports
   - Enable :global for t-typography
-  - Check `styles["o-form__file"], styles["o-button"]`
   - Fix CMS tooltip (Home, TTI)
   - Add CSS modules to Stylelint
   - Run format

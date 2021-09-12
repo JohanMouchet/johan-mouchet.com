@@ -1,6 +1,7 @@
 import React from "react";
 import cx from "classnames";
 import { IconCloudUpload } from "views/objects";
+import buttonStyles from "../../button/Button.module.scss";
 import styles from "./File.module.scss";
 
 type Props = {
@@ -22,7 +23,11 @@ const File: React.FC<Props> = ({
   children,
   ...attributes
 }) => {
-  const classNames = cx(styles["o-form__file"], styles["o-button"], className);
+  const classNames = cx(
+    styles["o-form__file"],
+    buttonStyles["o-button"],
+    className
+  );
 
   return (
     <label className={classNames}>
