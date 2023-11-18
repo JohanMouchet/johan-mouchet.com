@@ -108,7 +108,7 @@ export const Projects = ({
             <b className={styles["c-project__detail-heading"]}>
               {pluralize(
                 "Library",
-                asText(project.libraries).split(", ").length || 1
+                asText(project.libraries)?.split(", ").length || 1
               )}
             </b>
             <div className={styles["c-project__detail-list"]}>
