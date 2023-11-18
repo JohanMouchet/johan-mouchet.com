@@ -1,0 +1,107 @@
+/**
+ * Typography
+ */
+
+html {
+  // Responsive font-size
+  @if $s-font-size-mobile {
+    font-size: $s-font-size-mobile * 1em;
+
+    @media (min-width: map-get($s-breakpoints, sm)) {
+      font-size: $s-font-size-base * 1em;
+    }
+  } @else {
+    font-size: $s-font-size-base * 1em;
+  }
+
+  font-family: $s-font-family-sans;
+  line-height: $s-line-height-base;
+  color: $s-color-text;
+  font-feature-settings: "liga", "clig";
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-family: $s-font-family-serif;
+  line-height: $s-line-height-base / 1.2;
+  color: $s-color-heading;
+}
+
+h1 {
+  @include t-heading--1;
+}
+
+h2 {
+  @include t-heading--2;
+}
+
+h3 {
+  @include t-heading--3;
+}
+
+h4 {
+  @include t-heading--4;
+}
+
+h5 {
+  @include t-heading--5;
+}
+
+h6 {
+  @include t-heading--6;
+}
+
+[href] {
+  @include t-link;
+}
+
+a:focus {
+  outline: none;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: t-vertical-rhythm(1);
+
+  * + & {
+    margin-top: t-vertical-rhythm(1);
+  }
+}
+
+/* stylelint-disable-next-line selector-no-qualifying-type */
+abbr[title] {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+
+  &:hover {
+    cursor: help;
+  }
+}
+
+b,
+strong {
+  font-weight: 500;
+}
+
+mark {
+  color: $s-color-text;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: $s-font-family-mono;
+}
+
+[title] {
+  text-decoration: underline dashed $s-color-info;
+  cursor: help;
+  text-underline-position: under;
+}

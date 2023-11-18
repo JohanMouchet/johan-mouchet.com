@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Table.scss";
+import styles from "./Table.module.scss";
 
 type Props = {
   align?: "top" | "bottom";
@@ -34,14 +34,14 @@ const Table: React.FC<Props> = ({
   ...attributes
 }) => {
   const classNames = cx(
-    "o-table",
-    align && `o-table--align-${align}`,
-    equalColumns && "o-table--equal-columns",
-    vertical && "o-table--vertical",
-    variant && `o-table--${variant}`,
-    hover && !vertical && "o-table--hover",
-    size && `o-table--${size}`,
-    responsive && "o-table--responsive-@md",
+    styles["o-table"],
+    align && styles[`o-table--align-${align}`],
+    equalColumns && styles["o-table--equal-columns"],
+    vertical && styles["o-table--vertical"],
+    variant && styles[`o-table--${variant}`],
+    hover && !vertical && styles["o-table--hover"],
+    size && styles[`o-table--${size}`],
+    responsive && styles["o-table--responsive-@md"],
     className
   );
 

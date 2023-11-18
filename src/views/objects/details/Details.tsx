@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Details.scss";
+import styles from "./Details.module.scss";
 
 type Props = {
   summary?: string;
@@ -18,15 +18,17 @@ const Details: React.FC<Props> = ({
   ...attributes
 }) => {
   const classNames = cx(
-    "o-details",
-    variant && `o-details--${variant}`,
+    styles["o-details"],
+    variant && styles[`o-details--${variant}`],
     className
   );
 
   return !children ? null : (
     <details className={classNames} {...attributes}>
-      {summary && <summary className="o-details__summary">{summary}</summary>}
-      <div className="o-details__panel">{children}</div>
+      {summary && (
+        <summary className={styles["o-details__summary"]}>{summary}</summary>
+      )}
+      <div className={styles["o-details__panel"]}>{children}</div>
     </details>
   );
 };

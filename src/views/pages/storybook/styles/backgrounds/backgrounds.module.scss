@@ -1,0 +1,7 @@
+@import "assets/styles/settings/_settings.module";
+
+/* stylelint-disable selector-pseudo-class-no-unknown, property-no-unknown */
+:export {
+  BACKGROUNDS_DOTS: map-get($s-backgrounds, dots);
+  BACKGROUNDS_ZIGZAG: map-get($s-backgrounds, zigzag);
+}

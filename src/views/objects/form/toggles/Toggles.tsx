@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import cx from "classnames";
-import "./Toggles.scss";
+import styles from "./Toggles.module.scss";
 
 type Props = {
   id?: string;
@@ -26,7 +26,11 @@ const Toggle: React.FC<Props> = ({
 }) => {
   const [check, handleChange] = useState(checked);
 
-  const classNames = cx("o-form__toggle", `o-form__toggle--${type}`, className);
+  const classNames = cx(
+    styles["o-form__toggle"],
+    styles[`o-form__toggle--${type}`],
+    className
+  );
 
   return (
     <label className={classNames} {...attributes}>
@@ -40,8 +44,10 @@ const Toggle: React.FC<Props> = ({
         onChange={() => handleChange((check) => !check)}
         {...attributes}
       />
-      <span className="o-form__toggle-icon"></span>
-      {children && <span className="o-form__toggle-text">{children}</span>}
+      <span className={styles["o-form__toggle-icon"]}></span>
+      {children && (
+        <span className={styles["o-form__toggle-text"]}>{children}</span>
+      )}
     </label>
   );
 };

@@ -1,0 +1,120 @@
+@import "assets/styles/settings/_settings.module";
+@import "assets/styles/tools/_tools.module";
+
+.o-alert {
+  align-items: flex-start;
+  padding: t-vertical-rhythm(0.75) ($grid-gutter / 2);
+  margin: t-vertical-rhythm(1) 0;
+  background-color: $s-color-gray-lighter;
+  border-left: 2px solid;
+  animation-duration: 0.3s;
+
+  /* Icon */
+  &__icon {
+    flex-shrink: 0;
+
+    svg {
+      font-size: t-modular-scale(1);
+      vertical-align: middle;
+    }
+  }
+
+  /* Content */
+  &__content {
+    padding-left: 0;
+
+    *:first-child {
+      margin-top: 0;
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  /* Close */
+  &__close {
+    flex-shrink: 0;
+
+    &-button {
+      all: unset;
+      padding: 0;
+      line-height: 1;
+      cursor: pointer;
+      background-color: transparent;
+      border: 0;
+      outline: 0;
+
+      @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
+
+      svg {
+        font-size: t-modular-scale(1);
+        vertical-align: middle;
+      }
+    }
+  }
+
+  /* Variants */
+  &--success {
+    border-color: $s-color-success;
+  }
+
+  &--success & {
+    &__icon {
+      color: $s-color-success;
+    }
+  }
+
+  &--info {
+    border-color: $s-color-info;
+  }
+
+  &--info & {
+    &__icon {
+      color: $s-color-info;
+    }
+  }
+
+  &--warning {
+    border-color: $s-color-warning;
+  }
+
+  &--warning & {
+    &__icon {
+      color: $s-color-warning;
+    }
+  }
+
+  &--danger {
+    border-color: $s-color-danger;
+  }
+
+  &--danger & {
+    &__icon {
+      color: $s-color-danger;
+    }
+  }
+
+  &--closable & {
+    &__content {
+      padding-right: 0;
+    }
+  }
+
+  &--fixed-bottom,
+  &--fixed-bottom-right {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: map-get($s-layers, "alert");
+    margin-bottom: 0;
+    box-shadow: map-get($s-shadows, md);
+  }
+
+  &--fixed-bottom-right {
+    @media (min-width: map-get($s-breakpoints, sm)) {
+      max-width: map-get($s-breakpoints, sm);
+      margin-right: $grid-gutter;
+    }
+  }
+}

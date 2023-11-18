@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import cx from "classnames";
-import "./Fields.scss";
+import styles from "./Fields.module.scss";
 
 type FieldProps = {
   id?: string;
@@ -19,7 +19,11 @@ const Field: React.FC<FieldProps> = ({
   className,
   ...attributes
 }) => {
-  const classNames = cx("o-form__field", `o-form__field--${type}`, className);
+  const classNames = cx(
+    styles["o-form__field"],
+    styles[`o-form__field--${type}`],
+    className
+  );
 
   return (
     <input
@@ -54,7 +58,11 @@ const Select: React.FC<SelectProps> = ({
   className,
   attributes,
 }) => {
-  const classNames = cx("o-form__field", "o-form__field--select", className);
+  const classNames = cx(
+    styles["o-form__field"],
+    styles["o-form__field--select"],
+    className
+  );
 
   return !options?.length ? null : (
     <select id={id} name={name} className={classNames} {...attributes}>
@@ -89,7 +97,11 @@ const Textarea: React.FC<TextareaProps> = ({
   ...attributes
 }) => {
   const [value, setValue] = useState(children);
-  const classNames = cx("o-form__field", "o-form__field--textarea", className);
+  const classNames = cx(
+    styles["o-form__field"],
+    styles["o-form__field--textarea"],
+    className
+  );
 
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setValue(event.target.value);

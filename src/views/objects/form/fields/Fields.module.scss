@@ -1,0 +1,123 @@
+@import "assets/styles/settings/_settings.module";
+@import "assets/styles/tools/_tools.module";
+@import "../_settings.module";
+
+.o-form__field {
+  width: 100%;
+  height: t-vertical-rhythm(1.75);
+  padding: 0 t-vertical-rhythm(0.5);
+  font-family: $s-font-family-sans;
+  font-size: t-modular-scale(0);
+  line-height: $s-line-height-base;
+  color: $s-color-text;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 2px solid $s-color-gray;
+  transition: color 0.2s, background-color 0.2s, border 0.2s;
+  appearance: none;
+
+  @include t-wekkit-hdpi-small-dimension;
+
+  /* Placeholder */
+  &::placeholder {
+    color: $s-color-gray-darker;
+  }
+
+  /** Textarea **/
+  &--textarea {
+    height: auto;
+    padding-top: t-vertical-rhythm(0.25);
+    padding-bottom: t-vertical-rhythm(0.25);
+    resize: vertical;
+  }
+
+  /** Color **/
+  &--color {
+    padding: 0 0.2em;
+  }
+
+  /** Icons **/
+  &--search,
+  &--select:not([multiple]) {
+    $icon-space: 2em;
+    $icon-size: t-modular-scale(1);
+
+    padding-right: $icon-space;
+    background-repeat: no-repeat;
+    background-position: right ($icon-space - $icon-size) / 2 center;
+    background-size: $icon-size;
+  }
+
+  /*** Search ***/
+  &--search {
+    background-image: url("#{map-get($s-paths, icons)}/ui/search.svg");
+  }
+
+  /*** Select ***/
+  /* stylelint-disable-next-line no-descending-specificity */
+  &--select {
+    &:not([multiple]) {
+      background-image: url("#{map-get($s-paths, icons)}/ui/chevron-down.svg");
+    }
+
+    &[multiple] {
+      height: auto;
+      padding: 0;
+      overflow-y: auto;
+
+      option {
+        padding: (t-vertical-rhythm(1.75) - t-vertical-rhythm(1))/2
+          t-vertical-rhythm(0.5);
+      }
+    }
+
+    &:not(:disabled) {
+      cursor: pointer;
+    }
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  /***
+     * Picker
+     *
+     * Overwrite inputs that use picker / spin
+     * (Experimental, won't work in all browsers)
+     ***/
+  &::-webkit-calendar-picker-indicator {
+    padding-top: 50%;
+    padding-bottom: 50%;
+  }
+
+  &::-webkit-inner-spin-button {
+    height: 100%;
+  }
+
+  /* States */
+
+  /** Hover **/
+  &:hover {
+    border-color: t-map-deep-get($form-settings, hover, color);
+  }
+
+  /** Focus **/
+  &:focus {
+    border-color: t-map-deep-get($form-settings, focus, color);
+    outline: none;
+  }
+
+  /** Disabled **/
+  &:disabled {
+    color: t-map-deep-get($form-settings, disabled, color-tertiary);
+    background-color: t-map-deep-get($form-settings, disabled, color-secondary);
+    border-color: t-map-deep-get($form-settings, disabled, color);
+  }
+
+  /* Required */
+  &:required {
+    box-shadow: none;
+  }
+}

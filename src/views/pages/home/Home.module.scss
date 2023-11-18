@@ -1,0 +1,44 @@
+@import "assets/styles/settings/_settings.module";
+@import "assets/styles/tools/_tools.module";
+
+.home {
+  &-about {
+    border-bottom: 1px solid $s-color-gray-lighter;
+
+    &__heading {
+      margin-top: t-vertical-rhythm(2, "rem");
+      text-align: center;
+    }
+
+    &__paragraph {
+      padding-right: 8%;
+      padding-left: 8%;
+      margin-bottom: t-vertical-rhythm(2);
+      text-align: center;
+    }
+
+    &__portrait {
+      display: block;
+      max-height: 150px;
+      margin-top: t-vertical-rhythm(1);
+      margin-bottom: t-vertical-rhythm(1);
+      border-radius: 50%;
+    }
+  }
+
+  &-cell {
+    &--gray {
+      background: $s-color-gray;
+    }
+
+    &--gray-lighter {
+      background: $s-color-gray-lighter;
+    }
+  }
+
+  &-grid {
+    &--full-height {
+      height: 100%;
+    }
+  }
+}

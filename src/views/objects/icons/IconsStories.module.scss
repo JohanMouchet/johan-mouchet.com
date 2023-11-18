@@ -1,0 +1,12 @@
+@import "assets/styles/settings/_settings.module";
+@import "assets/styles/tools/_tools.module";
+
+.storybook-icon {
+  svg {
+    display: block;
+    width: t-vertical-rhythm(1);
+    height: auto;
+    margin: t-vertical-rhythm(1);
+    fill: currentColor;
+  }
+}

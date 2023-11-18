@@ -1,0 +1,29 @@
+@import "assets/styles/settings/_settings.module";
+@import "assets/styles/tools/_tools.module";
+
+.o-badge {
+  display: inline-block;
+  padding: 0.1em 0.6em;
+  margin-left: 0.5em;
+  font-size: t-modular-scale(-1, "rem");
+  font-weight: 400;
+  color: $s-color-text;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: $s-color-gray;
+  border-radius: 1em;
+
+  &:empty {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: $s-color-gray-lighter;
+  }
+
+  &:active {
+    background-color: $s-color-gray-darker;
+  }
+}

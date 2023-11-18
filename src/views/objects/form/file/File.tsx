@@ -1,7 +1,8 @@
 import React from "react";
 import cx from "classnames";
 import { IconCloudUpload } from "views/objects";
-import "./File.scss";
+import buttonStyles from "../../button/Button.module.scss";
+import styles from "./File.module.scss";
 
 type Props = {
   id?: string;
@@ -22,7 +23,11 @@ const File: React.FC<Props> = ({
   children,
   ...attributes
 }) => {
-  const classNames = cx("o-form__file", "o-button", className);
+  const classNames = cx(
+    styles["o-form__file"],
+    buttonStyles["o-button"],
+    className
+  );
 
   return (
     <label className={classNames}>
@@ -36,10 +41,12 @@ const File: React.FC<Props> = ({
         }
         {...attributes}
       />
-      <span className="o-form__file-icon" aria-label={label}>
+      <span className={styles["o-form__file-icon"]} aria-label={label}>
         <IconCloudUpload />
       </span>
-      {children && <span className="o-form__file-text">{children}</span>}
+      {children && (
+        <span className={styles["o-form__file-text"]}>{children}</span>
+      )}
     </label>
   );
 };

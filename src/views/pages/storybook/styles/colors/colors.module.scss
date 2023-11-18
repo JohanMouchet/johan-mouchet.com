@@ -1,0 +1,20 @@
+@import "assets/styles/settings/_settings.module";
+
+/* stylelint-disable selector-pseudo-class-no-unknown, property-no-unknown */
+:export {
+  COLOR_PRIMARY: $s-color-primary;
+  COLOR_PRIMARY_LIGHTER: $s-color-primary-lighter;
+  COLOR_PRIMARY_DARKER: $s-color-primary-darker;
+  COLOR_SECONDARY: $s-color-secondary;
+  COLOR_SECONDARY_LIGHTER: $s-color-secondary-lighter;
+  COLOR_SECONDARY_DARKER: $s-color-secondary-darker;
+  COLOR_WHITE: $s-color-white;
+  COLOR_GRAY: $s-color-gray;
+  COLOR_GRAY_LIGHTER: $s-color-gray-lighter;
+  COLOR_GRAY_DARKER: $s-color-gray-darker;
+  COLOR_BLACK: $s-color-black;
+  COLOR_SUCCESS: $s-color-success;
+  COLOR_INFO: $s-color-info;
+  COLOR_WARNING: $s-color-warning;
+  COLOR_DANGER: $s-color-danger;
+}

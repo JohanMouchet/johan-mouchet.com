@@ -1,0 +1,13 @@
+@import "assets/styles/settings/_settings.module";
+@import "assets/styles/tools/_tools.module";
+
+.p-aside {
+  flex-grow: 1;
+  margin-top: t-vertical-rhythm(3);
+  margin-bottom: t-vertical-rhythm(3);
+
+  &--no-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

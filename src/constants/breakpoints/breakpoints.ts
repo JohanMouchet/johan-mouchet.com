@@ -1,4 +1,4 @@
-import settings from "./breakpoints.scss";
+import settings from "./breakpoints.module.scss";
 
 const BREAKPOINTS = {
   XS: settings.BREAKPOINTS_XS,

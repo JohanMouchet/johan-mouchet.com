@@ -2,7 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-import "assets/styles/_styles.scss";
+import "assets/styles/_styles.module.scss";
 // @ts-ignore
 import { PrismicLink } from "apollo-link-prismic";
 import * as serviceWorker from "serviceWorker";

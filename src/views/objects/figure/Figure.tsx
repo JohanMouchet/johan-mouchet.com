@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Figure.scss";
+import styles from "./Figure.module.scss";
 
 type Props = {
   src: string;
@@ -22,15 +22,15 @@ const Figure: React.FC<Props> = ({
   ...attributes
 }) => {
   const classNames = cx(
-    "o-figure",
-    centered && `o-figure--centered`,
+    styles["o-figure"],
+    centered && styles["o-figure--centered"],
     className
   );
 
   return (
     <figure className={classNames}>
       <img
-        className="o-figure__img"
+        className={styles["o-figure__img"]}
         src={src}
         alt={alt || caption}
         title={title}
@@ -38,7 +38,9 @@ const Figure: React.FC<Props> = ({
         {...attributes}
       />
       {caption && (
-        <figcaption className="o-figure__caption">{caption}</figcaption>
+        <figcaption className={styles["o-figure__caption"]}>
+          {caption}
+        </figcaption>
       )}
     </figure>
   );

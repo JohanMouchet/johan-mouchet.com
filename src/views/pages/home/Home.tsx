@@ -1,5 +1,6 @@
 import React from "react";
 import { gql, useQuery } from "@apollo/client";
+import cx from "classnames";
 import { RichText } from "prismic-reactjs";
 import {
   AcademicQualification,
@@ -12,7 +13,7 @@ import {
 import { Default } from "views/layouts";
 import { Anchor, Button, Loader } from "views/objects";
 import { Article, Main } from "views/partials";
-import "./Home.scss";
+import styles from "./Home.module.scss";
 
 const Home: React.FC = () => {
   const query = gql`
@@ -177,24 +178,48 @@ const Home: React.FC = () => {
         </Main>
       ) : (
         <Main margin="no-margin">
-          <section className="home-about">
+          <section className={styles["home-about"]}>
             <div className="container container--noGutter-lgGrid">
               <div className="grid grid--lgGutter-@xs">
                 <div className="cell cell--12-@xs cell--6-@sm">
-                  <h2 className="home-about__heading">{data.home.title1}</h2>
+                  <h2 className={styles["home-about__heading"]}>
+                    {data.home.title1}
+                  </h2>
 
-                  <div className="home-about__paragraph">
+                  <div className={styles["home-about__paragraph"]}>
                     <RichText render={data.home.paragraph1} />
                   </div>
                 </div>
 
-                <div className="home-cell--gray-lighter cell cell--0-@xs cell--6-@sm"></div>
+                <div
+                  className={cx(
+                    styles["home-cell--gray-lighter"],
+                    "cell",
+                    "cell--0-@xs",
+                    "cell--6-@sm"
+                  )}
+                ></div>
 
-                <div className="home-cell--gray cell cell--12-@xs cell--6-@sm cell--3-@md">
-                  <div className="home-grid--full-height grid grid--xCenter-@xs grid--yCenter-@xs">
+                <div
+                  className={cx(
+                    styles["home-cell--gray"],
+                    "cell",
+                    "cell--12-@xs",
+                    "cell--6-@sm",
+                    "cell--3-@md"
+                  )}
+                >
+                  <div
+                    className={cx(
+                      styles["home-grid--full-height"],
+                      "grid",
+                      "grid--xCenter-@xs",
+                      "grid--yCenter-@xs"
+                    )}
+                  >
                     <div className="cell">
                       <img
-                        className="home-about__portrait"
+                        className={styles["home-about__portrait"]}
                         src={`${data.profile.image.url}&q=100`}
                         srcSet={`${data.profile.image.url}&q=100, ${data.profile.image.x2.url}&q=100 1.25x`}
                         alt={data.profile.image.alt}
@@ -203,12 +228,22 @@ const Home: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="home-cell--gray-lighter cell cell--hidden-@xs cell--visible-@md cell--3-@md"></div>
+                <div
+                  className={cx(
+                    styles["home-cell--gray-lighter"],
+                    "cell",
+                    "cell--hidden-@xs",
+                    "cell--visible-@md",
+                    "cell--3-@md"
+                  )}
+                ></div>
 
                 <div className="cell cell--12-@xs cell--6-@sm cell--yCenter-@sm">
-                  <h2 className="home-about__heading">{data.home.title2}</h2>
+                  <h2 className={styles["home-about__heading"]}>
+                    {data.home.title2}
+                  </h2>
 
-                  <div className="home-about__paragraph">
+                  <div className={styles["home-about__paragraph"]}>
                     <RichText render={data.home.paragraph2} />
                   </div>
                 </div>
@@ -217,7 +252,14 @@ const Home: React.FC = () => {
           </section>
           <section className="container container--noGutter-lgGrid">
             <div className="grid grid--lgGutter-@xs">
-              <div className="home-cell--gray-lighter cell cell--12-@xs cell--3-@md">
+              <div
+                className={cx(
+                  styles["home-cell--gray-lighter"],
+                  "cell",
+                  "cell--12-@xs",
+                  "cell--3-@md"
+                )}
+              >
                 <Article>
                   <Anchor as="h2" id="skills">
                     {data.home.skillsSectionTitle}

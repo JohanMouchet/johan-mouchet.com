@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Button.scss";
+import styles from "./Button.module.scss";
 
 type Props = {
   type: "anchor" | "button" | "submit" | "reset";
@@ -24,13 +24,15 @@ const Button: React.FC<Props> = ({
   ...attributes
 }) => {
   const classNames = cx(
-    "o-button",
-    size && `o-button--${size}`,
-    variant && `o-button--${variant}`,
+    styles["o-button"],
+    size && styles[`o-button--${size}`],
+    variant && styles[`o-button--${variant}`],
     block &&
-      `o-button--block${
-        typeof block === "string" ? `-${block}` : block === true && ""
-      }`,
+      styles[
+        `o-button--block${
+          typeof block === "string" ? `-${block}` : block === true && ""
+        }`
+      ],
     className
   );
 

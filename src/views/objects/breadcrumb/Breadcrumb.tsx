@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Breadcrumb.scss";
+import styles from "./Breadcrumb.module.scss";
 
 type Props = {
   levels: Array<{
@@ -13,7 +13,7 @@ type Props = {
 };
 
 const Breadcrumb: React.FC<Props> = ({ levels, className }) => {
-  const classNames = cx("o-breadcrumb", className);
+  const classNames = cx(styles["o-breadcrumb"], className);
   const lastLevel = levels?.length - 1;
 
   return !levels?.length ? null : (
@@ -28,7 +28,7 @@ const Breadcrumb: React.FC<Props> = ({ levels, className }) => {
             key={level.link.url}
           >
             <a
-              className="o-breadcrumb__link"
+              className={styles["o-breadcrumb__link"]}
               href={index !== lastLevel ? level.link.url : undefined}
             >
               {level.title}

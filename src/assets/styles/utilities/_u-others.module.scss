@@ -1,0 +1,15 @@
+/**
+ * Others
+ */
+
+:global {
+  .u-select {
+    &--all {
+      user-select: all;
+    }
+
+    &--none {
+      user-select: none;
+    }
+  }
+}

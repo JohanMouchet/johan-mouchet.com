@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Main.scss";
+import styles from "./Main.module.scss";
 
 type Props = {
   margin?: "no-margin";
@@ -9,7 +9,11 @@ type Props = {
 };
 
 const Main: React.FC<Props> = ({ margin, className, children }) => {
-  const classNames = cx("p-main", margin && `p-main--${margin}`, className);
+  const classNames = cx(
+    styles["p-main"],
+    margin && styles[`p-main--${margin}`],
+    className
+  );
 
   return <main className={classNames}>{children}</main>;
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Anchor.scss";
+import styles from "./Anchor.module.scss";
 
 type Props = {
   as: keyof JSX.IntrinsicElements;
@@ -19,7 +19,7 @@ const Anchor: React.FC<Props> = ({
   children,
   ...attributes
 }) => {
-  const classNames = cx("o-anchor", className);
+  const classNames = cx(styles["o-anchor"], className);
 
   const Tag = as;
 
@@ -28,7 +28,7 @@ const Anchor: React.FC<Props> = ({
       <a
         href={`#${id}`}
         id={id}
-        className="o-anchor__link"
+        className={styles["o-anchor__link"]}
         aria-label={`Permalink for ${children}`}
       >
         <span aria-hidden>{marker}</span>

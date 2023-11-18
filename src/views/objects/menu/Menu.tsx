@@ -1,7 +1,7 @@
 import React from "react";
 import cx from "classnames";
 import { IconChevronDown } from "views/objects";
-import "./Menu.scss";
+import styles from "./Menu.module.scss";
 
 type Submenu = {
   text: string;
@@ -26,22 +26,25 @@ const Menu: React.FC<Props> = ({ menu, className }) => {
     isSubmenu?: boolean,
     className?: string | string[] | { [key: string]: boolean }
   ) => {
-    const classNames = cx(isSubmenu ? "o-menu__submenu" : "o-menu", className);
+    const classNames = cx(
+      isSubmenu ? styles["o-menu__submenu"] : styles["o-menu"],
+      className
+    );
 
     return !menu?.length ? null : (
       <ul className={classNames}>
         {menu.map((item) => (
           <li
             className={cx(
-              "o-menu__item",
-              item.menu && "o-menu__item--has-children"
+              styles["o-menu__item"],
+              item.menu && styles["o-menu__item--has-children"]
             )}
             key={item.text}
           >
             <a
               className={cx(
-                "o-menu__link",
-                item.menu && "o-menu__submenu-heading"
+                styles["o-menu__link"],
+                item.menu && styles["o-menu__submenu-heading"]
               )}
               href={item.url}
               tabIndex={!item.url ? 0 : undefined}

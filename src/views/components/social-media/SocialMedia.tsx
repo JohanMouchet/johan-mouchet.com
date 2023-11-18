@@ -1,4 +1,5 @@
 import React from "react";
+import cx from "classnames";
 import {
   Icon500px,
   IconCodepen,
@@ -11,7 +12,7 @@ import {
   IconUnsplash,
   IconYoutube,
 } from "views/objects";
-import "./SocialMedia.scss";
+import styles from "./SocialMedia.module.scss";
 
 type Props = {
   media: Array<{
@@ -62,14 +63,16 @@ const SocialMedia: React.FC<Props> = ({ media }) => {
     <div className="grid">
       {media.map((media) => (
         <div
-          className="c-social-media cell cell--6-@xs cell--4-@sm cell--12-@md"
+          className={cx(
+            styles["c-social-media"],
+            "cell",
+            "cell--6-@xs",
+            "cell--4-@sm",
+            "cell--12-@md"
+          )}
           key={media.link.url}
         >
-          <a
-            className="c-social-media__link"
-            href={media.link.url}
-            title={`Follow me on ${media.name}`}
-          >
+          <a className={styles["c-social-media__link"]} href={media.link.url}>
             <span aria-hidden>{getIcon(media.icon)}</span>
             {media.name}
           </a>

@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Card.scss";
+import styles from "./Card.module.scss";
 
 type Props = {
   bannerUrl?: string;
@@ -24,10 +24,10 @@ const Card: React.FC<Props> = ({
   className,
 }) => {
   const classNames = cx(
-    "o-card",
-    bannerGradient && `o-card--banner-gradient`,
-    variant && `o-card--${variant}`,
-    size && `o-card--${size}`,
+    styles["o-card"],
+    bannerGradient && styles[`o-card--banner-gradient`],
+    variant && styles[`o-card--${variant}`],
+    size && styles[`o-card--${size}`],
     className
   );
 
@@ -35,15 +35,15 @@ const Card: React.FC<Props> = ({
     <section className={classNames}>
       {bannerUrl && (
         <div
-          className="o-card__banner"
+          className={styles["o-card__banner"]}
           style={
             bannerUrl ? { backgroundImage: `url(${bannerUrl})` } : undefined
           }
         ></div>
       )}
-      {header && <header className="o-card__header">{header}</header>}
-      {children && <div className="o-card__body">{children}</div>}
-      {footer && <footer className="o-card__footer">{footer}</footer>}
+      {header && <header className={styles["o-card__header"]}>{header}</header>}
+      {children && <div className={styles["o-card__body"]}>{children}</div>}
+      {footer && <footer className={styles["o-card__footer"]}>{footer}</footer>}
     </section>
   );
 };

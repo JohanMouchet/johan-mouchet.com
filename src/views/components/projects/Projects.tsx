@@ -9,7 +9,7 @@ import {
 import { parse } from "utils/parse";
 import { pluralize } from "utils/pluralize";
 import { Details } from "views/objects";
-import "./Projects.scss";
+import styles from "./Projects.module.scss";
 
 type Thumbnail = {
   name: string;
@@ -41,24 +41,26 @@ type Props = {
 const Projects: React.FC<Props> = ({ projects }) => {
   const renderThumbnail = (project: Thumbnail) => (
     <>
-      <a href={project.link.url} className="c-project__link">
+      <a href={project.link.url} className={styles["c-project__link"]}>
         <img
-          className="c-project__thumbnail"
+          className={styles["c-project__thumbnail"]}
           src={project.thumbnailSrc.url}
           alt=""
           loading="lazy"
         />
-        <div className="c-project__overlay">
-          <h4 className="c-project__title">{project.name}</h4>
-          <span className="c-project__line"></span>
+        <div className={styles["c-project__overlay"]}>
+          <h4 className={styles["c-project__title"]}>{project.name}</h4>
+          <span className={styles["c-project__line"]}></span>
           {project.tagline && (
-            <span className="c-project__tagline">{project.tagline}</span>
+            <span className={styles["c-project__tagline"]}>
+              {project.tagline}
+            </span>
           )}
         </div>
       </a>
 
       {project.lede && (
-        <div className="c-project__lede">
+        <div className={styles["c-project__lede"]}>
           <RichText render={project.lede} />
         </div>
       )}
@@ -75,17 +77,17 @@ const Projects: React.FC<Props> = ({ projects }) => {
     return (
       <>
         {project.achievements && (
-          <div className="c-project__detail">
-            <b className="c-project__detail-heading">
+          <div className={styles["c-project__detail"]}>
+            <b className={styles["c-project__detail-heading"]}>
               Key {pluralize("Achievement", achievementQuantity || 0)}
             </b>
 
             {achievementPreformatted ? (
-              <ul className="c-project__detail-list">
+              <ul className={styles["c-project__detail-list"]}>
                 {parse(project.achievements[0].text)}
               </ul>
             ) : (
-              <div className="c-project__detail-list">
+              <div className={styles["c-project__detail-list"]}>
                 <RichText render={project.achievements} />
               </div>
             )}
@@ -93,23 +95,23 @@ const Projects: React.FC<Props> = ({ projects }) => {
         )}
 
         {project.architecture && (
-          <div className="c-project__detail">
-            <b className="c-project__detail-heading">Architecture</b>
-            <div className="c-project__detail-list">
+          <div className={styles["c-project__detail"]}>
+            <b className={styles["c-project__detail-heading"]}>Architecture</b>
+            <div className={styles["c-project__detail-list"]}>
               <RichText render={project.architecture} />
             </div>
           </div>
         )}
 
         {project.libraries && (
-          <div className="c-project__detail">
-            <b className="c-project__detail-heading">
+          <div className={styles["c-project__detail"]}>
+            <b className={styles["c-project__detail-heading"]}>
               {pluralize(
                 "Library",
                 project.libraries[0].text?.split(", ").length || 1
               )}
             </b>
-            <div className="c-project__detail-list">
+            <div className={styles["c-project__detail-list"]}>
               <RichText render={project.libraries} />
             </div>
           </div>
@@ -119,7 +121,7 @@ const Projects: React.FC<Props> = ({ projects }) => {
   };
 
   return !projects?.length ? null : (
-    <div className="c-projects">
+    <div className={styles["c-projects"]}>
       <div className="grid">
         {projects.map((project) =>
           project.highlight ? (
@@ -127,7 +129,12 @@ const Projects: React.FC<Props> = ({ projects }) => {
               className="cell cell--12-@xs"
               key={`${project.name}${project.tagline || ""}`}
             >
-              <div className="c-project c-project--highlighted">
+              <div
+                className={cx(
+                  styles["c-project"],
+                  styles["c-project--highlighted"]
+                )}
+              >
                 <div className="grid">
                   <div className="cell cell--12-@xs cell--6-@sm cell--4-@lg">
                     {renderThumbnail(project)}
@@ -146,13 +153,13 @@ const Projects: React.FC<Props> = ({ projects }) => {
               })}
               key={`${project.name}${project.tagline || ""}`}
             >
-              <div className="c-project">
+              <div className={styles["c-project"]}>
                 {renderThumbnail(project)}
                 {(project.achievements ||
                   project.architecture ||
                   project.libraries) && (
                   <Details summary="Details" variant="compact">
-                    <div className="c-project__details">
+                    <div className={styles["c-project__details"]}>
                       {renderContent(project)}
                     </div>
                   </Details>

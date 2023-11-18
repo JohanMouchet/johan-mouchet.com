@@ -1,8 +1,8 @@
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { text } from "@storybook/addon-knobs";
 import { Table } from "views/objects";
-import settings from "./typography.scss";
-import "./typography.scss";
+import settings from "./typography.module.scss";
+import styles from "./typography.module.scss";
 
 <Meta title="Styles/Typography" />
 
@@ -141,7 +141,9 @@ import "./typography.scss";
                 <tr key={size}>
                   <th>{size}</th>
                   <td>
-                    <span className={`storybook-size--${size.toString()}`}>
+                    <span
+                      className={styles[`storybook-size--${size.toString()}`]}
+                    >
                       {input}
                     </span>
                   </td>
@@ -273,6 +275,12 @@ import "./typography.scss";
                   <p className="u-vr--bottom-0-@xs">
                     {input || "The quick brown fox jumps over the lazy dog."}
                   </p>
+                ),
+              },
+              {
+                tag: '[title="Title"]',
+                preview: (
+                  <span title={input || "Title"}>{input || "Title"}</span>
                 ),
               },
               {

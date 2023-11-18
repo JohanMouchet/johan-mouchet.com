@@ -15,7 +15,7 @@ This website is,
 - maintaining a design system with [Storybook](https://www.johan-mouchet.com/storybook/?path=/docs/about-getting-started--page)
 - type-checked with TypeScript
 - unit and snapshot tested with Jest and React Testing Library
-- using Sass and CSS post-processing
+- using CSS Modules, Sass and post-processing
 - linted and formated with ESlint, stylelint and Prettier, enforced by Husky and lint-staged
 - using client-side routing with [wouter](https://github.com/molefrog/wouter)
 - deployed, pre-rendered, with Netlify

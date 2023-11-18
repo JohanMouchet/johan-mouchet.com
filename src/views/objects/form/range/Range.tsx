@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Range.scss";
+import styles from "./Range.module.scss";
 
 type Props = {
   id?: string;
@@ -10,7 +10,7 @@ type Props = {
 };
 
 const Range: React.FC<Props> = ({ id, name, className, attributes }) => {
-  const classNames = cx("o-form__range", className);
+  const classNames = cx(styles["o-form__range"], className);
 
   return (
     <input

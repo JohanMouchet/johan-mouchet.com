@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import "./Aside.scss";
+import styles from "./Aside.module.scss";
 
 type Props = {
   margin?: "no-margin";
@@ -9,7 +9,11 @@ type Props = {
 };
 
 const Aside: React.FC<Props> = ({ margin, className, children }) => {
-  const classNames = cx("p-aside", margin && `p-main--${margin}`, className);
+  const classNames = cx(
+    styles["p-aside"],
+    margin && styles[`p-main--${margin}`],
+    className
+  );
 
   return <aside className={classNames}>{children}</aside>;
 };

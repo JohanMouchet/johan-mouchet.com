@@ -2,7 +2,7 @@ import React from "react";
 import { RichText, RichTextBlock } from "prismic-reactjs";
 import { duration } from "utils/duration";
 import { Projects } from "views/components";
-import "./Experiences.scss";
+import styles from "./Experiences.module.scss";
 
 type Props = {
   experiences: Array<{
@@ -23,7 +23,7 @@ type Props = {
 
 const Experiences: React.FC<Props> = ({ experiences }) =>
   !experiences?.length ? null : (
-    <div className="c-experiences">
+    <div className={styles["c-experiences"]}>
       {experiences.map((experience) => {
         const startDate =
           typeof experience.startDate === "string"
@@ -37,22 +37,22 @@ const Experiences: React.FC<Props> = ({ experiences }) =>
 
         return (
           <section
-            className="c-experience"
+            className={styles["c-experience"]}
             key={`${experience.companyName}-${startDate}`}
           >
-            <h3 className="c-experience__heading">
+            <h3 className={styles["c-experience__heading"]}>
               <a
                 href={experience.companyLink.url && experience.companyLink.url}
                 target={experience.companyLink.url && "_blank"}
                 rel={experience.companyLink.url && "noopener noreferrer"}
-                className="c-experience__company"
+                className={styles["c-experience__company"]}
               >
                 {experience.companyName}
               </a>
               , {experience.location} ⁠— {experience.jobTitle}
             </h3>
-            <p className="c-experience__subheading">
-              <span className="c-experience__date">
+            <p className={styles["c-experience__subheading"]}>
+              <span className={styles["c-experience__date"]}>
                 <time dateTime={startDate.toISOString().substring(0, 7)}>
                   {`${startDate.toLocaleString("en-GB", {
                     month: "short",
@@ -73,7 +73,7 @@ const Experiences: React.FC<Props> = ({ experiences }) =>
                   </>
                 )}
               </span>{" "}
-              <span className="c-experience__duration">
+              <span className={styles["c-experience__duration"]}>
                 (
                 <time dateTime={duration(startDate, endDate, "iso8601", "1M")}>
                   {duration(startDate, endDate, "short", "1 mo")}
@@ -81,13 +81,13 @@ const Experiences: React.FC<Props> = ({ experiences }) =>
                 )
               </span>
               {experience.contractType && (
-                <span className="c-experience__type">
+                <span className={styles["c-experience__type"]}>
                   {" "}
                   / {experience.contractType}
                 </span>
               )}
             </p>
-            <div className="c-experience__lede">
+            <div className={styles["c-experience__lede"]}>
               <RichText render={experience.lede} />
             </div>
             {experience.projects?.projects && (

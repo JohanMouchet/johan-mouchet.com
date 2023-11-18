@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import cx from "classnames";
 import FocusTrap from "focus-trap-react";
 import { IconX } from "views/objects";
-import "./Modal.scss";
+import styles from "./Modal.module.scss";
 
 type Props = {
   isOpen?: boolean;
@@ -49,7 +49,7 @@ const Modal: React.FC<Props> = ({
     <>
       <button
         onClick={openModal}
-        className={cx("o-modal__trigger", className)}
+        className={cx(styles["o-modal__trigger"], className)}
         type="button"
         {...attributes}
       >
@@ -61,7 +61,12 @@ const Modal: React.FC<Props> = ({
         : createPortal(
             <FocusTrap>
               <div
-                className="o-modal u-animation u-animation--fast u-animation--fade-in"
+                className={cx(
+                  styles["o-modal"],
+                  "u-animation",
+                  "u-animation--fast",
+                  "u-animation--fade-in"
+                )}
                 role="dialog"
                 tabIndex={-1}
                 aria-modal="true"
@@ -70,19 +75,19 @@ const Modal: React.FC<Props> = ({
               >
                 <div
                   className={cx(
-                    "o-modal__dialog",
+                    styles["o-modal__dialog"],
                     "container",
                     size && `container--${size}`
                   )}
                 >
                   <button
-                    className="o-modal__close-button"
+                    className={styles["o-modal__close-button"]}
                     onClick={closeModal}
                     aria-label={closeLabel}
                   >
                     <IconX />
                   </button>
-                  <div className="o-modal__body">{children}</div>
+                  <div className={styles["o-modal__body"]}>{children}</div>
                 </div>
               </div>
             </FocusTrap>,
