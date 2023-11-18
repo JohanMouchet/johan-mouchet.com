@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Article /> without crashing 1`] = `
+<article
+  class="p-article p-article--sm p-article--no-margin p-article--secondary p-article--secondary-sm"
+>
+  children
+</article>
+`;

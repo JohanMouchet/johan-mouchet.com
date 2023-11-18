@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Footer /> without crashing 1`] = `
+<footer
+  class="p-footer"
+>
+  <div
+    class="container"
+  >
+    <div
+      class="grid grid--yCenter-@xs grid--noWrap-@xs"
+    >
+      <div
+        class="cell cell--0-@xs"
+      >
+        <span
+          class="p-footer__version"
+        >
+          Version
+        </span>
+      </div>
+      <div
+        class="cell cell--@xs"
+      >
+        <p
+          class="p-footer__copyright"
+        >
+          2021
+           © 
+          Copyright
+           
+          <span
+            class="p-footer__copyright-separator"
+          >
+            |
+          </span>
+          <br />
+           Made in
+           
+          <span
+            class="p-footer__cocorico"
+            tabindex="0"
+          >
+            France
+          </span>
+        </p>
+      </div>
+      <div
+        class="cell cell--0-@xs"
+      >
+        <a
+          aria-label="Top Button Label"
+          class="p-footer__page-top"
+          href="#page-top"
+        >
+          <svg>
+            chevron-down.svg
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+`;
