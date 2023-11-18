@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Renders <Aside /> without crashing 1`] = `
-<aside
-  class="p-aside p-main--no-margin"
->
-  children
-</aside>
-`;
