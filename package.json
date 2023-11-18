@@ -5,15 +5,16 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
+    "storybook": "storybook dev -p 6006",
     "test": "jest --watch",
     "type-check": "tsc --noEmit",
     "lint:js": "next lint",
     "lint:css": "stylelint src/**/*.scss",
-    "format": "npm run lint:js -- --fix && npm run lint:css -- --fix && prettier --write src/**/*.{ts,tsx,js,json,mdx}",
+    "format": "pnpm lint:js -- --fix && pnpm lint:css -- --fix && prettier --write src/**/*.{ts,tsx,js,json,mdx}",
     "analyze": "cross-env ANALYZE=true next build",
     "build": "next build",
     "build:storybook": "storybook build",
-    "storybook": "storybook dev -p 6006",
+    "build:all": "pnpm build && pnpm build:storybook",
     "prepare": "husky install"
   },
   "lint-staged": {
