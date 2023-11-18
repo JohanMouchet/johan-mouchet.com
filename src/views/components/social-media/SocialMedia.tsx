@@ -1,5 +1,3 @@
-import React from "react";
-import cx from "classnames";
 import {
   Icon500px,
   IconCodepen,
@@ -11,10 +9,15 @@ import {
   IconTwitter,
   IconUnsplash,
   IconYoutube,
-} from "views/objects";
+} from "@/views/objects/icons";
+import clsx, { ClassValue } from "clsx";
 import styles from "./SocialMedia.module.scss";
 
-type Props = {
+export const SocialMedia = ({
+  media,
+  className,
+  ...props
+}: {
   media: Array<{
     name: string;
     link: {
@@ -32,9 +35,8 @@ type Props = {
       | "unsplash"
       | "youtube";
   }>;
-};
-
-const SocialMedia: React.FC<Props> = ({ media }) => {
+  className?: ClassValue;
+} & Omit<React.HTMLProps<HTMLDivElement>, "media">) => {
   const getIcon = (icon: string) => {
     if (icon === "500px") {
       return <Icon500px />;
@@ -60,15 +62,15 @@ const SocialMedia: React.FC<Props> = ({ media }) => {
   };
 
   return !media?.length ? null : (
-    <div className="grid">
+    <div className={clsx("grid", className)} {...props}>
       {media.map((media) => (
         <div
-          className={cx(
+          className={clsx(
             styles["c-social-media"],
             "cell",
-            "cell--6-@xs",
-            "cell--4-@sm",
-            "cell--12-@md"
+            "cell-6",
+            "sm:cell-4",
+            "md:cell-12"
           )}
           key={media.link.url}
         >
@@ -81,5 +83,3 @@ const SocialMedia: React.FC<Props> = ({ media }) => {
     </div>
   );
 };
-
-export default SocialMedia;

@@ -1,21 +1,25 @@
-import React from "react";
-import cx from "classnames";
+import clsx, { ClassValue } from "clsx";
 import styles from "./Main.module.scss";
 
-type Props = {
+export const Main = ({
+  margin,
+  children,
+  className,
+  ...props
+}: {
   margin?: "no-margin";
-  className?: string | string[] | { [key: string]: boolean };
   children: React.ReactNode;
-};
-
-const Main: React.FC<Props> = ({ margin, className, children }) => {
-  const classNames = cx(
+  className?: ClassValue;
+} & React.HTMLProps<HTMLDivElement>) => {
+  const classNames = clsx(
     styles["p-main"],
     margin && styles[`p-main--${margin}`],
     className
   );
 
-  return <main className={classNames}>{children}</main>;
+  return (
+    <main className={classNames} {...props}>
+      {children}
+    </main>
+  );
 };
-
-export default Main;

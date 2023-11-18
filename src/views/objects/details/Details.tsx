@@ -1,30 +1,26 @@
-import React from "react";
-import cx from "classnames";
+import clsx, { ClassValue } from "clsx";
 import styles from "./Details.module.scss";
 
-type Props = {
-  summary?: string;
-  variant?: "compact";
-  className?: string | string[] | { [key: string]: boolean };
-  attributes?: boolean | number | string;
-  children: React.ReactNode;
-};
-
-const Details: React.FC<Props> = ({
+export const Details = ({
   summary = "Details",
   variant,
-  className,
   children,
-  ...attributes
-}) => {
-  const classNames = cx(
+  className,
+  ...props
+}: {
+  summary?: string;
+  variant?: "compact";
+  children: React.ReactNode;
+  className?: ClassValue;
+} & React.HTMLProps<HTMLDetailsElement>) => {
+  const classNames = clsx(
     styles["o-details"],
     variant && styles[`o-details--${variant}`],
     className
   );
 
   return !children ? null : (
-    <details className={classNames} {...attributes}>
+    <details className={classNames} {...props}>
       {summary && (
         <summary className={styles["o-details__summary"]}>{summary}</summary>
       )}
@@ -32,5 +28,3 @@ const Details: React.FC<Props> = ({
     </details>
   );
 };
-
-export default Details;

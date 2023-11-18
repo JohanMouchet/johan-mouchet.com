@@ -1,3 +1,5 @@
+@use "sass:map";
+
 /**
  * Typography
  */
@@ -7,7 +9,7 @@ html {
   @if $s-font-size-mobile {
     font-size: $s-font-size-mobile * 1em;
 
-    @media (min-width: map-get($s-breakpoints, sm)) {
+    @media (min-width: map.get($s-breakpoints, sm)) {
       font-size: $s-font-size-base * 1em;
     }
   } @else {
@@ -15,9 +17,9 @@ html {
   }
 
   font-family: $s-font-family-sans;
+  font-feature-settings: "liga", "clig";
   line-height: $s-line-height-base;
   color: $s-color-text;
-  font-feature-settings: "liga", "clig";
 }
 
 /* Headings */
@@ -102,6 +104,6 @@ samp {
 
 [title] {
   text-decoration: underline dashed $s-color-info;
-  cursor: help;
   text-underline-position: under;
+  cursor: help;
 }

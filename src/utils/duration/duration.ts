@@ -1,5 +1,5 @@
+import { pluralize } from "@/utils/pluralize/pluralize";
 import { differenceInCalendarMonths } from "date-fns";
-import { pluralize } from "utils/pluralize";
 
 /**
  * Returns the time duration between two dates as a string in the "X yr(s) X mo(s)" format
@@ -9,7 +9,7 @@ import { pluralize } from "utils/pluralize";
  * @param minimumLabel Text returned if the duration is shorter than one month
  */
 
-const duration = (
+export const duration = (
   startDate: Date,
   endDate: Date,
   format: "short" | "iso8601" = "short",
@@ -43,5 +43,3 @@ const duration = (
     throw new Error("startDate must be anterior to endDate");
   }
 };
-
-export default duration;

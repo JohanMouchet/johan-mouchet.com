@@ -1,5 +1,6 @@
-@import "assets/styles/settings/_settings.module";
-@import "assets/styles/tools/_tools.module";
+@use "sass:map";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
 
 /* Menu */
 .o-menu {
@@ -54,7 +55,7 @@
   }
 
   /* Above mobile */
-  @media (min-width: map-get($s-breakpoints, md)) {
+  @media (min-width: map.get($s-breakpoints, md)) {
     flex-direction: row;
 
     & > &__item {

@@ -1,24 +1,24 @@
-import React from "react";
-import cx from "classnames";
-import { STATIC } from "constants/static";
+import { STATIC } from "@/constants/static";
+import clsx, { ClassValue } from "clsx";
 import styles from "./Header.module.scss";
 
-type Props = {
-  firstName?: string;
-  lastName?: string;
-  tagline?: string | React.ReactNode;
-};
-
-const Header: React.FC<Props> = ({
+export const Header = ({
   firstName = STATIC.profile.firstName,
   lastName = STATIC.profile.lastName,
   tagline = STATIC.profile.tagline,
-}) => (
-  <header className={styles["p-header"]}>
+  className,
+  ...props
+}: {
+  firstName?: string;
+  lastName?: string;
+  tagline?: React.ReactNode;
+  className?: ClassValue;
+} & React.HTMLProps<HTMLDivElement>) => (
+  <header className={clsx(styles["p-header"], className)} {...props}>
     <div className={styles["p-header__inner"]}>
       <h1 className={styles["p-header__heading"]}>
         <span
-          className={cx(
+          className={clsx(
             styles["p-header__half"],
             styles["p-header__half--left"]
           )}
@@ -28,10 +28,10 @@ const Header: React.FC<Props> = ({
           </span>
         </span>
 
-        <span className={styles["p-header__line"]}></span>
+        <span className={styles["p-header__line"]} />
 
         <span
-          className={cx(
+          className={clsx(
             styles["p-header__half"],
             styles["p-header__half--right"]
           )}
@@ -46,5 +46,3 @@ const Header: React.FC<Props> = ({
     </div>
   </header>
 );
-
-export default Header;

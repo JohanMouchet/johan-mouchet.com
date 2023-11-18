@@ -4,14 +4,14 @@
  * Create a CSS arrow using borders
  *
  * @param {string} [arrow-direction = right]    - Direction of the arrow: top|top-right|right|bottom-right|bottom|bottom-left|left|top-left
- * @param {color}  [arrow-color = currentColor] - Color of the arrow
+ * @param {color}  [arrow-color = currentcolor] - Color of the arrow
  * @param {number} [arrow-size = 10px]          - Size of the arrow
  *
  * @example @include t-arrow(top, black, 15px);
  */
 @mixin t-arrow(
   $arrow-direction: right,
-  $arrow-color: currentColor,
+  $arrow-color: currentcolor,
   $arrow-size: 10px
 ) {
   width: 0;

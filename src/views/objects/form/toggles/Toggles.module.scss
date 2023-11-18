@@ -1,7 +1,6 @@
-@import "assets/styles/settings/_settings.module";
-@import "assets/styles/tools/_tools.module";
-// @import "assets/styles/utilities/_utilities";
-@import "../_settings.module";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
+@import "../settings.module";
 
 .o-form__toggle {
   $root: &;
@@ -53,10 +52,7 @@
 
     &::before {
       position: absolute;
-      top: 2px;
-      right: 2px;
-      bottom: 2px;
-      left: 2px;
+      inset: 2px;
       content: "";
       transition: background-color 0.2s;
     }

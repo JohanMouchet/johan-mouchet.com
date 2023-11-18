@@ -1,6 +1,5 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import PersonalWorks from ".";
+import { PersonalWorks } from "./PersonalWorks";
 
 it("Renders <PersonalWorks /> without crashing", () => {
   expect(

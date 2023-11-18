@@ -1,0 +1,16 @@
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
+
+.storybook {
+  &-swatch {
+    display: inline-block;
+    width: t-vertical-rhythm(2);
+    height: t-vertical-rhythm(2);
+    box-shadow: inset 0 0 0 1px rgba($s-color-black, 0.05);
+
+    &--lg {
+      width: t-vertical-rhythm(4);
+      height: t-vertical-rhythm(4);
+    }
+  }
+}

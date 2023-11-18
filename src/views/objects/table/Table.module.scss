@@ -1,5 +1,6 @@
-@import "assets/styles/settings/_settings.module";
-@import "assets/styles/tools/_tools.module";
+@use "sass:map";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
 
 /* stylelint-disable selector-max-type, no-descending-specificity */
 .o-table {
@@ -219,7 +220,7 @@
   /* stylelint-enable max-nesting-depth */
 
   /** Responsive **/
-  @media screen and (max-width: map-get($s-breakpoints, md)) {
+  @media screen and (max-width: map.get($s-breakpoints, md)) {
     &--responsive-\@md {
       display: inline-block;
       max-width: 100%;

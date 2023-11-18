@@ -1,11 +1,10 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import Anchor from ".";
+import { Anchor } from "./Anchor";
 
 it("Renders <Anchor /> without crashing", () => {
   expect(
     render(
-      <Anchor as="h2" id="id" marker="#">
+      <Anchor id="id" marker="#">
         children
       </Anchor>
     ).container.firstChild

@@ -1,5 +1,5 @@
-@import "assets/styles/settings/_settings.module";
-@import "assets/styles/tools/_tools.module";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
 
 .o-breadcrumb {
   $root: &;
@@ -9,8 +9,7 @@
   padding: 0;
   margin-top: 0;
   margin-bottom: t-vertical-rhythm(2);
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: auto hidden;
   list-style: none;
   border-bottom: 1px solid $s-color-gray;
 

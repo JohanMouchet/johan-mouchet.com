@@ -1,4 +1,4 @@
-import { duration } from ".";
+import { duration } from "./duration";
 
 it("Returns year", () =>
   expect(duration(new Date("0000-01-01"), new Date("0001-01-01"))).toBe(

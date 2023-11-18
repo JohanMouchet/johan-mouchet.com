@@ -1,17 +1,18 @@
-@import "assets/styles/settings/_settings.module";
-@import "assets/styles/tools/_tools.module";
+@use "sass:map";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
 
 .p-header {
   $root: &;
-  $skew-angle: 5deg;
+  $skew-angle: 10deg;
 
   position: relative;
   width: 100%;
   min-height: 400px;
   overflow: hidden;
   text-shadow: 1px 1px 1px rgba($s-color-black, 0.3);
-  background: map-get($s-backgrounds, dots),
-    url("#{map-get($s-paths, theme)}/header.jpg") left center/cover no-repeat
+  background: map.get($s-backgrounds, dots),
+    url("#{map.get($s-paths, theme)}header.jpg") left center/cover no-repeat
       $s-color-primary;
 
   &::before {
@@ -52,11 +53,15 @@
     transition: font-size 0.5s;
     transform: skew(-$skew-angle);
 
-    @media (min-width: map-get($s-breakpoints, sm)) {
-      font-size: t-modular-scale(6);
+    @media (min-width: map.get($s-breakpoints, sm)) {
+      font-size: t-modular-scale(5);
     }
 
-    @media (min-width: map-get($s-breakpoints, md)) {
+    @media (min-width: map.get($s-breakpoints, md)) {
+      font-size: t-modular-scale(7);
+    }
+
+    @media (min-width: map.get($s-breakpoints, lg)) {
       font-size: t-modular-scale(9);
     }
   }
@@ -67,7 +72,7 @@
     height: 2.5em;
     margin-right: 3px;
     margin-left: 3px;
-    background: currentColor;
+    background: currentcolor;
     animation: line-animation 0.5s ease-out both;
 
     @keyframes line-animation {
@@ -175,7 +180,7 @@
   }
 
   &__tagline-breaker {
-    @media (min-width: map-get($s-breakpoints, md)) {
+    @media (min-width: map.get($s-breakpoints, md)) {
       display: none;
     }
   }

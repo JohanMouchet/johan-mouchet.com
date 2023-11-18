@@ -1,5 +1,6 @@
-@import "assets/styles/settings/_settings.module";
-@import "assets/styles/tools/_tools.module";
+@use "sass:map";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
 
 .c-personal-work {
   $root: &;
@@ -16,7 +17,7 @@
       width: 100%;
       height: 100%;
       content: "";
-      background-image: map-get($s-backgrounds, dots),
+      background-image: map.get($s-backgrounds, dots),
         linear-gradient(
           rgba($s-color-primary-lighter, 0.7),
           rgba($s-color-primary-darker, 0.9)
@@ -52,7 +53,7 @@
     position: absolute;
     right: 1em;
     bottom: 1em;
-    z-index: map-get($s-layers, personal-work);
+    z-index: map.get($s-layers, personal-work);
     line-height: 0;
     transition: opacity 0.2s ease-out;
 
