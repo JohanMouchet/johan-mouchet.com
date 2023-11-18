@@ -1,6 +1,5 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import AcademicQualification from ".";
+import { AcademicQualification } from "./AcademicQualification";
 
 it("Renders <AcademicQualification /> without crashing", () => {
   expect(

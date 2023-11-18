@@ -1,0 +1,168 @@
+@use "sass:map";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
+
+.o-card {
+  $root: &;
+  $v-padding: t-vertical-rhythm(0.75) !default;
+  $h-padding: $v-padding * 2;
+  $scale-factor: 1.5 !default;
+
+  /* Group */
+  &-group {
+    margin-bottom: $fluxgrid-gutter;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: $s-color-white;
+  border: 1px solid $s-color-gray;
+  transition: box-shadow 0.2s, transform 0.2s;
+
+  /* Components */
+  &__banner,
+  &__header,
+  &__body,
+  &__footer {
+    flex: 0 1 auto;
+
+    > *:first-child {
+      margin-top: 0;
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  /* Banner */
+  &__banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: t-vertical-rhythm(7);
+    padding: $v-padding $h-padding;
+    background-color: $s-color-gray-lighter;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-bottom: 1px solid;
+    border-bottom-color: inherit;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    * {
+      z-index: map.get($s-layers, card-banner);
+      color: $s-color-white;
+      text-shadow: -1px 1px 1px rgba($s-color-black, 0.3);
+    }
+  }
+
+  /* Header */
+  &__header {
+    padding: $v-padding $h-padding;
+    border-bottom: 1px solid;
+    border-bottom-color: inherit;
+  }
+
+  /* Body */
+  &__body {
+    flex-grow: 1;
+    padding: $v-padding $h-padding;
+  }
+
+  /* Footer */
+  &__footer {
+    padding: $v-padding $h-padding;
+    border-top: 1px solid;
+    border-top-color: inherit;
+  }
+
+  /** Hover / Forward **/
+  &--hover:hover,
+  &--hover:focus,
+  &--hover-active:hover,
+  &--hover-active:focus,
+  &--forward {
+    box-shadow: map.get($s-shadows, md);
+    transform: translate(-4px, -4px);
+  }
+
+  /** Active **/
+  &--hover-active:active {
+    box-shadow: none;
+    transform: none;
+  }
+
+  /** Spacing **/
+
+  /*** Small ***/
+  &--sm & {
+    &__banner,
+    &__header,
+    &__body,
+    &__footer {
+      padding: ($v-padding / $scale-factor) ($h-padding / $scale-factor);
+    }
+  }
+
+  /*** Large ***/
+  &--lg & {
+    &__banner,
+    &__header,
+    &__body,
+    &__footer {
+      padding: $v-padding $h-padding;
+    }
+
+    @media (min-width: map.get($s-breakpoints, sm)) {
+      &__banner,
+      &__header,
+      &__body,
+      &__footer {
+        padding: ($v-padding * $scale-factor) ($h-padding * $scale-factor);
+      }
+    }
+  }
+
+  /** Secondary **/
+  &--secondary {
+    border-color: $s-color-secondary;
+
+    #{$root}__hr {
+      border-color: $s-color-secondary;
+    }
+  }
+
+  /** Primary **/
+  &--primary {
+    border-color: $s-color-primary;
+
+    #{$root}__hr {
+      border-color: $s-color-primary;
+    }
+  }
+
+  /** Banner gradient **/
+  &--banner-gradient & {
+    &__banner::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background-image: linear-gradient(
+        to top,
+        rgba($s-color-black, 0.3) 0%,
+        transparent 50%
+      );
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+    }
+  }
+}

@@ -1,19 +1,7 @@
-import React from "react";
-import cx from "classnames";
-import "./Card.scss";
+import clsx, { ClassValue } from "clsx";
+import styles from "./Card.module.scss";
 
-type Props = {
-  bannerUrl?: string;
-  bannerGradient?: boolean;
-  header?: React.ReactNode;
-  footer?: React.ReactNode;
-  variant?: "secondary" | "primary" | "hover" | "hover-active" | "forward";
-  size?: "sm" | "lg";
-  className?: string | string[] | { [key: string]: boolean };
-  children?: React.ReactNode;
-};
-
-const Card: React.FC<Props> = ({
+export const Card = ({
   bannerUrl,
   bannerGradient,
   header,
@@ -22,30 +10,38 @@ const Card: React.FC<Props> = ({
   variant,
   size,
   className,
-}) => {
-  const classNames = cx(
-    "o-card",
-    bannerGradient && `o-card--banner-gradient`,
-    variant && `o-card--${variant}`,
-    size && `o-card--${size}`,
+  ...props
+}: {
+  bannerUrl?: string;
+  bannerGradient?: boolean;
+  header?: React.ReactNode;
+  children?: React.ReactNode;
+  footer?: React.ReactNode;
+  variant?: "secondary" | "primary" | "hover" | "hover-active" | "forward";
+  size?: "sm" | "lg";
+  className?: ClassValue;
+} & Omit<React.HTMLProps<HTMLDivElement>, "size">) => {
+  const classNames = clsx(
+    styles["o-card"],
+    bannerGradient && styles[`o-card--banner-gradient`],
+    variant && styles[`o-card--${variant}`],
+    size && styles[`o-card--${size}`],
     className
   );
 
   return (
-    <section className={classNames}>
+    <section className={classNames} {...props}>
       {bannerUrl && (
         <div
-          className="o-card__banner"
+          className={styles["o-card__banner"]}
           style={
             bannerUrl ? { backgroundImage: `url(${bannerUrl})` } : undefined
           }
-        ></div>
+        />
       )}
-      {header && <header className="o-card__header">{header}</header>}
-      {children && <div className="o-card__body">{children}</div>}
-      {footer && <footer className="o-card__footer">{footer}</footer>}
+      {header && <header className={styles["o-card__header"]}>{header}</header>}
+      {children && <div className={styles["o-card__body"]}>{children}</div>}
+      {footer && <footer className={styles["o-card__footer"]}>{footer}</footer>}
     </section>
   );
 };
-
-export default Card;

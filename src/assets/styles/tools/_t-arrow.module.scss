@@ -1,0 +1,60 @@
+/**
+ * Arrow
+ *
+ * Create a CSS arrow using borders
+ *
+ * @param {string} [arrow-direction = right]    - Direction of the arrow: top|top-right|right|bottom-right|bottom|bottom-left|left|top-left
+ * @param {color}  [arrow-color = currentcolor] - Color of the arrow
+ * @param {number} [arrow-size = 10px]          - Size of the arrow
+ *
+ * @example @include t-arrow(top, black, 15px);
+ */
+@mixin t-arrow(
+  $arrow-direction: right,
+  $arrow-color: currentcolor,
+  $arrow-size: 10px
+) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+
+  @if $arrow-direction == top {
+    border-color: transparent transparent $arrow-color;
+    border-width: 0 $arrow-size $arrow-size;
+  }
+
+  @if $arrow-direction == top-right {
+    border-color: transparent $arrow-color transparent transparent;
+    border-width: 0 $arrow-size $arrow-size 0;
+  }
+
+  @if $arrow-direction == right {
+    border-color: transparent transparent transparent $arrow-color;
+    border-width: $arrow-size 0 $arrow-size $arrow-size;
+  }
+
+  @if $arrow-direction == bottom-right {
+    border-color: transparent transparent $arrow-color;
+    border-width: 0 0 $arrow-size $arrow-size;
+  }
+
+  @if $arrow-direction == bottom {
+    border-color: $arrow-color transparent transparent;
+    border-width: $arrow-size $arrow-size 0;
+  }
+
+  @if $arrow-direction == bottom-left {
+    border-color: transparent transparent transparent $arrow-color;
+    border-width: $arrow-size 0 0 $arrow-size;
+  }
+
+  @if $arrow-direction == left {
+    border-color: transparent $arrow-color transparent transparent;
+    border-width: $arrow-size $arrow-size $arrow-size 0;
+  }
+
+  @if $arrow-direction == top-left {
+    border-color: $arrow-color transparent transparent;
+    border-width: $arrow-size $arrow-size 0 0;
+  }
+}

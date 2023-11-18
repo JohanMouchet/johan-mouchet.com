@@ -1,6 +1,5 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { Field, Select, Textarea } from ".";
+import { Field, Select, Textarea } from "./Fields";
 
 it("Renders <Field /> without crashing", () => {
   expect(
@@ -15,7 +14,7 @@ it("Renders <Select /> without crashing", () => {
         name="name"
         options={[
           {
-            text: "Option 1",
+            children: "Option 1",
             value: "Option 1",
           },
         ]}

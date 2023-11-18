@@ -1,0 +1,66 @@
+@use "sass:map";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
+
+.c-personal-work {
+  $root: &;
+
+  &__overlay {
+    position: relative;
+    display: block;
+    max-width: 200px;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background-image: map.get($s-backgrounds, dots),
+        linear-gradient(
+          rgba($s-color-primary-lighter, 0.7),
+          rgba($s-color-primary-darker, 0.9)
+        );
+      transition: transform 0.2s ease-out;
+      transform-origin: 100% 50%;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        transform: scaleX(0);
+      }
+
+      #{$root}__thumbnail {
+        filter: grayscale(0);
+      }
+
+      #{$root}__source {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__thumbnail {
+    display: block;
+    filter: grayscale(1);
+    border: 1px solid $s-color-gray-lighter;
+    transition: filter 0.2s ease-out;
+  }
+
+  &__source {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    z-index: map.get($s-layers, personal-work);
+    line-height: 0;
+    transition: opacity 0.2s ease-out;
+
+    svg {
+      width: t-modular-scale(1);
+      height: t-modular-scale(1);
+      fill: $s-color-white;
+    }
+  }
+}

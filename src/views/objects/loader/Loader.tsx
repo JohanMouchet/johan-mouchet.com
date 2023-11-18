@@ -1,16 +1,19 @@
-import React from "react";
-import cx from "classnames";
-import "./Loader.scss";
+import clsx, { ClassValue } from "clsx";
+import styles from "./Loader.module.scss";
 
-type Props = {
+export const Loader = ({
+  size,
+  className,
+  ...props
+}: {
   size?: "sm";
-  className?: string | string[] | { [key: string]: boolean };
+  className?: ClassValue;
+} & Omit<React.HTMLProps<HTMLDivElement>, "size">) => {
+  const classNames = clsx(
+    styles["o-loader"],
+    size && styles[`o-loader--${size}`],
+    className
+  );
+
+  return <div className={classNames} {...props} />;
 };
-
-const Loader: React.FC<Props> = ({ size, className }) => {
-  const classNames = cx("o-loader", size && `o-loader--${size}`, className);
-
-  return <div className={classNames}></div>;
-};
-
-export default Loader;

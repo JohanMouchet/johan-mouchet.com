@@ -14,7 +14,9 @@ exports[`Renders <Select /> without crashing 1`] = `
   class="o-form__field o-form__field--select"
   name="name"
 >
-  <option>
+  <option
+    value="Option 1"
+  >
     Option 1
   </option>
 </select>

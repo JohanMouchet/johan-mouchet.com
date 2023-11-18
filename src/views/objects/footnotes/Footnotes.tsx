@@ -1,57 +1,56 @@
-import React from "react";
-import cx from "classnames";
-import { IconArrowReturn } from "views/objects";
-import "./Footnotes.scss";
+import { IconArrowReturn } from "@/views/objects/icons";
+import clsx, { ClassValue } from "clsx";
+import styles from "./Footnotes.module.scss";
 
-type ReferenceProps = {
-  id: string;
-  text: string;
-  label?: string;
-};
-
-const FootnotesReference: React.FC<ReferenceProps> = ({
+export const FootnotesReference = ({
   id,
   text,
   label = "See note",
-}) => (
+  className,
+  ...props
+}: {
+  id: string;
+  text: string;
+  label?: string;
+  className?: ClassValue;
+} & Omit<React.HTMLProps<HTMLAnchorElement>, "label">) => (
   <sup>
     <a
       id={`footnote-ref:${id}`}
-      className="o-footnote-ref"
+      className={clsx(styles["o-footnote-ref"], className)}
       href={`#footnote:${id}`}
       aria-label={label}
+      {...props}
     >
       {text}
     </a>
   </sup>
 );
 
-export { FootnotesReference };
-
-type NotesProps = {
+export const FootnotesNotes = ({
+  notes,
+  className,
+  ...props
+}: {
   notes: Array<{
     id: string;
     text: string;
     label?: string;
   }>;
-  className?: string | string[] | { [key: string]: boolean };
-};
-
-const FootnotesNotes: React.FC<NotesProps> = ({ notes, className }) => {
-  const classNames = cx("o-footnotes", className);
-
+  className?: ClassValue;
+} & Omit<React.HTMLProps<HTMLOListElement>, "type">) => {
   return !notes?.length ? null : (
-    <ol className={classNames}>
+    <ol className={clsx(styles["o-footnotes"], className)} {...props}>
       {notes.map((note) => (
         <li
           id={`footnote:${note.id}`}
-          className="o-footnotes__note"
+          className={styles["o-footnotes__note"]}
           key={note.id}
         >
           {note.text}{" "}
           <a
             href={`#footnote-ref:${note.id}`}
-            className="o-footnotes__backref"
+            className={styles["o-footnotes__backref"]}
             aria-label={note.label || "Jump back to reference"}
           >
             <IconArrowReturn />
@@ -61,5 +60,3 @@ const FootnotesNotes: React.FC<NotesProps> = ({ notes, className }) => {
     </ol>
   );
 };
-
-export { FootnotesNotes };

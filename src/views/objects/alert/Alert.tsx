@@ -1,39 +1,37 @@
-import React from "react";
-import { useState } from "react";
-import cx from "classnames";
 import {
   IconCheckCircle,
   IconExclamationCircle,
   IconExclamationTriangle,
   IconInfoCircle,
   IconX,
-} from "views/objects";
-import "./Alert.scss";
+} from "@/views/objects/icons";
+import clsx, { ClassValue } from "clsx";
+import { useState } from "react";
+import styles from "./Alert.module.scss";
 
-type Props = {
-  isOpen?: boolean;
-  closable?: boolean;
-  variant?: "info" | "success" | "warning" | "danger";
-  position?: "fixed-bottom" | "fixed-bottom-right";
-  className?: string | string[] | { [key: string]: boolean };
-  children: React.ReactNode;
-};
-
-const Alert: React.FC<Props> = ({
+export const Alert = ({
   isOpen = true,
   closable,
   variant = "info",
   position,
-  className,
   children,
-}) => {
+  className,
+  ...props
+}: {
+  isOpen?: boolean;
+  closable?: boolean;
+  variant?: "info" | "success" | "warning" | "danger";
+  position?: "fixed-bottom" | "fixed-bottom-right";
+  children: React.ReactNode;
+  className?: ClassValue;
+} & React.HTMLProps<HTMLDivElement>) => {
   const [open, setOpenState] = useState(isOpen);
 
-  const classNames = cx(
-    "o-alert",
-    closable && "o-alert--closable",
-    variant && `o-alert--${variant}`,
-    position && `o-alert--${position}`,
+  const classNames = clsx(
+    styles["o-alert"],
+    closable && styles["o-alert--closable"],
+    variant && styles[`o-alert--${variant}`],
+    position && styles[`o-alert--${position}`],
     "container",
     "u-animation",
     "u-animation--fade-in-up",
@@ -53,16 +51,21 @@ const Alert: React.FC<Props> = ({
   };
 
   return !open ? null : (
-    <div className={classNames}>
-      <div className="grid grid--noWrap-@xs">
-        <div className="o-alert__icon cell" aria-label={variant}>
+    <div className={classNames} {...props}>
+      <div className="grid grid-no-wrap">
+        <div
+          className={clsx(styles["o-alert__icon"], "cell")}
+          aria-label={variant}
+        >
           {getIcon(variant)}
         </div>
-        <div className="o-alert__content cell cell--@xs">{children}</div>
+        <div className={clsx(styles["o-alert__content"], "cell", "cell-grow")}>
+          {children}
+        </div>
         {closable && (
-          <div className="o-alert__close cell">
+          <div className={clsx(styles["o-alert__close"], "cell")}>
             <button
-              className="o-alert__close-button"
+              className={styles["o-alert__close-button"]}
               aria-label="Close"
               onClick={() => setOpenState(!open)}
               type="button"
@@ -75,5 +78,3 @@ const Alert: React.FC<Props> = ({
     </div>
   );
 };
-
-export default Alert;

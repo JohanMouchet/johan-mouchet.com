@@ -1,0 +1,56 @@
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
+
+.o-details {
+  $root: &;
+
+  margin: t-vertical-rhythm(1) 0;
+  border-bottom: 1px solid $s-color-gray;
+
+  &[open] {
+    #{$root}__summary {
+      font-weight: 500;
+      color: $s-color-link;
+
+      &::after {
+        content: " -";
+      }
+    }
+  }
+
+  /* Summary */
+  &__summary {
+    @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
+
+    display: block;
+    padding: t-vertical-rhythm(0.5) 0;
+    margin: 0;
+    cursor: pointer;
+    outline: 0;
+
+    &::after {
+      content: " +";
+    }
+  }
+
+  /* Panel */
+  &__panel {
+    padding-bottom: t-vertical-rhythm(0.5);
+
+    > *:first-child {
+      margin-top: 0;
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &--compact {
+    border-bottom: 0;
+
+    #{$root}__summary {
+      padding: 0;
+    }
+  }
+}

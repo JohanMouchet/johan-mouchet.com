@@ -1,44 +1,44 @@
-import React from "react";
-import cx from "classnames";
-import "./List.scss";
+import clsx, { ClassValue } from "clsx";
+import styles from "./List.module.scss";
 
-type Props = {
-  as?: "ul" | "ol";
-  unstyled?: boolean;
-  inline?: boolean;
-  striped?: "horizontal" | "vertical";
-  size?: "lg";
-  linkBlock?: boolean;
-  className?: string | string[] | { [key: string]: boolean };
-  attributes?: boolean | number | string;
-  children: React.ReactNode;
-};
-
-const List: React.FC<Props> = ({
+export const List = ({
   as = "ul",
   unstyled,
   inline,
   striped,
   size,
   linkBlock,
-  className,
   children,
-  ...attributes
+  className,
+  ...props
+}: {
+  as?: "ul" | "ol";
+  unstyled?: boolean;
+  inline?: boolean;
+  striped?: "horizontal" | "vertical";
+  size?: "lg";
+  linkBlock?: boolean;
+  children: React.ReactNode;
+  className?: ClassValue;
 }) => {
-  const classNames = cx(
-    "o-list",
-    unstyled && `o-list--unstyled`,
-    inline && `o-list--inline`,
+  const classNames = clsx(
+    styles["o-list"],
+    unstyled && styles[`o-list--unstyled`],
+    inline && styles[`o-list--inline`],
     striped &&
-      `o-list--${striped === "horizontal" ? "h" : "v"}Striped o-list--unstyled`,
-    size && `o-list--${size}`,
-    linkBlock && `o-list--linkBlock`,
+      `${styles[`o-list--${striped === "horizontal" ? "h" : "v"}-striped`]} ${
+        styles["o-list--unstyled"]
+      }`,
+    size && styles[`o-list--${size}`],
+    linkBlock && styles[`o-list--link-block`],
     className
   );
 
   const Tag = as;
 
-  return <Tag className={classNames}>{children}</Tag>;
+  return (
+    <Tag className={classNames} {...props}>
+      {children}
+    </Tag>
+  );
 };
-
-export default List;

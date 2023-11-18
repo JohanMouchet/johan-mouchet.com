@@ -1,67 +1,74 @@
-import React from "react";
-import cx from "classnames";
-import "./Layout.scss";
+import clsx, { ClassValue } from "clsx";
+import styles from "./Layout.module.scss";
 
-type FieldsetProps = {
+export const Fieldset = ({
+  legend,
+  children,
+  className,
+  ...props
+}: {
   legend?: string;
-  className?: string | string[] | { [key: string]: boolean };
   children?: React.ReactNode;
-};
-
-const Fieldset: React.FC<FieldsetProps> = ({ legend, className, children }) => {
-  const classNames = cx("o-form__fieldset", className);
-
+  className?: ClassValue;
+} & React.HTMLProps<HTMLFieldSetElement>) => {
   return (
-    <fieldset className={classNames}>
-      <legend className="o-form__legend">{legend}</legend>
+    <fieldset
+      className={clsx(styles["o-form__fieldset"], className)}
+      {...props}
+    >
+      {legend && <legend className={styles["o-form__legend"]}>{legend}</legend>}
       {children}
     </fieldset>
   );
 };
 
-export { Fieldset };
-
-type FormGroupProps = {
+export const FormGroup = ({
+  variant,
+  detail,
+  children,
+  className,
+  ...props
+}: {
   variant?: "success" | "error" | "warning";
   detail?: string;
   children?: React.ReactNode;
-};
-
-const FormGroup: React.FC<FormGroupProps> = ({ variant, detail, children }) => {
-  const classNames = cx(
-    "o-form__group",
-    variant && `o-form__group--${variant}`
-  );
-
-  return (
-    <div className={classNames}>
-      {children}
-      <span className="o-form__group-detail">{detail}</span>
-    </div>
-  );
-};
-
-export { FormGroup };
-
-type LabelProps = {
-  id?: string;
-  block: boolean;
-  className?: string | string[] | { [key: string]: boolean };
-  children?: React.ReactNode;
-};
-
-const Label: React.FC<LabelProps> = ({ id, block, className, children }) => {
-  const classNames = cx(
-    "o-form__label",
-    (block || !children) && "o-form__label--block",
+  className?: ClassValue;
+} & React.HTMLProps<HTMLDivElement>) => {
+  const classNames = clsx(
+    styles["o-form__group"],
+    variant && styles[`o-form__group--${variant}`],
     className
   );
 
   return (
-    <label htmlFor={id} className={classNames}>
-      {children || "&nbsp;"}
-    </label>
+    <div className={classNames} {...props}>
+      {children}
+      <span className={styles["o-form__group-detail"]}>{detail}</span>
+    </div>
   );
 };
 
-export { Label };
+export const Label = ({
+  id,
+  block,
+  children,
+  className,
+  ...props
+}: {
+  id?: string;
+  block?: boolean;
+  children?: React.ReactNode;
+  className?: ClassValue;
+} & React.HTMLProps<HTMLLabelElement>) => {
+  const classNames = clsx(
+    styles["o-form__label"],
+    (block || !children) && styles["o-form__label--block"],
+    className
+  );
+
+  return (
+    <label htmlFor={id} className={classNames} {...props}>
+      {children || <>&nbsp;</>}
+    </label>
+  );
+};

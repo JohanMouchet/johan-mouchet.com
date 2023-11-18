@@ -1,48 +1,44 @@
-import React from "react";
-import cx from "classnames";
-import "./Button.scss";
+import clsx, { ClassValue } from "clsx";
+import styles from "./Button.module.scss";
 
-type Props = {
-  type: "anchor" | "button" | "submit" | "reset";
-  url?: string;
-  variant?: "primary" | "secondary" | "linkedIn";
-  size?: "sm" | "lg";
-  block?: boolean | "@sm" | "@md";
-  className?: string | string[] | { [key: string]: boolean };
-  attributes?: boolean | number | string;
-  children?: React.ReactNode;
-};
-
-const Button: React.FC<Props> = ({
+export const Button = ({
   type = "button",
   url,
   variant,
   size,
   block,
-  className,
   children,
-  ...attributes
+  className,
+  ...props
+}: {
+  type: "anchor" | "button" | "submit" | "reset";
+  url?: string;
+  variant?: "primary" | "secondary" | "linkedin";
+  size?: "sm" | "lg";
+  block?: boolean | "@sm" | "@md";
+  children?: React.ReactNode;
+  className?: ClassValue;
 }) => {
-  const classNames = cx(
-    "o-button",
-    size && `o-button--${size}`,
-    variant && `o-button--${variant}`,
+  const classNames = clsx(
+    styles["o-button"],
+    size && styles[`o-button--${size}`],
+    variant && styles[`o-button--${variant}`],
     block &&
-      `o-button--block${
-        typeof block === "string" ? `-${block}` : block === true && ""
-      }`,
+      styles[
+        `o-button--block${
+          typeof block === "string" ? `-${block}` : block === true && ""
+        }`
+      ],
     className
   );
 
   return type === "anchor" ? (
-    <a className={classNames} href={url} {...attributes}>
+    <a className={classNames} href={url} {...props}>
       {children}
     </a>
   ) : (
-    <button className={classNames} type={type} {...attributes}>
+    <button className={classNames} type={type} {...props}>
       {children}
     </button>
   );
 };
-
-export default Button;

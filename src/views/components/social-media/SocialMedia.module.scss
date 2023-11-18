@@ -1,0 +1,15 @@
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
+
+.c-social-media {
+  margin-top: t-vertical-rhythm(0.5);
+  white-space: nowrap;
+
+  svg {
+    width: t-modular-scale(2);
+    height: t-modular-scale(2);
+    margin-right: 1em;
+    vertical-align: text-bottom;
+    fill: $s-color-primary;
+  }
+}

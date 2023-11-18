@@ -1,5 +1,5 @@
-import DOMPurify from "dompurify";
 import HTMLReactParser from "html-react-parser";
+import DOMPurify from "isomorphic-dompurify";
 
 /**
  * Converts an HTML string to a sanitize JSX element
@@ -9,9 +9,8 @@ import HTMLReactParser from "html-react-parser";
  * @param DOMPurifyConfig [DOMPurify](https://github.com/cure53/DOMPurify) sanitizing options
  */
 
-const parse = (
+export const parse = (
   html: string,
-  /* eslint-disable @typescript-eslint/no-explicit-any */
   HTMLReactParserOptions?: {
     [key: string]: any;
   },
@@ -24,5 +23,3 @@ const parse = (
     DOMPurify.sanitize(html, DOMPurifyConfig || {}),
     HTMLReactParserOptions
   );
-
-export default parse;

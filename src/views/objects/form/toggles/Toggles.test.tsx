@@ -1,6 +1,5 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { Checkbox, Radio } from ".";
+import { Checkbox, Radio } from "./Toggles";
 
 it("Renders <Checkbox /> without crashing", () => {
   expect(

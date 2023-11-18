@@ -12,9 +12,7 @@ exports[`Renders <Menu /> without crashing 1`] = `
       tabindex="0"
     >
       Menu
-      <svg>
-        chevron-down.svg
-      </svg>
+      <svg />
     </a>
     <ul
       class="o-menu__submenu"

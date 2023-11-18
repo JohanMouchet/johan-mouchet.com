@@ -1,6 +1,5 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import Aside from ".";
+import { Aside } from "./Aside";
 
 it("Renders <Aside /> without crashing", () => {
   expect(

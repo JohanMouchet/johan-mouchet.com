@@ -1,7 +1,6 @@
-import React from "react";
+import { Element } from "@prismicio/react";
 import { render } from "@testing-library/react";
-import { Elements } from "prismic-reactjs";
-import Projects from ".";
+import { Projects } from "./Projects";
 
 it("Renders <Projects /> without crashing", () => {
   expect(
@@ -17,7 +16,7 @@ it("Renders <Projects /> without crashing", () => {
             },
             lede: [
               {
-                type: Elements.paragraph,
+                type: Element.paragraph,
                 text: "Lede",
                 spans: [],
               },
@@ -27,21 +26,21 @@ it("Renders <Projects /> without crashing", () => {
             },
             achievements: [
               {
-                type: Elements.preformatted,
+                type: Element.preformatted,
                 text: "<li>Achievement</li>",
                 spans: [],
               },
             ],
             architecture: [
               {
-                type: Elements.paragraph,
+                type: Element.paragraph,
                 text: "Architecture",
                 spans: [],
               },
             ],
             libraries: [
               {
-                type: Elements.paragraph,
+                type: Element.paragraph,
                 text: "Library",
                 spans: [],
               },

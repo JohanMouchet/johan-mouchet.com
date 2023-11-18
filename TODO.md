@@ -1,12 +1,10 @@
 # TODO
 
-- Import Fluxgrid, modify naming scheme
-  - replace any other `\@`
-- Fix Tabs
-
-# Consider
-
-- ? Convert CSS to CSS Modules / Emotion
-- ? Improve Print
-- ? Sticky nav: header background, J/M logo, 'MENU' + burger menu to Anchors
-- ? Photo viewer with Unsplash API: https://www.instagram.com/p/B_-e1zrjN7S/
+- Codegen prismic API
+- Replace `<Fragment>` by `<>`
+- Replace ternary early returns (`!array?.length ? null : `) by `if` statements
+- Replace `Array<{}>` types by `{}[]` syntax
+- Extract `<Thumbnail />` and `<Content />` from `<Projects />`
+- Convert `em` to `rem`
+- Add a `<Spacer />` component
+- Migrate to Vitest

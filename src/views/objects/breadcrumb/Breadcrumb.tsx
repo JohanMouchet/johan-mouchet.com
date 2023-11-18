@@ -1,34 +1,38 @@
-import React from "react";
-import cx from "classnames";
-import "./Breadcrumb.scss";
+import clsx, { ClassValue } from "clsx";
+import styles from "./Breadcrumb.module.scss";
 
-type Props = {
+export const Breadcrumb = ({
+  levels,
+  className,
+  ...props
+}: {
   levels: Array<{
     title: string;
     link: {
       url: string;
     };
   }>;
-  className?: string | string[] | { [key: string]: boolean };
-};
-
-const Breadcrumb: React.FC<Props> = ({ levels, className }) => {
-  const classNames = cx("o-breadcrumb", className);
+  className?: ClassValue;
+} & Omit<React.HTMLProps<HTMLOListElement>, "type">) => {
   const lastLevel = levels?.length - 1;
 
   return !levels?.length ? null : (
     <>
-      <ol className={classNames}>
+      <ol className={clsx(styles["o-breadcrumb"], className)} {...props}>
         {levels.map((level, index) => (
           <li
-            className="o-breadcrumb__level u-animation u-animation--fade-in-up"
+            className={clsx(
+              styles["o-breadcrumb__level"],
+              "u-animation",
+              "u-animation--fade-in-up"
+            )}
             style={{
               animationDelay: index > 0 ? `${index * 0.15}s` : undefined,
             }}
             key={level.link.url}
           >
             <a
-              className="o-breadcrumb__link"
+              className={styles["o-breadcrumb__link"]}
               href={index !== lastLevel ? level.link.url : undefined}
             >
               {level.title}
@@ -59,5 +63,3 @@ const Breadcrumb: React.FC<Props> = ({ levels, className }) => {
     </>
   );
 };
-
-export default Breadcrumb;

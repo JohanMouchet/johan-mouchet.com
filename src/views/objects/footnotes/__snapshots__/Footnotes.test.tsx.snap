@@ -15,9 +15,7 @@ exports[`Renders <FootnotesNotes /> without crashing 1`] = `
       class="o-footnotes__backref"
       href="#footnote-ref:id-1"
     >
-      <svg>
-        arrow-return-left.svg
-      </svg>
+      <svg />
     </a>
   </li>
 </ol>

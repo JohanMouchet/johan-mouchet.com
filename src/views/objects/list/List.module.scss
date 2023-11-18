@@ -1,0 +1,92 @@
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
+
+/* stylelint-disable selector-no-type, selector-max-type, no-duplicate-selectors, selector-no-qualifying-type, no-descending-specificity */
+.o-list {
+  $root: &;
+
+  /** Unstyled **/
+  &--unstyled {
+    padding-left: 0;
+    list-style: none;
+
+    ul,
+    ol {
+      list-style: none;
+    }
+  }
+
+  /** Inline **/
+  &--inline {
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+
+      &:not(:first-child) {
+        margin-left: 1em;
+      }
+    }
+
+    ul,
+    ol {
+      padding-left: 0;
+    }
+  }
+
+  /** Horizontally striped **/
+  &--h-striped {
+    li:not(:first-child),
+    ul,
+    ol {
+      border-top: 1px solid $s-color-gray;
+    }
+
+    // And inline
+    &#{$root}--inline {
+      li:not(:first-child) {
+        border-top: 0;
+      }
+    }
+  }
+
+  /** Vertically striped **/
+  &--v-striped {
+    li {
+      padding-left: 1em;
+      border-left: 1px solid $s-color-gray;
+    }
+
+    // And inline
+    &#{$root}--inline {
+      li {
+        /* stylelint-disable-next-line max-nesting-depth */
+        &:first-child {
+          padding-left: 0;
+          border-left: 0;
+        }
+      }
+    }
+  }
+
+  /** Large **/
+  &--lg {
+    li {
+      padding-top: t-vertical-rhythm(0.25);
+      padding-bottom: t-vertical-rhythm(0.25);
+    }
+
+    ul,
+    ol {
+      margin-top: t-vertical-rhythm(0.25);
+    }
+  }
+
+  /** Link display block **/
+  &--link-block {
+    li a {
+      display: block;
+    }
+  }
+}

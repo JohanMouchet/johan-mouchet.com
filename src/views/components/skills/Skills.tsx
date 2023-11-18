@@ -1,18 +1,22 @@
-import React from "react";
-import { ProgressBar } from "views/objects";
+import styles from "@/views/objects/list/List.module.scss";
+import { ProgressBar } from "@/views/objects/progress-bar/ProgressBar";
+import clsx, { ClassValue } from "clsx";
 
-type Props = {
+export const Skills = ({
+  skills,
+  className,
+  ...props
+}: {
   skills: Pick<
     React.ComponentProps<typeof ProgressBar>,
     "label" | "filling" | "progress"
   >[];
-};
-
-const Skills: React.FC<Props> = ({ skills }) =>
+  className?: ClassValue;
+} & React.HTMLProps<HTMLUListElement>) =>
   !skills?.length ? null : (
-    <ul className="c-skills o-list--unstyled">
+    <ul className={clsx(styles["o-list--unstyled"], className)} {...props}>
       {skills.map((skill) => (
-        <li className="c-skill" key={skill.label}>
+        <li key={skill.label}>
           <ProgressBar
             label={skill.label}
             filling={skill.filling}
@@ -24,5 +28,3 @@ const Skills: React.FC<Props> = ({ skills }) =>
       ))}
     </ul>
   );
-
-export default Skills;

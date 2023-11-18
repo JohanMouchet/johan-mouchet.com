@@ -5,18 +5,16 @@ exports[`Renders <Alert /> without crashing 1`] = `
   class="o-alert o-alert--closable o-alert--info o-alert--fixed-bottom container u-animation u-animation--fade-in-up"
 >
   <div
-    class="grid grid--noWrap-@xs"
+    class="grid grid-no-wrap"
   >
     <div
       aria-label="info"
       class="o-alert__icon cell"
     >
-      <svg>
-        info-circle.svg
-      </svg>
+      <svg />
     </div>
     <div
-      class="o-alert__content cell cell--@xs"
+      class="o-alert__content cell cell-grow"
     >
       children
     </div>
@@ -28,9 +26,7 @@ exports[`Renders <Alert /> without crashing 1`] = `
         class="o-alert__close-button"
         type="button"
       >
-        <svg>
-          x.svg
-        </svg>
+        <svg />
       </button>
     </div>
   </div>

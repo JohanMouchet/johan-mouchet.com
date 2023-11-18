@@ -1,0 +1,87 @@
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
+@import "../settings.module";
+
+.o-form__toggle {
+  $root: &;
+
+  display: inline-block;
+  margin-top: t-vertical-rhythm(0.25);
+  margin-bottom: t-vertical-rhythm(0.25);
+
+  &:not(:last-child) {
+    margin-right: 2em;
+  }
+
+  &-input {
+    &:not(:disabled) ~ #{$root}-icon,
+    &:not(:disabled) ~ #{$root}-text {
+      cursor: pointer;
+    }
+
+    /** Checked **/
+    &:checked {
+      /* stylelint-disable-next-line max-nesting-depth */
+      ~ #{$root}-icon::before {
+        background-color: $s-color-link;
+      }
+    }
+  }
+
+  &-icon {
+    position: relative;
+    display: inline-block;
+    width: t-vertical-rhythm(0.8, "rem");
+    height: t-vertical-rhythm(0.8, "rem");
+    vertical-align: text-top;
+    background: none;
+    border: 2px solid $s-color-gray;
+    transition: background-color 0.2s, border 0.2s;
+
+    @include t-wekkit-hdpi-small-dimension;
+
+    /** Radio **/
+    #{$root}--radio & {
+      border-radius: 50%;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      &::before {
+        border-radius: inherit;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      inset: 2px;
+      content: "";
+      transition: background-color 0.2s;
+    }
+  }
+
+  &-text {
+    margin-left: 0.75em;
+  }
+
+  /* States */
+
+  /** Hover **/
+  &:hover #{$root}-icon {
+    border-color: t-map-deep-get($form-settings, hover, color);
+  }
+
+  /** Focus **/
+  &-input:focus ~ #{$root}-icon {
+    border-color: t-map-deep-get($form-settings, focus, color);
+  }
+
+  /** Disabled **/
+  &-input:disabled ~ #{$root}-icon {
+    color: t-map-deep-get($form-settings, disabled, color-tertiary);
+    background-color: t-map-deep-get($form-settings, disabled, color-secondary);
+    border-color: t-map-deep-get($form-settings, disabled, color);
+  }
+
+  &-input:disabled ~ #{$root}-text {
+    color: t-map-deep-get($form-settings, disabled, color-tertiary);
+  }
+}

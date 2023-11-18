@@ -1,0 +1,8 @@
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
+
+.c-open-source {
+  &__lede {
+    font-style: italic;
+  }
+}

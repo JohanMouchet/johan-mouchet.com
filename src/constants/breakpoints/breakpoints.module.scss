@@ -1,0 +1,11 @@
+@use "sass:map";
+@import "@/assets/styles/settings/settings.module";
+
+/* stylelint-disable selector-pseudo-class-no-unknown, property-no-unknown */
+:export {
+  BREAKPOINTS_XS: map.get($s-breakpoints, sm) - 2;
+  BREAKPOINTS_SM: map.get($s-breakpoints, sm) - 1;
+  BREAKPOINTS_MD: map.get($s-breakpoints, md) - 1;
+  BREAKPOINTS_LG: map.get($s-breakpoints, lg) - 1;
+  BREAKPOINTS_XL: map.get($s-breakpoints, xl) - 1;
+}

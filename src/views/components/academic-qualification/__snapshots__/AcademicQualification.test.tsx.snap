@@ -28,9 +28,9 @@ exports[`Renders <AcademicQualification /> without crashing 1`] = `
     </h3>
     <time
       class="c-academic-qualification__graduation-year"
-      datetime="2020"
+      datetime="2023"
     >
-      2020
+      2023
     </time>
   </section>
 </div>

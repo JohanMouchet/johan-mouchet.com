@@ -1,6 +1,5 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import Article from ".";
+import { Article } from "./Article";
 
 it("Renders <Article /> without crashing", () => {
   expect(

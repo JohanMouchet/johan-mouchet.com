@@ -1,0 +1,44 @@
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
+
+.o-breadcrumb {
+  $root: &;
+
+  position: relative;
+  display: flex;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: t-vertical-rhythm(2);
+  overflow: auto hidden;
+  list-style: none;
+  border-bottom: 1px solid $s-color-gray;
+
+  * + & {
+    margin-top: t-vertical-rhythm(1);
+  }
+
+  /* Level */
+  &__level {
+    flex: 0 1 auto;
+    margin: 0;
+    white-space: nowrap;
+
+    &:not(:last-child)::after {
+      color: $s-color-text-dimmed;
+      content: "/";
+    }
+
+    /* Last level */
+    &:last-child #{$root}__link {
+      font-weight: 500;
+      color: $s-color-link;
+    }
+  }
+
+  &__link {
+    @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
+
+    display: inline-block;
+    padding: t-vertical-rhythm(0.5) 1em;
+  }
+}

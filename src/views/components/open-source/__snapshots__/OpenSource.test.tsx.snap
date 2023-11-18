@@ -8,7 +8,7 @@ exports[`Renders <OpenSource /> without crashing 1`] = `
     class="grid"
   >
     <div
-      class="cell cell--12-@xs cell--6-@sm cell--4-@lg"
+      class="cell cell-12 sm:cell-6 lg:cell-4"
     >
       <h3
         class="c-open-source__title"

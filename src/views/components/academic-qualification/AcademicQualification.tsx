@@ -1,7 +1,11 @@
-import React from "react";
-import "./AcademicQualification.scss";
+import clsx, { ClassValue } from "clsx";
+import styles from "./AcademicQualification.module.scss";
 
-type Props = {
+export const AcademicQualification = ({
+  degrees,
+  className,
+  ...props
+}: {
   degrees: Array<{
     establishmentName: string;
     establishmentLink: {
@@ -11,27 +15,32 @@ type Props = {
     graduationYear: number;
     title: string;
   }>;
-};
-
-const AcademicQualification: React.FC<Props> = ({ degrees }) =>
+  className?: ClassValue;
+} & React.HTMLProps<HTMLDivElement>) =>
   !degrees?.length ? null : (
-    <div className="c-academic-qualifications">
+    <div
+      className={clsx(styles["c-academic-qualifications"], className)}
+      {...props}
+    >
       {degrees.map((degree) => (
-        <section className="c-academic-qualification" key={degree.title}>
-          <h3 className="c-academic-qualification__heading">
+        <section
+          className={styles["c-academic-qualification"]}
+          key={degree.title}
+        >
+          <h3 className={styles["c-academic-qualification__heading"]}>
             <a
-              className="c-academic-qualification__establishment"
+              className={styles["c-academic-qualification__establishment"]}
               href={degree.establishmentLink.url}
             >
               {degree.establishmentName}
             </a>
             , {degree.location} ⁠—{" "}
-            <span className="c-academic-qualification__title">
+            <span className={styles["c-academic-qualification__title"]}>
               {degree.title}
             </span>
           </h3>
           <time
-            className="c-academic-qualification__graduation-year"
+            className={styles["c-academic-qualification__graduation-year"]}
             dateTime={`${degree.graduationYear}`}
           >
             {degree.graduationYear}
@@ -40,5 +49,3 @@ const AcademicQualification: React.FC<Props> = ({ degrees }) =>
       ))}
     </div>
   );
-
-export default AcademicQualification;

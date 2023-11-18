@@ -1,6 +1,5 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import Breadcrumb from ".";
+import { Breadcrumb } from "./Breadcrumb";
 
 it("Renders <Breadcrumb /> without crashing", () => {
   expect(

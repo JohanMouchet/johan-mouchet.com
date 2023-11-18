@@ -1,4 +1,4 @@
-import { pluralize } from ".";
+import { pluralize } from "./pluralize";
 
 it("Doesn't pluralize if quantity is smaller or equal to 1", () =>
   expect(pluralize("bee", 1)).toBe("bee"));

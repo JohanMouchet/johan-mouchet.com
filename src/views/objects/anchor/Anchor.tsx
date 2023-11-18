@@ -1,41 +1,29 @@
-import React from "react";
-import cx from "classnames";
-import "./Anchor.scss";
+import clsx, { ClassValue } from "clsx";
+import styles from "./Anchor.module.scss";
 
-type Props = {
-  as: keyof JSX.IntrinsicElements;
-  id: string;
-  marker?: string;
-  className?: string | string[] | { [key: string]: boolean };
-  attributes?: boolean | number | string;
-  children?: React.ReactNode;
-};
-
-const Anchor: React.FC<Props> = ({
-  as = "span",
+export const Anchor = ({
   id,
   marker = "#",
-  className,
   children,
-  ...attributes
-}) => {
-  const classNames = cx("o-anchor", className);
-
-  const Tag = as;
-
+  className,
+  ...props
+}: {
+  id: string;
+  marker?: string;
+  children?: React.ReactNode;
+  className?: ClassValue;
+} & React.HTMLProps<HTMLSpanElement>) => {
   return !id ? null : (
-    <Tag className={classNames} {...attributes}>
+    <span className={clsx(styles["o-anchor"], className)} {...props}>
       <a
         href={`#${id}`}
         id={id}
-        className="o-anchor__link"
+        className={styles["o-anchor__link"]}
         aria-label={`Permalink for ${children}`}
       >
         <span aria-hidden>{marker}</span>
       </a>
       {children}
-    </Tag>
+    </span>
   );
 };
-
-export default Anchor;

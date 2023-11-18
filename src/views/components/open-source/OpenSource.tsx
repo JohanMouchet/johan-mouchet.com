@@ -1,42 +1,36 @@
-import React from "react";
-import {
-  Elements,
-  RichText,
-  RichTextBlock,
-  RichTextSpan,
-} from "prismic-reactjs";
-import { parse } from "utils/parse";
-import "./OpenSource.scss";
+import { parse } from "@/utils/parse/parse";
+import { PrismicRichText } from "@prismicio/react";
+import clsx, { ClassValue } from "clsx";
+import styles from "./OpenSource.module.scss";
 
-type Props = {
+export const OpenSource = ({
+  projects,
+  className,
+  ...props
+}: {
   projects: {
     link: {
       url: string;
     };
     name: string;
-    lede: RichTextBlock[];
-    description: {
-      type: Elements.paragraph | Elements.preformatted;
-      text: string;
-      spans: RichTextSpan[];
-    }[];
+    lede: React.ComponentProps<typeof PrismicRichText>["field"];
+    description: React.ComponentProps<typeof PrismicRichText>["field"];
   }[];
-};
-
-const OpenSource: React.FC<Props> = ({ projects }) =>
+  className?: ClassValue;
+} & React.HTMLProps<HTMLDivElement>) =>
   !projects?.length ? null : (
-    <div className="c-open-sources">
+    <div className={clsx(styles["c-open-sources"], className)} {...props}>
       <div className="grid">
         {projects.map((project) => {
           const descriptionPreformatted =
-            project.description[0].type === Elements.preformatted;
+            project.description?.[0]?.type === "preformatted";
 
           return (
             <div
-              className="cell cell--12-@xs cell--6-@sm cell--4-@lg"
+              className="cell cell-12 sm:cell-6 lg:cell-4"
               key={project.name}
             >
-              <h3 className="c-open-source__title">
+              <h3 className={styles["c-open-source__title"]}>
                 <a
                   href={project.link.url}
                   target="_blank"
@@ -46,15 +40,20 @@ const OpenSource: React.FC<Props> = ({ projects }) =>
                 </a>
               </h3>
 
-              <div className="c-open-source__lede">
-                <RichText render={project.lede} />
+              <div className={styles["c-open-source__lede"]}>
+                <PrismicRichText field={project.lede} />
               </div>
 
-              <div className="c-open-source__description">
+              <div className={styles["c-open-source__description"]}>
                 {descriptionPreformatted ? (
-                  parse(project.description[0].text)
+                  <PrismicRichText
+                    field={project.description}
+                    components={(type, element, text, children) => (
+                      <>{text && parse(text)}</>
+                    )}
+                  />
                 ) : (
-                  <RichText render={project.description} />
+                  <PrismicRichText field={project.description} />
                 )}
               </div>
             </div>
@@ -63,5 +62,3 @@ const OpenSource: React.FC<Props> = ({ projects }) =>
       </div>
     </div>
   );
-
-export default OpenSource;

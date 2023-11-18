@@ -1,25 +1,35 @@
-import React, { useState } from "react";
-import cx from "classnames";
-import "./Fields.scss";
+import clsx, { ClassValue } from "clsx";
+import styles from "./Fields.module.scss";
 
-type FieldProps = {
-  id?: string;
-  type: string;
-  name: string;
-  value?: string;
-  className?: string | string[] | { [key: string]: boolean };
-  attributes?: boolean | number | string;
-};
-
-const Field: React.FC<FieldProps> = ({
+export const Field = ({
   id,
-  type,
+  type = "text",
   name,
   value,
   className,
-  ...attributes
-}) => {
-  const classNames = cx("o-form__field", `o-form__field--${type}`, className);
+  ...props
+}: {
+  id?: string;
+  type?:
+    | "text"
+    | "number"
+    | "email"
+    | "url"
+    | "tel"
+    | "password"
+    | "search"
+    | "color"
+    | "date"
+    | "time";
+  name: string;
+  value?: string;
+  className?: ClassValue;
+} & Omit<React.HTMLProps<HTMLInputElement>, "type">) => {
+  const classNames = clsx(
+    styles["o-form__field"],
+    styles[`o-form__field--${type}`],
+    className
+  );
 
   return (
     <input
@@ -28,83 +38,61 @@ const Field: React.FC<FieldProps> = ({
       name={name}
       defaultValue={value}
       className={classNames}
-      {...attributes}
+      {...props}
     />
   );
 };
 
-export { Field };
-
-type SelectProps = {
-  id?: string;
-  name: string;
-  options: Array<{
-    text: string;
-    value: string;
-    attributes?: string[];
-  }>;
-  className?: string | string[] | { [key: string]: boolean };
-  attributes?: boolean | number | string;
-};
-
-const Select: React.FC<SelectProps> = ({
+export const Select = ({
   id,
   name,
   options,
   className,
-  attributes,
-}) => {
-  const classNames = cx("o-form__field", "o-form__field--select", className);
+  ...props
+}: {
+  id?: string;
+  name: string;
+  options: Array<React.HTMLProps<HTMLOptionElement>>;
+  className?: ClassValue;
+} & React.HTMLProps<HTMLSelectElement>) => {
+  const classNames = clsx(
+    styles["o-form__field"],
+    styles["o-form__field--select"],
+    className
+  );
 
   return !options?.length ? null : (
-    <select id={id} name={name} className={classNames} {...attributes}>
-      {options.map((option) => (
-        <option
-          defaultValue={option.value}
-          {...option.attributes}
-          key={option.value}
-        >
-          {option.text}
+    <select id={id} name={name} className={classNames} {...props}>
+      {options.map((option, i) => (
+        <option defaultValue={option.value} {...option} key={i}>
+          {option.children}
         </option>
       ))}
     </select>
   );
 };
 
-export { Select };
-
-type TextareaProps = {
-  id?: string;
-  name: string;
-  className?: string | string[] | { [key: string]: boolean };
-  attributes?: boolean | number | string;
-  children?: string;
-};
-
-const Textarea: React.FC<TextareaProps> = ({
+export const Textarea = ({
   id,
   name,
-  className,
   children,
-  ...attributes
-}) => {
-  const [value, setValue] = useState(children);
-  const classNames = cx("o-form__field", "o-form__field--textarea", className);
-
-  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setValue(event.target.value);
-  };
+  className,
+  ...props
+}: {
+  id?: string;
+  name: string;
+  children?: string;
+  className?: ClassValue;
+} & React.HTMLProps<HTMLTextAreaElement>) => {
+  const classNames = clsx(
+    styles["o-form__field"],
+    styles["o-form__field--textarea"],
+    className
+  );
 
   return (
-    <textarea
-      id={id}
-      name={name}
-      className={classNames}
-      value={value}
-      onChange={handleChange}
-      {...attributes}
-    />
+    <textarea id={id} name={name} className={classNames} {...props}>
+      {children}
+    </textarea>
   );
 };
-
-export { Textarea };

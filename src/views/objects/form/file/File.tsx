@@ -1,28 +1,29 @@
-import React from "react";
-import cx from "classnames";
-import { IconCloudUpload } from "views/objects";
-import "./File.scss";
+import { IconCloudUpload } from "@/views/objects/icons";
+import clsx, { ClassValue } from "clsx";
+import buttonStyles from "../../button/Button.module.scss";
+import styles from "./File.module.scss";
 
-type Props = {
-  id?: string;
-  name: string;
-  multipleCaption?: string;
-  label?: string;
-  className?: string | string[] | { [key: string]: boolean };
-  attributes?: boolean | number | string;
-  children?: React.ReactNode;
-};
-
-const File: React.FC<Props> = ({
+export const File = ({
   id,
   name,
   multipleCaption,
   label = "Upload",
-  className,
   children,
-  ...attributes
-}) => {
-  const classNames = cx("o-form__file", "o-button", className);
+  className,
+  ...props
+}: {
+  id?: string;
+  name: string;
+  multipleCaption?: string;
+  label?: string;
+  children?: React.ReactNode;
+  className?: ClassValue;
+} & Omit<React.HTMLProps<HTMLInputElement>, "label">) => {
+  const classNames = clsx(
+    styles["o-form__file"],
+    buttonStyles["o-button"],
+    className
+  );
 
   return (
     <label className={classNames}>
@@ -30,18 +31,18 @@ const File: React.FC<Props> = ({
         id={id}
         type="file"
         name={name}
-        className="o-form__file-input u-is-visually-hidden"
+        className={clsx(styles["o-form__file-input"], "u-is-visually-hidden")}
         data-multiple-caption={
           multipleCaption ? multipleCaption : "{count} files selected"
         }
-        {...attributes}
+        {...props}
       />
-      <span className="o-form__file-icon" aria-label={label}>
+      <span className={styles["o-form__file-icon"]} aria-label={label}>
         <IconCloudUpload />
       </span>
-      {children && <span className="o-form__file-text">{children}</span>}
+      {children && (
+        <span className={styles["o-form__file-text"]}>{children}</span>
+      )}
     </label>
   );
 };
-
-export default File;

@@ -1,47 +1,49 @@
-import React from "react";
-import cx from "classnames";
-import { IconChevronDown } from "views/objects";
-import "./Menu.scss";
+import { IconChevronDown } from "@/views/objects/icons/";
+import clsx, { ClassValue } from "clsx";
+import styles from "./Menu.module.scss";
 
 type Submenu = {
   text: string;
-  menu?: Menu;
+  menu?: MainMenu;
 };
 
-type MenuItem = {
+type MainMenu = ({
   text: string;
   url?: string;
-};
+} & Submenu)[];
 
-type Menu = (MenuItem & Submenu)[];
-
-type Props = {
-  menu: Menu;
-  className?: string | string[] | { [key: string]: boolean };
-};
-
-const Menu: React.FC<Props> = ({ menu, className }) => {
+export const Menu = ({
+  menu,
+  className,
+  ...props
+}: {
+  menu: MainMenu;
+  className?: ClassValue;
+} & React.HTMLProps<HTMLUListElement>) => {
   const renderMenu = (
-    menu: Menu,
+    menu: MainMenu,
     isSubmenu?: boolean,
-    className?: string | string[] | { [key: string]: boolean }
+    className?: ClassValue
   ) => {
-    const classNames = cx(isSubmenu ? "o-menu__submenu" : "o-menu", className);
+    const classNames = clsx(
+      isSubmenu ? styles["o-menu__submenu"] : styles["o-menu"],
+      className
+    );
 
     return !menu?.length ? null : (
-      <ul className={classNames}>
+      <ul className={classNames} {...props}>
         {menu.map((item) => (
           <li
-            className={cx(
-              "o-menu__item",
-              item.menu && "o-menu__item--has-children"
+            className={clsx(
+              styles["o-menu__item"],
+              item.menu && styles["o-menu__item--has-children"]
             )}
             key={item.text}
           >
             <a
-              className={cx(
-                "o-menu__link",
-                item.menu && "o-menu__submenu-heading"
+              className={clsx(
+                styles["o-menu__link"],
+                item.menu && styles["o-menu__submenu-heading"]
               )}
               href={item.url}
               tabIndex={!item.url ? 0 : undefined}
@@ -59,5 +61,3 @@ const Menu: React.FC<Props> = ({ menu, className }) => {
 
   return renderMenu(menu, false, className);
 };
-
-export default Menu;

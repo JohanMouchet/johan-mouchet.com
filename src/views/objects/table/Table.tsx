@@ -1,8 +1,18 @@
-import React from "react";
-import cx from "classnames";
-import "./Table.scss";
+import clsx, { ClassValue } from "clsx";
+import styles from "./Table.module.scss";
 
-type Props = {
+export const Table = ({
+  align,
+  equalColumns,
+  vertical,
+  variant,
+  hover,
+  size,
+  responsive,
+  children,
+  className,
+  ...props
+}: {
   align?: "top" | "bottom";
   equalColumns?: boolean;
   vertical?: boolean;
@@ -16,36 +26,24 @@ type Props = {
     | "lg-vertical"
     | "lg-horizontal";
   responsive?: boolean;
-  className?: string | string[] | { [key: string]: boolean };
-  attributes?: boolean | number | string;
   children: React.ReactNode;
-};
-
-const Table: React.FC<Props> = ({
-  align,
-  equalColumns,
-  vertical,
-  variant,
-  hover,
-  size,
-  responsive,
-  className,
-  children,
-  ...attributes
-}) => {
-  const classNames = cx(
-    "o-table",
-    align && `o-table--align-${align}`,
-    equalColumns && "o-table--equal-columns",
-    vertical && "o-table--vertical",
-    variant && `o-table--${variant}`,
-    hover && !vertical && "o-table--hover",
-    size && `o-table--${size}`,
-    responsive && "o-table--responsive-@md",
+  className?: ClassValue;
+} & Omit<React.HTMLProps<HTMLTableElement>, "size">) => {
+  const classNames = clsx(
+    styles["o-table"],
+    align && styles[`o-table--align-${align}`],
+    equalColumns && styles["o-table--equal-columns"],
+    vertical && styles["o-table--vertical"],
+    variant && styles[`o-table--${variant}`],
+    hover && !vertical && styles["o-table--hover"],
+    size && styles[`o-table--${size}`],
+    responsive && styles["o-table--responsive-@md"],
     className
   );
 
-  return <table className={classNames}>{children}</table>;
+  return (
+    <table className={classNames} {...props}>
+      {children}
+    </table>
+  );
 };
-
-export default Table;
