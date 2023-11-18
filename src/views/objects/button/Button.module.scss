@@ -1,5 +1,7 @@
-@import "assets/styles/settings/_settings.module";
-@import "assets/styles/tools/_tools.module";
+@use "sass:map";
+@use "sass:color";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
 
 .o-button {
   $height: t-vertical-rhythm(1.75) !default;
@@ -34,7 +36,7 @@
     }
   }
 
-  @include btn-padding();
+  @include btn-padding;
 
   display: inline-block;
   font-family: $s-font-family-sans;
@@ -106,13 +108,13 @@
 
     &:active {
       color: $s-color-white;
-      background-color: darken($s-color-text-dimmed, 10%);
-      border-color: darken($s-color-text-dimmed, 10%);
+      background-color: color.adjust($s-color-text-dimmed, $lightness: -10%);
+      border-color: color.adjust($s-color-text-dimmed, $lightness: -10%);
     }
   }
 
   /** LinkedIn **/
-  &--linkedIn {
+  &--linkedin {
     /* stylelint-disable-next-line color-no-hex */
     $color-linkedin: #0077b5;
 
@@ -128,9 +130,9 @@
     }
 
     &:active {
-      color: scale-color($color-linkedin, $lightness: -15%);
+      color: color.scale($color-linkedin, $lightness: -15%);
       background-color: transparent;
-      border-color: scale-color($color-linkedin, $lightness: -15%);
+      border-color: color.scale($color-linkedin, $lightness: -15%);
     }
   }
 
@@ -141,7 +143,7 @@
     cursor: default;
     user-select: none;
     background-color: $s-color-gray-lighter;
-    border-color: currentColor;
+    border-color: currentcolor;
 
     &:active {
       transform: none;
@@ -163,13 +165,13 @@
     width: 100%;
   }
 
-  @media (max-width: map-get($s-breakpoints, sm)) {
+  @media (max-width: map.get($s-breakpoints, sm)) {
     &--block-\@sm {
       width: 100%;
     }
   }
 
-  @media (max-width: map-get($s-breakpoints, md)) {
+  @media (max-width: map.get($s-breakpoints, md)) {
     &--block-\@md {
       width: 100%;
     }

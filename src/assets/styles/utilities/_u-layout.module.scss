@@ -1,106 +1,106 @@
+@use "sass:map";
+
 /**
  * Float
  */
 
-:global {
-  .u-float {
-    &--left {
-      float: left;
-    }
-
-    &--right {
-      float: right;
-    }
+.u-float {
+  &--left {
+    float: left;
   }
 
-  .u-clear {
-    float: none;
+  &--right {
+    float: right;
+  }
+}
+
+.u-clear {
+  float: none;
+  clear: both;
+}
+
+/* Clearfix */
+.u-clearfix {
+  &::before,
+  &::after {
+    display: table;
     clear: both;
+    content: "";
+  }
+}
+
+/* Align */
+.u-align {
+  &--left {
+    text-align: left;
   }
 
-  /* Clearfix */
-  .u-clearfix {
-    &::before,
-    &::after {
-      display: table;
-      clear: both;
-      content: "";
-    }
+  &--center {
+    text-align: center;
   }
 
-  /* Align */
-  .u-align {
-    &--left {
-      text-align: left;
-    }
+  &--right {
+    text-align: right;
+  }
+}
 
-    &--center {
-      text-align: center;
-    }
-
-    &--right {
-      text-align: right;
-    }
+/* Size */
+.u-full {
+  &--height {
+    height: 100%;
   }
 
-  /* Size */
-  .u-full {
-    &--height {
-      height: 100%;
-    }
-
-    &--width {
-      width: 100%;
-    }
+  &--width {
+    width: 100%;
   }
+}
 
-  /**
+/**
  * Vertical Rhythm Spacers (private)
  *
  * Generate set of vertical-rhythm spacer classes.
  *
  * @param {string} bp-short - breakpoint suffix
  */
-  @mixin vertical-rhythm-spacers($bp-short) {
-    .u-vr {
-      /* 0 */
-      &--top-0-\@#{$bp-short} {
-        margin-top: 0;
-      }
+@mixin vertical-rhythm-spacers($bp-short) {
+  .u-vr {
+    /* 0 */
+    &--top-0-\@#{$bp-short} {
+      margin-top: 0;
+    }
 
-      &--bottom-0-\@#{$bp-short} {
-        margin-bottom: 0;
-      }
+    &--bottom-0-\@#{$bp-short} {
+      margin-bottom: 0;
+    }
 
-      /* 1 */
-      &--top-1-\@#{$bp-short} {
-        margin-top: t-vertical-rhythm(1);
-      }
+    /* 1 */
+    &--top-1-\@#{$bp-short} {
+      margin-top: t-vertical-rhythm(1);
+    }
 
-      &--bottom-1-\@#{$bp-short} {
-        margin-bottom: t-vertical-rhythm(1);
-      }
+    &--bottom-1-\@#{$bp-short} {
+      margin-bottom: t-vertical-rhythm(1);
+    }
 
-      /* 2 */
-      &--top-2-\@#{$bp-short} {
-        margin-top: t-vertical-rhythm(2);
-      }
+    /* 2 */
+    &--top-2-\@#{$bp-short} {
+      margin-top: t-vertical-rhythm(2);
+    }
 
-      &--bottom-2-\@#{$bp-short} {
-        margin-bottom: t-vertical-rhythm(2);
-      }
+    &--bottom-2-\@#{$bp-short} {
+      margin-bottom: t-vertical-rhythm(2);
     }
   }
+}
 
-  @include vertical-rhythm-spacers("xs");
+@include vertical-rhythm-spacers("xs");
 
-  @each $bp-short, $bp-size in $s-breakpoints {
-    @media (min-width: map-get($s-breakpoints, $bp-short)) {
-      @include vertical-rhythm-spacers($bp-short);
-    }
+@each $bp-short, $bp-size in $s-breakpoints {
+  @media (min-width: map.get($s-breakpoints, $bp-short)) {
+    @include vertical-rhythm-spacers($bp-short);
   }
+}
 
-  .u-scroll-lock {
-    overflow: hidden;
-  }
+.u-scroll-lock {
+  overflow: hidden;
 }

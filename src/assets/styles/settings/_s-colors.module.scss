@@ -1,3 +1,5 @@
+@use "sass:color";
+
 /**
  * Colors
  */
@@ -8,19 +10,19 @@
 
 /** Primary **/
 $s-color-primary: #21354f;
-$s-color-primary-lighter: scale-color($s-color-primary, $lightness: 15%);
-$s-color-primary-darker: scale-color($s-color-primary, $lightness: -15%);
+$s-color-primary-lighter: color.scale($s-color-primary, $lightness: 15%);
+$s-color-primary-darker: color.scale($s-color-primary, $lightness: -15%);
 
 /** Secondary **/
 $s-color-secondary: #d9c7ae;
-$s-color-secondary-lighter: scale-color($s-color-secondary, $lightness: 15%);
-$s-color-secondary-darker: scale-color($s-color-secondary, $lightness: -15%);
+$s-color-secondary-lighter: color.scale($s-color-secondary, $lightness: 15%);
+$s-color-secondary-darker: color.scale($s-color-secondary, $lightness: -15%);
 
 /** Shades of gray **/
 $s-color-white: #fff;
 $s-color-gray: #eff2f5;
-$s-color-gray-lighter: lighten($s-color-gray, 3%);
-$s-color-gray-darker: darken($s-color-gray, 3%);
+$s-color-gray-lighter: color.adjust($s-color-gray, $lightness: 3%);
+$s-color-gray-darker: color.adjust($s-color-gray, $lightness: -3%);
 $s-color-black: #111;
 
 /** States **/

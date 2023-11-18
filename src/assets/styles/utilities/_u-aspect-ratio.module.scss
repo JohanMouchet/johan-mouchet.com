@@ -1,29 +1,29 @@
+@use "sass:math";
+
 /**
  * Aspect ratio
  *
- * @markup: <div class="u-aspect-ratio u-aspect-ratio--16:9"><p>Content</p></div>
+ * @markup: <div class="u-aspect-ratio u-aspect-ratio--16-9"><p>Content</p></div>
  */
 
-:global {
-  .u-aspect-ratio {
-    position: relative;
+.u-aspect-ratio {
+  position: relative;
+  width: 100%;
+  height: 0;
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 0;
+    height: 100%;
+  }
 
-    > * {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+  &--16-9 {
+    padding-top: math.percentage(9/16);
+  }
 
-    &--16\:9 {
-      padding-top: percentage(9/16);
-    }
-
-    &--4\:3 {
-      padding-top: percentage(3/4);
-    }
+  &--4-3 {
+    padding-top: math.percentage(3/4);
   }
 }

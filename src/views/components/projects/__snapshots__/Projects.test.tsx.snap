@@ -8,7 +8,7 @@ exports[`Renders <Projects /> without crashing 1`] = `
     class="grid"
   >
     <div
-      class="cell cell--12-@xs"
+      class="cell cell-12"
     >
       <div
         class="c-project c-project--highlighted"
@@ -17,7 +17,7 @@ exports[`Renders <Projects /> without crashing 1`] = `
           class="grid"
         >
           <div
-            class="cell cell--12-@xs cell--6-@sm cell--4-@lg"
+            class="cell cell-12 sm:cell-6 lg:cell-4"
           >
             <a
               class="c-project__link"
@@ -56,7 +56,7 @@ exports[`Renders <Projects /> without crashing 1`] = `
             </div>
           </div>
           <div
-            class="cell cell--12-@xs cell--6-@sm cell--8-@lg"
+            class="cell cell-12 sm:cell-6 lg:cell-8"
           >
             <div
               class="c-project__detail"

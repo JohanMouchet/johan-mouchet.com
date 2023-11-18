@@ -1,13 +1,15 @@
+@use "sass:map";
+
 /**
  * Vendors
  */
 
 /* Flexbox Grid */
-$grid-breakpoints: (
-  sm: map-get($s-breakpoints, sm),
-  md: map-get($s-breakpoints, md),
-  lg: map-get($s-breakpoints, lg),
-  xl: map-get($s-breakpoints, xl),
+$fluxgrid-breakpoints: (
+  sm: map.get($s-breakpoints, sm),
+  md: map.get($s-breakpoints, md),
+  lg: map.get($s-breakpoints, lg),
+  xl: map.get($s-breakpoints, xl),
 );
-
-$grid-gutter: 2rem;
+$fluxgrid-gutter: 2rem;
+$fluxgrid-outside-margin: $fluxgrid-gutter * 1.5;

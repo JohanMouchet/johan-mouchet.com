@@ -1,16 +1,17 @@
-import React from "react";
-import cx from "classnames";
+import clsx, { ClassValue } from "clsx";
 import styles from "./Badge.module.scss";
 
-type Props = {
-  className?: string | string[] | { [key: string]: boolean };
+export const Badge = ({
+  children,
+  className,
+  ...props
+}: {
   children: React.ReactNode;
+  className?: ClassValue;
+} & React.HTMLProps<HTMLSpanElement>) => {
+  return (
+    <span className={clsx(styles["o-badge"], className)} {...props}>
+      {children}
+    </span>
+  );
 };
-
-const Badge: React.FC<Props> = ({ className, children }) => {
-  const classNames = cx(styles["o-badge"], className);
-
-  return <span className={classNames}>{children}</span>;
-};
-
-export default Badge;

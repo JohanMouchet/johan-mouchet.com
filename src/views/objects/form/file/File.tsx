@@ -1,29 +1,25 @@
-import React from "react";
-import cx from "classnames";
-import { IconCloudUpload } from "views/objects";
+import { IconCloudUpload } from "@/views/objects/icons";
+import clsx, { ClassValue } from "clsx";
 import buttonStyles from "../../button/Button.module.scss";
 import styles from "./File.module.scss";
 
-type Props = {
-  id?: string;
-  name: string;
-  multipleCaption?: string;
-  label?: string;
-  className?: string | string[] | { [key: string]: boolean };
-  attributes?: boolean | number | string;
-  children?: React.ReactNode;
-};
-
-const File: React.FC<Props> = ({
+export const File = ({
   id,
   name,
   multipleCaption,
   label = "Upload",
-  className,
   children,
-  ...attributes
-}) => {
-  const classNames = cx(
+  className,
+  ...props
+}: {
+  id?: string;
+  name: string;
+  multipleCaption?: string;
+  label?: string;
+  children?: React.ReactNode;
+  className?: ClassValue;
+} & Omit<React.HTMLProps<HTMLInputElement>, "label">) => {
+  const classNames = clsx(
     styles["o-form__file"],
     buttonStyles["o-button"],
     className
@@ -35,11 +31,11 @@ const File: React.FC<Props> = ({
         id={id}
         type="file"
         name={name}
-        className="o-form__file-input u-is-visually-hidden"
+        className={clsx(styles["o-form__file-input"], "u-is-visually-hidden")}
         data-multiple-caption={
           multipleCaption ? multipleCaption : "{count} files selected"
         }
-        {...attributes}
+        {...props}
       />
       <span className={styles["o-form__file-icon"]} aria-label={label}>
         <IconCloudUpload />
@@ -50,5 +46,3 @@ const File: React.FC<Props> = ({
     </label>
   );
 };
-
-export default File;

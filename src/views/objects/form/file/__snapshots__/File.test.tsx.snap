@@ -14,9 +14,7 @@ exports[`Renders <File /> without crashing 1`] = `
     aria-label=""
     class="o-form__file-icon"
   >
-    <svg>
-      cloud-upload.svg
-    </svg>
+    <svg />
   </span>
   <span
     class="o-form__file-text"

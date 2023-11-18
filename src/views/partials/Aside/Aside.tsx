@@ -1,21 +1,25 @@
-import React from "react";
-import cx from "classnames";
+import clsx, { ClassValue } from "clsx";
 import styles from "./Aside.module.scss";
 
-type Props = {
+export const Aside = ({
+  margin,
+  children,
+  className,
+  ...props
+}: {
   margin?: "no-margin";
-  className?: string | string[] | { [key: string]: boolean };
   children: React.ReactNode;
-};
-
-const Aside: React.FC<Props> = ({ margin, className, children }) => {
-  const classNames = cx(
+  className?: ClassValue;
+} & React.HTMLProps<HTMLDivElement>) => {
+  const classNames = clsx(
     styles["p-aside"],
     margin && styles[`p-main--${margin}`],
     className
   );
 
-  return <aside className={classNames}>{children}</aside>;
+  return (
+    <aside className={classNames} {...props}>
+      {children}
+    </aside>
+  );
 };
-
-export default Aside;

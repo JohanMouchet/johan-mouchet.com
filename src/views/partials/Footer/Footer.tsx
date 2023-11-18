@@ -1,31 +1,32 @@
-import React from "react";
-import { STATIC } from "constants/static";
-import { IconChevronDown } from "views/objects";
+import { STATIC } from "@/constants/static";
+import { IconChevronDown } from "@/views/objects/icons";
+import clsx, { ClassValue } from "clsx";
 import styles from "./Footer.module.scss";
 
-type Props = {
-  version?: string;
-  copyright?: string;
-  topButtonLabel?: string;
-};
-
-const Footer: React.FC<Props> = ({
+export const Footer = ({
   version = STATIC.version,
   copyright = `${
     STATIC.profile.firstName
   } ${STATIC.profile.lastName.toUpperCase()}`,
   topButtonLabel = "Get to the top",
-}) => {
+  className,
+  ...props
+}: {
+  version?: string;
+  copyright?: string;
+  topButtonLabel?: string;
+  className?: ClassValue;
+} & React.HTMLProps<HTMLDivElement>) => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className={styles["p-footer"]}>
+    <footer className={clsx(styles["p-footer"], className)} {...props}>
       <div className="container">
-        <div className="grid grid--yCenter-@xs grid--noWrap-@xs">
-          <div className="cell cell--0-@xs">
+        <div className="grid grid-y-center grid-no-wrap">
+          <div className="cell cell-shrink">
             <span className={styles["p-footer__version"]}>{version}</span>
           </div>
-          <div className="cell cell--@xs">
+          <div className="cell cell-grow">
             <p className={styles["p-footer__copyright"]}>
               {year} &copy; {copyright}{" "}
               <span className={styles["p-footer__copyright-separator"]}>|</span>
@@ -35,7 +36,7 @@ const Footer: React.FC<Props> = ({
               </span>
             </p>
           </div>
-          <div className="cell cell--0-@xs">
+          <div className="cell cell-shrink">
             <a
               className={styles["p-footer__page-top"]}
               href="#page-top"
@@ -49,5 +50,3 @@ const Footer: React.FC<Props> = ({
     </footer>
   );
 };
-
-export default Footer;

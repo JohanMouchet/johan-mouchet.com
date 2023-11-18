@@ -1,5 +1,5 @@
-@import "assets/styles/settings/_settings.module";
-@import "assets/styles/tools/_tools.module";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
 
 /* stylelint-disable selector-no-type, selector-max-type, no-duplicate-selectors, selector-no-qualifying-type, no-descending-specificity */
 .o-list {
@@ -36,7 +36,7 @@
   }
 
   /** Horizontally striped **/
-  &--hStriped {
+  &--h-striped {
     li:not(:first-child),
     ul,
     ol {
@@ -52,7 +52,7 @@
   }
 
   /** Vertically striped **/
-  &--vStriped {
+  &--v-striped {
     li {
       padding-left: 1em;
       border-left: 1px solid $s-color-gray;
@@ -84,7 +84,7 @@
   }
 
   /** Link display block **/
-  &--linkBlock {
+  &--link-block {
     li a {
       display: block;
     }

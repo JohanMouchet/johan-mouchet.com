@@ -1,9 +1,10 @@
 {
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": true,
+    "source.organizeImports": true
   },
   "cSpell.language": "en-GB",
-  "cSpell.enableFiletypes": [
-    "mdx"
-  ]
+  "cSpell.enableFiletypes": ["mdx"],
+  "scss.validate": false,
+  "stylelint.validate": ["css", "scss"]
 }

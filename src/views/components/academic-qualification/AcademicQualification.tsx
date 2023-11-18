@@ -1,7 +1,11 @@
-import React from "react";
+import clsx, { ClassValue } from "clsx";
 import styles from "./AcademicQualification.module.scss";
 
-type Props = {
+export const AcademicQualification = ({
+  degrees,
+  className,
+  ...props
+}: {
   degrees: Array<{
     establishmentName: string;
     establishmentLink: {
@@ -11,11 +15,13 @@ type Props = {
     graduationYear: number;
     title: string;
   }>;
-};
-
-const AcademicQualification: React.FC<Props> = ({ degrees }) =>
+  className?: ClassValue;
+} & React.HTMLProps<HTMLDivElement>) =>
   !degrees?.length ? null : (
-    <div className={styles["c-academic-qualifications"]}>
+    <div
+      className={clsx(styles["c-academic-qualifications"], className)}
+      {...props}
+    >
       {degrees.map((degree) => (
         <section
           className={styles["c-academic-qualification"]}
@@ -43,5 +49,3 @@ const AcademicQualification: React.FC<Props> = ({ degrees }) =>
       ))}
     </div>
   );
-
-export default AcademicQualification;

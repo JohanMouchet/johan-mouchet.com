@@ -1,6 +1,7 @@
-@import "assets/styles/settings/_settings.module";
-@import "assets/styles/tools/_tools.module";
-@import "../_settings.module";
+@use "sass:map";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
+@import "../settings.module";
 
 .o-form__field {
   width: 100%;
@@ -12,10 +13,10 @@
   color: $s-color-text;
   text-overflow: ellipsis;
   vertical-align: middle;
+  appearance: none;
   background-color: transparent;
   border: 2px solid $s-color-gray;
   transition: color 0.2s, background-color 0.2s, border 0.2s;
-  appearance: none;
 
   @include t-wekkit-hdpi-small-dimension;
 
@@ -51,14 +52,14 @@
 
   /*** Search ***/
   &--search {
-    background-image: url("#{map-get($s-paths, icons)}/ui/search.svg");
+    background-image: url("#{map.get($s-paths, icons)}ui/search.svg");
   }
 
   /*** Select ***/
   /* stylelint-disable-next-line no-descending-specificity */
   &--select {
     &:not([multiple]) {
-      background-image: url("#{map-get($s-paths, icons)}/ui/chevron-down.svg");
+      background-image: url("#{map.get($s-paths, icons)}ui/chevron-down.svg");
     }
 
     &[multiple] {

@@ -1,7 +1,6 @@
-import React from "react";
+import { Element } from "@prismicio/react";
 import { render } from "@testing-library/react";
-import { Elements } from "prismic-reactjs";
-import OpenSource from ".";
+import { OpenSource } from "./OpenSource";
 
 it("Renders <OpenSource /> without crashing", () => {
   expect(
@@ -15,14 +14,14 @@ it("Renders <OpenSource /> without crashing", () => {
             name: "Name",
             lede: [
               {
-                type: Elements.paragraph,
+                type: Element.paragraph,
                 text: "Lede",
                 spans: [],
               },
             ],
             description: [
               {
-                type: Elements.preformatted,
+                type: Element.preformatted,
                 text: "<ul><li>Description</li></ul>",
                 spans: [],
               },

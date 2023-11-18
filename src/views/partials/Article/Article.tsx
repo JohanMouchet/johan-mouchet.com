@@ -1,23 +1,21 @@
-import React from "react";
-import cx from "classnames";
+import clsx, { ClassValue } from "clsx";
 import styles from "./Article.module.scss";
 
-type Props = {
-  size?: "sm" | "lg";
-  margin?: "no-margin" | "no-top-margin" | "no-bottom-margin";
-  variant?: "secondary";
-  className?: string | string[] | { [key: string]: boolean };
-  children: React.ReactNode;
-};
-
-const Article: React.FC<Props> = ({
+export const Article = ({
   size,
   margin,
   variant,
-  className,
   children,
-}) => {
-  const classNames = cx(
+  className,
+  ...props
+}: {
+  size?: "sm" | "lg";
+  margin?: "no-margin" | "no-top-margin" | "no-bottom-margin";
+  variant?: "secondary";
+  children: React.ReactNode;
+  className?: ClassValue;
+} & Omit<React.HTMLProps<HTMLDivElement>, "size">) => {
+  const classNames = clsx(
     styles["p-article"],
     size && styles[`p-article--${size}`],
     margin && styles[`p-article--${margin}`],
@@ -26,7 +24,9 @@ const Article: React.FC<Props> = ({
     className
   );
 
-  return <article className={classNames}>{children}</article>;
+  return (
+    <article className={classNames} {...props}>
+      {children}
+    </article>
+  );
 };
-
-export default Article;

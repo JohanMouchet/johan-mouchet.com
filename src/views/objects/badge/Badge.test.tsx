@@ -1,6 +1,5 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import Badge from "./";
+import { Badge } from "./Badge";
 
 it("Renders <Badge /> without crashing", () => {
   expect(

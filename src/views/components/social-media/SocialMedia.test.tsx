@@ -1,6 +1,5 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import SocialMedia from ".";
+import { SocialMedia } from "./SocialMedia";
 
 it("Renders <SocialMedia /> without crashing", () => {
   expect(

@@ -1,10 +1,14 @@
-import React from "react";
-import { RichText, RichTextBlock } from "prismic-reactjs";
-import { duration } from "utils/duration";
-import { Projects } from "views/components";
+import { duration } from "@/utils/duration/duration";
+import { Projects } from "@/views/components/projects/Projects";
+import { PrismicRichText } from "@prismicio/react";
+import clsx, { ClassValue } from "clsx";
 import styles from "./Experiences.module.scss";
 
-type Props = {
+export const Experiences = ({
+  experiences,
+  className,
+  ...props
+}: {
   experiences: Array<{
     companyLink: {
       url: string;
@@ -16,14 +20,13 @@ type Props = {
     present: boolean;
     endDate: Date | string;
     contractType?: string;
-    lede: RichTextBlock[];
+    lede: React.ComponentProps<typeof PrismicRichText>["field"];
     projects?: React.ComponentProps<typeof Projects>;
   }>;
-};
-
-const Experiences: React.FC<Props> = ({ experiences }) =>
+  className?: ClassValue;
+} & React.HTMLProps<HTMLDivElement>) =>
   !experiences?.length ? null : (
-    <div className={styles["c-experiences"]}>
+    <div className={clsx(styles["c-experiences"], className)} {...props}>
       {experiences.map((experience) => {
         const startDate =
           typeof experience.startDate === "string"
@@ -88,7 +91,7 @@ const Experiences: React.FC<Props> = ({ experiences }) =>
               )}
             </p>
             <div className={styles["c-experience__lede"]}>
-              <RichText render={experience.lede} />
+              <PrismicRichText field={experience.lede} />
             </div>
             {experience.projects?.projects && (
               <Projects projects={experience.projects.projects} />
@@ -98,5 +101,3 @@ const Experiences: React.FC<Props> = ({ experiences }) =>
       })}
     </div>
   );
-
-export default Experiences;

@@ -1,8 +1,12 @@
-import React from "react";
-import { IconUnsplash, IconYoutube } from "views/objects";
+import { IconUnsplash, IconYoutube } from "@/views/objects/icons";
+import clsx, { ClassValue } from "clsx";
 import styles from "./PersonalWorks.module.scss";
 
-type Props = {
+export const PersonalWorks = ({
+  works,
+  className,
+  ...props
+}: {
   works: Array<{
     link: {
       url: string;
@@ -15,9 +19,8 @@ type Props = {
     };
     icon: "unsplash" | "youtube";
   }>;
-};
-
-const PersonalWorks: React.FC<Props> = ({ works }) => {
+  className?: ClassValue;
+} & React.HTMLProps<HTMLDivElement>) => {
   const getIcon = (icon: string) => {
     if (icon === "unsplash") {
       return <IconUnsplash />;
@@ -27,11 +30,11 @@ const PersonalWorks: React.FC<Props> = ({ works }) => {
   };
 
   return !works?.length ? null : (
-    <div className={styles["c-personal-works"]}>
+    <div className={clsx(styles["c-personal-works"], className)} {...props}>
       <div className="grid">
         {works.map((work) => (
           <div
-            className="cell cell--6-@xs cell--4-@sm cell--2-@md u-vr--bottom-1-@xs u-vr--bottom-0-@md"
+            className="cell cell-6 sm:cell-4 md:cell-2 u-vr--bottom-1-@xs u-vr--bottom-0-@md"
             key={work.link.url}
           >
             <section className={styles["c-personal-work"]}>
@@ -39,6 +42,7 @@ const PersonalWorks: React.FC<Props> = ({ works }) => {
                 className={styles["c-personal-work__overlay"]}
                 href={work.link.url}
               >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className={styles["c-personal-work__thumbnail"]}
                   src={work.thumbnailSrc?.url || work.thumbnailExternalSrc?.url}
@@ -61,5 +65,3 @@ const PersonalWorks: React.FC<Props> = ({ works }) => {
     </div>
   );
 };
-
-export default PersonalWorks;

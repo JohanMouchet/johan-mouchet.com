@@ -1,24 +1,27 @@
-import React from "react";
-import cx from "classnames";
+import clsx, { ClassValue } from "clsx";
 import styles from "./Tabs.module.scss";
 
-type Props = {
+export const Tabs = ({
+  tabs,
+  className,
+  ...props
+}: {
   tabs: Array<{
     thumb: string;
     panel: string;
   }>;
-  className?: string | string[] | { [key: string]: boolean };
-};
-
-const Tabs: React.FC<Props> = ({ tabs, className }) => {
-  const classNames = cx(styles["o-tabs"], className);
-
+  className?: ClassValue;
+} & React.HTMLProps<HTMLDivElement>) => {
   return !tabs?.length ? null : (
-    <div className={classNames}>
+    <div className={clsx(styles["o-tabs"], className)} {...props}>
       <ul className={styles["o-tabs__thumbs"]}>
         {tabs.map((tab, index) => (
           <li
-            className="o-tabs__thumb u-animation u-animation--fade-in-up"
+            className={clsx(
+              styles["o-tabs__thumb"],
+              "u-animation",
+              "u-animation--fade-in-up"
+            )}
             style={{
               animationDelay: index > 0 ? `${index * 0.15}s` : undefined,
             }}
@@ -40,5 +43,3 @@ const Tabs: React.FC<Props> = ({ tabs, className }) => {
     </div>
   );
 };
-
-export default Tabs;

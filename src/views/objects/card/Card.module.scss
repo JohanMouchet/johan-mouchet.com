@@ -1,5 +1,6 @@
-@import "assets/styles/settings/_settings.module";
-@import "assets/styles/tools/_tools.module";
+@use "sass:map";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
 
 .o-card {
   $root: &;
@@ -9,7 +10,7 @@
 
   /* Group */
   &-group {
-    margin-bottom: $grid-gutter;
+    margin-bottom: $fluxgrid-gutter;
   }
 
   display: flex;
@@ -55,7 +56,7 @@
 
     /* stylelint-disable-next-line no-descending-specificity */
     * {
-      z-index: map-get($s-layers, card-banner);
+      z-index: map.get($s-layers, card-banner);
       color: $s-color-white;
       text-shadow: -1px 1px 1px rgba($s-color-black, 0.3);
     }
@@ -87,7 +88,7 @@
   &--hover-active:hover,
   &--hover-active:focus,
   &--forward {
-    box-shadow: map-get($s-shadows, md);
+    box-shadow: map.get($s-shadows, md);
     transform: translate(-4px, -4px);
   }
 
@@ -118,7 +119,7 @@
       padding: $v-padding $h-padding;
     }
 
-    @media (min-width: map-get($s-breakpoints, sm)) {
+    @media (min-width: map.get($s-breakpoints, sm)) {
       &__banner,
       &__header,
       &__body,

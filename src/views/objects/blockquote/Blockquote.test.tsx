@@ -1,6 +1,5 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import Blockquote from ".";
+import { Blockquote } from "./Blockquote";
 
 it("Renders <Blockquote /> without crashing", () => {
   expect(

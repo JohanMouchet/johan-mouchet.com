@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "sass:map";
+
 /**
  * Core
  */
@@ -34,7 +37,7 @@ hr {
   max-width: 100%;
   height: t-vertical-rhythm(1);
   margin: t-vertical-rhythm(2) 0;
-  background: 0 center repeat-x map-get($s-backgrounds, zigzag);
+  background: 0 center repeat-x map.get($s-backgrounds, zigzag);
   border: 0;
 }
 
@@ -118,7 +121,7 @@ pre {
 /* stylelint-disable no-descending-specificity */
 pre,
 code {
-  color: lighten($s-color-text, 5%);
+  color: color.adjust($s-color-text, $lightness: 5%);
   background-color: $s-color-gray-lighter;
 }
 

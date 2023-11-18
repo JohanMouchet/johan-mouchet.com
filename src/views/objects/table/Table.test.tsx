@@ -1,6 +1,5 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import Table from ".";
+import { Table } from "./Table";
 
 it("Renders <Table /> without crashing", () => {
   expect(

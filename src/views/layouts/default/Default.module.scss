@@ -1,5 +1,6 @@
-@import "assets/styles/settings/_settings.module";
-@import "assets/styles/tools/_tools.module";
+@use "sass:map";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
 
 .l-layout {
   display: flex;
@@ -8,11 +9,11 @@
   padding: t-vertical-rhythm(0.5) t-vertical-rhythm(0.25);
   margin: 0 auto;
 
-  @media (min-width: map-get($s-breakpoints, sm)) {
+  @media (min-width: map.get($s-breakpoints, sm)) {
     padding: t-vertical-rhythm(0.5) t-vertical-rhythm(1);
   }
 
-  @media (min-width: map-get($s-breakpoints, md)) {
+  @media (min-width: map.get($s-breakpoints, md)) {
     padding: t-vertical-rhythm(1) t-vertical-rhythm(2);
   }
 
@@ -34,14 +35,14 @@
     }
 
     &::before {
-      background: url("#{map-get($s-paths, theme)}/layout-background.jpg")
+      background: url("#{map.get($s-paths, theme)}layout-background.jpg")
         $s-color-primary;
       filter: blur(6px);
       transform: scale(3.5);
     }
 
     &::after {
-      background: url("#{map-get($s-paths, theme)}/layout-grain.png");
+      background: url("#{map.get($s-paths, theme)}layout-grain.png");
     }
   }
 

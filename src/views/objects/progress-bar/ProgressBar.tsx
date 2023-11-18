@@ -1,18 +1,7 @@
-import React from "react";
-import cx from "classnames";
+import clsx, { ClassValue } from "clsx";
 import styles from "./ProgressBar.module.scss";
 
-type Props = {
-  label?: string;
-  progress?: string;
-  progressPct?: boolean;
-  total?: string;
-  detailsOnHover?: boolean;
-  filling: number;
-  className?: string | string[] | { [key: string]: boolean };
-};
-
-const ProgressBar: React.FC<Props> = ({
+export const ProgressBar = ({
   label,
   progress,
   progressPct,
@@ -20,17 +9,30 @@ const ProgressBar: React.FC<Props> = ({
   detailsOnHover,
   filling = 0,
   className,
-}) => {
-  const classNames = cx(
+  ...props
+}: {
+  label?: string;
+  progress?: string;
+  progressPct?: boolean;
+  total?: string;
+  detailsOnHover?: boolean;
+  filling: number;
+  className?: ClassValue;
+} & Omit<React.HTMLProps<HTMLDivElement>, "label">) => {
+  const classNames = clsx(
     styles["o-progress-bar"],
-    className,
-    detailsOnHover && styles["o-progress-bar--details-on-hover"]
+    detailsOnHover && styles["o-progress-bar--details-on-hover"],
+    className
   );
 
   const clampedFilling = Math.min(Math.max(0, filling), 100);
 
   return (
-    <div className={classNames} tabIndex={detailsOnHover ? 0 : undefined}>
+    <div
+      className={classNames}
+      tabIndex={detailsOnHover ? 0 : undefined}
+      {...props}
+    >
       {(label || progress || total) && (
         <span className={styles["o-progress-bar__labels"]}>
           {label && (
@@ -59,10 +61,8 @@ const ProgressBar: React.FC<Props> = ({
         <div
           className={styles["o-progress-bar__filling"]}
           style={{ width: `${clampedFilling}%` }}
-        ></div>
+        />
       </div>
     </div>
   );
 };
-
-export default ProgressBar;

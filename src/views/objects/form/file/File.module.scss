@@ -1,6 +1,5 @@
-@import "assets/styles/settings/_settings.module";
-@import "assets/styles/tools/_tools.module";
-// @import "assets/styles/utilities/_utilities";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
 
 .o-form__file {
   &-icon {

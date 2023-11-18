@@ -1,6 +1,5 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { Fieldset, FormGroup, Label } from ".";
+import { Fieldset, FormGroup, Label } from "./Layout";
 
 it("Renders <Fieldset /> without crashing", () => {
   expect(

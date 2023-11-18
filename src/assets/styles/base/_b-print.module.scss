@@ -17,7 +17,7 @@
     }
   }
 
-  [href]:not([href^="javascript:"]):not([href^="#"]) {
+  [href]:not([href^="javascript:"], [href^="#"]) {
     text-decoration: underline;
 
     &::after {

@@ -1,5 +1,6 @@
-@import "assets/styles/settings/_settings.module";
-@import "assets/styles/tools/_tools.module";
+@use "sass:map";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
 
 .p-footer {
   position: relative;
@@ -10,8 +11,8 @@
   color: $s-color-white;
   text-shadow: 1px 1px 1px rgba($s-color-black, 0.3);
   letter-spacing: 0.1em;
-  background: map-get($s-backgrounds, dots),
-    url("#{map-get($s-paths, theme)}/footer.jpg") right center/cover no-repeat
+  background: map.get($s-backgrounds, dots),
+    url("#{map.get($s-paths, theme)}footer.jpg") right center/cover no-repeat
       $s-color-primary;
 
   &::before {
@@ -39,7 +40,7 @@
       display: none;
     }
 
-    @media (min-width: map-get($s-breakpoints, sm)) {
+    @media (min-width: map.get($s-breakpoints, sm)) {
       &-separator {
         display: inline-block;
       }

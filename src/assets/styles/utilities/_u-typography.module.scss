@@ -3,7 +3,6 @@
  */
 
 /* Headings */
-// :global {
 .u-heading {
   &--xl {
     @include t-heading--xl;
@@ -36,10 +35,40 @@
   &--6 {
     @include t-heading--6;
   }
+
+  /** Underline **/
+  &__underline {
+    display: block;
+    width: 2.5em;
+    height: 0.1em;
+    margin-top: 0.5em;
+    background-color: $s-color-secondary;
+    transform-origin: left;
+    animation: u-heading-underline-animation 0.3s ease-out both;
+
+    &--c {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &--r {
+      margin-left: auto;
+    }
+
+    /*** Animation ***/
+    @keyframes u-heading-underline-animation {
+      from {
+        transform: scaleX(0) skew(-45deg);
+      }
+
+      to {
+        transform: scaleX(1) skew(-45deg);
+      }
+    }
+  }
 }
 
 /* Secondary link */
 .u-link--secondary {
   @include t-link($s-color-text-dimmed, $hover-decoration: "none");
 }
-// }

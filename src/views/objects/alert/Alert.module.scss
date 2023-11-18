@@ -1,9 +1,10 @@
-@import "assets/styles/settings/_settings.module";
-@import "assets/styles/tools/_tools.module";
+@use "sass:map";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
 
 .o-alert {
   align-items: flex-start;
-  padding: t-vertical-rhythm(0.75) ($grid-gutter / 2);
+  padding: t-vertical-rhythm(0.75) ($fluxgrid-gutter / 2);
   margin: t-vertical-rhythm(1) 0;
   background-color: $s-color-gray-lighter;
   border-left: 2px solid;
@@ -106,15 +107,15 @@
     position: fixed;
     right: 0;
     bottom: 0;
-    z-index: map-get($s-layers, "alert");
+    z-index: map.get($s-layers, "alert");
     margin-bottom: 0;
-    box-shadow: map-get($s-shadows, md);
+    box-shadow: map.get($s-shadows, md);
   }
 
   &--fixed-bottom-right {
-    @media (min-width: map-get($s-breakpoints, sm)) {
-      max-width: map-get($s-breakpoints, sm);
-      margin-right: $grid-gutter;
+    @media (min-width: map.get($s-breakpoints, sm)) {
+      max-width: map.get($s-breakpoints, sm);
+      margin-right: $fluxgrid-gutter;
     }
   }
 }

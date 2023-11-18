@@ -1,7 +1,6 @@
-import React from "react";
+import { Element } from "@prismicio/react";
 import { render } from "@testing-library/react";
-import { Elements } from "prismic-reactjs";
-import Experiences from ".";
+import { Experiences } from "./Experiences";
 
 it("Renders <Experiences /> without crashing", () => {
   expect(
@@ -21,7 +20,7 @@ it("Renders <Experiences /> without crashing", () => {
             contractType: "Contract Type",
             lede: [
               {
-                type: Elements.paragraph,
+                type: Element.paragraph,
                 text: "Lede",
                 spans: [],
               },

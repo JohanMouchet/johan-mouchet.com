@@ -1,5 +1,6 @@
-@import "assets/styles/settings/_settings.module";
-@import "assets/styles/tools/_tools.module";
+@use "sass:map";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
 
 .p-article {
   $p-article: (
@@ -8,22 +9,22 @@
   );
 
   position: relative;
-  margin-top: map-get($p-article, v-padding);
-  margin-bottom: map-get($p-article, v-padding);
+  margin-top: map.get($p-article, v-padding);
+  margin-bottom: map.get($p-article, v-padding);
 
   /** Margin **/
   &--sm {
-    margin-top: map-get($p-article, v-padding) /
-      map-get($p-article, scale-factor);
-    margin-bottom: map-get($p-article, v-padding) /
-      map-get($p-article, scale-factor);
+    margin-top: map.get($p-article, v-padding) /
+      map.get($p-article, scale-factor);
+    margin-bottom: map.get($p-article, v-padding) /
+      map.get($p-article, scale-factor);
   }
 
   &--lg {
-    margin-top: map-get($p-article, v-padding) *
-      map-get($p-article, scale-factor);
-    margin-bottom: map-get($p-article, v-padding) *
-      map-get($p-article, scale-factor);
+    margin-top: map.get($p-article, v-padding) *
+      map.get($p-article, scale-factor);
+    margin-bottom: map.get($p-article, v-padding) *
+      map.get($p-article, scale-factor);
   }
 
   &--no-margin {
@@ -41,8 +42,8 @@
 
   /** Secondary **/
   &--secondary {
-    padding-top: map-get($p-article, v-padding);
-    padding-bottom: map-get($p-article, v-padding);
+    padding-top: map.get($p-article, v-padding);
+    padding-bottom: map.get($p-article, v-padding);
     background: $s-color-gray-lighter;
 
     @if lightness($s-color-gray-lighter) < 75 {
@@ -63,16 +64,16 @@
   }
 
   &--secondary-sm {
-    padding-top: map-get($p-article, v-padding) /
-      map-get($p-article, scale-factor);
-    padding-bottom: map-get($p-article, v-padding) /
-      map-get($p-article, scale-factor);
+    padding-top: map.get($p-article, v-padding) /
+      map.get($p-article, scale-factor);
+    padding-bottom: map.get($p-article, v-padding) /
+      map.get($p-article, scale-factor);
   }
 
   &--secondary-lg {
-    padding-top: map-get($p-article, v-padding) *
-      map-get($p-article, scale-factor);
-    padding-bottom: map-get($p-article, v-padding) *
-      map-get($p-article, scale-factor);
+    padding-top: map.get($p-article, v-padding) *
+      map.get($p-article, scale-factor);
+    padding-bottom: map.get($p-article, v-padding) *
+      map.get($p-article, scale-factor);
   }
 }
