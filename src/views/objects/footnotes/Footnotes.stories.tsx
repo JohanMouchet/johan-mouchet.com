@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Fragment } from "react";
 import { FootnotesNotes, FootnotesReference } from "./Footnotes";
 
 const meta = {
@@ -12,7 +11,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Example = {
   render: (args) => (
-    <Fragment>
+    <>
       <p>
         Reference
         <FootnotesReference {...args} />
@@ -25,7 +24,7 @@ export const Example = {
           },
         ]}
       />
-    </Fragment>
+    </>
   ),
   args: {
     id: "1",
