@@ -5,8 +5,8 @@
   $loader-speed: 1.5s;
 
   display: inline-block;
-  width: t-vertical-rhythm(1.5, "rem");
-  height: t-vertical-rhythm(1.5, "rem");
+  width: t-vertical-rhythm(1.5);
+  height: t-vertical-rhythm(1.5);
   outline: 2px solid $s-color-secondary;
   animation: loader-spin-animation $loader-speed infinite ease;
 
@@ -44,7 +44,7 @@
 
   /** Small **/
   &--sm {
-    width: t-vertical-rhythm(0.75, "rem");
-    height: t-vertical-rhythm(0.75, "rem");
+    width: t-vertical-rhythm(0.75);
+    height: t-vertical-rhythm(0.75);
   }
 }

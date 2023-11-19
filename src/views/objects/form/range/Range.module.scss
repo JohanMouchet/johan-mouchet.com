@@ -7,8 +7,8 @@
   width: 100%;
   height: 2px;
   padding: 0;
-  margin-top: t-vertical-rhythm(0.5, "rem");
-  margin-bottom: t-vertical-rhythm(0.5, "rem");
+  margin-top: t-vertical-rhythm(0.5);
+  margin-bottom: t-vertical-rhythm(0.5);
   appearance: none;
   background-color: $s-color-gray;
   outline: none;
@@ -34,15 +34,15 @@
 
   &::-ms-track {
     height: auto;
-    border-radius: t-vertical-rhythm(0.4, "rem");
+    border-radius: t-vertical-rhythm(0.4);
   }
   /* stylelint-enable no-descending-specificity */
 
   /** Thumb **/
   @mixin range-thumb($vendor-prefix) {
     &#{$vendor-prefix} {
-      width: t-vertical-rhythm(0.8, "rem");
-      height: t-vertical-rhythm(0.8, "rem");
+      width: t-vertical-rhythm(0.8);
+      height: t-vertical-rhythm(0.8);
       appearance: none;
       background: $s-color-white;
       border: 2px solid $s-color-secondary;

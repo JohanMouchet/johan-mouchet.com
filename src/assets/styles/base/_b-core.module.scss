@@ -68,7 +68,7 @@ button {
 /* stylelint-disable selector-max-type, selector-no-qualifying-type, no-descending-specificity */
 ul,
 ol {
-  padding-left: 1.5em;
+  padding-left: 1.5rem;
   margin: t-vertical-rhythm(1) 0;
 
   ul,
@@ -93,7 +93,7 @@ dt {
 }
 
 dd {
-  margin-left: 1.5em;
+  margin-left: 1.5rem;
 }
 
 /* Table */
@@ -128,8 +128,8 @@ code {
 /* Inline code */
 code,
 kbd {
-  padding: 0.2em 0.5em;
-  font-size: t-modular-scale(-1, "rem");
+  padding: 0.2rem 0.5rem;
+  font-size: t-modular-scale(-1);
   font-style: normal;
   font-weight: 400;
   text-transform: none;

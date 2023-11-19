@@ -39,6 +39,6 @@
     @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
 
     display: inline-block;
-    padding: t-vertical-rhythm(0.5) 1em;
+    padding: t-vertical-rhythm(0.5) 1rem;
   }
 }

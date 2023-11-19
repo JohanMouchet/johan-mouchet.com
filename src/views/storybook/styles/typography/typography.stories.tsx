@@ -52,7 +52,7 @@ export const Typefaces = {
               <th>{typeface.name}</th>
               <td>
                 <span
-                  style={{ fontFamily: typeface.stack, fontSize: "1.44em" }}
+                  style={{ fontFamily: typeface.stack, fontSize: "1.44rem" }}
                 >
                   {input}
                 </span>

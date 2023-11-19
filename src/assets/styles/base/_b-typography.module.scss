@@ -7,13 +7,13 @@
 html {
   // Responsive font-size
   @if $s-font-size-mobile {
-    font-size: $s-font-size-mobile * 1em;
+    font-size: $s-font-size-mobile * 1rem;
 
     @media (min-width: map.get($s-breakpoints, sm)) {
-      font-size: $s-font-size-base * 1em;
+      font-size: $s-font-size-base * 1rem;
     }
   } @else {
-    font-size: $s-font-size-base * 1em;
+    font-size: $s-font-size-base * 1rem;
   }
 
   font-family: $s-font-family-sans;
