@@ -6,7 +6,13 @@ import { PrismicRichText } from "@prismicio/react";
 import clsx, { ClassValue } from "clsx";
 import styles from "./Projects.module.scss";
 
-type Thumbnail = {
+const Thumbnail = ({
+  name,
+  tagline,
+  link,
+  lede,
+  thumbnailSrc,
+}: {
   name: string;
   tagline?: string;
   link: {
@@ -16,13 +22,96 @@ type Thumbnail = {
   thumbnailSrc: {
     url: string;
   };
-};
+}) => (
+  <>
+    <a href={link.url} className={styles["c-project__link"]}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        className={styles["c-project__thumbnail"]}
+        src={thumbnailSrc.url}
+        alt=""
+        width={400}
+        height={225}
+        loading="lazy"
+      />
+      <div className={styles["c-project__overlay"]}>
+        <h4 className={styles["c-project__title"]}>{name}</h4>
+        <span className={styles["c-project__line"]} />
+        {tagline && (
+          <span className={styles["c-project__tagline"]}>{tagline}</span>
+        )}
+      </div>
+    </a>
 
-type Content = {
+    {lede && (
+      <div className={styles["c-project__lede"]}>
+        <PrismicRichText field={lede} />
+      </div>
+    )}
+  </>
+);
+
+const Content = ({
+  achievements,
+  architecture,
+  libraries,
+}: {
   highlight?: boolean;
   achievements?: React.ComponentProps<typeof PrismicRichText>["field"];
   architecture?: React.ComponentProps<typeof PrismicRichText>["field"];
   libraries?: React.ComponentProps<typeof PrismicRichText>["field"];
+}) => {
+  const achievementPreformatted = achievements?.[0]?.type === "preformatted";
+  const achievementQuantity = achievementPreformatted
+    ? asText(achievements)?.match(/<li>/g)?.length
+    : achievements?.length;
+
+  return (
+    <>
+      {achievements && (
+        <div className={styles["c-project__detail"]}>
+          <b className={styles["c-project__detail-heading"]}>
+            Key {pluralize("Achievement", achievementQuantity || 0)}
+          </b>
+
+          {achievementPreformatted ? (
+            <ul className={styles["c-project__detail-list"]}>
+              <PrismicRichText
+                field={achievements}
+                components={(type, element, text, children) => (
+                  <>{text && parse(text)}</>
+                )}
+              />
+            </ul>
+          ) : (
+            <div className={styles["c-project__detail-list"]}>
+              <PrismicRichText field={achievements} />
+            </div>
+          )}
+        </div>
+      )}
+
+      {architecture && (
+        <div className={styles["c-project__detail"]}>
+          <b className={styles["c-project__detail-heading"]}>Architecture</b>
+          <div className={styles["c-project__detail-list"]}>
+            <PrismicRichText field={architecture} />
+          </div>
+        </div>
+      )}
+
+      {libraries && (
+        <div className={styles["c-project__detail"]}>
+          <b className={styles["c-project__detail-heading"]}>
+            {pluralize("Library", asText(libraries)?.split(", ").length || 1)}
+          </b>
+          <div className={styles["c-project__detail-list"]}>
+            <PrismicRichText field={libraries} />
+          </div>
+        </div>
+      )}
+    </>
+  );
 };
 
 export const Projects = ({
@@ -30,101 +119,13 @@ export const Projects = ({
   className,
   ...props
 }: {
-  projects: (Thumbnail & Content)[];
+  projects: (React.ComponentProps<typeof Thumbnail> &
+    React.ComponentProps<typeof Content>)[];
   className?: ClassValue;
 } & React.HTMLProps<HTMLDivElement>) => {
   if (!projects?.length) {
     return null;
   }
-
-  const renderThumbnail = (project: Thumbnail) => (
-    <>
-      <a href={project.link.url} className={styles["c-project__link"]}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          className={styles["c-project__thumbnail"]}
-          src={project.thumbnailSrc.url}
-          alt=""
-          width={400}
-          height={225}
-          loading="lazy"
-        />
-        <div className={styles["c-project__overlay"]}>
-          <h4 className={styles["c-project__title"]}>{project.name}</h4>
-          <span className={styles["c-project__line"]} />
-          {project.tagline && (
-            <span className={styles["c-project__tagline"]}>
-              {project.tagline}
-            </span>
-          )}
-        </div>
-      </a>
-
-      {project.lede && (
-        <div className={styles["c-project__lede"]}>
-          <PrismicRichText field={project.lede} />
-        </div>
-      )}
-    </>
-  );
-
-  const renderContent = (project: Content) => {
-    const achievementPreformatted =
-      project.achievements?.[0]?.type === "preformatted";
-    const achievementQuantity = achievementPreformatted
-      ? asText(project.achievements)?.match(/<li>/g)?.length
-      : project.achievements?.length;
-
-    return (
-      <>
-        {project.achievements && (
-          <div className={styles["c-project__detail"]}>
-            <b className={styles["c-project__detail-heading"]}>
-              Key {pluralize("Achievement", achievementQuantity || 0)}
-            </b>
-
-            {achievementPreformatted ? (
-              <ul className={styles["c-project__detail-list"]}>
-                <PrismicRichText
-                  field={project.achievements}
-                  components={(type, element, text, children) => (
-                    <>{text && parse(text)}</>
-                  )}
-                />
-              </ul>
-            ) : (
-              <div className={styles["c-project__detail-list"]}>
-                <PrismicRichText field={project.achievements} />
-              </div>
-            )}
-          </div>
-        )}
-
-        {project.architecture && (
-          <div className={styles["c-project__detail"]}>
-            <b className={styles["c-project__detail-heading"]}>Architecture</b>
-            <div className={styles["c-project__detail-list"]}>
-              <PrismicRichText field={project.architecture} />
-            </div>
-          </div>
-        )}
-
-        {project.libraries && (
-          <div className={styles["c-project__detail"]}>
-            <b className={styles["c-project__detail-heading"]}>
-              {pluralize(
-                "Library",
-                asText(project.libraries)?.split(", ").length || 1
-              )}
-            </b>
-            <div className={styles["c-project__detail-list"]}>
-              <PrismicRichText field={project.libraries} />
-            </div>
-          </div>
-        )}
-      </>
-    );
-  };
 
   return (
     <div className={clsx(styles["c-projects"], className)} {...props}>
@@ -143,10 +144,20 @@ export const Projects = ({
               >
                 <div className="grid">
                   <div className="cell cell-12 sm:cell-6 lg:cell-4">
-                    {renderThumbnail(project)}
+                    <Thumbnail
+                      name={project.name}
+                      tagline={project.tagline}
+                      link={project.link}
+                      lede={project.lede}
+                      thumbnailSrc={project.thumbnailSrc}
+                    />
                   </div>
                   <div className="cell cell-12 sm:cell-6 lg:cell-8">
-                    {renderContent(project)}
+                    <Content
+                      achievements={project.achievements}
+                      architecture={project.architecture}
+                      libraries={project.libraries}
+                    />
                   </div>
                 </div>
               </div>
@@ -160,13 +171,23 @@ export const Projects = ({
               key={`${project.name}${project.tagline || ""}`}
             >
               <div className={styles["c-project"]}>
-                {renderThumbnail(project)}
+                <Thumbnail
+                  name={project.name}
+                  tagline={project.tagline}
+                  link={project.link}
+                  lede={project.lede}
+                  thumbnailSrc={project.thumbnailSrc}
+                />
                 {(project.achievements ||
                   project.architecture ||
                   project.libraries) && (
                   <Details summary="Learn more" variant="compact">
                     <div className={styles["c-project__details"]}>
-                      {renderContent(project)}
+                      <Content
+                        achievements={project.achievements}
+                        architecture={project.architecture}
+                        libraries={project.libraries}
+                      />
                     </div>
                   </Details>
                 )}
