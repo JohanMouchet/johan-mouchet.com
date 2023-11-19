@@ -78,6 +78,8 @@ const Home: NextPage = ({ data, errors }: any) => {
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         className={styles["home-about__portrait"]}
+                        width={data.profile.image.dimensions.width}
+                        height={data.profile.image.dimensions.height}
                         src={`${data.profile.image.url}&q=100`}
                         srcSet={`${data.profile.image.url}&q=100, ${data.profile.image.x2.url}&q=100 1.25x`}
                         alt={data.profile.image.alt}

@@ -46,6 +46,8 @@ export const PersonalWorks = ({
                 <img
                   className={styles["c-personal-work__thumbnail"]}
                   src={work.thumbnailSrc?.url || work.thumbnailExternalSrc?.url}
+                  width={200}
+                  height={200}
                   alt={`Personal work on ${work.icon}`}
                   loading="lazy"
                 />

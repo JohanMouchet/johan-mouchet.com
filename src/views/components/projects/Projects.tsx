@@ -41,6 +41,8 @@ export const Projects = ({
           className={styles["c-project__thumbnail"]}
           src={project.thumbnailSrc.url}
           alt=""
+          width={400}
+          height={225}
           loading="lazy"
         />
         <div className={styles["c-project__overlay"]}>
