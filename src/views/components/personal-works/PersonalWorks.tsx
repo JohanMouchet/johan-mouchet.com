@@ -7,7 +7,7 @@ export const PersonalWorks = ({
   className,
   ...props
 }: {
-  works: Array<{
+  works: {
     link: {
       url: string;
     };
@@ -18,9 +18,13 @@ export const PersonalWorks = ({
       url: string;
     };
     icon: "unsplash" | "youtube";
-  }>;
+  }[];
   className?: ClassValue;
 } & React.HTMLProps<HTMLDivElement>) => {
+  if (!works?.length) {
+    return null;
+  }
+
   const getIcon = (icon: string) => {
     if (icon === "unsplash") {
       return <IconUnsplash />;
@@ -29,7 +33,7 @@ export const PersonalWorks = ({
     }
   };
 
-  return !works?.length ? null : (
+  return (
     <div className={clsx(styles["c-personal-works"], className)} {...props}>
       <div className="grid">
         {works.map((work) => (
@@ -46,6 +50,8 @@ export const PersonalWorks = ({
                 <img
                   className={styles["c-personal-work__thumbnail"]}
                   src={work.thumbnailSrc?.url || work.thumbnailExternalSrc?.url}
+                  width={200}
+                  height={200}
                   alt={`Personal work on ${work.icon}`}
                   loading="lazy"
                 />

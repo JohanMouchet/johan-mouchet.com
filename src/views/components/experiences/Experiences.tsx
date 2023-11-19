@@ -9,7 +9,7 @@ export const Experiences = ({
   className,
   ...props
 }: {
-  experiences: Array<{
+  experiences: {
     companyLink: {
       url: string;
     };
@@ -22,10 +22,14 @@ export const Experiences = ({
     contractType?: string;
     lede: React.ComponentProps<typeof PrismicRichText>["field"];
     projects?: React.ComponentProps<typeof Projects>;
-  }>;
+  }[];
   className?: ClassValue;
-} & React.HTMLProps<HTMLDivElement>) =>
-  !experiences?.length ? null : (
+} & React.HTMLProps<HTMLDivElement>) => {
+  if (!experiences?.length) {
+    return null;
+  }
+
+  return (
     <div className={clsx(styles["c-experiences"], className)} {...props}>
       {experiences.map((experience) => {
         const startDate =
@@ -101,3 +105,4 @@ export const Experiences = ({
       })}
     </div>
   );
+};

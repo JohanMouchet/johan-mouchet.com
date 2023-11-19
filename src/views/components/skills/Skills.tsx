@@ -12,8 +12,12 @@ export const Skills = ({
     "label" | "filling" | "progress"
   >[];
   className?: ClassValue;
-} & React.HTMLProps<HTMLUListElement>) =>
-  !skills?.length ? null : (
+} & React.HTMLProps<HTMLUListElement>) => {
+  if (!skills?.length) {
+    return null;
+  }
+
+  return (
     <ul className={clsx(styles["o-list--unstyled"], className)} {...props}>
       {skills.map((skill) => (
         <li key={skill.label}>
@@ -28,3 +32,4 @@ export const Skills = ({
       ))}
     </ul>
   );
+};

@@ -4,8 +4,8 @@
 
 .o-blockquote {
   position: relative;
-  padding-left: 1em;
-  margin: t-vertical-rhythm(2, "em", t-modular-scale(1));
+  padding-left: 1rem;
+  margin: t-vertical-rhythm(2);
   font-size: t-modular-scale(1);
   color: $s-color-secondary;
 
@@ -44,12 +44,12 @@
     }
 
     &::before {
-      margin-right: 0.2em;
+      margin-right: 0.3rem;
       content: open-quote;
     }
 
     &::after {
-      margin-left: 0.2em;
+      margin-left: 0.3rem;
       content: close-quote;
     }
 

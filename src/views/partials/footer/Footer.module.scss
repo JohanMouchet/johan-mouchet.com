@@ -4,7 +4,7 @@
 
 .p-footer {
   position: relative;
-  padding: t-vertical-rhythm(1.2) 0;
+  padding: t-vertical-rhythm(1) 0;
   margin-top: auto;
   font-family: $s-font-family-mono;
   font-size: t-modular-scale(-1);
@@ -105,7 +105,7 @@
 
   &__page-top {
     display: inline-block;
-    padding: 0.3em;
+    padding: 0.25rem;
     line-height: 0;
     border: 2px solid $s-color-white;
     transition: opacity 0.2s ease-out, transform 0.1s ease-out;
@@ -113,8 +113,8 @@
     @include t-wekkit-hdpi-small-dimension("border-width", 2);
 
     svg {
-      width: t-modular-scale(2);
-      height: t-modular-scale(2);
+      width: t-modular-scale(1);
+      height: t-modular-scale(1);
       fill: $s-color-white;
       transform: rotate(180deg);
     }

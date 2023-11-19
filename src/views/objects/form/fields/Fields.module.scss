@@ -35,13 +35,13 @@
 
   /** Color **/
   &--color {
-    padding: 0 0.2em;
+    padding: 0 0.2rem;
   }
 
   /** Icons **/
   &--search,
   &--select:not([multiple]) {
-    $icon-space: 2em;
+    $icon-space: 2rem;
     $icon-size: t-modular-scale(1);
 
     padding-right: $icon-space;

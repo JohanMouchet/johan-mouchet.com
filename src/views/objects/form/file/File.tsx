@@ -7,15 +7,13 @@ export const File = ({
   id,
   name,
   multipleCaption,
-  label = "Upload",
-  children,
+  children = "Upload",
   className,
   ...props
 }: {
   id?: string;
   name: string;
   multipleCaption?: string;
-  label?: string;
   children?: React.ReactNode;
   className?: ClassValue;
 } & Omit<React.HTMLProps<HTMLInputElement>, "label">) => {
@@ -37,7 +35,7 @@ export const File = ({
         }
         {...props}
       />
-      <span className={styles["o-form__file-icon"]} aria-label={label}>
+      <span className={styles["o-form__file-icon"]}>
         <IconCloudUpload />
       </span>
       {children && (

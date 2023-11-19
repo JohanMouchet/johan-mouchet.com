@@ -32,14 +32,18 @@ export const FootnotesNotes = ({
   className,
   ...props
 }: {
-  notes: Array<{
+  notes: {
     id: string;
     text: string;
     label?: string;
-  }>;
+  }[];
   className?: ClassValue;
 } & Omit<React.HTMLProps<HTMLOListElement>, "type">) => {
-  return !notes?.length ? null : (
+  if (!notes?.length) {
+    return null;
+  }
+
+  return (
     <ol className={clsx(styles["o-footnotes"], className)} {...props}>
       {notes.map((note) => (
         <li

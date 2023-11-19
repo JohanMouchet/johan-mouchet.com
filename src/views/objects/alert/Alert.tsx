@@ -54,7 +54,7 @@ export const Alert = ({
     <div className={classNames} {...props}>
       <div className="grid grid-no-wrap">
         <div
-          className={clsx(styles["o-alert__icon"], "cell")}
+          className={clsx(styles["o-alert-icon"], "cell")}
           aria-label={variant}
         >
           {getIcon(variant)}

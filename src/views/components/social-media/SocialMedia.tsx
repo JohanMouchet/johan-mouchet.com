@@ -18,7 +18,7 @@ export const SocialMedia = ({
   className,
   ...props
 }: {
-  media: Array<{
+  media: {
     name: string;
     link: {
       url: string;
@@ -34,9 +34,13 @@ export const SocialMedia = ({
       | "twitter"
       | "unsplash"
       | "youtube";
-  }>;
+  }[];
   className?: ClassValue;
 } & Omit<React.HTMLProps<HTMLDivElement>, "media">) => {
+  if (!media?.length) {
+    return null;
+  }
+
   const getIcon = (icon: string) => {
     if (icon === "500px") {
       return <Icon500px />;
@@ -61,7 +65,7 @@ export const SocialMedia = ({
     }
   };
 
-  return !media?.length ? null : (
+  return (
     <div className={clsx("grid", className)} {...props}>
       {media.map((media) => (
         <div
