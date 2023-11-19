@@ -17,8 +17,12 @@ export const OpenSource = ({
     description: React.ComponentProps<typeof PrismicRichText>["field"];
   }[];
   className?: ClassValue;
-} & React.HTMLProps<HTMLDivElement>) =>
-  !projects?.length ? null : (
+} & React.HTMLProps<HTMLDivElement>) => {
+  if (!projects?.length) {
+    return null;
+  }
+
+  return (
     <div className={clsx(styles["c-open-sources"], className)} {...props}>
       <div className="grid">
         {projects.map((project) => {
@@ -62,3 +66,4 @@ export const OpenSource = ({
       </div>
     </div>
   );
+};

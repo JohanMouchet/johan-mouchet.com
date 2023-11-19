@@ -14,9 +14,13 @@ export const Breadcrumb = ({
   }>;
   className?: ClassValue;
 } & Omit<React.HTMLProps<HTMLOListElement>, "type">) => {
+  if (!levels?.length) {
+    return null;
+  }
+
   const lastLevel = levels?.length - 1;
 
-  return !levels?.length ? null : (
+  return (
     <>
       <ol className={clsx(styles["o-breadcrumb"], className)} {...props}>
         {levels.map((level, index) => (

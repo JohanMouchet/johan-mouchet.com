@@ -55,13 +55,17 @@ export const Select = ({
   options: Array<React.HTMLProps<HTMLOptionElement>>;
   className?: ClassValue;
 } & React.HTMLProps<HTMLSelectElement>) => {
+  if (!options?.length) {
+    return null;
+  }
+
   const classNames = clsx(
     styles["o-form__field"],
     styles["o-form__field--select"],
     className
   );
 
-  return !options?.length ? null : (
+  return (
     <select id={id} name={name} className={classNames} {...props}>
       {options.map((option, i) => (
         <option defaultValue={option.value} {...option} key={i}>

@@ -37,6 +37,10 @@ export const SocialMedia = ({
   }>;
   className?: ClassValue;
 } & Omit<React.HTMLProps<HTMLDivElement>, "media">) => {
+  if (!media?.length) {
+    return null;
+  }
+
   const getIcon = (icon: string) => {
     if (icon === "500px") {
       return <Icon500px />;
@@ -61,7 +65,7 @@ export const SocialMedia = ({
     }
   };
 
-  return !media?.length ? null : (
+  return (
     <div className={clsx("grid", className)} {...props}>
       {media.map((media) => (
         <div

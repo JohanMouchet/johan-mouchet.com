@@ -21,6 +21,10 @@ export const PersonalWorks = ({
   }>;
   className?: ClassValue;
 } & React.HTMLProps<HTMLDivElement>) => {
+  if (!works?.length) {
+    return null;
+  }
+
   const getIcon = (icon: string) => {
     if (icon === "unsplash") {
       return <IconUnsplash />;
@@ -29,7 +33,7 @@ export const PersonalWorks = ({
     }
   };
 
-  return !works?.length ? null : (
+  return (
     <div className={clsx(styles["c-personal-works"], className)} {...props}>
       <div className="grid">
         {works.map((work) => (

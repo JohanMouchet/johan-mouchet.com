@@ -25,12 +25,16 @@ export const Menu = ({
     isSubmenu?: boolean,
     className?: ClassValue
   ) => {
+    if (!menu?.length) {
+      return null;
+    }
+
     const classNames = clsx(
       isSubmenu ? styles["o-menu__submenu"] : styles["o-menu"],
       className
     );
 
-    return !menu?.length ? null : (
+    return (
       <ul className={classNames} {...props}>
         {menu.map((item) => (
           <li

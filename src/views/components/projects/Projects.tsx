@@ -33,6 +33,10 @@ export const Projects = ({
   projects: (Thumbnail & Content)[];
   className?: ClassValue;
 } & React.HTMLProps<HTMLDivElement>) => {
+  if (!projects?.length) {
+    return null;
+  }
+
   const renderThumbnail = (project: Thumbnail) => (
     <>
       <a href={project.link.url} className={styles["c-project__link"]}>
@@ -122,7 +126,7 @@ export const Projects = ({
     );
   };
 
-  return !projects?.length ? null : (
+  return (
     <div className={clsx(styles["c-projects"], className)} {...props}>
       <div className="grid">
         {projects.map((project) =>

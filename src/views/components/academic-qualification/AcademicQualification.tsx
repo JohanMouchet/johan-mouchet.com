@@ -16,8 +16,12 @@ export const AcademicQualification = ({
     title: string;
   }>;
   className?: ClassValue;
-} & React.HTMLProps<HTMLDivElement>) =>
-  !degrees?.length ? null : (
+} & React.HTMLProps<HTMLDivElement>) => {
+  if (!degrees?.length) {
+    return null;
+  }
+
+  return (
     <div
       className={clsx(styles["c-academic-qualifications"], className)}
       {...props}
@@ -49,3 +53,4 @@ export const AcademicQualification = ({
       ))}
     </div>
   );
+};

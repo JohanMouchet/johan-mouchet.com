@@ -12,7 +12,11 @@ export const Tabs = ({
   }>;
   className?: ClassValue;
 } & React.HTMLProps<HTMLDivElement>) => {
-  return !tabs?.length ? null : (
+  if (!tabs?.length) {
+    return null;
+  }
+
+  return (
     <div className={clsx(styles["o-tabs"], className)} {...props}>
       <ul className={styles["o-tabs__thumbs"]}>
         {tabs.map((tab, index) => (
