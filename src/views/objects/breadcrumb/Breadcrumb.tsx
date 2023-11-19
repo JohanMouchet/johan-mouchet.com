@@ -6,12 +6,12 @@ export const Breadcrumb = ({
   className,
   ...props
 }: {
-  levels: Array<{
+  levels: {
     title: string;
     link: {
       url: string;
     };
-  }>;
+  }[];
   className?: ClassValue;
 } & Omit<React.HTMLProps<HTMLOListElement>, "type">) => {
   if (!levels?.length) {

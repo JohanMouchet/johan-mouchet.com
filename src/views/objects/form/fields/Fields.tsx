@@ -52,7 +52,7 @@ export const Select = ({
 }: {
   id?: string;
   name: string;
-  options: Array<React.HTMLProps<HTMLOptionElement>>;
+  options: React.HTMLProps<HTMLOptionElement>[];
   className?: ClassValue;
 } & React.HTMLProps<HTMLSelectElement>) => {
   if (!options?.length) {

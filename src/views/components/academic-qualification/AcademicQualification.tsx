@@ -6,7 +6,7 @@ export const AcademicQualification = ({
   className,
   ...props
 }: {
-  degrees: Array<{
+  degrees: {
     establishmentName: string;
     establishmentLink: {
       url: string;
@@ -14,7 +14,7 @@ export const AcademicQualification = ({
     location: string;
     graduationYear: number;
     title: string;
-  }>;
+  }[];
   className?: ClassValue;
 } & React.HTMLProps<HTMLDivElement>) => {
   if (!degrees?.length) {

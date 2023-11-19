@@ -6,10 +6,10 @@ export const Tabs = ({
   className,
   ...props
 }: {
-  tabs: Array<{
+  tabs: {
     thumb: string;
     panel: string;
-  }>;
+  }[];
   className?: ClassValue;
 } & React.HTMLProps<HTMLDivElement>) => {
   if (!tabs?.length) {

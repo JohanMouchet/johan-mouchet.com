@@ -32,11 +32,11 @@ export const FootnotesNotes = ({
   className,
   ...props
 }: {
-  notes: Array<{
+  notes: {
     id: string;
     text: string;
     label?: string;
-  }>;
+  }[];
   className?: ClassValue;
 } & Omit<React.HTMLProps<HTMLOListElement>, "type">) => {
   if (!notes?.length) {

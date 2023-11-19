@@ -7,7 +7,7 @@ export const PersonalWorks = ({
   className,
   ...props
 }: {
-  works: Array<{
+  works: {
     link: {
       url: string;
     };
@@ -18,7 +18,7 @@ export const PersonalWorks = ({
       url: string;
     };
     icon: "unsplash" | "youtube";
-  }>;
+  }[];
   className?: ClassValue;
 } & React.HTMLProps<HTMLDivElement>) => {
   if (!works?.length) {
