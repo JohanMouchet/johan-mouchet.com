@@ -391,7 +391,6 @@ const homeQuery = gql`
               highlight
               achievements
               architecture
-              libraries
             }
           }
         }

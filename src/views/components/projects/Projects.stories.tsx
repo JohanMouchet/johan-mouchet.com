@@ -44,13 +44,6 @@ export const Example = {
             spans: [],
           },
         ],
-        libraries: [
-          {
-            type: Element.paragraph,
-            text: "Library 1, Library 2, Library 3",
-            spans: [],
-          },
-        ],
       },
     ],
   },

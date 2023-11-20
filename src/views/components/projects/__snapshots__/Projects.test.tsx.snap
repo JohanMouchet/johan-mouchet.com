@@ -26,8 +26,10 @@ exports[`Renders <Projects /> without crashing 1`] = `
               <img
                 alt=""
                 class="c-project__thumbnail"
+                height="225"
                 loading="lazy"
                 src="https://via.placeholder.com/400x225"
+                width="400"
               />
               <div
                 class="c-project__overlay"
@@ -88,22 +90,6 @@ exports[`Renders <Projects /> without crashing 1`] = `
               >
                 <p>
                   Architecture
-                </p>
-              </div>
-            </div>
-            <div
-              class="c-project__detail"
-            >
-              <b
-                class="c-project__detail-heading"
-              >
-                Library
-              </b>
-              <div
-                class="c-project__detail-list"
-              >
-                <p>
-                  Library
                 </p>
               </div>
             </div>
