@@ -22,23 +22,23 @@ export const duration = (
     const displayMinimumLabel = years + months <= 0;
 
     if (format === "short") {
-      const yearsFormated = years >= 1 ? pluralize(`${years} yr`, years) : "";
-      const monthsFormated =
+      const yearsFormatted = years >= 1 ? pluralize(`${years} yr`, years) : "";
+      const monthsFormatted =
         months >= 1 ? pluralize(`${months} mo`, months) : "";
 
       return !displayMinimumLabel
-        ? `${yearsFormated}${
-            yearsFormated && monthsFormated && " "
-          }${monthsFormated}`
+        ? `${yearsFormatted}${
+            yearsFormatted && monthsFormatted && " "
+          }${monthsFormatted}`
         : minimumLabel;
     }
 
     if (format === "iso8601") {
-      const yearsFormated = years >= 1 ? `${years}Y` : "";
-      const monthsFormated = months >= 1 ? `${months}M` : "";
+      const yearsFormatted = years >= 1 ? `${years}Y` : "";
+      const monthsFormatted = months >= 1 ? `${months}M` : "";
 
       return !displayMinimumLabel
-        ? `P${yearsFormated}${monthsFormated}`
+        ? `P${yearsFormatted}${monthsFormatted}`
         : minimumLabel;
     }
   }
