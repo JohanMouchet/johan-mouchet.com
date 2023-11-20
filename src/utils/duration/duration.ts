@@ -31,7 +31,9 @@ export const duration = (
             yearsFormated && monthsFormated && " "
           }${monthsFormated}`
         : minimumLabel;
-    } else {
+    }
+
+    if (format === "iso8601") {
       const yearsFormated = years >= 1 ? `${years}Y` : "";
       const monthsFormated = months >= 1 ? `${months}M` : "";
 
@@ -39,7 +41,7 @@ export const duration = (
         ? `P${yearsFormated}${monthsFormated}`
         : minimumLabel;
     }
-  } else {
-    throw new Error("startDate must be anterior to endDate");
   }
+
+  throw new Error("startDate must be anterior to endDate");
 };
