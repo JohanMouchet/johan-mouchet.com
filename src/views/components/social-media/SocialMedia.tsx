@@ -6,8 +6,8 @@ import {
   IconInstagram,
   IconLinkedIn,
   IconSpotify,
-  IconTwitter,
   IconUnsplash,
+  IconXCom,
   IconYoutube,
 } from "@/views/objects/icons";
 import clsx, { ClassValue } from "clsx";
@@ -31,7 +31,7 @@ export const SocialMedia = ({
       | "instagram"
       | "linkedin"
       | "spotify"
-      | "twitter"
+      | "xcom"
       | "unsplash"
       | "youtube";
   }[];
@@ -56,8 +56,8 @@ export const SocialMedia = ({
       return <IconLinkedIn />;
     } else if (icon === "spotify") {
       return <IconSpotify />;
-    } else if (icon === "twitter") {
-      return <IconTwitter />;
+    } else if (icon === "xcom") {
+      return <IconXCom />;
     } else if (icon === "unsplash") {
       return <IconUnsplash />;
     } else if (icon === "youtube") {

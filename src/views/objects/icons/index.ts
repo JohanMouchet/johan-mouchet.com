@@ -6,8 +6,8 @@ export { default as IconGithub } from "./svg/social/github.svg";
 export { default as IconInstagram } from "./svg/social/instagram.svg";
 export { default as IconLinkedIn } from "./svg/social/linkedin.svg";
 export { default as IconSpotify } from "./svg/social/spotify.svg";
-export { default as IconTwitter } from "./svg/social/twitter.svg";
 export { default as IconUnsplash } from "./svg/social/unsplash.svg";
+export { default as IconXCom } from "./svg/social/xcom.svg";
 export { default as IconYoutube } from "./svg/social/youtube.svg";
 // UI (from Bootstrap Icons)
 export { default as IconArrowReturn } from "./svg/ui/arrow-return-left.svg";
