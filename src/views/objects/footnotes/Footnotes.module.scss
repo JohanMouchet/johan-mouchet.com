@@ -29,7 +29,8 @@
     text-decoration: none;
 
     svg {
-      font-size: t-modular-scale(1);
+      width: t-modular-scale(1);
+      height: t-modular-scale(1);
       vertical-align: middle;
     }
   }
