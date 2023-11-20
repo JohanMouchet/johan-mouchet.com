@@ -8,10 +8,10 @@ exports[`Renders <Footer /> without crashing 1`] = `
     class="container"
   >
     <div
-      class="grid grid--yCenter-@xs grid--noWrap-@xs"
+      class="grid grid-y-center grid-no-wrap"
     >
       <div
-        class="cell cell--0-@xs"
+        class="cell cell-shrink"
       >
         <span
           class="p-footer__version"
@@ -20,12 +20,12 @@ exports[`Renders <Footer /> without crashing 1`] = `
         </span>
       </div>
       <div
-        class="cell cell--@xs"
+        class="cell cell-grow"
       >
         <p
           class="p-footer__copyright"
         >
-          2021
+          2023
            © 
           Copyright
            
@@ -46,16 +46,14 @@ exports[`Renders <Footer /> without crashing 1`] = `
         </p>
       </div>
       <div
-        class="cell cell--0-@xs"
+        class="cell cell-shrink"
       >
         <a
           aria-label="Top Button Label"
           class="p-footer__page-top"
           href="#page-top"
         >
-          <svg>
-            chevron-down.svg
-          </svg>
+          <svg />
         </a>
       </div>
     </div>

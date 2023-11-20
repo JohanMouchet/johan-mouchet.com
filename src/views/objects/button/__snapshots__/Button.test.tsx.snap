@@ -2,7 +2,7 @@
 
 exports[`Renders <Button /> without crashing 1`] = `
 <a
-  class="o-button o-button--sm o-button--primary o-button--block-@sm"
+  class="o-button o-button--sm o-button--primary sm:o-button--block"
   href="#"
 >
   children

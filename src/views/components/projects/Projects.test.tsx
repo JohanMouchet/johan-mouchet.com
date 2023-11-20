@@ -38,13 +38,6 @@ it("Renders <Projects /> without crashing", () => {
                 spans: [],
               },
             ],
-            libraries: [
-              {
-                type: Element.paragraph,
-                text: "Library",
-                spans: [],
-              },
-            ],
           },
         ]}
       />

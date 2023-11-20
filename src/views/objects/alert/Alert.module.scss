@@ -11,11 +11,10 @@
   animation-duration: 0.3s;
 
   /* Icon */
-  &-icon {
+  &__icon {
     flex-shrink: 0;
 
     svg {
-      font-size: t-modular-scale(1);
       vertical-align: middle;
     }
   }
@@ -49,7 +48,8 @@
       @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
 
       svg {
-        font-size: t-modular-scale(1);
+        width: t-modular-scale(1);
+        height: t-modular-scale(1);
         vertical-align: middle;
       }
     }

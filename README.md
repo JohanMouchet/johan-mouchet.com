@@ -8,15 +8,15 @@ Johan Mouchet's portfolio, open sourced on [GitHub](https://github.com/JohanMouc
 
 This website is,
 
-- bootstrapped with Next.js
-- built with React
-- pulling data from Prismic using [GraphQL](https://johan-mouchet.prismic.io/graphql) and Apollo
-- maintaining a design system with [Storybook](https://www.johan-mouchet.com/storybook/?path=/docs/about-getting-started--page)
-- type-checked with TypeScript
-- unit and snapshot tested with Jest and React Testing Library
-- using CSS Modules, Sass and post-processing
-- linted with ESlint and Stylelint; formatted with Prettier; enforced by Husky and lint-staged
-- deployed, pre-rendered, with Netlify
+- Bootstrapped with Next.js
+- Built with React
+- Pulling data from Prismic using [GraphQL](https://johan-mouchet.prismic.io/graphql) and Apollo
+- Maintaining a design system with [Storybook](https://www.johan-mouchet.com/storybook/?path=/docs/about-getting-started--page)
+- Type-checked with TypeScript
+- Unit and snapshot tested with Jest and React Testing Library
+- Using CSS Modules, Sass and post-processing
+- Linted with ESlint and Stylelint; formatted with Prettier; enforced by Husky and lint-staged
+- Deployed, pre-rendered, with Netlify
 
 ## npm Scripts
 

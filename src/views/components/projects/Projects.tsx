@@ -54,12 +54,10 @@ const Thumbnail = ({
 const Content = ({
   achievements,
   architecture,
-  libraries,
 }: {
   highlight?: boolean;
   achievements?: React.ComponentProps<typeof PrismicRichText>["field"];
   architecture?: React.ComponentProps<typeof PrismicRichText>["field"];
-  libraries?: React.ComponentProps<typeof PrismicRichText>["field"];
 }) => {
   const achievementPreformatted = achievements?.[0]?.type === "preformatted";
   const achievementQuantity = achievementPreformatted
@@ -96,17 +94,6 @@ const Content = ({
           <b className={styles["c-project__detail-heading"]}>Architecture</b>
           <div className={styles["c-project__detail-list"]}>
             <PrismicRichText field={architecture} />
-          </div>
-        </div>
-      )}
-
-      {libraries && (
-        <div className={styles["c-project__detail"]}>
-          <b className={styles["c-project__detail-heading"]}>
-            {pluralize("Library", asText(libraries)?.split(", ").length || 1)}
-          </b>
-          <div className={styles["c-project__detail-list"]}>
-            <PrismicRichText field={libraries} />
           </div>
         </div>
       )}
@@ -156,7 +143,6 @@ export const Projects = ({
                     <Content
                       achievements={project.achievements}
                       architecture={project.architecture}
-                      libraries={project.libraries}
                     />
                   </div>
                 </div>
@@ -178,15 +164,12 @@ export const Projects = ({
                   lede={project.lede}
                   thumbnailSrc={project.thumbnailSrc}
                 />
-                {(project.achievements ||
-                  project.architecture ||
-                  project.libraries) && (
+                {(project.achievements || project.architecture) && (
                   <Details summary="Learn more" variant="compact">
                     <div className={styles["c-project__details"]}>
                       <Content
                         achievements={project.achievements}
                         architecture={project.architecture}
-                        libraries={project.libraries}
                       />
                     </div>
                   </Details>

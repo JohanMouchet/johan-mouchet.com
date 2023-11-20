@@ -38,7 +38,7 @@ export const PersonalWorks = ({
       <div className="grid">
         {works.map((work) => (
           <div
-            className="cell cell-6 sm:cell-4 md:cell-2 u-vr--bottom-1-@xs u-vr--bottom-0-@md"
+            className="cell cell-6 sm:cell-4 md:cell-2 u-vr--bottom-1 md:u-vr--bottom-0"
             key={work.link.url}
           >
             <section className={styles["c-personal-work"]}>

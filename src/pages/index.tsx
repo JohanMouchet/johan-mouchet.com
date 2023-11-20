@@ -1,4 +1,5 @@
 import { AcademicQualification } from "@/views/components/academic-qualification/AcademicQualification";
+import { ExperienceDuration } from "@/views/components/experience-duration/ExperienceDuration";
 import { Experiences } from "@/views/components/experiences/Experiences";
 import { OpenSource } from "@/views/components/open-source/OpenSource";
 import { PersonalWorks } from "@/views/components/personal-works/PersonalWorks";
@@ -199,7 +200,7 @@ const Home: NextPage = ({ data, errors }: any) => {
 
                   <SocialMedia media={data.profile.socialNetworks} />
                 </Article>
-                <div className="u-vr--top-2-@xs" />
+                <div className="u-vr--top-2" />
               </div>
 
               <div className="cell cell-12 md:cell-9">
@@ -207,7 +208,10 @@ const Home: NextPage = ({ data, errors }: any) => {
                   <h2>
                     <Anchor id="career-experiences">
                       {data.home.careerExperiencesSectionTitle}
-                    </Anchor>
+                    </Anchor>{" "}
+                    <ExperienceDuration
+                      experiences={data.careerExperiences.experiences}
+                    />
                   </h2>
 
                   <Experiences
@@ -255,7 +259,7 @@ const Home: NextPage = ({ data, errors }: any) => {
                       <Button
                         type="anchor"
                         url={`mailto:${data.profile.email}`}
-                        block="@sm"
+                        block="sm"
                       >
                         {data.profile.email}
                       </Button>
@@ -273,7 +277,7 @@ const Home: NextPage = ({ data, errors }: any) => {
                           )?.link?.url
                         }
                         variant="linkedin"
-                        block="@sm"
+                        block="sm"
                       >
                         LinkedIn
                       </Button>
@@ -391,7 +395,6 @@ const homeQuery = gql`
               highlight
               achievements
               architecture
-              libraries
             }
           }
         }

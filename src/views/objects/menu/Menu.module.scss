@@ -30,6 +30,8 @@
 
   /*** Item has children ***/
   &__item--has-children > &__link svg {
+    width: t-modular-scale(1);
+    height: t-modular-scale(1);
     margin-left: 0.5rem;
     vertical-align: middle;
     fill: $s-color-secondary;

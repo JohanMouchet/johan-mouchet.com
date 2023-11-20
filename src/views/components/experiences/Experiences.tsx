@@ -82,8 +82,18 @@ export const Experiences = ({
               </span>{" "}
               <span className={styles["c-experience__duration"]}>
                 (
-                <time dateTime={duration(startDate, endDate, "iso8601", "1M")}>
-                  {duration(startDate, endDate, "short", "1 mo")}
+                <time
+                  dateTime={duration(
+                    [{ start: startDate, end: endDate }],
+                    "iso8601",
+                    "1M"
+                  )}
+                >
+                  {duration(
+                    [{ start: startDate, end: endDate }],
+                    "short",
+                    "1 mo"
+                  )}
                 </time>
                 )
               </span>

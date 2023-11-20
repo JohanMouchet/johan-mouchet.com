@@ -8,8 +8,8 @@ import {
   IconInstagram,
   IconLinkedIn,
   IconSpotify,
-  IconTwitter,
   IconUnsplash,
+  IconXCom,
   IconYoutube,
 } from ".";
 import styles from "./IconsStories.module.scss";
@@ -33,7 +33,7 @@ export const Example = {
           IconInstagram,
           IconLinkedIn,
           IconSpotify,
-          IconTwitter,
+          IconXCom,
           IconUnsplash,
           IconYoutube,
         ].map((Icon, index) => (

@@ -4,7 +4,8 @@
 .o-form__file {
   &-icon {
     svg {
-      font-size: t-modular-scale(1);
+      width: t-modular-scale(1);
+      height: t-modular-scale(1);
       vertical-align: middle;
     }
   }

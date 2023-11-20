@@ -42,11 +42,11 @@
 
 /* Print */
 @media print {
-  .u-is-hidden-\@print {
+  .print\:u-is-hidden {
     display: none;
   }
 
-  .u-is-shown-\@print {
+  .print\:u-is-shown {
     display: block;
     display: initial;
   }
