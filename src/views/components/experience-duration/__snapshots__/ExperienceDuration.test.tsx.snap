@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <ExperienceDuration /> without crashing 1`] = `
+<span
+  class="c-experience-duration"
+>
+  1 yr
+</span>
+`;

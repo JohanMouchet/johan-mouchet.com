@@ -1,4 +1,5 @@
 import { AcademicQualification } from "@/views/components/academic-qualification/AcademicQualification";
+import { ExperienceDuration } from "@/views/components/experience-duration/ExperienceDuration";
 import { Experiences } from "@/views/components/experiences/Experiences";
 import { OpenSource } from "@/views/components/open-source/OpenSource";
 import { PersonalWorks } from "@/views/components/personal-works/PersonalWorks";
@@ -207,7 +208,10 @@ const Home: NextPage = ({ data, errors }: any) => {
                   <h2>
                     <Anchor id="career-experiences">
                       {data.home.careerExperiencesSectionTitle}
-                    </Anchor>
+                    </Anchor>{" "}
+                    <ExperienceDuration
+                      experiences={data.careerExperiences.experiences}
+                    />
                   </h2>
 
                   <Experiences
