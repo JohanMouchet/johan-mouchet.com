@@ -3,7 +3,9 @@
 @import "@/assets/styles/settings/settings.module";
 @import "@/assets/styles/tools/tools.module";
 
-.o-button {
+$class: o-button;
+
+.#{$class} {
   $height: t-vertical-rhythm(1.75) !default;
   $border-width: 2px !default;
   $h-padding: $height / 1.75;
@@ -166,13 +168,13 @@
   }
 
   @media (max-width: map.get($s-breakpoints, sm)) {
-    &--block-\@sm {
+    @at-root .sm\:#{$class}--block {
       width: 100%;
     }
   }
 
   @media (max-width: map.get($s-breakpoints, md)) {
-    &--block-\@md {
+    @at-root .md\:#{$class}--block {
       width: 100%;
     }
   }

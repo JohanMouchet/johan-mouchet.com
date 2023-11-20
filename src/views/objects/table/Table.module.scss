@@ -2,8 +2,10 @@
 @import "@/assets/styles/settings/settings.module";
 @import "@/assets/styles/tools/tools.module";
 
+$class: o-table;
+
 /* stylelint-disable selector-max-type, no-descending-specificity */
-.o-table {
+.#{$class} {
   $root: &;
   $v-padding: t-vertical-rhythm(0.375) !default;
   $h-padding: $v-padding * 2;
@@ -221,7 +223,7 @@
 
   /** Responsive **/
   @media screen and (max-width: map.get($s-breakpoints, md)) {
-    &--responsive-\@md {
+    @at-root .md\:#{$class}--responsive {
       display: inline-block;
       max-width: 100%;
       overflow-x: auto;

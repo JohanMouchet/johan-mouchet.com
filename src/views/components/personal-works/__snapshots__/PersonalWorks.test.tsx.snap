@@ -8,7 +8,7 @@ exports[`Renders <PersonalWorks /> without crashing 1`] = `
     class="grid"
   >
     <div
-      class="cell cell-6 sm:cell-4 md:cell-2 u-vr--bottom-1-@xs u-vr--bottom-0-@md"
+      class="cell cell-6 sm:cell-4 md:cell-2 u-vr--bottom-1 md:u-vr--bottom-0"
     >
       <section
         class="c-personal-work"

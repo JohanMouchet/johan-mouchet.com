@@ -199,7 +199,7 @@ const Home: NextPage = ({ data, errors }: any) => {
 
                   <SocialMedia media={data.profile.socialNetworks} />
                 </Article>
-                <div className="u-vr--top-2-@xs" />
+                <div className="u-vr--top-2" />
               </div>
 
               <div className="cell cell-12 md:cell-9">
@@ -255,7 +255,7 @@ const Home: NextPage = ({ data, errors }: any) => {
                       <Button
                         type="anchor"
                         url={`mailto:${data.profile.email}`}
-                        block="@sm"
+                        block="sm"
                       >
                         {data.profile.email}
                       </Button>
@@ -273,7 +273,7 @@ const Home: NextPage = ({ data, errors }: any) => {
                           )?.link?.url
                         }
                         variant="linkedin"
-                        block="@sm"
+                        block="sm"
                       >
                         LinkedIn
                       </Button>

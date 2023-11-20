@@ -15,7 +15,7 @@ export const Button = ({
   url?: string;
   variant?: "primary" | "secondary" | "linkedin";
   size?: "sm" | "lg";
-  block?: boolean | "@sm" | "@md";
+  block?: boolean | "sm" | "md";
   children?: React.ReactNode;
   className?: ClassValue;
 }) => {
@@ -25,9 +25,9 @@ export const Button = ({
     variant && styles[`o-button--${variant}`],
     block &&
       styles[
-        `o-button--block${
-          typeof block === "string" ? `-${block}` : block === true && ""
-        }`
+        `${
+          typeof block === "string" ? `${block}:` : block === true && ""
+        }o-button--block`
       ],
     className
   );

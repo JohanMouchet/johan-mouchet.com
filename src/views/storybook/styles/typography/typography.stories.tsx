@@ -174,7 +174,7 @@ export const Headings = {
               <tr key={level}>
                 <th>{level}</th>
                 <td>
-                  <Tag className={`u-heading--${level} u-vr--bottom-0-@xs`}>
+                  <Tag className={`u-heading--${level} u-vr--bottom-0`}>
                     {input}
                   </Tag>
                 </td>
@@ -256,7 +256,7 @@ export const Formatting = {
             {
               tag: "<p>",
               preview: (
-                <p className="u-vr--bottom-0-@xs">
+                <p className="u-vr--bottom-0">
                   {input || "The quick brown fox jumps over the lazy dog."}
                 </p>
               ),

@@ -37,7 +37,7 @@ export const Table = ({
     variant && styles[`o-table--${variant}`],
     hover && !vertical && styles["o-table--hover"],
     size && styles[`o-table--${size}`],
-    responsive && styles["o-table--responsive-@md"],
+    responsive && styles["md:o-table--responsive"],
     className
   );
 
