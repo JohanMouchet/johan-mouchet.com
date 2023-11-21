@@ -37,7 +37,7 @@ const Home: NextPage = ({ data, errors }: any) => {
       <Default>
         <Main margin="no-margin">
           <section className={styles["home-about"]}>
-            <div className="container container-cancel-lg-grid">
+            <div className="container">
               <div className="grid grid-lg-gutter">
                 <div className="cell cell-12 sm:cell-6">
                   <h2 className={styles["home-about__heading"]}>
@@ -111,8 +111,10 @@ const Home: NextPage = ({ data, errors }: any) => {
               </div>
             </div>
           </section>
-          <section className="container container-cancel-lg-grid">
-            <div className="grid grid-lg-gutter">
+          <section>
+            <div
+              className={clsx("grid", "grid-no-gutter", styles["home-body"])}
+            >
               <div
                 className={clsx(
                   styles["home-cell--gray-lighter"],

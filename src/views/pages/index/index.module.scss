@@ -1,3 +1,4 @@
+@use "sass:map";
 @import "@/assets/styles/settings/settings.module";
 @import "@/assets/styles/tools/tools.module";
 
@@ -23,6 +24,18 @@
       margin-top: t-vertical-rhythm(1);
       margin-bottom: t-vertical-rhythm(1);
       border-radius: 50%;
+    }
+  }
+
+  &-body {
+    > :global(.cell) {
+      padding-right: 1.6rem;
+      padding-left: 1.6rem;
+
+      @media (min-width: map.get($s-breakpoints, lg)) {
+        padding-right: 3.2rem;
+        padding-left: 3.2rem;
+      }
     }
   }
 
