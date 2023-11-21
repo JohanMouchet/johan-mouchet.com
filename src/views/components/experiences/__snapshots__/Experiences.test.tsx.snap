@@ -48,11 +48,7 @@ exports[`Renders <Experiences /> without crashing 1`] = `
         class="c-experience__duration"
       >
         (
-        <time
-          datetime="P1Y"
-        >
-          1 yr
-        </time>
+        1 yr
         )
       </span>
       <span

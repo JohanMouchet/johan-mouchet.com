@@ -82,19 +82,11 @@ export const Experiences = ({
               </span>{" "}
               <span className={styles["c-experience__duration"]}>
                 (
-                <time
-                  dateTime={duration(
-                    [{ start: startDate, end: endDate }],
-                    "iso8601",
-                    "1M"
-                  )}
-                >
-                  {duration(
-                    [{ start: startDate, end: endDate }],
-                    "short",
-                    "1 mo"
-                  )}
-                </time>
+                {duration(
+                  [{ start: startDate, end: endDate }],
+                  "short",
+                  "1 mo"
+                )}
                 )
               </span>
               {experience.contractType && (
