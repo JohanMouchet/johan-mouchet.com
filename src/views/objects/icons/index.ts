@@ -18,5 +18,7 @@ export { default as IconCloudUpload } from "./svg/ui/cloud-upload.svg";
 export { default as IconExclamationCircle } from "./svg/ui/exclamation-circle.svg";
 export { default as IconExclamationTriangle } from "./svg/ui/exclamation-triangle.svg";
 export { default as IconInfoCircle } from "./svg/ui/info-circle.svg";
+export { default as IconMinus } from "./svg/ui/minus.svg";
+export { default as IconPlus } from "./svg/ui/plus.svg";
 export { default as IconSearch } from "./svg/ui/search.svg";
 export { default as IconX } from "./svg/ui/x.svg";

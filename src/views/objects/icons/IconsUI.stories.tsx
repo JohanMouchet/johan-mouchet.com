@@ -9,6 +9,8 @@ import {
   IconExclamationCircle,
   IconExclamationTriangle,
   IconInfoCircle,
+  IconMinus,
+  IconPlus,
   IconSearch,
   IconX,
 } from ".";
@@ -34,6 +36,8 @@ export const Example = {
           IconExclamationCircle,
           IconExclamationTriangle,
           IconInfoCircle,
+          IconMinus,
+          IconPlus,
           IconSearch,
           IconX,
         ].map((Icon, index) => (
