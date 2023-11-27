@@ -124,9 +124,17 @@
   }
 
   &--highlighted {
+    position: relative;
     padding: t-vertical-rhythm(1) $fluxgrid-gutter 0;
     margin-bottom: t-vertical-rhythm(1);
     background-color: $s-color-gray-lighter;
     border-radius: 6px;
+  }
+
+  &__highlight-icon {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    color: $s-color-text-dimmed;
   }
 }
