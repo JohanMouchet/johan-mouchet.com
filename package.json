@@ -15,7 +15,8 @@
     "build": "next build",
     "build:storybook": "storybook build",
     "build:all": "pnpm build && pnpm build:storybook",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "chromatic": "chromatic --exit-zero-on-changes --build-script-name=build:storybook"
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [
@@ -61,6 +62,7 @@
     "@types/node": "^18.15.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "chromatic": "^9.1.0",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.3",
     "eslint": "^8.36.0",

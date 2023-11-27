@@ -2,12 +2,15 @@ import type { Meta, StoryObj } from "@storybook/react";
 import clsx from "clsx";
 import {
   IconArrowReturn,
+  IconBookmark,
   IconCheckCircle,
   IconChevronDown,
   IconCloudUpload,
   IconExclamationCircle,
   IconExclamationTriangle,
   IconInfoCircle,
+  IconMinus,
+  IconPlus,
   IconSearch,
   IconX,
 } from ".";
@@ -26,12 +29,15 @@ export const Example = {
       <div className="grid u-align--center grid-no-gutter">
         {[
           IconArrowReturn,
+          IconBookmark,
           IconCheckCircle,
           IconChevronDown,
           IconCloudUpload,
           IconExclamationCircle,
           IconExclamationTriangle,
           IconInfoCircle,
+          IconMinus,
+          IconPlus,
           IconSearch,
           IconX,
         ].map((Icon, index) => (

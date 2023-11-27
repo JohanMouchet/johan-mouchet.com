@@ -7,14 +7,24 @@
   margin: t-vertical-rhythm(1) 0;
   border-bottom: 1px solid $s-color-gray;
 
+  &__marker {
+    width: t-modular-scale(0);
+    height: t-modular-scale(0);
+  }
+
   &[open] {
     #{$root}__summary {
-      font-weight: 500;
       color: $s-color-link;
+    }
 
-      &::after {
-        content: " -";
-      }
+    #{$root}__marker-close {
+      display: none;
+    }
+  }
+
+  &:not([open]) {
+    #{$root}__marker-open {
+      display: none;
     }
   }
 
@@ -22,14 +32,17 @@
   &__summary {
     @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
 
-    display: block;
+    display: flex;
+    column-gap: 0.4rem;
+    align-items: center;
     padding: t-vertical-rhythm(0.5) 0;
     margin: 0;
     cursor: pointer;
     outline: 0;
 
-    &::after {
-      content: " +";
+    &::marker,
+    &::-webkit-details-marker {
+      display: none;
     }
   }
 

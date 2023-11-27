@@ -52,11 +52,7 @@ exports[`Renders <Default /> without crashing 1`] = `
         <h2
           class="p-header__tagline"
         >
-          Never stop exploring,
-          <br
-            class="p-header__tagline-breaker"
-          />
-           never stop creating
+          Design System Architect
         </h2>
       </div>
     </header>

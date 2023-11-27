@@ -11,11 +11,14 @@ export { default as IconXCom } from "./svg/social/xcom.svg";
 export { default as IconYoutube } from "./svg/social/youtube.svg";
 // UI (from Phosphor Icons)
 export { default as IconArrowReturn } from "./svg/ui/arrow-return-left.svg";
+export { default as IconBookmark } from "./svg/ui/bookmark.svg";
 export { default as IconCheckCircle } from "./svg/ui/check-circle.svg";
 export { default as IconChevronDown } from "./svg/ui/chevron-down.svg";
 export { default as IconCloudUpload } from "./svg/ui/cloud-upload.svg";
 export { default as IconExclamationCircle } from "./svg/ui/exclamation-circle.svg";
 export { default as IconExclamationTriangle } from "./svg/ui/exclamation-triangle.svg";
 export { default as IconInfoCircle } from "./svg/ui/info-circle.svg";
+export { default as IconMinus } from "./svg/ui/minus.svg";
+export { default as IconPlus } from "./svg/ui/plus.svg";
 export { default as IconSearch } from "./svg/ui/search.svg";
 export { default as IconX } from "./svg/ui/x.svg";

@@ -1,6 +1,7 @@
 import { parse } from "@/utils/parse/parse";
 import { pluralize } from "@/utils/pluralize/pluralize";
 import { Details } from "@/views/objects/details/Details";
+import { IconBookmark } from "@/views/objects/icons";
 import { asText } from "@prismicio/helpers";
 import { PrismicRichText } from "@prismicio/react";
 import clsx, { ClassValue } from "clsx";
@@ -129,6 +130,10 @@ export const Projects = ({
                   styles["c-project--highlighted"]
                 )}
               >
+                <IconBookmark
+                  className={styles["c-project__highlight-icon"]}
+                  aria-label="Featured"
+                />
                 <div className="grid">
                   <div className="cell cell-12 sm:cell-6 lg:cell-4">
                     <Thumbnail

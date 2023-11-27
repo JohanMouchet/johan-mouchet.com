@@ -178,10 +178,4 @@
       }
     }
   }
-
-  &__tagline-breaker {
-    @media (min-width: map.get($s-breakpoints, md)) {
-      display: none;
-    }
-  }
 }
