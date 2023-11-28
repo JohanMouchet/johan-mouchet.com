@@ -33,3 +33,4 @@ In the project directory, you can `pnpm` + :
 - `build`: Builds the app for production to the `.next` folder.
 - `build:storybook`: Builds Storybook for production to the `storybook-static` folder.
 - `build:all`: Builds both the app and Storybook for production to the respective folders.
+- `codegen`: Generates TypeScript types for the Prismic GraphQL schema, requires to set a `PRISMIC_CUSTOM_TYPES_API_TOKEN` environment variable.
