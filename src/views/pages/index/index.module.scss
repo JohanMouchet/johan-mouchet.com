@@ -4,30 +4,29 @@
 
 .home {
   &-about {
-    border-bottom: 1px solid $s-color-gray-lighter;
-
     &__heading {
-      margin-top: t-vertical-rhythm(2);
-      text-align: center;
+      margin-top: t-vertical-rhythm(3);
+      text-transform: none;
     }
 
     &__paragraph {
-      padding-right: 8%;
-      padding-left: 8%;
-      margin-bottom: t-vertical-rhythm(2);
-      text-align: center;
+      max-width: 56rem;
+      margin-bottom: t-vertical-rhythm(3);
+      font-size: t-modular-scale(1);
+      line-height: 1.5;
+      text-wrap: balance;
     }
 
     &__portrait {
       display: block;
-      max-height: 150px;
-      margin-top: t-vertical-rhythm(1);
-      margin-bottom: t-vertical-rhythm(1);
+      width: 150px;
+      margin-top: t-vertical-rhythm(2);
+      margin-bottom: t-vertical-rhythm(2);
       border-radius: 50%;
     }
   }
 
-  &-body {
+  &-lg-gutter {
     > :global(.cell) {
       padding-right: 1.6rem;
       padding-left: 1.6rem;
@@ -46,12 +45,6 @@
 
     &--gray-lighter {
       background: $s-color-gray-lighter;
-    }
-  }
-
-  &-grid {
-    &--full-height {
-      height: 100%;
     }
   }
 }
