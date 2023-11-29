@@ -61,8 +61,8 @@
       content: "";
       background-image: map.get($s-backgrounds, dots),
         linear-gradient(
-          rgba($s-color-primary-lighter, 0.7),
-          rgba($s-color-primary-darker, 0.9)
+          rgba($s-color-primary-lighter, 0.75),
+          rgba($s-color-primary-darker, 0.95)
         );
       transition: transform 0.2s ease-out;
       transform-origin: 100% 50%;
@@ -110,12 +110,14 @@
     &-heading {
       font-size: t-modular-scale(-2);
       font-weight: 700;
+      color: $s-color-heading;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
 
     &-list {
       margin-top: 0;
+      text-wrap: pretty;
 
       > * {
         margin-top: 0;
