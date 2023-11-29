@@ -10,7 +10,7 @@
   width: 100%;
   min-height: 400px;
   overflow: hidden;
-  text-shadow: 1px 1px 1px rgba($s-color-black, 0.3);
+  text-shadow: 2px 2px 2px rgba($s-color-black, 0.3);
   background: map.get($s-backgrounds, dots),
     url("#{map.get($s-paths, theme)}header.jpg") left center/cover no-repeat
       $s-color-primary;
@@ -24,7 +24,7 @@
     content: "";
     background-image: linear-gradient(
       transparent,
-      rgba($s-color-primary-darker, 0.9) 90%
+      rgba($s-color-primary-darker, 0.9) 87.5%
     );
   }
 
@@ -155,12 +155,12 @@
     width: 100%;
     margin: t-vertical-rhythm(1.5) t-vertical-rhythm(1) t-vertical-rhythm(1);
     font-family: $s-font-family-mono;
-    font-size: t-modular-scale(-1);
+    font-size: t-modular-scale(0);
     font-weight: 400;
     color: $s-color-secondary;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.4em;
+    letter-spacing: 0.3em;
     animation: tagline-animation 0.4s 1s ease-out both;
 
     @keyframes tagline-animation {

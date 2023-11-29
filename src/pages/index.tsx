@@ -37,83 +37,71 @@ const Home: NextPage = ({ data, errors }: any) => {
       <Default>
         <Main margin="no-margin">
           <section className={styles["home-about"]}>
-            <div className="container">
-              <div className="grid grid-lg-gutter">
-                <div className="cell cell-12 sm:cell-6">
-                  <h2 className={styles["home-about__heading"]}>
-                    {data.home.title1}
-                  </h2>
-
-                  <div className={styles["home-about__paragraph"]}>
-                    <PrismicRichText field={data.home.paragraph1} />
-                  </div>
-                </div>
-
+            <div
+              className={clsx(
+                "grid",
+                "grid-no-gutter",
+                styles["home-lg-gutter"]
+              )}
+            >
+              <div
+                className={clsx(
+                  styles["home-cell--gray"],
+                  "cell",
+                  "cell-12",
+                  "cell-last",
+                  "md:cell-3",
+                  "md:cell-first"
+                )}
+              >
                 <div
                   className={clsx(
-                    styles["home-cell--gray-lighter"],
-                    "cell",
-                    "cell-shrink",
-                    "sm:cell-6"
-                  )}
-                />
-
-                <div
-                  className={clsx(
-                    styles["home-cell--gray"],
-                    "cell",
-                    "cell-12",
-                    "sm:cell-6",
-                    "md:cell-3"
+                    "u-full--height",
+                    "grid",
+                    "grid-x-center",
+                    "grid-y-center"
                   )}
                 >
-                  <div
-                    className={clsx(
-                      styles["home-grid--full-height"],
-                      "grid",
-                      "grid-x-center",
-                      "grid-y-center"
-                    )}
-                  >
-                    <div className="cell">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        className={styles["home-about__portrait"]}
-                        width={data.profile.image.dimensions.width}
-                        height={data.profile.image.dimensions.height}
-                        src={`${data.profile.image.url}&q=100`}
-                        srcSet={`${data.profile.image.url}&q=100, ${data.profile.image.x2.url}&q=100 1.25x`}
-                        alt={data.profile.image.alt}
-                      />
-                    </div>
+                  <div className="cell">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      className={styles["home-about__portrait"]}
+                      width={data.profile.image.dimensions.width}
+                      height={data.profile.image.dimensions.height}
+                      src={`${data.profile.image.url}&q=100`}
+                      srcSet={`${data.profile.image.url}&q=100, ${data.profile.image.x2.url}&q=100 1.25x`}
+                      alt={data.profile.image.alt}
+                    />
                   </div>
                 </div>
+              </div>
 
-                <div
-                  className={clsx(
-                    styles["home-cell--gray-lighter"],
-                    "cell",
-                    "cell-hidden",
-                    "md:cell-visible",
-                    "md:cell-3"
-                  )}
-                />
+              <div
+                className={clsx(
+                  styles["home-cell--gray-lighter"],
+                  "cell",
+                  "cell-12",
+                  "md:cell-9",
+                  "md:cell-y-center"
+                )}
+              >
+                <h1 className={styles["home-about__heading"]}>
+                  {data.home.title}
+                </h1>
 
-                <div className="cell cell-12 sm:cell-6 sm:cell-y-center">
-                  <h2 className={styles["home-about__heading"]}>
-                    {data.home.title2}
-                  </h2>
-
-                  <div className={styles["home-about__paragraph"]}>
-                    <PrismicRichText field={data.home.paragraph2} />
-                  </div>
+                <div className={styles["home-about__paragraph"]}>
+                  <PrismicRichText field={data.home.paragraph} />
                 </div>
               </div>
             </div>
           </section>
           <section>
             <div
-              className={clsx("grid", "grid-no-gutter", styles["home-body"])}
+              className={clsx(
+                "grid",
+                "grid-no-gutter",
+                styles["home-lg-gutter"]
+              )}
             >
               <div
                 className={clsx(
@@ -316,10 +304,8 @@ const homeQuery = gql`
       traits
     }
     home(uid: "home", lang: "en-au") {
-      title1: title_1
-      paragraph1: paragraph_1
-      title2: title_2
-      paragraph2: paragraph_2
+      title
+      paragraph
       skillsSectionTitle: skills_section_title
       toolsSectionTitle: tools_section_title
       profileSectionTitle: profile_section_title
