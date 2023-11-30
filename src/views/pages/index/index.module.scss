@@ -26,6 +26,12 @@
     }
   }
 
+  &__tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
   &-lg-gutter {
     > :global(.cell) {
       padding-right: 1.6rem;

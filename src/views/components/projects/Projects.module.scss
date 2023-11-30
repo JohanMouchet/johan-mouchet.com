@@ -91,6 +91,10 @@
     font-size: t-modular-scale(-1);
   }
 
+  &__lede {
+    color: $s-color-text-dimmed;
+  }
+
   &__detail {
     $root-detail: &;
 
@@ -123,14 +127,20 @@
         margin-top: 0;
       }
     }
+
+    &-architecture {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
   }
 
   &--highlighted {
     position: relative;
-    padding: t-vertical-rhythm(1) $fluxgrid-gutter 0;
+    padding: t-vertical-rhythm(1);
     margin-bottom: t-vertical-rhythm(1);
-    background-color: $s-color-gray-lighter;
-    border-radius: 6px;
+    border: 2px solid $s-color-gray-darker;
+    border-radius: 8px;
   }
 
   &__highlight-icon {

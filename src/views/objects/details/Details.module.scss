@@ -8,8 +8,8 @@
   border-bottom: 1px solid $s-color-gray;
 
   &__marker {
-    width: t-modular-scale(0);
-    height: t-modular-scale(0);
+    width: t-modular-scale(1);
+    height: t-modular-scale(1);
   }
 
   &[open] {
