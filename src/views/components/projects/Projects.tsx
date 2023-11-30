@@ -56,7 +56,6 @@ const Content = ({
   achievements,
   architecture,
 }: {
-  highlight?: boolean;
   achievements?: React.ComponentProps<typeof PrismicRichText>["field"];
   architecture?: React.ComponentProps<typeof PrismicRichText>["field"];
 }) => {
@@ -107,8 +106,11 @@ export const Projects = ({
   className,
   ...props
 }: {
-  projects: (React.ComponentProps<typeof Thumbnail> &
-    React.ComponentProps<typeof Content>)[];
+  projects: ({
+    id?: string;
+    highlight?: boolean;
+  } & (React.ComponentProps<typeof Thumbnail> &
+    React.ComponentProps<typeof Content>))[];
   className?: ClassValue;
 } & React.HTMLProps<HTMLDivElement>) => {
   if (!projects?.length) {
@@ -122,7 +124,8 @@ export const Projects = ({
           project.highlight ? (
             <div
               className="cell cell-12"
-              key={`${project.name}${project.tagline || ""}`}
+              id={project.id || `${project.name}${project.tagline}`}
+              key={project.id || `${project.name}${project.tagline}`}
             >
               <div
                 className={clsx(
@@ -159,7 +162,8 @@ export const Projects = ({
                 "lg:cell-4": project.lede,
                 "lg:cell-3": !project.lede,
               })}
-              key={`${project.name}${project.tagline || ""}`}
+              id={project.id || `${project.name}${project.tagline}`}
+              key={project.id || `${project.name}${project.tagline}`}
             >
               <div className={styles["c-project"]}>
                 <Thumbnail

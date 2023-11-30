@@ -91,6 +91,10 @@
     font-size: t-modular-scale(-1);
   }
 
+  &__lede {
+    color: $s-color-text-dimmed;
+  }
+
   &__detail {
     $root-detail: &;
 

@@ -10,6 +10,7 @@ export const Experiences = ({
   ...props
 }: {
   experiences: {
+    id?: string;
     companyLink: {
       url: string;
     };
@@ -45,7 +46,8 @@ export const Experiences = ({
         return (
           <section
             className={styles["c-experience"]}
-            key={`${experience.companyName}-${startDate}`}
+            id={experience.id}
+            key={experience.id || `${experience.companyName}-${startDate}`}
           >
             <h3 className={styles["c-experience__heading"]}>
               <a

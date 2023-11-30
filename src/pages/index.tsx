@@ -355,6 +355,7 @@ const homeQuery = gql`
       lang: "en-au"
     ) {
       experiences {
+        id
         companyLink: company_link {
           ... on _ExternalLink {
             url
@@ -371,6 +372,7 @@ const homeQuery = gql`
         projects {
           ... on Projects {
             projects {
+              id
               name
               tagline
               link {
