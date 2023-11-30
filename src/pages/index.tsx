@@ -7,6 +7,7 @@ import { Skills } from "@/views/components/skills/Skills";
 import { SocialMedia } from "@/views/components/social-media/SocialMedia";
 import { Default } from "@/views/layouts/default/Default";
 import { Anchor } from "@/views/objects/anchor/Anchor";
+import { Badge } from "@/views/objects/badge/Badge";
 import { Button } from "@/views/objects/button/Button";
 import styles from "@/views/pages/index/index.module.scss";
 import { Article } from "@/views/partials/article/Article";
@@ -126,7 +127,13 @@ const Home: NextPage = ({ data, errors }: any) => {
                     <Anchor id="tools">{data.home.toolsSectionTitle}</Anchor>
                   </h2>
 
-                  <PrismicRichText field={data.tools.tools} />
+                  <div className={styles["home__tools"]}>
+                    {data.tools.tools[0].text
+                      .split(", ")
+                      .map((item: string) => (
+                        <Badge key={item}>{item}</Badge>
+                      ))}
+                  </div>
                 </Article>
 
                 <hr />
