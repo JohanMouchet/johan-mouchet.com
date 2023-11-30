@@ -4,26 +4,14 @@
 .o-badge {
   display: inline-block;
   padding: 0.08rem 0.5rem;
-  margin-left: 0.5rem;
   font-size: t-modular-scale(-1);
   font-weight: 400;
   color: $s-color-text;
   text-decoration: none;
   white-space: nowrap;
   background-color: $s-color-gray;
-  border-radius: 1.5rem;
 
   &:empty {
     display: none;
-  }
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    background-color: $s-color-gray-lighter;
-  }
-
-  &:active {
-    background-color: $s-color-gray-darker;
   }
 }

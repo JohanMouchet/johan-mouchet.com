@@ -1,5 +1,6 @@
 import { parse } from "@/utils/parse/parse";
 import { pluralize } from "@/utils/pluralize/pluralize";
+import { Badge } from "@/views/objects/badge/Badge";
 import { Details } from "@/views/objects/details/Details";
 import { IconBookmark } from "@/views/objects/icons";
 import { asText } from "@prismicio/helpers";
@@ -92,8 +93,10 @@ const Content = ({
       {architecture && (
         <div className={styles["c-project__detail"]}>
           <b className={styles["c-project__detail-heading"]}>Architecture</b>
-          <div className={styles["c-project__detail-list"]}>
-            <PrismicRichText field={architecture} />
+          <div className={styles["c-project__detail-architecture"]}>
+            {architecture[0].text.split(", ").map((item: string) => (
+              <Badge key={item}>{item}</Badge>
+            ))}
           </div>
         </div>
       )}
