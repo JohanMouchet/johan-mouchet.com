@@ -9,11 +9,11 @@
   padding: t-vertical-rhythm(0.5) t-vertical-rhythm(0.25);
   margin: 0 auto;
 
-  @media (min-width: map.get($s-breakpoints, sm)) {
+  @media (min-width: map.get($s-breakpoints, md)) {
     padding: t-vertical-rhythm(0.5) t-vertical-rhythm(1);
   }
 
-  @media (min-width: map.get($s-breakpoints, md)) {
+  @media (min-width: map.get($s-breakpoints, lg)) {
     padding: t-vertical-rhythm(1) t-vertical-rhythm(2);
   }
 
