@@ -6,18 +6,15 @@
 
 /* stylelint-disable color-no-hex */
 
-$s-font-size-base: 0.9375; // rem = 15 px
-$s-font-size-mobile: $s-font-size-base * 0.9333; // Comment if unwanted
-$s-line-height-base: 1.6;
+$s-font-size-base: 1; // rem = 16 px
+$s-line-height-base: 1.5;
 $s-modular-scale-ratio: 1.2;
 
 /** Typefaces **/
-$s-font-family-sans: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI",
-  helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-$s-font-family-serif: "Times New Roman", times, serif;
-$s-font-family-display: var(--font-abril-fatface), $s-font-family-serif;
-$s-font-family-mono: sfmono-regular, consolas, "Liberation Mono", menlo,
-  monospace;
+$s-font-family-sans: var(--font-sans), system-ui, sans-serif;
+$s-font-family-serif: var(--font-serif), serif;
+$s-font-family-display: var(--font-display), serif;
+$s-font-family-mono: monospace;
 
 /** Colors **/
 $s-color-heading: #273042;

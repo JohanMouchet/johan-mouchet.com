@@ -26,7 +26,7 @@
 
 // These types are also available as utilities: .u-heading--*
 @mixin t-heading--xl {
-  @include t-heading(6, 2, 2) {
+  @include t-heading(6, 2, 1) {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -34,7 +34,7 @@
 }
 
 @mixin t-heading--lg {
-  @include t-heading(5, 2, 2) {
+  @include t-heading(5, 2, 1) {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -42,7 +42,7 @@
 }
 
 @mixin t-heading--1 {
-  @include t-heading(4, 2, 2) {
+  @include t-heading(4, 2, 1) {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -50,7 +50,7 @@
 }
 
 @mixin t-heading--2 {
-  @include t-heading(3, 2, 2) {
+  @include t-heading(3, 2, 1) {
     font-weight: 700;
   }
 }
