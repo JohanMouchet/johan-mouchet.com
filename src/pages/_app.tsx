@@ -1,10 +1,18 @@
 import "@/assets/styles/_styles.scss";
 import { AppProps } from "next/app";
-import { Abril_Fatface } from "next/font/google";
+import { Abril_Fatface, Inria_Serif, Source_Sans_3 } from "next/font/google";
 import Head from "next/head";
 
-const abrilFatface = Abril_Fatface({
+const display = Abril_Fatface({
   weight: "400",
+  subsets: ["latin"],
+});
+const serif = Inria_Serif({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
+const sans = Source_Sans_3({
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
@@ -36,7 +44,9 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <style jsx global>{`
         :root {
-          --font-abril-fatface: ${abrilFatface.style.fontFamily};
+          --font-display: ${display.style.fontFamily};
+          --font-serif: ${serif.style.fontFamily};
+          --font-sans: ${sans.style.fontFamily};
         }
       `}</style>
       <Component {...pageProps} />

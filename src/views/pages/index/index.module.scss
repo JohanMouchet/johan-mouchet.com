@@ -34,12 +34,12 @@
 
   &-lg-gutter {
     > :global(.cell) {
-      padding-right: 1.6rem;
-      padding-left: 1.6rem;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
 
       @media (min-width: map.get($s-breakpoints, lg)) {
-        padding-right: 3.2rem;
-        padding-left: 3.2rem;
+        padding-right: 3.5rem;
+        padding-left: 3.5rem;
       }
     }
   }

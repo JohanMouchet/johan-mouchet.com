@@ -11,6 +11,6 @@ $fluxgrid-breakpoints: (
   lg: map.get($s-breakpoints, lg),
   xl: map.get($s-breakpoints, xl),
 );
-$fluxgrid-gutter: 1.6rem;
+$fluxgrid-gutter: 1.5rem;
 $fluxgrid-gutter-lg: $fluxgrid-gutter * 3;
 $fluxgrid-outside-margin: $fluxgrid-gutter-lg / 2;
