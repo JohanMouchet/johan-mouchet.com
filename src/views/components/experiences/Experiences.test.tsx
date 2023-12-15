@@ -13,11 +13,17 @@ it("Renders <Experiences /> without crashing", () => {
             },
             companyName: "Name",
             location: "Location",
-            jobTitle: "Job Title",
-            startDate: new Date("2018-01-01"),
-            present: false,
-            endDate: new Date("2019-01-01"),
-            contractType: "Contract Type",
+            roles: {
+              roles: [
+                {
+                  title: "Job Title",
+                  startDate: "2018-01-01",
+                  present: false,
+                  endDate: "2019-01-01",
+                  contractType: "Full-time",
+                },
+              ],
+            },
             lede: [
               {
                 type: Element.paragraph,

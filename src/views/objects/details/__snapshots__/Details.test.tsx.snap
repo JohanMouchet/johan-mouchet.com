@@ -7,7 +7,17 @@ exports[`Renders <Details /> without crashing 1`] = `
   <summary
     class="o-details__summary"
   >
-    Summary
+    <svg
+      aria-hidden="true"
+      class="o-details__marker o-details__marker-open"
+    />
+    <svg
+      aria-hidden="true"
+      class="o-details__marker o-details__marker-close"
+    />
+    <span>
+      Summary
+    </span>
   </summary>
   <div
     class="o-details__panel"

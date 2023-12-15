@@ -9,10 +9,15 @@ exports[`Renders <Projects /> without crashing 1`] = `
   >
     <div
       class="cell cell-12"
+      id="NameTagline"
     >
       <div
         class="c-project c-project--highlighted"
       >
+        <svg
+          aria-label="Featured"
+          class="c-project__highlight-icon"
+        />
         <div
           class="grid"
         >
@@ -22,6 +27,8 @@ exports[`Renders <Projects /> without crashing 1`] = `
             <a
               class="c-project__link"
               href="#"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <img
                 alt=""
@@ -86,11 +93,13 @@ exports[`Renders <Projects /> without crashing 1`] = `
                 Architecture
               </b>
               <div
-                class="c-project__detail-list"
+                class="c-project__detail-architecture"
               >
-                <p>
+                <span
+                  class="o-badge"
+                >
                   Architecture
-                </p>
+                </span>
               </div>
             </div>
           </div>

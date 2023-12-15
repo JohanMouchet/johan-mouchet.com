@@ -10,55 +10,61 @@ exports[`Renders <Experiences /> without crashing 1`] = `
     <h3
       class="c-experience__heading"
     >
-      <a
-        class="c-experience__company"
-        href="#"
-        rel="noopener noreferrer"
-        target="_blank"
+      <span>
+        <a
+          class="c-experience__company"
+          href="#"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Name
+        </a>
+        , 
+        Location
+      </span>
+      <div
+        class="c-experience__details"
       >
-        Name
-      </a>
-      , 
-      Location
-       ⁠— 
-      Job Title
+        <span
+          class="c-experience__date"
+        >
+          <time
+            datetime="2018-01"
+          >
+            Jan 2018
+          </time>
+           
+          –
+           
+          <time
+            datetime="2019-01"
+          >
+            Jan 2019
+          </time>
+        </span>
+      </div>
     </h3>
-    <p
+    <div
       class="c-experience__subheading"
     >
-      <span
-        class="c-experience__date"
+      <div
+        class="c-experience__details"
       >
-        <time
-          datetime="2018-01"
+        <h5
+          class="c-experience__title"
         >
-          Jan 2018
-        </time>
-         
-        –
-         
-        <time
-          datetime="2019-01"
+          Job Title
+        </h5>
+        <span
+          class="c-experience__separator"
+        />
+        <span
+          class="c-experience__duration"
         >
-          Jan 2019
-        </time>
-      </span>
-       
-      <span
-        class="c-experience__duration"
-      >
-        (
-        1 yr
-        )
-      </span>
-      <span
-        class="c-experience__type"
-      >
-         
-        / 
-        Contract Type
-      </span>
-    </p>
+          1 yr
+        </span>
+      </div>
+    </div>
     <div
       class="c-experience__lede"
     >

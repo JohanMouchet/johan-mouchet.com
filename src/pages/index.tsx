@@ -374,6 +374,17 @@ const homeQuery = gql`
         startDate: start_date
         present
         endDate: end_date
+        roles {
+          ... on Roles {
+            roles {
+              title
+              startDate: start_date
+              present
+              endDate: end_date
+              contractType: contract_type
+            }
+          }
+        }
         contractType: contract_type
         lede
         projects {
@@ -397,7 +408,7 @@ const homeQuery = gql`
         }
       }
     }
-    openSource: open_source(uid: "open-source", lang: "en-au") {
+    openSource: open_source(uid: "open-source-projects", lang: "en-au") {
       projects {
         name
         link {

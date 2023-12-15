@@ -50,6 +50,7 @@
     padding: t-vertical-rhythm(0.25);
     color: $s-color-white;
     text-align: center;
+    text-shadow: 1px 1px 1px rgba($s-color-black, 0.3);
     transition: opacity 0.2s ease-out;
 
     &::before {
