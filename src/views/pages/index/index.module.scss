@@ -32,6 +32,14 @@
     gap: 0.25rem;
   }
 
+  &__experiences-title {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
   &-lg-gutter {
     > :global(.cell) {
       padding-right: 1.5rem;

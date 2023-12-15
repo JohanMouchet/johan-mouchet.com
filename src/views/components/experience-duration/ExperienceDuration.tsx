@@ -8,8 +8,10 @@ export const ExperienceDuration = ({
   ...props
 }: {
   experiences: {
-    startDate: Date | string;
-    endDate: Date | string;
+    /** ISO string date */
+    startDate: string;
+    /** ISO string date */
+    endDate: string;
   }[];
   className?: ClassValue;
 } & React.HTMLProps<HTMLDivElement>) => {
@@ -24,15 +26,10 @@ export const ExperienceDuration = ({
     >
       {duration(
         experiences.map((experience: any) => {
-          const startDate =
-            typeof experience.startDate === "string"
-              ? new Date(experience.startDate)
-              : experience.startDate;
+          const startDate = new Date(experience.startDate);
           const endDate = experience.present
             ? new Date()
-            : typeof experience.endDate === "string"
-            ? new Date(experience.endDate)
-            : experience.endDate;
+            : new Date(experience.endDate);
 
           return {
             start: startDate,

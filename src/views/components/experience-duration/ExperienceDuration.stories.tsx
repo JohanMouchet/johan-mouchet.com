@@ -14,8 +14,8 @@ export const Example = {
   args: {
     experiences: [
       {
-        startDate: subYears(new Date(), 1),
-        endDate: new Date(),
+        startDate: subYears(new Date(), 1).toISOString(),
+        endDate: new Date().toISOString(),
       },
     ],
   },

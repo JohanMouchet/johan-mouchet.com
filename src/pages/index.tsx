@@ -202,7 +202,7 @@ const Home: NextPage = ({ data, errors }: any) => {
 
               <div className="cell cell-12 md:cell-9">
                 <Article>
-                  <h2>
+                  <h2 className={styles["home__experiences-title"]}>
                     <Anchor id="career-experiences">
                       {data.home.careerExperiencesSectionTitle}
                     </Anchor>{" "}

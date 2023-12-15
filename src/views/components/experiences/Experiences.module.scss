@@ -3,8 +3,7 @@
 
 .c-experience {
   &:not(:first-child) {
-    padding-top: t-vertical-rhythm(1);
-    border-top: 1px solid $s-color-gray;
+    margin: t-vertical-rhythm(1) 0;
   }
 
   &__heading {
@@ -13,7 +12,9 @@
     gap: 0.25rem 1rem;
     align-items: baseline;
     justify-content: space-between;
+    padding-bottom: 0.375rem;
     margin-bottom: 0;
+    border-bottom: 1px solid $s-color-gray-darker;
   }
 
   &__company {
@@ -39,8 +40,6 @@
       display: flex;
       flex-direction: column;
       row-gap: 0.25rem;
-      padding-left: 1rem;
-      border-left: 2px solid $s-color-gray;
     }
   }
 
