@@ -2,6 +2,7 @@
 @import "@/assets/styles/tools/tools.module";
 
 .c-experience-duration {
+  display: block;
   font-family: $s-font-family-sans;
   font-size: t-modular-scale(0);
   font-weight: normal;

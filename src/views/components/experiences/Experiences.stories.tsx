@@ -20,11 +20,17 @@ export const Example = {
         },
         companyName: "Name",
         location: "Location",
-        jobTitle: "Job Title",
-        startDate: subYears(new Date(), 1),
-        present: false,
-        endDate: new Date(),
-        contractType: "Contract Type",
+        roles: {
+          roles: [
+            {
+              title: "Job Title",
+              startDate: subYears(new Date(), 1).toISOString(),
+              present: false,
+              endDate: new Date().toISOString(),
+              contractType: "Full-time",
+            },
+          ],
+        },
         lede: [
           {
             type: Element.paragraph,
