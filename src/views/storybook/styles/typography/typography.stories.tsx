@@ -92,11 +92,6 @@ export const Sizes = {
                 sassSetting: "$s-font-size-base",
               },
               {
-                name: "Font size mobile",
-                value: settings.FONT_SIZE_MOBILE,
-                sassSetting: "$s-font-size-mobile",
-              },
-              {
                 name: "Line height base",
                 value: settings.LINE_HEIGHT_BASE,
                 sassSetting: "$s-line-height-base",
