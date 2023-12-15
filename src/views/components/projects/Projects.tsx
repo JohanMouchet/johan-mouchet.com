@@ -26,7 +26,12 @@ const Thumbnail = ({
   };
 }) => (
   <>
-    <a href={link.url} className={styles["c-project__link"]}>
+    <a
+      href={link.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={styles["c-project__link"]}
+    >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         className={styles["c-project__thumbnail"]}
