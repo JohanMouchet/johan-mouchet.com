@@ -35,18 +35,22 @@ export const Button = ({
     className
   );
 
-  return type === "anchor" ? (
-    <a className={classNames} href={url} {...props}>
-      {icon ? (
-        <>
-          {icon}
-          <span>{children}</span>
-        </>
-      ) : (
-        children
-      )}
-    </a>
-  ) : (
+  if (type === "anchor") {
+    return (
+      <a className={classNames} href={url} {...props}>
+        {icon ? (
+          <>
+            {icon}
+            <span>{children}</span>
+          </>
+        ) : (
+          children
+        )}
+      </a>
+    );
+  }
+
+  return (
     <button className={classNames} type={type} {...props}>
       {icon ? (
         <>

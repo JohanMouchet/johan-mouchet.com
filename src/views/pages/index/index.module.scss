@@ -61,4 +61,10 @@
       background: $s-color-gray-50;
     }
   }
+
+  &__get-in-touch {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+  }
 }
