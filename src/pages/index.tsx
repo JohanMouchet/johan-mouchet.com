@@ -9,6 +9,7 @@ import { Default } from "@/views/layouts/default/Default";
 import { Anchor } from "@/views/objects/anchor/Anchor";
 import { Badge } from "@/views/objects/badge/Badge";
 import { Button } from "@/views/objects/button/Button";
+import { IconEnvelope, IconLinkedIn } from "@/views/objects/icons";
 import styles from "@/views/pages/index/index.module.scss";
 import { Article } from "@/views/partials/article/Article";
 import { Main } from "@/views/partials/main/Main";
@@ -252,19 +253,21 @@ const Home: NextPage = ({ data, errors }: any) => {
                   </h2>
 
                   <div className="grid">
-                    <div className="cell cell-12">
+                    <div className="cell cell-12 cell-shrink">
                       <Button
                         type="anchor"
                         url={`mailto:${data.profile.email}`}
+                        icon={<IconEnvelope />}
                         block="sm"
+                        variant="primary"
                       >
                         {data.profile.email}
                       </Button>
                     </div>
 
-                    <div className="cell cell-12">&nbsp;</div>
+                    <div className="cell cell-12 sm:cell-hidden">&nbsp;</div>
 
-                    <div className="cell cell-12">
+                    <div className="cell cell-12 cell-shrink">
                       <Button
                         type="anchor"
                         url={
@@ -273,7 +276,7 @@ const Home: NextPage = ({ data, errors }: any) => {
                               socialNetwork.name === "LinkedIn"
                           )?.link?.url
                         }
-                        variant="linkedin"
+                        icon={<IconLinkedIn />}
                         block="sm"
                       >
                         LinkedIn
