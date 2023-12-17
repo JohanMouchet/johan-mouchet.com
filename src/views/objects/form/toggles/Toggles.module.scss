@@ -33,9 +33,9 @@
     display: inline-block;
     width: t-vertical-rhythm(0.8);
     height: t-vertical-rhythm(0.8);
-    vertical-align: text-top;
+    vertical-align: middle;
     background: none;
-    border: 2px solid $s-color-gray;
+    border: 2px solid t-map-deep-get($form-settings, default, color);
     transition: background-color 0.2s, border 0.2s;
 
     @include t-wekkit-hdpi-small-dimension;

@@ -1,15 +1,18 @@
 @import "@/assets/styles/settings/settings.module";
 
 $form-settings: (
+  default: (
+    color: $s-color-gray-200,
+  ),
   hover: (
-    color: $s-color-gray-lighter,
+    color: $s-color-gray-300,
   ),
   focus: (
     color: $s-color-text,
   ),
   disabled: (
-    color: $s-color-gray,
-    color-secondary: $s-color-gray-lighter,
-    color-tertiary: $s-color-gray-darker,
+    color: $s-color-gray-100,
+    color-secondary: $s-color-gray-50,
+    color-tertiary: $s-color-gray-200,
   ),
 );

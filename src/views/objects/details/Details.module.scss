@@ -5,7 +5,7 @@
   $root: &;
 
   margin: t-vertical-rhythm(1) 0;
-  border-bottom: 1px solid $s-color-gray;
+  border-bottom: 1px solid $s-color-gray-200;
 
   &__marker {
     width: t-modular-scale(1);

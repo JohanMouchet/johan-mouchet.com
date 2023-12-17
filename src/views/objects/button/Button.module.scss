@@ -140,11 +140,11 @@ $class: o-button;
 
   /** Disabled **/
   &[disabled] {
-    color: $s-color-gray-darker;
+    color: $s-color-gray-200;
     pointer-events: none;
     cursor: default;
     user-select: none;
-    background-color: $s-color-gray-lighter;
+    background-color: $s-color-gray-50;
     border-color: currentcolor;
 
     &:active {

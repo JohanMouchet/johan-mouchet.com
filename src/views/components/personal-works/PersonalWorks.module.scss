@@ -45,7 +45,7 @@
   &__thumbnail {
     display: block;
     filter: grayscale(1);
-    border: 1px solid $s-color-gray-lighter;
+    border: 1px solid $s-color-gray-50;
     transition: filter 0.2s ease-out;
   }
 
