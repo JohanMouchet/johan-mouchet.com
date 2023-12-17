@@ -15,7 +15,7 @@ $class: o-table;
   text-align: left;
 
   tbody tr:not(:last-child) {
-    border-bottom: 1px solid $s-color-gray;
+    border-bottom: 1px solid $s-color-gray-200;
   }
 
   th,
@@ -77,7 +77,7 @@ $class: o-table;
 
       th:not(:last-child),
       td:not(:last-child) {
-        border-right: 1px solid $s-color-gray;
+        border-right: 1px solid $s-color-gray-200;
       }
     }
   }
@@ -90,7 +90,7 @@ $class: o-table;
       }
 
       tr:nth-child(even) {
-        background-color: $s-color-gray-lighter;
+        background-color: $s-color-gray-50;
       }
     }
 
@@ -103,7 +103,7 @@ $class: o-table;
         }
 
         td:nth-child(2n) {
-          background-color: $s-color-gray-lighter;
+          background-color: $s-color-gray-50;
         }
 
         th:not(:last-child),
@@ -118,13 +118,13 @@ $class: o-table;
   /** Hover **/
   &--hover {
     tbody tr:hover {
-      background-color: $s-color-gray-lighter;
+      background-color: $s-color-gray-50;
     }
 
     // And striped
     &#{$root}--striped {
       tbody tr:hover {
-        background-color: $s-color-gray;
+        background-color: $s-color-gray-100;
       }
     }
   }

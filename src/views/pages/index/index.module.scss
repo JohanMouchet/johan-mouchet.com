@@ -54,11 +54,17 @@
 
   &-cell {
     &--gray {
-      background: $s-color-gray;
+      background: $s-color-gray-100;
     }
 
     &--gray-lighter {
-      background: $s-color-gray-lighter;
+      background: $s-color-gray-50;
     }
+  }
+
+  &__get-in-touch {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
   }
 }

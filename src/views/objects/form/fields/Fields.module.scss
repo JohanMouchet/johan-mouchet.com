@@ -15,14 +15,14 @@
   vertical-align: middle;
   appearance: none;
   background-color: transparent;
-  border: 2px solid $s-color-gray;
+  border: 2px solid t-map-deep-get($form-settings, default, color);
   transition: color 0.2s, background-color 0.2s, border 0.2s;
 
   @include t-wekkit-hdpi-small-dimension;
 
   /* Placeholder */
   &::placeholder {
-    color: $s-color-gray-darker;
+    color: $s-color-gray-200;
   }
 
   /** Textarea **/

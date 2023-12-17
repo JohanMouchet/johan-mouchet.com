@@ -9,6 +9,11 @@ import { Default } from "@/views/layouts/default/Default";
 import { Anchor } from "@/views/objects/anchor/Anchor";
 import { Badge } from "@/views/objects/badge/Badge";
 import { Button } from "@/views/objects/button/Button";
+import {
+  IconDownload,
+  IconEnvelope,
+  IconLinkedIn,
+} from "@/views/objects/icons";
 import styles from "@/views/pages/index/index.module.scss";
 import { Article } from "@/views/partials/article/Article";
 import { Main } from "@/views/partials/main/Main";
@@ -251,34 +256,37 @@ const Home: NextPage = ({ data, errors }: any) => {
                     </Anchor>
                   </h2>
 
-                  <div className="grid">
-                    <div className="cell cell-12">
-                      <Button
-                        type="anchor"
-                        url={`mailto:${data.profile.email}`}
-                        block="sm"
-                      >
-                        {data.profile.email}
-                      </Button>
-                    </div>
-
-                    <div className="cell cell-12">&nbsp;</div>
-
-                    <div className="cell cell-12">
-                      <Button
-                        type="anchor"
-                        url={
-                          data.profile.socialNetworks.find(
-                            (socialNetwork: { name: string }) =>
-                              socialNetwork.name === "LinkedIn"
-                          )?.link?.url
-                        }
-                        variant="linkedin"
-                        block="sm"
-                      >
-                        LinkedIn
-                      </Button>
-                    </div>
+                  <div className={styles["home__get-in-touch"]}>
+                    <Button
+                      type="anchor"
+                      url={`mailto:${data.profile.email}`}
+                      icon={<IconEnvelope />}
+                      block="sm"
+                      variant="primary"
+                    >
+                      Email me
+                    </Button>
+                    <Button
+                      type="anchor"
+                      url={
+                        data.profile.socialNetworks.find(
+                          (socialNetwork: { name: string }) =>
+                            socialNetwork.name === "LinkedIn"
+                        )?.link?.url
+                      }
+                      icon={<IconLinkedIn />}
+                      block="sm"
+                    >
+                      Connect on LinkedIn
+                    </Button>
+                    <Button
+                      type="anchor"
+                      url={data.profile.resumeLink?.url}
+                      icon={<IconDownload />}
+                      block="sm"
+                    >
+                      Download résumé
+                    </Button>
                   </div>
                 </Article>
               </div>
@@ -309,6 +317,11 @@ const homeQuery = gql`
         icon
       }
       traits
+      resumeLink: resume_link {
+        ... on _ExternalLink {
+          url
+        }
+      }
     }
     home(uid: "home", lang: "en-au") {
       title

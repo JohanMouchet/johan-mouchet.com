@@ -5,7 +5,7 @@
 .storybook {
   &-spacing {
     display: inline-block;
-    background: $s-color-gray;
+    background: $s-color-gray-100;
 
     @for $i from 1 through 6 {
       &--#{$i} {

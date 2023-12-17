@@ -44,9 +44,9 @@
   &--secondary {
     padding-top: map.get($p-article, v-padding);
     padding-bottom: map.get($p-article, v-padding);
-    background: $s-color-gray-lighter;
+    background: $s-color-gray-50;
 
-    @if lightness($s-color-gray-lighter) < 75 {
+    @if lightness($s-color-gray-50) < 75 {
       h1,
       h2,
       h3,

@@ -33,7 +33,7 @@
     display: block;
     width: 100%;
     filter: grayscale(1);
-    border: 1px solid $s-color-gray;
+    border: 1px solid $s-color-gray-200;
     transition: filter 0.2s ease-out;
   }
 
@@ -140,7 +140,7 @@
     position: relative;
     padding: t-vertical-rhythm(1);
     margin-bottom: t-vertical-rhythm(1);
-    border: 2px solid $s-color-gray-darker;
+    border: 2px solid $s-color-gray-200;
     border-radius: 8px;
   }
 

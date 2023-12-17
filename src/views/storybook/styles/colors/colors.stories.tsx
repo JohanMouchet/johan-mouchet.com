@@ -59,19 +59,59 @@ export const Settings = {
             sassSetting: "$s-color-white",
           },
           {
-            name: "Gray Lighter",
-            code: settings.COLOR_GRAY_LIGHTER,
-            sassSetting: "$s-color-gray-lighter",
+            name: "Gray 50",
+            code: settings.COLOR_GRAY_50,
+            sassSetting: "$s-color-gray-50",
           },
           {
-            name: "Gray",
-            code: settings.COLOR_GRAY,
-            sassSetting: "$s-color-gray",
+            name: "Gray 100",
+            code: settings.COLOR_GRAY_100,
+            sassSetting: "$s-color-gray-100",
           },
           {
-            name: "Gray Darker",
-            code: settings.COLOR_GRAY_DARKER,
-            sassSetting: "$s-color-gray-darker",
+            name: "Gray 200",
+            code: settings.COLOR_GRAY_200,
+            sassSetting: "$s-color-gray-200",
+          },
+          {
+            name: "Gray 300",
+            code: settings.COLOR_GRAY_300,
+            sassSetting: "$s-color-gray-300",
+          },
+          {
+            name: "Gray 400",
+            code: settings.COLOR_GRAY_400,
+            sassSetting: "$s-color-gray-400",
+          },
+          {
+            name: "Gray 500",
+            code: settings.COLOR_GRAY_500,
+            sassSetting: "$s-color-gray-500",
+          },
+          {
+            name: "Gray 600",
+            code: settings.COLOR_GRAY_600,
+            sassSetting: "$s-color-gray-600",
+          },
+          {
+            name: "Gray 700",
+            code: settings.COLOR_GRAY_700,
+            sassSetting: "$s-color-gray-700",
+          },
+          {
+            name: "Gray 800",
+            code: settings.COLOR_GRAY_800,
+            sassSetting: "$s-color-gray-800",
+          },
+          {
+            name: "Gray 900",
+            code: settings.COLOR_GRAY_900,
+            sassSetting: "$s-color-gray-900",
+          },
+          {
+            name: "Gray 950",
+            code: settings.COLOR_GRAY_950,
+            sassSetting: "$s-color-gray-950",
           },
           {
             name: "Black",

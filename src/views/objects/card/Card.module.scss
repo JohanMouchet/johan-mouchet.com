@@ -18,7 +18,7 @@
   justify-content: space-between;
   height: 100%;
   background-color: $s-color-white;
-  border: 1px solid $s-color-gray;
+  border: 1px solid $s-color-gray-200;
   transition: box-shadow 0.2s, transform 0.2s;
 
   /* Components */
@@ -45,7 +45,7 @@
     justify-content: flex-end;
     min-height: t-vertical-rhythm(7);
     padding: $v-padding $h-padding;
-    background-color: $s-color-gray-lighter;
+    background-color: $s-color-gray-50;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
