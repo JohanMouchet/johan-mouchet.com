@@ -11,6 +11,7 @@ export { default as IconXCom } from "./svg/social/xcom.svg";
 export { default as IconYoutube } from "./svg/social/youtube.svg";
 // UI (from Phosphor Icons)
 export { default as IconArrowReturn } from "./svg/ui/arrow-return-left.svg";
+export { default as IconArrowUpRight } from "./svg/ui/arrow-up-right.svg";
 export { default as IconBookmark } from "./svg/ui/bookmark.svg";
 export { default as IconCheckCircle } from "./svg/ui/check-circle.svg";
 export { default as IconChevronDown } from "./svg/ui/chevron-down.svg";

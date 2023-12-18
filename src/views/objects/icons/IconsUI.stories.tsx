@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import clsx from "clsx";
 import {
   IconArrowReturn,
+  IconArrowUpRight,
   IconBookmark,
   IconCheckCircle,
   IconChevronDown,
@@ -32,6 +33,7 @@ export const Example = {
       <div className="grid u-align--center grid-no-gutter">
         {[
           IconArrowReturn,
+          IconArrowUpRight,
           IconBookmark,
           IconCheckCircle,
           IconChevronDown,
