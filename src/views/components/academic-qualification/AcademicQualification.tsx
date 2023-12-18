@@ -38,11 +38,11 @@ export const AcademicQualification = ({
             >
               {degree.establishmentName}
             </a>
-            , {degree.location} ⁠—{" "}
-            <span className={styles["c-academic-qualification__title"]}>
-              {degree.title}
-            </span>
+            , {degree.location}
           </h3>
+          <div className={styles["c-academic-qualification__title"]}>
+            {degree.title}
+          </div>
           <time
             className={styles["c-academic-qualification__graduation-year"]}
             dateTime={`${degree.graduationYear}`}

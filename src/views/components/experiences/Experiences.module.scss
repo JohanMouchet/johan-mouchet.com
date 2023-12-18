@@ -51,8 +51,9 @@
   }
 
   &__title {
-    margin: 0;
+    font-family: $s-font-family-serif;
     font-weight: 700;
+    color: $s-color-heading;
   }
 
   &__separator {
