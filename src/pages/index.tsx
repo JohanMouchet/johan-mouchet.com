@@ -383,10 +383,6 @@ const homeQuery = gql`
         }
         companyName: company_name
         location
-        jobTitle: job_title
-        startDate: start_date
-        present
-        endDate: end_date
         roles {
           ... on Roles {
             roles {
@@ -398,7 +394,6 @@ const homeQuery = gql`
             }
           }
         }
-        contractType: contract_type
         lede
         projects {
           ... on Projects {
