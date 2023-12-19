@@ -404,6 +404,19 @@ const homeQuery = gql`
                 }
               }
               lede
+              links {
+                ... on Project_links {
+                  links {
+                    link {
+                      ... on _ExternalLink {
+                        url
+                      }
+                    }
+                    name
+                    icon
+                  }
+                }
+              }
               thumbnailSrc: thumbnail_src
               highlight
               achievements
