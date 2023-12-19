@@ -14,11 +14,12 @@ export const Example = {
     tabs: [
       {
         thumb: "Thumb 1",
-        panel: "Thumb 1",
+        panel: "Panel 1",
+        active: true,
       },
       {
         thumb: "Thumb 2",
-        panel: "Thumb 2",
+        panel: "Panel 2",
       },
     ],
   },

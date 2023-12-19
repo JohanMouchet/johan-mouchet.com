@@ -7,8 +7,10 @@ export const Tabs = ({
   ...props
 }: {
   tabs: {
+    active?: boolean;
     thumb: string;
     panel: string;
+    onClick?: React.MouseEventHandler;
   }[];
   className?: ClassValue;
 } & React.HTMLProps<HTMLDivElement>) => {
@@ -31,7 +33,14 @@ export const Tabs = ({
             }}
             key={tab.thumb}
           >
-            <button className={styles["o-tabs__button"]} type="button">
+            <button
+              className={clsx(
+                styles["o-tabs__button"],
+                tab.active && styles["o-tabs__button--active"]
+              )}
+              type="button"
+              onClick={tab.onClick}
+            >
               {tab.thumb}
             </button>
           </li>
@@ -39,7 +48,13 @@ export const Tabs = ({
       </ul>
       <ul className={styles["o-tabs__panels"]}>
         {tabs.map((tab, index) => (
-          <li className={styles["o-tabs__panel"]} key={index}>
+          <li
+            className={clsx(
+              styles["o-tabs__panel"],
+              tab.active && styles["o-tabs__panel--active"]
+            )}
+            key={index}
+          >
             {tab.panel}
           </li>
         ))}
