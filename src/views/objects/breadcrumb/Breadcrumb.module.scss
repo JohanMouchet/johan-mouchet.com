@@ -24,14 +24,13 @@
     white-space: nowrap;
 
     &:not(:last-child)::after {
-      color: $s-color-text-dimmed;
+      color: $s-color-gray-200;
       content: "/";
     }
 
     /* Last level */
     &:last-child #{$root}__link {
-      font-weight: 500;
-      color: $s-color-link;
+      color: $s-color-text;
     }
   }
 

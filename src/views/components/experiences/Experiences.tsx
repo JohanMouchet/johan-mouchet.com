@@ -106,9 +106,9 @@ export const Experiences = ({
                       className={styles["c-experience__details"]}
                       key={role.title}
                     >
-                      <h5 className={styles["c-experience__title"]}>
+                      <span className={styles["c-experience__title"]}>
                         {role.title}
-                      </h5>
+                      </span>
                       <span className={styles["c-experience__separator"]} />
                       <Duration
                         startDate={roleStartDate}

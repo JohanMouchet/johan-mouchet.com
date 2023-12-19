@@ -258,8 +258,7 @@ const Home: NextPage = ({ data, errors }: any) => {
 
                   <div className={styles["home__get-in-touch"]}>
                     <Button
-                      type="anchor"
-                      url={`mailto:${data.profile.email}`}
+                      href={`mailto:${data.profile.email}`}
                       icon={<IconEnvelope />}
                       block="sm"
                       variant="primary"
@@ -267,8 +266,7 @@ const Home: NextPage = ({ data, errors }: any) => {
                       Email me
                     </Button>
                     <Button
-                      type="anchor"
-                      url={
+                      href={
                         data.profile.socialNetworks.find(
                           (socialNetwork: { name: string }) =>
                             socialNetwork.name === "LinkedIn"
@@ -280,8 +278,7 @@ const Home: NextPage = ({ data, errors }: any) => {
                       Connect on LinkedIn
                     </Button>
                     <Button
-                      type="anchor"
-                      url={data.profile.resumeLink?.url}
+                      href={data.profile.resumeLink?.url}
                       icon={<IconDownload />}
                       block="sm"
                     >
@@ -383,10 +380,6 @@ const homeQuery = gql`
         }
         companyName: company_name
         location
-        jobTitle: job_title
-        startDate: start_date
-        present
-        endDate: end_date
         roles {
           ... on Roles {
             roles {
@@ -398,7 +391,6 @@ const homeQuery = gql`
             }
           }
         }
-        contractType: contract_type
         lede
         projects {
           ... on Projects {
@@ -412,6 +404,19 @@ const homeQuery = gql`
                 }
               }
               lede
+              links {
+                ... on Project_links {
+                  links {
+                    link {
+                      ... on _ExternalLink {
+                        url
+                      }
+                    }
+                    name
+                    icon
+                  }
+                }
+              }
               thumbnailSrc: thumbnail_src
               highlight
               achievements
