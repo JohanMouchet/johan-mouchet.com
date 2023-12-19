@@ -2,22 +2,23 @@ import clsx, { ClassValue } from "clsx";
 import styles from "./Button.module.scss";
 
 export const Button = ({
-  type = "button",
-  url,
   variant,
   size,
   icon,
   block,
+  onClick,
   children,
   className,
   ...props
-}: {
-  type: "anchor" | "button" | "submit" | "reset";
-  url?: string;
+}: (
+  | { href: string; type?: undefined }
+  | { type?: "button" | "submit" | "reset"; href?: undefined }
+) & {
   variant?: "primary" | "secondary";
   size?: "sm" | "lg";
   icon?: React.ReactNode;
   block?: boolean | "sm" | "md";
+  onClick?: React.MouseEventHandler;
   children?: React.ReactNode;
   className?: ClassValue;
 }) => {
@@ -35,9 +36,9 @@ export const Button = ({
     className
   );
 
-  if (type === "anchor") {
+  if (!!props.href) {
     return (
-      <a className={classNames} href={url} {...props}>
+      <a className={classNames} {...props}>
         {icon ? (
           <>
             {icon}
@@ -51,7 +52,7 @@ export const Button = ({
   }
 
   return (
-    <button className={classNames} type={type} {...props}>
+    <button className={classNames} type={props.type ?? "button"} {...props}>
       {icon ? (
         <>
           {icon}
