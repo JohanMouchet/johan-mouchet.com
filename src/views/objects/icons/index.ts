@@ -10,7 +10,9 @@ export { default as IconUnsplash } from "./svg/social/unsplash.svg";
 export { default as IconXCom } from "./svg/social/xcom.svg";
 export { default as IconYoutube } from "./svg/social/youtube.svg";
 // UI (from Phosphor Icons)
+export { default as IconArrowLineLeft } from "./svg/ui/arrow-line-left.svg";
 export { default as IconArrowReturn } from "./svg/ui/arrow-return-left.svg";
+export { default as IconArrowRight } from "./svg/ui/arrow-right.svg";
 export { default as IconArrowUpRight } from "./svg/ui/arrow-up-right.svg";
 export { default as IconBookmark } from "./svg/ui/bookmark.svg";
 export { default as IconCheckCircle } from "./svg/ui/check-circle.svg";
