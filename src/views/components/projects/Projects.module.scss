@@ -5,6 +5,58 @@
 .c-project {
   $root: &;
 
+  height: 100%;
+  padding: t-vertical-rhythm(1);
+  background: $s-color-white;
+
+  &s {
+    position: relative;
+  }
+
+  &s__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    display: inline-flex;
+    column-gap: 0.5rem;
+    align-items: center;
+    color: $s-color-text-dimmed;
+  }
+
+  &s__next {
+    all: unset;
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0;
+    line-height: 1;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
+  }
+
+  &s__carousel {
+    overflow: hidden;
+    background: $s-color-gray-200;
+    border: 2px solid $s-color-gray-200;
+    @include t-wekkit-hdpi-small-dimension;
+  }
+
+  &s__container {
+    display: flex;
+    column-gap: t-vertical-rhythm(1);
+  }
+
+  &__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+
+    @media (min-width: map.get($s-breakpoints, md)) {
+      flex-basis: 90%;
+    }
+  }
+
   &__link {
     position: relative;
     display: block;
@@ -144,23 +196,6 @@
       flex-wrap: wrap;
       gap: 0.25rem;
     }
-  }
-
-  &--highlighted {
-    position: relative;
-    padding: t-vertical-rhythm(1);
-    margin-bottom: t-vertical-rhythm(1);
-    border: 2px solid $s-color-gray-200;
-    border-radius: 0.5rem;
-
-    @include t-wekkit-hdpi-small-dimension;
-  }
-
-  &__highlight-icon {
-    position: absolute;
-    top: 0.25rem;
-    right: 0.125rem;
-    color: $s-color-text-dimmed;
   }
 
   &__links {

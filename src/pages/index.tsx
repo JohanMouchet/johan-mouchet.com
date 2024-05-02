@@ -418,7 +418,6 @@ const homeQuery = gql`
                 }
               }
               thumbnailSrc: thumbnail_src
-              highlight
               achievements
               architecture
             }

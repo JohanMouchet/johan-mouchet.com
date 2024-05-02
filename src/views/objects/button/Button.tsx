@@ -38,7 +38,7 @@ export const Button = ({
 
   if (!!props.href) {
     return (
-      <a className={classNames} {...props}>
+      <a className={classNames} onClick={onClick} {...props}>
         {icon ? (
           <>
             {icon}
@@ -52,7 +52,12 @@ export const Button = ({
   }
 
   return (
-    <button className={classNames} type={props.type ?? "button"} {...props}>
+    <button
+      className={classNames}
+      type={props.type ?? "button"}
+      onClick={onClick}
+      {...props}
+    >
       {icon ? (
         <>
           {icon}
