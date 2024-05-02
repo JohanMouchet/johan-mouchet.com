@@ -14,7 +14,6 @@ export const Example = {
   args: {
     projects: [
       {
-        highlight: true,
         name: "Name",
         tagline: "Tagline",
         link: {
