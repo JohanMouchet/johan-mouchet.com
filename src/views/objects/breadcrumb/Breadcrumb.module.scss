@@ -30,12 +30,12 @@
 
     /* Last level */
     &:last-child #{$root}__link {
-      color: $s-color-text;
+      color: $s-color-body;
     }
   }
 
   &__link {
-    @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
+    @include t-link($s-color-muted-body, "none", $hover-decoration: "none");
 
     display: inline-block;
     padding: t-vertical-rhythm(0.5) 1rem;

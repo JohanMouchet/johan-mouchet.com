@@ -72,12 +72,12 @@
     display: block;
     margin-top: t-vertical-rhythm(0.5);
     font-size: t-modular-scale(-2);
-    color: $s-color-text-dimmed;
+    color: $s-color-muted-body;
     animation-delay: 0.25s;
 
     /* stylelint-disable-next-line no-descending-specificity */
     [href] {
-      @include t-link($s-color-text-dimmed);
+      @include t-link($s-color-muted-body);
     }
 
     &::before {

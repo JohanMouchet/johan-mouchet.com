@@ -31,16 +31,16 @@
     border: 0;
     outline: 0;
 
-    @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
+    @include t-link($s-color-muted-body, "none", $hover-decoration: "none");
 
     /** Active **/
     &--active {
       @include t-link(
-        $s-color-text,
+        $s-color-body,
         "none",
-        $s-color-text,
+        $s-color-body,
         "none",
-        $s-color-text
+        $s-color-body
       );
 
       cursor: default;

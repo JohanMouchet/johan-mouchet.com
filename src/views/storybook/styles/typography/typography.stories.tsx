@@ -57,7 +57,7 @@ export const Typefaces = {
                   {input}
                 </span>
                 <br />
-                <span className="u-color--dimmed">{typeface.stack}</span>
+                <span className="u-color--muted">{typeface.stack}</span>
               </td>
               <td>
                 <code className="u-select--all">{typeface.sassSetting}</code>

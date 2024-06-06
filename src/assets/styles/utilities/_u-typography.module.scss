@@ -70,5 +70,5 @@
 
 /* Secondary link */
 .u-link--secondary {
-  @include t-link($s-color-text-dimmed, $hover-decoration: "none");
+  @include t-link($s-color-muted-body, $hover-decoration: "none");
 }

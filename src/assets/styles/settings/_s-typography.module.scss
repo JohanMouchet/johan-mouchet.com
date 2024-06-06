@@ -18,10 +18,10 @@ $s-font-family-mono: monospace;
 
 /** Colors **/
 $s-color-heading: #273042;
-$s-color-text: #546278;
-$s-color-text-dimmed: color.scale($s-color-text, $lightness: 40%);
+$s-color-body: #546278;
+$s-color-muted-body: color.scale($s-color-body, $lightness: 40%);
 $s-color-link: $s-color-secondary;
 $s-color-link-hover: $s-color-secondary-lighter;
 $s-color-link-active: $s-color-secondary-darker;
-$s-color-selection-text: $s-color-white;
-$s-color-selection-bg: $s-color-secondary;
+$s-color-selection-foreground: $s-color-white;
+$s-color-selection-background: $s-color-secondary;

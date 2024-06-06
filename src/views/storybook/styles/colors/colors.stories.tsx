@@ -170,10 +170,10 @@ export const Text = {
       <tbody>
         <tr>
           <td>
-            <span className="u-color--dimmed">Dimmed text</span>
+            <span className="u-color--muted">Muted text</span>
           </td>
           <td>
-            <code className="u-select--all">.u-color--dimmed</code>
+            <code className="u-select--all">.u-color--muted</code>
           </td>
         </tr>
         <tr>
