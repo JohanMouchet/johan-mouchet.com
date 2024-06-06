@@ -1,34 +1,5 @@
 @use "sass:map";
 
-/**
- * Float
- */
-
-.u-float {
-  &--left {
-    float: left;
-  }
-
-  &--right {
-    float: right;
-  }
-}
-
-.u-clear {
-  float: none;
-  clear: both;
-}
-
-/* Clearfix */
-.u-clearfix {
-  &::before,
-  &::after {
-    display: table;
-    clear: both;
-    content: "";
-  }
-}
-
 /* Align */
 .u-align {
   &--left {
