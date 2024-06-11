@@ -67,8 +67,3 @@
     }
   }
 }
-
-/* Secondary link */
-.u-link--secondary {
-  @include t-link($s-color-muted-body, $hover-decoration: "none");
-}

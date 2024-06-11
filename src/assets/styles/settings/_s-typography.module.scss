@@ -1,11 +1,6 @@
-@use "sass:color";
-
 /**
  * Typography
  */
-
-/* stylelint-disable color-no-hex */
-
 $s-font-size-base: 1; // rem = 16 px
 $s-line-height-base: 1.5;
 $s-modular-scale-ratio: 1.2;
@@ -15,13 +10,3 @@ $s-font-family-sans: var(--font-sans), system-ui, sans-serif;
 $s-font-family-serif: var(--font-serif), serif;
 $s-font-family-display: var(--font-display), serif;
 $s-font-family-mono: monospace;
-
-/** Colors **/
-$s-color-heading: #273042;
-$s-color-body: #546278;
-$s-color-muted-body: color.scale($s-color-body, $lightness: 40%);
-$s-color-link: $s-color-secondary;
-$s-color-link-hover: $s-color-secondary-lighter;
-$s-color-link-active: $s-color-secondary-darker;
-$s-color-selection-foreground: $s-color-white;
-$s-color-selection-background: $s-color-secondary;

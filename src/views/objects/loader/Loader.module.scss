@@ -7,7 +7,7 @@
   display: inline-block;
   width: t-vertical-rhythm(1.5);
   height: t-vertical-rhythm(1.5);
-  outline: 2px solid $s-color-secondary;
+  outline: 1.5px solid $s-color-secondary;
   animation: loader-spin-animation $loader-speed infinite ease;
 
   @include t-wekkit-hdpi-small-dimension("outline-width", 2);

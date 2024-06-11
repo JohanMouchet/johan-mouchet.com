@@ -3,26 +3,20 @@
  */
 
 ::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
-  background-color: $s-color-primary;
-
-  /* Inner scrollbar */
-  body & {
-    background-color: $s-color-gray-50;
-  }
+  width: 8px;
+  height: 8px;
+  background-color: $s-color-gray-200;
 }
 
 /** Thumb **/
 /* stylelint-disable-next-line no-descending-specificity */
 ::-webkit-scrollbar-thumb {
-  background-color: $s-color-secondary;
+  background-color: $s-color-gray-300;
+  border-radius: 4px;
+  transition: 0.2s background-color ease-out;
 
-  &:hover {
-    background-color: $s-color-secondary-lighter;
-  }
-
+  &:hover,
   &:active {
-    background-color: $s-color-secondary-darker;
+    background-color: $s-color-gray-400;
   }
 }
