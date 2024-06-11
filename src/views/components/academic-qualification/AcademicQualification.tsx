@@ -1,3 +1,4 @@
+import { IconArrowUpRight } from "@/views/objects/icons";
 import clsx, { ClassValue } from "clsx";
 import styles from "./AcademicQualification.module.scss";
 
@@ -37,6 +38,9 @@ export const AcademicQualification = ({
               href={degree.establishmentLink.url}
             >
               {degree.establishmentName}
+              <IconArrowUpRight
+                className={styles["c-academic-qualification__link"]}
+              />
             </a>
             , {degree.location}
           </h3>
