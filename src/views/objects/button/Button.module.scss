@@ -19,6 +19,7 @@ $class: o-button;
   background: none;
   border: 2px solid $s-color-gray-200;
   border-radius: 0;
+  border-radius: 9999px;
   transition: color 0.2s, background 0.2s, border-color 0.2s,
     transform 0.1s ease-out;
 

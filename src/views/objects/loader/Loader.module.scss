@@ -7,6 +7,7 @@
   display: inline-block;
   width: t-vertical-rhythm(1.5);
   height: t-vertical-rhythm(1.5);
+  border-radius: 0.1875rem;
   outline: 1.5px solid $s-color-secondary;
   animation: loader-spin-animation $loader-speed infinite ease;
 
@@ -27,6 +28,7 @@
     width: inherit;
     height: inherit;
     content: "";
+    border-radius: inherit;
     outline: inherit;
     animation: inherit;
     animation-name: loader-spin-animation-asynchronous;
@@ -46,5 +48,6 @@
   &--sm {
     width: t-vertical-rhythm(0.75);
     height: t-vertical-rhythm(0.75);
+    border-radius: 0.125rem;
   }
 }

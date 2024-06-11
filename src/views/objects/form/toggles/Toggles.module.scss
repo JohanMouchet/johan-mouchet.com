@@ -40,6 +40,11 @@
 
     @include t-wekkit-hdpi-small-dimension;
 
+    /** Checkbox **/
+    #{$root}--checkbox & {
+      border-radius: 0.1875rem;
+    }
+
     /** Radio **/
     #{$root}--radio & {
       border-radius: 50%;

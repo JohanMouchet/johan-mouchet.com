@@ -121,13 +121,13 @@ pre {
 pre,
 code {
   background-color: $s-color-gray-100;
-  background-color: $s-color-gray-200;
+  border-radius: 0.1875rem;
 }
 
 /* Inline code */
 code,
 kbd {
-  padding: 0.125rem 0.375rem;
+  padding: 0.125rem 0.5rem;
   font-size: t-modular-scale(-1);
   font-style: normal;
   font-weight: 400;
@@ -139,4 +139,5 @@ kbd {
 kbd {
   color: $s-color-white;
   background: $s-color-black;
+  border-radius: 0.1875rem;
 }
