@@ -15,7 +15,7 @@ $class: o-table;
   text-align: left;
 
   tbody tr:not(:last-child) {
-    border-bottom: 1px solid $s-color-gray-200;
+    border-bottom: 1px solid $s-color-border;
   }
 
   th,
@@ -77,7 +77,7 @@ $class: o-table;
 
       th:not(:last-child),
       td:not(:last-child) {
-        border-right: 1px solid $s-color-gray-200;
+        border-right: 1px solid $s-color-border;
       }
     }
   }

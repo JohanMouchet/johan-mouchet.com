@@ -46,6 +46,7 @@ $s-color-muted-body: color.scale($s-color-body, $lightness: 40%);
 $s-color-link: $s-color-primary;
 $s-color-link-hover: $s-color-primary;
 
-/** Selection **/
+/** Misc **/
+$s-color-border: $s-color-gray-200;
 $s-color-selection-foreground: $s-color-white;
 $s-color-selection-background: $s-color-primary;

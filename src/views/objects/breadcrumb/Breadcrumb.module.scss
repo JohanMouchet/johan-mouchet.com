@@ -11,7 +11,7 @@
   margin-bottom: t-vertical-rhythm(2);
   overflow: auto hidden;
   list-style: none;
-  border-bottom: 1px solid $s-color-gray-200;
+  border-bottom: 1px solid $s-color-border;
 
   * + & {
     margin-top: t-vertical-rhythm(1);
@@ -24,7 +24,7 @@
     white-space: nowrap;
 
     &:not(:last-child)::after {
-      color: $s-color-gray-200;
+      color: $s-color-border;
       content: "/";
     }
 
