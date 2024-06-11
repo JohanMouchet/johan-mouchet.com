@@ -40,7 +40,7 @@
     li:not(:first-child),
     ul,
     ol {
-      border-top: 1px solid $s-color-gray-200;
+      border-top: 1px solid $s-color-border;
     }
 
     // And inline
@@ -55,7 +55,7 @@
   &--v-striped {
     li {
       padding-left: 1rem;
-      border-left: 1px solid $s-color-gray-200;
+      border-left: 1px solid $s-color-border;
     }
 
     // And inline

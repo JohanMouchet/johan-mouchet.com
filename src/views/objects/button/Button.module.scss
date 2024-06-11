@@ -126,7 +126,9 @@ $class: o-button;
     justify-content: center;
 
     > svg {
+      flex-shrink: 0;
       width: 1.125rem;
+      max-width: none;
       height: 1.125rem;
     }
   }
