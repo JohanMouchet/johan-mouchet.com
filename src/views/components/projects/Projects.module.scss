@@ -8,6 +8,8 @@
   height: 100%;
   padding: t-vertical-rhythm(1);
   background: $s-color-white;
+  border-radius: 0.5rem;
+  box-shadow: map.get($s-shadows, lg);
 
   &s {
     position: relative;
@@ -33,14 +35,15 @@
     background-color: transparent;
     border: 0;
     outline: 0;
-    @include t-link($s-color-muted-body, "none", $hover-decoration: "none");
+    @include t-link($s-color-muted-body, "none");
   }
 
   &s__carousel {
+    padding: 0.75rem;
     overflow: hidden;
-    background: $s-color-gray-200;
-    border: 2px solid $s-color-gray-200;
-    @include t-wekkit-hdpi-small-dimension;
+    background: $s-color-gray-100;
+    border: 1px solid $s-color-gray-100;
+    border-radius: 1rem;
   }
 
   &s__container {
@@ -57,105 +60,27 @@
     }
   }
 
-  &__link {
-    position: relative;
-    display: block;
-    margin-bottom: t-vertical-rhythm(1);
-    overflow: hidden;
-
-    &:hover,
-    &:focus {
-      #{$root}__thumbnail {
-        filter: grayscale(0);
-      }
-
-      #{$root}__overlay {
-        text-decoration: none;
-        opacity: 0;
-
-        /* stylelint-disable-next-line max-nesting-depth */
-        &::before {
-          transform: scaleX(0);
-        }
-      }
-    }
-  }
-
   &__thumbnail {
     display: block;
     width: 100%;
-    filter: grayscale(1);
+    margin-bottom: t-vertical-rhythm(1);
     border: 1px solid $s-color-gray-200;
-    transition: filter 0.2s ease-out;
-  }
-
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: t-vertical-rhythm(0.25);
-    color: $s-color-white;
-    text-align: center;
-    text-shadow: 1px 1px 1px rgba($s-color-black, 0.3);
-    transition: opacity 0.2s ease-out;
-
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      content: "";
-      background-image: map.get($s-backgrounds, dots),
-        linear-gradient(
-          rgba($s-color-primary-lighter, 0.75),
-          rgba($s-color-primary-darker, 0.95)
-        );
-      transition: transform 0.2s ease-out;
-      transform-origin: 100% 50%;
-    }
-
-    > * {
-      position: relative;
-    }
+    border-radius: 0.25rem;
   }
 
   &__title {
-    margin: 0;
-    font-style: italic;
-    color: $s-color-secondary;
+    margin-bottom: t-vertical-rhythm(0.5);
   }
 
-  &__line {
-    width: 30%;
-    margin-top: t-vertical-rhythm(0.3);
-    margin-bottom: t-vertical-rhythm(0.3);
-    border-bottom: 1px solid;
-  }
-
-  &__tagline {
-    margin: 0;
-    font-size: t-modular-scale(-1);
-  }
-
-  &__arrow {
-    position: absolute;
-    top: 0.25rem;
-    right: 0.25rem;
-    width: 1.25rem;
-    height: 1.25rem;
-    filter: drop-shadow(1px 1px 1px rgba($s-color-black, 0.3));
-    fill: $s-color-secondary;
+  &__link {
+    width: 0.8em;
+    height: 0.8em;
+    margin-left: 0.1em;
   }
 
   &__lede {
     color: $s-color-muted-body;
+    text-wrap: pretty;
   }
 
   &__detail {
