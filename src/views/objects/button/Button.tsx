@@ -42,7 +42,7 @@ export const Button = ({
         {icon ? (
           <>
             {icon}
-            <span>{children}</span>
+            {children && <span>{children}</span>}
           </>
         ) : (
           children
@@ -61,7 +61,7 @@ export const Button = ({
       {icon ? (
         <>
           {icon}
-          <span>{children}</span>
+          {children && <span>{children}</span>}
         </>
       ) : (
         children

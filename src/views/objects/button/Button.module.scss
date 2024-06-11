@@ -16,7 +16,7 @@ $class: o-button;
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
-  background: none;
+  background: $s-color-gray-100;
   border: 1.5px solid transparent;
   border-radius: 0;
   border-radius: 9999px;
@@ -63,20 +63,14 @@ $class: o-button;
 
   /** Secondary **/
   &--secondary {
-    color: $s-color-secondary;
-    border-color: $s-color-secondary;
+    color: $s-color-body;
+    background: transparent;
+    border-color: $s-color-gray-200;
 
     &:hover,
     &:focus {
-      color: $s-color-white;
-      background-color: $s-color-secondary-lighter;
-      border-color: $s-color-secondary-lighter;
-    }
-
-    &:active {
-      color: $s-color-white;
-      background-color: $s-color-secondary-darker;
-      border-color: $s-color-secondary-darker;
+      color: $s-color-body;
+      border-color: $s-color-body;
     }
   }
 
