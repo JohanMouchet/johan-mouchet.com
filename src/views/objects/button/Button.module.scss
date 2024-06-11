@@ -17,7 +17,7 @@ $class: o-button;
   vertical-align: middle;
   cursor: pointer;
   background: none;
-  border: 2px solid $s-color-gray-200;
+  border: 1.5px solid transparent;
   border-radius: 0;
   border-radius: 9999px;
   transition: color 0.2s, background 0.2s, border-color 0.2s,
