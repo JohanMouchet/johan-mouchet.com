@@ -27,13 +27,13 @@ export const duration = (
   const displayMinimumLabel = years + months <= 0;
 
   if (format === "short") {
-    const yearsFormatted = years >= 1 ? pluralize(`${years} yr`, years) : "";
+    const yearsFormatted = years >= 1 ? pluralize(`${years} year`, years) : "";
     const monthsFormatted =
-      months >= 1 ? pluralize(`${months} mo`, months) : "";
+      months >= 1 ? pluralize(`${months} month`, months) : "";
 
     return !displayMinimumLabel
       ? `${yearsFormatted}${
-          yearsFormatted && monthsFormatted && " "
+          yearsFormatted && monthsFormatted && ", "
         }${monthsFormatted}`
       : minimumLabel;
   }
