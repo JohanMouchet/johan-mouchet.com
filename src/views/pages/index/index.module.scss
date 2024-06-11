@@ -3,26 +3,12 @@
 @import "@/assets/styles/tools/tools.module";
 
 .home {
-  &-about {
-    &__heading {
-      margin-top: t-vertical-rhythm(3);
-      text-transform: none;
-    }
-
-    &__paragraph {
-      max-width: 56rem;
-      margin-bottom: t-vertical-rhythm(3);
+  &__about {
+    &-paragraph {
+      max-width: 50rem;
+      margin-bottom: t-vertical-rhythm(4);
       font-size: t-modular-scale(1);
-      line-height: 1.5;
       text-wrap: balance;
-    }
-
-    &__portrait {
-      display: block;
-      width: 150px;
-      margin-top: t-vertical-rhythm(2);
-      margin-bottom: t-vertical-rhythm(2);
-      border-radius: 50%;
     }
   }
 

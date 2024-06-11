@@ -7,7 +7,6 @@ import { Skills } from "@/views/components/skills/Skills";
 import { SocialMedia } from "@/views/components/social-media/SocialMedia";
 import { Default } from "@/views/layouts/default/Default";
 import { Anchor } from "@/views/objects/anchor/Anchor";
-import { Badge } from "@/views/objects/badge/Badge";
 import { Button } from "@/views/objects/button/Button";
 import {
   IconDownload,
@@ -19,7 +18,6 @@ import { Article } from "@/views/partials/article/Article";
 import { Main } from "@/views/partials/main/Main";
 import { gql } from "@apollo/client";
 import { PrismicRichText } from "@prismicio/react";
-import clsx from "clsx";
 import { NextPage } from "next";
 import { client } from "./api/prismicio";
 
@@ -41,253 +39,148 @@ const Home: NextPage = ({ data, errors }: any) => {
   if (data) {
     return (
       <Default>
-        <Main margin="no-margin">
-          <section className={styles["home-about"]}>
-            <div
-              className={clsx(
-                "grid",
-                "grid-no-gutter",
-                styles["home-lg-gutter"]
-              )}
-            >
-              <div
-                className={clsx(
-                  styles["home-cell--gray"],
-                  "cell",
-                  "cell-12",
-                  "cell-last",
-                  "md:cell-3",
-                  "md:cell-first"
-                )}
-              >
-                <div
-                  className={clsx(
-                    "u-full--height",
-                    "grid",
-                    "grid-x-center",
-                    "grid-y-center"
-                  )}
-                >
-                  <div className="cell">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      className={styles["home-about__portrait"]}
-                      width={data.profile.image.dimensions.width}
-                      height={data.profile.image.dimensions.height}
-                      src={`${data.profile.image.url}&q=100`}
-                      srcSet={`${data.profile.image.url}&q=100, ${data.profile.image.x2.url}&q=100 1.25x`}
-                      alt={data.profile.image.alt}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className={clsx(
-                  styles["home-cell--gray-lighter"],
-                  "cell",
-                  "cell-12",
-                  "md:cell-9",
-                  "md:cell-y-center"
-                )}
-              >
-                <h1 className={styles["home-about__heading"]}>
-                  {data.home.title}
-                </h1>
-
-                <div className={styles["home-about__paragraph"]}>
-                  <PrismicRichText field={data.home.paragraph} />
-                </div>
-              </div>
-            </div>
-          </section>
+        <section className={styles["home__about"]}>
+          <div className={styles["home__about-paragraph"]}>
+            <PrismicRichText field={data.home.paragraph} />
+            <Skills skills={data.skills.skills} />
+          </div>
+        </section>
+        <Main>
           <section>
-            <div
-              className={clsx(
-                "grid",
-                "grid-no-gutter",
-                styles["home-lg-gutter"]
-              )}
-            >
-              <div
-                className={clsx(
-                  styles["home-cell--gray-lighter"],
-                  "cell",
-                  "cell-12",
-                  "md:cell-3"
-                )}
-              >
-                <Article>
-                  <h2>
-                    <Anchor id="skills">{data.home.skillsSectionTitle}</Anchor>
-                  </h2>
+            <Article>
+              <h2 className={styles["home__experiences-title"]}>
+                <Anchor id="career-experiences">
+                  {data.home.careerExperiencesSectionTitle}
+                </Anchor>{" "}
+                <ExperienceDuration
+                  experiences={data.careerExperiences.experiences}
+                />
+              </h2>
 
-                  <Skills skills={data.skills.skills} />
-                </Article>
+              <Experiences experiences={data.careerExperiences.experiences} />
+            </Article>
 
+            <hr />
+
+            <Article>
+              <h2>
+                <Anchor id="open-source">
+                  {data.home.openSourceSectionTitle}
+                </Anchor>
+              </h2>
+
+              <OpenSource projects={data.openSource.projects} />
+            </Article>
+
+            <hr />
+
+            <div className="grid md:grid-lg-gutter">
+              <Article margin="no-margin" className="cell cell-12 md:cell-4">
+                <h2>
+                  <Anchor id="tools">{data.home.toolsSectionTitle}</Anchor>
+                </h2>
+
+                <div className={styles["home__tools"]}>
+                  {data.tools.tools[0].text.split(", ").map((item: string) => (
+                    <code key={item}>{item}</code>
+                  ))}
+                </div>
+              </Article>
+
+              <div className="cell cell-12 md:cell-hidden">
                 <hr />
-
-                <Article>
-                  <h2>
-                    <Anchor id="tools">{data.home.toolsSectionTitle}</Anchor>
-                  </h2>
-
-                  <div className={styles["home__tools"]}>
-                    {data.tools.tools[0].text
-                      .split(", ")
-                      .map((item: string) => (
-                        <Badge key={item}>{item}</Badge>
-                      ))}
-                  </div>
-                </Article>
-
-                <hr />
-
-                <Article>
-                  <h2>
-                    <Anchor id="profile">
-                      {data.home.profileSectionTitle}
-                    </Anchor>
-                  </h2>
-
-                  <p>{data.profile.traits}</p>
-                </Article>
-
-                <hr />
-
-                <Article>
-                  <h2>
-                    <Anchor id="academic-qualifications">
-                      {data.home.academicQualificationsSectionTitle}
-                    </Anchor>
-                  </h2>
-
-                  <AcademicQualification
-                    degrees={data.academicQualifications.degrees}
-                  />
-                </Article>
-
-                <hr />
-
-                <Article>
-                  <h2>
-                    <Anchor id="languages">
-                      {data.home.languagesSectionTitle}
-                    </Anchor>
-                  </h2>
-
-                  <PrismicRichText field={data.languages.languages} />
-                </Article>
-
-                <hr />
-
-                <Article>
-                  <h2>
-                    <Anchor id="interests">
-                      {data.home.interestsSectionTitle}
-                    </Anchor>
-                  </h2>
-
-                  <PrismicRichText field={data.interests.interests} />
-                </Article>
-
-                <hr />
-
-                <Article>
-                  <h2>
-                    <Anchor id="social-media">
-                      {data.home.socialMediaSectionTitle}
-                    </Anchor>
-                  </h2>
-
-                  <SocialMedia media={data.profile.socialNetworks} />
-                </Article>
-                <div className="u-vr--top-2" />
               </div>
 
-              <div className="cell cell-12 md:cell-9">
-                <Article>
-                  <h2 className={styles["home__experiences-title"]}>
-                    <Anchor id="career-experiences">
-                      {data.home.careerExperiencesSectionTitle}
-                    </Anchor>{" "}
-                    <ExperienceDuration
-                      experiences={data.careerExperiences.experiences}
-                    />
-                  </h2>
+              <Article margin="no-margin" className="cell cell-12 md:cell-5">
+                <h2>
+                  <Anchor id="academic-qualifications">
+                    {data.home.academicQualificationsSectionTitle}
+                  </Anchor>
+                </h2>
 
-                  <Experiences
-                    experiences={data.careerExperiences.experiences}
-                  />
-                </Article>
+                <AcademicQualification
+                  degrees={data.academicQualifications.degrees}
+                />
+              </Article>
 
+              <div className="cell cell-12 md:cell-hidden">
                 <hr />
-
-                <Article>
-                  <h2>
-                    <Anchor id="open-source">
-                      {data.home.openSourceSectionTitle}
-                    </Anchor>
-                  </h2>
-
-                  <OpenSource projects={data.openSource.projects} />
-                </Article>
-
-                <hr />
-
-                <Article>
-                  <h2>
-                    <Anchor id="personal-works">
-                      {data.home.personalWorksSectionTitle}
-                    </Anchor>
-                  </h2>
-
-                  <PrismicRichText field={data.personalWorks.paragraph} />
-
-                  <PersonalWorks works={data.personalWorks.works} />
-                </Article>
-
-                <hr />
-
-                <Article>
-                  <h2>
-                    <Anchor id="get-in-touch">
-                      {data.home.getInTouchSectionTitle}
-                    </Anchor>
-                  </h2>
-
-                  <div className={styles["home__get-in-touch"]}>
-                    <Button
-                      href={`mailto:${data.profile.email}`}
-                      icon={<IconEnvelope />}
-                      block="sm"
-                      variant="primary"
-                    >
-                      Email me
-                    </Button>
-                    <Button
-                      href={
-                        data.profile.socialNetworks.find(
-                          (socialNetwork: { name: string }) =>
-                            socialNetwork.name === "LinkedIn"
-                        )?.link?.url
-                      }
-                      icon={<IconLinkedIn />}
-                      block="sm"
-                    >
-                      Connect on LinkedIn
-                    </Button>
-                    <Button
-                      href={data.profile.resumeLink?.url}
-                      icon={<IconDownload />}
-                      block="sm"
-                    >
-                      Download résumé
-                    </Button>
-                  </div>
-                </Article>
               </div>
+
+              <Article margin="no-margin" className="cell cell-12 md:cell-3">
+                <h2>
+                  <Anchor id="languages">
+                    {data.home.languagesSectionTitle}
+                  </Anchor>
+                </h2>
+
+                <PrismicRichText field={data.languages.languages} />
+              </Article>
             </div>
+
+            <hr />
+
+            <Article>
+              <h2>
+                <Anchor id="get-in-touch">
+                  {data.home.getInTouchSectionTitle}
+                </Anchor>
+              </h2>
+
+              <div className={styles["home__get-in-touch"]}>
+                <Button
+                  href={`mailto:${data.profile.email}`}
+                  icon={<IconEnvelope />}
+                  block="sm"
+                  variant="primary"
+                >
+                  Email me
+                </Button>
+                <Button
+                  variant="secondary"
+                  href={
+                    data.profile.socialNetworks.find(
+                      (socialNetwork: { name: string }) =>
+                        socialNetwork.name === "LinkedIn"
+                    )?.link?.url
+                  }
+                  icon={<IconLinkedIn />}
+                  block="sm"
+                >
+                  Connect on LinkedIn
+                </Button>
+                <Button
+                  variant="secondary"
+                  href={data.profile.resumeLink?.url}
+                  icon={<IconDownload />}
+                  block="sm"
+                >
+                  Download résumé
+                </Button>
+              </div>
+
+              <h3>
+                <Anchor id="social-media">
+                  {data.home.socialMediaSectionTitle}
+                </Anchor>
+              </h3>
+
+              <SocialMedia media={data.profile.socialNetworks} />
+            </Article>
+
+            <hr />
+
+            <Article>
+              <h2>
+                <Anchor id="personal-works">
+                  {data.home.personalWorksSectionTitle}
+                </Anchor>
+              </h2>
+
+              <PrismicRichText field={data.personalWorks.paragraph} />
+
+              <PersonalWorks works={data.personalWorks.works} />
+            </Article>
           </section>
         </Main>
       </Default>
@@ -302,7 +195,7 @@ const homeQuery = gql`
     profile(uid: "profile", lang: "en-au") {
       firstName: first_name
       lastName: last_name
-      image
+      # image
       email
       socialNetworks: social_networks {
         name
@@ -313,7 +206,6 @@ const homeQuery = gql`
         }
         icon
       }
-      traits
       resumeLink: resume_link {
         ... on _ExternalLink {
           url
@@ -325,10 +217,8 @@ const homeQuery = gql`
       paragraph
       skillsSectionTitle: skills_section_title
       toolsSectionTitle: tools_section_title
-      profileSectionTitle: profile_section_title
       academicQualificationsSectionTitle: academic_qualifications_section_title
       languagesSectionTitle: languages_section_title
-      interestsSectionTitle: interests_section_title
       socialMediaSectionTitle: social_media_section_title
       careerExperiencesSectionTitle: career_experiences_section_title
       openSourceSectionTitle: open_source_section_title
@@ -363,9 +253,6 @@ const homeQuery = gql`
     }
     languages(uid: "languages", lang: "en-au") {
       languages
-    }
-    interests(uid: "interests", lang: "en-au") {
-      interests
     }
     careerExperiences: career_experiences(
       uid: "career-experiences"
