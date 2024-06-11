@@ -5,57 +5,53 @@ exports[`Renders <Footer /> without crashing 1`] = `
   class="p-footer"
 >
   <div
-    class="container"
+    class="grid grid-y-center grid-no-wrap"
   >
     <div
-      class="grid grid-y-center grid-no-wrap"
+      class="cell cell-shrink"
     >
-      <div
-        class="cell cell-shrink"
+      <span
+        class="p-footer__version"
       >
+        Version
+      </span>
+    </div>
+    <div
+      class="cell cell-grow"
+    >
+      <p
+        class="p-footer__copyright"
+      >
+        2024
+         © 
+        Copyright
+         
         <span
-          class="p-footer__version"
+          class="p-footer__copyright-separator"
         >
-          Version
+          —
         </span>
-      </div>
-      <div
-        class="cell cell-grow"
-      >
-        <p
-          class="p-footer__copyright"
+        <br />
+         Made in
+         
+        <span
+          class="p-footer__cocorico"
+          tabindex="0"
         >
-          2023
-           © 
-          Copyright
-           
-          <span
-            class="p-footer__copyright-separator"
-          >
-            |
-          </span>
-          <br />
-           Made in
-           
-          <span
-            class="p-footer__cocorico"
-            tabindex="0"
-          >
-            France
-          </span>
-        </p>
-      </div>
-      <div
-        class="cell cell-shrink"
+          France
+        </span>
+      </p>
+    </div>
+    <div
+      class="cell cell-shrink"
+    >
+      <a
+        aria-label="Top Button Label"
+        class="p-footer__page-top"
+        href="#page-top"
       >
-        <a
-          aria-label="Top Button Label"
-          class="p-footer__page-top"
-          href="#page-top"
-        >
-          <svg />
-        </a>
-      </div>
+        <svg />
+      </a>
     </div>
   </div>
 </footer>
