@@ -1,6 +1,5 @@
 import { parse } from "@/utils/parse/parse";
 import { pluralize } from "@/utils/pluralize/pluralize";
-import { Badge } from "@/views/objects/badge/Badge";
 import { Button } from "@/views/objects/button/Button";
 import {
   IconArrowLineLeft,
@@ -15,47 +14,24 @@ import { useCallback, useEffect, useState } from "react";
 import styles from "./Projects.module.scss";
 
 const Thumbnail = ({
-  name,
-  tagline,
-  link,
   lede,
   thumbnailSrc,
 }: {
-  name: string;
-  tagline?: string;
-  link: {
-    url: string;
-  };
   lede: React.ComponentProps<typeof PrismicRichText>["field"];
   thumbnailSrc: {
     url: string;
   };
 }) => (
   <>
-    <a
-      href={link.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={styles["c-project__link"]}
-    >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        className={styles["c-project__thumbnail"]}
-        src={thumbnailSrc.url}
-        alt=""
-        width={400}
-        height={225}
-        loading="lazy"
-      />
-      <div className={styles["c-project__overlay"]}>
-        <h4 className={styles["c-project__title"]}>{name}</h4>
-        <span className={styles["c-project__line"]} />
-        {tagline && (
-          <span className={styles["c-project__tagline"]}>{tagline}</span>
-        )}
-        <IconArrowUpRight className={styles["c-project__arrow"]} />
-      </div>
-    </a>
+    {/* eslint-disable-next-line @next/next/no-img-element */}
+    <img
+      className={styles["c-project__thumbnail"]}
+      src={thumbnailSrc.url}
+      alt=""
+      width={400}
+      height={225}
+      loading="lazy"
+    />
 
     {lede && (
       <div className={styles["c-project__lede"]}>
@@ -107,7 +83,7 @@ const Content = ({
           <b className={styles["c-project__detail-heading"]}>Architecture</b>
           <div className={styles["c-project__detail-architecture"]}>
             {architecture[0].text.split(", ").map((item: string) => (
-              <Badge key={item}>{item}</Badge>
+              <code key={item}>{item}</code>
             ))}
           </div>
         </div>
@@ -135,6 +111,7 @@ export const Links = ({
     <div className={styles["c-project__links"]}>
       {links.map((link) => (
         <Button
+          variant="secondary"
           href={link.link.url}
           icon={
             link.icon ? (
@@ -163,6 +140,11 @@ export const Projects = ({
 }: {
   projects: ({
     id?: string;
+    name: string;
+    tagline?: string;
+    link: {
+      url: string;
+    };
     links?: React.ComponentProps<typeof Links>;
   } & React.ComponentProps<typeof Thumbnail> &
     React.ComponentProps<typeof Content>)[];
@@ -198,6 +180,7 @@ export const Projects = ({
     <div className={clsx(styles["c-projects"], className)} {...props}>
       {projects?.length > 1 && (
         <div className={styles["c-projects__navigation"]}>
+          {selectedSnap + 1} / {projects?.length}
           {emblaApi?.canScrollNext() ? (
             <button
               className={styles["c-projects__next"]}
@@ -215,7 +198,6 @@ export const Projects = ({
               <IconArrowLineLeft />
             </button>
           )}
-          {selectedSnap + 1} / {projects?.length}
         </div>
       )}
       <div className={styles["c-projects__carousel"]} ref={emblaRef}>
@@ -228,11 +210,23 @@ export const Projects = ({
             >
               <div className={clsx(styles["c-project"])}>
                 <div className="grid">
+                  <div className="cell cell-12">
+                    <h4 className={styles["c-project__title"]}>
+                      <a
+                        href={project.link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {project.name}
+                        {project.tagline && <> &mdash; {project.tagline}</>}
+                        <IconArrowUpRight
+                          className={styles["c-project__link"]}
+                        />
+                      </a>
+                    </h4>
+                  </div>
                   <div className="cell cell-12 md:cell-6 lg:cell-4">
                     <Thumbnail
-                      name={project.name}
-                      tagline={project.tagline}
-                      link={project.link}
                       lede={project.lede}
                       thumbnailSrc={project.thumbnailSrc}
                     />

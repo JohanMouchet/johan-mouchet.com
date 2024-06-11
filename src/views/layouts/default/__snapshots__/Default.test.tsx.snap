@@ -4,117 +4,77 @@ exports[`Renders <Default /> without crashing 1`] = `
 <div
   class="l-layout"
 >
-  <div
-    class="l-layout__background"
-  />
-  <div
-    class="l-layout__inner"
+  <header
+    class="p-header"
   >
-    <header
-      class="p-header"
+    <h1
+      class="p-header__heading"
+    >
+      Johan
+       
+      Mouchet
+    </h1>
+    <span
+      class="p-header__tagline"
+    >
+      Design System Architect
+    </span>
+  </header>
+  children
+  <hr />
+  <footer
+    class="p-footer"
+  >
+    <div
+      class="grid grid-y-center grid-no-wrap"
     >
       <div
-        class="p-header__inner"
+        class="cell cell-shrink"
       >
-        <h1
-          class="p-header__heading"
+        <span
+          class="p-footer__version"
         >
-          <span
-            class="p-header__half p-header__half--left"
-          >
-            <span
-              class="p-header__text-wrapper"
-            >
-              <span
-                class="p-header__text"
-              >
-                Johan
-              </span>
-            </span>
-          </span>
-          <span
-            class="p-header__line"
-          />
-          <span
-            class="p-header__half p-header__half--right"
-          >
-            <span
-              class="p-header__text-wrapper"
-            >
-              <span
-                class="p-header__text"
-              >
-                Mouchet
-              </span>
-            </span>
-          </span>
-        </h1>
-        <h2
-          class="p-header__tagline"
-        >
-          Design System Architect
-        </h2>
+          7.0.0
+        </span>
       </div>
-    </header>
-    children
-    <footer
-      class="p-footer"
-    >
       <div
-        class="container"
+        class="cell cell-grow"
       >
-        <div
-          class="grid grid-y-center grid-no-wrap"
+        <p
+          class="p-footer__copyright"
         >
-          <div
-            class="cell cell-shrink"
+          2024
+           © 
+          Johan MOUCHET
+           
+          <span
+            class="p-footer__copyright-separator"
           >
-            <span
-              class="p-footer__version"
-            >
-              6.0.0
-            </span>
-          </div>
-          <div
-            class="cell cell-grow"
+            —
+          </span>
+          <br />
+           Made in
+           
+          <span
+            class="p-footer__cocorico"
+            tabindex="0"
           >
-            <p
-              class="p-footer__copyright"
-            >
-              2023
-               © 
-              Johan MOUCHET
-               
-              <span
-                class="p-footer__copyright-separator"
-              >
-                |
-              </span>
-              <br />
-               Made in
-               
-              <span
-                class="p-footer__cocorico"
-                tabindex="0"
-              >
-                France
-              </span>
-            </p>
-          </div>
-          <div
-            class="cell cell-shrink"
-          >
-            <a
-              aria-label="Get to the top"
-              class="p-footer__page-top"
-              href="#page-top"
-            >
-              <svg />
-            </a>
-          </div>
-        </div>
+            France
+          </span>
+        </p>
       </div>
-    </footer>
-  </div>
+      <div
+        class="cell cell-shrink"
+      >
+        <a
+          aria-label="Get to the top"
+          class="p-footer__page-top"
+          href="#page-top"
+        >
+          <svg />
+        </a>
+      </div>
+    </div>
+  </footer>
 </div>
 `;

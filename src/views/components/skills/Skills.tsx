@@ -1,35 +1,24 @@
-import styles from "@/views/objects/list/List.module.scss";
-import { ProgressBar } from "@/views/objects/progress-bar/ProgressBar";
+import { Badge } from "@/views/objects/badge/Badge";
 import clsx, { ClassValue } from "clsx";
+import styles from "./Skills.module.scss";
 
 export const Skills = ({
   skills,
   className,
   ...props
 }: {
-  skills: Pick<
-    React.ComponentProps<typeof ProgressBar>,
-    "label" | "filling" | "progress"
-  >[];
+  skills: { label: string }[];
   className?: ClassValue;
-} & React.HTMLProps<HTMLUListElement>) => {
+} & React.HTMLProps<HTMLDivElement>) => {
   if (!skills?.length) {
     return null;
   }
 
   return (
-    <ul className={clsx(styles["o-list--unstyled"], className)} {...props}>
+    <div className={clsx(styles["c-skills"], className)} {...props}>
       {skills.map((skill) => (
-        <li key={skill.label}>
-          <ProgressBar
-            label={skill.label}
-            filling={skill.filling}
-            progress={skill.progress}
-            total="10"
-            detailsOnHover
-          />
-        </li>
+        <code key={skill.label}>{skill.label}</code>
       ))}
-    </ul>
+    </div>
   );
 };

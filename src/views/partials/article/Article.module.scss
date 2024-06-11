@@ -4,7 +4,7 @@
 
 .p-article {
   $p-article: (
-    v-padding: t-vertical-rhythm(2),
+    v-padding: t-vertical-rhythm(3),
     scale-factor: 2,
   );
 
@@ -53,7 +53,7 @@
       h4,
       h5,
       h6 {
-        color: $s-color-text-dimmed;
+        color: $s-color-muted-body;
       }
 
       p,

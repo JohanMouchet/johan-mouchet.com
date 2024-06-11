@@ -1,9 +1,33 @@
+@use "sass:map";
 @import "@/assets/styles/settings/settings.module";
 @import "@/assets/styles/tools/tools.module";
 
 .c-open-source {
+  height: 100%;
+  padding: t-vertical-rhythm(1);
+  border: 1px solid $s-color-gray-200;
+  border-radius: 0.5rem;
+
+  &__cell {
+    &:not(:first-child) {
+      margin-top: t-vertical-rhythm(1);
+
+      @media (min-width: map.get($s-breakpoints, md)) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__link {
+    width: 0.8em;
+    height: 0.8em;
+    margin-left: 0.1em;
+  }
+
   &__lede {
     font-style: italic;
+    color: $s-color-muted-body;
+    text-wrap: pretty;
   }
 
   &__description {

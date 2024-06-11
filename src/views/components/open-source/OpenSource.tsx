@@ -2,6 +2,7 @@ import { parse } from "@/utils/parse/parse";
 import { PrismicRichText } from "@prismicio/react";
 import clsx, { ClassValue } from "clsx";
 import styles from "./OpenSource.module.scss";
+import { IconArrowUpRight } from "@/views/objects/icons";
 
 export const OpenSource = ({
   projects,
@@ -31,34 +32,42 @@ export const OpenSource = ({
 
           return (
             <div
-              className="cell cell-12 sm:cell-6 lg:cell-4"
+              className={clsx(
+                styles["c-open-source__cell"],
+                "cell cell-12 md:cell-5"
+              )}
               key={project.name}
             >
-              <h3 className={styles["c-open-source__title"]}>
-                <a
-                  href={project.link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {project.name}
-                </a>
-              </h3>
+              <div className={styles["c-open-source"]}>
+                <h4 className={styles["c-open-source__title"]}>
+                  <a
+                    href={project.link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {project.name}
+                    <IconArrowUpRight
+                      className={styles["c-open-source__link"]}
+                    />
+                  </a>
+                </h4>
 
-              <div className={styles["c-open-source__lede"]}>
-                <PrismicRichText field={project.lede} />
-              </div>
+                <div className={styles["c-open-source__lede"]}>
+                  <PrismicRichText field={project.lede} />
+                </div>
 
-              <div className={styles["c-open-source__description"]}>
-                {descriptionPreformatted ? (
-                  <PrismicRichText
-                    field={project.description}
-                    components={(type, element, text, children) => (
-                      <>{text && parse(text)}</>
-                    )}
-                  />
-                ) : (
-                  <PrismicRichText field={project.description} />
-                )}
+                <div className={styles["c-open-source__description"]}>
+                  {descriptionPreformatted ? (
+                    <PrismicRichText
+                      field={project.description}
+                      components={(type, element, text, children) => (
+                        <>{text && parse(text)}</>
+                      )}
+                    />
+                  ) : (
+                    <PrismicRichText field={project.description} />
+                  )}
+                </div>
               </div>
             </div>
           );

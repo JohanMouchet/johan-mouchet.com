@@ -2,22 +2,16 @@
 
 exports[`Renders <SocialMedia /> without crashing 1`] = `
 <div
-  class="grid"
+  class="c-social-media"
 >
-  <div
-    class="c-social-media cell cell-6 sm:cell-4 md:cell-12"
+  <a
+    class="o-button o-button--sm o-button--icon c-social-media__link"
+    href="#"
   >
-    <a
-      class="c-social-media__link"
-      href="#"
-    >
-      <span
-        aria-hidden="true"
-      >
-        <svg />
-      </span>
+    <svg />
+    <span>
       Name
-    </a>
-  </div>
+    </span>
+  </a>
 </div>
 `;

@@ -14,7 +14,7 @@
 
   &[open] {
     #{$root}__summary {
-      color: $s-color-text;
+      color: $s-color-body;
     }
 
     #{$root}__marker-close {
@@ -30,7 +30,7 @@
 
   /* Summary */
   &__summary {
-    @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
+    @include t-link;
 
     display: flex;
     column-gap: 0.5rem;

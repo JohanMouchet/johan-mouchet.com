@@ -1,3 +1,4 @@
+import { Button } from "@/views/objects/button/Button";
 import {
   Icon500px,
   IconCodepen,
@@ -66,23 +67,17 @@ export const SocialMedia = ({
   };
 
   return (
-    <div className={clsx("grid", className)} {...props}>
+    <div className={clsx(styles["c-social-media"], className)} {...props}>
       {media.map((media) => (
-        <div
-          className={clsx(
-            styles["c-social-media"],
-            "cell",
-            "cell-6",
-            "sm:cell-4",
-            "md:cell-12"
-          )}
+        <Button
+          size="sm"
+          icon={getIcon(media.icon)}
+          href={media.link.url}
+          className={styles["c-social-media__link"]}
           key={media.link.url}
         >
-          <a className={styles["c-social-media__link"]} href={media.link.url}>
-            <span aria-hidden>{getIcon(media.icon)}</span>
-            {media.name}
-          </a>
-        </div>
+          {media.name}
+        </Button>
       ))}
     </div>
   );

@@ -1,5 +1,6 @@
 import { duration } from "@/utils/duration/duration";
 import { Projects } from "@/views/components/projects/Projects";
+import { IconArrowUpRight } from "@/views/objects/icons";
 import { PrismicRichText } from "@prismicio/react";
 import clsx, { ClassValue } from "clsx";
 import styles from "./Experiences.module.scss";
@@ -66,25 +67,26 @@ export const Experiences = ({
                   className={styles["c-experience__company"]}
                 >
                   {experience.companyName}
+                  <IconArrowUpRight className={styles["c-experience__link"]} />
                 </a>
                 , {experience.location}
               </span>
               <div className={styles["c-experience__details"]}>
-                {multipleRoles && (
-                  <>
-                    <Duration
-                      startDate={startDate}
-                      present={present}
-                      endDate={endDate}
-                    />
-                    <span className={styles["c-experience__separator"]} />
-                  </>
-                )}
                 <Dates
                   startDate={startDate}
                   present={present}
                   endDate={endDate}
                 />
+                {multipleRoles && (
+                  <>
+                    <span className={styles["c-experience__separator"]} />
+                    <Duration
+                      startDate={startDate}
+                      present={present}
+                      endDate={endDate}
+                    />
+                  </>
+                )}
               </div>
             </h3>
             <div
@@ -109,12 +111,6 @@ export const Experiences = ({
                       <span className={styles["c-experience__title"]}>
                         {role.title}
                       </span>
-                      <span className={styles["c-experience__separator"]} />
-                      <Duration
-                        startDate={roleStartDate}
-                        present={role.present}
-                        endDate={roleEndDate}
-                      />
                       {role.contractType &&
                         role.contractType !== "Full-time" && (
                           <>
@@ -128,6 +124,12 @@ export const Experiences = ({
                             </span>
                           </>
                         )}
+                      <div className={styles["c-experience__push"]} />
+                      <Duration
+                        startDate={roleStartDate}
+                        present={role.present}
+                        endDate={roleEndDate}
+                      />
                     </div>
                   );
                 })}
@@ -198,7 +200,7 @@ const Duration = ({
       {duration(
         [{ start: startDate, end: endDate || new Date() }],
         "short",
-        "1 mo"
+        "1 month"
       )}
     </span>
   );

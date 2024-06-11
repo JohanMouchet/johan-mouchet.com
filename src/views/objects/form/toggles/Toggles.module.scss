@@ -35,10 +35,15 @@
     height: t-vertical-rhythm(0.8);
     vertical-align: middle;
     background: none;
-    border: 2px solid t-map-deep-get($form-settings, default, color);
+    border: 1.5px solid t-map-deep-get($form-settings, default, color);
     transition: background-color 0.2s, border 0.2s;
 
     @include t-wekkit-hdpi-small-dimension;
+
+    /** Checkbox **/
+    #{$root}--checkbox & {
+      border-radius: 0.1875rem;
+    }
 
     /** Radio **/
     #{$root}--radio & {

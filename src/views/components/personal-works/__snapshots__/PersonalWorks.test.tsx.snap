@@ -4,36 +4,24 @@ exports[`Renders <PersonalWorks /> without crashing 1`] = `
 <div
   class="c-personal-works"
 >
-  <div
-    class="grid"
+  <a
+    class="c-personal-work"
+    href="#"
   >
-    <div
-      class="cell cell-6 sm:cell-4 md:cell-2 u-vr--bottom-1 md:u-vr--bottom-0"
+    <img
+      alt="Personal work on unsplash"
+      class="c-personal-work__thumbnail"
+      height="251"
+      loading="lazy"
+      src="https://via.placeholder.com/200x200"
+      width="167"
+    />
+    <span
+      aria-hidden="true"
+      class="c-personal-work__source"
     >
-      <section
-        class="c-personal-work"
-      >
-        <a
-          class="c-personal-work__overlay"
-          href="#"
-        >
-          <img
-            alt="Personal work on unsplash"
-            class="c-personal-work__thumbnail"
-            height="200"
-            loading="lazy"
-            src="https://via.placeholder.com/200x200"
-            width="200"
-          />
-          <span
-            aria-hidden="true"
-            class="c-personal-work__source"
-          >
-            <svg />
-          </span>
-        </a>
-      </section>
-    </div>
-  </div>
+      <svg />
+    </span>
+  </a>
 </div>
 `;

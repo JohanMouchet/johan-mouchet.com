@@ -3,6 +3,7 @@ export const STATIC = {
     firstName: "Johan",
     lastName: "Mouchet",
     tagline: "Design System Architect",
+    location: "Melbourne, Australia",
   },
-  version: "6.0.0",
+  version: "7.0.0",
 };

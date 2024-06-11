@@ -3,7 +3,7 @@
 
 .c-experience {
   &:not(:first-child) {
-    margin: t-vertical-rhythm(1) 0;
+    margin: t-vertical-rhythm(2) 0;
   }
 
   &__heading {
@@ -21,6 +21,12 @@
     font-weight: 700;
   }
 
+  &__link {
+    width: 0.8em;
+    height: 0.8em;
+    margin-left: 0.1em;
+  }
+
   &__date,
   &__duration,
   &__contract-type {
@@ -28,13 +34,13 @@
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    color: $s-color-text-dimmed;
+    color: $s-color-muted-body;
   }
 
   &__subheading {
     margin-top: 0.375rem;
     margin-bottom: t-vertical-rhythm(1);
-    color: $s-color-text-dimmed;
+    color: $s-color-muted-body;
 
     &--multiple-roles {
       display: flex;
@@ -44,16 +50,18 @@
   }
 
   &__details {
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     column-gap: 0.375rem;
     align-items: center;
   }
 
   &__title {
-    font-family: $s-font-family-serif;
-    font-weight: 700;
     color: $s-color-heading;
+  }
+
+  &__push {
+    margin-right: auto;
   }
 
   &__separator {

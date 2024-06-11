@@ -45,7 +45,7 @@
       border: 0;
       outline: 0;
 
-      @include t-link($s-color-text-dimmed, "none", $hover-decoration: "none");
+      @include t-link($s-color-muted-body, "none");
 
       svg {
         width: t-modular-scale(1);
