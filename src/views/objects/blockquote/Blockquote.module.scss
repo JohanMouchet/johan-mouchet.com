@@ -77,7 +77,7 @@
 
     /* stylelint-disable-next-line no-descending-specificity */
     [href] {
-      @include t-link($s-color-muted-body);
+      @include t-link($s-color-body);
     }
 
     &::before {
