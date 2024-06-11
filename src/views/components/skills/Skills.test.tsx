@@ -8,8 +8,6 @@ it("Renders <Experience /> without crashing", () => {
         skills={[
           {
             label: "Label",
-            filling: 50,
-            progress: "Progress",
           },
         ]}
       />

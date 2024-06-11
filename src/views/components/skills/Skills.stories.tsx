@@ -14,8 +14,6 @@ export const Example = {
     skills: [
       {
         label: "Label",
-        filling: 50,
-        progress: "Progress",
       },
     ],
   },
