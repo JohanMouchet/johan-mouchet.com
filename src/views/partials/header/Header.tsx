@@ -15,34 +15,9 @@ export const Header = ({
   className?: ClassValue;
 } & React.HTMLProps<HTMLDivElement>) => (
   <header className={clsx(styles["p-header"], className)} {...props}>
-    <div className={styles["p-header__inner"]}>
-      <h1 className={styles["p-header__heading"]}>
-        <span
-          className={clsx(
-            styles["p-header__half"],
-            styles["p-header__half--left"]
-          )}
-        >
-          <span className={styles["p-header__text-wrapper"]}>
-            <span className={styles["p-header__text"]}>{firstName}</span>
-          </span>
-        </span>
-
-        <span className={styles["p-header__line"]} />
-
-        <span
-          className={clsx(
-            styles["p-header__half"],
-            styles["p-header__half--right"]
-          )}
-        >
-          <span className={styles["p-header__text-wrapper"]}>
-            <span className={styles["p-header__text"]}>{lastName}</span>
-          </span>
-        </span>
-      </h1>
-
-      <h2 className={styles["p-header__tagline"]}>{tagline}</h2>
-    </div>
+    <h1 className={styles["p-header__heading"]}>
+      {firstName} {lastName}
+    </h1>
+    <span className={styles["p-header__tagline"]}>{tagline}</span>
   </header>
 );
