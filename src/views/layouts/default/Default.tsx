@@ -12,11 +12,9 @@ export const Default = ({
   className?: ClassValue;
 } & React.HTMLProps<HTMLDivElement>) => (
   <div className={clsx(styles["l-layout"], className)} {...props}>
-    <div className={styles["l-layout__background"]} />
-    <div className={styles["l-layout__inner"]}>
-      <Header />
-      {children}
-      <Footer />
-    </div>
+    <Header />
+    {children}
+    <hr />
+    <Footer />
   </div>
 );
