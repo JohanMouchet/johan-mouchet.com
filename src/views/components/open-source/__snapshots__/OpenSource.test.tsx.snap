@@ -8,34 +8,38 @@ exports[`Renders <OpenSource /> without crashing 1`] = `
     class="grid"
   >
     <div
-      class="cell cell-12 sm:cell-6 lg:cell-4"
+      class="c-open-source__cell cell cell-12 md:cell-6"
     >
-      <h3
-        class="c-open-source__title"
+      <div
+        class="c-open-source"
       >
-        <a
-          href="#"
-          rel="noopener noreferrer"
-          target="_blank"
+        <h4
+          class="c-open-source__title"
         >
-          Name
-        </a>
-      </h3>
-      <div
-        class="c-open-source__lede"
-      >
-        <p>
-          Lede
-        </p>
-      </div>
-      <div
-        class="c-open-source__description"
-      >
-        <ul>
-          <li>
-            Description
-          </li>
-        </ul>
+          <a
+            href="#"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Name
+          </a>
+        </h4>
+        <div
+          class="c-open-source__lede"
+        >
+          <p>
+            Lede
+          </p>
+        </div>
+        <div
+          class="c-open-source__description"
+        >
+          <ul>
+            <li>
+              Description
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
