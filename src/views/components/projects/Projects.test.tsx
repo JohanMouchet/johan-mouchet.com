@@ -6,6 +6,7 @@ it.skip("Renders <Projects /> without crashing", () => {
   expect(
     render(
       <Projects
+        highlighted={true}
         projects={[
           {
             name: "Name",

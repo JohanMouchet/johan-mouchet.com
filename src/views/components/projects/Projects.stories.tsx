@@ -12,6 +12,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Example = {
   args: {
+    highlighted: true,
     projects: [
       {
         name: "Name",

@@ -287,6 +287,7 @@ const homeQuery = gql`
         lede
         projects {
           ... on Projects {
+            highlighted
             projects {
               id
               name

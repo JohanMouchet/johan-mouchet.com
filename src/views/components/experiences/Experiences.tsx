@@ -138,7 +138,10 @@ export const Experiences = ({
               <PrismicRichText field={experience.lede} />
             </div>
             {experience.projects?.projects && (
-              <Projects projects={experience.projects.projects} />
+              <Projects
+                highlighted={experience.projects.highlighted}
+                projects={experience.projects.projects}
+              />
             )}
           </section>
         );
