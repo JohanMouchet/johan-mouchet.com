@@ -70,9 +70,11 @@ export const SocialMedia = ({
     <div className={clsx(styles["c-social-media"], className)} {...props}>
       {media.map((media) => (
         <Button
+          href={media.link.url}
+          target="_blank"
+          rel="noopener noreferrer"
           size="sm"
           icon={getIcon(media.icon)}
-          href={media.link.url}
           className={styles["c-social-media__link"]}
           key={media.link.url}
         >

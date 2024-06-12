@@ -39,6 +39,8 @@ export const PersonalWorks = ({
         <a
           className={styles["c-personal-work"]}
           href={work.link.url}
+          target="_blank"
+          rel="noopener noreferrer"
           key={work.link.url}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}

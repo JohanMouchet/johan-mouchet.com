@@ -11,8 +11,18 @@ export const Button = ({
   className,
   ...props
 }: (
-  | { href: string; type?: undefined }
-  | { type?: "button" | "submit" | "reset"; href?: undefined }
+  | {
+      href: string;
+      target?: React.ComponentProps<"a">["target"];
+      rel?: React.ComponentProps<"a">["rel"];
+      type?: undefined;
+    }
+  | {
+      href?: undefined;
+      target?: undefined;
+      rel?: undefined;
+      type?: React.ComponentProps<"button">["type"];
+    }
 ) & {
   variant?: "primary" | "secondary";
   size?: "sm" | "lg";

@@ -111,8 +111,10 @@ export const Links = ({
     <div className={styles["c-project__links"]}>
       {links.map((link) => (
         <Button
-          variant="secondary"
           href={link.link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="secondary"
           icon={
             link.icon ? (
               <PrismicRichText
