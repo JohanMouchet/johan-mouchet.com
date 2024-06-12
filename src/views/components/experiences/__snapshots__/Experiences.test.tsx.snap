@@ -18,6 +18,9 @@ exports[`Renders <Experiences /> without crashing 1`] = `
           target="_blank"
         >
           Name
+          <svg
+            class="c-experience__link"
+          />
         </a>
         , 
         Location
@@ -50,18 +53,18 @@ exports[`Renders <Experiences /> without crashing 1`] = `
       <div
         class="c-experience__details"
       >
-        <h5
+        <span
           class="c-experience__title"
         >
           Job Title
-        </h5>
-        <span
-          class="c-experience__separator"
+        </span>
+        <div
+          class="c-experience__push"
         />
         <span
           class="c-experience__duration"
         >
-          1 yr
+          1 year
         </span>
       </div>
     </div>

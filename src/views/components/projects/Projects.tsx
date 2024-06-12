@@ -5,12 +5,21 @@ import {
   IconArrowLineLeft,
   IconArrowRight,
   IconArrowUpRight,
+  IconPlus,
+  IconX,
 } from "@/views/objects/icons";
+import { List } from "@/views/objects/list/List";
 import { asText } from "@prismicio/helpers";
 import { PrismicRichText } from "@prismicio/react";
 import clsx, { ClassValue } from "clsx";
 import useEmblaCarousel, { UseEmblaCarouselType } from "embla-carousel-react";
-import { useCallback, useEffect, useState } from "react";
+import {
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
 import styles from "./Projects.module.scss";
 
 const Thumbnail = ({
@@ -92,7 +101,7 @@ const Content = ({
   );
 };
 
-export const Links = ({
+const Links = ({
   links,
 }: {
   links?: {
@@ -135,24 +144,22 @@ export const Links = ({
   );
 };
 
-export const Projects = ({
+export const Carousel = ({
+  startIndex,
+  close,
   projects,
   className,
   ...props
 }: {
-  projects: ({
-    id?: string;
-    name: string;
-    tagline?: string;
-    link: {
-      url: string;
-    };
-    links?: React.ComponentProps<typeof Links>;
-  } & React.ComponentProps<typeof Thumbnail> &
-    React.ComponentProps<typeof Content>)[];
-  className?: ClassValue;
+  startIndex?: number;
+  close: Dispatch<SetStateAction<boolean | undefined>>;
+  projects: React.ComponentProps<typeof Projects>["projects"];
+  className?: React.ComponentProps<typeof Projects>["className"];
 } & React.HTMLProps<HTMLDivElement>) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start" });
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
+    startIndex,
+  });
   const [selectedSnap, setSelectedSnap] = useState(0);
   const updateScrollSnapState = useCallback(
     (emblaApi: UseEmblaCarouselType[1]) => {
@@ -174,34 +181,39 @@ export const Projects = ({
     emblaApi.on("reInit", updateScrollSnapState);
   }, [emblaApi, updateScrollSnapState]);
 
-  if (!projects?.length) {
-    return null;
-  }
-
   return (
     <div className={clsx(styles["c-projects"], className)} {...props}>
-      {projects?.length > 1 && (
-        <div className={styles["c-projects__navigation"]}>
-          {selectedSnap + 1} / {projects?.length}
-          {emblaApi?.canScrollNext() ? (
-            <button
-              className={styles["c-projects__next"]}
-              aria-label="Next"
-              onClick={scrollNext}
-            >
-              <IconArrowRight />
-            </button>
-          ) : (
-            <button
-              className={styles["c-projects__next"]}
-              aria-label="Back to start"
-              onClick={() => emblaApi?.scrollTo(0)}
-            >
-              <IconArrowLineLeft />
-            </button>
-          )}
-        </div>
-      )}
+      <div className={styles["c-projects__carousel-header"]}>
+        {projects?.length > 1 && (
+          <div className={styles["c-projects__navigation"]}>
+            {selectedSnap + 1} / {projects?.length}
+            {emblaApi?.canScrollNext() ? (
+              <button
+                className={styles["c-projects__next"]}
+                aria-label="Next"
+                onClick={scrollNext}
+              >
+                <IconArrowRight />
+              </button>
+            ) : (
+              <button
+                className={styles["c-projects__next"]}
+                aria-label="Back to start"
+                onClick={() => emblaApi?.scrollTo(0)}
+              >
+                <IconArrowLineLeft />
+              </button>
+            )}
+          </div>
+        )}
+        <button
+          className={styles["c-projects__close"]}
+          aria-label="Close"
+          onClick={() => close(false)}
+        >
+          <IconX />
+        </button>
+      </div>
       <div className={styles["c-projects__carousel"]} ref={emblaRef}>
         <div className={styles["c-projects__container"]}>
           {projects.map((project) => (
@@ -210,23 +222,19 @@ export const Projects = ({
               id={project.id || `${project.name}${project.tagline}`}
               key={project.id || `${project.name}${project.tagline}`}
             >
-              <div className={clsx(styles["c-project"])}>
+              <section className={clsx(styles["c-project"])}>
+                <h4 className={styles["c-project__title"]}>
+                  <a
+                    href={project.link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {project.name}
+                    {project.tagline && <> &mdash; {project.tagline}</>}
+                    <IconArrowUpRight className={styles["c-project__link"]} />
+                  </a>
+                </h4>
                 <div className="grid">
-                  <div className="cell cell-12">
-                    <h4 className={styles["c-project__title"]}>
-                      <a
-                        href={project.link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {project.name}
-                        {project.tagline && <> &mdash; {project.tagline}</>}
-                        <IconArrowUpRight
-                          className={styles["c-project__link"]}
-                        />
-                      </a>
-                    </h4>
-                  </div>
                   <div className="cell cell-12 md:cell-6 lg:cell-4">
                     <Thumbnail
                       lede={project.lede}
@@ -241,11 +249,69 @@ export const Projects = ({
                     />
                   </div>
                 </div>
-              </div>
+              </section>
             </div>
           ))}
         </div>
       </div>
     </div>
+  );
+};
+
+export const Projects = ({
+  highlighted,
+  projects,
+  className,
+  ...props
+}: {
+  highlighted?: boolean;
+  projects: ({
+    id?: string;
+    name: string;
+    tagline?: string;
+    link: {
+      url: string;
+    };
+    links?: React.ComponentProps<typeof Links>;
+  } & React.ComponentProps<typeof Thumbnail> &
+    React.ComponentProps<typeof Content>)[];
+  className?: ClassValue;
+}) => {
+  const [expanded, setExpanded] = useState(highlighted);
+  const [startIndex, setStartIndex] = useState(0);
+
+  if (!projects?.length) {
+    return null;
+  }
+
+  if (expanded) {
+    return (
+      <Carousel
+        projects={projects}
+        startIndex={startIndex}
+        close={setExpanded}
+        {...props}
+      />
+    );
+  }
+
+  return (
+    <List striped="horizontal" size="lg">
+      {projects.map((project, i) => (
+        <li key={project.id || `${project.name}${project.tagline}`}>
+          <button
+            onClick={() => {
+              setStartIndex(i);
+              setExpanded(true);
+            }}
+            className={styles["c-project__list-item"]}
+          >
+            <IconPlus />
+            {project.name}
+            {project.tagline && <> &mdash; {project.tagline}</>}
+          </button>
+        </li>
+      ))}
+    </List>
   );
 };
