@@ -130,6 +130,8 @@ const Home: NextPage = ({ data, errors }: any) => {
               <div className={styles["home__get-in-touch"]}>
                 <Button
                   href={`mailto:${data.profile.email}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   icon={<IconEnvelope />}
                   block="sm"
                   variant="primary"
@@ -137,21 +139,25 @@ const Home: NextPage = ({ data, errors }: any) => {
                   Email me
                 </Button>
                 <Button
-                  variant="secondary"
                   href={
                     data.profile.socialNetworks.find(
                       (socialNetwork: { name: string }) =>
                         socialNetwork.name === "LinkedIn"
                     )?.link?.url
                   }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="secondary"
                   icon={<IconLinkedIn />}
                   block="sm"
                 >
                   Connect on LinkedIn
                 </Button>
                 <Button
-                  variant="secondary"
                   href={data.profile.resumeLink?.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="secondary"
                   icon={<IconDownload />}
                   block="sm"
                 >
