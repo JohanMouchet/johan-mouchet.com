@@ -165,11 +165,7 @@ const Home: NextPage = ({ data, errors }: any) => {
                 </Button>
               </div>
 
-              <h3>
-                <Anchor id="social-media">
-                  {data.home.socialMediaSectionTitle}
-                </Anchor>
-              </h3>
+              <h3>{data.home.socialMediaSectionTitle}</h3>
 
               <SocialMedia media={data.profile.socialNetworks} />
             </Article>
