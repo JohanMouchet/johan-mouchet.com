@@ -17,7 +17,7 @@ exports[`Renders <Default /> without crashing 1`] = `
     <span
       class="p-header__tagline"
     >
-      Design System Architect
+      Front-End Engineer, Design System Architect
     </span>
   </header>
   children
