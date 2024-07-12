@@ -7,6 +7,8 @@ exports[`Renders <PersonalWorks /> without crashing 1`] = `
   <a
     class="c-personal-work"
     href="#"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     <img
       alt="Personal work on unsplash"

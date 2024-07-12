@@ -15,22 +15,23 @@ exports[`Renders <AcademicQualification /> without crashing 1`] = `
         href="#"
       >
         Name
+        <svg
+          class="c-academic-qualification__link"
+        />
       </a>
       , 
       Location
-       ⁠—
-       
-      <span
-        class="c-academic-qualification__title"
-      >
-        Title
-      </span>
     </h3>
+    <div
+      class="c-academic-qualification__title"
+    >
+      Title
+    </div>
     <time
       class="c-academic-qualification__graduation-year"
-      datetime="2023"
+      datetime="2024"
     >
-      2023
+      2024
     </time>
   </section>
 </div>

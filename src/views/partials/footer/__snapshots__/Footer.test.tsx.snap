@@ -32,14 +32,8 @@ exports[`Renders <Footer /> without crashing 1`] = `
           —
         </span>
         <br />
-         Made in
-         
-        <span
-          class="p-footer__cocorico"
-          tabindex="0"
-        >
-          France
-        </span>
+         Based in 
+        Melbourne, Australia
       </p>
     </div>
     <div
@@ -47,10 +41,12 @@ exports[`Renders <Footer /> without crashing 1`] = `
     >
       <a
         aria-label="Top Button Label"
-        class="p-footer__page-top"
+        class="o-button o-button--secondary o-button--icon"
         href="#page-top"
       >
-        <svg />
+        <svg
+          class="p-footer__page-top"
+        />
       </a>
     </div>
   </div>
