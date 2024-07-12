@@ -4,6 +4,6 @@ exports[`Renders <ExperienceDuration /> without crashing 1`] = `
 <span
   class="c-experience-duration"
 >
-  1 yr
+  1 year
 </span>
 `;

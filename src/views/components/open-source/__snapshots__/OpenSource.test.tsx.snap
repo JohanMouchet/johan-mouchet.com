@@ -8,7 +8,7 @@ exports[`Renders <OpenSource /> without crashing 1`] = `
     class="grid"
   >
     <div
-      class="c-open-source__cell cell cell-12 md:cell-6"
+      class="c-open-source__cell cell cell-12 md:cell-5"
     >
       <div
         class="c-open-source"
@@ -22,6 +22,9 @@ exports[`Renders <OpenSource /> without crashing 1`] = `
             target="_blank"
           >
             Name
+            <svg
+              class="c-open-source__link"
+            />
           </a>
         </h4>
         <div
