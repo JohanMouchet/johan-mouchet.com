@@ -1,11 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Fieldset /> without crashing 1`] = `
 <fieldset
-  class="o-form__fieldset"
+  class="_o-form__fieldset_11be18"
 >
   <legend
-    class="o-form__legend"
+    class="_o-form__legend_11be18"
   >
     legend
   </legend>
@@ -15,11 +15,11 @@ exports[`Renders <Fieldset /> without crashing 1`] = `
 
 exports[`Renders <FormGroup /> without crashing 1`] = `
 <div
-  class="o-form__group o-form__group--success"
+  class="_o-form__group_11be18 _o-form__group--success_11be18"
 >
   children
   <span
-    class="o-form__group-detail"
+    class="_o-form__group-detail_11be18"
   >
     Detail
   </span>
@@ -28,7 +28,7 @@ exports[`Renders <FormGroup /> without crashing 1`] = `
 
 exports[`Renders <Label /> without crashing 1`] = `
 <label
-  class="o-form__label o-form__label--block"
+  class="_o-form__label_11be18 _o-form__label--block_11be18"
 >
   Label
 </label>

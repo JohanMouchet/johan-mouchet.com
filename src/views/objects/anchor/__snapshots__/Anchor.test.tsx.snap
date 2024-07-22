@@ -1,12 +1,12 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Anchor /> without crashing 1`] = `
 <span
-  class="o-anchor"
+  class="_o-anchor_8aba80"
 >
   <a
     aria-label="Permalink for children"
-    class="o-anchor__link"
+    class="_o-anchor__link_8aba80"
     href="#id"
     id="id"
   >

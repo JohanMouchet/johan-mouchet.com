@@ -1,21 +1,37 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <FootnotesNotes /> without crashing 1`] = `
 <ol
-  class="o-footnotes"
+  class="_o-footnotes_dfc101"
 >
   <li
-    class="o-footnotes__note"
+    class="_o-footnotes__note_dfc101"
     id="footnote:id-1"
   >
     Note
      
     <a
       aria-label="Jump back to reference"
-      class="o-footnotes__backref"
+      class="_o-footnotes__backref_dfc101"
       href="#footnote-ref:id-1"
     >
-      <svg />
+      <svg
+        viewBox="0 0 256 256"
+      >
+        <symbol
+          fill="currentColor"
+          id="6fdf6952"
+          viewBox="0 0 256 256"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z"
+          />
+        </symbol>
+        <use
+          href="#6fdf6952"
+        />
+      </svg>
     </a>
   </li>
 </ol>
@@ -25,7 +41,7 @@ exports[`Renders <FootnotesReference /> without crashing 1`] = `
 <sup>
   <a
     aria-label=""
-    class="o-footnote-ref"
+    class="_o-footnote-ref_dfc101"
     href="#footnote:id-1"
     id="footnote-ref:id-1"
   >

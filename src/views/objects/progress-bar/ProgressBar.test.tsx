@@ -1,4 +1,5 @@
 import { render } from "@testing-library/react";
+import { expect, it } from "vitest";
 import { ProgressBar } from "./ProgressBar";
 
 it("Renders <ProgressBar /> without crashing", () => {

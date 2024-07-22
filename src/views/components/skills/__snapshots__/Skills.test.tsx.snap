@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Experience /> without crashing 1`] = `
 <div
-  class="c-skills"
+  class="_c-skills_71a8b9"
 >
   <code>
     Label

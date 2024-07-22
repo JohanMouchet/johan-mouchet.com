@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Field /> without crashing 1`] = `
 <input
-  class="o-form__field o-form__field--text"
+  class="_o-form__field_bb4796 _o-form__field--text_bb4796"
   name="name"
   type="text"
   value="Value"
@@ -11,7 +11,7 @@ exports[`Renders <Field /> without crashing 1`] = `
 
 exports[`Renders <Select /> without crashing 1`] = `
 <select
-  class="o-form__field o-form__field--select"
+  class="_o-form__field_bb4796 _o-form__field--select_bb4796"
   name="name"
 >
   <option
@@ -24,7 +24,7 @@ exports[`Renders <Select /> without crashing 1`] = `
 
 exports[`Renders <Textarea /> without crashing 1`] = `
 <textarea
-  class="o-form__field o-form__field--textarea"
+  class="_o-form__field_bb4796 _o-form__field--textarea_bb4796"
   name="name"
 >
   children

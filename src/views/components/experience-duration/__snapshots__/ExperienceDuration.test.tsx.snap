@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <ExperienceDuration /> without crashing 1`] = `
 <span
-  class="c-experience-duration"
+  class="_c-experience-duration_82e7ef"
 >
   1 year
 </span>

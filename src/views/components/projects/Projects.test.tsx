@@ -1,5 +1,6 @@
 import { Element } from "@prismicio/react";
 import { render } from "@testing-library/react";
+import { expect, it } from "vitest";
 import { Projects } from "./Projects";
 
 it.skip("Renders <Projects /> without crashing", () => {

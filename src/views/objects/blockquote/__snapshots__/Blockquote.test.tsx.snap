@@ -1,16 +1,16 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Blockquote /> without crashing 1`] = `
 <blockquote
-  class="o-blockquote o-blockquote--pulled"
+  class="_o-blockquote_f6d1be _o-blockquote--pulled_f6d1be"
 >
   <div
-    class="o-blockquote__quotes u-animation u-animation--fade-in"
+    class="_o-blockquote__quotes_f6d1be u-animation u-animation--fade-in"
   >
     Quote
   </div>
   <cite
-    class="o-blockquote__cite u-animation u-animation--fade-in"
+    class="_o-blockquote__cite_f6d1be u-animation u-animation--fade-in"
   >
     Cite
   </cite>

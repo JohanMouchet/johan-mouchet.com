@@ -1,18 +1,18 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Figure /> without crashing 1`] = `
 <figure
-  class="o-figure o-figure--centered"
+  class="_o-figure_da3138 _o-figure--centered_da3138"
 >
   <img
     alt="Alt"
-    class="o-figure__img"
+    class="_o-figure__img_da3138"
     loading="lazy"
     src="https://via.placeholder.com/500x250"
     title="Title"
   />
   <figcaption
-    class="o-figure__caption"
+    class="_o-figure__caption_da3138"
   >
     Caption
   </figcaption>

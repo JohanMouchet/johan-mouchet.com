@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Button /> without crashing 1`] = `
 <a
-  class="o-button o-button--sm o-button--primary sm:o-button--block"
+  class="_o-button_4c0070 _o-button--sm_4c0070 _o-button--primary_4c0070 _sm:o-button--block_4c0070"
   href="#"
 >
   children

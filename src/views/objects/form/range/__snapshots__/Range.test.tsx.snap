@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Range /> without crashing 1`] = `
 <input
-  class="o-form__range"
+  class="_o-form__range_ecf32f"
   name="name"
   type="range"
 />

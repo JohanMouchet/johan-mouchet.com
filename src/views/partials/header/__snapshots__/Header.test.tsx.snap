@@ -1,18 +1,18 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Header /> without crashing 1`] = `
 <header
-  class="p-header"
+  class="_p-header_8c45c1"
 >
   <h1
-    class="p-header__heading"
+    class="_p-header__heading_8c45c1"
   >
     Firstname
      
     Lastname
   </h1>
   <span
-    class="p-header__tagline"
+    class="_p-header__tagline_8c45c1"
   >
     Tagline
   </span>

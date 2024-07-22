@@ -1,26 +1,56 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Details /> without crashing 1`] = `
 <details
-  class="o-details o-details--compact"
+  class="_o-details_8c2b27 _o-details--compact_8c2b27"
 >
   <summary
-    class="o-details__summary"
+    class="_o-details__summary_8c2b27"
   >
     <svg
       aria-hidden="true"
-      class="o-details__marker o-details__marker-open"
-    />
+      class="_o-details__marker_8c2b27 _o-details__marker-open_8c2b27"
+      viewBox="0 0 256 256"
+    >
+      <symbol
+        fill="currentColor"
+        id="689e5e3d"
+        viewBox="0 0 256 256"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"
+        />
+      </symbol>
+      <use
+        href="#689e5e3d"
+      />
+    </svg>
     <svg
       aria-hidden="true"
-      class="o-details__marker o-details__marker-close"
-    />
+      class="_o-details__marker_8c2b27 _o-details__marker-close_8c2b27"
+      viewBox="0 0 256 256"
+    >
+      <symbol
+        fill="currentColor"
+        id="0222de37"
+        viewBox="0 0 256 256"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"
+        />
+      </symbol>
+      <use
+        href="#0222de37"
+      />
+    </svg>
     <span>
       Summary
     </span>
   </summary>
   <div
-    class="o-details__panel"
+    class="_o-details__panel_8c2b27"
   >
     children
   </div>

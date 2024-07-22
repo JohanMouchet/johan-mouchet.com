@@ -11,9 +11,9 @@ This website is,
 - Bootstrapped with Next.js
 - Built with React
 - Pulling data from Prismic using [GraphQL](https://johan-mouchet.prismic.io/graphql) and Apollo
-- Maintaining a design system with [Storybook](https://www.johan-mouchet.com/storybook/?path=/docs/about-getting-started--page)
+- Maintaining a design system with [Storybook](https://master--656484aff9c2354775ca2c1b.chromatic.com/), deployed with Chromatic
 - Type-checked with TypeScript
-- Unit and snapshot tested with Jest and React Testing Library
+- Unit and snapshot tested with Vitest and React Testing Library
 - Using CSS Modules, Sass and post-processing
 - Linted with ESlint and Stylelint; formatted with Prettier; enforced by Husky and lint-staged
 - Deployed, pre-rendered, with Netlify
@@ -24,7 +24,7 @@ In the project directory, you can `pnpm` + :
 
 - `dev`: Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 - `storybook`: Runs [Storybook](https://storybook.js.org/), _an open source tool for developing UI components in isolation_. Open [http://localhost:9009/](http://localhost:9009/) to view it in the browser.
-- `test`: Launches the [Jest](https://jestjs.io/) test runner in the interactive watch mode.
+- `test`: Launches the [Vitest](https://vitest.dev/) test runner in the interactive watch mode.
 - `type-check`: Runs [TypeScript](https://www.typescriptlang.org/), as a static type checker.
 - `lint:js`: Runs the [ESLint](https://eslint.org/) linter, _a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs_.
 - `lint:css`: Runs the [stylelint](https://stylelint.io/) linter, _a mighty, modern linter that helps you avoid errors and enforce conventions in your styles_.

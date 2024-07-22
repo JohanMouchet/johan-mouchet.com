@@ -1,35 +1,50 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Experiences /> without crashing 1`] = `
 <div
-  class="c-experiences"
+  class="_c-experiences_8f2016"
 >
   <section
-    class="c-experience"
+    class="_c-experience_8f2016"
   >
     <h3
-      class="c-experience__heading"
+      class="_c-experience__heading_8f2016"
     >
       <span>
         <a
-          class="c-experience__company"
+          class="_c-experience__company_8f2016"
           href="#"
           rel="noopener noreferrer"
           target="_blank"
         >
           Name
           <svg
-            class="c-experience__link"
-          />
+            class="_c-experience__link_8f2016"
+            viewBox="0 0 256 256"
+          >
+            <symbol
+              fill="currentColor"
+              id="9b80f4c1"
+              viewBox="0 0 256 256"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"
+              />
+            </symbol>
+            <use
+              href="#9b80f4c1"
+            />
+          </svg>
         </a>
         , 
         Location
       </span>
       <div
-        class="c-experience__details"
+        class="_c-experience__dates_8f2016"
       >
         <span
-          class="c-experience__date"
+          class="_c-experience__date_8f2016"
         >
           <time
             datetime="2018-01"
@@ -48,28 +63,27 @@ exports[`Renders <Experiences /> without crashing 1`] = `
       </div>
     </h3>
     <div
-      class="c-experience__subheading"
+      class="_c-experience__roles_8f2016"
     >
       <div
-        class="c-experience__details"
+        class="_c-experience__role_8f2016"
       >
-        <span
-          class="c-experience__title"
-        >
-          Job Title
+        <span>
+          <span
+            class="_c-experience__title_8f2016"
+          >
+            Job Title
+          </span>
         </span>
-        <div
-          class="c-experience__push"
-        />
         <span
-          class="c-experience__duration"
+          class="_c-experience__duration_8f2016"
         >
           1 year
         </span>
       </div>
     </div>
     <div
-      class="c-experience__lede"
+      class="_c-experience__lede_8f2016"
     >
       <p>
         Lede

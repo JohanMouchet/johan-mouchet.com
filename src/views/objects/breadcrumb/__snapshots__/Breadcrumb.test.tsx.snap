@@ -1,14 +1,14 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Breadcrumb /> without crashing 1`] = `
 <ol
-  class="o-breadcrumb"
+  class="_o-breadcrumb_adef61"
 >
   <li
-    class="o-breadcrumb__level u-animation u-animation--fade-in-up"
+    class="_o-breadcrumb__level_adef61 u-animation u-animation--fade-in-up"
   >
     <a
-      class="o-breadcrumb__link"
+      class="_o-breadcrumb__link_adef61"
     >
       Title
     </a>

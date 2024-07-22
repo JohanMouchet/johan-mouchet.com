@@ -1,25 +1,25 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Card /> without crashing 1`] = `
 <section
-  class="o-card o-card--banner-gradient o-card--secondary o-card--sm"
+  class="_o-card_1f2ee9 _o-card--banner-gradient_1f2ee9 _o-card--secondary_1f2ee9 _o-card--sm_1f2ee9"
 >
   <div
-    class="o-card__banner"
+    class="_o-card__banner_1f2ee9"
     style="background-image: url(https://via.placeholder.com/400x168);"
   />
   <header
-    class="o-card__header"
+    class="_o-card__header_1f2ee9"
   >
     Header
   </header>
   <div
-    class="o-card__body"
+    class="_o-card__body_1f2ee9"
   >
     children
   </div>
   <footer
-    class="o-card__footer"
+    class="_o-card__footer_1f2ee9"
   >
     Footer
   </footer>

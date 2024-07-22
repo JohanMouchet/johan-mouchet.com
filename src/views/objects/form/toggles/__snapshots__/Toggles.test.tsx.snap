@@ -1,21 +1,21 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Checkbox /> without crashing 1`] = `
 <label
-  class="o-form__toggle o-form__toggle--checkbox"
+  class="_o-form__toggle_c1f407 _o-form__toggle--checkbox_c1f407"
 >
   <input
     checked=""
-    class="o-form__toggle-input u-is-visually-hidden"
+    class="_o-form__toggle-input_c1f407 u-is-visually-hidden"
     name="name"
     type="checkbox"
     value="value"
   />
   <span
-    class="o-form__toggle-icon"
+    class="_o-form__toggle-icon_c1f407"
   />
   <span
-    class="o-form__toggle-text"
+    class="_o-form__toggle-text_c1f407"
   >
     children
   </span>
@@ -24,20 +24,20 @@ exports[`Renders <Checkbox /> without crashing 1`] = `
 
 exports[`Renders <Radio /> without crashing 1`] = `
 <label
-  class="o-form__toggle o-form__toggle--radio"
+  class="_o-form__toggle_c1f407 _o-form__toggle--radio_c1f407"
 >
   <input
     checked=""
-    class="o-form__toggle-input u-is-visually-hidden"
+    class="_o-form__toggle-input_c1f407 u-is-visually-hidden"
     name="name"
     type="radio"
     value="value"
   />
   <span
-    class="o-form__toggle-icon"
+    class="_o-form__toggle-icon_c1f407"
   />
   <span
-    class="o-form__toggle-text"
+    class="_o-form__toggle-text_c1f407"
   >
     children
   </span>

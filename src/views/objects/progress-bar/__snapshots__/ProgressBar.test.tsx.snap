@@ -1,39 +1,39 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <ProgressBar /> without crashing 1`] = `
 <div
-  class="o-progress-bar o-progress-bar--details-on-hover"
+  class="_o-progress-bar_ab94c4 _o-progress-bar--details-on-hover_ab94c4"
   tabindex="0"
 >
   <span
-    class="o-progress-bar__labels"
+    class="_o-progress-bar__labels_ab94c4"
   >
     <span
-      class="o-progress-bar__label"
+      class="_o-progress-bar__label_ab94c4"
     >
       Label
     </span>
     <span
-      class="o-progress-bar__details"
+      class="_o-progress-bar__details_ab94c4"
     >
       <span
-        class="o-progress-bar__progress"
+        class="_o-progress-bar__progress_ab94c4"
       >
         Progress
       </span>
        / 
       <span
-        class="o-progress-bar__total"
+        class="_o-progress-bar__total_ab94c4"
       >
         Total
       </span>
     </span>
   </span>
   <div
-    class="o-progress-bar__container"
+    class="_o-progress-bar__container_ab94c4"
   >
     <div
-      class="o-progress-bar__filling"
+      class="_o-progress-bar__filling_ab94c4"
       style="width: 50%;"
     />
   </div>
