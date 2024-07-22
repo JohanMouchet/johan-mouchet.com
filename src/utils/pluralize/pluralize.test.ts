@@ -1,3 +1,4 @@
+import { expect, it } from "vitest";
 import { pluralize } from "./pluralize";
 
 it("Doesn't pluralize if quantity is smaller or equal to 1", () =>

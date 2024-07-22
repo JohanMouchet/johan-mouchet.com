@@ -1,21 +1,21 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Default /> without crashing 1`] = `
 <div
-  class="l-layout"
+  class="_l-layout_4b1927"
 >
   <header
-    class="p-header"
+    class="_p-header_8c45c1"
   >
     <h1
-      class="p-header__heading"
+      class="_p-header__heading_8c45c1"
     >
       Johan
        
       Mouchet
     </h1>
     <span
-      class="p-header__tagline"
+      class="_p-header__tagline_8c45c1"
     >
       Front-End Engineer, Design System Architect
     </span>
@@ -23,7 +23,7 @@ exports[`Renders <Default /> without crashing 1`] = `
   children
   <hr />
   <footer
-    class="p-footer"
+    class="_p-footer_220724"
   >
     <div
       class="grid grid-y-center grid-no-wrap"
@@ -32,7 +32,7 @@ exports[`Renders <Default /> without crashing 1`] = `
         class="cell cell-shrink"
       >
         <span
-          class="p-footer__version"
+          class="_p-footer__version_220724"
         >
           7.0.0
         </span>
@@ -41,14 +41,14 @@ exports[`Renders <Default /> without crashing 1`] = `
         class="cell cell-grow"
       >
         <p
-          class="p-footer__copyright"
+          class="_p-footer__copyright_220724"
         >
           2024
            © 
           Johan MOUCHET
            
           <span
-            class="p-footer__copyright-separator"
+            class="_p-footer__copyright-separator_220724"
           >
             —
           </span>
@@ -62,12 +62,27 @@ exports[`Renders <Default /> without crashing 1`] = `
       >
         <a
           aria-label="Get to the top"
-          class="o-button o-button--secondary o-button--icon"
+          class="_o-button_4c0070 _o-button--secondary_4c0070 _o-button--icon_4c0070"
           href="#page-top"
         >
           <svg
-            class="p-footer__page-top"
-          />
+            class="_p-footer__page-top_220724"
+            viewBox="0 0 256 256"
+          >
+            <symbol
+              fill="currentColor"
+              id="617257c5"
+              viewBox="0 0 256 256"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+              />
+            </symbol>
+            <use
+              href="#617257c5"
+            />
+          </svg>
         </a>
       </div>
     </div>

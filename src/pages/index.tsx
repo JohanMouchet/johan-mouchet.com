@@ -178,8 +178,9 @@ const Home: NextPage = ({ data, errors }: any) => {
                   {data.home.personalWorksSectionTitle}
                 </Anchor>
               </h2>
-
-              <PrismicRichText field={data.personalWorks.paragraph} />
+              <div className={styles["home__personal-works"]}>
+                <PrismicRichText field={data.personalWorks.paragraph} />
+              </div>
 
               <PersonalWorks works={data.personalWorks.works} />
             </Article>

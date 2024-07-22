@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Article /> without crashing 1`] = `
 <article
-  class="p-article p-article--sm p-article--no-margin p-article--secondary p-article--secondary-sm"
+  class="_p-article_63fc43 _p-article--sm_63fc43 _p-article--no-margin_63fc43 _p-article--secondary_63fc43 _p-article--secondary-sm_63fc43"
 >
   children
 </article>

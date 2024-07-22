@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Main /> without crashing 1`] = `
 <main
-  class="p-main"
+  class="_p-main_cf8f19"
 >
   children
 </main>

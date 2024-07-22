@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Table /> without crashing 1`] = `
 <table
-  class="o-table o-table--align-top o-table--striped o-table--sm"
+  class="_o-table_5bea18 _o-table--align-top_5bea18 _o-table--striped_5bea18 _o-table--sm_5bea18"
 >
   <thead>
     <tr>

@@ -1,3 +1,4 @@
+import { expect, it } from "vitest";
 import { duration } from "./duration";
 
 it("Returns year", () =>

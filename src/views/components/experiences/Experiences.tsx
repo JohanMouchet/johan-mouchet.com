@@ -71,7 +71,7 @@ export const Experiences = ({
                 </a>
                 , {experience.location}
               </span>
-              <div className={styles["c-experience__details"]}>
+              <div className={styles["c-experience__dates"]}>
                 <Dates
                   startDate={startDate}
                   present={present}
@@ -79,7 +79,9 @@ export const Experiences = ({
                 />
                 {multipleRoles && (
                   <>
+                    <wbr />
                     <span className={styles["c-experience__separator"]} />
+                    <wbr />
                     <Duration
                       startDate={startDate}
                       present={present}
@@ -91,9 +93,8 @@ export const Experiences = ({
             </h3>
             <div
               className={clsx(
-                styles["c-experience__subheading"],
-                multipleRoles &&
-                  styles["c-experience__subheading--multiple-roles"]
+                styles["c-experience__roles"],
+                multipleRoles && styles["c-experience__roles--multiple"]
               )}
             >
               {experience.roles &&
@@ -105,26 +106,31 @@ export const Experiences = ({
 
                   return (
                     <div
-                      className={styles["c-experience__details"]}
+                      className={styles["c-experience__role"]}
                       key={role.title}
                     >
-                      <span className={styles["c-experience__title"]}>
-                        {role.title}
+                      <span>
+                        <span className={styles["c-experience__title"]}>
+                          {role.title}
+                        </span>
+                        {role.contractType &&
+                          role.contractType !== "Full-time" && (
+                            <>
+                              <wbr />
+                              <span
+                                className={styles["c-experience__separator"]}
+                              />
+                              <wbr />
+                              <span
+                                className={
+                                  styles["c-experience__contract-type"]
+                                }
+                              >
+                                {role.contractType}
+                              </span>
+                            </>
+                          )}
                       </span>
-                      {role.contractType &&
-                        role.contractType !== "Full-time" && (
-                          <>
-                            <span
-                              className={styles["c-experience__separator"]}
-                            />
-                            <span
-                              className={styles["c-experience__contract-type"]}
-                            >
-                              {role.contractType}
-                            </span>
-                          </>
-                        )}
-                      <div className={styles["c-experience__push"]} />
                       <Duration
                         startDate={roleStartDate}
                         present={role.present}

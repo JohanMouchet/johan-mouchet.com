@@ -1,7 +1,7 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Loader /> without crashing 1`] = `
 <div
-  class="o-loader o-loader--sm"
+  class="_o-loader_6fc400 _o-loader--sm_6fc400"
 />
 `;

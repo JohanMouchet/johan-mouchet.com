@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Footer /> without crashing 1`] = `
 <footer
-  class="p-footer"
+  class="_p-footer_220724"
 >
   <div
     class="grid grid-y-center grid-no-wrap"
@@ -11,7 +11,7 @@ exports[`Renders <Footer /> without crashing 1`] = `
       class="cell cell-shrink"
     >
       <span
-        class="p-footer__version"
+        class="_p-footer__version_220724"
       >
         Version
       </span>
@@ -20,14 +20,14 @@ exports[`Renders <Footer /> without crashing 1`] = `
       class="cell cell-grow"
     >
       <p
-        class="p-footer__copyright"
+        class="_p-footer__copyright_220724"
       >
         2024
          © 
         Copyright
          
         <span
-          class="p-footer__copyright-separator"
+          class="_p-footer__copyright-separator_220724"
         >
           —
         </span>
@@ -41,12 +41,27 @@ exports[`Renders <Footer /> without crashing 1`] = `
     >
       <a
         aria-label="Top Button Label"
-        class="o-button o-button--secondary o-button--icon"
+        class="_o-button_4c0070 _o-button--secondary_4c0070 _o-button--icon_4c0070"
         href="#page-top"
       >
         <svg
-          class="p-footer__page-top"
-        />
+          class="_p-footer__page-top_220724"
+          viewBox="0 0 256 256"
+        >
+          <symbol
+            fill="currentColor"
+            id="617257c5"
+            viewBox="0 0 256 256"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+            />
+          </symbol>
+          <use
+            href="#617257c5"
+          />
+        </svg>
       </a>
     </div>
   </div>

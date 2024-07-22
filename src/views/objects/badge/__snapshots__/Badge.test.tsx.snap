@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Badge /> without crashing 1`] = `
 <span
-  class="o-badge"
+  class="_o-badge_c03bb5"
 >
   children
 </span>

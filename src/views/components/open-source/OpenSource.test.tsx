@@ -1,5 +1,6 @@
 import { Element } from "@prismicio/react";
 import { render } from "@testing-library/react";
+import { expect, it } from "vitest";
 import { OpenSource } from "./OpenSource";
 
 it("Renders <OpenSource /> without crashing", () => {

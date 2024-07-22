@@ -1,4 +1,5 @@
 import { render } from "@testing-library/react";
+import { expect, it } from "vitest";
 import { Field, Select, Textarea } from "./Fields";
 
 it("Renders <Field /> without crashing", () => {

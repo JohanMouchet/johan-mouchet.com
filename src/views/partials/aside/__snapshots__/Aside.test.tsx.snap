@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Aside /> without crashing 1`] = `
 <aside
-  class="p-aside p-main--no-margin"
+  class="_p-aside_522ab4 _p-main--no-margin_522ab4"
 >
   children
 </aside>

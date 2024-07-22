@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <List /> without crashing 1`] = `
 <ul
-  class="o-list o-list--h-striped o-list--unstyled o-list--lg"
+  class="_o-list_ed5b88 _o-list--h-striped_ed5b88 _o-list--unstyled_ed5b88 _o-list--lg_ed5b88"
 >
   <li />
 </ul>

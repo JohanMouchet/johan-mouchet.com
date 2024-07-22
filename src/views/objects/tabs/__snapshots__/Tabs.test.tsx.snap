@@ -1,17 +1,17 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <Tabs /> without crashing 1`] = `
 <div
-  class="o-tabs"
+  class="_o-tabs_42ad5e"
 >
   <ul
-    class="o-tabs__thumbs"
+    class="_o-tabs__thumbs_42ad5e"
   >
     <li
-      class="o-tabs__thumb u-animation u-animation--fade-in-up"
+      class="_o-tabs__thumb_42ad5e u-animation u-animation--fade-in-up"
     >
       <button
-        class="o-tabs__button"
+        class="_o-tabs__button_42ad5e"
         type="button"
       >
         Thumb
@@ -19,10 +19,10 @@ exports[`Renders <Tabs /> without crashing 1`] = `
     </li>
   </ul>
   <ul
-    class="o-tabs__panels"
+    class="_o-tabs__panels_42ad5e"
   >
     <li
-      class="o-tabs__panel"
+      class="_o-tabs__panel_42ad5e"
     >
       Panel
     </li>

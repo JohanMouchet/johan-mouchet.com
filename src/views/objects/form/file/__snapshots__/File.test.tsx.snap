@@ -1,22 +1,38 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Renders <File /> without crashing 1`] = `
 <label
-  class="o-form__file o-button"
+  class="_o-form__file_e31c40 _o-button_4c0070"
 >
   <input
-    class="o-form__file-input u-is-visually-hidden"
+    class="_o-form__file-input_e31c40 u-is-visually-hidden"
     data-multiple-caption="Multiple Caption"
     name="name"
     type="file"
   />
   <span
-    class="o-form__file-icon"
+    class="_o-form__file-icon_e31c40"
   >
-    <svg />
+    <svg
+      viewBox="0 0 256 256"
+    >
+      <symbol
+        fill="currentColor"
+        id="2cd4b4fa"
+        viewBox="0 0 256 256"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M224,152v56a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V152a8,8,0,0,1,16,0v56H208V152a8,8,0,0,1,16,0ZM93.66,85.66,120,59.31V152a8,8,0,0,0,16,0V59.31l26.34,26.35a8,8,0,0,0,11.32-11.32l-40-40a8,8,0,0,0-11.32,0l-40,40A8,8,0,0,0,93.66,85.66Z"
+        />
+      </symbol>
+      <use
+        href="#2cd4b4fa"
+      />
+    </svg>
   </span>
   <span
-    class="o-form__file-text"
+    class="_o-form__file-text_e31c40"
   >
     Choose file
   </span>

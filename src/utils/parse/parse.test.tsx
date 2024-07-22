@@ -1,3 +1,4 @@
+import { expect, it } from "vitest";
 import { parse } from "./parse";
 
 it("Converts an HTML string to JSX (through html-react-parser)", () =>
