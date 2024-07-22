@@ -8,7 +8,6 @@
 
   &__heading {
     display: flex;
-    flex-wrap: wrap;
     gap: 0.25rem 1rem;
     align-items: baseline;
     justify-content: space-between;
@@ -27,6 +26,10 @@
     margin-left: 0.1em;
   }
 
+  &__dates {
+    text-align: right;
+  }
+
   &__date,
   &__duration,
   &__contract-type {
@@ -37,35 +40,37 @@
     color: $s-color-muted-body;
   }
 
-  &__subheading {
+  &__duration {
+    white-space: nowrap;
+  }
+
+  &__roles {
     margin-top: 0.375rem;
     margin-bottom: t-vertical-rhythm(1);
     color: $s-color-muted-body;
 
-    &--multiple-roles {
+    &--multiple {
       display: flex;
       flex-direction: column;
       row-gap: 0.25rem;
     }
   }
 
-  &__details {
+  &__role {
     display: flex;
-    flex-wrap: wrap;
-    column-gap: 0.375rem;
-    align-items: center;
+    column-gap: 1rem;
+    justify-content: space-between;
   }
 
   &__title {
     color: $s-color-heading;
   }
 
-  &__push {
-    margin-right: auto;
-  }
-
   &__separator {
+    margin: 0 0.375rem;
     font-style: normal;
+    line-height: 1;
+    vertical-align: middle;
 
     &::before {
       color: $s-color-gray-300;

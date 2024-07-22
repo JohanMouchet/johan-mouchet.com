@@ -16,6 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.25rem;
+    white-space: nowrap;
   }
 
   &__experiences-title {
@@ -52,5 +53,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem 1.5rem;
+  }
+
+  &__personal-works {
+    text-wrap: balance;
   }
 }
