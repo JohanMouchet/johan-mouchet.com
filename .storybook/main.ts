@@ -2,11 +2,12 @@ import type { StorybookConfig } from "@storybook/nextjs";
 const path = require("path");
 
 const config: StorybookConfig = {
-  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
+    "@chromatic-com/storybook",
   ],
   webpackFinal: async (config) => {
     /* Follow Next.js aliases */
@@ -31,8 +32,8 @@ const config: StorybookConfig = {
     name: "@storybook/nextjs",
     options: {},
   },
-  docs: {
-    autodocs: true,
+  typescript: {
+    reactDocgen: "react-docgen-typescript",
   },
 };
 
