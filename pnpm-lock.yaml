@@ -17,6 +17,9 @@ dependencies:
   '@prismicio/react':
     specifier: ^2.5.2
     version: 2.7.3(@prismicio/client@6.9.0)(react@18.2.0)
+  chromatic:
+    specifier: ^11.5.6
+    version: 11.5.6
   clsx:
     specifier: ^1.2.1
     version: 1.2.1
@@ -112,9 +115,6 @@ devDependencies:
   '@vitejs/plugin-react':
     specifier: ^4.3.1
     version: 4.3.1(vite@5.3.4)
-  chromatic:
-    specifier: ^9.1.0
-    version: 9.1.0
   cross-env:
     specifier: ^7.0.3
     version: 7.0.3
@@ -6255,12 +6255,6 @@ packages:
         optional: true
       '@chromatic-com/playwright':
         optional: true
-    dev: true
-
-  /chromatic@9.1.0:
-    resolution: {integrity: sha512-9ib8k4LIfg/88kKufxz1N8vgCB7nlLhJqmx+Vx55cM/6DCB/M6oqroirVRXfdeC7qaZuhyUemPF2QHxBh7GXtQ==}
-    hasBin: true
-    dev: true
 
   /chrome-trace-event@1.0.3:
     resolution: {integrity: sha512-p3KULyQg4S7NIHixdwbGX+nFHkoBiA4YQmyWtjb8XngSKV124nJmRysgAeujbUVb15vh+RvFUfCPqU7rXk+hZg==}
