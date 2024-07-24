@@ -95,8 +95,12 @@ export const Textarea = ({
   );
 
   return (
-    <textarea id={id} name={name} className={classNames} {...props}>
-      {children}
-    </textarea>
+    <textarea
+      id={id}
+      name={name}
+      defaultValue={children}
+      className={classNames}
+      {...props}
+    />
   );
 };
