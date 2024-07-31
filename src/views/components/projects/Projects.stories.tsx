@@ -15,6 +15,7 @@ export const Example = {
     highlighted: true,
     projects: [
       {
+        id: "1",
         name: "Name",
         tagline: "Tagline",
         link: {

@@ -1,25 +1,13 @@
 import { parse } from "@/utils/parse/parse";
 import { pluralize } from "@/utils/pluralize/pluralize";
 import { Button } from "@/views/objects/button/Button";
-import {
-  IconArrowLineLeft,
-  IconArrowRight,
-  IconArrowUpRight,
-  IconPlus,
-  IconX,
-} from "@/views/objects/icons";
+import { Carousel } from "@/views/objects/carousel/Carousel";
+import { IconArrowUpRight, IconPlus } from "@/views/objects/icons";
 import { List } from "@/views/objects/list/List";
 import { asText } from "@prismicio/helpers";
 import { PrismicRichText } from "@prismicio/react";
-import clsx, { ClassValue } from "clsx";
-import useEmblaCarousel, { UseEmblaCarouselType } from "embla-carousel-react";
-import {
-  Dispatch,
-  SetStateAction,
-  useCallback,
-  useEffect,
-  useState,
-} from "react";
+import { ClassValue } from "clsx";
+import { useState } from "react";
 import styles from "./Projects.module.scss";
 
 const Thumbnail = ({
@@ -49,57 +37,6 @@ const Thumbnail = ({
     )}
   </>
 );
-
-const Content = ({
-  achievements,
-  architecture,
-}: {
-  achievements?: React.ComponentProps<typeof PrismicRichText>["field"];
-  architecture?: React.ComponentProps<typeof PrismicRichText>["field"];
-}) => {
-  const achievementPreformatted = achievements?.[0]?.type === "preformatted";
-  const achievementQuantity = achievementPreformatted
-    ? asText(achievements)?.match(/<li>/g)?.length
-    : achievements?.length;
-
-  return (
-    <>
-      {achievements && (
-        <div className={styles["c-project__detail"]}>
-          <b className={styles["c-project__detail-heading"]}>
-            Key {pluralize("Achievement", achievementQuantity || 0)}
-          </b>
-
-          {achievementPreformatted ? (
-            <ul className={styles["c-project__detail-list"]}>
-              <PrismicRichText
-                field={achievements}
-                components={(type, element, text, children) => (
-                  <>{text && parse(text)}</>
-                )}
-              />
-            </ul>
-          ) : (
-            <div className={styles["c-project__detail-list"]}>
-              <PrismicRichText field={achievements} />
-            </div>
-          )}
-        </div>
-      )}
-
-      {architecture && (
-        <div className={styles["c-project__detail"]}>
-          <b className={styles["c-project__detail-heading"]}>Architecture</b>
-          <div className={styles["c-project__detail-architecture"]}>
-            {architecture[0].text.split(", ").map((item: string) => (
-              <code key={item}>{item}</code>
-            ))}
-          </div>
-        </div>
-      )}
-    </>
-  );
-};
 
 const Links = ({
   links,
@@ -144,119 +81,84 @@ const Links = ({
   );
 };
 
-export const Carousel = ({
-  startIndex,
-  close,
-  projects,
-  className,
-  ...props
+const Content = ({
+  achievements,
+  architecture,
 }: {
-  startIndex?: number;
-  close: Dispatch<SetStateAction<boolean | undefined>>;
-  projects: React.ComponentProps<typeof Projects>["projects"];
-  className?: React.ComponentProps<typeof Projects>["className"];
-} & React.HTMLProps<HTMLDivElement>) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: "start",
-    startIndex,
-  });
-  const [selectedSnap, setSelectedSnap] = useState(0);
-  const updateScrollSnapState = useCallback(
-    (emblaApi: UseEmblaCarouselType[1]) => {
-      if (!emblaApi) return;
-
-      setSelectedSnap(emblaApi.selectedScrollSnap());
-    },
-    []
-  );
-  const scrollNext = useCallback(() => {
-    emblaApi?.scrollNext();
-  }, [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-
-    updateScrollSnapState(emblaApi);
-    emblaApi.on("select", updateScrollSnapState);
-    emblaApi.on("reInit", updateScrollSnapState);
-  }, [emblaApi, updateScrollSnapState]);
+  achievements?: React.ComponentProps<typeof PrismicRichText>["field"];
+  architecture?: React.ComponentProps<typeof PrismicRichText>["field"];
+}) => {
+  const achievementPreformatted = achievements?.[0]?.type === "preformatted";
+  const achievementQuantity = achievementPreformatted
+    ? asText(achievements)?.match(/<li>/g)?.length
+    : achievements?.length;
 
   return (
-    <div className={clsx(styles["c-projects"], className)} {...props}>
-      <div className={styles["c-projects__carousel-header"]}>
-        {projects?.length > 1 && (
-          <div className={styles["c-projects__navigation"]}>
-            {selectedSnap + 1} / {projects?.length}
-            {emblaApi?.canScrollNext() ? (
-              <button
-                className={styles["c-projects__next"]}
-                aria-label="Next"
-                onClick={scrollNext}
-              >
-                <IconArrowRight />
-              </button>
-            ) : (
-              <button
-                className={styles["c-projects__next"]}
-                aria-label="Back to start"
-                onClick={() => emblaApi?.scrollTo(0)}
-              >
-                <IconArrowLineLeft />
-              </button>
-            )}
-          </div>
-        )}
-        <button
-          className={styles["c-projects__close"]}
-          aria-label="Close"
-          onClick={() => close(false)}
-        >
-          <IconX />
-        </button>
-      </div>
-      <div className={styles["c-projects__carousel"]} ref={emblaRef}>
-        <div className={styles["c-projects__container"]}>
-          {projects.map((project) => (
-            <div
-              className={styles["c-project__slide"]}
-              id={project.id || `${project.name}${project.tagline}`}
-              key={project.id || `${project.name}${project.tagline}`}
-            >
-              <section className={clsx(styles["c-project"])}>
-                <h4 className={styles["c-project__title"]}>
-                  <a
-                    href={project.link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {project.name}
-                    {project.tagline && <> &mdash; {project.tagline}</>}
-                    <IconArrowUpRight className={styles["c-project__link"]} />
-                  </a>
-                </h4>
-                <div className="grid">
-                  <div className="cell cell-12 md:cell-6 lg:cell-4">
-                    <Thumbnail
-                      lede={project.lede}
-                      thumbnailSrc={project.thumbnailSrc}
-                    />
-                    <Links links={project.links?.links} />
-                  </div>
-                  <div className="cell cell-12 md:cell-6 lg:cell-8">
-                    <Content
-                      achievements={project.achievements}
-                      architecture={project.architecture}
-                    />
-                  </div>
-                </div>
-              </section>
+    <>
+      {achievements && (
+        <div className={styles["c-project__content"]}>
+          <b className={styles["c-project__content-heading"]}>
+            Key {pluralize("Achievement", achievementQuantity || 0)}
+          </b>
+
+          {achievementPreformatted ? (
+            <ul className={styles["c-project__content-list"]}>
+              <PrismicRichText
+                field={achievements}
+                components={(type, element, text, children) => (
+                  <>{text && parse(text)}</>
+                )}
+              />
+            </ul>
+          ) : (
+            <div className={styles["c-project__content-list"]}>
+              <PrismicRichText field={achievements} />
             </div>
-          ))}
+          )}
         </div>
-      </div>
-    </div>
+      )}
+
+      {architecture && (
+        <div className={styles["c-project__content"]}>
+          <b className={styles["c-project__content-heading"]}>Architecture</b>
+          <div className={styles["c-project__content-architecture"]}>
+            {architecture[0].text.split(", ").map((item: string) => (
+              <code key={item}>{item}</code>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
   );
 };
+
+export const Project = ({
+  project,
+}: {
+  project: React.ComponentProps<typeof Projects>["projects"][number];
+}) => (
+  <>
+    <h4 className={styles["c-project__title"]}>
+      <a href={project.link.url} target="_blank" rel="noopener noreferrer">
+        {project.name}
+        {project.tagline && <> &mdash; {project.tagline}</>}
+        <IconArrowUpRight className={styles["c-project__link"]} />
+      </a>
+    </h4>
+    <div className="grid">
+      <div className="cell cell-12 md:cell-4">
+        <Thumbnail lede={project.lede} thumbnailSrc={project.thumbnailSrc} />
+        <Links links={project.links?.links} />
+      </div>
+      <div className="cell cell-12 md:cell-8">
+        <Content
+          achievements={project.achievements}
+          architecture={project.architecture}
+        />
+      </div>
+    </div>
+  </>
+);
 
 export const Projects = ({
   highlighted,
@@ -287,7 +189,10 @@ export const Projects = ({
   if (expanded) {
     return (
       <Carousel
-        projects={projects}
+        slides={projects.map((project, i) => ({
+          id: project.id || `${i}`,
+          content: <Project project={project} />,
+        }))}
         startIndex={startIndex}
         close={setExpanded}
         {...props}

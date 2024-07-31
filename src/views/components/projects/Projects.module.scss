@@ -11,74 +11,6 @@
   border-radius: 0.5rem;
   box-shadow: map.get($s-shadows, lg);
 
-  &s {
-    position: relative;
-  }
-
-  &s__carousel-header {
-    display: flex;
-    column-gap: 1rem;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding-top: 0.375rem;
-    padding-bottom: 0.375rem;
-  }
-
-  &s__close {
-    all: unset;
-    width: 1.25rem;
-    height: 1.25rem;
-    margin-left: auto;
-    cursor: pointer;
-    background-color: transparent;
-    border: 0;
-    outline: 0;
-    @include t-link($s-color-muted-body, "none");
-  }
-
-  &s__navigation {
-    display: inline-flex;
-    column-gap: 0.5rem;
-    align-items: center;
-    color: $s-color-muted-body;
-  }
-
-  &s__next {
-    all: unset;
-    width: 1.25rem;
-    height: 1.25rem;
-    padding: 0;
-    line-height: 1;
-    cursor: pointer;
-    background-color: transparent;
-    border: 0;
-    outline: 0;
-    @include t-link($s-color-muted-body, "none");
-  }
-
-  &s__carousel {
-    padding: 0.75rem;
-    overflow: hidden;
-    background: $s-color-gray-100;
-    border: 1px solid $s-color-gray-100;
-    border-radius: 1rem;
-  }
-
-  &s__container {
-    display: flex;
-    column-gap: t-vertical-rhythm(1);
-  }
-
-  &__slide {
-    flex: 0 0 100%;
-    min-width: 0;
-
-    @media (min-width: map.get($s-breakpoints, md)) {
-      flex-basis: 90%;
-    }
-  }
-
   &__list-item {
     all: unset;
     display: flex;
@@ -121,44 +53,27 @@
     text-wrap: pretty;
   }
 
-  &__detail {
-    $root-detail: &;
+  &__content-heading {
+    font-size: t-modular-scale(-2);
+    font-weight: 700;
+    color: $s-color-heading;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
 
-    &s {
-      #{$root-detail}:last-child {
-        #{$root-detail}-list:last-child {
-          margin-bottom: 0;
+  &__content-list {
+    margin-top: 0;
+    text-wrap: pretty;
 
-          /* stylelint-disable-next-line max-nesting-depth, selector-max-combinators, selector-max-compound-selectors */
-          > * {
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
-
-    &-heading {
-      font-size: t-modular-scale(-2);
-      font-weight: 700;
-      color: $s-color-heading;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    &-list {
+    > * {
       margin-top: 0;
-      text-wrap: pretty;
-
-      > * {
-        margin-top: 0;
-      }
     }
+  }
 
-    &-architecture {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25rem;
-    }
+  &__content-architecture {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
   }
 
   &__links {
