@@ -1,0 +1,90 @@
+@use "sass:map";
+@import "@/assets/styles/settings/settings.module";
+@import "@/assets/styles/tools/tools.module";
+
+.o-carousel {
+  position: relative;
+
+  &__header {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+  }
+
+  &__navigation {
+    display: inline-flex;
+    column-gap: 0.5rem;
+    align-items: center;
+    color: $s-color-muted-body;
+  }
+
+  &__navigation-button {
+    all: unset;
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0;
+    line-height: 1;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    @include t-link($s-color-muted-body, "none");
+  }
+
+  &__close {
+    all: unset;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    @include t-link($s-color-muted-body, "none");
+  }
+
+  &__slides-container {
+    padding: 0.75rem;
+    overflow: hidden;
+    cursor: grab;
+    background: $s-color-gray-100;
+    border: 1px solid $s-color-gray-100;
+    border-radius: 1rem;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  &__slides {
+    display: flex;
+    column-gap: t-vertical-rhythm(1);
+    align-items: stretch;
+  }
+
+  &__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    padding: t-vertical-rhythm(1);
+    cursor: auto;
+    background: $s-color-white;
+    border-radius: 0.5rem;
+    box-shadow: map.get($s-shadows, lg);
+
+    &--lg {
+      @media (min-width: map.get($s-breakpoints, md)) {
+        flex-basis: 90%;
+      }
+    }
+
+    &--md {
+      @media (min-width: map.get($s-breakpoints, md)) {
+        flex-basis: 40%;
+      }
+    }
+  }
+}

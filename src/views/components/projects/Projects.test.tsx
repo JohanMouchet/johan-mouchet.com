@@ -10,6 +10,7 @@ it.skip("Renders <Projects /> without crashing", () => {
         highlighted={true}
         projects={[
           {
+            id: "1",
             name: "Name",
             tagline: "Tagline",
             link: {
