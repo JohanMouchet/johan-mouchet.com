@@ -11,7 +11,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Example = {
   args: {
-    close: () => {},
     slides: [
       { id: "1", content: <div>Slide 1</div> },
       { id: "2", content: <div>Slide 2</div> },

@@ -18,14 +18,16 @@ export const Carousel = ({
   startIndex = 0,
   close,
   slides,
+  size = "lg",
   className,
   ...props
 }: {
   startIndex?: number;
-  close: Dispatch<SetStateAction<boolean | undefined>>;
+  close?: Dispatch<SetStateAction<boolean | undefined>>;
   slides: { id: string; content: React.ReactNode }[];
+  size?: "lg" | "md";
   className?: ClassValue;
-} & React.HTMLProps<HTMLDivElement>) => {
+} & Omit<React.HTMLProps<HTMLDivElement>, "size">) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
     startIndex,
@@ -76,19 +78,25 @@ export const Carousel = ({
             )}
           </div>
         )}
-        <button
-          className={styles["o-carousel__close"]}
-          aria-label="Close"
-          onClick={() => close(false)}
-        >
-          <IconX />
-        </button>
+        {close && (
+          <button
+            className={styles["o-carousel__close"]}
+            aria-label="Close"
+            onClick={() => close(false)}
+          >
+            <IconX />
+          </button>
+        )}
       </div>
       <div className={styles["o-carousel__slides-container"]} ref={emblaRef}>
         <div className={styles["o-carousel__slides"]}>
           {slides.map((slide) => (
             <div
-              className={styles["o-carousel__slide"]}
+              className={clsx(
+                styles["o-carousel__slide"],
+                size === "lg" && styles["o-carousel__slide--lg"],
+                size === "md" && styles["o-carousel__slide--md"]
+              )}
               id={slide.id}
               key={slide.id}
             >

@@ -75,8 +75,16 @@
     border-radius: 0.5rem;
     box-shadow: map.get($s-shadows, lg);
 
-    @media (min-width: map.get($s-breakpoints, md)) {
-      flex-basis: 90%;
+    &--lg {
+      @media (min-width: map.get($s-breakpoints, md)) {
+        flex-basis: 90%;
+      }
+    }
+
+    &--md {
+      @media (min-width: map.get($s-breakpoints, md)) {
+        flex-basis: 40%;
+      }
     }
   }
 }

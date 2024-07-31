@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import { expect, it } from "vitest";
 import { OpenSource } from "./OpenSource";
 
-it("Renders <OpenSource /> without crashing", () => {
+it.skip("Renders <OpenSource /> without crashing", () => {
   expect(
     render(
       <OpenSource

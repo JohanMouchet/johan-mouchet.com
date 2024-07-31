@@ -6,7 +6,6 @@ it.skip("Renders <Carousel /> without crashing", () => {
   expect(
     render(
       <Carousel
-        close={() => {}}
         slides={[
           { id: "1", content: <div>Slide 1</div> },
           { id: "2", content: <div>Slide 2</div> },
