@@ -1,20 +1,24 @@
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
-@import "../settings.module";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
+@use "src/views/objects/form/settings.module" as form-settings;
 
 /* (Experimental, won't work in all browsers) */
 .o-form__range {
   width: 100%;
   height: 2px;
   padding: 0;
-  margin-top: t-vertical-rhythm(0.5);
-  margin-bottom: t-vertical-rhythm(0.5);
+  margin-top: tools.t-vertical-rhythm(0.5);
+  margin-bottom: tools.t-vertical-rhythm(0.5);
   appearance: none;
-  background-color: t-map-deep-get($form-settings, default, color);
+  background-color: tools.t-map-deep-get(
+    form-settings.$form-settings,
+    default,
+    color
+  );
   outline: none;
   transition: background 0.2s ease-out;
 
-  @include t-wekkit-hdpi-small-dimension("height", 2);
+  @include tools.t-wekkit-hdpi-small-dimension("height", 2);
 
   &:not(:disabled) {
     cursor: pointer;
@@ -22,7 +26,11 @@
 
   // Firefox overrides
   &::-moz-range-track {
-    background-color: t-map-deep-get($form-settings, default, color);
+    background-color: tools.t-map-deep-get(
+      form-settings.$form-settings,
+      default,
+      color
+    );
     border: 0;
   }
 
@@ -34,18 +42,18 @@
 
   &::-ms-track {
     height: auto;
-    border-radius: t-vertical-rhythm(0.4);
+    border-radius: tools.t-vertical-rhythm(0.4);
   }
   /* stylelint-enable no-descending-specificity */
 
   /** Thumb **/
   @mixin range-thumb($vendor-prefix) {
     &#{$vendor-prefix} {
-      width: t-vertical-rhythm(0.8);
-      height: t-vertical-rhythm(0.8);
+      width: tools.t-vertical-rhythm(0.8);
+      height: tools.t-vertical-rhythm(0.8);
       appearance: none;
-      background: $s-color-white;
-      border: 2px solid $s-color-body;
+      background: settings.$s-color-white;
+      border: 2px solid settings.$s-color-body;
       border-radius: 50%;
     }
   }
@@ -57,46 +65,78 @@
 
   /** Hover **/
   &:hover {
-    background-color: t-map-deep-get($form-settings, hover, color);
+    background-color: tools.t-map-deep-get(
+      form-settings.$form-settings,
+      hover,
+      color
+    );
 
     &::-moz-range-track {
-      background-color: t-map-deep-get($form-settings, hover, color);
+      background-color: tools.t-map-deep-get(
+        form-settings.$form-settings,
+        hover,
+        color
+      );
     }
   }
 
   /** Focus **/
   &:focus {
-    background-color: t-map-deep-get($form-settings, focus, color);
+    background-color: tools.t-map-deep-get(
+      form-settings.$form-settings,
+      focus,
+      color
+    );
 
     &::-moz-range-track {
-      background-color: t-map-deep-get($form-settings, focus, color);
+      background-color: tools.t-map-deep-get(
+        form-settings.$form-settings,
+        focus,
+        color
+      );
     }
   }
 
   /** Disabled **/
   &:disabled {
-    background-color: t-map-deep-get($form-settings, disabled, color);
+    background-color: tools.t-map-deep-get(
+      form-settings.$form-settings,
+      disabled,
+      color
+    );
 
     &::-moz-range-track {
-      background-color: t-map-deep-get($form-settings, disabled, color);
+      background-color: tools.t-map-deep-get(
+        form-settings.$form-settings,
+        disabled,
+        color
+      );
     }
 
     &::-webkit-slider-thumb {
-      background-color: t-map-deep-get(
-        $form-settings,
+      background-color: tools.t-map-deep-get(
+        form-settings.$form-settings,
         disabled,
         color-secondary
       );
-      border-color: t-map-deep-get($form-settings, disabled, color);
+      border-color: tools.t-map-deep-get(
+        form-settings.$form-settings,
+        disabled,
+        color
+      );
     }
 
     &::-moz-range-thumb {
-      background-color: t-map-deep-get(
-        $form-settings,
+      background-color: tools.t-map-deep-get(
+        form-settings.$form-settings,
         disabled,
         color-secondary
       );
-      border-color: t-map-deep-get($form-settings, disabled, color);
+      border-color: tools.t-map-deep-get(
+        form-settings.$form-settings,
+        disabled,
+        color
+      );
     }
   }
 }

@@ -1,5 +1,5 @@
-@import "b-core.module";
-@import "b-typography.module";
-@import "b-scrollbar.module";
-@import "b-selection.module";
-@import "b-print.module";
+@use "src/assets/styles/base/b-core.module";
+@use "src/assets/styles/base/b-typography.module";
+@use "src/assets/styles/base/b-scrollbar.module";
+@use "src/assets/styles/base/b-selection.module";
+@use "src/assets/styles/base/b-print.module";

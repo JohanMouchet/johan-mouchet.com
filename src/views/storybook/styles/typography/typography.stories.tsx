@@ -30,22 +30,22 @@ export const Typefaces = {
             {
               name: "Sans-serif",
               stack: settings.TYPOGRAPHY_SANS,
-              sassSetting: "$s-font-family-sans",
+              sassSetting: "settings.$s-font-family-sans",
             },
             {
               name: "Serif",
               stack: settings.TYPOGRAPHY_SERIF,
-              sassSetting: "$s-font-family-serif",
+              sassSetting: "settings.$s-font-family-serif",
             },
             {
               name: "Display",
               stack: settings.TYPOGRAPHY_DISPLAY,
-              sassSetting: "$s-font-family-display",
+              sassSetting: "settings.$s-font-family-display",
             },
             {
               name: "Monospace",
               stack: settings.TYPOGRAPHY_MONO,
-              sassSetting: "$s-font-family-mono",
+              sassSetting: "settings.$s-font-family-mono",
             },
           ].map((typeface) => (
             <tr key={typeface.stack}>
@@ -89,17 +89,17 @@ export const Sizes = {
               {
                 name: "Font size base",
                 value: settings.FONT_SIZE_BASE,
-                sassSetting: "$s-font-size-base",
+                sassSetting: "settings.$s-font-size-base",
               },
               {
                 name: "Line height base",
                 value: settings.LINE_HEIGHT_BASE,
-                sassSetting: "$s-line-height-base",
+                sassSetting: "settings.$s-line-height-base",
               },
               {
                 name: "Modular scale ratio",
                 value: settings.MODULAR_SCALE_RATIO,
-                sassSetting: "$s-modular-scale-ratio",
+                sassSetting: "settings.$s-modular-scale-ratio",
               },
             ].map((setting) => (
               <tr key={setting.sassSetting}>

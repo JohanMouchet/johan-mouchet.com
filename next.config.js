@@ -6,6 +6,9 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 const nextConfig = {
   reactStrictMode: true,
+  sassOptions: {
+    includePaths: [path.join(__dirname, "src")],
+  },
   webpack(config) {
     /* Load SVGs with SVGR */
     config.module.rules.push({

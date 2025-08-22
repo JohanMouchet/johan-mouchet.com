@@ -1,8 +1,10 @@
+@use "src/assets/styles/settings/settings.module";
+
 /**
  * Selection
  */
 
 ::selection {
-  color: $s-color-selection-foreground;
-  background-color: $s-color-selection-background;
+  color: settings.$s-color-selection-foreground;
+  background-color: settings.$s-color-selection-background;
 }

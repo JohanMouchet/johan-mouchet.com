@@ -1,3 +1,6 @@
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
+
 @use "sass:color";
 @use "sass:map";
 
@@ -34,9 +37,9 @@ iframe {
 
 hr {
   max-width: 100%;
-  height: t-vertical-rhythm(1);
-  margin: t-vertical-rhythm(3) 0;
-  background: 0 center map.get($s-backgrounds, zigzag) round no-repeat;
+  height: tools.t-vertical-rhythm(1);
+  margin: tools.t-vertical-rhythm(3) 0;
+  background: 0 center map.get(settings.$s-backgrounds, zigzag) round no-repeat;
   border: 0;
 }
 
@@ -59,8 +62,8 @@ summary {
  */
 button {
   font-family: inherit;
-  font-size: t-modular-scale(0);
-  line-height: $s-line-height-base;
+  font-size: tools.t-modular-scale(0);
+  line-height: settings.$s-line-height-base;
 }
 
 /* Unordered & ordered list */
@@ -68,7 +71,7 @@ button {
 ul,
 ol {
   padding-left: 1.5rem;
-  margin: t-vertical-rhythm(1) 0;
+  margin: tools.t-vertical-rhythm(1) 0;
 
   ul,
   ol {
@@ -104,9 +107,9 @@ table {
 /* Code */
 pre {
   max-height: 50vh;
-  padding: t-vertical-rhythm(1);
-  margin-top: t-vertical-rhythm(1);
-  margin-bottom: t-vertical-rhythm(1);
+  padding: tools.t-vertical-rhythm(1);
+  margin-top: tools.t-vertical-rhythm(1);
+  margin-bottom: tools.t-vertical-rhythm(1);
   overflow: auto;
   line-height: 1.2rem;
   tab-size: 2;
@@ -120,7 +123,7 @@ pre {
 /* stylelint-disable no-descending-specificity */
 pre,
 code {
-  background-color: $s-color-gray-100;
+  background-color: settings.$s-color-gray-100;
   border-radius: 0.1875rem;
 }
 
@@ -128,7 +131,7 @@ code {
 code,
 kbd {
   padding: 0.125rem 0.5rem;
-  font-size: t-modular-scale(-1);
+  font-size: tools.t-modular-scale(-1);
   font-style: normal;
   font-weight: 400;
   text-transform: none;
@@ -137,7 +140,7 @@ kbd {
 /* stylelint-enable no-descending-specificity */
 
 kbd {
-  color: $s-color-white;
-  background: $s-color-black;
+  color: settings.$s-color-white;
+  background: settings.$s-color-black;
   border-radius: 0.1875rem;
 }

@@ -6,7 +6,7 @@ exports[`Renders <Card /> without crashing 1`] = `
 >
   <div
     class="_o-card__banner_1f2ee9"
-    style="background-image: url(https://via.placeholder.com/400x168);"
+    style="background-image: url("https://via.placeholder.com/400x168");"
   />
   <header
     class="_o-card__header_1f2ee9"

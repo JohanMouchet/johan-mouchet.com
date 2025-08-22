@@ -1,28 +1,28 @@
-@import "@/assets/styles/settings/settings.module";
+@use "src/assets/styles/settings/settings.module";
 
 /* stylelint-disable selector-pseudo-class-no-unknown, property-no-unknown */
 :export {
-  COLOR_PRIMARY: $s-color-primary;
-  COLOR_PRIMARY_LIGHTER: $s-color-primary-lighter;
-  COLOR_PRIMARY_DARKER: $s-color-primary-darker;
-  COLOR_SECONDARY: $s-color-secondary;
-  COLOR_SECONDARY_LIGHTER: $s-color-secondary-lighter;
-  COLOR_SECONDARY_DARKER: $s-color-secondary-darker;
-  COLOR_WHITE: $s-color-white;
-  COLOR_GRAY_50: $s-color-gray-50;
-  COLOR_GRAY_100: $s-color-gray-100;
-  COLOR_GRAY_200: $s-color-gray-200;
-  COLOR_GRAY_300: $s-color-gray-300;
-  COLOR_GRAY_400: $s-color-gray-400;
-  COLOR_GRAY_500: $s-color-gray-500;
-  COLOR_GRAY_600: $s-color-gray-600;
-  COLOR_GRAY_700: $s-color-gray-700;
-  COLOR_GRAY_800: $s-color-gray-800;
-  COLOR_GRAY_900: $s-color-gray-900;
-  COLOR_GRAY_950: $s-color-gray-950;
-  COLOR_BLACK: $s-color-black;
-  COLOR_SUCCESS: $s-color-success;
-  COLOR_INFO: $s-color-info;
-  COLOR_WARNING: $s-color-warning;
-  COLOR_DANGER: $s-color-danger;
+  COLOR_PRIMARY: settings.$s-color-primary;
+  COLOR_PRIMARY_LIGHTER: settings.$s-color-primary-lighter;
+  COLOR_PRIMARY_DARKER: settings.$s-color-primary-darker;
+  COLOR_SECONDARY: settings.$s-color-secondary;
+  COLOR_SECONDARY_LIGHTER: settings.$s-color-secondary-lighter;
+  COLOR_SECONDARY_DARKER: settings.$s-color-secondary-darker;
+  COLOR_WHITE: settings.$s-color-white;
+  COLOR_GRAY_50: settings.$s-color-gray-50;
+  COLOR_GRAY_100: settings.$s-color-gray-100;
+  COLOR_GRAY_200: settings.$s-color-gray-200;
+  COLOR_GRAY_300: settings.$s-color-gray-300;
+  COLOR_GRAY_400: settings.$s-color-gray-400;
+  COLOR_GRAY_500: settings.$s-color-gray-500;
+  COLOR_GRAY_600: settings.$s-color-gray-600;
+  COLOR_GRAY_700: settings.$s-color-gray-700;
+  COLOR_GRAY_800: settings.$s-color-gray-800;
+  COLOR_GRAY_900: settings.$s-color-gray-900;
+  COLOR_GRAY_950: settings.$s-color-gray-950;
+  COLOR_BLACK: settings.$s-color-black;
+  COLOR_SUCCESS: settings.$s-color-success;
+  COLOR_INFO: settings.$s-color-info;
+  COLOR_WARNING: settings.$s-color-warning;
+  COLOR_DANGER: settings.$s-color-danger;
 }

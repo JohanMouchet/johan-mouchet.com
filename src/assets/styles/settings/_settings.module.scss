@@ -1,8 +1,8 @@
-@import "s-colors.module";
-@import "s-typography.module";
-@import "s-breakpoints.module";
-@import "s-layers.module";
-@import "s-paths.module";
-@import "s-shadows.module";
-@import "s-backgrounds.module";
-@import "s-vendors.module";
+@forward "src/assets/styles/settings/s-colors.module";
+@forward "src/assets/styles/settings/s-typography.module";
+@forward "src/assets/styles/settings/s-breakpoints.module";
+@forward "src/assets/styles/settings/s-layers.module";
+@forward "src/assets/styles/settings/s-paths.module";
+@forward "src/assets/styles/settings/s-shadows.module";
+@forward "src/assets/styles/settings/s-backgrounds.module";
+@forward "src/assets/styles/settings/s-vendors.module";

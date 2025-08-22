@@ -44,9 +44,9 @@ exports[`Renders <AcademicQualification /> without crashing 1`] = `
     </div>
     <time
       class="_c-academic-qualification__graduation-year_05fee4"
-      datetime="2024"
+      datetime="2025"
     >
-      2024
+      2025
     </time>
   </section>
 </div>

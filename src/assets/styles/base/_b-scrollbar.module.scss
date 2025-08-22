@@ -1,3 +1,5 @@
+@use "src/assets/styles/settings/settings.module";
+
 /**
  * Scrollbar (Webkit only)
  */
@@ -5,18 +7,18 @@
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
-  background-color: $s-color-gray-200;
+  background-color: settings.$s-color-gray-200;
 }
 
 /** Thumb **/
 /* stylelint-disable-next-line no-descending-specificity */
 ::-webkit-scrollbar-thumb {
-  background-color: $s-color-gray-300;
+  background-color: settings.$s-color-gray-300;
   border-radius: 4px;
   transition: 0.2s background-color ease-out;
 
   &:hover,
   &:active {
-    background-color: $s-color-gray-400;
+    background-color: settings.$s-color-gray-400;
   }
 }

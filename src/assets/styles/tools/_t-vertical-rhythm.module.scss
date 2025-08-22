@@ -1,3 +1,5 @@
+@use "src/assets/styles/settings/settings.module";
+
 /**
  * Vertical Rhythm
  *
@@ -8,5 +10,5 @@
  * @example margin-bottom: t-vertical-rhythm(1);
  */
 @function t-vertical-rhythm($factor) {
-  @return $factor * $s-line-height-base * 1rem;
+  @return $factor * settings.$s-line-height-base * 1rem;
 }

@@ -47,7 +47,7 @@ export const Example = {
             </td>
             <td>
               <code className="u-select--all">
-                map.get($s-backgrounds, {background.sassSetting})
+                map.get(settings.$s-backgrounds, {background.sassSetting})
               </code>
             </td>
           </tr>

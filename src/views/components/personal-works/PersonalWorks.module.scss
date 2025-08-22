@@ -1,6 +1,6 @@
 @use "sass:map";
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 .c-personal-work {
   $root: &;
@@ -10,7 +10,7 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2px;
 
-    @media (min-width: map.get($s-breakpoints, md)) {
+    @media (min-width: map.get(settings.$s-breakpoints, md)) {
       grid-template-columns: repeat(6, minmax(0, 1fr));
     }
   }
@@ -19,7 +19,7 @@
   display: block;
   aspect-ratio: 2/3;
   overflow: hidden;
-  border: 1px solid $s-color-border;
+  border: 1px solid settings.$s-color-border;
   border-radius: 0.25rem;
 
   &__thumbnail {
@@ -39,16 +39,16 @@
     position: absolute;
     right: 1rem;
     bottom: 1rem;
-    z-index: map.get($s-layers, personal-work);
+    z-index: map.get(settings.$s-layers, personal-work);
     line-height: 0;
     transition: opacity 0.2s ease-out;
 
     svg {
       width: 1.125rem;
       height: 1.125rem;
-      filter: drop-shadow((0 1px 3px rgba($s-color-black, 0.1)))
-        drop-shadow((0 1px 2px rgba($s-color-black, 0.1)));
-      fill: $s-color-white;
+      filter: drop-shadow((0 1px 3px rgba(settings.$s-color-black, 0.1)))
+        drop-shadow((0 1px 2px rgba(settings.$s-color-black, 0.1)));
+      fill: settings.$s-color-white;
     }
   }
 }

@@ -1,6 +1,6 @@
 @use "sass:map";
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 .c-open-source {
   &__link {
@@ -11,7 +11,7 @@
 
   &__lede {
     font-style: italic;
-    color: $s-color-muted-body;
+    color: settings.$s-color-muted-body;
     text-wrap: pretty;
   }
 

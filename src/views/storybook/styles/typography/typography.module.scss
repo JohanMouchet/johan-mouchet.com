@@ -1,21 +1,21 @@
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 /* stylelint-disable selector-pseudo-class-no-unknown, property-no-unknown */
 :export {
-  TYPOGRAPHY_SANS: $s-font-family-sans;
-  TYPOGRAPHY_SERIF: $s-font-family-serif;
-  TYPOGRAPHY_DISPLAY: $s-font-family-display;
-  TYPOGRAPHY_MONO: $s-font-family-mono;
-  FONT_SIZE_BASE: $s-font-size-base;
-  LINE_HEIGHT_BASE: $s-line-height-base;
-  MODULAR_SCALE_RATIO: $s-modular-scale-ratio;
+  TYPOGRAPHY_SANS: settings.$s-font-family-sans;
+  TYPOGRAPHY_SERIF: settings.$s-font-family-serif;
+  TYPOGRAPHY_DISPLAY: settings.$s-font-family-display;
+  TYPOGRAPHY_MONO: settings.$s-font-family-mono;
+  FONT_SIZE_BASE: settings.$s-font-size-base;
+  LINE_HEIGHT_BASE: settings.$s-line-height-base;
+  MODULAR_SCALE_RATIO: settings.$s-modular-scale-ratio;
 }
 
 .storybook {
   @for $i from -2 through 2 {
     &-size--#{$i} {
-      font-size: t-modular-scale($i);
+      font-size: tools.t-modular-scale($i);
     }
   }
 }

@@ -1,8 +1,7 @@
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/tools/tools.module";
 
 .c-social-media {
   display: flex;
   flex-wrap: wrap;
-  gap: t-vertical-rhythm(0.5);
+  gap: tools.t-vertical-rhythm(0.5);
 }

@@ -1,5 +1,5 @@
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 /* stylelint-disable selector-no-type, selector-max-type, no-duplicate-selectors, selector-no-qualifying-type, no-descending-specificity */
 .o-list {
@@ -40,7 +40,7 @@
     li:not(:first-child),
     ul,
     ol {
-      border-top: 1px solid $s-color-border;
+      border-top: 1px solid settings.$s-color-border;
     }
 
     // And inline
@@ -55,7 +55,7 @@
   &--v-striped {
     li {
       padding-left: 1rem;
-      border-left: 1px solid $s-color-border;
+      border-left: 1px solid settings.$s-color-border;
     }
 
     // And inline
@@ -73,13 +73,13 @@
   /** Large **/
   &--lg {
     li {
-      padding-top: t-vertical-rhythm(0.25);
-      padding-bottom: t-vertical-rhythm(0.25);
+      padding-top: tools.t-vertical-rhythm(0.25);
+      padding-bottom: tools.t-vertical-rhythm(0.25);
     }
 
     ul,
     ol {
-      margin-top: t-vertical-rhythm(0.25);
+      margin-top: tools.t-vertical-rhythm(0.25);
     }
   }
 

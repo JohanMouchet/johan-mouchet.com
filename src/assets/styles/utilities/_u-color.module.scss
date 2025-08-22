@@ -1,26 +1,28 @@
+@use "src/assets/styles/settings/settings.module";
+
 /**
  * Color
  */
 
 .u-color {
   &--muted {
-    color: $s-color-muted-body;
+    color: settings.$s-color-muted-body;
   }
 
   /** States colors **/
   &--success {
-    color: $s-color-success;
+    color: settings.$s-color-success;
   }
 
   &--info {
-    color: $s-color-info;
+    color: settings.$s-color-info;
   }
 
   &--warning {
-    color: $s-color-warning;
+    color: settings.$s-color-warning;
   }
 
   &--danger {
-    color: $s-color-danger;
+    color: settings.$s-color-danger;
   }
 }

@@ -1,4 +1,7 @@
+@use "src/assets/styles/settings/s-breakpoints.module";
+
 @use "sass:map";
+@use "sass:math";
 
 /**
  * Vendors
@@ -6,11 +9,11 @@
 
 /* Flexbox Grid */
 $fluxgrid-breakpoints: (
-  sm: map.get($s-breakpoints, sm),
-  md: map.get($s-breakpoints, md),
-  lg: map.get($s-breakpoints, lg),
-  xl: map.get($s-breakpoints, xl),
+  sm: map.get(s-breakpoints.$s-breakpoints, sm),
+  md: map.get(s-breakpoints.$s-breakpoints, md),
+  lg: map.get(s-breakpoints.$s-breakpoints, lg),
+  xl: map.get(s-breakpoints.$s-breakpoints, xl),
 );
 $fluxgrid-gutter: 1.5rem;
 $fluxgrid-gutter-lg: $fluxgrid-gutter * 3;
-$fluxgrid-outside-margin: $fluxgrid-gutter-lg / 2;
+$fluxgrid-outside-margin: math.div($fluxgrid-gutter-lg, 2);

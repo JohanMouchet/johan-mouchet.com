@@ -1,3 +1,5 @@
+@use "src/assets/styles/settings/settings.module";
+
 /**
  * Link
  *
@@ -11,9 +13,9 @@
  * @example @include t-link;
  */
 @mixin t-link(
-  $color: $s-color-link,
+  $color: settings.$s-color-link,
   $decoration: "underline",
-  $hover-color: $s-color-link-hover,
+  $hover-color: settings.$s-color-link-hover,
   $hover-decoration: "none"
 ) {
   color: $color;

@@ -1,15 +1,15 @@
 @use "sass:map";
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 .c-project {
   $root: &;
 
   height: 100%;
-  padding: t-vertical-rhythm(1);
-  background: $s-color-white;
+  padding: tools.t-vertical-rhythm(1);
+  background: settings.$s-color-white;
   border-radius: 0.5rem;
-  box-shadow: map.get($s-shadows, lg);
+  box-shadow: map.get(settings.$s-shadows, lg);
 
   &__list-item {
     all: unset;
@@ -21,25 +21,25 @@
     border: 0;
     outline: 0;
 
-    @include t-link;
+    @include tools.t-link;
 
     > svg {
       width: 1.25rem;
       height: 1.25rem;
-      @include t-link($s-color-muted-body, "none");
+      @include tools.t-link(settings.$s-color-muted-body, "none");
     }
   }
 
   &__thumbnail {
     display: block;
     width: 100%;
-    margin-bottom: t-vertical-rhythm(1);
-    border: 1px solid $s-color-border;
+    margin-bottom: tools.t-vertical-rhythm(1);
+    border: 1px solid settings.$s-color-border;
     border-radius: 0.25rem;
   }
 
   &__title {
-    margin-bottom: t-vertical-rhythm(0.5);
+    margin-bottom: tools.t-vertical-rhythm(0.5);
   }
 
   &__link {
@@ -49,14 +49,14 @@
   }
 
   &__lede {
-    color: $s-color-muted-body;
+    color: settings.$s-color-muted-body;
     text-wrap: pretty;
   }
 
   &__content-heading {
-    font-size: t-modular-scale(-2);
+    font-size: tools.t-modular-scale(-2);
     font-weight: 700;
-    color: $s-color-heading;
+    color: settings.$s-color-heading;
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
@@ -80,6 +80,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin: t-vertical-rhythm(1) 0;
+    margin: tools.t-vertical-rhythm(1) 0;
   }
 }

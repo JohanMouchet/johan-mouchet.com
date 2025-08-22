@@ -1,17 +1,17 @@
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 .o-loader {
   $loader-speed: 1.5s;
 
   display: inline-block;
-  width: t-vertical-rhythm(1.5);
-  height: t-vertical-rhythm(1.5);
+  width: tools.t-vertical-rhythm(1.5);
+  height: tools.t-vertical-rhythm(1.5);
   border-radius: 0.1875rem;
-  outline: 1.5px solid $s-color-secondary;
+  outline: 1.5px solid settings.$s-color-secondary;
   animation: loader-spin-animation $loader-speed infinite ease;
 
-  @include t-wekkit-hdpi-small-dimension("outline-width", 2);
+  @include tools.t-wekkit-hdpi-small-dimension("outline-width", 2);
 
   @keyframes loader-spin-animation {
     50% {
@@ -46,8 +46,8 @@
 
   /** Small **/
   &--sm {
-    width: t-vertical-rhythm(0.75);
-    height: t-vertical-rhythm(0.75);
+    width: tools.t-vertical-rhythm(0.75);
+    height: tools.t-vertical-rhythm(0.75);
     border-radius: 0.125rem;
   }
 }

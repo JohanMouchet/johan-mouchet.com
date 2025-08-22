@@ -1,6 +1,6 @@
-@import "t-hacks.module";
-@import "t-heading.module";
-@import "t-link.module";
-@import "t-map-deep-get.module";
-@import "t-modular-scale.module";
-@import "t-vertical-rhythm.module";
+@forward "src/assets/styles/tools/t-hacks.module";
+@forward "src/assets/styles/tools/t-heading.module";
+@forward "src/assets/styles/tools/t-link.module";
+@forward "src/assets/styles/tools/t-map-deep-get.module";
+@forward "src/assets/styles/tools/t-modular-scale.module";
+@forward "src/assets/styles/tools/t-vertical-rhythm.module";

@@ -1,21 +1,23 @@
+@use "sass:math";
+
 @use "sass:map";
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 $class: o-table;
 
 /* stylelint-disable selector-max-type, no-descending-specificity */
 .#{$class} {
   $root: &;
-  $v-padding: t-vertical-rhythm(0.375) !default;
+  $v-padding: tools.t-vertical-rhythm(0.375) !default;
   $h-padding: $v-padding * 2;
   $scale-factor: 2 !default;
 
-  margin: t-vertical-rhythm(2) 0;
+  margin: tools.t-vertical-rhythm(2) 0;
   text-align: left;
 
   tbody tr:not(:last-child) {
-    border-bottom: 1px solid $s-color-border;
+    border-bottom: 1px solid settings.$s-color-border;
   }
 
   th,
@@ -30,7 +32,7 @@ $class: o-table;
 
   thead,
   tfoot {
-    color: $s-color-heading;
+    color: settings.$s-color-heading;
   }
 
   thead {
@@ -77,7 +79,7 @@ $class: o-table;
 
       th:not(:last-child),
       td:not(:last-child) {
-        border-right: 1px solid $s-color-border;
+        border-right: 1px solid settings.$s-color-border;
       }
     }
   }
@@ -90,7 +92,7 @@ $class: o-table;
       }
 
       tr:nth-child(even) {
-        background-color: $s-color-gray-50;
+        background-color: settings.$s-color-gray-50;
       }
     }
 
@@ -103,7 +105,7 @@ $class: o-table;
         }
 
         td:nth-child(2n) {
-          background-color: $s-color-gray-50;
+          background-color: settings.$s-color-gray-50;
         }
 
         th:not(:last-child),
@@ -118,13 +120,13 @@ $class: o-table;
   /** Hover **/
   &--hover {
     tbody tr:hover {
-      background-color: $s-color-gray-50;
+      background-color: settings.$s-color-gray-50;
     }
 
     // And striped
     &#{$root}--striped {
       tbody tr:hover {
-        background-color: $s-color-gray-100;
+        background-color: settings.$s-color-gray-100;
       }
     }
   }
@@ -137,15 +139,16 @@ $class: o-table;
     tfoot {
       th,
       td {
-        padding-right: $h-padding / $scale-factor;
-        padding-left: $h-padding / $scale-factor;
+        padding-right: math.div($h-padding, $scale-factor);
+        padding-left: math.div($h-padding, $scale-factor);
       }
     }
 
     tbody {
       th,
       td {
-        padding: $v-padding / $scale-factor $h-padding / $scale-factor;
+        padding: math.div($v-padding, $scale-factor)
+          math.div($h-padding, $scale-factor);
       }
     }
 
@@ -154,8 +157,8 @@ $class: o-table;
       tbody {
         th,
         td {
-          padding-top: $v-padding / $scale-factor;
-          padding-bottom: $v-padding / $scale-factor;
+          padding-top: math.div($v-padding, $scale-factor);
+          padding-bottom: math.div($v-padding, $scale-factor);
         }
       }
     }
@@ -164,8 +167,8 @@ $class: o-table;
     &-horizontal {
       th,
       td {
-        padding-right: $h-padding / $scale-factor;
-        padding-left: $h-padding / $scale-factor;
+        padding-right: math.div($h-padding, $scale-factor);
+        padding-left: math.div($h-padding, $scale-factor);
       }
     }
   }
@@ -222,7 +225,7 @@ $class: o-table;
   /* stylelint-enable max-nesting-depth */
 
   /** Responsive **/
-  @media screen and (max-width: map.get($s-breakpoints, md)) {
+  @media screen and (max-width: map.get(settings.$s-breakpoints, md)) {
     @at-root .md\:#{$class}--responsive {
       display: inline-block;
       max-width: 100%;

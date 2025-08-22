@@ -49,7 +49,7 @@ export const Example = {
             </td>
             <td>
               <code className="u-select--all">
-                map.get($s-shadows, {shadow.name})
+                map.get(settings.$s-shadows, {shadow.name})
               </code>
             </td>
           </tr>

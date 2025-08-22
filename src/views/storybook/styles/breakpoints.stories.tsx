@@ -47,7 +47,7 @@ export const Example = {
             <td>{breakpoint.size}</td>
             <td>
               <code className="u-select--all">
-                map.get($s-breakpoints, {breakpoint.name})
+                map.get(settings.$s-breakpoints, {breakpoint.name})
               </code>
             </td>
           </tr>

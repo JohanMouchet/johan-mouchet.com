@@ -1,3 +1,6 @@
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
+
 /**
  * Typography
  */
@@ -5,35 +8,35 @@
 /* Headings */
 .u-heading {
   &--xl {
-    @include t-heading--xl;
+    @include tools.t-heading--xl;
   }
 
   &--lg {
-    @include t-heading--lg;
+    @include tools.t-heading--lg;
   }
 
   &--1 {
-    @include t-heading--1;
+    @include tools.t-heading--1;
   }
 
   &--2 {
-    @include t-heading--2;
+    @include tools.t-heading--2;
   }
 
   &--3 {
-    @include t-heading--3;
+    @include tools.t-heading--3;
   }
 
   &--4 {
-    @include t-heading--4;
+    @include tools.t-heading--4;
   }
 
   &--5 {
-    @include t-heading--5;
+    @include tools.t-heading--5;
   }
 
   &--6 {
-    @include t-heading--6;
+    @include tools.t-heading--6;
   }
 
   /** Underline **/
@@ -42,7 +45,7 @@
     width: 2.5em;
     height: 0.1em;
     margin-top: 0.5em;
-    background-color: $s-color-secondary;
+    background-color: settings.$s-color-secondary;
     transform-origin: left;
     animation: u-heading-underline-animation 0.3s ease-out both;
 

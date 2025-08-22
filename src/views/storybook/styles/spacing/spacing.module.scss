@@ -1,21 +1,21 @@
 @use "sass:map";
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 .storybook {
   &-spacing {
     display: inline-block;
-    background: $s-color-gray-100;
+    background: settings.$s-color-gray-100;
 
     @for $i from 1 through 6 {
       &--#{$i} {
-        width: t-vertical-rhythm(1);
-        height: t-vertical-rhythm($i);
+        width: tools.t-vertical-rhythm(1);
+        height: tools.t-vertical-rhythm($i);
 
         /* stylelint-disable-next-line max-nesting-depth */
-        @media (min-width: map.get($s-breakpoints, sm)) {
-          width: t-vertical-rhythm($i);
-          height: t-vertical-rhythm(1);
+        @media (min-width: map.get(settings.$s-breakpoints, sm)) {
+          width: tools.t-vertical-rhythm($i);
+          height: tools.t-vertical-rhythm(1);
         }
       }
     }

@@ -1,11 +1,10 @@
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/tools/tools.module";
 
 .o-form__file {
   &-icon {
     svg {
-      width: t-modular-scale(1);
-      height: t-modular-scale(1);
+      width: tools.t-modular-scale(1);
+      height: tools.t-modular-scale(1);
       vertical-align: middle;
     }
   }

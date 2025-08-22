@@ -1,10 +1,13 @@
+@use "sass:math";
+
 @use "sass:map";
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "sass:color";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 .p-article {
   $p-article: (
-    v-padding: t-vertical-rhythm(3),
+    v-padding: tools.t-vertical-rhythm(3),
     scale-factor: 2,
   );
 
@@ -14,10 +17,14 @@
 
   /** Margin **/
   &--sm {
-    margin-top: map.get($p-article, v-padding) /
-      map.get($p-article, scale-factor);
-    margin-bottom: map.get($p-article, v-padding) /
-      map.get($p-article, scale-factor);
+    margin-top: math.div(
+      map.get($p-article, v-padding),
+      map.get($p-article, scale-factor)
+    );
+    margin-bottom: math.div(
+      map.get($p-article, v-padding),
+      map.get($p-article, scale-factor)
+    );
   }
 
   &--lg {
@@ -44,30 +51,34 @@
   &--secondary {
     padding-top: map.get($p-article, v-padding);
     padding-bottom: map.get($p-article, v-padding);
-    background: $s-color-gray-50;
+    background: settings.$s-color-gray-50;
 
-    @if lightness($s-color-gray-50) < 75 {
+    @if color.lightness(settings.$s-color-gray-50) < 75 {
       h1,
       h2,
       h3,
       h4,
       h5,
       h6 {
-        color: $s-color-muted-body;
+        color: settings.$s-color-muted-body;
       }
 
       p,
       span {
-        color: $s-color-white;
+        color: settings.$s-color-white;
       }
     }
   }
 
   &--secondary-sm {
-    padding-top: map.get($p-article, v-padding) /
-      map.get($p-article, scale-factor);
-    padding-bottom: map.get($p-article, v-padding) /
-      map.get($p-article, scale-factor);
+    padding-top: math.div(
+      map.get($p-article, v-padding),
+      map.get($p-article, scale-factor)
+    );
+    padding-bottom: math.div(
+      map.get($p-article, v-padding),
+      map.get($p-article, scale-factor)
+    );
   }
 
   &--secondary-lg {

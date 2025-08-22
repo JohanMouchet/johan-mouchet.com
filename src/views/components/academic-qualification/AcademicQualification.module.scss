@@ -1,9 +1,9 @@
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 .c-academic-qualification {
   &:not(:last-child) {
-    margin-bottom: t-vertical-rhythm(1);
+    margin-bottom: tools.t-vertical-rhythm(1);
   }
 
   &__heading {
@@ -22,10 +22,10 @@
 
   &__title {
     display: block;
-    color: $s-color-heading;
+    color: settings.$s-color-heading;
   }
 
   &__graduation-year {
-    color: $s-color-muted-body;
+    color: settings.$s-color-muted-body;
   }
 }

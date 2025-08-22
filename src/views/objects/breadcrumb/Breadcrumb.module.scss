@@ -1,5 +1,5 @@
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 .o-breadcrumb {
   $root: &;
@@ -8,13 +8,13 @@
   display: flex;
   padding: 0;
   margin-top: 0;
-  margin-bottom: t-vertical-rhythm(2);
+  margin-bottom: tools.t-vertical-rhythm(2);
   overflow: auto hidden;
   list-style: none;
-  border-bottom: 1px solid $s-color-border;
+  border-bottom: 1px solid settings.$s-color-border;
 
   * + & {
-    margin-top: t-vertical-rhythm(1);
+    margin-top: tools.t-vertical-rhythm(1);
   }
 
   /* Level */
@@ -24,22 +24,22 @@
     white-space: nowrap;
 
     &:not(:last-child)::after {
-      color: $s-color-border;
+      color: settings.$s-color-border;
       content: "/";
     }
 
     /* Last level */
     &:last-child #{$root}__link {
-      color: $s-color-muted-body;
+      color: settings.$s-color-muted-body;
     }
   }
 
   &__link {
     [href] {
-      @include t-link;
+      @include tools.t-link;
     }
 
     display: inline-block;
-    padding: t-vertical-rhythm(0.5) 1rem;
+    padding: tools.t-vertical-rhythm(0.5) 1rem;
   }
 }

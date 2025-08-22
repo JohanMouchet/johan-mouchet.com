@@ -1,3 +1,7 @@
+@use "src/assets/styles/tools/tools.module";
+
+@use "sass:math";
+
 /**
  * Animation
  */
@@ -9,7 +13,7 @@
   animation-fill-mode: both;
 
   &--fast {
-    animation-duration: $animation-duration / 2;
+    animation-duration: math.div($animation-duration, 2);
   }
 
   /* Fade in */
@@ -32,7 +36,7 @@
     @keyframes u-animation--fade-in-up {
       from {
         opacity: 0;
-        transform: translateY(t-vertical-rhythm(1));
+        transform: translateY(tools.t-vertical-rhythm(1));
       }
 
       to {
@@ -49,7 +53,7 @@
     @keyframes u-animation--fade-in-down {
       from {
         opacity: 0;
-        transform: translateY(t-vertical-rhythm(1) * -1);
+        transform: translateY(tools.t-vertical-rhythm(1) * -1);
       }
 
       to {
@@ -66,7 +70,7 @@
     @keyframes u-animation--fade-in-left {
       from {
         opacity: 0;
-        transform: translateX(t-vertical-rhythm(1) * -1);
+        transform: translateX(tools.t-vertical-rhythm(1) * -1);
       }
 
       to {
@@ -83,7 +87,7 @@
     @keyframes u-animation--fade-in-right {
       from {
         opacity: 0;
-        transform: translateX(t-vertical-rhythm(1));
+        transform: translateX(tools.t-vertical-rhythm(1));
       }
 
       to {

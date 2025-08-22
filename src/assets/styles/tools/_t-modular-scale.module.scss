@@ -1,3 +1,7 @@
+@use "sass:math";
+
+@use "src/assets/styles/settings/settings.module";
+
 /**
  * Modular scale
  *
@@ -8,7 +12,7 @@
  * @example font-size: t-modular-scale(1);
  */
 @function t-modular-scale($factor) {
-  @return t-power($s-modular-scale-ratio, $factor) * 1rem;
+  @return t-power(settings.$s-modular-scale-ratio, $factor) * 1rem;
 }
 
 /* Power */
@@ -21,7 +25,7 @@
     }
   } @else if $exponent < 0 {
     @for $i from 1 through -$exponent {
-      $value: $value / $number;
+      $value: math.div($value, $number);
     }
   }
 

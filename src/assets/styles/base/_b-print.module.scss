@@ -1,3 +1,5 @@
+@use "src/assets/styles/tools/tools.module";
+
 /**
  * Print
  */
@@ -21,7 +23,7 @@
     text-decoration: underline;
 
     &::after {
-      font-size: t-modular-scale(-1);
+      font-size: tools.t-modular-scale(-1);
       font-style: italic;
       font-weight: 400;
       content: " (" attr(href) ")";

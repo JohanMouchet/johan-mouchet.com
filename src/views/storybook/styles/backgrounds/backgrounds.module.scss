@@ -1,8 +1,8 @@
 @use "sass:map";
-@import "@/assets/styles/settings/settings.module";
+@use "src/assets/styles/settings/settings.module";
 
 /* stylelint-disable selector-pseudo-class-no-unknown, property-no-unknown */
 :export {
-  BACKGROUNDS_DOTS: map.get($s-backgrounds, dots);
-  BACKGROUNDS_ZIGZAG: map.get($s-backgrounds, zigzag);
+  BACKGROUNDS_DOTS: map.get(settings.$s-backgrounds, dots);
+  BACKGROUNDS_ZIGZAG: map.get(settings.$s-backgrounds, zigzag);
 }

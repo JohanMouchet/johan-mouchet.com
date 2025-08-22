@@ -1,12 +1,13 @@
 @use "sass:map";
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "sass:math";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 .o-alert {
   align-items: flex-start;
-  padding: t-vertical-rhythm(0.75) ($fluxgrid-gutter / 2);
-  margin: t-vertical-rhythm(1) 0;
-  background-color: $s-color-gray-50;
+  padding: tools.t-vertical-rhythm(0.75) math.div(settings.$fluxgrid-gutter, 2);
+  margin: tools.t-vertical-rhythm(1) 0;
+  background-color: settings.$s-color-gray-50;
   border-left: 2px solid;
   animation-duration: 0.3s;
 
@@ -45,11 +46,11 @@
       border: 0;
       outline: 0;
 
-      @include t-link($s-color-muted-body, "none");
+      @include tools.t-link(settings.$s-color-muted-body, "none");
 
       svg {
-        width: t-modular-scale(1);
-        height: t-modular-scale(1);
+        width: tools.t-modular-scale(1);
+        height: tools.t-modular-scale(1);
         vertical-align: middle;
       }
     }
@@ -57,42 +58,42 @@
 
   /* Variants */
   &--success {
-    border-color: $s-color-success;
+    border-color: settings.$s-color-success;
   }
 
   &--success & {
     &__icon {
-      color: $s-color-success;
+      color: settings.$s-color-success;
     }
   }
 
   &--info {
-    border-color: $s-color-info;
+    border-color: settings.$s-color-info;
   }
 
   &--info & {
     &__icon {
-      color: $s-color-info;
+      color: settings.$s-color-info;
     }
   }
 
   &--warning {
-    border-color: $s-color-warning;
+    border-color: settings.$s-color-warning;
   }
 
   &--warning & {
     &__icon {
-      color: $s-color-warning;
+      color: settings.$s-color-warning;
     }
   }
 
   &--danger {
-    border-color: $s-color-danger;
+    border-color: settings.$s-color-danger;
   }
 
   &--danger & {
     &__icon {
-      color: $s-color-danger;
+      color: settings.$s-color-danger;
     }
   }
 
@@ -107,15 +108,15 @@
     position: fixed;
     right: 0;
     bottom: 0;
-    z-index: map.get($s-layers, "alert");
+    z-index: map.get(settings.$s-layers, "alert");
     margin-bottom: 0;
-    box-shadow: map.get($s-shadows, md);
+    box-shadow: map.get(settings.$s-shadows, md);
   }
 
   &--fixed-bottom-right {
-    @media (min-width: map.get($s-breakpoints, sm)) {
-      max-width: map.get($s-breakpoints, sm);
-      margin-right: $fluxgrid-gutter;
+    @media (min-width: map.get(settings.$s-breakpoints, sm)) {
+      max-width: map.get(settings.$s-breakpoints, sm);
+      margin-right: settings.$fluxgrid-gutter;
     }
   }
 }

@@ -1,10 +1,10 @@
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 .o-tabs {
   $root: &;
 
-  margin: t-vertical-rhythm(1) 0;
+  margin: tools.t-vertical-rhythm(1) 0;
 
   /* Thumbs */
   &__thumbs {
@@ -12,7 +12,7 @@
     padding-left: 0;
     overflow: auto hidden;
     list-style: none;
-    border-bottom: 1px solid $s-color-border;
+    border-bottom: 1px solid settings.$s-color-border;
   }
 
   &__thumb {
@@ -25,20 +25,20 @@
   &__button {
     all: unset;
     display: block;
-    padding: t-vertical-rhythm(0.5) 1em;
+    padding: tools.t-vertical-rhythm(0.5) 1em;
     cursor: pointer;
     background-color: transparent;
     border: 0;
     outline: 0;
 
-    @include t-link;
+    @include tools.t-link;
 
     /** Active **/
     &--active {
-      @include t-link(
-        $color: $s-color-muted-body,
+      @include tools.t-link(
+        $color: settings.$s-color-muted-body,
         $decoration: none,
-        $hover-color: $s-color-muted-body,
+        $hover-color: settings.$s-color-muted-body,
         $hover-decoration: none
       );
 

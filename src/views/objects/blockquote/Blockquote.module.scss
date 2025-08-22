@@ -1,13 +1,13 @@
 @use "sass:map";
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 .o-blockquote {
   position: relative;
   padding-left: 1rem;
-  margin: t-vertical-rhythm(2);
-  font-size: t-modular-scale(1);
-  color: $s-color-secondary;
+  margin: tools.t-vertical-rhythm(2);
+  font-size: tools.t-modular-scale(1);
+  color: settings.$s-color-secondary;
 
   &::before {
     position: absolute;
@@ -16,11 +16,11 @@
     width: 2px;
     height: 100%;
     content: "";
-    background: $s-color-gray-200;
+    background: settings.$s-color-gray-200;
     transform-origin: 50% 0;
     animation: blockquote-animation 0.5s ease-out both;
 
-    @include t-wekkit-hdpi-small-dimension("width");
+    @include tools.t-wekkit-hdpi-small-dimension("width");
 
     @keyframes blockquote-animation {
       from {
@@ -37,8 +37,8 @@
 
     &::before,
     &::after {
-      font-family: $s-font-family-serif;
-      font-size: t-modular-scale(2);
+      font-family: settings.$s-font-family-serif;
+      font-size: tools.t-modular-scale(2);
       font-weight: 700;
       line-height: 1;
     }
@@ -62,7 +62,7 @@
   &--pulled {
     float: left;
 
-    @media (min-width: map.get($s-breakpoints, md)) {
+    @media (min-width: map.get(settings.$s-breakpoints, md)) {
       width: 30%;
     }
   }
@@ -70,14 +70,14 @@
   /** Cite **/
   &__cite {
     display: block;
-    margin-top: t-vertical-rhythm(0.5);
-    font-size: t-modular-scale(-2);
-    color: $s-color-muted-body;
+    margin-top: tools.t-vertical-rhythm(0.5);
+    font-size: tools.t-modular-scale(-2);
+    color: settings.$s-color-muted-body;
     animation-delay: 0.25s;
 
     /* stylelint-disable-next-line no-descending-specificity */
     [href] {
-      @include t-link($s-color-body);
+      @include tools.t-link(settings.$s-color-body);
     }
 
     &::before {

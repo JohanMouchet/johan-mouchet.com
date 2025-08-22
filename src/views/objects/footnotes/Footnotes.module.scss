@@ -1,27 +1,27 @@
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 /* Reference */
 .o-footnote-ref {
   padding: 0 1px;
 
   &:focus {
-    color: $s-color-white;
+    color: settings.$s-color-white;
     text-decoration: none;
-    background-color: $s-color-link;
+    background-color: settings.$s-color-link;
   }
 }
 
 /* Notes */
 .o-footnotes {
-  margin: t-vertical-rhythm(2) 0;
-  border-top: 1px solid $s-color-border;
+  margin: tools.t-vertical-rhythm(2) 0;
+  border-top: 1px solid settings.$s-color-border;
 
   &__note {
-    margin-top: t-vertical-rhythm(1);
+    margin-top: tools.t-vertical-rhythm(1);
 
     &:not(:last-child) {
-      margin-bottom: t-vertical-rhythm(1);
+      margin-bottom: tools.t-vertical-rhythm(1);
     }
   }
 
@@ -29,8 +29,8 @@
     text-decoration: none;
 
     svg {
-      width: t-modular-scale(1);
-      height: t-modular-scale(1);
+      width: tools.t-modular-scale(1);
+      height: tools.t-modular-scale(1);
       vertical-align: middle;
     }
   }

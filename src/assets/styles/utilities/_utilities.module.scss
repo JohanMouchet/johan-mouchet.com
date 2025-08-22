@@ -1,6 +1,6 @@
-@import "u-animation.module";
-@import "u-typography.module";
-@import "u-color.module";
-@import "u-layout.module";
-@import "u-others.module";
-@import "u-visibility.module";
+@use "src/assets/styles/utilities/u-animation.module";
+@use "src/assets/styles/utilities/u-typography.module";
+@use "src/assets/styles/utilities/u-color.module";
+@use "src/assets/styles/utilities/u-layout.module";
+@use "src/assets/styles/utilities/u-others.module";
+@use "src/assets/styles/utilities/u-visibility.module";

@@ -1,15 +1,15 @@
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 .o-badge {
   display: inline-block;
   padding: 0.125rem 0.5rem;
-  font-size: t-modular-scale(-1);
+  font-size: tools.t-modular-scale(-1);
   font-weight: 400;
-  color: $s-color-body;
+  color: settings.$s-color-body;
   text-decoration: none;
   white-space: nowrap;
-  background-color: $s-color-gray-100;
+  background-color: settings.$s-color-gray-100;
   border-radius: 0.1875rem;
 
   &:empty {

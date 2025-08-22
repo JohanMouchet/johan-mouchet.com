@@ -1,14 +1,14 @@
 @use "sass:map";
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 .p-footer {
   position: relative;
-  font-size: t-modular-scale(-1);
-  color: $s-color-muted-body;
+  font-size: tools.t-modular-scale(-1);
+  color: settings.$s-color-muted-body;
 
   &__version {
-    font-family: $s-font-family-mono;
+    font-family: settings.$s-font-family-mono;
   }
 
   &__copyright {
@@ -20,7 +20,7 @@
       display: none;
     }
 
-    @media (min-width: map.get($s-breakpoints, sm)) {
+    @media (min-width: map.get(settings.$s-breakpoints, sm)) {
       &-separator {
         display: inline-block;
       }

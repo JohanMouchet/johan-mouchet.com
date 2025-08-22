@@ -1,11 +1,11 @@
-@import "@/assets/styles/settings/settings.module";
-@import "@/assets/styles/tools/tools.module";
+@use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/tools/tools.module";
 
 .c-experience-duration {
   display: block;
-  font-family: $s-font-family-sans;
-  font-size: t-modular-scale(0);
+  font-family: settings.$s-font-family-sans;
+  font-size: tools.t-modular-scale(0);
   font-weight: normal;
-  color: $s-color-muted-body;
+  color: settings.$s-color-muted-body;
   white-space: nowrap;
 }
