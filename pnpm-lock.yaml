@@ -36,8 +36,8 @@ importers:
         specifier: ^8.0.2
         version: 8.6.0(react@18.3.1)
       fluxgrid:
-        specifier: ^6.0.0
-        version: 6.0.0(sass@1.89.2)
+        specifier: ^6.0.1
+        version: 6.0.1(sass@1.89.2)
       html-react-parser:
         specifier: ^3.0.12
         version: 3.0.16(react@18.3.1)
@@ -3535,8 +3535,8 @@ packages:
   flatted@3.3.3:
     resolution: {integrity: sha512-GX+ysw4PBCz0PzosHDepZGANEuFCMLrnRTiEy9McGjmkCQYwRq4A/X786G/fjM/+OjsWSU1ZrY5qyARZmO/uwg==}
 
-  fluxgrid@6.0.0:
-    resolution: {integrity: sha512-9fdvItZEwvBg55QHOYS/Ijd+6xVbOuU9qpdNSJAInyp+qDAaz5m/bnGQCYmXeREHjUD1tbxjTI14nxyc93cGwg==}
+  fluxgrid@6.0.1:
+    resolution: {integrity: sha512-AGdVtWeymd7Q52IMs3/jRKZtMrZ3/QpLewT1P3VCK25tbQ7/VURzx8QSdnJFO5220Mmb6XjtOlsaLH/wXYrpLg==}
     peerDependencies:
       sass: ^1.89.2
 
@@ -9831,7 +9831,7 @@ snapshots:
 
   flatted@3.3.3: {}
 
-  fluxgrid@6.0.0(sass@1.89.2):
+  fluxgrid@6.0.1(sass@1.89.2):
     dependencies:
       sass: 1.89.2
 

@@ -1,1 +1,9 @@
-@use "fluxgrid/src/fluxgrid";
+@use "src/assets/styles/settings/s-vendors.module";
+@use "src/assets/styles/settings/s-breakpoints.module";
+
+@use "fluxgrid/src/fluxgrid" with (
+  $fluxgrid-breakpoints: s-vendors.$fluxgrid-breakpoints,
+  $fluxgrid-gutter: s-vendors.$fluxgrid-gutter,
+  $fluxgrid-gutter-lg: s-vendors.$fluxgrid-gutter-lg,
+  $fluxgrid-outside-margin: s-vendors.$fluxgrid-outside-margin
+);
