@@ -5,6 +5,13 @@
 .c-personal-work {
   $root: &;
 
+  position: relative;
+  display: block;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  border: 1px solid settings.$s-color-border;
+  border-radius: 0.25rem;
+
   &s {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -14,13 +21,6 @@
       grid-template-columns: repeat(6, minmax(0, 1fr));
     }
   }
-
-  position: relative;
-  display: block;
-  aspect-ratio: 2/3;
-  overflow: hidden;
-  border: 1px solid settings.$s-color-border;
-  border-radius: 0.25rem;
 
   &__thumbnail {
     display: block;

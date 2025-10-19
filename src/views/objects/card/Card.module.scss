@@ -10,11 +10,6 @@
   $h-padding: $v-padding * 2;
   $scale-factor: 1.5 !default;
 
-  /* Group */
-  &-group {
-    margin-bottom: settings.$fluxgrid-gutter;
-  }
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -23,6 +18,11 @@
   border: 1px solid settings.$s-color-border;
   border-radius: 0.5rem;
   transition: box-shadow 0.2s, transform 0.2s;
+
+  /* Group */
+  &-group {
+    margin-bottom: settings.$fluxgrid-gutter;
+  }
 
   /* Components */
   &__banner,

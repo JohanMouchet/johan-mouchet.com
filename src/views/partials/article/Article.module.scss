@@ -52,22 +52,6 @@
     padding-top: map.get($p-article, v-padding);
     padding-bottom: map.get($p-article, v-padding);
     background: settings.$s-color-gray-50;
-
-    @if color.lightness(settings.$s-color-gray-50) < 75 {
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        color: settings.$s-color-muted-body;
-      }
-
-      p,
-      span {
-        color: settings.$s-color-white;
-      }
-    }
   }
 
   &--secondary-sm {

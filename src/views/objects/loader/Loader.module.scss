@@ -1,6 +1,26 @@
 @use "src/assets/styles/settings/settings.module";
 @use "src/assets/styles/tools/tools.module";
 
+@keyframes loader-spin-animation {
+  50% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes loader-spin-animation-asynchronous {
+  50% {
+    transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
 .o-loader {
   $loader-speed: 1.5s;
 
@@ -13,16 +33,6 @@
 
   @include tools.t-wekkit-hdpi-small-dimension("outline-width", 2);
 
-  @keyframes loader-spin-animation {
-    50% {
-      transform: rotate(45deg);
-    }
-
-    100% {
-      transform: rotate(90deg);
-    }
-  }
-
   &::after {
     display: block;
     width: inherit;
@@ -32,16 +42,6 @@
     outline: inherit;
     animation: inherit;
     animation-name: loader-spin-animation-asynchronous;
-  }
-
-  @keyframes loader-spin-animation-asynchronous {
-    50% {
-      transform: rotate(90deg);
-    }
-
-    100% {
-      transform: rotate(180deg);
-    }
   }
 
   /** Small **/

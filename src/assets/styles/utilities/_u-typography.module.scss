@@ -4,6 +4,15 @@
 /**
  * Typography
  */
+@keyframes u-heading-underline-animation {
+  from {
+    transform: scaleX(0) skew(-45deg);
+  }
+
+  to {
+    transform: scaleX(1) skew(-45deg);
+  }
+}
 
 /* Headings */
 .u-heading {
@@ -56,17 +65,6 @@
 
     &--r {
       margin-left: auto;
-    }
-
-    /*** Animation ***/
-    @keyframes u-heading-underline-animation {
-      from {
-        transform: scaleX(0) skew(-45deg);
-      }
-
-      to {
-        transform: scaleX(1) skew(-45deg);
-      }
     }
   }
 }

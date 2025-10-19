@@ -5,6 +5,63 @@
 /**
  * Animation
  */
+@keyframes u-animation--fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes u-animation--fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(tools.t-vertical-rhythm(1));
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes u-animation--fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(tools.t-vertical-rhythm(1) * -1);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes u-animation--fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(tools.t-vertical-rhythm(1) * -1);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes u-animation--fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(tools.t-vertical-rhythm(1));
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 
 .u-animation {
   $animation-duration: 0.5s;
@@ -18,84 +75,26 @@
 
   /* Fade in */
   &--fade-in {
-    @keyframes u-animation--fade-in {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
     animation-name: u-animation--fade-in;
   }
 
   /* Fade in up */
   &--fade-in-up {
-    @keyframes u-animation--fade-in-up {
-      from {
-        opacity: 0;
-        transform: translateY(tools.t-vertical-rhythm(1));
-      }
-
-      to {
-        opacity: 1;
-        transform: none;
-      }
-    }
-
     animation-name: u-animation--fade-in-up;
   }
 
   /* Fade in down */
   &--fade-in-down {
-    @keyframes u-animation--fade-in-down {
-      from {
-        opacity: 0;
-        transform: translateY(tools.t-vertical-rhythm(1) * -1);
-      }
-
-      to {
-        opacity: 1;
-        transform: none;
-      }
-    }
-
     animation-name: u-animation--fade-in-down;
   }
 
   /* Fade in left */
   &--fade-in-left {
-    @keyframes u-animation--fade-in-left {
-      from {
-        opacity: 0;
-        transform: translateX(tools.t-vertical-rhythm(1) * -1);
-      }
-
-      to {
-        opacity: 1;
-        transform: none;
-      }
-    }
-
     animation-name: u-animation--fade-in-left;
   }
 
   /* Fade in right */
   &--fade-in-right {
-    @keyframes u-animation--fade-in-right {
-      from {
-        opacity: 0;
-        transform: translateX(tools.t-vertical-rhythm(1));
-      }
-
-      to {
-        opacity: 1;
-        transform: none;
-      }
-    }
-
     animation-name: u-animation--fade-in-right;
   }
 }
