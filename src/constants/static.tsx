@@ -5,5 +5,5 @@ export const STATIC = {
     tagline: "Front-End Engineer, Design System Architect",
     location: "Melbourne, Australia",
   },
-  version: "7.0.0",
+  version: "7.0.2",
 };
