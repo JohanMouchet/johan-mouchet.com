@@ -10,15 +10,13 @@
   margin-top: tools.t-vertical-rhythm(0.5);
   margin-bottom: tools.t-vertical-rhythm(0.5);
   appearance: none;
+  outline: none;
   background-color: tools.t-map-deep-get(
     form-settings.$form-settings,
     default,
     color
   );
-  outline: none;
   transition: background 0.2s ease-out;
-
-  @include tools.t-wekkit-hdpi-small-dimension("height", 2);
 
   &:not(:disabled) {
     cursor: pointer;

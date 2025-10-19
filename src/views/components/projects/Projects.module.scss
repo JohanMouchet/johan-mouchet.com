@@ -17,9 +17,9 @@
     column-gap: 0.5rem;
     align-items: center;
     cursor: pointer;
+    outline: 0;
     background-color: transparent;
     border: 0;
-    outline: 0;
 
     @include tools.t-link;
 

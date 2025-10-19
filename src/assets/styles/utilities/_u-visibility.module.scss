@@ -20,8 +20,8 @@
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0 0 0 0);
   border: 0;
+  clip-path: rect(0 0 0 0);
 
   // Allow the element to be focusable when navigated to via the keyboard
   &.u-is-focusable:active,
@@ -31,7 +31,7 @@
     height: auto;
     margin: 0;
     overflow: visible;
-    clip: auto;
+    clip-path: auto;
   }
 }
 

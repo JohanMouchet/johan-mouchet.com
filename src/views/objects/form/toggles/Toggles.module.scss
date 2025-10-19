@@ -39,8 +39,6 @@
       tools.t-map-deep-get(form-settings.$form-settings, default, color);
     transition: background-color 0.2s, border 0.2s;
 
-    @include tools.t-wekkit-hdpi-small-dimension;
-
     /** Checkbox **/
     #{$root}--checkbox & {
       border-radius: 0.1875rem;

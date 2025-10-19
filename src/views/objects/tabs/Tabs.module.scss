@@ -27,9 +27,9 @@
     display: block;
     padding: tools.t-vertical-rhythm(0.5) 1em;
     cursor: pointer;
+    outline: 0;
     background-color: transparent;
     border: 0;
-    outline: 0;
 
     @include tools.t-link;
 

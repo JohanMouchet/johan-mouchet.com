@@ -11,10 +11,10 @@ $class: o-button;
   font-family: settings.$s-font-family-sans;
   font-size: tools.t-modular-scale(0);
   line-height: settings.$s-line-height-base;
+  vertical-align: middle;
   color: settings.$s-color-body;
   text-align: center;
   text-decoration: none;
-  vertical-align: middle;
   cursor: pointer;
   background: settings.$s-color-gray-100;
   border: 1.5px solid transparent;
@@ -22,8 +22,6 @@ $class: o-button;
   border-radius: 9999px;
   transition: color 0.2s, background 0.2s, border-color 0.2s,
     transform 0.1s ease-out;
-
-  @include tools.t-wekkit-hdpi-small-dimension;
 
   &:hover,
   &:focus {

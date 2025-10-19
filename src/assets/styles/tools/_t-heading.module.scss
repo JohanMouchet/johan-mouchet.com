@@ -34,6 +34,7 @@
 // These types are also available as utilities: .u-heading--*
 @mixin t-heading--xl {
   @include t-heading(6, 2, 1) {
+    /* stylelint-disable-next-line block-no-redundant-nested-style-rules */
     & {
       font-weight: 700;
       text-transform: uppercase;
@@ -44,6 +45,7 @@
 
 @mixin t-heading--lg {
   @include t-heading(5, 2, 1) {
+    /* stylelint-disable-next-line block-no-redundant-nested-style-rules */
     & {
       font-weight: 700;
       text-transform: uppercase;
@@ -54,6 +56,7 @@
 
 @mixin t-heading--1 {
   @include t-heading(4, 2, 1) {
+    /* stylelint-disable-next-line block-no-redundant-nested-style-rules */
     & {
       font-weight: 700;
       text-transform: uppercase;
@@ -64,6 +67,7 @@
 
 @mixin t-heading--2 {
   @include t-heading(3, 2, 1) {
+    /* stylelint-disable-next-line block-no-redundant-nested-style-rules */
     & {
       font-weight: 700;
     }
@@ -72,6 +76,7 @@
 
 @mixin t-heading--3 {
   @include t-heading(2, 2, 1) {
+    /* stylelint-disable-next-line block-no-redundant-nested-style-rules */
     & {
       font-style: italic;
       font-weight: 400;
@@ -81,6 +86,7 @@
 
 @mixin t-heading--4 {
   @include t-heading(1, 1, 1) {
+    /* stylelint-disable-next-line block-no-redundant-nested-style-rules */
     & {
       font-weight: 400;
     }
@@ -89,6 +95,7 @@
 
 @mixin t-heading--5 {
   @include t-heading(0, 1, 1) {
+    /* stylelint-disable-next-line block-no-redundant-nested-style-rules */
     & {
       font-weight: 400;
     }
@@ -97,6 +104,7 @@
 
 @mixin t-heading--6 {
   @include t-heading(-1, 1, 1) {
+    /* stylelint-disable-next-line block-no-redundant-nested-style-rules */
     & {
       font-weight: 400;
     }

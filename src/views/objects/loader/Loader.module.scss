@@ -27,19 +27,17 @@
   display: inline-block;
   width: tools.t-vertical-rhythm(1.5);
   height: tools.t-vertical-rhythm(1.5);
-  border-radius: 0.1875rem;
   outline: 1.5px solid settings.$s-color-secondary;
+  border-radius: 0.1875rem;
   animation: loader-spin-animation $loader-speed infinite ease;
-
-  @include tools.t-wekkit-hdpi-small-dimension("outline-width", 2);
 
   &::after {
     display: block;
     width: inherit;
     height: inherit;
+    outline: inherit;
     content: "";
     border-radius: inherit;
-    outline: inherit;
     animation: inherit;
     animation-name: loader-spin-animation-asynchronous;
   }
