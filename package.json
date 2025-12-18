@@ -80,7 +80,7 @@
     "prettier": "^2.8.7",
     "prismic-ts-codegen": "^0.1.19",
     "sass": "^1.59.2",
-    "storybook": "^8.2.5",
+    "storybook": "^8.6.15",
     "stylelint": "^15.6.2",
     "stylelint-config-css-modules": "^4.2.0",
     "stylelint-config-prettier-scss": "^1.0.0",
