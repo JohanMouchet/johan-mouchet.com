@@ -1,6 +1,6 @@
 import "@/assets/styles/_styles.scss";
-import { BREAKPOINTS } from "@/constants/breakpoints/breakpoints";
-import type { Preview } from "@storybook/react";
+import type { Preview } from "@storybook/nextjs-vite";
+import { BREAKPOINTS } from "../src/constants/breakpoints/breakpoints";
 
 const preview: Preview = {
   parameters: {
@@ -23,7 +23,7 @@ const preview: Preview = {
       },
     },
     viewport: {
-      viewports: {
+      options: {
         xs: {
           name: "xs",
           styles: {

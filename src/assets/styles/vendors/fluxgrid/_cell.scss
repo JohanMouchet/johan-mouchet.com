@@ -1,0 +1,112 @@
+@use "sass:math";
+@use "src/assets/styles/vendors/fluxgrid/settings";
+
+/* Cell */
+.cell {
+  box-sizing: border-box;
+  flex: 0 1 auto;
+  padding-right: settings.$fluxgrid-half-gutter;
+  padding-left: settings.$fluxgrid-half-gutter;
+}
+
+@mixin fluxgrid-responsive-cell($breakpoint: "") {
+  /* Sizes */
+  @for $i from 1 through settings.$fluxgrid-division {
+    .#{$breakpoint}cell-#{$i} {
+      flex-basis: math.percentage(math.div($i, settings.$fluxgrid-division));
+      max-width: math.percentage(math.div($i, settings.$fluxgrid-division));
+    }
+  }
+
+  /* Shrink */
+  .#{$breakpoint}cell-shrink {
+    flex-grow: 0;
+    flex-basis: auto;
+    max-width: none;
+  }
+
+  /* Grow */
+  .#{$breakpoint}cell-grow {
+    flex-grow: 1;
+    flex-basis: auto;
+    max-width: none;
+  }
+
+  /* No gutters */
+  .#{$breakpoint}cell-no-gutter {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* Gutters */
+  .#{$breakpoint}cell-gutter {
+    padding-right: settings.$fluxgrid-half-gutter;
+    padding-left: settings.$fluxgrid-half-gutter;
+  }
+
+  [class*="grid-lg-gutter"] > .#{$breakpoint}cell-gutter {
+    padding-right: settings.$fluxgrid-half-gutter-lg;
+    padding-left: settings.$fluxgrid-half-gutter-lg;
+  }
+
+  /* Visibility */
+  .#{$breakpoint}cell-hidden {
+    display: none;
+  }
+
+  .#{$breakpoint}cell-visible {
+    display: block;
+  }
+
+  /* Self justification Y axis */
+  .#{$breakpoint}cell-y-stretch {
+    align-self: stretch;
+  }
+
+  .#{$breakpoint}cell-y-start {
+    align-self: flex-start;
+  }
+
+  .#{$breakpoint}cell-y-center {
+    align-self: center;
+  }
+
+  .#{$breakpoint}cell-y-end {
+    align-self: flex-end;
+  }
+
+  /* Self justification X axis */
+  .#{$breakpoint}cell-x-center {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .#{$breakpoint}cell-x-start {
+    margin-right: auto;
+  }
+
+  .#{$breakpoint}cell-x-end {
+    margin-left: auto;
+  }
+
+  /* Order */
+  .#{$breakpoint}cell-first {
+    order: -1;
+  }
+
+  .#{$breakpoint}cell-last {
+    order: 1;
+  }
+
+  .#{$breakpoint}cell-ordered {
+    order: 0;
+  }
+}
+
+@include fluxgrid-responsive-cell;
+
+@each $breakpoint, $size in settings.$fluxgrid-breakpoints {
+  @media (min-width: $size) {
+    @include fluxgrid-responsive-cell("#{$breakpoint}\\:");
+  }
+}

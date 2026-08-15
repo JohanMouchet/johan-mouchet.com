@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { subYears } from "date-fns";
 import { ExperienceDuration } from "./ExperienceDuration";
 

@@ -1,11 +1,12 @@
 @use "sass:map";
 @use "sass:math";
 @use "src/assets/styles/settings/settings.module";
+@use "src/assets/styles/vendors/fluxgrid";
 @use "src/assets/styles/tools/tools.module";
 
 .o-alert {
   align-items: flex-start;
-  padding: tools.t-vertical-rhythm(0.75) math.div(settings.$fluxgrid-gutter, 2);
+  padding: tools.t-vertical-rhythm(0.75) math.div(fluxgrid.$gutter, 2);
   margin: tools.t-vertical-rhythm(1) 0;
   background-color: settings.$s-color-gray-50;
   border-left: 2px solid;
@@ -116,7 +117,7 @@
   &--fixed-bottom-right {
     @media (min-width: map.get(settings.$s-breakpoints, sm)) {
       max-width: map.get(settings.$s-breakpoints, sm);
-      margin-right: settings.$fluxgrid-gutter;
+      margin-right: fluxgrid.$gutter;
     }
   }
 }

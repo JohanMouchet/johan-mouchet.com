@@ -1,0 +1,28 @@
+@use "src/assets/styles/vendors/fluxgrid/settings";
+
+/* Container */
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: settings.$fluxgrid-outside-margin;
+  padding-left: settings.$fluxgrid-outside-margin;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/** No gutters **/
+.container-no-gutter {
+  padding-right: 0;
+  padding-left: 0;
+  overflow-x: hidden;
+}
+
+@mixin fluxgrid-responsive-container($breakpoint, $size) {
+  .container-#{$breakpoint} {
+    max-width: $size;
+  }
+}
+
+@each $breakpoint, $size in settings.$fluxgrid-breakpoints {
+  @include fluxgrid-responsive-container($breakpoint, $size);
+}

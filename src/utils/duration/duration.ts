@@ -1,5 +1,5 @@
+import { pluralize } from "@/utils/pluralize/pluralize";
 import { differenceInCalendarMonths } from "date-fns";
-import { pluralize } from "../pluralize/pluralize";
 
 /**
  * Returns the cumulative time duration between multiple dates as a string in the "X yr(s) X mo(s)" format

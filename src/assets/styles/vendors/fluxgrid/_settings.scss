@@ -1,0 +1,27 @@
+@use "sass:math";
+
+/* Settings */
+$fluxgrid-division: 12 !default;
+$fluxgrid-gutter: 1rem !default;
+$fluxgrid-gutter-lg: $fluxgrid-gutter * 3 !default;
+$fluxgrid-outside-margin: $fluxgrid-gutter * 2 !default;
+$fluxgrid-half-gutter: math.div($fluxgrid-gutter, 2);
+$fluxgrid-half-gutter-lg: math.div($fluxgrid-gutter-lg, 2);
+$fluxgrid-breakpoints: (
+  sm: 425px + 1,
+  md: 768px + 1,
+  lg: 1024px + 1,
+  xl: 1366px + 1,
+) !default;
+
+/* Test */
+@if $fluxgrid-outside-margin < $fluxgrid-half-gutter {
+  @error "To avoid an overflow, the 'outside-margin' (#{$fluxgrid-outside-margin}) has to be as large or larger than half the 'gutter' (#{$fluxgrid-half-gutter}). This is for the .container to cancel the .grid negative margins used to align the .cells when not using .container-no-gutter";
+}
+
+/* Debug */
+/* stylelint-disable color-no-hex */
+$fluxgrid-debug-container-color: #4fd1c5;
+$fluxgrid-debug-grid-color: #9f7aea;
+$fluxgrid-debug-cell-color: #63b3ed;
+/* stylelint-enable color-no-hex */

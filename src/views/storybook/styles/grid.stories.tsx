@@ -1,4 +1,4 @@
-import type { StoryObj } from "@storybook/react";
+import type { StoryObj } from "@storybook/nextjs-vite";
 const meta = {
   title: "Styles/Grid",
 };

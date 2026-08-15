@@ -1,0 +1,8 @@
+ignoredBuiltDependencies:
+  - core-js-pure
+  - sharp
+  - unrs-resolver
+
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - esbuild

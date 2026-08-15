@@ -3,6 +3,7 @@
 @use "sass:map";
 @use "src/assets/styles/settings/settings.module";
 @use "src/assets/styles/tools/tools.module";
+@use "src/assets/styles/vendors/fluxgrid";
 
 .o-card {
   $root: &;
@@ -21,7 +22,7 @@
 
   /* Group */
   &-group {
-    margin-bottom: settings.$fluxgrid-gutter;
+    margin-bottom: fluxgrid.$gutter;
   }
 
   /* Components */

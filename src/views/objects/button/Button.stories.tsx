@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { IconEnvelope } from "../icons";
+import { IconEnvelope } from "@/views/objects/icons";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Button } from "./Button";
 
 const meta = {

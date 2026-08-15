@@ -1,6 +1,6 @@
-import settings from "@/constants/breakpoints/breakpoints.module.scss";
 import { Table } from "@/views/objects/table/Table";
-import type { StoryObj } from "@storybook/react";
+import type { StoryObj } from "@storybook/nextjs-vite";
+import settings from "../../../constants/breakpoints/breakpoints.module.scss";
 
 const meta = {
   title: "Styles/Breakpoints",

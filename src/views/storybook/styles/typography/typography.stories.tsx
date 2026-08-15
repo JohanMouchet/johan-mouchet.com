@@ -1,5 +1,5 @@
 import { Table } from "@/views/objects/table/Table";
-import type { StoryObj } from "@storybook/react";
+import type { StoryObj } from "@storybook/nextjs-vite";
 import {
   default as settings,
   default as styles,

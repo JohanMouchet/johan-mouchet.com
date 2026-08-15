@@ -1,35 +1,19 @@
-import type { StorybookConfig } from "@storybook/nextjs";
-const path = require("path");
+import type { StorybookConfig } from "@storybook/nextjs-vite";
+import { dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
     "@storybook/addon-a11y",
+    "@storybook/addon-docs",
     "@chromatic-com/storybook",
   ],
-  webpackFinal: async (config) => {
-    /* Follow Next.js aliases */
-    // @ts-ignore
-    config.resolve.alias = {
-      ...config?.resolve?.alias,
-      "@": path.resolve(__dirname, "../src/"),
-    };
-
-    /* Use SVGR to handle svg files */
-    // @ts-ignore
-    config.module.rules.find((rule) => rule.test?.test(".svg")).exclude =
-      /\.svg$/;
-    config?.module?.rules?.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"],
-    });
-
-    return config;
-  },
   framework: {
-    name: "@storybook/nextjs",
+    name: "@storybook/nextjs-vite",
     options: {},
   },
   typescript: {

@@ -1,0 +1,105 @@
+/* Fluxgrid | MIT License | https://github.com/JohanMouchet/fluxgrid */
+
+@use "src/assets/styles/vendors/fluxgrid/settings";
+
+/* Debug */
+.fluxgrid-debug {
+  .container,
+  .grid,
+  .cell {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      pointer-events: none;
+      outline: 1px dashed;
+      outline-offset: -1px;
+      content: "";
+    }
+  }
+
+  .container {
+    &::after {
+      right: 0;
+      left: 0;
+      outline-color: settings.$fluxgrid-debug-container-color;
+    }
+  }
+
+  .grid {
+    &::after {
+      right: settings.$fluxgrid-half-gutter;
+      left: settings.$fluxgrid-half-gutter;
+      outline-color: settings.$fluxgrid-debug-grid-color;
+    }
+  }
+
+  .cell {
+    &::after {
+      right: settings.$fluxgrid-half-gutter;
+      left: settings.$fluxgrid-half-gutter;
+      outline-style: dotted;
+      outline-color: settings.$fluxgrid-debug-cell-color;
+    }
+  }
+
+  @mixin debug-responsive-grid($breakpoint: "") {
+    /* Grid */
+    .grid {
+      /** Grid large gutters **/
+      &.#{$breakpoint}grid-lg-gutter {
+        /* stylelint-disable-next-line max-nesting-depth, selector-max-class */
+        &::after,
+        > .cell::after {
+          right: settings.$fluxgrid-half-gutter-lg;
+          left: settings.$fluxgrid-half-gutter-lg;
+        }
+      }
+
+      /** Grid no gutters **/
+      &.#{$breakpoint}grid-no-gutter {
+        /* stylelint-disable-next-line max-nesting-depth, selector-max-class */
+        &::after,
+        > .cell::after {
+          right: 0;
+          left: 0;
+        }
+      }
+    }
+
+    /* Cell */
+    .#{$breakpoint}cell-no-gutter {
+      &::after {
+        right: 0;
+        left: 0;
+      }
+    }
+  }
+
+  @include debug-responsive-grid;
+
+  @each $breakpoint, $size in settings.$fluxgrid-breakpoints {
+    @media (min-width: $size) {
+      @include debug-responsive-grid("#{$breakpoint}\\:");
+    }
+  }
+
+  /* stylelint-disable-next-line no-duplicate-selectors */
+  .grid {
+    &-hide-debug {
+      &::after {
+        outline: none;
+      }
+
+      /* stylelint-disable-next-line selector-max-class */
+      > .cell {
+        /* stylelint-disable-next-line max-nesting-depth, selector-max-class */
+        &::after {
+          outline: none;
+        }
+      }
+    }
+  }
+}

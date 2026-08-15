@@ -1,0 +1,18 @@
+@use "sass:map";
+@use "sass:math";
+@use "src/assets/styles/settings/s-breakpoints.module";
+
+$gutter: 1.5rem;
+$gutter-lg: $gutter * 3;
+
+@use "src/assets/styles/vendors/fluxgrid/fluxgrid" with (
+  $fluxgrid-breakpoints: (
+    sm: map.get(s-breakpoints.$s-breakpoints, sm),
+    md: map.get(s-breakpoints.$s-breakpoints, md),
+    lg: map.get(s-breakpoints.$s-breakpoints, lg),
+    xl: map.get(s-breakpoints.$s-breakpoints, xl),
+  ),
+  $fluxgrid-gutter: $gutter,
+  $fluxgrid-gutter-lg: $gutter-lg,
+  $fluxgrid-outside-margin: math.div($gutter-lg, 2)
+);

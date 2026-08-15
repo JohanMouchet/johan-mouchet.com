@@ -1,5 +1,5 @@
 import { Table } from "@/views/objects/table/Table";
-import type { StoryObj } from "@storybook/react";
+import type { StoryObj } from "@storybook/nextjs-vite";
 import clsx from "clsx";
 import styles from "../../storybook.module.scss";
 import settings from "./shadows.module.scss";

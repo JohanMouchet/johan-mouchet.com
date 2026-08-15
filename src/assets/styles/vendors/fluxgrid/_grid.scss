@@ -1,0 +1,125 @@
+@use "src/assets/styles/vendors/fluxgrid/settings";
+
+/* Grid */
+.grid {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -1 * settings.$fluxgrid-half-gutter;
+  margin-left: -1 * settings.$fluxgrid-half-gutter;
+}
+
+@mixin fluxgrid-responsive-grid($breakpoint: "") {
+  /* Direction */
+  .#{$breakpoint}grid-row {
+    flex-direction: row;
+  }
+
+  .#{$breakpoint}grid-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  /* Wrap */
+  .#{$breakpoint}grid-wrap {
+    flex-wrap: wrap;
+  }
+
+  .#{$breakpoint}grid-no-wrap {
+    flex-wrap: nowrap;
+  }
+
+  /* Gutters */
+
+  /** Large **/
+  .#{$breakpoint}grid-lg-gutter {
+    margin-right: -1 * settings.$fluxgrid-half-gutter-lg;
+    margin-left: -1 * settings.$fluxgrid-half-gutter-lg;
+
+    > .cell {
+      padding-right: settings.$fluxgrid-half-gutter-lg;
+      padding-left: settings.$fluxgrid-half-gutter-lg;
+    }
+  }
+
+  /** None **/
+  .#{$breakpoint}grid-no-gutter {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .cell {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  /* Justification X axis */
+  .#{$breakpoint}grid-x-start {
+    justify-content: flex-start;
+  }
+
+  .#{$breakpoint}grid-x-center {
+    justify-content: center;
+  }
+
+  .#{$breakpoint}grid-x-end {
+    justify-content: flex-end;
+  }
+
+  .#{$breakpoint}grid-x-around {
+    justify-content: space-around;
+  }
+
+  .#{$breakpoint}grid-x-between {
+    justify-content: space-between;
+  }
+
+  /* Justification Y axis */
+  .#{$breakpoint}grid-y-stretch {
+    align-items: stretch;
+  }
+
+  .#{$breakpoint}grid-y-start {
+    align-items: flex-start;
+  }
+
+  .#{$breakpoint}grid-y-center {
+    align-items: center;
+  }
+
+  .#{$breakpoint}grid-y-end {
+    align-items: flex-end;
+  }
+
+  /* Justification Y axis when wrapped: Z */
+  .#{$breakpoint}grid-z-stretch {
+    align-content: stretch;
+  }
+
+  .#{$breakpoint}grid-z-start {
+    align-content: flex-start;
+  }
+
+  .#{$breakpoint}grid-z-center {
+    align-content: center;
+  }
+
+  .#{$breakpoint}grid-z-end {
+    align-content: flex-end;
+  }
+
+  .#{$breakpoint}grid-z-around {
+    align-content: space-around;
+  }
+
+  .#{$breakpoint}grid-z-between {
+    align-content: space-between;
+  }
+}
+
+@include fluxgrid-responsive-grid;
+
+@each $breakpoint, $size in settings.$fluxgrid-breakpoints {
+  @media (min-width: $size) {
+    @include fluxgrid-responsive-grid("#{$breakpoint}\\:");
+  }
+}

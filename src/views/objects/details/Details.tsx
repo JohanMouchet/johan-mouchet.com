@@ -1,5 +1,5 @@
+import { IconMinus, IconPlus } from "@/views/objects/icons";
 import clsx, { ClassValue } from "clsx";
-import { IconMinus, IconPlus } from "../icons";
 import styles from "./Details.module.scss";
 
 export const Details = ({
